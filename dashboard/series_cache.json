@@ -2,7 +2,7 @@
   "schema_version": "dashboard_cache_v1",
   "start": "2025-12-31",
   "end": "2026-09-10",
-  "fetched_at": "2026-09-11T02:58:54Z",
+  "fetched_at": "2026-09-11T08:31:18Z",
   "refresh_mode": "incremental",
   "fetch_start": "2026-09-05",
   "periods_per_year": 1095.0,
@@ -17716,7 +17716,7 @@
         ],
         [
           "2026-09-10",
-          99.11399841308594
+          99.08999633789062
         ]
       ],
       "ES": [
@@ -18422,7 +18422,7 @@
         ],
         [
           "2026-09-10",
-          7607.25
+          7598.5
         ]
       ],
       "GOLD": [
@@ -19128,7 +19128,7 @@
         ],
         [
           "2026-09-10",
-          4364.60009765625
+          4364.5
         ]
       ],
       "NQ": [
@@ -19834,7 +19834,7 @@
         ],
         [
           "2026-09-10",
-          29109.0
+          29135.25
         ]
       ],
       "US10Y": [
@@ -22284,8 +22284,8 @@
         ],
         [
           "2026-09-10",
-          -258200000.0,
-          55261299999.99995,
+          -282700000.0,
+          55236799999.99995,
           null
         ]
       ],
@@ -23330,24 +23330,21 @@
         ],
         [
           "2026-09-10",
-          -25200000.0,
-          13170400000.000002,
+          -29900000.0,
+          13165700000.000002,
           null
         ]
       ]
     }
   },
-  "errors": [
-    "etf_flow: etf_flow HTTP 401: https://bykaranteli.com/api/v1/public/datasets/etf-flows.csv",
-    "etf_flow: etf_flow_using_farside_mirror"
-  ],
+  "errors": [],
   "sources_note": {
     "crypto": "datahub market_data.*",
     "iv": "datahub option_volatility_kline",
     "rv": "rolling log-return stdev * sqrt(365.0) from spot daily; windows=[7, 30]",
     "volume": "datahub daily_kline turnover USD · LinearSwap primary / Spot aux · activity only not long/short",
     "tradfi": "yahoo (annotated)",
-    "etf_flow": "bykaranteli (optional API key) → farside GitHub mirror → local cache; not issuer official; not Datahub",
+    "etf_flow": "etf provider=farside_mirror; try order bykaranteli→farside→cache; not issuer official; not Datahub",
     "refresh": "incremental"
   }
 }
