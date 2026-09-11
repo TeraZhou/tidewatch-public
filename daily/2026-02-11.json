@@ -1,0 +1,77 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-02-11",
+  "date_effective": "2026-02-11",
+  "as_of": "2026-08-31T10:26:22Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-02-11",
+    "prior_date": "2026-02-10",
+    "btc_ret_1d": -2.555,
+    "eth_ret_1d": -4.029,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -2.56%（有波动、未过异常默认线） · ETH -4.03%",
+    "weather_en": "Weather: BTC -2.56% · ETH -4.03%",
+    "text_zh": "近况偏平静回撤：BTC -2.56%、ETH -4.03%，未触发异常标签。",
+    "text_en": "Calm pullback weather: BTC -2.56%, ETH -4.03%, no anomaly flags."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_nfp_2026_02",
+        "date": "2026-02-11",
+        "name_zh": "非农就业（2026-01）",
+        "name_en": "Employment Situation (Jan 2026)",
+        "source": "bls"
+      },
+      "text_zh": "当日日历含非农就业（2026-01）。",
+      "text_en": "Calendar: Employment Situation (Jan 2026)"
+    },
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：3个观察位仍在跟踪，无到期钉选。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC -2.56%",
+      "tone": "down"
+    },
+    {
+      "text": "ETH -4.03%",
+      "tone": "down"
+    },
+    {
+      "text": "funding年化报-1.50%，日变-3.02pp",
+      "tone": "down"
+    },
+    {
+      "text": "ES几乎持平、NQ微涨",
+      "tone": "neutral"
+    },
+    {
+      "text": "币与美股短线背离",
+      "tone": "warn"
+    },
+    {
+      "text": "未触发异常标签",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

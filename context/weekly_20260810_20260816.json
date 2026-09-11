@@ -1,0 +1,2289 @@
+{
+  "schema_version": "context_v0.1",
+  "report_id": "weekly_20260810_20260816",
+  "report_type": "weekly",
+  "generated_at": "2026-09-04T07:21:19Z",
+  "as_of": "2026-08-16T23:59:59Z",
+  "timezone_storage": "UTC",
+  "timezone_display": "Asia/Shanghai",
+  "window": {
+    "start": "2026-08-10",
+    "end": "2026-08-16",
+    "label": "2026-08-10～2026-08-16",
+    "incomplete_end": false,
+    "baseline_date": "2026-08-09",
+    "baseline_note": "窗口收益以 baseline 收盘为起点、window.end 收盘为终点",
+    "tradfi_bracket": {
+      "start": "2026-08-07",
+      "end": "2026-08-14"
+    }
+  },
+  "job": {
+    "job_type": "weekly",
+    "rules_version": "label_rules_v0",
+    "feature_version": "features_v0",
+    "prompt_version": null,
+    "requested_by": "cli",
+    "llm_narrative": true,
+    "config_fingerprint": null
+  },
+  "universe": {
+    "crypto_primary": "BTC",
+    "crypto_secondary": [
+      "ETH"
+    ],
+    "crypto_venue_preference": [
+      "Binance"
+    ],
+    "tradfi_set": [
+      "ES",
+      "NQ",
+      "VIX",
+      "DXY",
+      "US10Y",
+      "GOLD"
+    ],
+    "tradfi_proxies": {
+      "ES": "ES=F",
+      "NQ": "NQ=F",
+      "VIX": "^VIX",
+      "DXY": "DX-Y.NYB",
+      "US10Y": "^TNX",
+      "GOLD": "GC=F"
+    }
+  },
+  "data_sources": [
+    {
+      "id": "src_daily_kline",
+      "role": "crypto_ohlcv",
+      "provider": "datahub",
+      "channel": "clickhouse",
+      "cluster": "quotes",
+      "table_or_resource": "market_data.daily_kline",
+      "fetched_at": "2026-09-04T07:20:32Z",
+      "notes": "Binance Spot+LinearSwap; argMax by recv_ts"
+    },
+    {
+      "id": "src_oi",
+      "role": "crypto_oi",
+      "provider": "datahub",
+      "channel": "clickhouse",
+      "cluster": "quotes",
+      "table_or_resource": "market_data.open_interest",
+      "fetched_at": "2026-09-04T07:20:32Z"
+    },
+    {
+      "id": "src_liq",
+      "role": "crypto_liquidation",
+      "provider": "datahub",
+      "channel": "clickhouse",
+      "cluster": "quotes",
+      "table_or_resource": "market_data.liquidation",
+      "fetched_at": "2026-09-04T07:20:32Z",
+      "notes": "side BUY/SELL raw; semantics unverified"
+    },
+    {
+      "id": "src_funding",
+      "role": "crypto_funding",
+      "provider": "datahub",
+      "channel": "clickhouse",
+      "cluster": "quotes",
+      "table_or_resource": "market_data.contract_quote",
+      "fetched_at": "2026-09-04T07:20:32Z"
+    },
+    {
+      "id": "src_tradfi_yahoo",
+      "role": "tradfi_bundle",
+      "provider": "yahoo",
+      "channel": "yfinance",
+      "table_or_resource": "ES=F,NQ=F,^VIX,DX-Y.NYB,^TNX,GC=F",
+      "fetched_at": "2026-09-04T07:20:58Z",
+      "notes": "TEMPORARY fallback — not Datahub; must footnote in HTML"
+    },
+    {
+      "id": "src_option_vol",
+      "role": "crypto_iv_index",
+      "provider": "datahub",
+      "channel": "clickhouse",
+      "cluster": "quotes",
+      "table_or_resource": "market_data.option_volatility_kline",
+      "fetched_at": "2026-09-04T07:21:08Z",
+      "notes": "Deribit BTC,ETH; daily close via argMax(close,start_time)"
+    },
+    {
+      "id": "src_etf_flow_bykaranteli",
+      "role": "etf_spot_net_flow",
+      "provider": "bykaranteli",
+      "channel": "http",
+      "table_or_resource": "https://bykaranteli.com/api/v1/public/datasets/etf-flows.csv",
+      "status": "ok",
+      "assets": [
+        "BTC",
+        "ETH"
+      ],
+      "unit": "USD",
+      "notes": "US spot ETF daily net inflow USD; upstream public aggregate (SoSoValue-class) via ByKaranteli CC0 dataset; not issuer official; day may revise after settlement",
+      "authority": "community_aggregate"
+    }
+  ],
+  "series": {
+    "crypto": {
+      "BTC_SPOT": {
+        "source_id": "src_daily_kline",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "turnover"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            64962.6,
+            65474.46,
+            64730.08,
+            64901.59,
+            7031.23606,
+            457366207.4042235
+          ],
+          [
+            "2026-08-10",
+            64901.59,
+            65391.14,
+            63806.27,
+            63970.01,
+            13638.40877,
+            880502559.6531125
+          ],
+          [
+            "2026-08-11",
+            63970.01,
+            64515.43,
+            63238.0,
+            63600.0,
+            12891.63248,
+            823992195.6659181
+          ],
+          [
+            "2026-08-12",
+            63600.01,
+            64500.0,
+            63310.34,
+            63479.99,
+            13627.06822,
+            868963134.2285606
+          ],
+          [
+            "2026-08-13",
+            63479.99,
+            64010.0,
+            62802.27,
+            63490.86,
+            10793.85853,
+            685844694.2494848
+          ],
+          [
+            "2026-08-14",
+            63490.86,
+            63617.45,
+            62535.24,
+            63043.56,
+            12340.82899,
+            777408844.7057977
+          ],
+          [
+            "2026-08-15",
+            63043.56,
+            63187.98,
+            62920.0,
+            63086.01,
+            5405.16038,
+            340890632.3578836
+          ],
+          [
+            "2026-08-16",
+            63086.01,
+            63390.0,
+            62716.0,
+            62900.0,
+            4737.23135,
+            298698048.5551315
+          ]
+        ],
+        "unit": {
+          "price": "USD",
+          "volume": "BTC",
+          "turnover": "USD"
+        },
+        "product": "Spot"
+      },
+      "BTC_PERP": {
+        "source_id": "src_daily_kline",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "turnover"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            64928.6,
+            65482.7,
+            64700.0,
+            64867.8,
+            47848.462,
+            3111939060.7236
+          ],
+          [
+            "2026-08-10",
+            64867.8,
+            65373.6,
+            63788.0,
+            63939.3,
+            128825.728,
+            8314792239.0839
+          ],
+          [
+            "2026-08-11",
+            63939.3,
+            64470.0,
+            63211.6,
+            63572.0,
+            106023.646,
+            6767717136.9969
+          ],
+          [
+            "2026-08-12",
+            63571.9,
+            64450.0,
+            63283.0,
+            63454.7,
+            114432.813,
+            7296912639.604
+          ],
+          [
+            "2026-08-13",
+            63454.6,
+            63990.7,
+            62800.0,
+            63456.7,
+            122666.092,
+            7789208113.2887
+          ],
+          [
+            "2026-08-14",
+            63456.7,
+            63595.1,
+            62484.2,
+            63015.0,
+            105347.757,
+            6629197390.3501
+          ],
+          [
+            "2026-08-15",
+            63014.9,
+            63170.0,
+            62890.2,
+            63053.9,
+            25131.185,
+            1584147765.8165
+          ],
+          [
+            "2026-08-16",
+            63053.9,
+            63370.0,
+            62681.1,
+            62876.0,
+            39928.075,
+            2516783709.7695
+          ]
+        ],
+        "unit": {
+          "price": "USD",
+          "volume": "BTC",
+          "turnover": "USD"
+        },
+        "product": "LinearSwap"
+      },
+      "ETH_SPOT": {
+        "source_id": "src_daily_kline",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "turnover"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            1916.75,
+            1938.22,
+            1907.56,
+            1910.65,
+            87855.3253,
+            168708494.419759
+          ],
+          [
+            "2026-08-10",
+            1910.65,
+            1931.57,
+            1867.96,
+            1873.16,
+            209809.0221,
+            398374618.803099
+          ],
+          [
+            "2026-08-11",
+            1873.16,
+            1897.8,
+            1853.62,
+            1882.59,
+            193300.5166,
+            362843503.937889
+          ],
+          [
+            "2026-08-12",
+            1882.58,
+            1925.0,
+            1873.29,
+            1879.81,
+            171255.9975,
+            324722723.541098
+          ],
+          [
+            "2026-08-13",
+            1879.8,
+            1900.0,
+            1863.67,
+            1886.15,
+            154140.6308,
+            290611294.673272
+          ],
+          [
+            "2026-08-14",
+            1886.16,
+            1891.3,
+            1864.28,
+            1882.2,
+            108123.7734,
+            203030687.463959
+          ],
+          [
+            "2026-08-15",
+            1882.2,
+            1886.59,
+            1876.01,
+            1882.64,
+            48197.0909,
+            90746243.221819
+          ],
+          [
+            "2026-08-16",
+            1882.64,
+            1892.31,
+            1869.17,
+            1876.0,
+            68574.4231,
+            129015861.931003
+          ]
+        ],
+        "unit": {
+          "price": "USD",
+          "volume": "ETH",
+          "turnover": "USD"
+        },
+        "product": "Spot"
+      },
+      "ETH_PERP": {
+        "source_id": "src_daily_kline",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume",
+          "turnover"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            1915.98,
+            1937.67,
+            1906.41,
+            1909.57,
+            1408390.8,
+            2703784088.20286
+          ],
+          [
+            "2026-08-10",
+            1909.56,
+            1931.5,
+            1866.14,
+            1872.31,
+            3374109.366,
+            6407415105.85985
+          ],
+          [
+            "2026-08-11",
+            1872.3,
+            1897.3,
+            1852.22,
+            1881.8,
+            2639181.895,
+            4951898188.19022
+          ],
+          [
+            "2026-08-12",
+            1881.79,
+            1924.97,
+            1872.0,
+            1878.8,
+            2931446.968,
+            5559179864.53512
+          ],
+          [
+            "2026-08-13",
+            1878.79,
+            1899.6,
+            1862.11,
+            1885.39,
+            2770118.573,
+            5218467948.13854
+          ],
+          [
+            "2026-08-14",
+            1885.38,
+            1890.69,
+            1863.2,
+            1881.39,
+            1854852.495,
+            3481034035.01465
+          ],
+          [
+            "2026-08-15",
+            1881.38,
+            1886.0,
+            1874.61,
+            1881.73,
+            629574.471,
+            1184706377.78586
+          ],
+          [
+            "2026-08-16",
+            1881.73,
+            1891.93,
+            1868.01,
+            1875.22,
+            1001667.251,
+            1883513736.84228
+          ]
+        ],
+        "unit": {
+          "price": "USD",
+          "volume": "ETH",
+          "turnover": "USD"
+        },
+        "product": "LinearSwap"
+      }
+    },
+    "derivatives": {
+      "BTC_OI": {
+        "source_id": "src_oi",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "oi_qty",
+          "oi_quote",
+          "mark_price",
+          "oi_min",
+          "oi_max"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            107052.288,
+            6944428639.998494,
+            64869.50227536,
+            106260.021,
+            108132.915
+          ],
+          [
+            "2026-08-10",
+            106299.974,
+            6796735297.5808,
+            63939.2,
+            104920.606,
+            107765.323
+          ],
+          [
+            "2026-08-11",
+            109275.491,
+            6947178412.7759,
+            63574.9,
+            105587.416,
+            109842.808
+          ],
+          [
+            "2026-08-12",
+            111095.574,
+            7049536319.497799,
+            63454.7,
+            107181.513,
+            111404.253
+          ],
+          [
+            "2026-08-13",
+            109602.33,
+            6954924890.172918,
+            63455.99486957,
+            109409.125,
+            111762.424
+          ],
+          [
+            "2026-08-14",
+            112007.936,
+            7058190229.439251,
+            63015.09055072,
+            109611.245,
+            114947.558
+          ],
+          [
+            "2026-08-15",
+            111517.11,
+            7031594717.688293,
+            63053.95394203,
+            111417.473,
+            112271.268
+          ],
+          [
+            "2026-08-16",
+            110962.944,
+            6976906066.944,
+            62876.0,
+            110699.994,
+            111775.542
+          ]
+        ],
+        "unit": {
+          "oi_qty": "BTC",
+          "oi_quote": "USD"
+        }
+      },
+      "BTC_LIQUIDATION": {
+        "source_id": "src_liq",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "n_liq",
+          "buy_qty",
+          "sell_qty",
+          "total_qty",
+          "notional_approx"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            478,
+            24.507000000000012,
+            18.941999999999993,
+            43.44900000000001,
+            2823909.313739999
+          ],
+          [
+            "2026-08-10",
+            714,
+            14.251000000000005,
+            78.59100000000005,
+            92.84200000000013,
+            5962254.231730002
+          ],
+          [
+            "2026-08-11",
+            550,
+            17.495,
+            56.98800000000002,
+            74.48300000000005,
+            4738449.98137
+          ],
+          [
+            "2026-08-12",
+            616,
+            29.275000000000013,
+            31.678000000000004,
+            60.953,
+            3886242.497310001
+          ],
+          [
+            "2026-08-13",
+            609,
+            24.284000000000013,
+            50.21999999999994,
+            74.50400000000008,
+            4716901.848939998
+          ],
+          [
+            "2026-08-14",
+            710,
+            12.681999999999992,
+            49.64899999999995,
+            62.33099999999991,
+            3908072.081900003
+          ],
+          [
+            "2026-08-15",
+            154,
+            3.0369999999999986,
+            6.616999999999999,
+            9.65399999999999,
+            607533.7142600005
+          ],
+          [
+            "2026-08-16",
+            252,
+            7.697999999999998,
+            21.649999999999988,
+            29.347999999999985,
+            1843234.6477400009
+          ]
+        ],
+        "unit": {
+          "qty": "BTC",
+          "notional_approx": "USD"
+        },
+        "side_semantics": "raw_exchange_side_unverified"
+      },
+      "BTC_FUNDING": {
+        "source_id": "src_funding",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "funding_rate",
+          "last",
+          "mark",
+          "index"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            7.521e-05,
+            64867.9,
+            64870.04357971,
+            64900.74652174
+          ],
+          [
+            "2026-08-10",
+            2.338e-05,
+            63939.2,
+            63939.2,
+            63970.50065217
+          ],
+          [
+            "2026-08-11",
+            0.0001,
+            63571.9,
+            63571.9,
+            63598.49608696
+          ],
+          [
+            "2026-08-12",
+            6.526e-05,
+            63454.7,
+            63454.6,
+            63480.99521739
+          ],
+          [
+            "2026-08-13",
+            8.545e-05,
+            63456.3,
+            63455.69269565,
+            63478.20869565
+          ],
+          [
+            "2026-08-14",
+            6.809e-05,
+            63015.0,
+            63015.44212319,
+            63044.44630435
+          ],
+          [
+            "2026-08-15",
+            9.86e-06,
+            63054.0,
+            63054.0,
+            63086.6423913
+          ],
+          [
+            "2026-08-16",
+            3.819e-05,
+            62876.0,
+            62876.0,
+            62899.12173913
+          ]
+        ],
+        "unit": {
+          "funding_rate": "decimal_per_period",
+          "price": "USD"
+        }
+      }
+    },
+    "tradfi": {
+      "ES": {
+        "source_id": "src_tradfi_yahoo",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "close"
+        ],
+        "rows": [
+          [
+            "2026-08-10",
+            7776.75
+          ],
+          [
+            "2026-08-11",
+            7747.5
+          ],
+          [
+            "2026-08-12",
+            7770.5
+          ],
+          [
+            "2026-08-13",
+            7822.5
+          ],
+          [
+            "2026-08-14",
+            7805.0
+          ]
+        ],
+        "ticker": "ES=F",
+        "unit": {
+          "close": "yahoo_native"
+        }
+      },
+      "NQ": {
+        "source_id": "src_tradfi_yahoo",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "close"
+        ],
+        "rows": [
+          [
+            "2026-08-10",
+            29737.0
+          ],
+          [
+            "2026-08-11",
+            29626.0
+          ],
+          [
+            "2026-08-12",
+            29853.25
+          ],
+          [
+            "2026-08-13",
+            30188.5
+          ],
+          [
+            "2026-08-14",
+            30141.75
+          ]
+        ],
+        "ticker": "NQ=F",
+        "unit": {
+          "close": "yahoo_native"
+        }
+      },
+      "VIX": {
+        "source_id": "src_tradfi_yahoo",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "close"
+        ],
+        "rows": [
+          [
+            "2026-08-10",
+            15.460000038146973
+          ],
+          [
+            "2026-08-11",
+            15.279999732971191
+          ],
+          [
+            "2026-08-12",
+            14.550000190734863
+          ],
+          [
+            "2026-08-13",
+            14.630000114440918
+          ],
+          [
+            "2026-08-14",
+            14.25
+          ]
+        ],
+        "ticker": "^VIX",
+        "unit": {
+          "close": "yahoo_native"
+        }
+      },
+      "DXY": {
+        "source_id": "src_tradfi_yahoo",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "close"
+        ],
+        "rows": [
+          [
+            "2026-08-10",
+            99.80999755859375
+          ],
+          [
+            "2026-08-11",
+            99.81999969482422
+          ],
+          [
+            "2026-08-12",
+            100.01000213623047
+          ],
+          [
+            "2026-08-13",
+            99.95999908447266
+          ],
+          [
+            "2026-08-14",
+            99.66999816894531
+          ]
+        ],
+        "ticker": "DX-Y.NYB",
+        "unit": {
+          "close": "yahoo_native"
+        }
+      },
+      "US10Y": {
+        "source_id": "src_tradfi_yahoo",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "close"
+        ],
+        "rows": [
+          [
+            "2026-08-10",
+            4.698999881744385
+          ],
+          [
+            "2026-08-11",
+            4.684000015258789
+          ],
+          [
+            "2026-08-12",
+            4.682000160217285
+          ],
+          [
+            "2026-08-13",
+            4.640999794006348
+          ],
+          [
+            "2026-08-14",
+            4.696000099182129
+          ]
+        ],
+        "ticker": "^TNX",
+        "unit": {
+          "close": "yahoo_native"
+        }
+      },
+      "GOLD": {
+        "source_id": "src_tradfi_yahoo",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "close"
+        ],
+        "rows": [
+          [
+            "2026-08-10",
+            4361.7998046875
+          ],
+          [
+            "2026-08-11",
+            4383.0
+          ],
+          [
+            "2026-08-12",
+            4408.89990234375
+          ],
+          [
+            "2026-08-13",
+            4363.60009765625
+          ],
+          [
+            "2026-08-14",
+            4380.39990234375
+          ]
+        ],
+        "ticker": "GC=F",
+        "unit": {
+          "close": "yahoo_native"
+        }
+      }
+    },
+    "vol": {
+      "BTC_IV": {
+        "source_id": "src_option_vol",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "iv_close",
+          "iv_high",
+          "iv_low"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            34.93,
+            34.96,
+            34.15
+          ],
+          [
+            "2026-08-10",
+            36.33,
+            36.37,
+            34.24
+          ],
+          [
+            "2026-08-11",
+            36.13,
+            36.35,
+            35.54
+          ],
+          [
+            "2026-08-12",
+            35.82,
+            36.24,
+            35.54
+          ],
+          [
+            "2026-08-13",
+            34.81,
+            35.89,
+            34.78
+          ],
+          [
+            "2026-08-14",
+            34.74,
+            35.25,
+            33.84
+          ],
+          [
+            "2026-08-15",
+            35.02,
+            35.07,
+            34.57
+          ],
+          [
+            "2026-08-16",
+            35.16,
+            35.43,
+            34.94
+          ]
+        ],
+        "unit": {
+          "iv": "ann_pct"
+        },
+        "exchange": "Deribit",
+        "currency": "BTC",
+        "notes": "daily argMax(close,start_time); DVOL-class volatility index"
+      },
+      "ETH_IV": {
+        "source_id": "src_option_vol",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "iv_close",
+          "iv_high",
+          "iv_low"
+        ],
+        "rows": [
+          [
+            "2026-08-09",
+            49.1,
+            49.12,
+            48.08
+          ],
+          [
+            "2026-08-10",
+            49.72,
+            49.88,
+            48.88
+          ],
+          [
+            "2026-08-11",
+            49.3,
+            49.75,
+            49.09
+          ],
+          [
+            "2026-08-12",
+            49.36,
+            50.02,
+            49.14
+          ],
+          [
+            "2026-08-13",
+            48.54,
+            49.63,
+            48.47
+          ],
+          [
+            "2026-08-14",
+            47.18,
+            48.58,
+            47.01
+          ],
+          [
+            "2026-08-15",
+            47.54,
+            47.54,
+            46.95
+          ],
+          [
+            "2026-08-16",
+            47.49,
+            47.72,
+            47.35
+          ]
+        ],
+        "unit": {
+          "iv": "ann_pct"
+        },
+        "exchange": "Deribit",
+        "currency": "ETH",
+        "notes": "daily argMax(close,start_time); DVOL-class volatility index"
+      }
+    },
+    "etf_flow": {
+      "BTC_NET": [
+        [
+          "2026-08-10",
+          -144670942.0,
+          52033372521.0,
+          78163767014.0
+        ],
+        [
+          "2026-08-11",
+          4886244.0,
+          52038258765.0,
+          77456576400.0
+        ],
+        [
+          "2026-08-12",
+          -61163714.0,
+          51977095051.0,
+          77369268474.0
+        ],
+        [
+          "2026-08-13",
+          -131129457.0,
+          51845965594.0,
+          77270874844.0
+        ],
+        [
+          "2026-08-14",
+          -57632151.0,
+          51788333443.0,
+          76606484662.0
+        ]
+      ],
+      "ETH_NET": [
+        [
+          "2026-08-10",
+          -14587911.0,
+          11440579573.0,
+          10501938883.0
+        ],
+        [
+          "2026-08-11",
+          -1764440.0,
+          11438815133.0,
+          10479332360.0
+        ],
+        [
+          "2026-08-12",
+          7379093.0,
+          11446194226.0,
+          10531546805.0
+        ],
+        [
+          "2026-08-13",
+          6716942.0,
+          11452911168.0,
+          10572122040.0
+        ],
+        [
+          "2026-08-14",
+          0.0,
+          11452911168.0,
+          10520496423.0
+        ]
+      ]
+    }
+  },
+  "features": {
+    "crypto": {
+      "BTC": {
+        "baseline_close": 64901.59,
+        "end_close": 62900.0,
+        "ret_window_pct": -3.084,
+        "max_daily_ret_pct": 0.067,
+        "max_daily_ret_date": "2026-08-15",
+        "min_daily_ret_pct": -1.435,
+        "min_daily_ret_date": "2026-08-10",
+        "daily_rets_pct": [
+          {
+            "date": "2026-08-10",
+            "ret_pct": -1.435
+          },
+          {
+            "date": "2026-08-11",
+            "ret_pct": -0.578
+          },
+          {
+            "date": "2026-08-12",
+            "ret_pct": -0.189
+          },
+          {
+            "date": "2026-08-13",
+            "ret_pct": 0.017
+          },
+          {
+            "date": "2026-08-14",
+            "ret_pct": -0.705
+          },
+          {
+            "date": "2026-08-15",
+            "ret_pct": 0.067
+          },
+          {
+            "date": "2026-08-16",
+            "ret_pct": -0.295
+          }
+        ],
+        "realized_vol_ann_pct_approx": 10.03,
+        "rv_ann_pct": 10.03,
+        "rv_method": "log_return_stdev_sqrt_365",
+        "iv_ann_pct_end": 35.16,
+        "iv_ann_pct_start": 34.93,
+        "iv_chg_pct_pts": 0.23,
+        "iv_high_window": 36.37,
+        "iv_low_window": 33.84,
+        "iv_daily_ann_pct": [
+          {
+            "date": "2026-08-10",
+            "iv_ann_pct": 36.33
+          },
+          {
+            "date": "2026-08-11",
+            "iv_ann_pct": 36.13
+          },
+          {
+            "date": "2026-08-12",
+            "iv_ann_pct": 35.82
+          },
+          {
+            "date": "2026-08-13",
+            "iv_ann_pct": 34.81
+          },
+          {
+            "date": "2026-08-14",
+            "iv_ann_pct": 34.74
+          },
+          {
+            "date": "2026-08-15",
+            "iv_ann_pct": 35.02
+          },
+          {
+            "date": "2026-08-16",
+            "iv_ann_pct": 35.16
+          }
+        ],
+        "iv_source": "Deribit",
+        "iv_currency": "BTC",
+        "iv_unit": "ann_pct",
+        "iv_rv_spread_end": 25.13,
+        "iv_rv_ratio_end": 3.505,
+        "funding_end": 3.819e-05,
+        "funding_end_display": "0.0038%/period",
+        "funding_end_ann_pct": 4.18,
+        "funding_end_ann_display": "+4.18%/yr",
+        "funding_periods_per_year": 1095.0,
+        "basis_end_bps": -3.676,
+        "funding_start": 7.521e-05,
+        "funding_start_ann_pct": 8.24,
+        "funding_daily_ann_pct": [
+          {
+            "date": "2026-08-03",
+            "funding_rate": 3.042e-05,
+            "ann_pct": 3.33
+          },
+          {
+            "date": "2026-08-04",
+            "funding_rate": 1.68e-05,
+            "ann_pct": 1.84
+          },
+          {
+            "date": "2026-08-05",
+            "funding_rate": 6.595e-05,
+            "ann_pct": 7.22
+          },
+          {
+            "date": "2026-08-06",
+            "funding_rate": 8.18e-06,
+            "ann_pct": 0.9
+          },
+          {
+            "date": "2026-08-07",
+            "funding_rate": 5.588e-05,
+            "ann_pct": 6.12
+          },
+          {
+            "date": "2026-08-08",
+            "funding_rate": 4.442e-05,
+            "ann_pct": 4.86
+          },
+          {
+            "date": "2026-08-09",
+            "funding_rate": 7.521e-05,
+            "ann_pct": 8.24
+          },
+          {
+            "date": "2026-08-10",
+            "funding_rate": 2.338e-05,
+            "ann_pct": 2.56
+          },
+          {
+            "date": "2026-08-11",
+            "funding_rate": 0.0001,
+            "ann_pct": 10.95
+          },
+          {
+            "date": "2026-08-12",
+            "funding_rate": 6.526e-05,
+            "ann_pct": 7.15
+          },
+          {
+            "date": "2026-08-13",
+            "funding_rate": 8.545e-05,
+            "ann_pct": 9.36
+          },
+          {
+            "date": "2026-08-14",
+            "funding_rate": 6.809e-05,
+            "ann_pct": 7.46
+          },
+          {
+            "date": "2026-08-15",
+            "funding_rate": 9.86e-06,
+            "ann_pct": 1.08
+          },
+          {
+            "date": "2026-08-16",
+            "funding_rate": 3.819e-05,
+            "ann_pct": 4.18
+          }
+        ],
+        "oi_qty_start": 107052.288,
+        "oi_qty_end": 110962.944,
+        "oi_chg_pct": 3.653,
+        "liq_total_qty_window": 404.115,
+        "liq_buy_qty_window": 108.722,
+        "liq_sell_qty_window": 295.393,
+        "liq_peak_day_by_n": "2026-08-10",
+        "liq_peak_n": 714,
+        "liq_peak_day_by_qty": "2026-08-10",
+        "liq_peak_total_qty": 92.84200000000013,
+        "liq_peak_day": "2026-08-10",
+        "liq_qty_median": 62.33099999999991,
+        "liq_peak_vs_median": 1.489,
+        "volume_perp": {
+          "product": "LinearSwap",
+          "unit": "turnover_usd",
+          "status": "ok",
+          "window_sum_usd": 40898758994.91,
+          "window_avg_usd": 5842679856.42,
+          "window_median_usd": 6767717137.0,
+          "peak_day": "2026-08-10",
+          "peak_usd": 8314792239.08,
+          "peak_vs_median": 1.229,
+          "days": 7,
+          "prev_window": "2026-08-03…2026-08-09",
+          "prev_sum_usd": 46565667865.04,
+          "wow_pct": -12.17,
+          "activity_id": "normal",
+          "activity_zh": "中性",
+          "activity_en": "normal",
+          "direction_from_total": false,
+          "note_zh": "总量成交额=活跃度，不能拆多空",
+          "note_en": "total turnover = activity only; not long/short split",
+          "window_sum_display_zh": "408.99 亿美金",
+          "window_sum_display_en": "40.90B",
+          "peak_display_zh": "83.15 亿美金",
+          "peak_display_en": "8.31B",
+          "prev_sum_display_zh": "465.66 亿美金",
+          "prev_sum_display_en": "46.57B",
+          "daily_turnover": [
+            [
+              "2026-08-10",
+              8314792239.08
+            ],
+            [
+              "2026-08-11",
+              6767717137.0
+            ],
+            [
+              "2026-08-12",
+              7296912639.6
+            ],
+            [
+              "2026-08-13",
+              7789208113.29
+            ],
+            [
+              "2026-08-14",
+              6629197390.35
+            ],
+            [
+              "2026-08-15",
+              1584147765.82
+            ],
+            [
+              "2026-08-16",
+              2516783709.77
+            ]
+          ]
+        },
+        "volume_spot": {
+          "product": "Spot",
+          "unit": "turnover_usd",
+          "status": "ok",
+          "window_sum_usd": 4676300109.42,
+          "window_avg_usd": 668042872.77,
+          "window_median_usd": 777408844.71,
+          "peak_day": "2026-08-10",
+          "peak_usd": 880502559.65,
+          "peak_vs_median": 1.133,
+          "days": 7,
+          "prev_window": "2026-08-03…2026-08-09",
+          "prev_sum_usd": 4914474499.99,
+          "wow_pct": -4.85,
+          "activity_id": "normal",
+          "activity_zh": "中性",
+          "activity_en": "normal",
+          "direction_from_total": false,
+          "note_zh": "总量成交额=活跃度，不能拆多空",
+          "note_en": "total turnover = activity only; not long/short split",
+          "window_sum_display_zh": "46.76 亿美金",
+          "window_sum_display_en": "4.68B",
+          "peak_display_zh": "8.81 亿美金",
+          "peak_display_en": "880.50M",
+          "prev_sum_display_zh": "49.14 亿美金",
+          "prev_sum_display_en": "4.91B",
+          "daily_turnover": [
+            [
+              "2026-08-10",
+              880502559.65
+            ],
+            [
+              "2026-08-11",
+              823992195.67
+            ],
+            [
+              "2026-08-12",
+              868963134.23
+            ],
+            [
+              "2026-08-13",
+              685844694.25
+            ],
+            [
+              "2026-08-14",
+              777408844.71
+            ],
+            [
+              "2026-08-15",
+              340890632.36
+            ],
+            [
+              "2026-08-16",
+              298698048.56
+            ]
+          ]
+        },
+        "perp_turnover_sum_usd": 40898758994.91,
+        "perp_turnover_sum_display_zh": "408.99 亿美金",
+        "perp_turnover_sum_display_en": "40.90B",
+        "perp_turnover_wow_pct": -12.17,
+        "perp_activity_id": "normal",
+        "perp_activity_zh": "中性",
+        "perp_activity_en": "normal",
+        "perp_turnover_peak_day": "2026-08-10",
+        "perp_turnover_peak_display_zh": "83.15 亿美金",
+        "perp_turnover_peak_display_en": "8.31B",
+        "spot_turnover_sum_usd": 4676300109.42,
+        "spot_turnover_sum_display_zh": "46.76 亿美金",
+        "spot_turnover_sum_display_en": "4.68B",
+        "spot_turnover_wow_pct": -4.85,
+        "spot_activity_id": "normal"
+      },
+      "ETH": {
+        "baseline_close": 1910.65,
+        "end_close": 1876.0,
+        "ret_window_pct": -1.814,
+        "max_daily_ret_pct": 0.503,
+        "max_daily_ret_date": "2026-08-11",
+        "min_daily_ret_pct": -1.962,
+        "min_daily_ret_date": "2026-08-10",
+        "daily_rets_pct": [
+          {
+            "date": "2026-08-10",
+            "ret_pct": -1.962
+          },
+          {
+            "date": "2026-08-11",
+            "ret_pct": 0.503
+          },
+          {
+            "date": "2026-08-12",
+            "ret_pct": -0.148
+          },
+          {
+            "date": "2026-08-13",
+            "ret_pct": 0.337
+          },
+          {
+            "date": "2026-08-14",
+            "ret_pct": -0.209
+          },
+          {
+            "date": "2026-08-15",
+            "ret_pct": 0.023
+          },
+          {
+            "date": "2026-08-16",
+            "ret_pct": -0.353
+          }
+        ],
+        "realized_vol_ann_pct_approx": 15.61,
+        "rv_ann_pct": 15.61,
+        "rv_method": "log_return_stdev_sqrt_365",
+        "iv_ann_pct_end": 47.49,
+        "iv_ann_pct_start": 49.1,
+        "iv_chg_pct_pts": -1.61,
+        "iv_high_window": 50.02,
+        "iv_low_window": 46.95,
+        "iv_daily_ann_pct": [
+          {
+            "date": "2026-08-10",
+            "iv_ann_pct": 49.72
+          },
+          {
+            "date": "2026-08-11",
+            "iv_ann_pct": 49.3
+          },
+          {
+            "date": "2026-08-12",
+            "iv_ann_pct": 49.36
+          },
+          {
+            "date": "2026-08-13",
+            "iv_ann_pct": 48.54
+          },
+          {
+            "date": "2026-08-14",
+            "iv_ann_pct": 47.18
+          },
+          {
+            "date": "2026-08-15",
+            "iv_ann_pct": 47.54
+          },
+          {
+            "date": "2026-08-16",
+            "iv_ann_pct": 47.49
+          }
+        ],
+        "iv_source": "Deribit",
+        "iv_currency": "ETH",
+        "iv_unit": "ann_pct",
+        "iv_rv_spread_end": 31.88,
+        "iv_rv_ratio_end": 3.042
+      }
+    },
+    "tradfi": {
+      "ES": {
+        "start_close": 7779.75,
+        "end_close": 7805.0,
+        "start_date_used": "2026-08-07",
+        "end_date_used": "2026-08-14",
+        "ret_window_pct": 0.325
+      },
+      "NQ": {
+        "start_close": 29834.75,
+        "end_close": 30141.75,
+        "start_date_used": "2026-08-07",
+        "end_date_used": "2026-08-14",
+        "ret_window_pct": 1.029
+      },
+      "VIX": {
+        "start_close": 14.899999618530273,
+        "end_close": 14.25,
+        "start_date_used": "2026-08-07",
+        "end_date_used": "2026-08-14",
+        "ret_window_pct": -4.362
+      },
+      "DXY": {
+        "start_close": 99.5999984741211,
+        "end_close": 99.66999816894531,
+        "start_date_used": "2026-08-07",
+        "end_date_used": "2026-08-14",
+        "ret_window_pct": 0.07
+      },
+      "US10Y": {
+        "start_close": 4.659999847412109,
+        "end_close": 4.696000099182129,
+        "start_date_used": "2026-08-07",
+        "end_date_used": "2026-08-14",
+        "chg_bp": 3.6,
+        "end_level": 4.696000099182129,
+        "ret_window_pct": null
+      },
+      "GOLD": {
+        "start_close": 4340.7001953125,
+        "end_close": 4380.39990234375,
+        "start_date_used": "2026-08-07",
+        "end_date_used": "2026-08-14",
+        "ret_window_pct": 0.915
+      },
+      "_window_note": "tradfi bracket 2026-08-07→2026-08-14 (US sessions bracketing crypto week); not identical to UTC crypto week"
+    },
+    "cross": {
+      "btc_vs_es_sign": "opposite",
+      "btc_vs_gold_sign": "opposite",
+      "btc_vs_dxy_sign": "opposite",
+      "decoupling_flag": false,
+      "btc_iv_vs_vix_sign": "opposite"
+    },
+    "vol": {
+      "primary": "BTC",
+      "rv_ann_pct": 10.03,
+      "iv_ann_pct_end": 35.16,
+      "iv_ann_pct_start": 34.93,
+      "iv_chg_pct_pts": 0.23,
+      "iv_rv_spread_end": 25.13,
+      "iv_source": "Deribit",
+      "iv_currency": "BTC",
+      "rv_method": "log_return_stdev_sqrt_365",
+      "vix_ret_window_pct": -4.362,
+      "btc_iv_vs_vix_sign": "opposite",
+      "iv_errors": null
+    },
+    "etf_flow": {
+      "status": "ok",
+      "provider": "bykaranteli",
+      "unit": "USD",
+      "authority": "community_aggregate",
+      "window": {
+        "start": "2026-08-10",
+        "end": "2026-08-16"
+      },
+      "assets": {
+        "BTC": {
+          "days": 5,
+          "net_sum_usd": -389710020.0,
+          "cum_start_usd": 52033372521.0,
+          "cum_end_usd": 51788333443.0,
+          "inflow_days": 1,
+          "outflow_days": 4,
+          "max_day_net_usd": 4886244.0,
+          "max_day_date": "2026-08-11",
+          "min_day_net_usd": -144670942.0,
+          "min_day_date": "2026-08-10",
+          "last_day": "2026-08-14",
+          "last_net_usd": -57632151.0,
+          "last_aum_usd": 76606484662.0,
+          "channel": {
+            "id": "mild_outflow",
+            "zh": "温和流出",
+            "en": "mild outflow"
+          },
+          "net_sum_display_zh": "-3.90 亿美金",
+          "net_sum_display_en": "-389.71M"
+        },
+        "ETH": {
+          "days": 5,
+          "net_sum_usd": -2256316.0,
+          "cum_start_usd": 11440579573.0,
+          "cum_end_usd": 11452911168.0,
+          "inflow_days": 2,
+          "outflow_days": 2,
+          "max_day_net_usd": 7379093.0,
+          "max_day_date": "2026-08-12",
+          "min_day_net_usd": -14587911.0,
+          "min_day_date": "2026-08-10",
+          "last_day": "2026-08-14",
+          "last_net_usd": 0.0,
+          "last_aum_usd": 10520496423.0,
+          "channel": {
+            "id": "neutral",
+            "zh": "中性/拉锯",
+            "en": "neutral"
+          },
+          "net_sum_display_zh": "-2.26 百万美金",
+          "net_sum_display_en": "-2.26M"
+        }
+      },
+      "errors": [],
+      "channel": {
+        "id": "mild_outflow",
+        "zh": "温和流出",
+        "en": "mild outflow"
+      },
+      "note_zh": "美现货 ETF 合计净申赎（USD）。源 ByKaranteli 公开聚合（SoSo 类）· 非发行人官方 · 非 Datahub；并陈不焊死因果。",
+      "note_en": "US spot ETF aggregate net flow (USD) via ByKaranteli public aggregate; not issuer official; not Datahub."
+    }
+  },
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_low",
+      "name_zh": "偏震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "leverage_neutral",
+      "name_zh": "杠杆中性",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ]
+    },
+    "vol": {
+      "id": "low",
+      "name_zh": "低波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_rich",
+      "name_zh": "期权偏贵（IV 相对 RV 溢价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": 25.13
+    },
+    "tradfi_link": {
+      "id": "crypto_idiosyncratic",
+      "name_zh": "加密偏独立",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "trigger": null,
+  "diff": {
+    "has_previous": false,
+    "previous_report_id": null,
+    "label_changes": [],
+    "feature_deltas": [],
+    "open_watch_items_from_prev": [],
+    "note": "无上期快照"
+  },
+  "lexicon": {
+    "version": "lexicon_v0_bilingual",
+    "terms": {
+      "funding_rate": {
+        "name_zh": "资金费率",
+        "name_en": "Funding Rate",
+        "one_liner": "永续合约里多头与空头之间定期支付的「租金」。",
+        "one_liner_en": "The periodic payment between longs and shorts on perpetual futures.",
+        "detail_zh": "正费率通常表示多头向空头付费、市场偏多；如 0.0001≈0.01%/期。",
+        "common_misread": "费率略正 ≠ 一定会大涨。"
+      },
+      "open_interest": {
+        "name_zh": "未平仓量",
+        "name_en": "Open Interest (OI)",
+        "one_liner": "尚未平掉的衍生品合约总量。",
+        "one_liner_en": "Total outstanding derivative contracts not yet closed.",
+        "common_misread": "OI 单独升降不能直接当多空人数。"
+      },
+      "liquidation": {
+        "name_zh": "强制平仓 / 清算",
+        "name_en": "Liquidation",
+        "one_liner": "保证金不足时仓位被强平，可能加剧短时波动。",
+        "one_liner_en": "Forced close when margin is insufficient; can amplify short-term moves.",
+        "common_misread": "清算量大 ≠ 趋势一定延续。"
+      },
+      "basis": {
+        "name_zh": "基差",
+        "name_en": "Basis (mark − index)",
+        "one_liner": "衍生品标记价格相对现货指数的偏离。",
+        "one_liner_en": "Gap between mark price and the spot index."
+      },
+      "realized_vol": {
+        "name_zh": "已实现波动 / 历史波动",
+        "name_en": "Realized Volatility (RV / HV)",
+        "one_liner": "后视镜：价格已经抖得有多厉害（用历史收益率算）。",
+        "one_liner_en": "Rear-view mirror: how much price already moved (from past returns).",
+        "detail_zh": "本报告默认用窗口内日对数收益标准差 × √365，年化百分比近似。",
+        "common_misread": "RV 高 ≠ 未来一定继续高。"
+      },
+      "implied_vol": {
+        "name_zh": "隐含波动率",
+        "name_en": "Implied Volatility (IV)",
+        "one_liner": "保险报价：期权市场定价觉得未来会抖多厉害。",
+        "one_liner_en": "Insurance quote: option market's priced future volatility.",
+        "detail_zh": "本报告主序列为 Deribit 波动指数（DVOL 类），单位为年化 %。",
+        "common_misread": "IV 高 ≠ 该买/卖期权；只描述保险费贵贱环境。"
+      },
+      "vol_premium": {
+        "name_zh": "波动溢价（IV 相对 RV）",
+        "name_en": "Volatility Risk Premium (IV vs RV)",
+        "one_liner": "保险费相对「刚实现的颠簸」是贵了还是便宜了（常用 IV−RV）。",
+        "one_liner_en": "Whether option insurance is rich or cheap vs just-realized moves (IV − RV).",
+        "common_misread": "溢价/折价是环境描述，不是买卖信号。"
+      },
+      "dvol": {
+        "name_zh": "波动率指数（DVOL 类）",
+        "name_en": "Volatility Index (DVOL-class)",
+        "one_liner": "交易所/Deribit 公布的加密「保险费温度计」，角色类似美股 VIX，但不是同一个数。",
+        "one_liner_en": "Crypto options vol gauge (Deribit DVOL-class); similar role to VIX, not the same number."
+      },
+      "risk_on": {
+        "name_zh": "风险偏好升温",
+        "name_en": "Risk-on",
+        "one_liner": "资金更愿意买高风险资产。",
+        "one_liner_en": "Investors favor riskier assets."
+      },
+      "risk_off": {
+        "name_zh": "风险偏好降温",
+        "name_en": "Risk-off",
+        "one_liner": "资金偏向避险、降低风险敞口。",
+        "one_liner_en": "Investors reduce risk and seek safety."
+      },
+      "etf_net_flow": {
+        "name_zh": "ETF 净申赎 / 净流入",
+        "name_en": "ETF Net Creation/Redemption (Net Flow)",
+        "one_liner": "美现货加密 ETF 当天合计有多少钱净申购或净赎回（不是 ETF 股价涨跌）。",
+        "one_liner_en": "Aggregate US spot crypto ETF net creations/redemptions that day — not the ETF share price move.",
+        "detail_zh": "本报告默认用 ByKaranteli 公开聚合（SoSo 类汇编），单位美元；非发行人官方、非 Datahub。当日读数可能事后修订。",
+        "common_misread": "净流入 ≠ 当天链上买盘一一对应，也 ≠ 必然涨跌。"
+      },
+      "decoupling": {
+        "name_zh": "脱钩",
+        "name_en": "Decoupling",
+        "one_liner": "加密与美股等传统资产方向不一致。",
+        "one_liner_en": "Crypto moves differently from traditional assets (e.g. US equities)."
+      },
+      "VIX": {
+        "name_zh": "恐慌指数",
+        "name_en": "VIX",
+        "one_liner": "美股近月波动的「保险费」温度计。",
+        "one_liner_en": "A gauge of near-term expected US equity volatility."
+      },
+      "DXY": {
+        "name_zh": "美元指数",
+        "name_en": "US Dollar Index (DXY)",
+        "one_liner": "美元相对一篮子货币的强弱。",
+        "one_liner_en": "Strength of the USD versus a basket of currencies."
+      },
+      "US10Y": {
+        "name_zh": "美国十年期国债收益率",
+        "name_en": "US 10Y Treasury Yield",
+        "one_liner": "长端利率锚之一。",
+        "one_liner_en": "A key long-term interest-rate benchmark."
+      },
+      "ES": {
+        "name_zh": "标普500期货",
+        "name_en": "S&P 500 Futures (ES)",
+        "one_liner": "美股大盘风险偏好代理。",
+        "one_liner_en": "Proxy for broad US equity risk appetite."
+      },
+      "NQ": {
+        "name_zh": "纳指期货",
+        "name_en": "Nasdaq 100 Futures (NQ)",
+        "one_liner": "美股科技/高beta 代理。",
+        "one_liner_en": "Proxy for US tech / high-beta risk appetite."
+      },
+      "GOLD": {
+        "name_zh": "黄金",
+        "name_en": "Gold",
+        "one_liner": "传统避险与货币属性资产。",
+        "one_liner_en": "Traditional safe-haven and monetary asset."
+      },
+      "attention": {
+        "name_zh": "关注等级",
+        "name_en": "Attention Level",
+        "one_liner": "今天要不要多看一眼（不是买卖建议）。",
+        "one_liner_en": "How much attention this period deserves (not trading advice)."
+      },
+      "watch_item": {
+        "name_zh": "观察点",
+        "name_en": "Watch Item",
+        "one_liner": "下期要回来核对的问题。",
+        "one_liner_en": "A checkpoint to revisit next period."
+      }
+    },
+    "labels_en": {
+      "strong_uptrend": "Strong Uptrend",
+      "strong_downtrend": "Strong Downtrend",
+      "chop_high": "Choppy / Wide Range",
+      "chop_low": "Mild Chop",
+      "low_vol_grind": "Low-Vol Grind",
+      "trend_break": "Trend Break",
+      "data_insufficient": "Insufficient Data",
+      "liquidation_driven_squeeze": "Liquidation-Driven Squeeze",
+      "crowded_long": "Crowded Long",
+      "crowded_short": "Crowded Short",
+      "two_sided_churn": "Two-Sided Churn",
+      "leverage_neutral": "Leverage Neutral",
+      "high": "High Realized Vol",
+      "mid": "Medium Vol",
+      "low": "Low Vol",
+      "spike": "Vol Spike",
+      "iv_rich": "IV Rich (vs RV)",
+      "iv_fair": "IV Fair (vs RV)",
+      "iv_cheap": "IV Cheap (vs RV)",
+      "unknown": "Unknown",
+      "decoupled_crypto_up_equity_down": "Decoupled: Crypto Up / Equities Down",
+      "decoupled_crypto_down_equity_up": "Decoupled: Crypto Down / Equities Up",
+      "risk_on_sync": "Risk-On Sync",
+      "risk_off_sync": "Risk-Off Sync",
+      "crypto_idiosyncratic": "Crypto-Idiosyncratic",
+      "tradfi_leads": "TradFi Leads",
+      "S0": "S0 Skip",
+      "S1": "S1 Note",
+      "S2": "S2 Worth a Look",
+      "S3": "S3 Priority Today"
+    },
+    "ui": {
+      "trend": [
+        "趋势质地",
+        "Trend Regime"
+      ],
+      "leverage": [
+        "杠杆结构",
+        "Leverage Structure"
+      ],
+      "vol": [
+        "波动",
+        "Volatility"
+      ],
+      "vol_premium": [
+        "IV 溢价",
+        "IV Premium"
+      ],
+      "tradfi_link": [
+        "传统联动",
+        "TradFi Link"
+      ],
+      "plain": [
+        "小白",
+        "Beginner"
+      ],
+      "tech": [
+        "技术",
+        "Technical"
+      ],
+      "all": [
+        "全部",
+        "All"
+      ],
+      "l0": [
+        "30秒",
+        "30s"
+      ],
+      "compare": [
+        "一页对照",
+        "One-Page Compare"
+      ],
+      "path": [
+        "价格路径",
+        "Price Path"
+      ],
+      "leverage_section": [
+        "杠杆结构",
+        "Leverage Structure"
+      ],
+      "vol_section": [
+        "波动环境",
+        "Volatility Regime"
+      ],
+      "etf_section": [
+        "ETF 现货通道",
+        "ETF Spot Channel"
+      ],
+      "tradfi_section": [
+        "传统市场",
+        "Traditional Markets"
+      ],
+      "conclusions": [
+        "三句结论",
+        "Three Takeaways"
+      ],
+      "strategy_env": [
+        "策略环境",
+        "Strategy backdrop"
+      ],
+      "week_diff": [
+        "与上周对比",
+        "vs Last week"
+      ],
+      "watch_items": [
+        "观察点",
+        "Watch Items"
+      ],
+      "attention": [
+        "关注等级",
+        "Attention Level"
+      ],
+      "ask": [
+        "问潮观",
+        "Ask Tidewatch"
+      ],
+      "theme": [
+        "色调",
+        "Theme"
+      ],
+      "data_notes": [
+        "数据脚注",
+        "Data Footnotes"
+      ],
+      "what": [
+        "是什么",
+        "What"
+      ],
+      "change": [
+        "怎么变",
+        "Change"
+      ],
+      "means": [
+        "意味什么",
+        "Why it matters"
+      ],
+      "vs_crypto": [
+        "和加密",
+        "vs Crypto"
+      ],
+      "site_home": [
+        "周报集锦",
+        "Weekly archive"
+      ]
+    },
+    "tradfi_cards": {
+      "ES": {
+        "what": "标普500股指期货",
+        "what_en": "S&P 500 index futures",
+        "generic_means_up": "风险偏好升温",
+        "generic_means_up_en": "Risk-on appetite rising",
+        "generic_means_down": "风险偏好降温",
+        "generic_means_down_en": "Risk-off appetite cooling",
+        "caveat": "与加密可脱钩",
+        "caveat_en": "Can decouple from crypto"
+      },
+      "NQ": {
+        "what": "纳斯达克100期货",
+        "what_en": "Nasdaq 100 futures",
+        "generic_means_up": "科技风险偏好升温",
+        "generic_means_up_en": "Tech risk appetite rising",
+        "generic_means_down": "高beta 承压",
+        "generic_means_down_en": "High-beta under pressure",
+        "caveat": "与 BTC 相关常强于 ES，但非定律",
+        "caveat_en": "Often tighter with BTC than ES, not a law"
+      },
+      "VIX": {
+        "what": "美股隐含波动指数 VIX",
+        "what_en": "US equity implied volatility index (VIX)",
+        "generic_means_up": "定价的紧张度上升",
+        "generic_means_up_en": "Priced stress rising",
+        "generic_means_down": "紧张度缓解",
+        "generic_means_down_en": "Stress easing",
+        "caveat": "中低位徘徊时解读权重应降低",
+        "caveat_en": "At mid/low levels, down-weight the signal"
+      },
+      "DXY": {
+        "what": "美元指数",
+        "what_en": "US Dollar Index",
+        "generic_means_up": "美元走强",
+        "generic_means_up_en": "USD stronger",
+        "generic_means_down": "美元走弱",
+        "generic_means_down_en": "USD weaker",
+        "caveat": "单日噪声大",
+        "caveat_en": "Noisy day-to-day"
+      },
+      "US10Y": {
+        "what": "10Y 美债收益率",
+        "what_en": "US 10-year Treasury yield",
+        "generic_means_up": "折现率压力上升",
+        "generic_means_up_en": "Discount-rate pressure rising",
+        "generic_means_down": "压力缓解",
+        "generic_means_down_en": "Pressure easing",
+        "caveat": "与 BTC 无锁死因果",
+        "caveat_en": "No locked causality with BTC"
+      },
+      "GOLD": {
+        "what": "黄金",
+        "what_en": "Gold",
+        "generic_means_up": "避险或货币宽松叙事",
+        "generic_means_up_en": "Safe-haven or easing narrative",
+        "generic_means_down": "上述叙事减弱",
+        "generic_means_down_en": "Those narratives fading",
+        "caveat": "可与 BTC 同涨仍属不同逻辑",
+        "caveat_en": "Can rise with BTC yet different drivers"
+      }
+    }
+  },
+  "writing_rules": {
+    "language": "zh-CN",
+    "no_fabricated_numbers": true,
+    "no_investment_advice": true,
+    "must_use_labels": true,
+    "section_order": "conclusion_then_chart_then_evidence_then_plain",
+    "plain_first_acronym": true,
+    "max_watch_items": 3,
+    "forbidden_phrases": [
+      "建议买入",
+      "建议卖出",
+      "必涨",
+      "稳赚"
+    ]
+  },
+  "qa_policy": {
+    "enabled": true,
+    "mode": "hybrid",
+    "allow_web": false,
+    "allow_other_reports": false,
+    "max_turns_per_session": 20,
+    "max_question_chars": 2000,
+    "answer_language": "zh-CN",
+    "must_cite_context_keys": true,
+    "on_unknown": "say_not_in_report_and_suggest_what_is_available",
+    "show_entry_in_html": true,
+    "entry_placeholder": "复制报告里看不懂的句子，或直接问：例如「资金费率是什么意思？」"
+  },
+  "output_contract": {
+    "narrative_schema_version": "narrative_v0.1",
+    "required_top_level": [
+      "l0",
+      "labels_plain",
+      "sections"
+    ]
+  },
+  "sample_quality": {
+    "crypto_datahub": true,
+    "tradfi_datahub": false,
+    "tradfi_fallback": "yahoo",
+    "labels": "label_rules_v0",
+    "ready_for_llm_narrative": true,
+    "pipeline": "tidewatch_v0"
+  },
+  "strategy_env": {
+    "version": "strategy_env_v0",
+    "enabled": true,
+    "primary": "BTC",
+    "families": [
+      {
+        "id": "trend_following",
+        "name": {
+          "zh": "趋势跟踪类",
+          "en": "Trend-following"
+        },
+        "status": "mismatch",
+        "why": {
+          "zh": "趋势标签为「偏震荡」，缺少清晰单边趋势条件。",
+          "en": "Trend label “chop_low” lacks a clear one-way trend condition."
+        },
+        "note": null,
+        "evidence": [
+          "labels.trend",
+          "crypto.BTC.ret_window_pct"
+        ]
+      },
+      {
+        "id": "mean_reversion",
+        "name": {
+          "zh": "震荡/均值回归类",
+          "en": "Mean-reversion / range"
+        },
+        "status": "match",
+        "why": {
+          "zh": "趋势偏震荡/磨盘（偏震荡），更接近区间来回而非单边趋势条件。",
+          "en": "Trend reads choppy/grind (chop_low); closer to range-bound than one-way trend."
+        },
+        "note": null,
+        "evidence": [
+          "labels.trend",
+          "labels.vol"
+        ]
+      },
+      {
+        "id": "vol_harvest",
+        "name": {
+          "zh": "波动收割/卖保费类环境",
+          "en": "Vol-harvest / premium backdrop"
+        },
+        "status": "match",
+        "why": {
+          "zh": "IV 相对 RV 偏贵（期权偏贵（IV 相对 RV 溢价）），且实现波动未标成极端高波——讨论「保险偏贵/收保费」类环境时条件更常被提起。",
+          "en": "IV rich vs RV (iv_rich) and realized vol not extreme-high — a backdrop often discussed for “premium harvesting” *environments*."
+        },
+        "note": {
+          "zh": "仅描述期权保险费相对实现波动的环境，不是买卖期权或任何产品的建议。",
+          "en": "Describes insurance-vs-realized backdrop only — not advice to trade options or any product."
+        },
+        "evidence": [
+          "labels.vol_premium",
+          "labels.vol",
+          "crypto.BTC.iv_rv_spread_end"
+        ]
+      }
+    ],
+    "matched": [
+      {
+        "id": "mean_reversion",
+        "name": {
+          "zh": "震荡/均值回归类",
+          "en": "Mean-reversion / range"
+        },
+        "status": "match",
+        "why": {
+          "zh": "趋势偏震荡/磨盘（偏震荡），更接近区间来回而非单边趋势条件。",
+          "en": "Trend reads choppy/grind (chop_low); closer to range-bound than one-way trend."
+        },
+        "note": null,
+        "evidence": [
+          "labels.trend",
+          "labels.vol"
+        ]
+      },
+      {
+        "id": "vol_harvest",
+        "name": {
+          "zh": "波动收割/卖保费类环境",
+          "en": "Vol-harvest / premium backdrop"
+        },
+        "status": "match",
+        "why": {
+          "zh": "IV 相对 RV 偏贵（期权偏贵（IV 相对 RV 溢价）），且实现波动未标成极端高波——讨论「保险偏贵/收保费」类环境时条件更常被提起。",
+          "en": "IV rich vs RV (iv_rich) and realized vol not extreme-high — a backdrop often discussed for “premium harvesting” *environments*."
+        },
+        "note": {
+          "zh": "仅描述期权保险费相对实现波动的环境，不是买卖期权或任何产品的建议。",
+          "en": "Describes insurance-vs-realized backdrop only — not advice to trade options or any product."
+        },
+        "evidence": [
+          "labels.vol_premium",
+          "labels.vol",
+          "crypto.BTC.iv_rv_spread_end"
+        ]
+      }
+    ],
+    "mismatched": [
+      {
+        "id": "trend_following",
+        "name": {
+          "zh": "趋势跟踪类",
+          "en": "Trend-following"
+        },
+        "status": "mismatch",
+        "why": {
+          "zh": "趋势标签为「偏震荡」，缺少清晰单边趋势条件。",
+          "en": "Trend label “chop_low” lacks a clear one-way trend condition."
+        },
+        "note": null,
+        "evidence": [
+          "labels.trend",
+          "crypto.BTC.ret_window_pct"
+        ]
+      }
+    ],
+    "neutral": [],
+    "disclaimer": {
+      "zh": "策略环境 = 条件匹配度，不是投资建议；不推荐具体产品，不给出仓位。",
+      "en": "Strategy backdrop = condition fit, not investment advice; no products, no position sizes."
+    }
+  },
+  "week_diff": {
+    "has_previous": false,
+    "previous_report_id": null,
+    "previous_href": null,
+    "summary": {
+      "zh": "无上期快照，无法做周对比。",
+      "en": "No prior snapshot — week diff unavailable."
+    },
+    "rows": []
+  },
+  "tide_notes": {
+    "enabled": true,
+    "resolved_watches": [],
+    "echo_preview": [],
+    "weekly_words": [
+      {
+        "id": "daily",
+        "zh": "daily",
+        "en": "daily",
+        "one_liner": ""
+      },
+      {
+        "id": "2026-08-19",
+        "zh": "2026-08-19",
+        "en": "2026-08-19",
+        "one_liner": ""
+      },
+      {
+        "id": "VIX",
+        "zh": "恐慌指数",
+        "en": "VIX",
+        "one_liner": "美股近月波动的「保险费」温度计。"
+      }
+    ]
+  }
+}

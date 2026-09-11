@@ -1,0 +1,342 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-17",
+  "date_effective": "2026-08-17",
+  "as_of": "2026-09-04T07:03:25Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-17",
+    "prior_date": "2026-08-16",
+    "btc_ret_1d": 2.595,
+    "eth_ret_1d": 2.004,
+    "oi_qty": 106416.222,
+    "oi_chg_pct": -4.098,
+    "perp_turnover_usd": 8818500412.4621,
+    "perp_turnover_chg_pct": 250.39,
+    "spot_turnover_usd": 909366051.0685228,
+    "spot_turnover_chg_pct": 204.44,
+    "btc_etf_net_usd": 297556931.0,
+    "eth_etf_net_usd": 30851200.0,
+    "etf_lookback_sum_btc_usd": 108795323.0,
+    "etf_lookback_sum_eth_usd": 37568142.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +2.60%（有波动、未过异常默认线） · ETH +2.00% · OI 日变 -4.10% · 永续成交额 88.19 亿美金（日变 +250.4%） · BTC ETF 净流 +2.98 亿美金",
+    "weather_en": "Weather: BTC +2.60% · ETH +2.00% · OI -4.10% d/d · perp turnover 8.82B (+250.4% d/d) · BTC ETF net +297.56M",
+    "text_zh": "BTC 收涨约 2.6%、ETH 约 2%，杠杆存量 OI 回落 4.1%。永续成交额跳到 88 亿美金量级、清算相对前日约 4.2 倍，盘面热闹但更像出清后的上冲；美股 ES 小跌，和币侧明显背离。",
+    "text_en": "BTC +2.6%, ETH +2%; OI -4.1%. Perp turnover jumped to ~$8.8B with liq ~4.2× prior—busy tape more like post-flush bounce. Diverged from soft ES."
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "清算放量主导的急涨日",
+      "headline_en": "清算层异常抬升",
+      "conclusion_zh": "【清算放量主导的急涨日】主矛盾是杠杆出清叠放量：BTC +2.60% 的同时 OI 日降 4.10%、清算约前日 4.22 倍、永续成交额暴增逾两倍半；价格上行与美股 ES 小跌背离，更像合约侧热闹后的结构整理，而非单纯跟涨传统风险资产。",
+      "conclusion_en": "状态判断：清算层异常抬升。币侧 BTC +2.60%、ETH +2.00%。BTC 与 ES 背离（BTC +2.60% · ES -0.46%）。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+2.60%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+2.00%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+1.47 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "5.65"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "-4.10%"
+        },
+        {
+          "key": "liq_vs_prior",
+          "label_zh": "清算/前日",
+          "display": "4.22×"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "88.19 亿美金（+250%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "9.09 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+13.48 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-11.65 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.46%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-0.15%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "liq_spike",
+          "value": 4.222,
+          "threshold": 2.5,
+          "summary_zh": "清算量约为前一日的 4.22×",
+          "summary_en": "liquidation qty ~4.22× prior day",
+          "meta": {
+            "title_zh": "清算量相对前日尖峰",
+            "title_en": "Liquidation spike vs prior day",
+            "what_zh": "当日强平总量是否数倍于前一日，提示杠杆出清/挤压。",
+            "what_en": "Whether liquidation notional is multiple of prior day.",
+            "how_zh": "ratio = 今日清算 total_qty ÷ 昨日 total_qty。当 ratio ≥ liq_spike_vs_prior（默认 2.5）时触发。side 多空语义未最终确认，只报总量结构。",
+            "how_en": "ratio = today liq total_qty / prior. Fires if ratio ≥ liq_spike_vs_prior (default 2.5). Side long/short semantics unverified."
+          },
+          "observed": {
+            "btc_ret_1d": 2.595,
+            "eth_ret_1d": 2.004,
+            "funding_ann_pct": 5.6546,
+            "funding_ann_chg_pp": 1.473,
+            "oi_qty": 106416.222,
+            "oi_chg_pct": -4.098,
+            "liq_vs_prior": 4.222,
+            "iv_rv_spread": 13.48,
+            "iv_rv_spread_chg_pp": -11.65,
+            "vix_ret_1d": 6.596,
+            "btc_etf_net_usd": 297556931.0,
+            "eth_etf_net_usd": 30851200.0,
+            "perp_turnover_usd": 8818500412.4621,
+            "perp_turnover_chg_pct": 250.39,
+            "spot_turnover_usd": 909366051.0685228,
+            "value": 4.222,
+            "threshold": 2.5
+          },
+          "readout_zh": "观测清算量/前日 = 4.22×，阈值 ≥2.50×",
+          "readout_en": "liquidation qty ~4.22× prior day",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        },
+        {
+          "id": "iv_rv_spread_jump",
+          "value": -11.65,
+          "threshold": 8.0,
+          "summary_zh": "IV−RV 点差日变 -11.65 pp",
+          "summary_en": "IV−RV spread day change -11.65 pp",
+          "meta": {
+            "title_zh": "IV−RV 点差日变",
+            "title_en": "IV−RV spread day change",
+            "what_zh": "期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。",
+            "what_en": "Large one-day move in IV minus realized vol spread.",
+            "how_zh": "spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。",
+            "how_en": "spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": 2.595,
+            "eth_ret_1d": 2.004,
+            "funding_ann_pct": 5.6546,
+            "funding_ann_chg_pp": 1.473,
+            "oi_qty": 106416.222,
+            "oi_chg_pct": -4.098,
+            "liq_vs_prior": 4.222,
+            "iv_rv_spread": 13.48,
+            "iv_rv_spread_chg_pp": -11.65,
+            "vix_ret_1d": 6.596,
+            "btc_etf_net_usd": 297556931.0,
+            "eth_etf_net_usd": 30851200.0,
+            "perp_turnover_usd": 8818500412.4621,
+            "perp_turnover_chg_pct": 250.39,
+            "spot_turnover_usd": 909366051.0685228,
+            "value": -11.65,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 IV−RV 点差日变 -11.65 pp（今日点差 13.48），阈值 |·|≥8.00 pp",
+          "readout_en": "IV−RV spread day change -11.65 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        },
+        {
+          "id": "volume_spike",
+          "value": 250.39,
+          "threshold": 80.0,
+          "direction": "up",
+          "summary_zh": "永续成交额日变 +250.4%（当日 88.19 亿美金；活跃度，非多空）",
+          "summary_en": "perp turnover d/d +250.4% (activity only)",
+          "meta": {
+            "title_zh": "永续成交额日变跳变",
+            "title_en": "Perp turnover day jump",
+            "what_zh": "币安 U 永续当日成交额（美金）相对前一日是否大幅变化——只说明合约盘「热闹/冷清」，不能拆多空。",
+            "what_en": "Large day-over-day change in Binance USDT-M perp turnover USD — activity only, not long/short.",
+            "how_zh": "perp_turnover_chg_pct = (今日 turnover ÷ 昨日 turnover − 1)×100（看板 derivatives.perp_turnover）。当 |chg| ≥ volume_spike_abs_pct（默认 80）时触发。与 funding/OI/清算并读；禁止写成多头/空头放量。",
+            "how_en": "chg% from cache perp_turnover day-over-day. Fires if |chg| ≥ volume_spike_abs_pct (default 80). Read with funding/OI/liq; not a long/short split."
+          },
+          "observed": {
+            "btc_ret_1d": 2.595,
+            "eth_ret_1d": 2.004,
+            "funding_ann_pct": 5.6546,
+            "funding_ann_chg_pp": 1.473,
+            "oi_qty": 106416.222,
+            "oi_chg_pct": -4.098,
+            "liq_vs_prior": 4.222,
+            "iv_rv_spread": 13.48,
+            "iv_rv_spread_chg_pp": -11.65,
+            "vix_ret_1d": 6.596,
+            "btc_etf_net_usd": 297556931.0,
+            "eth_etf_net_usd": 30851200.0,
+            "perp_turnover_usd": 8818500412.4621,
+            "perp_turnover_chg_pct": 250.39,
+            "spot_turnover_usd": 909366051.0685228,
+            "value": 250.39,
+            "threshold": 80.0
+          },
+          "readout_zh": "观测永续成交额日变 250.39%（当日 88.19 亿美金），阈值 |·|≥80.00% · 活跃度非多空",
+          "readout_en": "perp turnover d/d +250.4% (activity only)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "先看数字：BTC 日收益 +2.60%，ETH +2.00%；OI 从约 11.1 万张落到 10.6 万附近（-4.10%），funding 年化约 5.65%（日变 +1.47 pp）；清算/前日 4.22×，永续成交额 88.19 亿美金（+250%），现货也同步放大到约 9.1 亿。机制上，清算尖峰加 OI 回落，通常读作杠杆被洗掉一截，成交额跳变只说明合约盘极热闹，不能拆成多空哪边赢。IV−RV 点差仍约 +13.5 pp，但一日收窄 11.65 pp，期权相对实现波动的「溢价」明显松动。传统侧：ES -0.46%、NQ -0.15%，VIX 上行，BTC 与 ES 明确背离——翻译一句：股市偏弱时币独自放量上冲，更要并读清算与持仓存量，而不是当成普涨接力。BTC ETF 当日净流入约 +2.98 亿美金，可作现货通道旁证，仍禁止写成涨跌原因。",
+      "read_en": "依据（程序）：\n- 观测清算量/前日 = 4.22×，阈值 ≥2.50×\n- 观测 IV−RV 点差日变 -11.65 pp（今日点差 13.48），阈值 |·|≥8.00 pp\n- 观测永续成交额日变 250.39%（当日 88.19 亿美金），阈值 |·|≥80.00% · 活跃度非多空\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 背离（BTC +2.60% · ES -0.46%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 背离（BTC +2.60% · ES -0.46%）",
+      "tradfi_link_note_en": "BTC vs ES divergence (BTC +2.60% · ES -0.46%)",
+      "text_zh": "【清算放量主导的急涨日】主矛盾是杠杆出清叠放量：BTC +2.60% 的同时 OI 日降 4.10%、清算约前日 4.22 倍、永续成交额暴增逾两倍半；价格上行与美股 ES 小跌背离，更像合约侧热闹后的结构整理，而非单纯跟涨传统风险资产。",
+      "text_en": "状态判断：清算层异常抬升。币侧 BTC +2.60%、ETH +2.00%。BTC 与 ES 背离（BTC +2.60% · ES -0.46%）。",
+      "card": {
+        "date": "2026-08-17",
+        "prior_date": "2026-08-16",
+        "btc_ret_1d": 2.595,
+        "eth_ret_1d": 2.004,
+        "funding_ann_pct": 5.6546,
+        "funding_ann_chg_pp": 1.473,
+        "oi_qty": 106416.222,
+        "oi_prior_qty": 110962.944,
+        "oi_chg_pct": -4.098,
+        "liq_total": 123.90100000000017,
+        "liq_vs_prior": 4.222,
+        "perp_turnover_usd": 8818500412.4621,
+        "perp_turnover_chg_pct": 250.39,
+        "perp_turnover_display_zh": "88.19 亿美金",
+        "perp_turnover_display_en": "8.82B",
+        "spot_turnover_usd": 909366051.0685228,
+        "spot_turnover_chg_pct": 204.44,
+        "spot_turnover_display_zh": "9.09 亿美金",
+        "spot_turnover_display_en": "909.37M",
+        "iv_ann_pct": 34.72,
+        "rv_7_ann_pct": 21.2412,
+        "iv_rv_spread": 13.48,
+        "iv_rv_spread_chg_pp": -11.65,
+        "vix_ret_1d": 6.596,
+        "es_ret_1d": -0.464,
+        "nq_ret_1d": -0.152,
+        "dxy_ret_1d": -0.03,
+        "gold_ret_1d": 0.854,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-08-14",
+            "day": "2026-08-17"
+          },
+          "NQ": {
+            "prior": "2026-08-14",
+            "day": "2026-08-17"
+          },
+          "VIX": {
+            "prior": "2026-08-14",
+            "day": "2026-08-17"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 背离（BTC +2.60% · ES -0.46%）",
+        "tradfi_link_note_en": "BTC vs ES divergence (BTC +2.60% · ES -0.46%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：你标了「IV 是什么、和 VIX 有何区别」——今日点差一日大收窄，正好对照着看。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 收涨约 2.6%",
+      "tone": "up"
+    },
+    {
+      "text": "OI 回落 4.1%",
+      "tone": "down"
+    },
+    {
+      "text": "清算相对前日约 4.2 倍",
+      "tone": "warn"
+    },
+    {
+      "text": "永续成交额跳到 88 亿美金量级",
+      "tone": "warn"
+    },
+    {
+      "text": "和美股 ES 小跌，和币侧明显背离",
+      "tone": "neutral"
+    },
+    {
+      "text": "IV−RV 点差仍约 +13.5 pp，但一日收窄 11.65 pp",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

@@ -1,0 +1,136 @@
+{
+  "report_id": "weekly_20260810_20260816",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_low",
+      "name_zh": "偏震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "leverage_neutral",
+      "name_zh": "杠杆中性",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ]
+    },
+    "vol": {
+      "id": "low",
+      "name_zh": "低波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_rich",
+      "name_zh": "期权偏贵（IV 相对 RV 溢价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": 25.13
+    },
+    "tradfi_link": {
+      "id": "crypto_idiosyncratic",
+      "name_zh": "加密偏独立",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": -3.084,
+    "rv_ann": 10.03,
+    "iv_end": 35.16,
+    "iv_rv_spread": 25.13,
+    "funding_ann": 4.18,
+    "oi_chg": 3.653,
+    "perp_turnover_sum_usd": 40898758994.91,
+    "perp_turnover_sum_display_zh": "408.99 亿美金",
+    "perp_turnover_sum_display_en": "40.90B",
+    "perp_turnover_wow_pct": -12.17,
+    "perp_activity_id": "normal",
+    "spot_turnover_sum_usd": 4676300109.42,
+    "spot_turnover_sum_display_zh": "46.76 亿美金",
+    "spot_turnover_sum_display_en": "4.68B",
+    "etf_btc_net_usd": -389710020.0,
+    "etf_btc_net_display_zh": "-3.90 亿美金",
+    "etf_btc_net_display_en": "-389.71M",
+    "etf_eth_net_usd": -2256316.0,
+    "etf_eth_net_display_zh": "-2.26 百万美金",
+    "etf_eth_net_display_en": "-2.26M",
+    "etf_channel_id": "mild_outflow",
+    "etf_channel_zh": "温和流出",
+    "etf_channel_en": "mild outflow"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "mean_reversion",
+      "vol_harvest"
+    ],
+    "mismatched": [
+      "trend_following"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "下一周美现货 BTC ETF 合计净流是否仍为净流出，或转为接近零/净流入。",
+        "en": "Whether next week’s US spot BTC ETF aggregate net stays negative or flips toward flat/inflow."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_persist",
+      "rationale_zh": "本周已是温和流出且多日为负，是最直接可对表的通道哨，不预设对价格的因果。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "BTC 的 IV-RV 点差是否仍维持约 20 个点以上的偏贵状态，或明显收窄。",
+        "en": "Whether BTC’s IV–RV spread stays richly above ~20 points or compresses meaningfully."
+      },
+      "watchable": true,
+      "template_hint": "iv_still_rich",
+      "rationale_zh": "本周低 RV 配高 IV 是核心结构矛盾，溢价能否松动决定 vol_harvest 叙事是否续写。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "加密相对 ES/NQ 的收益差是否继续呈现「股强币弱/独立」而非重新同步。",
+        "en": "Whether crypto’s return gap versus ES/NQ keeps looking equity-strong/crypto-soft (idiosyncratic) rather than resynchronizing."
+      },
+      "watchable": true,
+      "template_hint": "decouple_persist",
+      "rationale_zh": "本周 tradfi_link 为加密偏独立，是下期核对 beta 是否回归的清晰命题。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-08-10",
+    "end": "2026-08-16",
+    "label": "2026-08-10～2026-08-16",
+    "incomplete_end": false
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-13",
+  "date_effective": "2026-08-13",
+  "as_of": "2026-09-04T07:01:15Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-13",
+    "prior_date": "2026-08-12",
+    "btc_ret_1d": 0.017,
+    "eth_ret_1d": 0.337,
+    "oi_qty": 109602.33,
+    "oi_chg_pct": -1.344,
+    "perp_turnover_usd": 7789208113.2887,
+    "perp_turnover_chg_pct": 6.75,
+    "spot_turnover_usd": 685844694.2494848,
+    "spot_turnover_chg_pct": -21.07,
+    "btc_etf_net_usd": -131129457.0,
+    "eth_etf_net_usd": 6716942.0,
+    "etf_lookback_sum_btc_usd": -332077869.0,
+    "etf_lookback_sum_eth_usd": -2256316.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.02%（小区间） · ETH +0.34% · OI 日变 -1.34% · 永续成交额 77.89 亿美金（日变 +6.8%） · BTC ETF 净流 -1.31 亿美金",
+    "weather_en": "Weather: BTC +0.02% · ETH +0.34% · OI -1.34% d/d · perp turnover 7.79B (+6.8% d/d) · BTC ETF net -131.13M",
+    "text_zh": "今天整体很平静。BTC 几乎横盘（+0.02%），ETH 稍强一点（+0.34%）；杠杆总量 OI 日减 1.34%，永续成交额升到 77.89 亿美金，BTC 现货 ETF 净流出约 1.31 亿美金。",
+    "text_en": "Quiet session: BTC +0.02%, ETH +0.34%, OI -1.34% d/d, perp turnover 7.79B (+6.8%), BTC ETF net -131M."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记：IV 是什么、和 VIX 有何区别，还待解答。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "+0.02%",
+      "tone": "neutral"
+    },
+    {
+      "text": "+0.34%",
+      "tone": "up"
+    },
+    {
+      "text": "-1.34%",
+      "tone": "down"
+    },
+    {
+      "text": "77.89 亿美金",
+      "tone": "up"
+    },
+    {
+      "text": "+2.21 个百分点",
+      "tone": "up"
+    },
+    {
+      "text": "ES +0.67%、NQ +1.12%",
+      "tone": "up"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

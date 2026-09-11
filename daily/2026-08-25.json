@@ -1,0 +1,81 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-25",
+  "date_effective": "2026-08-25",
+  "as_of": "2026-09-04T07:08:15Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-25",
+    "prior_date": "2026-08-24",
+    "btc_ret_1d": -0.574,
+    "eth_ret_1d": -1.598,
+    "oi_qty": 106612.254,
+    "oi_chg_pct": -0.581,
+    "perp_turnover_usd": 19059809092.551,
+    "perp_turnover_chg_pct": 4.49,
+    "spot_turnover_usd": 1972170530.2745976,
+    "spot_turnover_chg_pct": -16.71,
+    "btc_etf_net_usd": 314369659.0,
+    "eth_etf_net_usd": 179803405.0,
+    "etf_lookback_sum_btc_usd": 959379644.0,
+    "etf_lookback_sum_eth_usd": 480304608.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.57%（小区间） · ETH -1.60% · OI 日变 -0.58% · 永续成交额 190.60 亿美金（日变 +4.5%） · BTC ETF 净流 +3.14 亿美金",
+    "weather_en": "Weather: BTC -0.57% · ETH -1.60% · OI -0.58% d/d · perp turnover 19.06B (+4.5% d/d) · BTC ETF net +314.37M",
+    "text_zh": "近况偏平静：BTC -0.57%、ETH -1.60%，落在小区间。OI 日变 -0.58%，永续成交 190.60 亿美金（+4.5%），现货成交缩至 19.72 亿；BTC ETF 净流入 +3.14 亿美金。",
+    "text_en": "Quiet session: BTC -0.57%, ETH -1.60%. OI -0.58% d/d, perp turnover 19.06B (+4.5%), spot softer; BTC ETF net +314M."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV 是什么、和 VIX 有何区别（仍有 due pins）。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC -0.57%",
+      "tone": "down"
+    },
+    {
+      "text": "ETH -1.60%",
+      "tone": "down"
+    },
+    {
+      "text": "OI 日变 -0.58%",
+      "tone": "neutral"
+    },
+    {
+      "text": "永续成交 190.60 亿美金（+4.5%）",
+      "tone": "up"
+    },
+    {
+      "text": "现货成交缩至 19.72 亿",
+      "tone": "down"
+    },
+    {
+      "text": "BTC ETF 净流入 +3.14 亿美金",
+      "tone": "up"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

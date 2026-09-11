@@ -1,0 +1,213 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-03-06",
+  "date_effective": "2026-03-06",
+  "as_of": "2026-08-31T10:27:46Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-03-06",
+    "prior_date": "2026-03-05",
+    "btc_ret_1d": -3.917,
+    "eth_ret_1d": -4.543,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -3.92%（有波动、未过异常默认线） · ETH -4.54%",
+    "weather_en": "Weather: BTC -3.92% · ETH -4.54%",
+    "text_zh": "近况：BTC -3.92%、ETH -4.54%，有波动但未过异常默认线；VIX 单日冲击主导风险偏好回撤。",
+    "text_en": "Weather: BTC -3.92% · ETH -4.54%; VIX shock in focus."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_nfp_2026_03",
+        "date": "2026-03-06",
+        "name_zh": "非农就业（2026-02）",
+        "name_en": "Employment Situation (Feb 2026)",
+        "source": "bls"
+      },
+      "text_zh": "日历：非农就业（2026-02）公布日。",
+      "text_en": "Calendar: Employment Situation (Feb 2026)"
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "VIX冲击下的同步回撤",
+      "headline_en": "多维结构触发异常",
+      "conclusion_zh": "【VIX冲击下的同步回撤】今天市场处于外生波动冲击下的风险-off 状态，主矛盾是 VIX 急升带来的风险偏好收缩；价格端 BTC/ETH 与美股 ES 同向承压。",
+      "conclusion_en": "Risk-off day driven by VIX shock; BTC moved with ES.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "-3.92%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "-4.54%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-1.17 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "0.68"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "-16.52 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-4.43 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-1.34%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-1.51%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "+24.17%"
+        },
+        {
+          "key": "dxy_ret_1d",
+          "label_zh": "DXY 日变",
+          "display": "-0.33%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "vix_shock",
+          "value": 24.168,
+          "threshold": 15.0,
+          "summary_zh": "VIX 日变 +24.17%",
+          "summary_en": "VIX day change +24.17%",
+          "meta": {
+            "title_zh": "VIX 日变冲击",
+            "title_en": "VIX day shock",
+            "what_zh": "美股波动率指数单日波动是否极端，提示外生风险偏好冲击。",
+            "what_en": "Extreme one-day VIX move (external risk).",
+            "how_zh": "VIX 日收益 = (今日值÷昨日值 − 1)×100（看板 tradfi 序列）。|r| ≥ vix_shock_abs_pct（默认 15）时触发。",
+            "how_en": "VIX day return from cache. Fires if |r| ≥ vix_shock_abs_pct (default 15)."
+          },
+          "observed": {
+            "btc_ret_1d": -3.917,
+            "eth_ret_1d": -4.543,
+            "funding_ann_pct": 0.6778,
+            "funding_ann_chg_pp": -1.172,
+            "liq_vs_prior": 1.114,
+            "iv_rv_spread": -16.52,
+            "iv_rv_spread_chg_pp": -4.43,
+            "vix_ret_1d": 24.168,
+            "value": 24.168,
+            "threshold": 15.0
+          },
+          "readout_zh": "观测 VIX 日变 24.17%，阈值 |·|≥15.00%",
+          "readout_en": "VIX day change +24.17%",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "观测 BTC 日收益 -3.92%、ETH -4.54%，同步回撤。VIX 日变 +24.17%，显著超过 15% 冲击阈值，提示外生风险偏好冲击。ES -1.34%、NQ -1.51%，tradfi 显示 BTC 与 ES 同向（BTC -3.92% · ES -1.34%）。funding 年化约 0.68%、日变 -1.17pp，IV−RV 点差 -16.52pp（日变 -4.43pp），波动与杠杆侧未见对冲性缓和。整体读作传统波动冲击向加密传导的同向风险-off，而非币圈孤立行情。",
+      "read_en": "依据（程序）：\n- 观测 VIX 日变 24.17%，阈值 |·|≥15.00%\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 同向（BTC -3.92% · ES -1.34%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 同向（BTC -3.92% · ES -1.34%）",
+      "tradfi_link_note_en": "BTC and ES same direction (BTC -3.92% · ES -1.34%)",
+      "text_zh": "【VIX冲击下的同步回撤】今天市场处于外生波动冲击下的风险-off 状态，主矛盾是 VIX 急升带来的风险偏好收缩；价格端 BTC/ETH 与美股 ES 同向承压。",
+      "text_en": "Risk-off day driven by VIX shock; BTC moved with ES.",
+      "card": {
+        "date": "2026-03-06",
+        "prior_date": "2026-03-05",
+        "btc_ret_1d": -3.917,
+        "eth_ret_1d": -4.543,
+        "funding_ann_pct": 0.6778,
+        "funding_ann_chg_pp": -1.172,
+        "liq_vs_prior": 1.114,
+        "iv_ann_pct": 55.52,
+        "rv_7_ann_pct": 72.0422,
+        "iv_rv_spread": -16.52,
+        "iv_rv_spread_chg_pp": -4.43,
+        "vix_ret_1d": 24.168,
+        "es_ret_1d": -1.339,
+        "nq_ret_1d": -1.514,
+        "dxy_ret_1d": -0.332,
+        "gold_ret_1d": 1.595,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-03-05",
+            "day": "2026-03-06"
+          },
+          "NQ": {
+            "prior": "2026-03-05",
+            "day": "2026-03-06"
+          },
+          "VIX": {
+            "prior": "2026-03-05",
+            "day": "2026-03-06"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 同向（BTC -3.92% · ES -1.34%）",
+        "tradfi_link_note_en": "BTC and ES same direction (BTC -3.92% · ES -1.34%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：当前 3 个未闭环观察项在册。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC -3.92%",
+      "tone": "down"
+    },
+    {
+      "text": "ETH -4.54%",
+      "tone": "down"
+    },
+    {
+      "text": "VIX 日变 +24.17%",
+      "tone": "warn"
+    },
+    {
+      "text": "超过 15% 冲击阈值",
+      "tone": "warn"
+    },
+    {
+      "text": "BTC 与 ES 同向",
+      "tone": "neutral"
+    },
+    {
+      "text": "funding 年化约 0.68%、日变 -1.17pp",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

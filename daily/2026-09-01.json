@@ -1,0 +1,72 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-01",
+  "date_effective": "2026-09-01",
+  "as_of": "2026-09-01T07:12:00Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-01",
+    "prior_date": "2026-08-31",
+    "btc_ret_1d": 0.105,
+    "eth_ret_1d": 0.064,
+    "oi_qty": 108150.15,
+    "oi_chg_pct": 0.136,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.10%（小区间） · ETH +0.06% · OI 日变 +0.14%",
+    "weather_en": "Weather: BTC +0.10% · ETH +0.06% · OI +0.14% d/d",
+    "text_zh": "近况平静，币价几乎躺平：BTC 日收益 +0.10%，ETH +0.06%，都在小区间里挪。OI 日变 +0.14%，杠杆存量没什么动静。",
+    "text_en": "Quiet session: BTC +0.10%, ETH +0.06% in a tight range; OI +0.14% d/d."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：仍有 3 个观察在开着，今日无新钉到期。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "近况平静",
+      "tone": "neutral"
+    },
+    {
+      "text": "BTC 日收益 +0.10%",
+      "tone": "up"
+    },
+    {
+      "text": "ETH +0.06%",
+      "tone": "up"
+    },
+    {
+      "text": "小区间",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI 日变 +0.14%",
+      "tone": "neutral"
+    },
+    {
+      "text": "资金费率年化 dual 8.12%，日变 -1.20 pp",
+      "tone": "down"
+    },
+    {
+      "text": "VIX +2.83%",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

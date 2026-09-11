@@ -1,0 +1,66 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-31",
+  "date_effective": "2026-08-31",
+  "as_of": "2026-08-31T10:08:50Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-31",
+    "prior_date": "2026-08-30",
+    "btc_ret_1d": 0.077,
+    "eth_ret_1d": 0.132,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.08%（小区间） · ETH +0.13%",
+    "weather_en": "Weather: BTC +0.08% · ETH +0.13%",
+    "text_zh": "近况平静：BTC +0.08%、ETH +0.13%，同处小区间震荡。",
+    "text_en": "Quiet session: BTC +0.08%, ETH +0.13% in a tight range."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：当前 3 条开放观察中，无到期钉选。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "低波动小幅收涨状态",
+      "tone": "neutral"
+    },
+    {
+      "text": "BTC 日收益 +0.08%、ETH +0.13%",
+      "tone": "up"
+    },
+    {
+      "text": "funding 年化约 8.90%，日变 +0.92 pp",
+      "tone": "neutral"
+    },
+    {
+      "text": "IV−RV 点差 +8.64 pp（日扩 +2.50 pp）",
+      "tone": "neutral"
+    },
+    {
+      "text": "ES −0.40%、NQ −0.52%",
+      "tone": "down"
+    },
+    {
+      "text": "币与股指轻度背离",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

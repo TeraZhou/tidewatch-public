@@ -1,0 +1,20 @@
+{
+  "schema": "tidewatch_result_card_v1",
+  "event_id": "bls_nfp_2026_06",
+  "series": "empsit",
+  "template_id": "empsit",
+  "event_date": "2026-06-05",
+  "ok": false,
+  "status": "failed",
+  "adapter": null,
+  "fetched_at": "2026-09-03T08:11:48Z",
+  "source_urls": [],
+  "values": {},
+  "prior_values": {},
+  "revision_note": null,
+  "statement_bullets": null,
+  "raw_ref": null,
+  "fixture": false,
+  "override": null,
+  "error": "bls_http_403"
+}

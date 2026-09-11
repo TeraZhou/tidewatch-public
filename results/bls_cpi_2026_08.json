@@ -1,0 +1,38 @@
+{
+  "schema": "tidewatch_result_card_v1",
+  "event_id": "bls_cpi_2026_08",
+  "series": "cpi",
+  "template_id": "cpi",
+  "event_date": "2026-08-12",
+  "ok": true,
+  "status": "fetched",
+  "adapter": "fixture",
+  "fetched_at": "2026-09-03T08:12:22Z",
+  "source_urls": [
+    "fixture://local",
+    "docs/13 §4.1.5"
+  ],
+  "values": {
+    "headline_yoy_pct": 2.7,
+    "core_yoy_pct": 2.9,
+    "headline_mom_pct": 0.2,
+    "core_mom_pct": 0.2,
+    "period": "M07",
+    "year": "2026"
+  },
+  "prior_values": {
+    "headline_yoy_pct": 2.6,
+    "core_yoy_pct": 3.0,
+    "headline_mom_pct": 0.3,
+    "core_mom_pct": 0.2,
+    "period": "M06",
+    "year": "2026",
+    "_prior_core_yoy": 3.0
+  },
+  "revision_note": "UAT fixture — not live official print; awaiting BLS_API_KEY",
+  "statement_bullets": null,
+  "raw_ref": null,
+  "fixture": true,
+  "override": null,
+  "error": null
+}

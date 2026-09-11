@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-29",
+  "date_effective": "2026-08-29",
+  "as_of": "2026-09-04T07:11:34Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-29",
+    "prior_date": "2026-08-28",
+    "btc_ret_1d": 0.493,
+    "eth_ret_1d": 0.609,
+    "oi_qty": 107692.981,
+    "oi_chg_pct": 1.956,
+    "perp_turnover_usd": 3750001659.4129,
+    "perp_turnover_chg_pct": -78.64,
+    "spot_turnover_usd": 545867984.8485777,
+    "spot_turnover_chg_pct": -65.03,
+    "btc_etf_net_usd": -201806559.0,
+    "eth_etf_net_usd": 102178311.0,
+    "etf_lookback_sum_btc_usd": 586919708.0,
+    "etf_lookback_sum_eth_usd": 708850285.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.49%（小区间） · ETH +0.61% · OI 日变 +1.96% · 永续成交额 37.50 亿美金（日变 -78.6%） · BTC ETF 净流 -2.02 亿美金",
+    "weather_en": "Weather: BTC +0.49% · ETH +0.61% · OI +1.96% d/d · perp turnover 3.75B (-78.6% d/d) · BTC ETF net -201.81M",
+    "text_zh": "近况偏安静：BTC、ETH 各自小涨半个点上下，杠杆存量 OI 微增近 2%，永续与现货成交却大幅萎缩，清算几乎看不见。",
+    "text_en": "Quiet session: BTC/ETH mild green, OI +1.96%, but perp and spot turnover collapsed; liquidations negligible."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV 是什么、和 VIX 有何区别。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "小涨半个点上下",
+      "tone": "up"
+    },
+    {
+      "text": "OI 微增近 2%",
+      "tone": "up"
+    },
+    {
+      "text": "成交却大幅萎缩",
+      "tone": "down"
+    },
+    {
+      "text": "永续成交 37.50 亿美金（日变 -78.6%）",
+      "tone": "down"
+    },
+    {
+      "text": "清算总量仅约 24",
+      "tone": "neutral"
+    },
+    {
+      "text": "略强于微跌的美股期货",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-08-28",
+    "etf_eth_using_2026-08-28"
+  ]
+}

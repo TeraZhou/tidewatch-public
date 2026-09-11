@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-06",
+  "date_effective": "2026-09-06",
+  "as_of": "2026-09-07T02:32:11Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-06",
+    "prior_date": "2026-09-05",
+    "btc_ret_1d": 0.639,
+    "eth_ret_1d": 1.376,
+    "oi_qty": 105564.709,
+    "oi_chg_pct": -0.666,
+    "perp_turnover_usd": 4895529507.8692,
+    "perp_turnover_chg_pct": 28.69,
+    "spot_turnover_usd": 707422224.4650549,
+    "spot_turnover_chg_pct": -2.71,
+    "btc_etf_net_usd": 174595324.0,
+    "eth_etf_net_usd": 26461271.0,
+    "etf_lookback_sum_btc_usd": 1006614511.0,
+    "etf_lookback_sum_eth_usd": 119772854.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.64%（小区间） · ETH +1.38% · OI 日变 -0.67% · 永续成交额 48.96 亿美金（日变 +28.7%） · BTC ETF 净流 +1.75 亿美金",
+    "weather_en": "Weather: BTC +0.64% · ETH +1.38% · OI -0.67% d/d · perp turnover 4.90B (+28.7% d/d) · BTC ETF net +174.60M",
+    "text_zh": "近况偏平静：BTC 小涨约 0.64%，ETH 稍强约 1.38%；杠杆存量 OI 略减 0.67%，永续成交额升至约 49 亿美金（+29%），BTC 现货 ETF 录得净流入（数据截至 9/4）。",
+    "text_en": "Quiet session: BTC +0.64%, ETH +1.38%; OI -0.67% d/d, perp turnover ~4.90B (+29%), BTC ETF net inflow (as of Sep 4)."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 4,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV 是什么、和 VIX 有何区别——可对照本页 IV−RV 点差与 VIX 日变一起看。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 小涨约 0.64%",
+      "tone": "up"
+    },
+    {
+      "text": "ETH 稍强约 1.38%",
+      "tone": "up"
+    },
+    {
+      "text": "OI 略减 0.67%",
+      "tone": "down"
+    },
+    {
+      "text": "永续成交额升至约 49 亿美金（+29%）",
+      "tone": "up"
+    },
+    {
+      "text": "ES、NQ 日收益均为 0",
+      "tone": "neutral"
+    },
+    {
+      "text": "VIX +1.47%",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-09-04",
+    "etf_eth_using_2026-09-04"
+  ]
+}

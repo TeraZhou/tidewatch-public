@@ -1,0 +1,249 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-28",
+  "date_effective": "2026-08-28",
+  "as_of": "2026-09-04T07:11:01Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-28",
+    "prior_date": "2026-08-27",
+    "btc_ret_1d": -2.995,
+    "eth_ret_1d": -2.714,
+    "oi_qty": 105627.288,
+    "oi_chg_pct": -2.9,
+    "perp_turnover_usd": 17556593691.1423,
+    "perp_turnover_chg_pct": 33.02,
+    "spot_turnover_usd": 1560927602.278941,
+    "spot_turnover_chg_pct": 20.31,
+    "btc_etf_net_usd": -201806559.0,
+    "eth_etf_net_usd": 102178311.0,
+    "etf_lookback_sum_btc_usd": 924476387.0,
+    "etf_lookback_sum_eth_usd": 824419279.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -3.00%（有波动、未过异常默认线） · ETH -2.71% · OI 日变 -2.90% · 永续成交额 175.57 亿美金（日变 +33.0%） · BTC ETF 净流 -2.02 亿美金",
+    "weather_en": "Weather: BTC -3.00% · ETH -2.71% · OI -2.90% d/d · perp turnover 17.56B (+33.0% d/d) · BTC ETF net -201.81M",
+    "text_zh": "BTC、ETH回撤近3%，OI同步收缩约2.9%，永续成交额却放大三成多、清算约1.7倍于前日。主信号是期权IV相对实现波动的溢价一日大幅抬升。",
+    "text_en": "BTC/ETH down ~3%, OI -2.9%, perp turnover +33%; IV−RV spread jumped hard."
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "波动溢价急抬的普跌日",
+      "headline_en": "期权相对实现波动定价跳变",
+      "conclusion_zh": "【波动溢价急抬的普跌日】币圈普跌近3%，量能与清算抬升、杠杆存量回落；主矛盾在IV−RV点差一日跳升16pp，波动被重新定价。美股仅小幅同向跟跌。",
+      "conclusion_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC -3.00%、ETH -2.71%。传统对照 ES -0.27%、VIX -0.55%。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "-3.00%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "-2.71%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+3.69 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "10.95"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "-2.90%"
+        },
+        {
+          "key": "liq_vs_prior",
+          "label_zh": "清算/前日",
+          "display": "1.69×"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "175.57 亿美金（+33%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "15.61 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+5.05 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+16.22 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.27%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-0.69%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "iv_rv_spread_jump",
+          "value": 16.22,
+          "threshold": 8.0,
+          "summary_zh": "IV−RV 点差日变 +16.22 pp",
+          "summary_en": "IV−RV spread day change +16.22 pp",
+          "meta": {
+            "title_zh": "IV−RV 点差日变",
+            "title_en": "IV−RV spread day change",
+            "what_zh": "期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。",
+            "what_en": "Large one-day move in IV minus realized vol spread.",
+            "how_zh": "spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。",
+            "how_en": "spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": -2.995,
+            "eth_ret_1d": -2.714,
+            "funding_ann_pct": 10.95,
+            "funding_ann_chg_pp": 3.688,
+            "oi_qty": 105627.288,
+            "oi_chg_pct": -2.9,
+            "liq_vs_prior": 1.692,
+            "iv_rv_spread": 5.05,
+            "iv_rv_spread_chg_pp": 16.22,
+            "vix_ret_1d": -0.551,
+            "btc_etf_net_usd": -201806559.0,
+            "eth_etf_net_usd": 102178311.0,
+            "perp_turnover_usd": 17556593691.1423,
+            "perp_turnover_chg_pct": 33.02,
+            "spot_turnover_usd": 1560927602.278941,
+            "value": 16.22,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 IV−RV 点差日变 16.22 pp（今日点差 5.05），阈值 |·|≥8.00 pp",
+          "readout_en": "IV−RV spread day change +16.22 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "BTC日收益-3.00%，ETH-2.71%；OI从约10.88万张降至10.56万（-2.90%），永续成交175.57亿美金（+33%），现货15.61亿（+20%），清算为前日1.69倍。Funding年化10.95%（日变+3.69pp）。触发规则是IV−RV点差日变+16.22pp，今日点差+5.05pp——隐含波动相对近7日实现波动一下子变贵。翻译一句：买未来波动的保费明显更贵了。传统侧ES-0.27%、NQ-0.69%与币同向小跌，VIX-0.55%；黄金-2.86%更接近币的跌幅，美元指数+0.55%。BTC ETF净流出约2.02亿美金，ETH净流入约1.02亿。",
+      "read_en": "依据（程序）：\n- 观测 IV−RV 点差日变 16.22 pp（今日点差 5.05），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "【波动溢价急抬的普跌日】币圈普跌近3%，量能与清算抬升、杠杆存量回落；主矛盾在IV−RV点差一日跳升16pp，波动被重新定价。美股仅小幅同向跟跌。",
+      "text_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC -3.00%、ETH -2.71%。传统对照 ES -0.27%、VIX -0.55%。",
+      "card": {
+        "date": "2026-08-28",
+        "prior_date": "2026-08-27",
+        "btc_ret_1d": -2.995,
+        "eth_ret_1d": -2.714,
+        "funding_ann_pct": 10.95,
+        "funding_ann_chg_pp": 3.688,
+        "oi_qty": 105627.288,
+        "oi_prior_qty": 108781.899,
+        "oi_chg_pct": -2.9,
+        "liq_total": 181.9570000000001,
+        "liq_vs_prior": 1.692,
+        "perp_turnover_usd": 17556593691.1423,
+        "perp_turnover_chg_pct": 33.02,
+        "perp_turnover_display_zh": "175.57 亿美金",
+        "perp_turnover_display_en": "17.56B",
+        "spot_turnover_usd": 1560927602.278941,
+        "spot_turnover_chg_pct": 20.31,
+        "spot_turnover_display_zh": "15.61 亿美金",
+        "spot_turnover_display_en": "1.56B",
+        "iv_ann_pct": 38.34,
+        "rv_7_ann_pct": 33.291,
+        "iv_rv_spread": 5.05,
+        "iv_rv_spread_chg_pp": 16.22,
+        "vix_ret_1d": -0.551,
+        "es_ret_1d": -0.265,
+        "nq_ret_1d": -0.687,
+        "dxy_ret_1d": 0.545,
+        "gold_ret_1d": -2.855,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-08-27",
+            "day": "2026-08-28"
+          },
+          "NQ": {
+            "prior": "2026-08-27",
+            "day": "2026-08-28"
+          },
+          "VIX": {
+            "prior": "2026-08-27",
+            "day": "2026-08-28"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：有人在问IV是什么、和VIX有何区别——可对照今日点差急抬与VIX小跌。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "回撤近3%",
+      "tone": "down"
+    },
+    {
+      "text": "OI同步收缩约2.9%",
+      "tone": "down"
+    },
+    {
+      "text": "成交额却放大三成多",
+      "tone": "up"
+    },
+    {
+      "text": "溢价一日大幅抬升",
+      "tone": "warn"
+    },
+    {
+      "text": "IV−RV点差日变+16.22pp",
+      "tone": "warn"
+    },
+    {
+      "text": "BTC-3.00%",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

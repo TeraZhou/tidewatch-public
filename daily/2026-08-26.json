@@ -1,0 +1,81 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-26",
+  "date_effective": "2026-08-26",
+  "as_of": "2026-09-04T07:09:28Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-26",
+    "prior_date": "2026-08-25",
+    "btc_ret_1d": 0.617,
+    "eth_ret_1d": 2.626,
+    "oi_qty": 105613.227,
+    "oi_chg_pct": -0.937,
+    "perp_turnover_usd": 10545240245.3902,
+    "perp_turnover_chg_pct": -44.67,
+    "spot_turnover_usd": 1148236055.8792386,
+    "spot_turnover_chg_pct": -41.78,
+    "btc_etf_net_usd": 232118395.0,
+    "eth_etf_net_usd": 192353760.0,
+    "etf_lookback_sum_btc_usd": 884044733.0,
+    "etf_lookback_sum_eth_usd": 487726159.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.62%（小区间） · ETH +2.63% · OI 日变 -0.94% · 永续成交额 105.45 亿美金（日变 -44.7%） · BTC ETF 净流 +2.32 亿美金",
+    "weather_en": "Weather: BTC +0.62% · ETH +2.63% · OI -0.94% d/d · perp turnover 10.55B (-44.7% d/d) · BTC ETF net +232.12M",
+    "text_zh": "今天偏安静：BTC 小涨约 0.6%，ETH 更明显一点到 +2.6%。成交大幅缩水，杠杆存量略降，资金费率也在回落，ETF 仍是净流入。",
+    "text_en": "Quiet session: BTC +0.62%, ETH +2.63%. Turnover sharply lower, OI slightly down, funding cooler; ETF nets still positive."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：还差 2 枚钉——其中一问「IV 是什么、和 VIX 有何区别」，可对照今日 IV−RV 与 VIX 同读。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 小涨约 0.6%",
+      "tone": "up"
+    },
+    {
+      "text": "ETH 更明显一点到 +2.6%",
+      "tone": "up"
+    },
+    {
+      "text": "成交大幅缩水",
+      "tone": "down"
+    },
+    {
+      "text": "杠杆存量略降",
+      "tone": "down"
+    },
+    {
+      "text": "资金费率也在回落",
+      "tone": "down"
+    },
+    {
+      "text": "ETF 仍是净流入",
+      "tone": "up"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>潮观 Tidewatch · weekly_20260831_20260906</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+
+  :root, [data-theme="paper"] {
+    --bg:#f4f1ea; --card:#fffcf7; --card2:#f7f2e9; --topbar-bg:rgba(255,252,247,.92);
+    --line:rgba(60,48,32,.1); --text:#1c1917; --muted:#57534e; --dim:#78716c;
+    --accent:#0f766e; --accent-soft:rgba(15,118,110,.1); --accent2:#0d9488; --accent-glow:rgba(15,118,110,.16);
+    --up:#15803d; --down:#be123c; --warn:#b45309; --shadow:0 14px 40px rgba(28,25,23,.08); --radius:18px;
+    --glow1:rgba(15,118,110,.07); --glow2:rgba(180,83,9,.05); --glow3:rgba(190,18,60,.04);
+    --chart-1:#0f766e; --chart-2:#b45309; --chart-3:#be123c; --chart-4:#1d4ed8; --chart-5:#78716c;
+    --qa-accent:#0f766e; --qa-accent2:#0d9488; --qa-bg:rgba(255,252,247,.97);
+    --qa-border:color-mix(in srgb,#0f766e 28%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#0f766e 10%,#fffcf7),#fffcf7);
+    --qa-user:#0d9488; --qa-btn-text:#ecfdf5;
+    --font:"SF Pro Display","Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  [data-theme="mist"] {
+    --bg:#f3f5f7; --card:#fff; --card2:#f8fafc; --topbar-bg:rgba(255,255,255,.92);
+    --line:rgba(15,23,42,.08); --text:#0f172a; --muted:#64748b; --dim:#94a3b8;
+    --accent:#0d9488; --accent-soft:rgba(13,148,136,.1); --accent2:#14b8a6; --accent-glow:rgba(13,148,136,.16);
+    --up:#059669; --down:#e11d48; --warn:#d97706; --shadow:0 12px 36px rgba(15,23,42,.06);
+    --glow1:rgba(13,148,136,.06); --glow2:rgba(217,119,6,.04); --glow3:rgba(225,29,72,.03);
+    --chart-1:#0d9488; --chart-2:#d97706; --chart-3:#e11d48; --chart-4:#2563eb; --chart-5:#64748b;
+    --qa-accent:#0d9488; --qa-accent2:#14b8a6; --qa-bg:rgba(255,255,255,.97);
+    --qa-border:color-mix(in srgb,#0d9488 28%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#0d9488 10%,#fff),#fff);
+    --qa-user:#0f766e; --qa-btn-text:#f0fdfa;
+  }
+  [data-theme="ink"] {
+    --bg:#fafafa; --card:#fff; --card2:#f5f5f5; --topbar-bg:rgba(250,250,250,.94);
+    --line:rgba(0,0,0,.08); --text:#111; --muted:#525252; --dim:#737373;
+    --accent:#171717; --accent-soft:rgba(23,23,23,.06); --accent2:#404040; --accent-glow:rgba(23,23,23,.12);
+    --up:#16a34a; --down:#dc2626; --warn:#ca8a04; --shadow:0 10px 30px rgba(0,0,0,.06);
+    --glow1:rgba(0,0,0,.03); --glow2:rgba(22,163,74,.04); --glow3:rgba(220,38,38,.03);
+    --chart-1:#171717; --chart-2:#16a34a; --chart-3:#dc2626; --chart-4:#2563eb; --chart-5:#737373;
+    --qa-accent:#171717; --qa-accent2:#404040; --qa-bg:#fff;
+    --qa-border:color-mix(in srgb,#171717 22%,transparent);
+    --qa-head:linear-gradient(180deg,rgba(23,23,23,.06),#fff);
+    --qa-user:#404040; --qa-btn-text:#fafafa;
+  }
+  [data-theme="forest"] {
+    --bg:#f2f7f3; --card:#fbfffc; --card2:#f0f7f2; --topbar-bg:rgba(251,255,252,.92);
+    --line:rgba(20,83,45,.1); --text:#14532d; --muted:#3f6212; --dim:#4d7c0f;
+    --accent:#15803d; --accent-soft:rgba(21,128,61,.1); --accent2:#16a34a; --accent-glow:rgba(21,128,61,.16);
+    --up:#15803d; --down:#b91c1c; --warn:#a16207; --shadow:0 12px 36px rgba(20,83,45,.07);
+    --glow1:rgba(21,128,61,.07); --glow2:rgba(161,98,7,.05); --glow3:rgba(185,28,28,.04);
+    --chart-1:#15803d; --chart-2:#a16207; --chart-3:#b91c1c; --chart-4:#0369a1; --chart-5:#4d7c0f;
+    --qa-accent:#15803d; --qa-accent2:#16a34a; --qa-bg:rgba(251,255,252,.97);
+    --qa-border:color-mix(in srgb,#15803d 28%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#15803d 10%,#fbfffc),#fbfffc);
+    --qa-user:#16a34a; --qa-btn-text:#f0fdf4;
+  }
+  [data-theme="rose"] {
+    --bg:#faf6f5; --card:#fffbfb; --card2:#faf3f2; --topbar-bg:rgba(255,251,251,.92);
+    --line:rgba(127,29,29,.08); --text:#1c1917; --muted:#7c6f6a; --dim:#a8a29e;
+    --accent:#9f1239; --accent-soft:rgba(159,18,57,.08); --accent2:#be123c; --accent-glow:rgba(159,18,57,.14);
+    --up:#15803d; --down:#e11d48; --warn:#b45309; --shadow:0 12px 36px rgba(28,25,23,.06);
+    --glow1:rgba(159,18,57,.05); --glow2:rgba(21,128,61,.04); --glow3:rgba(180,83,9,.04);
+    --chart-1:#9f1239; --chart-2:#b45309; --chart-3:#e11d48; --chart-4:#0f766e; --chart-5:#78716c;
+    --qa-accent:#9f1239; --qa-accent2:#be123c; --qa-bg:rgba(255,251,251,.97);
+    --qa-border:color-mix(in srgb,#9f1239 26%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#9f1239 9%,#fffbfb),#fffbfb);
+    --qa-user:#be123c; --qa-btn-text:#fff1f2;
+  }
+  [data-theme="slate"] {
+    --bg:#0c0f12; --card:#161b22; --card2:#1c232c; --topbar-bg:rgba(12,15,18,.86);
+    --line:rgba(148,163,170,.14); --text:#e9eef2; --muted:#9aa7b2; --dim:#6f7d89;
+    --accent:#2dd4bf; --accent-soft:rgba(45,212,191,.14); --accent2:#5eead4; --accent-glow:rgba(45,212,191,.28);
+    --up:#34d399; --down:#fb7185; --warn:#fbbf24; --shadow:0 18px 50px rgba(0,0,0,.4);
+    --glow1:rgba(45,212,191,.11); --glow2:rgba(251,191,36,.06); --glow3:rgba(251,113,133,.05);
+    --chart-1:#2dd4bf; --chart-2:#fbbf24; --chart-3:#fb7185; --chart-4:#a3e635; --chart-5:#94a3b8;
+    --qa-accent:#2dd4bf; --qa-accent2:#5eead4; --qa-bg:rgba(22,27,34,.96);
+    --qa-border:color-mix(in srgb,#2dd4bf 32%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#2dd4bf 14%,#161b22),#161b22);
+    --qa-user:#5eead4; --qa-btn-text:#042f2e;
+  }
+  [data-theme="graphite"] {
+    --bg:#121212; --card:#1e1e1e; --card2:#262626; --topbar-bg:rgba(18,18,18,.9);
+    --line:rgba(255,255,255,.08); --text:#f5f5f5; --muted:#a3a3a3; --dim:#737373;
+    --accent:#e5e5e5; --accent-soft:rgba(229,229,229,.08); --accent2:#d4d4d4; --accent-glow:rgba(229,229,229,.14);
+    --up:#4ade80; --down:#f87171; --warn:#fbbf24; --shadow:0 18px 50px rgba(0,0,0,.5);
+    --glow1:rgba(255,255,255,.04); --glow2:rgba(74,222,128,.05); --glow3:rgba(248,113,113,.05);
+    --chart-1:#e5e5e5; --chart-2:#4ade80; --chart-3:#f87171; --chart-4:#60a5fa; --chart-5:#a3a3a3;
+    --qa-accent:#e5e5e5; --qa-accent2:#d4d4d4; --qa-bg:rgba(30,30,30,.96);
+    --qa-border:color-mix(in srgb,#e5e5e5 22%,transparent);
+    --qa-head:linear-gradient(180deg,rgba(229,229,229,.08),#1e1e1e);
+    --qa-user:#d4d4d4; --qa-btn-text:#171717;
+  }
+  [data-theme="ocean"] {
+    --bg:#0b1220; --card:#151f36; --card2:#1a2742; --topbar-bg:rgba(11,18,32,.78);
+    --line:rgba(148,163,184,.16); --text:#e8eefc; --muted:#9aa8c7; --dim:#6b7a99;
+    --accent:#5b8cff; --accent-soft:rgba(91,140,255,.14); --accent2:#3dd6c6; --accent-glow:rgba(91,140,255,.3);
+    --up:#3dd68c; --down:#ff6b8a; --warn:#ffb020; --shadow:0 18px 50px rgba(0,0,0,.35);
+    --glow1:rgba(91,140,255,.16); --glow2:rgba(61,214,198,.1); --glow3:rgba(255,107,138,.06);
+    --chart-1:#5b8cff; --chart-2:#3dd6c6; --chart-3:#ff6b8a; --chart-4:#ffb020; --chart-5:#94a3b8;
+    --qa-accent:#5b8cff; --qa-accent2:#82a9ff; --qa-bg:rgba(21,31,54,.96);
+    --qa-border:color-mix(in srgb,#5b8cff 32%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#5b8cff 14%,#151f36),#151f36);
+    --qa-user:#82a9ff; --qa-btn-text:#0b1220;
+  }
+  *{box-sizing:border-box} body{margin:0;font-family:var(--font);color:var(--text);background:radial-gradient(1200px 600px at 10% -10%,var(--glow1),transparent 60%),radial-gradient(900px 500px at 90% 0,var(--glow2),transparent 55%),var(--bg);min-height:100vh;line-height:1.65}
+  .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:var(--topbar-bg);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:var(--bg);box-shadow:0 0 24px var(--accent-glow)}
+  .brand h1{font-size:15px;margin:0}.brand p{margin:0;font-size:12px;color:var(--muted)}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .seg{display:inline-flex;padding:4px;border-radius:999px;border:1px solid var(--line);background:rgba(127,127,127,.06)}
+  .seg button{border:0;background:transparent;color:var(--muted);padding:8px 12px;border-radius:999px;cursor:pointer;font-size:12px}
+  .seg button.active{background:var(--accent-soft);color:var(--text);font-weight:600}
+  .pill{font-size:12px;padding:7px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+  .pill.s2{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent);background:color-mix(in srgb,var(--warn) 12%,transparent)}
+  .theme-label{font-size:11px;color:var(--dim)}.theme-pick{display:inline-flex;gap:8px;align-items:center}
+  .theme-pick select{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:12px;font-weight:600;padding:8px 28px 8px 12px;border-radius:999px;cursor:pointer;min-width:120px}
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 140px}
+  .hero{display:grid;grid-template-columns:1.4fr .8fr;gap:18px;margin-bottom:22px}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .card-pad{padding:22px}.kicker{font-size:12px;color:var(--accent2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+  .hero h2{margin:0 0 10px;font-size:26px;line-height:1.25}.lead{color:var(--muted);font-size:14px}
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .metric{background:rgba(0,0,0,.05);border:1px solid var(--line);border-radius:14px;padding:12px}
+  .metric .l{font-size:11px;color:var(--dim)}.metric .v{font-size:16px;font-weight:700;margin-top:4px}
+  .side-stack{display:flex;flex-direction:column;gap:12px}
+  .attn{padding:16px;background:linear-gradient(135deg,color-mix(in srgb,var(--warn) 14%,transparent),transparent 55%),var(--card)}
+  .attn h3{margin:0 0 6px;font-size:14px;color:var(--warn)}.attn p{margin:0;font-size:13px;color:var(--muted)}
+  .watch{padding:16px}.watch h3{margin:0 0 8px;font-size:13px;color:var(--muted)}.watch ol{margin:0;padding-left:18px;font-size:13px}
+  .tags{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+  @media(max-width:900px){.tags{grid-template-columns:1fr 1fr}}
+  .tag{padding:14px;border-radius:16px;border:1px solid var(--line);background:var(--card2)}
+  .tag .t{font-size:11px;color:var(--dim)}.tag .n{font-size:15px;font-weight:700;margin:6px 0}.tag .d{font-size:12px;color:var(--muted)}
+  .tag.trend{border-color:color-mix(in srgb,var(--up) 35%,transparent)}.tag.lev{border-color:color-mix(in srgb,var(--warn) 35%,transparent)}
+  .tag.vol{border-color:color-mix(in srgb,var(--down) 35%,transparent)}.tag.link{border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
+  .block{margin-bottom:18px}.block-h{display:flex;justify-content:space-between;margin:8px 4px 12px}.block-h h3{margin:0;font-size:18px}.block-h .sub{color:var(--dim);font-size:12px}
+  .grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}@media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+  .chart-box{padding:16px;height:300px}.chart-box.sm{height:250px}
+  .plain{padding:0 22px 16px;color:var(--muted);font-size:14px}.plain strong{color:var(--text)}
+  .callout{margin:0 22px 16px;padding:12px;border-radius:12px;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);font-size:13px;color:var(--muted)}
+  .callout b{color:var(--accent2)}
+  table.data{width:100%;border-collapse:collapse;font-size:12px} table.data th,table.data td{padding:8px;border-bottom:1px solid var(--line);text-align:right}
+  table.data th:first-child,table.data td:first-child{text-align:left}.up{color:var(--up)}.down{color:var(--down)}
+  details.fold{margin:0 22px 12px} details.fold summary{cursor:pointer;color:var(--accent2);font-size:13px}
+  .trad-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 16px 18px}@media(max-width:800px){.trad-grid{grid-template-columns:1fr}}
+  .trad{border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(0,0,0,.03)}
+  .trad .name{display:flex;justify-content:space-between}.trad .q{margin-top:8px;font-size:12px;color:var(--muted)}.trad .q span{color:var(--dim)}
+  .conclusions{padding:8px 22px 18px}.conclusions li{margin:8px 0}
+  .env-pre{white-space:pre-wrap;font-family:inherit;font-size:13px;color:var(--muted);margin:0 22px 12px;line-height:1.7}
+  a.site-link{text-decoration:none;color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-soft);font-weight:600}
+  .site-nav{display:inline-flex;gap:6px;flex-wrap:wrap;align-items:center;margin-right:4px}
+  a.site-link-muted{opacity:.72;font-weight:500}
+  a.site-link:hover{filter:brightness(0.97)}
+  a.site-a{color:var(--accent2);font-weight:600;text-decoration:none} a.site-a:hover{text-decoration:underline}
+  details.week-diff{margin:12px 16px 16px} details.week-diff summary{cursor:pointer;color:var(--text);font-size:14px;line-height:1.5}
+  .foot{margin-top:24px;padding:16px;border-radius:var(--radius);border:1px dashed color-mix(in srgb,var(--dim) 40%,transparent);font-size:12px;color:var(--dim)}
+  /* Layer visibility:
+     - plain: hide tech-only
+     - tech: hide plain-only / beginner
+     - l0: hide both plain and tech section bodies (keep L0 hero)
+     - all: show everything
+  */
+  body.layer-l0 .layer-plain,
+  body.layer-l0 .layer-tech,
+  body.layer-l0 .layer-plain-only,
+  body.layer-l0 .layer-tech-only { display: none !important; }
+  body.layer-plain .layer-tech-only { display: none !important; }
+  body.layer-tech .layer-plain-only { display: none !important; }
+  /* Language mode: whole-page zh OR en — no inline mix */
+  span.lang.zh, span.lang.en { display: none !important; }
+  body.lang-zh span.lang.zh { display: inline !important; }
+  body.lang-en span.lang.en { display: inline !important; }
+  .qa-dock{position:fixed;right:18px;bottom:18px;width:min(380px,calc(100vw - 24px));z-index:80}
+  .qa-dock.collapsed{width:auto}
+  .qa-dock.collapsed .qa-panel{display:none}
+  .qa-fab{display:none;border:0;border-radius:999px;padding:12px 18px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text);box-shadow:var(--shadow)}
+  .qa-dock.collapsed .qa-fab{display:inline-flex;align-items:center;gap:6px}
+  .qa-fab[hidden]{display:none!important}
+  .qa-panel{border-radius:18px;border:1px solid var(--qa-border);background:var(--qa-bg);box-shadow:var(--shadow);overflow:hidden}
+  .qa-head{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid color-mix(in srgb,var(--qa-accent) 16%,transparent);background:var(--qa-head)}
+  .qa-head b{color:var(--qa-accent2);font-size:13px}
+  .qa-head-actions{display:inline-flex;gap:4px;align-items:center}
+  .qa-head button{border:0;background:transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:13px;padding:4px 8px;border-radius:8px}
+  .qa-head button:hover{background:color-mix(in srgb,var(--qa-accent) 10%,transparent);color:var(--text)}
+  #qaMinimize{font-size:18px;line-height:1;font-weight:600;padding:2px 10px}
+  .qa-body{padding:12px;max-height:260px;overflow:auto}.qa-hint{font-size:12px;color:var(--muted)}
+  .qa-thread .msg{margin:0 0 8px;font-size:13px;white-space:pre-wrap}.qa-thread .msg.user{color:var(--qa-user)}
+  .qa-thread .msg.bot{padding:10px;border-radius:12px;border:1px solid color-mix(in srgb,var(--qa-accent) 16%,transparent);background:color-mix(in srgb,var(--qa-accent) 6%,transparent)}
+  .qa-thread .msg.thinking{opacity:.9}
+  .qa-thinking{display:flex;align-items:center;gap:10px;padding:4px 0}
+  .qa-thinking-label{font-size:12px;color:var(--muted)}
+  .qa-orb{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 0deg,var(--qa-accent),var(--qa-accent2),transparent,var(--qa-accent));animation:qa-spin 1.1s linear infinite;flex-shrink:0}
+  .qa-orb::after{content:"";display:block;width:10px;height:10px;margin:4px;border-radius:50%;background:var(--qa-bg)}
+  .qa-dots{display:inline-flex;gap:4px;align-items:center}
+  .qa-dots i{width:6px;height:6px;border-radius:50%;background:var(--qa-accent2);opacity:.35;animation:qa-dot 1.2s ease-in-out infinite}
+  .qa-dots i:nth-child(2){animation-delay:.2s}
+  .qa-dots i:nth-child(3){animation-delay:.4s}
+  @keyframes qa-spin{to{transform:rotate(360deg)}}
+  @keyframes qa-dot{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+  .qa-form{display:flex;gap:8px;padding:12px;border-top:1px solid color-mix(in srgb,var(--qa-accent) 14%,transparent);align-items:stretch}
+  .qa-inputs{flex:1;display:flex;flex-direction:column;gap:6px}
+  .qa-form textarea{width:100%;height:56px;border-radius:12px;border:1px solid color-mix(in srgb,var(--qa-accent) 18%,transparent);padding:8px;font:inherit;font-size:13px;background:#fff;color:var(--text);resize:vertical}
+  .qa-form textarea.qa-external{height:72px;border-style:dashed}
+  [data-theme="slate"] .qa-form textarea,[data-theme="graphite"] .qa-form textarea,[data-theme="ocean"] .qa-form textarea{background:rgba(0,0,0,.25);color:var(--text)}
+  .qa-form button#qaSubmit{border:0;border-radius:12px;padding:0 14px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text)}
+  .qa-form button:disabled{opacity:.55;cursor:wait}
+  .qa-mode-seg{display:inline-flex;padding:3px;border-radius:999px;border:1px solid color-mix(in srgb,var(--qa-accent) 22%,transparent);background:color-mix(in srgb,var(--qa-accent) 6%,transparent);margin-bottom:8px}
+  .qa-mode-seg button{border:0;background:transparent;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer;font:inherit;font-size:11px}
+  .qa-mode-seg button.active{background:var(--qa-accent);color:var(--qa-btn-text);font-weight:600}
+  .qa-review-hint{font-size:12px;color:var(--qa-accent2);margin:0 0 8px}
+  .qa-review-hint a{color:inherit;font-weight:600}
+  .qa-pin{border:0;background:transparent;cursor:pointer;font-size:14px;margin-left:6px;opacity:.7}
+  .qa-pin:hover,.qa-pin.on{opacity:1}
+  .qa-pin.on{color:#ca8a04}
+  .qa-msg-actions{display:flex;gap:2px;align-items:center;margin-top:6px;opacity:0;transition:opacity .15s}
+  .qa-thread .msg:hover .qa-msg-actions,.qa-thread .msg:focus-within .qa-msg-actions{opacity:1}
+  .qa-icon-btn{border:0;background:transparent;cursor:pointer;padding:4px 6px;border-radius:8px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;line-height:0}
+  .qa-icon-btn:hover{background:color-mix(in srgb,var(--qa-accent) 12%,transparent);color:var(--text)}
+  .qa-icon-btn.copied{color:var(--qa-accent2)}
+  .qa-icon-btn svg{width:16px;height:16px;display:block}
+  .badge{font-size:10px;padding:2px 6px;border-radius:999px;border:1px solid color-mix(in srgb,var(--qa-accent) 22%,transparent);margin-left:6px}
+  .echo-strip{margin-top:14px;padding:10px 12px;border-radius:12px;border:1px dashed color-mix(in srgb,var(--accent,#0f766e) 35%,transparent);background:color-mix(in srgb,var(--accent,#0f766e) 6%,transparent)}
+  .echo-kicker{font-size:11px;font-weight:700;color:var(--accent,#0f766e);margin-bottom:6px;letter-spacing:.02em}
+  .echo-row{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-top:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+  .echo-row:first-of-type{border-top:0}
+  .echo-main{flex:1;font-size:13px;line-height:1.45}
+  .echo-main b{display:block;margin-bottom:2px}
+  .echo-body{color:var(--muted);font-size:12px}
+  .echo-dismiss{border:0;background:transparent;cursor:pointer;font-size:16px;line-height:1;color:var(--muted);padding:2px 6px;border-radius:6px}
+  .echo-dismiss:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--text)}
+  .weekly-words{margin-top:10px;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .word-chip{cursor:default}
+  .tag.coach{cursor:pointer;transition:box-shadow .15s}
+  .tag.coach:hover{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent,#0f766e) 35%,transparent)}
+  .sec-ask{margin-left:8px;font:inherit;font-size:11px;padding:3px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent,#0f766e) 35%,transparent);background:transparent;color:var(--accent,#0f766e);cursor:pointer;font-weight:600}
+  .sec-ask:hover{background:color-mix(in srgb,var(--accent,#0f766e) 10%,transparent)}
+  .obs-watch-btn{margin-left:8px;font:inherit;font-size:11px;padding:2px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent,#0f766e) 40%,transparent);background:color-mix(in srgb,var(--accent,#0f766e) 8%,transparent);color:var(--accent,#0f766e);cursor:pointer;font-weight:600;vertical-align:middle}
+  .obs-watch-btn:hover{background:color-mix(in srgb,var(--accent,#0f766e) 16%,transparent)}
+  .obs-watch-btn.on{background:var(--accent,#0f766e);color:#ecfdf5;border-color:transparent}
+  .obs-item{margin-bottom:6px;line-height:1.5}
+  .watch-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:120;display:flex;align-items:center;justify-content:center;padding:16px}
+  .watch-modal{background:var(--qa-bg,#fff);border-radius:16px;border:1px solid var(--qa-border,rgba(0,0,0,.12));max-width:420px;width:100%;padding:16px;box-shadow:var(--shadow);max-height:min(80vh,560px);overflow:auto}
+  .watch-modal h4{margin:0 0 10px;font-size:15px}
+  .watch-modal .tpl{display:block;width:100%;text-align:left;margin:0 0 8px;padding:10px 12px;border-radius:10px;border:1px solid color-mix(in srgb,var(--qa-accent) 20%,transparent);background:color-mix(in srgb,var(--qa-accent) 5%,transparent);cursor:pointer;font:inherit;font-size:13px}
+  .watch-modal .tpl:hover{border-color:var(--qa-accent)}
+  .watch-modal .tpl b{display:block;margin-bottom:4px}
+  .watch-modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+  .watch-modal button.primary{border:0;border-radius:10px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text)}
+  .watch-modal button.ghost{border:0;background:transparent;cursor:pointer;font:inherit;color:var(--muted);padding:8px 10px}
+  .st-honored{color:#15803d;font-weight:700}
+  .st-missed{color:#b45309;font-weight:700}
+  .st-unknown,.st-dismissed{color:var(--muted)}
+  .watch-intro{font-size:13px;line-height:1.55;margin:0 0 4px;color:var(--muted)}
+  .watch-cards{display:flex;flex-direction:column;gap:10px;margin:8px 0 4px}
+  .watch-card{
+    border:1px solid color-mix(in srgb,var(--line) 90%,transparent);border-radius:12px;
+    padding:12px 14px;background:color-mix(in srgb,var(--card,#fff) 92%,transparent);
+  }
+  .watch-card.st-honored{border-color:color-mix(in srgb,#15803d 28%,transparent);background:color-mix(in srgb,#15803d 5%,transparent)}
+  .watch-card.st-missed{border-color:color-mix(in srgb,#b45309 28%,transparent);background:color-mix(in srgb,#b45309 5%,transparent)}
+  .watch-badge{
+    display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;
+    margin-bottom:8px;border:1px solid transparent;
+  }
+  .watch-badge.st-honored{color:#15803d;background:color-mix(in srgb,#15803d 12%,transparent);border-color:color-mix(in srgb,#15803d 25%,transparent)}
+  .watch-badge.st-missed{color:#b45309;background:color-mix(in srgb,#b45309 12%,transparent);border-color:color-mix(in srgb,#b45309 25%,transparent)}
+  .watch-badge.st-unknown,.watch-badge.st-dismissed{color:var(--muted);background:rgba(0,0,0,.04);border-color:var(--line)}
+  .watch-prop{font-size:14px;font-weight:600;margin:0 0 8px;line-height:1.4}
+  .watch-line{font-size:13px;margin:0 0 4px;color:var(--muted);line-height:1.45}
+  .watch-tech .tech-id{font-size:10px;opacity:.65;margin-top:2px;font-family:ui-monospace,monospace}
+  .watch-evidence{margin-top:6px;font-size:12px}
+  .watch-evidence summary{cursor:pointer;color:var(--accent,#0f766e);font-weight:600}
+  .watch-evidence .ev-body{margin-top:6px;padding:8px 10px;border-radius:8px;background:rgba(0,0,0,.03);font-size:11px;line-height:1.45}
+  .coach-pop{position:absolute;z-index:90;min-width:220px;max-width:300px;padding:10px;border-radius:12px;border:1px solid color-mix(in srgb,var(--accent,#0f766e) 28%,transparent);background:var(--card,#fff);box-shadow:var(--shadow);font-size:12px}
+  .coach-pop button{display:block;width:100%;text-align:left;margin:4px 0 0;padding:8px 10px;border-radius:8px;border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);background:transparent;cursor:pointer;font:inherit;font-size:12px}
+  .coach-pop button:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
+
+</style>
+</head>
+<body class="layer-plain lang-zh" data-theme="paper" data-lang="zh">
+  <div class="topbar"><div class="topbar-inner">
+    <div class="brand"><div class="logo">潮</div>
+      <div><h1><span class="lang zh">潮观 · 周报</span><span class="lang en">Tidewatch · Weekly</span></h1>
+      <p>2026-08-31～2026-09-06 · weekly_20260831_20260906</p></div>
+    </div>
+    <div class="toolbar">
+      <nav class="site-nav" aria-label="Tidewatch site"><a class="pill site-link" href="../site/index.html"><span class="lang zh">周报集锦</span><span class="lang en">Archive</span></a><a class="pill site-link" href="../site/dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a><a class="pill site-link site-link-muted" href="../site/daily.html" title="WIP"><span class="lang zh">每日</span><span class="lang en">Daily</span></a></nav>
+      <div class="seg" id="langSeg" title="Language">
+        <button type="button" data-lang="zh" class="active">中文</button>
+        <button type="button" data-lang="en" class="">EN</button>
+      </div>
+      <div class="seg" id="layerSeg">
+        <button type="button" data-layer="l0"><span class="lang zh">30秒</span><span class="lang en">30s</span></button>
+        <button type="button" data-layer="plain" class="active"><span class="lang zh">小白</span><span class="lang en">Beginner</span></button>
+        <button type="button" data-layer="tech"><span class="lang zh">技术</span><span class="lang en">Technical</span></button>
+        <button type="button" data-layer="all"><span class="lang zh">全部</span><span class="lang en">All</span></button>
+      </div>
+      <div class="theme-pick">
+        <span class="theme-label"><span class="lang zh">色调</span><span class="lang en">Theme</span></span>
+        <select id="themeSelect" aria-label="Theme">
+          <optgroup label="Light">
+            <option value="paper">Paper</option><option value="mist">Mist</option>
+            <option value="ink">Ink</option><option value="forest">Forest</option>
+            <option value="rose">Rose</option>
+          </optgroup>
+          <optgroup label="Dark">
+            <option value="slate">Slate</option><option value="graphite">Graphite</option>
+            <option value="ocean">Ocean</option>
+          </optgroup>
+        </select>
+      </div>
+      <span class="pill s2"><span class="lang zh">关注等级</span><span class="lang en">Attention Level</span> S1 · <span class="lang zh">记一笔</span><span class="lang en">S1 Note</span></span>
+    </div>
+  </div></div>
+
+  <div class="wrap">
+    <div class="hero">
+      <div class="card card-pad">
+        <div class="kicker"><span class="lang zh">L0 · 30 秒摘要</span><span class="lang en">L0 · 30s Summary</span></div>
+        <h2><span class="lang zh">本周加密走出相对独立节奏：BTC 窗口 +3.4%、高位震荡里夹杂上涨段清算挤压，实现波动仍高而 IV 与 RV 大致匹配，现货 ETF 维持温和流入。</span><span class="lang en">Crypto moved with relative independence this week: BTC +3.4% in high-level chop with upside liquidation-squeeze traces, realized vol still elevated while IV roughly matched RV, and spot ETFs kept a mild inflow.</span></h2>
+        <p class="lead layer-tech-only"><span class="lang zh">标签 id：trend=chop_high · leverage=liquidation_driven_squeeze · vol=high · premium=iv_fair · link=crypto_idiosyncratic · as_of=2026-09-06T23:59:59Z</span><span class="lang en">Labels: trend=chop_high · leverage=liquidation_driven_squeeze · vol=high · premium=iv_fair · link=crypto_idiosyncratic · as_of=2026-09-06T23:59:59Z</span></p>
+        <div class="metrics">
+          <div class="metric"><div class="l"><span class="lang zh">关键数 1</span><span class="lang en">Key #1</span></div><div class="v"><span class="lang zh">BTC 窗口收益 +3.4%</span><span class="lang en">BTC window return +3.4%</span></div></div>
+          <div class="metric"><div class="l"><span class="lang zh">关键数 2</span><span class="lang en">Key #2</span></div><div class="v"><span class="lang zh">最大单日 +5.1%（2026-09-03）</span><span class="lang en">Max daily +5.1% (2026-09-03)</span></div></div>
+          <div class="metric"><div class="l"><span class="lang zh">关键数 3</span><span class="lang en">Key #3</span></div><div class="v"><span class="lang zh">ES +0.0%</span><span class="lang en">ES +0.0%</span></div></div>
+        </div>
+        
+        <div class="weekly-words"><span class="lang zh">本周三词 · </span><span class="lang en">Week words · </span><span class="pill word-chip" title=""><span class="lang zh">daily</span><span class="lang en">daily</span></span><span class="pill word-chip" title=""><span class="lang zh">2026-08-19</span><span class="lang en">2026-08-19</span></span><span class="pill word-chip" title="美股近月波动的「保险费」温度计。"><span class="lang zh">恐慌指数</span><span class="lang en">VIX</span></span></div>
+      </div>
+      <div class="side-stack">
+        <div class="card attn">
+          <h3><span class="lang zh">关注等级</span><span class="lang en">Attention Level</span> · S1</h3>
+          <p><span class="lang zh">风险：</span><span class="lang en">Risk: </span><span class="lang zh">高实现波动叠加 09-03「清算∥OI 同日尖峰」后 09-04 回吐：若高位震荡再切单边，类似双高日后的退烧仍可能放大日内振幅（side 未定，只谈结构）。</span><span class="lang en">High RV plus the 09-03 liq∥OI same-day spike and 09-04 giveback: if high chop breaks one-sided, a similar post-dual-high cool-down can still amplify intraday swings (side unset; structure only).</span><br/>
+             <span class="lang zh">观察：</span><span class="lang en">Watch: </span><span class="lang zh">盯：是否再现 09-03 类「清算峰值与 OI 日高同日」结构；OI 与 funding 是否在无新双高事件下重新堆积；温和 ETF 流入是否延续（通道与杠杆分开看）。</span><span class="lang en">Watch: whether another 09-03-like same-day liq peak ∥ OI daily high reappears; whether OI and funding rebuild without a new dual-high event; whether mild ETF inflow persists (channel vs leverage tracked apart).</span></p>
+        </div>
+        <div class="card watch">
+          <h3><span class="lang zh">观察点</span><span class="lang en">Watch Items</span></h3>
+          <ol><li class="obs-item" data-watch-id="w1"><span class="lang zh">下一周 BTC 现货 ETF 合计净流是否仍维持「温和流入」或转为流出（对照本周 +9.87 亿美金与 4 入 1 出）。</span><span class="lang en">Whether next week’s combined BTC spot ETF net stays mild inflow or flips to outflow (vs this week’s +986.85M and 4 in / 1 out).</span></li><li class="obs-item" data-watch-id="w2"><span class="lang zh">高实现波动（本周 RV ~43%）是否回落至更中性带，同时 IV−RV 是否仍大致匹配、不出现大幅转正或转负。</span><span class="lang en">Whether high realized vol (RV ~43% this week) cools toward a neutral band while IV−RV stays roughly matched without a large rich/cheap swing.</span></li><li class="obs-item" data-watch-id="w3"><span class="lang zh">清算驱动挤压是否消退：是否再现「清算高峰与 OI 日高/大涨日对齐」的 09-03 类双高结构，或仅有清算峰而无 OI 同日顶；OI 与 funding 在无新双高时是否重新抬升。</span><span class="lang en">Whether squeeze traces fade: another 09-03-like dual-high (liq peak aligned with OI daily high / big up day), or liq peak without same-day OI top; whether OI and funding lift again without a new dual-high.</span></li></ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="tags layer-plain layer-tech" id="labelTags">
+      <div class="tag trend coach" data-dim="trend" data-id="chop_high"><div class="t"><span class="lang zh">趋势质地</span><span class="lang en">Trend Regime</span></div><div class="n"><span class="lang zh">高位震荡</span><span class="lang en">Choppy / Wide Range</span></div>
+        <div class="d layer-tech-only">id=chop_high</div></div>
+      <div class="tag lev coach" data-dim="leverage" data-id="liquidation_driven_squeeze"><div class="t"><span class="lang zh">杠杆结构</span><span class="lang en">Leverage Structure</span></div><div class="n"><span class="lang zh">清算驱动（上涨段挤压迹象）</span><span class="lang en">Liquidation-Driven Squeeze</span></div>
+        <div class="d layer-tech-only">id=liquidation_driven_squeeze</div></div>
+      <div class="tag vol coach" data-dim="vol_premium" data-id="iv_fair"><div class="t"><span class="lang zh">波动</span><span class="lang en">Volatility</span></div><div class="n"><span class="lang zh">高实现波动</span><span class="lang en">High Realized Vol</span></div>
+        <div class="d layer-tech-only">id=high · premium=iv_fair</div></div>
+      <div class="tag link coach" data-dim="tradfi_link" data-id="crypto_idiosyncratic"><div class="t"><span class="lang zh">传统联动</span><span class="lang en">TradFi Link</span></div><div class="n"><span class="lang zh">加密偏独立</span><span class="lang en">Crypto-Idiosyncratic</span></div>
+        <div class="d layer-tech-only">id=crypto_idiosyncratic</div></div>
+    </div>
+
+    <section class="block layer-plain layer-tech">
+      <div class="block-h"><h3>① <span class="lang zh">一页对照</span><span class="lang en">One-Page Compare</span></h3></div>
+      <div class="card"><p class="plain" style="padding-top:18px"><span class="lang zh">BTC +3.4%、ETH +4.0%，明显强于同期美股括号内近乎走平的 ES（0%）与仅微升的 NQ（+0.25%）；VIX 小幅抬升、美元与黄金偏弱，传统风险资产并未给出同向主线，标签落在「加密偏独立」。</span><span class="lang en">BTC +3.4% and ETH +4.0% outpaced the tradfi bracket’s flat ES (0%) and barely higher NQ (+0.25%); VIX edged up while DXY and gold softened, so traditional risk did not supply a shared tape—label reads crypto-idiosyncratic.</span></p></div>
+    </section>
+
+    <section class="block">
+      <div class="block-h"><h3>② <span class="lang zh">价格路径</span><span class="lang en">Price Path</span></h3>
+        <div class="sub"><span class="lang zh">BTC + ETH · 现货</span><span class="lang en">BTC + ETH · Spot</span></div></div>
+      <div class="card">
+        <div class="chart-box" style="height:340px"><canvas id="chartPrice"></canvas></div>
+        <p class="plain layer-plain-only"><span class="lang zh">路径不是顺畅单边趋势，而是高位震荡：价格重心上移的同时反复消化杠杆。节奏锚点升为价+清算+OI——9 月 3 日清算与 OI 同日周高、价格约 +5.1%，9 月 4 日退烧（价约 −2%、OI/费率回吐），上涨段带有事件型挤压痕迹而非干净突破。</span><span class="lang en">Path is high chop, not a clean one-way trend: price center drifts up while leverage is digested. Rhythm anchor = price + liq + OI — Sep 3 same-day liq and OI week highs with ~+5.1% price, Sep 4 cool-down (~−2%, OI/funding giveback); up-leg shows event-squeeze traces, not a clean breakout.</span></p>
+        <p class="plain layer-tech-only"><span class="lang zh">BTC 基点→期末 77682.0→80341.83（3.424%）· 最强日 5.082% @ 2026-09-03 · 最弱日 -1.981% @ 2026-09-04 · ETH 4.038% · 源 daily_kline</span><span class="lang en">BTC baseline→end 77682.0→80341.83 (3.424%) · max 5.082% @ 2026-09-03 · min -1.981% @ 2026-09-04 · ETH 4.038% · daily_kline</span></p>
+        <div class="callout layer-plain-only">
+          <b><span class="lang zh">读图</span><span class="lang en">Chart</span></b>
+          <span class="lang zh">：左轴 BTC，右轴 ETH（双轴只看走势形状）。BTC 窗口 3.424% · ETH 4.038%。</span>
+          <span class="lang en">: BTC left axis, ETH right (shape only). BTC window 3.424% · ETH 4.038%.</span>
+        </div>
+        <div class="callout layer-tech-only">
+          <span class="lang zh"><b>图</b> 双轴：BTC 左 / ETH 右。数据源 Datahub <code>market_data.daily_kline</code>。</span>
+          <span class="lang en"><b>Chart</b> Dual axis BTC/ETH from Datahub <code>market_data.daily_kline</code>.</span>
+        </div>
+        <details class="fold"><summary><span class="lang zh">日表（BTC Spot）</span><span class="lang en">Daily table (BTC Spot)</span></summary><div class="table-wrap">
+          <table class="data" id="tblSpot"><thead><tr><th><span class="lang zh">日期</span><span class="lang en">Date</span></th><th>O</th><th>H</th><th>L</th><th>C</th><th><span class="lang zh">涨跌</span><span class="lang en">Return</span></th><th>Vol</th></tr></thead><tbody></tbody></table>
+        </div></details>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-leverage">
+      <div class="block-h"><h3>③ <span class="lang zh">杠杆结构</span><span class="lang en">Leverage Structure</span></h3>
+        <div class="sub"><span class="lang zh">资金费率 · OI · 清算 · 永续成交额</span><span class="lang en">Funding · OI · Liq · Perp turnover</span> <button type="button" class="sec-ask" data-q="本周 funding 与 OI 如何合读？"><span class="lang zh">问</span><span class="lang en">Ask</span></button></div></div>
+      <div class="card layer-plain-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">标签：清算驱动（上涨段挤压迹象）。
+① 拥挤线（OI + 资金费率年化）：周初约 +7.97%/yr → 期末约 +3.16%/yr，租金全周降温；OI 周变约 −0.73%（106341 → 105565），全周库存仅略降——更像事件周，而非匀速去杠杆。
+② 出清线（OI + 清算）：主戏在 09-03——清算笔数与 qty 峰值同日，且与 OI 日高同日（约 112737，周内最高）；峰值约 3.4× 周内中位清算量，价格同日约 +5.1%。当日 OI↑ 且清算↑，读作改仓/挤压日，而非慢速拆仓。次日 09-04：OI 自周高回落、funding 年化骤降至约 +1.1%/yr、价格约 −2.0%——一日高潮、次日退烧。side 语义未核验，此处只并陈结构，不判多空谁爆。
+③ 量旁证（永续成交额=活跃度）：周合计约 762.88 亿美金，WoW 约 −14.7%，活跃度中性；量偏淡，说明主戏是事件尖峰而非全周热换手。
+收句：拥挤线降温 + 出清线「09-03 双高 → 09-04 退烧」共同支撑「清算驱动/上涨段挤压迹象」标签；禁止把清算/OI/funding 写成涨跌原因。</span><span class="lang en">Label: liquidation-driven (upside squeeze traces).
+① Crowding (OI + funding ann.): ~+7.97%/yr → ~+3.16%/yr — rent cooled; OI week change ~−0.73% (106341 → 105565), inventory only slightly lower — an event week, not steady deleveraging.
+② Flush (OI + liquidations): main act 2026-09-03 — liq count and qty peaks same day and same day as OI daily high (~112737, week max); peak ~3.4× median liq qty; price ~+5.1% that day. OI↑ with liq↑ reads as reposition/squeeze day, not slow unwind. Next day 09-04: OI off the week high, funding ann. crashed to ~+1.1%/yr, price ~−2.0% — one-day climax, next-day cool-down. Side semantics unverified; structure only, no long/short call.
+③ Volume side-check (perp turnover = activity): ~76.29B USD, WoW ~−14.7%, activity normal — soft tape, event spike not week-long heat.
+Close: cooling crowding + flush line “09-03 dual-high → 09-04 fade” support the squeeze label; do not treat liq/OI/funding as the cause of the move.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">小白速记</span><span class="lang en">Beginner notes</span></b><br/>
+          <span class="lang zh">
+          · <b>资金费率 Funding</b>：多空「租金」，通常每 8 小时一期、一天 3 次。期末单期 0.0029%/period → 年化 <b>+3.16%/yr</b>。<br/>
+          · <b>未平仓量 OI</b>：未平合约总量。价涨 OI 不升更像挤压/换手。本周 OI 变化 -0.73%。<br/>
+          · <b>清算 Liquidation</b>：保证金不足强平。峰值日（笔数）2026-09-03（1619 笔）。<br/>
+          · <b>永续成交额</b>：合约盘有多「热闹」（turnover 美金），本周合计 <b>762.88 亿美金</b>
+            · 较上完整周 -14.7%
+            · 活跃度「中性」。
+            <b>不是</b>多空拆分；与 funding/OI 并读，只标信号质量。
+          </span>
+          <span class="lang en">
+          · <b>Funding</b>: rent between longs/shorts; typically every 8h (3×/day). End period 0.0029%/period → ann. <b>+3.16%/yr</b>.<br/>
+          · <b>OI</b>: open interest. Price up without OI up often looks like squeeze/churn. OI chg -0.73%.<br/>
+          · <b>Liquidation</b>: forced close on margin. Peak day (count) 2026-09-03 (1619 prints).<br/>
+          · <b>Perp turnover</b>: how busy the perp tape is (USD). Week sum <b>76.29B</b>
+            · vs prior week -14.7%
+            · activity “normal”.
+            <b>Not</b> a long/short split — activity quality next to funding/OI.
+          </span>
+        </div>
+      </div>
+      <div class="card layer-tech-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px">
+          <span class="lang zh">
+          资金费率是<strong>每期结算</strong>费率（不是日费率）。Binance U 本位永续通常<strong>每 8 小时一期（一天 3 次）</strong>。
+          年化近似：费率 × 3 × 365（便于比较的 %/年，不是承诺收益）。<br/><br/>
+          期末费率=2.883e-05（0.0029%/period）
+          → 年化 +3.16%/yr
+          · OI 变化 -0.73%
+          · 期末基差 -6.013 bps
+          · 清算峰值笔数=1619 @ 2026-09-03
+          · side 语义=raw_exchange_side_unverified<br/>
+          · 永续 turnover 周合计=76288408200.86 USD（762.88 亿美金）
+          · wow=-14.67% · activity=normal
+          · peak=2026-09-03 · product=LinearSwap · exchange=Binance
+          · <b>forbid</b> direction_from_total_volume
+          </span>
+          <span class="lang en">
+          Funding is per-settlement (not daily). Binance USDT-M: typically every 8h (3×/day).
+          Ann. ≈ rate × 3 × 365 (comparable %/yr, not a promised return).<br/><br/>
+          End funding=2.883e-05 (0.0029%/period)
+          → ann. +3.16%/yr
+          · OI chg -0.73%
+          · basis_end -6.013 bps
+          · liq peak n=1619 @ 2026-09-03
+          · side_semantics=raw_exchange_side_unverified<br/>
+          · perp turnover week sum=76288408200.86 USD (76.29B)
+          · wow=-14.67% · activity=normal
+          · peak=2026-09-03 · product=LinearSwap · exchange=Binance
+          · <b>forbid</b> direction_from_total_volume
+          </span>
+        </p>
+      </div>
+      <div class="grid-2">
+        <div class="card"><div class="chart-box sm"><canvas id="chartLiq"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">清算：笔数（柱）+ BUY/SELL 侧 qty（线）。尖峰日更重要。side 为交易所原始字段，多空语义未最终确认。</span><span class="lang en">Liq: count (bars) + BUY/SELL side qty (lines). Peaks matter. Side is raw exchange field — long/short semantics unverified.</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">清算峰值笔数=1619 @ 2026-09-03</span><span class="lang en">liq peak n=1619 on 2026-09-03</span></p>
+        </div>
+        <div class="card"><div class="chart-box sm"><canvas id="chartOiFund"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">左轴 OI；右轴 funding 年化 %/年。</span><span class="lang en">Left OI; right annualized funding %/yr.</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">右轴=年化资金费率 %/年。原始单期费率=2.883e-05。</span><span class="lang en">Right axis = ann. funding %/yr. Raw period rate=2.883e-05.</span></p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="chart-box sm"><canvas id="chartPerpVol"></canvas></div>
+        <p class="plain layer-plain-only"><span class="lang zh">永续日成交额（turnover 美金柱）。只读活跃度；禁止解读为多头/空头成交量。</span><span class="lang en">Perp daily turnover (USD bars). Activity only — not long/short volume.</span></p>
+        <p class="plain layer-tech-only"><span class="lang zh">daily_kline · LinearSwap · turnover USD · 单所 Binance</span><span class="lang en">daily_kline · LinearSwap · turnover USD · Binance only</span></p>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-vol">
+      <div class="block-h"><h3>④ <span class="lang zh">波动环境</span><span class="lang en">Volatility Regime</span></h3>
+        <div class="sub"><span class="lang zh">IV 对 RV · BTC · ETH</span><span class="lang en">IV vs RV · BTC · ETH</span> <button type="button" class="sec-ask" data-q="本周 IV−RV 是贵是便宜？"><span class="lang zh">问</span><span class="lang en">Ask</span></button></div></div>
+      <div class="card layer-plain-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">BTC 实现波动年化约 43.4%，仍处高实现波动带；期末 Deribit IV 约 39.3%，IV−RV 点差约 -4.0 个百分点，标签为 IV 与 RV 大致匹配。</span><span class="lang en">BTC realized vol ~43.4% ann. kept the high-RV band; end Deribit IV ~39.3%, IV−RV spread ~−4.0 pct pts, labeled IV roughly matched to RV.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">读法 · 后视镜 vs 保险报价</span><span class="lang en">How to read · rear-view vs insurance</span></b>
+          <div style="margin-top:8px"><span class="lang zh">高 RV 描述的是已经走完的路径起伏；IV 是期权市场对往后波动的定价。两者大致匹配时，说明期权并未明显贵买或贱卖「下一阶段的波动」，更多是在兑现本周已经发生的振幅。</span><span class="lang en">High RV describes path roughness already realized; IV is the options market’s price of future vol. When they roughly match, options are neither clearly rich nor cheap versus the next leg—they are largely reflecting the amplitude already delivered.</span></div>
+        </div>
+        <p class="plain"><strong><span class="lang zh">本期组合：</span><span class="lang en">This week: </span></strong><span class="lang zh">高实现波动 + IV 公允，叠加清算驱动的短节奏，意味着波动来自真实成交与被迫调仓，而非单纯的期权溢价扩张；ETH 端 IV/RV（约 53%/47%）同样偏高位、结构相近。</span><span class="lang en">High RV with fair IV plus liquidation-driven short rhythm points to vol from real flow and forced de-risking rather than pure options-premium expansion; ETH’s IV/RV (~53%/47%) sits similarly elevated with a comparable structure.</span></p>
+        <p class="plain"><span class="lang zh">价格周线上涨约 3.4% 的同时 IV 并未脱离 RV 向上失控，说明上涨更多消耗在震荡与挤压里，而不是「越涨越贵的波动保险」。</span><span class="lang en">Price rose ~3.4% on the week while IV did not runaway above RV, so the advance was spent more in chop and squeezes than in ever-dearer vol insurance.</span></p>
+        <p class="plain"><span class="lang zh">VIX 括号内约 +0.7%，传统恐慌仅轻微抬头；加密侧 RV 更高、且走独立标签，两边波动温度计本周并未锁死同步。</span><span class="lang en">VIX ~+0.7% in its bracket—only a mild tradfi unease tick—while crypto RV ran higher under an idiosyncratic link, so the two vol thermometers were not locked in sync.</span></p>
+        <div class="callout">
+          <span class="lang zh">
+          · 本周 RV ≈ <b>43.35%</b> 年化 · IV 期末 ≈ <b>39.32%</b>（Deribit）<br/>
+          · IV−RV ≈ <b>-4.0</b> 个百分点 → IV 与 RV 大致匹配
+          </span>
+          <span class="lang en">
+          · RV ≈ <b>43.35%</b> ann. · IV end ≈ <b>39.32%</b> (Deribit)<br/>
+          · IV−RV ≈ <b>-4.0</b> pct → IV Fair (vs RV)
+          </span>
+        </div>
+      </div>
+      <div class="card layer-tech-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">source=Deribit option_volatility_kline · currency=BTC · iv_end=39.32 · iv_start=36.99 · iv_chg_pts=2.33 · rv_ann=43.35 method=log_return_stdev_sqrt_365 · iv_rv_spread_end=-4.03 · vol_premium=iv_fair · ETH iv=53.19 rv=47.32 · vix_ret=0.693 · iv_vs_vix=same</span><span class="lang en">source=Deribit option_volatility_kline · currency=BTC · iv_end=39.32 · iv_start=36.99 · iv_chg_pts=2.33 · rv_ann=43.35 method=log_return_stdev_sqrt_365 · iv_rv_spread_end=-4.03 · vol_premium=iv_fair · ETH iv=53.19 rv=47.32 · vix_ret=0.693 · iv_vs_vix=same</span></p>
+        <div class="callout">
+          <span class="lang zh"><b>技术</b> IV 来自 Datahub <code>market_data.option_volatility_kline</code>
+         （Deribit/BTC）；
+          日频 argMax(close,start_time)。RV：对数收益标准差 × √365。不构成期权买卖建议。</span>
+          <span class="lang en"><b>Tech</b> IV: <code>market_data.option_volatility_kline</code>
+          (Deribit/BTC);
+          daily argMax(close,start_time). RV: log-return stdev × √365. No option trade advice.</span>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card"><div class="chart-box sm"><canvas id="chartIv"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">BTC IV 日末曲线（年化 %）。</span><span class="lang en">BTC daily IV close (ann. %).</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">日频 IV · Deribit</span><span class="lang en">Daily IV · Deribit</span></p>
+        </div>
+        <div class="card"><div class="chart-box sm"><canvas id="chartIvRv"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">期末 IV vs 窗口 RV。柱差 ≈ IV−RV。</span><span class="lang en">IV end vs window RV. Gap ≈ IV−RV.</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">IV−RV 点差=-4.03</span><span class="lang en">spread=-4.03</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-etf">
+      <div class="block-h"><h3>⑤ <span class="lang zh">ETF 现货通道</span><span class="lang en">ETF Spot Channel</span></h3>
+        <div class="sub"><span class="lang zh">美现货净申赎 · 交易所现货成交额 · 非杠杆</span><span class="lang en">US spot ETF net · exchange spot turnover · not leverage</span> </div></div>
+      <div class="card layer-plain-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">美现货 BTC ETF 合计净申赎约 +9.87 亿美金（温和流入；4 入 1 出，单日最大净流入落在 9 月 3 日），ETH ETF 约 +2.18 亿美金；并陈看，Binance 等口径现货成交额周合计约 78.60 亿美金、环比 -18.16%，现货通道有净流入但交易所现货热闹度同步降温，不把净流与涨跌焊成因果。</span><span class="lang en">US spot BTC ETFs saw ~+986.85M net (mild inflow; 4 in / 1 out, largest daily net on Sep 3); ETH ETFs ~+218.41M. Alongside, spot exchange turnover summed ~7.86B (−18.16% WoW): spot channel took net creations while exchange spot activity cooled—flow and price path are juxtaposed, not causally welded.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">小白速记 · ETF 净申赎</span><span class="lang en">Beginner · ETF net flow</span></b><br/>
+          <span class="lang zh">
+          · <b>净申赎</b>：授权参与商创建/赎回份额带来的资金进出，不是 ETF 二级市场价格涨跌。<br/>
+          · 本周 BTC 通道合计 <b>+9.87 亿美金</b>
+            · ETH <b>+2.18 亿美金</b>
+            · 姿态 <b>温和流入</b>。<br/>
+          · 与 ③ 杠杆块对照：现货管道 vs 永续拥挤；<b>禁止</b>「因流入所以涨跌」。
+          </span>
+          <span class="lang en">
+          · <b>Net flow</b> = creations/redemptions, not share price.<br/>
+          · BTC <b>+986.85M</b>
+            · ETH <b>+218.41M</b>
+            · channel <b>mild inflow</b>.<br/>
+          · Read with leverage (③); no causal price call.
+          </span>
+        </div>
+      </div>
+      <div class="card layer-plain-only" style="margin-bottom:12px" id="sec-spot-volume">
+        <p class="plain" style="padding-top:12px"><span class="lang zh">Binance 现货成交额（turnover 美金，程序周合计）：本周 &lt;b&gt;78.60 亿美金&lt;/b&gt;，相对上完整周 -18.2%（活跃度「中性」；上周约 96.05 亿美金）。峰值日 2026-09-03（15.80 亿美金）。这是交易所现货「换手热闹程度」，与 ETF 净申赎同属现货世界、只并陈；对照永续周成交额 762.88 亿美金——两者量级不同，**禁止相加**，也**不能**拆多空。</span><span class="lang en">Binance spot turnover (USD, program week sum): this week &lt;b&gt;7.86B&lt;/b&gt;, vs prior full week -18.2% (activity “normal”; prior ~9.61B). Peak day 2026-09-03 (1.58B). Spot tape busyness beside ETF net flow — same spot world, no sum with perp (76.29B); not a long/short split.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">现货成交 · 本周程序数（必读）</span><span class="lang en">Spot turnover · week program numbers</span></b><br/>
+          <span class="lang zh">
+          · 周合计 <b>78.60 亿美金</b>
+            · 较上完整周 -18.2%
+            · 活跃「normal」
+            · 峰值日 2026-09-03
+              （15.80 亿美金）<br/>
+          · 对照永续周合计 <b>762.88 亿美金</b>——量级不同，<b>禁止相加</b>；都只是热闹程度，<b>不能拆多空</b>。
+          </span>
+          <span class="lang en">
+          · Week sum <b>7.86B</b>
+            · vs prior -18.2%
+            · activity “normal”
+            · peak 2026-09-03
+              (1.58B)<br/>
+          · Beside perp week <b>76.29B</b> — do not add; activity only.
+          </span>
+        </div>
+      </div>
+      <div class="card layer-tech-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px">
+          <span class="lang zh">
+          ETF status=ok · provider=bykaranteli · USD
+          · authority=community_aggregate<br/>
+          BTC net_sum=986853091.0 · inflow_days=4 · outflow_days=1<br/>
+          ETH net_sum=218405535.0 · channel_id=mild_inflow<br/>
+          Spot turnover week_sum=7860495268.44 USD · wow=-18.16%
+          · product=Spot · exchange=Binance · <b>forbid</b> L/S split · <b>forbid</b> sum with perp/ETF
+          </span>
+          <span class="lang en">
+          ETF status=ok · provider=bykaranteli<br/>
+          Spot turnover week_sum=7860495268.44 · wow=-18.16% · Spot · Binance · activity only
+          </span>
+        </p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="chart-box sm"><canvas id="chartEtf"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">柱=ETF 日净流（USD）。</span><span class="lang en">Bars = ETF daily net USD.</span></p>
+        </div>
+        <div class="card">
+          <div class="chart-box sm"><canvas id="chartSpotVol"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">柱=Binance 现货日成交额（turnover 美金）。本周日历日；只读活跃度。</span>
+             <span class="lang en">Bars = Binance spot daily turnover USD (week days). Activity only.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech">
+      <div class="block-h"><h3>⑥ <span class="lang zh">传统市场</span><span class="lang en">Traditional Markets</span></h3>
+        <div class="sub"><span class="lang zh">含 VIX；与 ④ 加密 IV 角色对照、数字不混用</span><span class="lang en">Includes VIX; role-parallel to crypto IV, numbers not mixed</span></div></div>
+      <div class="card" style="margin-bottom:12px"><div class="chart-box sm"><canvas id="chartTrad"></canvas></div>
+        <p class="plain layer-plain-only"><span class="lang zh">归一化对照（起点=100）</span><span class="lang en">Normalized (start=100)</span></p></div>
+      <div class="card"><div class="trad-grid">
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">ES · 标普期货</span><span class="lang en">ES · S&amp;P 500 Futures</span></b>
+            <span class="chg "><span class="lang zh">+0.0%</span><span class="lang en">+0.0%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">标普500股指期货</span><span class="lang en">S&amp;P 500 index futures</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">+0.0%</span><span class="lang en">+0.0%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">风险偏好降温</span><span class="lang en">Risk-off appetite cooling</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">需结合全周方向理解。</span><span class="lang en">Read with the full-week direction.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">NQ · 纳指期货</span><span class="lang en">NQ · Nasdaq 100 Futures</span></b>
+            <span class="chg up"><span class="lang zh">+0.2%</span><span class="lang en">+0.2%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">纳斯达克100期货</span><span class="lang en">Nasdaq 100 futures</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">+0.2%</span><span class="lang en">+0.2%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">科技风险偏好升温</span><span class="lang en">Tech risk appetite rising</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">需结合全周方向理解。</span><span class="lang en">Read with the full-week direction.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">VIX · 恐慌指数</span><span class="lang en">VIX · Fear gauge</span></b>
+            <span class="chg up"><span class="lang zh">+0.7%</span><span class="lang en">+0.7%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">美股隐含波动指数 VIX</span><span class="lang en">US equity implied volatility index (VIX)</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">+0.7%</span><span class="lang en">+0.7%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">定价的紧张度上升</span><span class="lang en">Priced stress rising</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">VIX 中低位小动通常解释不了币的大涨跌；与上一节加密 IV 只做角色对照。</span><span class="lang en">Small VIX moves rarely explain big crypto moves; role-parallel to crypto IV only.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">DXY · 美元指数</span><span class="lang en">DXY · US Dollar Index</span></b>
+            <span class="chg down"><span class="lang zh">-0.5%</span><span class="lang en">-0.5%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">美元指数</span><span class="lang en">US Dollar Index</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">-0.5%</span><span class="lang en">-0.5%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">美元走弱</span><span class="lang en">USD weaker</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">美元略弱可作弱背景，不是主引擎。</span><span class="lang en">Mild USD softness is backdrop, not the main engine.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">US10Y · 十年美债</span><span class="lang en">US10Y · 10Y Yield</span></b>
+            <span class="chg up"><span class="lang zh">约 6.4 bp</span><span class="lang en">~6.4 bp</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">10Y 美债收益率</span><span class="lang en">US 10-year Treasury yield</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">约 6.4 bp</span><span class="lang en">~6.4 bp</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">折现率压力上升</span><span class="lang en">Discount-rate pressure rising</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">利率与币涨跌若相反，则不是单纯降息交易。</span><span class="lang en">If yields move opposite crypto, this is not a pure cut-trade story.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">GOLD · 黄金</span><span class="lang en">GOLD · Gold</span></b>
+            <span class="chg down"><span class="lang zh">-1.1%</span><span class="lang en">-1.1%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">黄金</span><span class="lang en">Gold</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">-1.1%</span><span class="lang en">-1.1%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">上述叙事减弱</span><span class="lang en">Those narratives fading</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">与币关系需看结构，不宜硬套。</span><span class="lang en">Link to crypto is structural—not mechanical.</span></div>
+          </div></div>
+      </div>
+      <p class="plain layer-plain-only"><strong><span class="lang zh">总结：</span><span class="lang en">Summary: </span></strong><span class="lang zh">美股括号（口述仍称本报告周）ES 走平、NQ 微涨，十年期美债收益率 +6.4 bp，DXY -0.54%，黄金 -1.08%；传统资产呈利率略抬、美元与金偏弱的混合盘，对加密既未明显抽风险也未提供强顺风。</span><span class="lang en">In the US session bracket (spoken as this report week) ES was flat, NQ slightly up, US10Y +6.4 bp, DXY −0.54%, gold −1.08%: a mixed tape of firmer yields and softer dollar/gold that neither clearly drained risk from crypto nor supplied a strong tailwind.</span></p></div>
+    </section>
+
+    <section class="block layer-plain layer-tech">
+      <div class="block-h"><h3>⑦ <span class="lang zh">三句结论</span><span class="lang en">Three Takeaways</span></h3></div>
+      <div class="card conclusions"><ol><li><span class="lang zh">价格与传统资产脱钩上涨；主叙事是加密内部高位震荡，以及 09-03 清算∥OI 同日尖峰后的事件型挤压（非宽基风险齐步）。</span><span class="lang en">Crypto rose decoupled from TradFi; the core read is internal high chop plus an event squeeze after the 09-03 same-day liq∥OI spike (not a broad risk-on march).</span></li><li><span class="lang zh">波动上 RV 仍高、IV 大致跟上，期权层没有额外「恐慌溢价」扩张，振幅更多来自现货—杠杆交易本身。</span><span class="lang en">Vol-wise RV stayed high and IV roughly kept pace—no extra panic premium balloon in options; amplitude came more from spot–leverage trading itself.</span></li><li><span class="lang zh">现货 ETF 温和净流入与交易所现货/永续成交额环比下滑并陈，通道有钱进、场内热闹度却在降，值得分开跟踪。</span><span class="lang en">Mild ETF net inflow sat beside cooler spot/perp turnover WoW: money entered the channel while venue activity cooled—track the two separately.</span></li></ol></div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-strategy">
+      <div class="block-h"><h3>⑧ <span class="lang zh">策略环境</span><span class="lang en">Strategy backdrop</span></h3>
+        <div class="sub"><span class="lang zh">条件匹配 · 非产品推荐</span><span class="lang en">Condition fit · not product advice</span> <button type="button" class="sec-ask" data-q="为何趋势跟踪 match 或不 match？"><span class="lang zh">问</span><span class="lang en">Ask</span></button></div></div>
+      <div class="card">
+        <p class="plain" style="padding-top:16px"><strong><span class="lang zh">更匹配的环境</span><span class="lang en">Better-matched backdrop</span></strong></p>
+        <pre class="env-pre"><span class="lang zh">高位震荡 + 清算挤压反复出现，价格路径更像区间内的来回兑现而非单边延伸，与均值回归类逻辑的「偏离后回拉、事件后归一」观察面相合（仅解释标签匹配，非推荐）。</span><span class="lang en">High chop with repeated liquidation squeezes made the path look like two-way digestion inside a range rather than one-way extension, aligning with mean-reversion’s observational face of pullbacks after stretches and normalization after events (label match only, not a recommendation).</span></pre>
+        <p class="plain"><strong><span class="lang zh">更不匹配的环境</span><span class="lang en">Weaker-matched backdrop</span></strong></p>
+        <pre class="env-pre"><span class="lang zh">趋势跟随更依赖可持续的方向与回撤可控的延伸；本周标签为高位震荡且杠杆以清算驱动为主，方向信号易被日内挤压打断，故与趋势跟随观察面错位。</span><span class="lang en">Trend-following leans on durable direction and controlled extension; this week’s high-chop label and liquidation-driven leverage meant directional signals were easily interrupted by intraday squeezes, mismatching that lens.</span></pre>
+        <div class="callout"><span class="lang zh">策略环境 = 条件匹配度，不是投资建议；不推荐具体产品，不给出仓位。</span><span class="lang en">Strategy backdrop = condition fit, not investment advice; no products, no position sizes.</span></div>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-week-diff">
+      <div class="block-h"><h3>⑨ <span class="lang zh">与上周对比</span><span class="lang en">vs Last week</span></h3>
+        <div class="sub"><span class="lang zh">可展开 · 含传统 · 可跳转上期</span><span class="lang en">Expandable · includes TradFi · link prior</span></div></div>
+      <div class="card">
+        <details class="fold week-diff" open>
+          <summary><span class="lang zh">摘要：</span><span class="lang en">Summary: </span><span class="lang zh">相对上周：BTC 收益由 -0.1% 转为 +3.4%；标签切换涉及趋势、杠杆、实现波动与 IV 溢价；BTC ETF 净流由 +9.24 亿美金略增至 +9.87 亿美金，温和流入延续但现货与永续成交额环比均降温。</span><span class="lang en">Vs prior week: BTC return flipped −0.1%→+3.4%; label shifts spanned Trend, Leverage, Realized vol, IV premium; BTC ETF net edged +924.48M→+986.85M—mild inflow continued while both spot and perp turnovers cooled WoW.</span></summary>
+          <div class="table-wrap" style="padding:12px 16px 8px">
+            <table class="data">
+              <thead><tr>
+                <th><span class="lang zh">维度</span><span class="lang en">Dim</span></th>
+                <th><span class="lang zh">上周</span><span class="lang en">Prior</span></th>
+                <th><span class="lang zh">本周</span><span class="lang en">This</span></th>
+                <th>Δ</th>
+              </tr></thead>
+              <tbody><tr><td><span class="lang zh">BTC 窗口收益 %</span><span class="lang en">BTC window return %</span></td><td>-0.1</td><td>+3.4</td><td class="up">+3.5</td></tr><tr><td><span class="lang zh">ETH 窗口收益 %</span><span class="lang en">ETH window return %</span></td><td>-1.9</td><td>+4.0</td><td class="up">+5.9</td></tr><tr><td><span class="lang zh">趋势</span><span class="lang en">Trend</span></td><td><span class="lang zh">偏震荡</span><span class="lang en">chop_low</span></td><td><span class="lang zh">高位震荡</span><span class="lang en">chop_high</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">杠杆</span><span class="lang en">Leverage</span></td><td><span class="lang zh">杠杆中性</span><span class="lang en">leverage_neutral</span></td><td><span class="lang zh">清算驱动（上涨段挤压迹象）</span><span class="lang en">liquidation_driven_squeeze</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">实现波动</span><span class="lang en">Realized vol</span></td><td><span class="lang zh">中等波动</span><span class="lang en">mid</span></td><td><span class="lang zh">高实现波动</span><span class="lang en">high</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">IV 溢价</span><span class="lang en">IV premium</span></td><td><span class="lang zh">期权偏贵（IV 相对 RV 溢价）</span><span class="lang en">iv_rich</span></td><td><span class="lang zh">IV 与 RV 大致匹配</span><span class="lang en">iv_fair</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">传统联动</span><span class="lang en">TradFi link</span></td><td><span class="lang zh">加密偏独立</span><span class="lang en">crypto_idiosyncratic</span></td><td><span class="lang zh">加密偏独立</span><span class="lang en">crypto_idiosyncratic</span></td><td>—</td></tr><tr><td><span class="lang zh">RV 年化 %</span><span class="lang en">RV ann. %</span></td><td>30.9</td><td>43.4</td><td class="">12.5</td></tr><tr><td><span class="lang zh">IV 期末 %</span><span class="lang en">IV end %</span></td><td>37.0</td><td>39.3</td><td class="">2.3</td></tr><tr><td><span class="lang zh">IV−RV</span><span class="lang en">IV−RV</span></td><td>+6.1</td><td>-4.0</td><td class="down">-10.2</td></tr><tr><td><span class="lang zh">Funding 年化 %</span><span class="lang en">Funding ann. %</span></td><td>+7.97</td><td>+3.16</td><td class="down">-4.81</td></tr><tr><td><span class="lang zh">OI 变化 %</span><span class="lang en">OI chg %</span></td><td>+0.7</td><td>-0.7</td><td class="down">-1.5</td></tr><tr><td><span class="lang zh">永续成交额（周合计）</span><span class="lang en">Perp turnover (week sum)</span></td><td><span class="lang zh">893.99 亿美金</span><span class="lang en">89.40B</span></td><td><span class="lang zh">762.88 亿美金</span><span class="lang en">76.29B</span></td><td class="down">-14.7%</td></tr><tr><td><span class="lang zh">现货成交额（周合计）</span><span class="lang en">Spot turnover (week sum)</span></td><td><span class="lang zh">96.05 亿美金</span><span class="lang en">9.61B</span></td><td><span class="lang zh">78.60 亿美金</span><span class="lang en">7.86B</span></td><td class="down">-18.2%</td></tr><tr><td><span class="lang zh">BTC ETF 周净流</span><span class="lang en">BTC ETF week net</span></td><td><span class="lang zh">+9.24 亿美金</span><span class="lang en">+924.48M</span></td><td><span class="lang zh">+9.87 亿美金</span><span class="lang en">+986.85M</span></td><td class="up"><span class="lang zh">+62.38 百万美金</span><span class="lang en">+62.38M</span></td></tr><tr><td><span class="lang zh">ETH ETF 周净流</span><span class="lang en">ETH ETF week net</span></td><td><span class="lang zh">+8.24 亿美金</span><span class="lang en">+824.42M</span></td><td><span class="lang zh">+2.18 亿美金</span><span class="lang en">+218.41M</span></td><td class="down"><span class="lang zh">-6.06 亿美金</span><span class="lang en">-606.01M</span></td></tr><tr><td><span class="lang zh">ETF 通道姿态</span><span class="lang en">ETF channel stance</span></td><td><span class="lang zh">温和流入</span><span class="lang en">mild inflow</span></td><td><span class="lang zh">温和流入</span><span class="lang en">mild inflow</span></td><td>—</td></tr><tr><td><span class="lang zh">ES 窗口 %</span><span class="lang en">ES window %</span></td><td>+0.4</td><td>+0.0</td><td class="down">-0.4</td></tr><tr><td><span class="lang zh">NQ 窗口 %</span><span class="lang en">NQ window %</span></td><td>+0.4</td><td>+0.2</td><td class="down">-0.1</td></tr><tr><td><span class="lang zh">VIX 窗口 %</span><span class="lang en">VIX window %</span></td><td>-4.6</td><td>+0.7</td><td class="up">+5.3</td></tr><tr><td><span class="lang zh">DXY 窗口 %</span><span class="lang en">DXY window %</span></td><td>+0.9</td><td>-0.5</td><td class="down">-1.5</td></tr><tr><td><span class="lang zh">US10Y 变化 bp</span><span class="lang en">US10Y chg bp</span></td><td>-1.8</td><td>+6.4</td><td class="up">+8.2</td></tr><tr><td><span class="lang zh">GOLD 窗口 %</span><span class="lang en">GOLD window %</span></td><td>-3.2</td><td>-1.1</td><td class="up">+2.1</td></tr><tr><td><span class="lang zh">关注等级</span><span class="lang en">Attention</span></td><td>S1</td><td>S1</td><td class="">—</td></tr></tbody>
+            </table>
+          </div>
+          <p class="plain" style="padding-top:0"><span class="lang zh">传统缺数时显示 —（来源脚注见文末）。</span><span class="lang en">Missing TradFi shows — (see footnotes).</span></p>
+          <p class="plain"><a class="site-a" href="./weekly_20260824_20260830.html"><span class="lang zh">打开上周完整周报 → weekly_20260824_20260830</span><span class="lang en">Open last week → weekly_20260824_20260830</span></a></p>
+        </details>
+        <div id="sec-watches" style="padding:12px 16px 16px;border-top:1px solid color-mix(in srgb,var(--line) 80%,transparent)">
+          <h4 style="margin:0 0 8px;font-size:14px"><span class="lang zh">哨兑现</span><span class="lang en">Watch resolutions</span></h4>
+          <p class="plain"><span class="lang zh">本期无哨兑现（开放哨将在下期周报自动核对）。</span><span class="lang en">No watches resolved this week.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech">
+      <div class="block-h"><h3><span class="lang zh">关注等级说明</span><span class="lang en">Attention legend</span></h3></div>
+      <div class="card" style="padding:12px 16px"><details class="fold attn-fold"><summary><span class="lang zh">关注等级说明</span><span class="lang en">Attention levels</span></summary><table class="data attn-legend"><thead><tr><th>ID</th><th><span class="lang zh">含义</span><span class="lang en">Meaning</span></th><th><span class="lang zh">现行规则</span><span class="lang en">Current rule</span></th></tr></thead><tbody><tr><td><b>S3</b></td><td><span class="lang zh">当日优先</span><span class="lang en">Priority today</span></td><td><span class="lang zh">|BTC 窗口收益| ≥ 15%</span><span class="lang en">|BTC window return| ≥ 15%</span></td></tr><tr><td><b>S2</b></td><td><span class="lang zh">值得抬头</span><span class="lang en">Worth a look</span></td><td><span class="lang zh">|BTC 窗口收益| ≥ 8%，或与美股明显脱钩</span><span class="lang en">|BTC window return| ≥ 8%, or clear equity decoupling</span></td></tr><tr><td><b>S1</b></td><td><span class="lang zh">记一笔</span><span class="lang en">Note it</span></td><td><span class="lang zh">默认：有行情但不极端</span><span class="lang en">Default: active but not extreme</span></td></tr><tr><td><b>S0</b></td><td><span class="lang zh">可忽略</span><span class="lang en">Skip</span></td><td><span class="lang zh">|收益| &lt; 2% 且最大单日波幅 &lt; 2%</span><span class="lang en">|return| &lt; 2% and max daily |move| &lt; 2%</span></td></tr></tbody></table><p class="plain" style="padding:8px 0 0"><span class="lang zh">关注等级 = 注意力分级，不是涨跌预测，也不是买卖建议。阈值可在配置中调整。</span><span class="lang en">Attention = how much to look — not a forecast or trade advice. Thresholds are configurable.</span></p></details></div>
+    </section>
+
+    <div class="foot">
+      <div><strong><span class="lang zh">数据脚注</span><span class="lang en">Data Footnotes</span></strong></div>
+      <ul style="margin:8px 0 0 18px;padding:0">
+        <li><span class="lang zh">数据截至 as_of=2026-09-06T23:59:59Z · 生成 generated=2026-09-07T02:37:54Z</span><span class="lang en">as_of=2026-09-06T23:59:59Z · generated=2026-09-07T02:37:54Z</span></li>
+        <li><span class="lang zh">公开只读 · 无潮记/问潮观/收成哨</span><span class="lang en">Public read-only · no Notes/Q&amp;A/watch</span></li>
+        <li><span class="lang zh">标签规则 labels=label_rules_v0 · 特征 features=features_v0</span><span class="lang en">labels=label_rules_v0 · features=features_v0</span></li>
+        <li><span class="lang zh">叙事 narrative=grok-4.5 / narrative_prompt_v1</span><span class="lang en">narrative=grok-4.5 / narrative_prompt_v1</span></li>
+        <li><span class="lang zh">datahub · 加密 K 线 · market_data.daily_kline</span><span class="lang en">datahub · crypto OHLCV · market_data.daily_kline</span></li><li><span class="lang zh">datahub · 加密未平仓 · market_data.open_interest</span><span class="lang en">datahub · crypto OI · market_data.open_interest</span></li><li><span class="lang zh">datahub · 加密清算 · market_data.liquidation</span><span class="lang en">datahub · crypto liquidation · market_data.liquidation</span></li><li><span class="lang zh">datahub · 加密资金费率 · market_data.contract_quote</span><span class="lang en">datahub · crypto funding · market_data.contract_quote</span></li><li><span class="lang zh">yahoo · 传统市场包 · ES=F,NQ=F,^VIX,DX-Y.NYB,^TNX,GC=F</span><span class="lang en">yahoo · tradfi bundle · ES=F,NQ=F,^VIX,DX-Y.NYB,^TNX,GC=F</span></li><li><span class="lang zh">datahub · 加密 IV 指数 · market_data.option_volatility_kline</span><span class="lang en">datahub · crypto IV index · market_data.option_volatility_kline</span></li><li><span class="lang zh">bykaranteli · etf_spot_net_flow · https://bykaranteli.com/api/v1/public/datasets/etf-flows.csv</span><span class="lang en">bykaranteli · etf_spot_net_flow · https://bykaranteli.com/api/v1/public/datasets/etf-flows.csv</span></li>
+        <li><span class="lang zh">传统若 provider=yahoo，则非 Datahub。若见 rate_limit / fill，表示 Yahoo 限频后按标的从缓存补洞，不是「没有行情」。</span><span class="lang en">TradFi via Yahoo is not Datahub. rate_limit/fill = per-ticker hole-fill after Yahoo limits — not “no market”.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  
+<script type="application/json" id="tw-data">{"spot": [["2026-08-30", 78230.0, 79400.0, 77000.0, 77682.0, 9085.42405, 712506539.5644648], ["2026-08-31", 77682.0, 79250.0, 77392.0, 78581.29, 15303.90602, 1198158182.2374198], ["2026-09-01", 78581.3, 79220.61, 76420.0, 77439.0, 14130.63949, 1101387276.6513293], ["2026-09-02", 77439.01, 77792.0, 76264.0, 77340.01, 13070.9782, 1008333112.5875232], ["2026-09-03", 77340.01, 82300.0, 76968.0, 81270.37, 19806.42247, 1579639079.847165], ["2026-09-04", 81270.37, 81427.75, 78660.0, 79660.77, 19198.62549, 1538393292.4845457], ["2026-09-05", 79660.77, 80200.0, 79442.0, 79831.75, 9117.2402, 727162100.1671113], ["2026-09-06", 79831.75, 80559.99, 79233.0, 80341.83, 8854.81827, 707422224.4650549]], "eth": [["2026-08-30", 2416.88], ["2026-08-31", 2467.65], ["2026-09-01", 2418.57], ["2026-09-02", 2391.92], ["2026-09-03", 2507.51], ["2026-09-04", 2455.85], ["2026-09-05", 2480.34], ["2026-09-06", 2514.48]], "fundingPct": [["2026-08-30", 0.007281], ["2026-08-31", 0.008502], ["2026-09-01", 0.007995], ["2026-09-02", 0.007195], ["2026-09-03", 0.008539], ["2026-09-04", 0.001014], ["2026-09-05", 0.0035700000000000003], ["2026-09-06", 0.002883]], "fundingAnn": [["2026-08-30", 7.97], ["2026-08-31", 9.31], ["2026-09-01", 8.75], ["2026-09-02", 7.88], ["2026-09-03", 9.35], ["2026-09-04", 1.11], ["2026-09-05", 3.91], ["2026-09-06", 3.16]], "fundingPeriodsPerYear": 1095.0, "oi": [["2026-08-30", 106340.905], ["2026-08-31", 108003.454], ["2026-09-01", 108318.0], ["2026-09-02", 107671.06], ["2026-09-03", 112737.102], ["2026-09-04", 107932.455], ["2026-09-05", 106272.312], ["2026-09-06", 105564.709]], "liq": [["2026-08-30", 702, 40.262, 63.44300000000001, 103.70500000000006], ["2026-08-31", 886, 44.73100000000004, 28.642000000000017, 73.37300000000015], ["2026-09-01", 1070, 27.29100000000001, 92.05500000000004, 119.34600000000012], ["2026-09-02", 1039, 35.562000000000026, 51.24499999999995, 86.80700000000024], ["2026-09-03", 1619, 263.32, 31.483999999999988, 294.8039999999994], ["2026-09-04", 1076, 41.56600000000002, 92.629, 134.19500000000022], ["2026-09-05", 366, 17.265999999999995, 7.858, 25.12400000000002], ["2026-09-06", 516, 23.460000000000026, 13.272999999999987, 36.733000000000025]], "perpTurnover": [["2026-08-31", 10135558245.91], ["2026-09-01", 11776717838.4], ["2026-09-02", 10953865065.03], ["2026-09-03", 19112047796.15], ["2026-09-04", 15610664657.88], ["2026-09-05", 3804025089.62], ["2026-09-06", 4895529507.87]], "spotTurnover": [["2026-08-31", 1198158182.24], ["2026-09-01", 1101387276.65], ["2026-09-02", 1008333112.59], ["2026-09-03", 1579639079.85], ["2026-09-04", 1538393292.48], ["2026-09-05", 727162100.17], ["2026-09-06", 707422224.47]], "es": [["2026-08-31", 7699.0], ["2026-09-01", 7642.75], ["2026-09-02", 7676.5], ["2026-09-03", 7754.75], ["2026-09-04", 7722.0]], "nq": [["2026-08-31", 29513.0], ["2026-09-01", 29125.5], ["2026-09-02", 29186.25], ["2026-09-03", 29524.75], ["2026-09-04", 29565.25]], "gold": [["2026-08-31", 4431.10009765625], ["2026-09-01", 4348.0], ["2026-09-02", 4366.2998046875], ["2026-09-03", 4491.7001953125], ["2026-09-04", 4429.7998046875]], "dxy": [["2026-08-31", 99.43000030517578], ["2026-09-01", 99.66999816894531], ["2026-09-02", 99.55999755859375], ["2026-09-03", 99.0], ["2026-09-04", 99.16000366210938]], "btcIv": [["2026-08-30", 36.99], ["2026-08-31", 37.63], ["2026-09-01", 37.93], ["2026-09-02", 37.19], ["2026-09-03", 39.78], ["2026-09-04", 37.96], ["2026-09-05", 38.66], ["2026-09-06", 39.32]], "ethIv": [["2026-08-30", 51.76], ["2026-08-31", 51.31], ["2026-09-01", 51.83], ["2026-09-02", 50.92], ["2026-09-03", 53.28], ["2026-09-04", 51.09], ["2026-09-05", 51.72], ["2026-09-06", 53.19]], "ivRvBars": {"labels": ["BTC", "ETH"], "iv": [39.32, 53.19], "rv": [43.35, 47.32]}, "etfBtc": [["2026-08-31", 216702053.0, 54847301600.0], ["2026-09-01", -236463473.0, 54610838127.0], ["2026-09-02", 101146706.0, 54711984833.0], ["2026-09-03", 730872481.0, 55442857314.0], ["2026-09-04", 174595324.0, 55617452638.0]], "etfEth": [["2026-08-31", 87679883.0, 13062189058.0], ["2026-09-01", 10952798.0, 13073141857.0], ["2026-09-02", -48076369.0, 13025065488.0], ["2026-09-03", 141387952.0, 13166453439.0], ["2026-09-04", 26461271.0, 13192914710.0]]}</script>
+<script type="application/json" id="tw-meta">{"report_id": "weekly_20260831_20260906", "theme_default": "paper", "lang_default": "zh", "qa_api_base": "", "section_prompts": {"leverage": ["本周 funding 与 OI 如何合读？", "清算 BUY/SELL 侧不对称说明什么？（side 语义未最终确认）"], "vol": ["本周 IV−RV 是贵是便宜？", "IV 与滚动 RV 走势是否同向？"], "strategy": ["为何趋势跟踪 match 或不 match？"]}, "label_coach": true, "tide_notes_enabled": false, "public_mode": true}</script>
+<script>
+
+(() => {
+  const body = document.body;
+  const THEME_IDS = ['paper','mist','ink','forest','rose','slate','graphite','ocean'];
+  const data = JSON.parse(document.getElementById('tw-data').textContent);
+  const meta = JSON.parse(document.getElementById('tw-meta').textContent);
+
+  function cssVar(n){ return getComputedStyle(body).getPropertyValue(n).trim(); }
+  function hexAlpha(hex,a){
+    hex=String(hex||'').replace('#','').trim();
+    if(hex.length===3) hex=hex.split('').map(c=>c+c).join('');
+    if(hex.length!==6) return hex;
+    const r=parseInt(hex.slice(0,2),16),g=parseInt(hex.slice(2,4),16),b=parseInt(hex.slice(4,6),16);
+    return `rgba(${r},${g},${b},${a})`;
+  }
+  function tc(){ return {
+    c1:cssVar('--chart-1')||'#0f766e', c2:cssVar('--chart-2')||'#b45309', c3:cssVar('--chart-3')||'#be123c',
+    c4:cssVar('--chart-4')||'#1d4ed8', c5:cssVar('--chart-5')||'#78716c',
+    muted:cssVar('--muted')||'#57534e', dim:cssVar('--dim')||'#78716c', line:cssVar('--line')||'rgba(0,0,0,.1)'
+  };}
+
+  document.getElementById('layerSeg').addEventListener('click', e => {
+    const btn=e.target.closest('button[data-layer]'); if(!btn) return;
+    e.currentTarget.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const layer=btn.dataset.layer;
+    body.classList.remove('layer-l0','layer-plain','layer-tech','layer-all');
+    body.classList.add(layer==='all'?'layer-all':('layer-'+layer));
+  });
+
+  // table
+  const tb=document.querySelector('#tblSpot tbody');
+  if(tb && data.spot){
+    let prev=null;
+    data.spot.forEach(r=>{
+      const ret=prev==null?null:(r[4]/prev-1)*100;
+      const tr=document.createElement('tr');
+      const cls=ret==null?'':(ret>=0?'up':'down');
+      const txt=ret==null?'—':((ret>=0?'+':'')+ret.toFixed(2)+'%');
+      const f=x=>Number(x).toLocaleString('en-US',{maximumFractionDigits:1});
+      tr.innerHTML=`<td>${String(r[0]).slice(5)}</td><td>${f(r[1])}</td><td>${f(r[2])}</td><td>${f(r[3])}</td><td>${f(r[4])}</td><td class="${cls}">${txt}</td><td>${f(r[5])}</td>`;
+      tb.appendChild(tr); prev=r[4];
+    });
+  }
+
+  const charts={};
+  function destroy(){ Object.values(charts).forEach(c=>{try{c.destroy()}catch(_){}}); Object.keys(charts).forEach(k=>delete charts[k]); }
+  function norm(rows){ if(!rows||!rows.length) return []; const b=rows[0][1]; return rows.map(r=>100*r[1]/b); }
+
+  // Click legend = solo that series; click same again = show all (same as dashboard)
+  function legendClickSolo(e, legendItem, legend) {
+    const chart = legend.chart;
+    const idx = legendItem.datasetIndex;
+    if (chart.data.datasets.length <= 1) return;
+    const onlyThis = chart.data.datasets.every((_, i) => {
+      const m = chart.getDatasetMeta(i);
+      const hidden = m.hidden === true || (m.hidden === null && chart.data.datasets[i].hidden === true);
+      return i === idx ? !hidden : hidden;
+    });
+    chart.data.datasets.forEach((_, i) => {
+      chart.getDatasetMeta(i).hidden = onlyThis ? false : (i !== idx);
+    });
+    chart.update();
+  }
+  function leg(t){ return {display:true, labels:{boxWidth:12, color:t.muted}, onClick: legendClickSolo}; }
+
+  function buildCharts(){
+    if(typeof Chart==='undefined') return;
+    destroy();
+    const t=tc();
+    Chart.defaults.color=t.muted; Chart.defaults.borderColor=t.line;
+    const ticks={color:t.muted,font:{size:11}};
+    const gx={display:false}, gy={color:t.line};
+    const lab=a=>(a||[]).map(r=>String(r[0]).slice(5));
+
+    const langNow = () => (body.getAttribute('data-lang')==='en' ? 'en' : 'zh');
+    const L = (zh,en) => langNow()==='en' ? en : zh;
+
+    if(document.getElementById('chartPrice') && data.spot){
+      const hasEth = data.eth && data.eth.length;
+      const ds = [{
+        label:L('BTC 现货','BTC Spot'), data:data.spot.map(r=>r[4]), borderColor:t.c1,
+        backgroundColor:hexAlpha(t.c1,.12), fill:true, tension:.25, pointRadius:3, yAxisID:'y'
+      }];
+      if(hasEth){
+        // align ETH to BTC dates where possible
+        const em={}; (data.eth||[]).forEach(r=>{ em[String(r[0]).slice(0,10)]=r[1]; em[String(r[0]).slice(5)]=r[1]; });
+        ds.push({
+          label:L('ETH 现货','ETH Spot'), data:data.spot.map(r=> em[String(r[0]).slice(0,10)] ?? em[String(r[0]).slice(5)] ?? null),
+          borderColor:t.c2, backgroundColor:hexAlpha(t.c2,.08), fill:false, tension:.25, pointRadius:3, yAxisID:'y1'
+        });
+      }
+      charts.p=new Chart(document.getElementById('chartPrice'),{type:'line',data:{labels:lab(data.spot),datasets:ds},
+        options:{responsive:true,maintainAspectRatio:false,
+          plugins:{legend:leg(t)},
+          scales:{
+            x:{grid:gx,ticks},
+            y:{position:'left',grid:gy,ticks:{...ticks,callback:v=>(v/1000).toFixed(1)+'k'}, title:{display:true,text:'BTC $',color:t.dim}},
+            y1:{position:'right',display:!!hasEth,grid:{drawOnChartArea:false},ticks:{...ticks,callback:v=>Number(v).toFixed(0)}, title:{display:!!hasEth,text:'ETH $',color:t.dim}}
+          }}});
+    }
+    if(document.getElementById('chartLiq') && data.liq){
+      charts.l=new Chart(document.getElementById('chartLiq'),{data:{labels:lab(data.liq),datasets:[
+        {type:'bar',label:L('清算笔数','Liq count'),data:data.liq.map(r=>r[1]),backgroundColor:hexAlpha(t.c3,.45),yAxisID:'y'},
+        {type:'line',label:L('BUY 侧 qty','BUY side qty'),data:data.liq.map(r=>r[2]),borderColor:t.c1,tension:.25,yAxisID:'y1',pointRadius:2},
+        {type:'line',label:L('SELL 侧 qty','SELL side qty'),data:data.liq.map(r=>r[3]),borderColor:t.c3,tension:.25,yAxisID:'y1',pointRadius:2},
+        {type:'line',label:L('合计 qty','Total qty'),data:data.liq.map(r=>r[4]),borderColor:t.c2,tension:.25,yAxisID:'y1',pointRadius:2,borderDash:[4,3]}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{position:'left',grid:gy,ticks},y1:{position:'right',grid:{drawOnChartArea:false},ticks}}}});
+    }
+    if(document.getElementById('chartOiFund') && data.oi){
+      const fundSeries = (data.fundingAnn && data.fundingAnn.length) ? data.fundingAnn : (data.fundingPct||[]);
+      const fundLabel = (data.fundingAnn && data.fundingAnn.length)
+        ? L('资金费率年化 %/年','Funding ann. %/yr')
+        : L('资金费率 %/期','Funding %/period');
+      charts.o=new Chart(document.getElementById('chartOiFund'),{data:{labels:lab(data.oi),datasets:[
+        {type:'line',label:L('OI（BTC）','OI (BTC)'),data:data.oi.map(r=>r[1]),borderColor:t.c1,tension:.25,yAxisID:'y'},
+        {type:'line',label:fundLabel,data:fundSeries.map(r=>r[1]),borderColor:t.c2,tension:.25,yAxisID:'y1'}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{position:'left',grid:gy,ticks:{...ticks,callback:v=>(v/1000).toFixed(0)+'k'}},y1:{position:'right',grid:{drawOnChartArea:false},ticks:{...ticks,callback:v=>v.toFixed(2)+'%'}}}}});
+    }
+    const usdCb = v => { const n=Number(v),a=Math.abs(n); if(a>=1e9)return (n/1e9).toFixed(1)+'B'; if(a>=1e8)return (n/1e8).toFixed(1)+'亿'; if(a>=1e6)return (n/1e6).toFixed(0)+'M'; return String(n); };
+    if(document.getElementById('chartPerpVol') && data.perpTurnover && data.perpTurnover.length){
+      charts.pv=new Chart(document.getElementById('chartPerpVol'),{type:'bar',data:{labels:lab(data.perpTurnover),datasets:[
+        {label:L('永续成交额 USD','Perp turnover USD'),data:data.perpTurnover.map(r=>r[1]),backgroundColor:hexAlpha(t.c1,.55)}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:usdCb}}}}});
+    }
+    if(document.getElementById('chartSpotVol') && data.spotTurnover && data.spotTurnover.length){
+      charts.sv=new Chart(document.getElementById('chartSpotVol'),{type:'bar',data:{labels:lab(data.spotTurnover),datasets:[
+        {label:L('现货成交额 USD','Spot turnover USD'),data:data.spotTurnover.map(r=>r[1]),backgroundColor:hexAlpha(t.c2,.55)}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:usdCb}}}}});
+    }
+    if(document.getElementById('chartTrad') && data.es && data.es.length){
+      charts.t=new Chart(document.getElementById('chartTrad'),{type:'line',data:{labels:lab(data.es),datasets:[
+        {label:'ES',data:norm(data.es),borderColor:t.c1,tension:.25,pointRadius:2},
+        {label:'NQ',data:norm(data.nq),borderColor:t.c5,tension:.25,pointRadius:2},
+        {label:'GOLD',data:norm(data.gold),borderColor:t.c2,tension:.25,pointRadius:2},
+        {label:'DXY',data:norm(data.dxy),borderColor:t.c4,tension:.25,pointRadius:2}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks}}}});
+    }
+    if(document.getElementById('chartEtf') && ((data.etfBtc&&data.etfBtc.length)||(data.etfEth&&data.etfEth.length))){
+      const base=(data.etfBtc&&data.etfBtc.length)?data.etfBtc:data.etfEth;
+      const labels=lab(base);
+      const mapNet=(rows)=>{const m={};(rows||[]).forEach(r=>{m[String(r[0]).slice(0,10)]=r[1];});return base.map(r=>m[String(r[0]).slice(0,10)]??null);};
+      const ds=[];
+      if(data.etfBtc&&data.etfBtc.length) ds.push({type:'bar',label:'BTC net',data:mapNet(data.etfBtc),backgroundColor:'rgba(15,118,110,.45)'});
+      if(data.etfEth&&data.etfEth.length) ds.push({type:'bar',label:'ETH net',data:mapNet(data.etfEth),backgroundColor:'rgba(180,83,9,.4)'});
+      charts.etf=new Chart(document.getElementById('chartEtf'),{data:{labels,datasets:ds},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:v=>{const n=Number(v),a=Math.abs(n);if(a>=1e9)return (n/1e9).toFixed(1)+'B';if(a>=1e6)return (n/1e6).toFixed(0)+'M';return String(n);}}}}}});
+    }
+    if(document.getElementById('chartIv') && data.btcIv && data.btcIv.length){
+      const ivDs=[{label:L('BTC IV（Deribit）','BTC IV (Deribit)'),data:data.btcIv.map(r=>r[1]),borderColor:t.c1,backgroundColor:hexAlpha(t.c1,.12),fill:true,tension:.25,pointRadius:3}];
+      if(data.ethIv && data.ethIv.length){
+        const em={}; data.ethIv.forEach(r=>{em[String(r[0]).slice(0,10)]=r[1]; em[String(r[0]).slice(5)]=r[1];});
+        ivDs.push({label:L('ETH IV','ETH IV'),data:data.btcIv.map(r=>em[String(r[0]).slice(0,10)]??em[String(r[0]).slice(5)]??null),borderColor:t.c2,fill:false,tension:.25,pointRadius:3});
+      }
+      charts.iv=new Chart(document.getElementById('chartIv'),{type:'line',data:{labels:lab(data.btcIv),datasets:ivDs},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},
+          scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:v=>v.toFixed(1)+'%'}}}}});
+    }
+    if(document.getElementById('chartIvRv') && data.ivRvBars){
+      const b=data.ivRvBars;
+      const labs=b.labels||['BTC'];
+      charts.ivrv=new Chart(document.getElementById('chartIvRv'),{type:'bar',data:{labels:labs,datasets:[
+        {label:L('IV 期末 %','IV end %'),data:(b.iv||[]).map(v=>v==null?null:v),backgroundColor:hexAlpha(t.c1,.7)},
+        {label:L('RV 窗口 %','RV window %'),data:(b.rv||[]).map(v=>v==null?null:v),backgroundColor:hexAlpha(t.c2,.7)}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},
+          scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:v=>v.toFixed(0)+'%'}}}}});
+    }
+  }
+
+  function applyLang(lang, persist=true){
+    if(lang!=='zh' && lang!=='en') lang='zh';
+    body.classList.remove('lang-zh','lang-en');
+    body.classList.add('lang-'+lang);
+    body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang==='zh'?'zh-CN':'en');
+    const seg=document.getElementById('langSeg');
+    if(seg){ seg.querySelectorAll('button').forEach(b=>{ b.classList.toggle('active', b.dataset.lang===lang); }); }
+    if(persist){ try{ localStorage.setItem('tidewatch-lang', lang);}catch(_){}}
+    buildCharts();
+  }
+  const langSeg=document.getElementById('langSeg');
+  if(langSeg){
+    langSeg.addEventListener('click', e=>{
+      const btn=e.target.closest('button[data-lang]'); if(!btn) return;
+      applyLang(btn.dataset.lang, true);
+    });
+  }
+
+  const sel=document.getElementById('themeSelect');
+  function applyTheme(name, persist=true){
+    if(!THEME_IDS.includes(name)) name='paper';
+    body.setAttribute('data-theme', name);
+    if(sel) sel.value=name;
+    if(persist){ try{ localStorage.setItem('tidewatch-theme', name);}catch(_){}}
+    buildCharts();
+  }
+  sel.addEventListener('change', ()=>applyTheme(sel.value,true));
+  let initial = meta.theme_default || 'paper';
+  try{ const s=localStorage.getItem('tidewatch-theme'); if(s && THEME_IDS.includes(s)) initial=s; if(s==='sand'||s==='violet') initial='paper'; }catch(_){}
+  body.setAttribute('data-theme', initial); if(sel) sel.value=initial;
+  let langInit = (meta && meta.lang_default) || 'zh';
+  try{ const s=localStorage.getItem('tidewatch-lang'); if(s==='zh'||s==='en') langInit=s; }catch(_){}
+  applyLang(langInit, false);  // also buildCharts
+
+  const knowledge=[
+    {keys:['资金费率','funding','费率','年化','8小时'],ans:'资金费率 Funding Rate 是永续多空「每一期」结算的租金，不是日费率。Binance U本位永续通常每8小时一期、一天3次。正费率通常偏多。本报告另给出按一天3次粗算的年化%/年，方便对比高低。'},
+    {keys:['oi','OI','未平仓','持仓'],ans:'OI Open Interest 是未平仓量。价涨 OI 不增，更像挤压/平仓而非仓位翻倍堆多。'},
+    {keys:['清算','强平','爆仓','liquidation'],ans:'清算 Liquidation 是保证金不足强平。峰值日见本报告杠杆图。side 语义可能未最终确认。'},
+    {keys:['脱钩','美股','ES','NQ','decoupl'],ans:'脱钩 Decoupling = 币与美股方向不一致，不能简单用股市解释币。'},
+    {keys:['隐含','IV','iv','DVOL','dvol','保险'],ans:'隐含波动率 IV = 期权市场的「保险报价」（未来会抖多厉害）。本报告主序列来自 Deribit 波动指数。IV 高只说明保险费贵，不是买卖建议。见④波动环境。'},
+    {keys:['已实现','历史波动','RV','rv','后视镜'],ans:'已实现/历史波动 RV = 后视镜：价格已经抖得有多厉害，用窗口内日收益算年化近似。与 IV 对比看 IV−RV。'},
+    {keys:['溢价','IV-RV','IV−RV','贵不贵','偏贵','偏便宜'],ans:'IV−RV（波动溢价）看保险费相对刚实现波动是贵了还是便宜了。正溢价偏贵、负值偏便宜——只描述环境，不构成期权买卖建议。数字见④节。'},
+    {keys:['VIX','恐慌'],ans:'VIX 是美股隐含波动温度计；加密 IV（DVOL 类）是币圈保险费。角色类似，数字不可混用。'},
+    {keys:['DXY','美元'],ans:'美元指数 DXY 强弱；走弱常作流动性弱背景，未必是主引擎。'},
+    {keys:['10Y','美债','利率'],ans:'十年美债收益率是利率锚；与币涨跌相反时，不是单纯降息交易。'},
+    {keys:['黄金','GOLD','gold'],ans:'黄金偏强可与币同向，但仍是不同资产逻辑。'},
+  ];
+  const thread=document.getElementById('qaThread');
+  const form=document.getElementById('qaForm');
+  const input=document.getElementById('qaInput');
+  const qaExternal=document.getElementById('qaExternal');
+  const qaSubmit=document.getElementById('qaSubmit');
+  const qaDock=document.getElementById('tidewatch-qa');
+  const qaFab=document.getElementById('qaExpand');
+  const qaModeSeg=document.getElementById('qaModeSeg');
+  const qaReviewHint=document.getElementById('qaReviewHint');
+  const qaApi = (meta.qa_api_base || '').replace(/\/$/,'');
+  let qaBusy = false;
+  let qaExternalMode = false;
+  let qaSession = null;
+  try { qaSession = sessionStorage.getItem('tidewatch-qa-session'); } catch(_){}
+  if (!qaSession) {
+    qaSession = 's_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    try { sessionStorage.setItem('tidewatch-qa-session', qaSession); } catch(_){}
+  }
+
+  function setQaCollapsed(on){
+    if(!qaDock) return;
+    qaDock.classList.toggle('collapsed', !!on);
+    if(qaFab){
+      if(on) qaFab.removeAttribute('hidden');
+      else qaFab.setAttribute('hidden','');
+    }
+    try{ localStorage.setItem('tidewatch-qa-collapsed', on ? '1' : '0'); }catch(_){}
+  }
+  try{
+    if(localStorage.getItem('tidewatch-qa-collapsed')==='1') setQaCollapsed(true);
+  }catch(_){}
+  document.getElementById('qaMinimize')?.addEventListener('click', ()=> setQaCollapsed(true));
+  qaFab?.addEventListener('click', ()=> {
+    setQaCollapsed(false);
+    try{ input && input.focus(); }catch(_){}
+  });
+
+  function setExternalMode(on){
+    qaExternalMode = !!on;
+    if(qaModeSeg){
+      qaModeSeg.querySelectorAll('button').forEach(b=>{
+        b.classList.toggle('active', (b.dataset.qamode==='external')===qaExternalMode || (b.dataset.qamode==='report')===!qaExternalMode);
+      });
+    }
+    if(qaExternal){
+      if(qaExternalMode) qaExternal.removeAttribute('hidden');
+      else qaExternal.setAttribute('hidden','');
+    }
+    try{ localStorage.setItem('tidewatch-qa-ext-mode', qaExternalMode ? '1' : '0'); }catch(_){}
+  }
+  try{ if(localStorage.getItem('tidewatch-qa-ext-mode')==='1') setExternalMode(true); }catch(_){}
+  qaModeSeg?.addEventListener('click', e=>{
+    const b=e.target.closest('button[data-qamode]'); if(!b) return;
+    setExternalMode(b.dataset.qamode==='external');
+  });
+
+  async function refreshDueHint(){
+    if(!qaReviewHint) return;
+    try{
+      const r = await fetch(qaApi + '/api/tide-notes/summary?report_id=' + encodeURIComponent(meta.report_id||''));
+      if(!r.ok){
+        const r2 = await fetch(qaApi + '/api/pins/due');
+        if(!r2.ok) return;
+        const d = await r2.json();
+        const n = d.due_count || 0;
+        if(n>0){
+          qaReviewHint.hidden = false;
+          const lang = body.getAttribute('data-lang')||'zh';
+          qaReviewHint.innerHTML = lang==='en'
+            ? `You have <b>${n}</b> pin(s) due · `
+            : `有 <b>${n}</b> 条收藏待复习 · `;
+        } else qaReviewHint.hidden = true;
+        return;
+      }
+      const d = await r.json();
+      const n = d.due_pins || 0;
+      const ow = d.open_watches || 0;
+      if(n>0 || ow>0){
+        qaReviewHint.hidden = false;
+        const lang = body.getAttribute('data-lang')||'zh';
+        qaReviewHint.innerHTML = lang==='en'
+          ? `Due pins <b>${n}</b> · open watches <b>${ow}</b> · `
+          : `待复习钉 <b>${n}</b> · 开放哨 <b>${ow}</b> · `;
+      } else {
+        qaReviewHint.hidden = true;
+      }
+    }catch(_){ qaReviewHint.hidden = true; }
+  }
+  refreshDueHint();
+
+  // Echo strip dismiss
+  document.getElementById('echoStrip')?.addEventListener('click', async (e)=>{
+    const btn = e.target.closest('.echo-dismiss');
+    if(!btn) return;
+    const eid = btn.dataset.echoId;
+    const row = btn.closest('.echo-row');
+    try{
+      await fetch(qaApi + '/api/tide-notes/echoes/dismiss', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ report_id: meta.report_id, echo_id: eid })
+      });
+    }catch(_){}
+    if(row) row.remove();
+    const strip = document.getElementById('echoStrip');
+    if(strip && !strip.querySelector('.echo-row')) strip.remove();
+  });
+
+  function openQaWithQuestion(q){
+    setQaCollapsed(false);
+    if(input){ input.value = q; input.focus(); }
+  }
+
+  // Section ask buttons
+  document.querySelectorAll('.sec-ask').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const q = btn.getAttribute('data-q') || '';
+      if(q) openQaWithQuestion(q);
+    });
+  });
+
+  // Label coach
+  if(meta.label_coach){
+    let coachEl = null;
+    function hideCoach(){ if(coachEl){ coachEl.remove(); coachEl=null; } }
+    document.getElementById('labelTags')?.addEventListener('click', (e)=>{
+      const tag = e.target.closest('.tag.coach');
+      if(!tag) return;
+      e.stopPropagation();
+      hideCoach();
+      const dim = tag.dataset.dim || '';
+      const id = tag.dataset.id || '';
+      const lang = body.getAttribute('data-lang')||'zh';
+      const qs = lang==='en' ? [
+        `What does label ${id||dim} mean?`,
+        `Which numbers support ${id||dim} this week?`,
+        `Did ${dim} change vs last week?`,
+      ] : [
+        `标签 ${id||dim} 的规则是什么？`,
+        `本周哪些数支撑 ${id||dim}？`,
+        `${dim} 和上周比是否跳变？`,
+      ];
+      coachEl = document.createElement('div');
+      coachEl.className = 'coach-pop';
+      coachEl.innerHTML = `<b>${lang==='en'?'Label coach':'标签教练'} · ${id||dim}</b>` +
+        qs.map(q=>`<button type="button" data-cq="${q.replace(/"/g,'&quot;')}">${q}</button>`).join('');
+      tag.style.position='relative';
+      tag.appendChild(coachEl);
+      coachEl.addEventListener('click', (ev)=>{
+        const b = ev.target.closest('button[data-cq]');
+        if(!b) return;
+        hideCoach();
+        openQaWithQuestion(b.getAttribute('data-cq'));
+      });
+    });
+    document.addEventListener('click', ()=> hideCoach());
+  }
+
+  async function createWatchFromObservation(btn){
+    const lang = body.getAttribute('data-lang')||'zh';
+    const hint = (btn.dataset.templateHint || '').trim();
+    const propZh = btn.dataset.propZh || '';
+    const propEn = btn.dataset.propEn || '';
+    const obsId = btn.dataset.watchId || '';
+    const serverHint = lang==='en'
+      ? ' Is `python -m tidewatch qa-server` running on ' + qaApi + '?'
+      : ' 请确认已运行：python -m tidewatch qa-server（' + qaApi + '）';
+    const post = async (tid) => {
+      let resp;
+      try {
+        resp = await fetch(qaApi + '/api/watches/from-observation', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({
+            report_id: meta.report_id,
+            observation_id: obsId,
+            template_id: tid || undefined,
+            proposition_zh: propZh,
+            proposition_en: propEn,
+          })
+        });
+      } catch (netErr) {
+        const e = new Error((lang==='en'?'Cannot reach QA server.':'连不上问答服务。') + serverHint);
+        e.cause = netErr;
+        throw e;
+      }
+      let data;
+      try { data = await resp.json(); } catch (_) {
+        throw new Error((lang==='en'?'Bad response from QA server.':'问答服务返回异常。') + ' HTTP ' + resp.status + serverHint);
+      }
+      // 业务错误（unknown_template 等）返回 data 让调用方回退；网络/非 JSON 才 throw
+      return data;
+    };
+    try{
+      // 1) 有 hint：先试模板；失败则 2) 仅观察点正文；再失败才弹模板选择
+      if(hint){
+        const data = await post(hint);
+        if(data && data.ok){
+          btn.classList.add('on');
+          btn.disabled = true;
+          alert(lang==='en'?'Watch created from observation':'已从观察点收成哨');
+          refreshDueHint();
+          return;
+        }
+        console.warn('from-observation hint failed', data);
+      }
+      if(propZh){
+        const data2 = await post(undefined);
+        if(data2 && data2.ok){
+          btn.classList.add('on');
+          btn.disabled = true;
+          alert(lang==='en'?'Watch created from observation':'已从观察点收成哨');
+          refreshDueHint();
+          return;
+        }
+        console.warn('from-observation prop-only failed', data2);
+      }
+      const bg = document.createElement('div');
+      bg.className = 'watch-modal-bg';
+      bg.innerHTML = `<div class="watch-modal" role="dialog">
+        <h4>${lang==='en'?'Link rule for this observation':'为这条观察点选择核对规则'}</h4>
+        <p style="font-size:12px;color:var(--muted);margin:0 0 10px">${propZh || propEn}</p>
+        <div class="tpl-list"><p style="font-size:12px">Loading…</p></div>
+        <div class="row"><button type="button" class="ghost" data-x="1">${lang==='en'?'Cancel':'取消'}</button></div>
+      </div>`;
+      document.body.appendChild(bg);
+      const close = ()=> bg.remove();
+      bg.addEventListener('click', e=>{ if(e.target===bg || e.target.closest('[data-x]')) close(); });
+      const box = bg.querySelector('.tpl-list');
+      let d;
+      try {
+        const tr = await fetch(qaApi + '/api/watches/templates?report_id=' + encodeURIComponent(meta.report_id||''));
+        d = await tr.json();
+      } catch (netErr) {
+        box.innerHTML = '<p style="color:#b91c1c;font-size:13px">' +
+          (lang==='en'?'Cannot load templates.':'无法加载规则模板。') + serverHint + '</p>';
+        return;
+      }
+      const tpls = d.templates || [];
+      if(!tpls.length){
+        box.innerHTML = '<p style="font-size:13px">' +
+          (lang==='en'?'No templates — restart qa-server':'无模板 — 请重启 qa-server') + '</p>';
+        return;
+      }
+      box.innerHTML = tpls.map(t=>`<button type="button" class="tpl" data-tid="${t.template_id}">
+        <b>${(lang==='en'?(t.proposition_en||t.proposition_zh):t.proposition_zh)||t.template_id}</b>
+        <span style="font-size:11px;opacity:.7">${t.template_id}</span>
+      </button>`).join('');
+      box.querySelectorAll('.tpl').forEach(tb=>{
+        tb.addEventListener('click', async ()=>{
+          try{
+            const data = await post(tb.dataset.tid);
+            if(data.ok){
+              close();
+              btn.classList.add('on');
+              btn.disabled = true;
+              alert(lang==='en'?'Watch created':'已加入开放哨');
+              refreshDueHint();
+            } else alert(data.error||'failed');
+          }catch(err){ alert((lang==='en')?'Failed: ':'失败：') + (err && err.message ? err.message : err); }
+        });
+      });
+    }catch(err){
+      alert((lang==='en')?'Watch failed: ':'收成哨失败：') + (err && err.message ? err.message : err);
+    }
+  }
+  document.querySelectorAll('.obs-watch-btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{ e.preventDefault(); createWatchFromObservation(btn); });
+  });
+
+  const ICON_COPY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+  const ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+
+  async function copyText(text, btn){
+    const t = String(text || '');
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) await navigator.clipboard.writeText(t);
+      else {
+        const ta=document.createElement('textarea');
+        ta.value=t; ta.style.position='fixed'; ta.style.left='-9999px';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+      }
+      if (btn) {
+        btn.classList.add('copied');
+        btn.innerHTML = ICON_CHECK;
+        btn.title = (body.getAttribute('data-lang')==='en') ? 'Copied' : '已复制';
+        setTimeout(()=>{ btn.classList.remove('copied'); btn.innerHTML=ICON_COPY; btn.title=(body.getAttribute('data-lang')==='en')?'Copy':'复制'; }, 1500);
+      }
+    } catch (err) {
+      alert('复制失败：' + err);
+    }
+  }
+
+  function makeCopyBtn(text, titleZh, titleEn){
+    const btn=document.createElement('button');
+    btn.type='button';
+    btn.className='qa-icon-btn';
+    btn.title = (body.getAttribute('data-lang')==='en') ? (titleEn||'Copy') : (titleZh||'复制');
+    btn.setAttribute('aria-label', btn.title);
+    btn.innerHTML = ICON_COPY;
+    btn.addEventListener('click', (e)=>{ e.stopPropagation(); copyText(text, btn); });
+    return btn;
+  }
+
+  function add(role, text, tag, pinPayload){
+    const d=document.createElement('div');
+    d.className='msg '+role;
+    const prefix = role==='user' ? '你：' : '潮观：';
+    const bodyText = String(text || '');
+    d.appendChild(document.createTextNode(prefix + bodyText));
+
+    const actions=document.createElement('div');
+    actions.className='qa-msg-actions';
+    // Gemini-like: copy question / copy answer
+    if (role==='user') {
+      actions.appendChild(makeCopyBtn(bodyText, '复制问题', 'Copy question'));
+      const reuse=document.createElement('button');
+      reuse.type='button';
+      reuse.className='qa-icon-btn';
+      reuse.title=(body.getAttribute('data-lang')==='en')?'Use again':'再次提问';
+      reuse.setAttribute('aria-label', reuse.title);
+      reuse.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 3 3 12 12 12"/></svg>';
+      reuse.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        if(input){ input.value = bodyText; input.focus(); }
+        setQaCollapsed(false);
+      });
+      actions.appendChild(reuse);
+    } else if (role==='bot') {
+      actions.appendChild(makeCopyBtn(bodyText, '复制回答', 'Copy answer'));
+    }
+
+    if (tag || (pinPayload && pinPayload.pinnable)) {
+      if(tag){ const t=document.createElement('span'); t.style.cssText='font-size:10px;opacity:.65;margin-right:4px'; t.textContent=tag; actions.appendChild(t); }
+      if(pinPayload && pinPayload.pinnable!==false && role==='bot'){
+        const star=document.createElement('button');
+        star.type='button';
+        star.className='qa-pin';
+        star.title=(body.getAttribute('data-lang')==='en')?'Pin to Tide Notes':'收藏到潮记';
+        star.textContent='☆';
+        star.addEventListener('click', async ()=>{
+          if(star.classList.contains('on')) return;
+          try{
+            const resp=await fetch(qaApi+'/api/pins',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(pinPayload)});
+            const data=await resp.json();
+            if(data.ok){ star.textContent='★'; star.classList.add('on'); refreshDueHint(); }
+            else alert(data.error||'收藏失败');
+          }catch(err){ alert('收藏失败：'+err); }
+        });
+        actions.appendChild(star);
+        // 收成哨仅在周报观察点；问答只保留 ☆钉
+      }
+    }
+    if (actions.childNodes.length) d.appendChild(actions);
+    thread.appendChild(d);
+    thread.scrollTop=thread.scrollHeight;
+    return d;
+  }
+  function addThinking(){
+    const d=document.createElement('div');
+    d.className='msg bot thinking';
+    d.id='qaThinking';
+    const lang = body.getAttribute('data-lang') || 'zh';
+    const label = lang==='en' ? 'Thinking' : '思考中';
+    d.innerHTML = '<div class="qa-thinking"><span class="qa-orb" aria-hidden="true"></span>'
+      + '<span class="qa-thinking-label">'+label+'</span>'
+      + '<span class="qa-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>';
+    thread.appendChild(d);
+    thread.scrollTop=thread.scrollHeight;
+    return d;
+  }
+  function removeThinking(){
+    const el=document.getElementById('qaThinking');
+    if(el) el.remove();
+  }
+  function localAns(q){
+    const h=knowledge.find(k=>k.keys.some(x=>q.toLowerCase().includes(x.toLowerCase())));
+    return h ? h.ans + '（离线词库）' : '离线词库未覆盖，且 LLM 未接通。请先运行：python -m tidewatch qa-server';
+  }
+  function modeTag(mode){
+    if(mode==='grounded') return '本报告 · grounded';
+    if(mode==='general') return '通识 · general';
+    if(mode==='external_echo') return '外部对照 · external';
+    if(mode==='refuse') return '拒答 · refuse';
+    if(mode==='error') return '错误 · error';
+    return mode || '';
+  }
+  async function sendQa(){
+    if(qaBusy) return;
+    const q=input.value.trim();
+    const ext = (qaExternal && !qaExternal.hidden) ? qaExternal.value.trim() : '';
+    if(!q && !ext) return;
+    add('user', q || '(外部材料对照)');
+    input.value='';
+    qaBusy = true;
+    if(qaSubmit) qaSubmit.disabled = true;
+    addThinking();
+    const lang = body.getAttribute('data-lang') || 'zh';
+    const layer = (body.className.match(/layer-(\w+)/)||[])[1] || 'plain';
+    try {
+      const resp = await fetch(qaApi + '/api/report-qa', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          report_id: meta.report_id,
+          question: q,
+          external_mode: qaExternalMode,
+          external_material: ext || undefined,
+          session_id: qaSession,
+          ui_layer: layer,
+          lang: lang,
+        }),
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      removeThinking();
+      if(data.hint){
+        const h=document.createElement('div');
+        h.className='msg bot';
+        h.style.opacity='.8';
+        h.textContent='提示：'+data.hint;
+        thread.appendChild(h);
+      }
+      add('bot', data.answer_md || '(空回复)', modeTag(data.mode) + (data.model ? ' · ' + data.model : ''), {
+        question: q || '(外部材料对照)',
+        answer_md: data.answer_md,
+        report_id: meta.report_id,
+        mode: data.mode,
+        model: data.model,
+        tags: data.suggested_tags,
+        terms_taught: data.terms_taught,
+        pinnable: data.pinnable !== false && data.mode !== 'refuse' && data.mode !== 'error',
+      });
+      if(typeof data.due_count==='number' && qaReviewHint){
+        if(data.due_count>0){
+          qaReviewHint.hidden=false;
+          qaReviewHint.innerHTML = (lang==='en'?'Due pins: ':'待复习：') + data.due_count +
+            ' · ';
+        }
+      }
+    } catch (err) {
+      removeThinking();
+      add('bot', localAns(q), '离线降级 · ' + (err && err.message ? err.message : 'fetch failed'));
+    } finally {
+      qaBusy = false;
+      if(qaSubmit) qaSubmit.disabled = false;
+    }
+  }
+  form.addEventListener('submit', e => { e.preventDefault(); sendQa(); });
+  // Enter = send; Shift+Enter = newline (main box)
+  function bindEnterSend(el){
+    el?.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendQa();
+      }
+    });
+  }
+  bindEnterSend(input);
+  bindEnterSend(qaExternal);
+  document.getElementById('qaClear').addEventListener('click',()=>{ thread.innerHTML=''; removeThinking(); });
+})();
+
+</script>
+</body>
+</html>

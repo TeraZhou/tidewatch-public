@@ -1,0 +1,341 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-02",
+  "date_effective": "2026-09-02",
+  "as_of": "2026-09-02T07:14:56Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-02",
+    "prior_date": "2026-09-01",
+    "btc_ret_1d": 0.034,
+    "eth_ret_1d": 0.062,
+    "oi_qty": 109099.319,
+    "oi_chg_pct": 0.721,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.03%（小区间） · ETH +0.06% · OI 日变 +0.72%",
+    "weather_en": "Weather: BTC +0.03% · ETH +0.06% · OI +0.72% d/d",
+    "text_zh": "近况：BTC +0.03%（小区间） · ETH +0.06% · OI 日变 +0.72%",
+    "text_en": "Weather: BTC +0.03% · ETH +0.06% · OI +0.72% d/d"
+  },
+  "slots": {
+    "external": {
+      "kind": "pre_window",
+      "event": {
+        "id": "bls_nfp_2026_09",
+        "date": "2026-09-04",
+        "name_zh": "非农就业（2026-08）",
+        "name_en": "Employment Situation (Aug 2026)",
+        "source": "bls",
+        "series": "empsit",
+        "level": "high"
+      },
+      "badge_zh": "临近·还有2天",
+      "badge_en": "Pre · 2d left",
+      "phase": "pre",
+      "headline_zh": "就业成绩单 · 还有2天",
+      "headline_en": "Employment Situation (Aug 2026)",
+      "lead_zh": "美国每月公布：招工热不热、失业率、工资。 还没对答案，先看临近几天盘面安不安静。",
+      "station_zh": "临近·还有2天",
+      "part1_zh": null,
+      "part2_zh": null,
+      "part3_zh": null,
+      "part4_zh": null,
+      "post_brief_zh": "倒数 2 天。这是啥：美国每月公布：招工热不热、失业率、工资。 到那天看啥：非农人数、失业率、时薪；注意修订很大。 临近追踪：最近一天币价几乎没动；怕不怕指数在升；这几天程序没亮「异常灯」；距公布/开会还有 2 天。还没有官方成绩单数字；下面表只有已经过的日子。",
+      "post_deep_zh": "通常故事线（预习，不是预测涨跌）：就业冷热会改写「经济过不过热、利息还要不要一直紧」。美元和股指情绪常同日重定价；加密仍多在间接层。",
+      "post_reaction_zh": "最近一天币价几乎没动；怕不怕指数在升；这几天程序没亮「异常灯」；距公布/开会还有 2 天",
+      "text_zh": "倒数 2 天。这是啥：美国每月公布：招工热不热、失业率、工资。 到那天看啥：非农人数、失业率、时薪；注意修订很大。 临近追踪：最近一天币价几乎没动；怕不怕指数在升；这几天程序没亮「异常灯」；距公布/开会还有 2 天。还没有官方成绩单数字；下面表只有已经过的日子。",
+      "text_en": null,
+      "has_official_result": false,
+      "result_status": "none",
+      "result_block": null,
+      "reaction": {
+        "schema": "tidewatch_pre_window_v1",
+        "kind": "pre",
+        "event_id": "bls_nfp_2026_09",
+        "event_date": "2026-09-04",
+        "digest_day": "2026-09-02",
+        "offset": -2,
+        "days_left": 2,
+        "window_days": 3,
+        "as_of_today": true,
+        "name_zh": "非农就业（2026-08）",
+        "name_en": "Employment Situation (Aug 2026)",
+        "series": "empsit",
+        "story": {
+          "title_zh": "就业成绩单",
+          "one_liner_zh": "美国每月公布：招工热不热、失业率、工资。",
+          "rope_zh": "就业绳",
+          "path_zh": "就业冷热会改写「经济过不过热、利息还要不要一直紧」。美元和股指情绪常同日重定价；加密仍多在间接层。",
+          "watch_zh": "非农人数、失业率、时薪；注意修订很大。"
+        },
+        "result_ok": false,
+        "rows": [
+          {
+            "date": "2026-09-01",
+            "offset": -3,
+            "label": "T-3",
+            "btc_ret_1d": -1.454,
+            "eth_ret_1d": -1.989,
+            "oi_chg_pct": 0.291,
+            "funding_ann_pct": 8.7545,
+            "funding_ann_chg_pp": -0.555,
+            "es_ret_1d": -0.773,
+            "nq_ret_1d": -1.492,
+            "vix_ret_1d": 9.517,
+            "dxy_ret_1d": 0.333,
+            "fired_ids": [],
+            "has_driver": false,
+            "weather_zh": "近况：BTC -1.45%（小区间） · ETH -1.99% · OI 日变 +0.29%",
+            "errors": []
+          },
+          {
+            "date": "2026-09-02",
+            "offset": -2,
+            "label": "T-2",
+            "btc_ret_1d": 0.034,
+            "eth_ret_1d": 0.062,
+            "oi_chg_pct": 0.721,
+            "funding_ann_pct": 10.281,
+            "funding_ann_chg_pp": 1.527,
+            "es_ret_1d": -0.773,
+            "nq_ret_1d": -1.492,
+            "vix_ret_1d": 9.517,
+            "dxy_ret_1d": 0.333,
+            "fired_ids": [],
+            "has_driver": false,
+            "weather_zh": "近况：BTC +0.03%（小区间） · ETH +0.06% · OI 日变 +0.72%",
+            "errors": []
+          }
+        ],
+        "headers_plain": [
+          {
+            "key": "btc_ret_1d",
+            "name_zh": "比特币一天",
+            "what_zh": "币价当天动了多少。"
+          },
+          {
+            "key": "eth_ret_1d",
+            "name_zh": "以太坊一天",
+            "what_zh": "ETH 当天动了多少。"
+          },
+          {
+            "key": "oi_chg_pct",
+            "name_zh": "杠杆仓位存量",
+            "what_zh": "衍生品总持仓变了多少；偏加/减杠杆的存量信号，不是涨跌原因本身。"
+          },
+          {
+            "key": "es_ret_1d",
+            "name_zh": "美股大盘（期货）",
+            "what_zh": "标普相关期货当天方向，看传统风险偏好。"
+          },
+          {
+            "key": "nq_ret_1d",
+            "name_zh": "美股科技（期货）",
+            "what_zh": "纳指相关期货当天方向。"
+          },
+          {
+            "key": "vix_ret_1d",
+            "name_zh": "怕不怕指数",
+            "what_zh": "VIX：美股保险贵不贵，常当恐慌温度计。"
+          },
+          {
+            "key": "dxy_ret_1d",
+            "name_zh": "美元强弱",
+            "what_zh": "美元指数方向；偏强时全球风险资产有时更难受。"
+          },
+          {
+            "key": "fired",
+            "name_zh": "程序异常灯",
+            "what_zh": "潮观规则是否触发「驱动」异常（独立读，不自动=宏观因果）。"
+          }
+        ],
+        "plain_zh": "最近一天币价几乎没动；怕不怕指数在升；这几天程序没亮「异常灯」；距公布/开会还有 2 天",
+        "finger_zh": "最近一天币价几乎没动；怕不怕指数在升；这几天程序没亮「异常灯」；距公布/开会还有 2 天",
+        "badge_zh": "临近·还有2天",
+        "badge_en": "Pre · 2d left",
+        "headline_zh": "就业成绩单 · 还有2天",
+        "pin_href": "daily_20260904.html",
+        "rules": {
+          "no_attribution": true,
+          "no_future_rows": true,
+          "pre_result": true
+        }
+      },
+      "card": {
+        "event_id": "bls_nfp_2026_09",
+        "date": "2026-09-04",
+        "name_zh": "非农就业（2026-08）",
+        "phase": "pre",
+        "phase_label_zh": "临近·还有2天",
+        "has_official_result": false,
+        "result_block": null,
+        "reaction": {
+          "schema": "tidewatch_pre_window_v1",
+          "kind": "pre",
+          "event_id": "bls_nfp_2026_09",
+          "event_date": "2026-09-04",
+          "digest_day": "2026-09-02",
+          "offset": -2,
+          "days_left": 2,
+          "window_days": 3,
+          "as_of_today": true,
+          "name_zh": "非农就业（2026-08）",
+          "name_en": "Employment Situation (Aug 2026)",
+          "series": "empsit",
+          "story": {
+            "title_zh": "就业成绩单",
+            "one_liner_zh": "美国每月公布：招工热不热、失业率、工资。",
+            "rope_zh": "就业绳",
+            "path_zh": "就业冷热会改写「经济过不过热、利息还要不要一直紧」。美元和股指情绪常同日重定价；加密仍多在间接层。",
+            "watch_zh": "非农人数、失业率、时薪；注意修订很大。"
+          },
+          "result_ok": false,
+          "rows": [
+            {
+              "date": "2026-09-01",
+              "offset": -3,
+              "label": "T-3",
+              "btc_ret_1d": -1.454,
+              "eth_ret_1d": -1.989,
+              "oi_chg_pct": 0.291,
+              "funding_ann_pct": 8.7545,
+              "funding_ann_chg_pp": -0.555,
+              "es_ret_1d": -0.773,
+              "nq_ret_1d": -1.492,
+              "vix_ret_1d": 9.517,
+              "dxy_ret_1d": 0.333,
+              "fired_ids": [],
+              "has_driver": false,
+              "weather_zh": "近况：BTC -1.45%（小区间） · ETH -1.99% · OI 日变 +0.29%",
+              "errors": []
+            },
+            {
+              "date": "2026-09-02",
+              "offset": -2,
+              "label": "T-2",
+              "btc_ret_1d": 0.034,
+              "eth_ret_1d": 0.062,
+              "oi_chg_pct": 0.721,
+              "funding_ann_pct": 10.281,
+              "funding_ann_chg_pp": 1.527,
+              "es_ret_1d": -0.773,
+              "nq_ret_1d": -1.492,
+              "vix_ret_1d": 9.517,
+              "dxy_ret_1d": 0.333,
+              "fired_ids": [],
+              "has_driver": false,
+              "weather_zh": "近况：BTC +0.03%（小区间） · ETH +0.06% · OI 日变 +0.72%",
+              "errors": []
+            }
+          ],
+          "headers_plain": [
+            {
+              "key": "btc_ret_1d",
+              "name_zh": "比特币一天",
+              "what_zh": "币价当天动了多少。"
+            },
+            {
+              "key": "eth_ret_1d",
+              "name_zh": "以太坊一天",
+              "what_zh": "ETH 当天动了多少。"
+            },
+            {
+              "key": "oi_chg_pct",
+              "name_zh": "杠杆仓位存量",
+              "what_zh": "衍生品总持仓变了多少；偏加/减杠杆的存量信号，不是涨跌原因本身。"
+            },
+            {
+              "key": "es_ret_1d",
+              "name_zh": "美股大盘（期货）",
+              "what_zh": "标普相关期货当天方向，看传统风险偏好。"
+            },
+            {
+              "key": "nq_ret_1d",
+              "name_zh": "美股科技（期货）",
+              "what_zh": "纳指相关期货当天方向。"
+            },
+            {
+              "key": "vix_ret_1d",
+              "name_zh": "怕不怕指数",
+              "what_zh": "VIX：美股保险贵不贵，常当恐慌温度计。"
+            },
+            {
+              "key": "dxy_ret_1d",
+              "name_zh": "美元强弱",
+              "what_zh": "美元指数方向；偏强时全球风险资产有时更难受。"
+            },
+            {
+              "key": "fired",
+              "name_zh": "程序异常灯",
+              "what_zh": "潮观规则是否触发「驱动」异常（独立读，不自动=宏观因果）。"
+            }
+          ],
+          "plain_zh": "还有 **2 天** 到「就业成绩单」。美国每月公布：招工热不热、失业率、工资。 最近一天币价几乎没动；怕不怕指数在升；这几天程序没亮「异常灯」；距公布/开会还有 2 天。到那天主要看：非农人数、失业率、时薪；注意修订很大。 通常故事线：就业冷热会改写「经济过不过热、利息还要不要一直紧」。美元和股指情绪常同日重定价；加密仍多在间接层。 现在只是临近追踪，还没对答案。",
+          "finger_zh": "最近一天币价几乎没动；怕不怕指数在升；这几天程序没亮「异常灯」；距公布/开会还有 2 天",
+          "badge_zh": "临近·还有2天",
+          "badge_en": "Pre · 2d left",
+          "headline_zh": "就业成绩单 · 还有2天",
+          "pin_href": "daily_20260904.html",
+          "rules": {
+            "no_attribution": true,
+            "no_future_rows": true,
+            "pre_result": true
+          }
+        },
+        "story": {
+          "title_zh": "就业成绩单",
+          "one_liner_zh": "美国每月公布：招工热不热、失业率、工资。",
+          "rope_zh": "就业绳",
+          "path_zh": "就业冷热会改写「经济过不过热、利息还要不要一直紧」。美元和股指情绪常同日重定价；加密仍多在间接层。",
+          "watch_zh": "非农人数、失业率、时薪；注意修订很大。"
+        },
+        "template_id": "empsit"
+      }
+    },
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：待复习钉 0 · 开放哨 3",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "template",
+  "narrative_model": null,
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "+0.03%",
+      "tone": "up"
+    },
+    {
+      "text": "+0.06%",
+      "tone": "up"
+    },
+    {
+      "text": "BTC",
+      "tone": "neutral"
+    },
+    {
+      "text": "ETH",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI +0.72%",
+      "tone": "up"
+    },
+    {
+      "text": "小区间",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

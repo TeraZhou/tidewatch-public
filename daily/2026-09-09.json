@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-09",
+  "date_effective": "2026-09-09",
+  "as_of": "2026-09-10T02:04:22Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-09",
+    "prior_date": "2026-09-08",
+    "btc_ret_1d": -0.19,
+    "eth_ret_1d": -0.681,
+    "oi_qty": 105094.943,
+    "oi_chg_pct": -1.456,
+    "perp_turnover_usd": 12031993145.32,
+    "perp_turnover_chg_pct": 18.05,
+    "spot_turnover_usd": 1114730666.1522026,
+    "spot_turnover_chg_pct": -26.18,
+    "btc_etf_net_usd": -46646406.0,
+    "eth_etf_net_usd": -24292140.0,
+    "etf_lookback_sum_btc_usd": -46646406.0,
+    "etf_lookback_sum_eth_usd": -24292140.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.19%（小区间） · ETH -0.68% · OI 日变 -1.46% · 永续成交额 120.32 亿美金（日变 +18.1%） · BTC ETF 净流 -46.65 百万美金",
+    "weather_en": "Weather: BTC -0.19% · ETH -0.68% · OI -1.46% d/d · perp turnover 12.03B (+18.1% d/d) · BTC ETF net -46.65M",
+    "text_zh": "近况偏平静：BTC 小区间几乎走平（-0.19%），ETH 略弱（-0.68%）。杠杆存量小幅收缩，永续成交抬升、现货更淡，ETF 继续净流出。",
+    "text_en": "Quiet session: BTC nearly flat (-0.19%), ETH softer (-0.68%). OI edged down, perp turnover rose while spot faded; ETF nets stayed negative."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 3,
+      "open_watches": 7,
+      "items": [
+        {
+          "id": "3289c0c1-05e7-43bc-a313-2dae5f5f60e8",
+          "question": "趋势跟踪类策略的特征是什么，为什么在强趋势情况下，能赚钱呢，我想知道交易员是如何利用这个环境实现收益的"
+        }
+      ],
+      "text_zh": "潮记待办：趋势跟踪在强趋势里如何兑现收益，可抽空对照近期环境。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 小区间几乎走平（-0.19%）",
+      "tone": "neutral"
+    },
+    {
+      "text": "ETH 略弱（-0.68%）",
+      "tone": "down"
+    },
+    {
+      "text": "杠杆存量小幅收缩",
+      "tone": "down"
+    },
+    {
+      "text": "永续成交额 120.32 亿美金（+18%）",
+      "tone": "up"
+    },
+    {
+      "text": "现货 11.15 亿美金（-26%）",
+      "tone": "down"
+    },
+    {
+      "text": "VIX +4.71%",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-09-08",
+    "etf_eth_using_2026-09-08"
+  ]
+}

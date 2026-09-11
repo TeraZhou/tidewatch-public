@@ -1,0 +1,297 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-20",
+  "date_effective": "2026-08-20",
+  "as_of": "2026-09-04T07:05:12Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-20",
+    "prior_date": "2026-08-19",
+    "btc_ret_1d": 5.323,
+    "eth_ret_1d": 3.286,
+    "oi_qty": 107639.105,
+    "oi_chg_pct": 0.121,
+    "perp_turnover_usd": 20683034859.6725,
+    "perp_turnover_chg_pct": -5.79,
+    "spot_turnover_usd": 2562053707.609983,
+    "spot_turnover_chg_pct": 31.07,
+    "btc_etf_net_usd": 606290506.0,
+    "eth_etf_net_usd": 220772396.0,
+    "etf_lookback_sum_btc_usd": 1610336411.0,
+    "etf_lookback_sum_eth_usd": 512246519.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +5.32% · ETH +3.29% · OI 日变 +0.12% · 永续成交额 206.83 亿美金（日变 -5.8%） · BTC ETF 净流 +6.06 亿美金",
+    "weather_en": "Weather: BTC +5.32% · ETH +3.29% · OI +0.12% d/d · perp turnover 20.68B (-5.8% d/d) · BTC ETF net +606.29M",
+    "text_zh": "BTC 单日大涨 5.32%，ETH 跟涨 3.29%；美现货 BTC ETF 净流入约 6.06 亿美金，现货成交明显放大，永续成交略缩、OI 几乎持平。美股期货走弱、VIX 上行，币股当天背离。",
+    "text_en": "BTC +5.32%, ETH +3.29%; BTC spot ETF net +~$606M, spot turnover up, perp softer and OI flat. ES/NQ down, VIX up — crypto-equity divergence."
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "ETF大流入下的急涨背离日",
+      "headline_en": "现货单日大幅波动",
+      "conclusion_zh": "【ETF大流入下的急涨背离日】比特币单日涨超 5%，美现货 ETF 净流入达到 6 亿美金量级，同时 ES/NQ 下跌、VIX 上行，形成清晰币股背离。杠杆存量几乎不动、资金费率年化回落，更像现货与 ETF 通道在发力，而非永续杠杆猛加。",
+      "conclusion_en": "BTC jumped over 5% with ~$606M BTC spot ETF net inflow, while ES/NQ fell and VIX rose — clear crypto-equity divergence. OI nearly flat and funding cooled; spot/ETF channel more visible than perp leverage expansion.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+5.32%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+3.29%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-5.14 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "5.44"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "+0.12%"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "206.83 亿美金（-6%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "25.62 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "-17.61 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-4.04 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.86%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-0.72%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "+7.52%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "price_shock_btc",
+          "value": 5.323,
+          "threshold": 5.0,
+          "direction": "up",
+          "summary_zh": "BTC 日涨跌 +5.32%（阈值 |·|≥5.0%）",
+          "summary_en": "BTC day return +5.32% (threshold 5.0%)",
+          "meta": {
+            "title_zh": "BTC 日收益冲击",
+            "title_en": "BTC day-return shock",
+            "what_zh": "比特币现货单日涨跌幅度是否大到「默认值得抬眼」。",
+            "what_en": "Whether BTC spot one-day move is large enough to flag.",
+            "how_zh": "日收益 r = (当日 Spot 日 K 收盘 ÷ 上一有 K 线日收盘 − 1)×100。当 |r| ≥ 配置阈值 price_shock_abs_pct（默认 5）时触发。",
+            "how_en": "r = (day close / prior bar close − 1)×100 on Binance Spot daily kline. Fires if |r| ≥ price_shock_abs_pct (default 5)."
+          },
+          "observed": {
+            "btc_ret_1d": 5.323,
+            "eth_ret_1d": 3.286,
+            "funding_ann_pct": 5.4356,
+            "funding_ann_chg_pp": -5.137,
+            "oi_qty": 107639.105,
+            "oi_chg_pct": 0.121,
+            "liq_vs_prior": 0.415,
+            "iv_rv_spread": -17.61,
+            "iv_rv_spread_chg_pp": -4.04,
+            "vix_ret_1d": 7.522,
+            "btc_etf_net_usd": 606290506.0,
+            "eth_etf_net_usd": 220772396.0,
+            "perp_turnover_usd": 20683034859.6725,
+            "perp_turnover_chg_pct": -5.79,
+            "spot_turnover_usd": 2562053707.609983,
+            "value": 5.323,
+            "threshold": 5.0
+          },
+          "readout_zh": "观测 BTC 日收益 5.32%，阈值 |·|≥5.00%",
+          "readout_en": "BTC day return +5.32% (threshold 5.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        },
+        {
+          "id": "etf_flow_spike",
+          "value": 606290506.0,
+          "threshold": 500000000.0,
+          "direction": "inflow",
+          "summary_zh": "BTC ETF 日净流 +6.06 亿美金",
+          "summary_en": "BTC ETF day net +606.29M",
+          "meta": {
+            "title_zh": "BTC 现货 ETF 净申赎大额日",
+            "title_en": "BTC spot ETF net-flow spike day",
+            "what_zh": "美现货 BTC ETF 合计日净流入/流出是否达到「默认值得抬眼」的金额（现货通道，不是永续杠杆）。",
+            "what_en": "Whether US spot BTC ETF aggregate daily net flow is large enough to flag (spot channel, not perp leverage).",
+            "how_zh": "取看板 series.etf_flow.BTC_NET 当日 net_usd（ByKaranteli 公开聚合，非发行人官方）。当 |net| ≥ etf_flow.spike_abs_usd（默认 5 亿美金）时触发。禁止写成「因流入所以涨跌」。",
+            "how_en": "Daily BTC_NET net_usd from cache (ByKaranteli aggregate). Fires if |net| ≥ spike_abs_usd (default $500M). No causal price attribution."
+          },
+          "observed": {
+            "btc_ret_1d": 5.323,
+            "eth_ret_1d": 3.286,
+            "funding_ann_pct": 5.4356,
+            "funding_ann_chg_pp": -5.137,
+            "oi_qty": 107639.105,
+            "oi_chg_pct": 0.121,
+            "liq_vs_prior": 0.415,
+            "iv_rv_spread": -17.61,
+            "iv_rv_spread_chg_pp": -4.04,
+            "vix_ret_1d": 7.522,
+            "btc_etf_net_usd": 606290506.0,
+            "eth_etf_net_usd": 220772396.0,
+            "perp_turnover_usd": 20683034859.6725,
+            "perp_turnover_chg_pct": -5.79,
+            "spot_turnover_usd": 2562053707.609983,
+            "value": 606290506.0,
+            "threshold": 500000000.0
+          },
+          "readout_zh": "观测 BTC ETF 日净流 +6.06 亿美金，阈值 |·|≥+5.00 亿美金",
+          "readout_en": "BTC ETF day net +606.29M",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "价格先抬眼：BTC +5.32%（触发日收益冲击阈值），ETH +3.29%。ETF 侧 BTC 日净流 +6.06 亿美金（过 5 亿抬眼线），近几日累计也不弱。OI 仅 +0.12%，永续成交额 206.83 亿美金、日变约 -5.8%，现货成交额 25.62 亿、+31%，资金费率年化约 5.44%、日变 -5.14 个百分点。传统对照：ES -0.86%、NQ -0.72%、VIX +7.52%，与 BTC 明显背离。翻译一句：这天大涨旁边是现货/ETF 通道和费率降温，不是杠杆存量狂加，也没跟美股期货同向。",
+      "read_en": "依据（程序）：\n- 观测 BTC 日收益 5.32%，阈值 |·|≥5.00%\n- 观测 BTC ETF 日净流 +6.06 亿美金，阈值 |·|≥+5.00 亿美金\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 背离（BTC +5.32% · ES -0.86%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 背离（BTC +5.32% · ES -0.86%）",
+      "tradfi_link_note_en": "BTC vs ES divergence (BTC +5.32% · ES -0.86%)",
+      "text_zh": "【ETF大流入下的急涨背离日】比特币单日涨超 5%，美现货 ETF 净流入达到 6 亿美金量级，同时 ES/NQ 下跌、VIX 上行，形成清晰币股背离。杠杆存量几乎不动、资金费率年化回落，更像现货与 ETF 通道在发力，而非永续杠杆猛加。",
+      "text_en": "BTC jumped over 5% with ~$606M BTC spot ETF net inflow, while ES/NQ fell and VIX rose — clear crypto-equity divergence. OI nearly flat and funding cooled; spot/ETF channel more visible than perp leverage expansion.",
+      "card": {
+        "date": "2026-08-20",
+        "prior_date": "2026-08-19",
+        "btc_ret_1d": 5.323,
+        "eth_ret_1d": 3.286,
+        "funding_ann_pct": 5.4356,
+        "funding_ann_chg_pp": -5.137,
+        "oi_qty": 107639.105,
+        "oi_prior_qty": 107509.38,
+        "oi_chg_pct": 0.121,
+        "liq_total": 357.35999999999694,
+        "liq_vs_prior": 0.415,
+        "perp_turnover_usd": 20683034859.6725,
+        "perp_turnover_chg_pct": -5.79,
+        "perp_turnover_display_zh": "206.83 亿美金",
+        "perp_turnover_display_en": "20.68B",
+        "spot_turnover_usd": 2562053707.609983,
+        "spot_turnover_chg_pct": 31.07,
+        "spot_turnover_display_zh": "25.62 亿美金",
+        "spot_turnover_display_en": "2.56B",
+        "iv_ann_pct": 39.44,
+        "rv_7_ann_pct": 57.0468,
+        "iv_rv_spread": -17.61,
+        "iv_rv_spread_chg_pp": -4.04,
+        "vix_ret_1d": 7.522,
+        "es_ret_1d": -0.86,
+        "nq_ret_1d": -0.719,
+        "dxy_ret_1d": 0.071,
+        "gold_ret_1d": 0.599,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-08-19",
+            "day": "2026-08-20"
+          },
+          "NQ": {
+            "prior": "2026-08-19",
+            "day": "2026-08-20"
+          },
+          "VIX": {
+            "prior": "2026-08-19",
+            "day": "2026-08-20"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 背离（BTC +5.32% · ES -0.86%）",
+        "tradfi_link_note_en": "BTC vs ES divergence (BTC +5.32% · ES -0.86%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV 是什么、和 VIX 有何区别——可对照今日 IV−RV 深负点差再展开。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 单日大涨 5.32%",
+      "tone": "up"
+    },
+    {
+      "text": "净流入约 6.06 亿美金",
+      "tone": "up"
+    },
+    {
+      "text": "币股当天背离",
+      "tone": "warn"
+    },
+    {
+      "text": "OI 几乎持平",
+      "tone": "neutral"
+    },
+    {
+      "text": "资金费率年化回落",
+      "tone": "down"
+    },
+    {
+      "text": "现货成交明显放大",
+      "tone": "up"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

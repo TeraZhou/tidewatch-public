@@ -1,0 +1,57 @@
+{
+  "schema": "tidewatch_result_card_v1",
+  "event_id": "fomc_2025_10",
+  "series": "fomc",
+  "template_id": "fomc",
+  "event_date": "2025-10-29",
+  "ok": true,
+  "status": "fetched",
+  "adapter": "fed_openmarket_http",
+  "fetched_at": "2026-09-04T08:31:13Z",
+  "source_urls": [
+    "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm"
+  ],
+  "values": {
+    "fed_funds_lower": 3.75,
+    "fed_funds_upper": 4.0,
+    "changed": true,
+    "sep_present": false,
+    "effective_date": "2025-10-30",
+    "increase_bp": 0,
+    "decrease_bp": 25,
+    "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "meeting_date": "2025-10-29"
+  },
+  "prior_values": {
+    "fed_funds_lower": 4.0,
+    "fed_funds_upper": 4.25,
+    "effective_date": "2025-09-18"
+  },
+  "revision_note": null,
+  "statement_bullets": [
+    "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. Uncertainty about the economic outlook remains elevated. The Committee is attentive to the risks to both sides of its dual mandate and judges that downside risks to employment rose in recent months.",
+    "In support of its goals and in light of the shift in the balance of risks, the Committee decided to lower the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent. In considering additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the ev…",
+    "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's…",
+    "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target r…"
+  ],
+  "last_attempt_at": "2026-09-04T08:31:13Z",
+  "attempt_n": 1,
+  "poll_attempts": null,
+  "raw_ref": {
+    "effective_date": "2025-10-30",
+    "history_n": 30,
+    "as_of_event": "2025-10-29",
+    "changed": true,
+    "statement": {
+      "ok": true,
+      "n": 4,
+      "cached": false,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251029a.htm"
+    }
+  },
+  "fixture": false,
+  "override": null,
+  "error": null
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "tidewatch_result_card_v1",
+  "event_id": "fomc_2026_12",
+  "series": "fomc",
+  "template_id": "fomc",
+  "event_date": "2026-12-09",
+  "ok": true,
+  "status": "fetched",
+  "adapter": "fed_openmarket_http",
+  "fetched_at": "2026-09-04T08:31:19Z",
+  "source_urls": [
+    "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+  ],
+  "values": {
+    "fed_funds_lower": 3.5,
+    "fed_funds_upper": 3.75,
+    "changed": false,
+    "sep_present": true,
+    "effective_date": "2025-12-11",
+    "increase_bp": 0,
+    "decrease_bp": 0,
+    "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "meeting_date": "2026-12-09"
+  },
+  "prior_values": {
+    "fed_funds_lower": 3.75,
+    "fed_funds_upper": 4.0,
+    "effective_date": "2025-10-30"
+  },
+  "revision_note": null,
+  "statement_bullets": null,
+  "last_attempt_at": "2026-09-04T08:31:19Z",
+  "attempt_n": 1,
+  "poll_attempts": null,
+  "raw_ref": {
+    "effective_date": "2025-12-11",
+    "history_n": 30,
+    "as_of_event": "2026-12-09",
+    "changed": false,
+    "statement": {
+      "ok": false,
+      "error": "fed_statement_http_404",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261209a.htm"
+    }
+  },
+  "fixture": false,
+  "override": null,
+  "error": null
+}

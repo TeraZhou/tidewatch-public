@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-07",
+  "date_effective": "2026-09-07",
+  "as_of": "2026-09-08T02:35:21Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-07",
+    "prior_date": "2026-09-06",
+    "btc_ret_1d": -1.531,
+    "eth_ret_1d": -0.967,
+    "oi_qty": 106894.082,
+    "oi_chg_pct": 1.259,
+    "perp_turnover_usd": 7515827536.5607,
+    "perp_turnover_chg_pct": 53.52,
+    "spot_turnover_usd": 839882674.5423373,
+    "spot_turnover_chg_pct": 18.72,
+    "btc_etf_net_usd": 174595324.0,
+    "eth_etf_net_usd": 26461271.0,
+    "etf_lookback_sum_btc_usd": 905467805.0,
+    "etf_lookback_sum_eth_usd": 167849223.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -1.53%（有波动、未过异常默认线） · ETH -0.97% · OI 日变 +1.26% · 永续成交额 75.16 亿美金（日变 +53.5%） · BTC ETF 净流 +1.75 亿美金",
+    "weather_en": "Weather: BTC -1.53% · ETH -0.97% · OI +1.26% d/d · perp turnover 7.52B (+53.5% d/d) · BTC ETF net +174.60M",
+    "text_zh": "BTC跌1.53%、ETH跌0.97%，波动仍在常态内。永续成交额升至75.16亿美金（+53.5%），OI小增1.26%，杠杆存量未降；BTC ETF净流入约1.75亿美金（截至9/4）。",
+    "text_en": "BTC -1.53%, ETH -0.97% within normal range. Perp turnover 7.52B (+53.5% d/d), OI +1.26%; BTC ETF net +175M as of Sep 4."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 4,
+      "open_watches": 7,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV与VIX区别等问答在列；当前约4钉、7观察。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC跌1.53%",
+      "tone": "down"
+    },
+    {
+      "text": "永续成交额升至75.16亿美金（+53.5%）",
+      "tone": "up"
+    },
+    {
+      "text": "OI小增1.26%",
+      "tone": "neutral"
+    },
+    {
+      "text": "杠杆存量未降",
+      "tone": "neutral"
+    },
+    {
+      "text": "IV−RV点差-6.35pp",
+      "tone": "warn"
+    },
+    {
+      "text": "ES几乎持平、NQ小涨",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-09-04",
+    "etf_eth_using_2026-09-04"
+  ]
+}

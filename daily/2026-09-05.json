@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-05",
+  "date_effective": "2026-09-05",
+  "as_of": "2026-09-07T02:31:46Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-05",
+    "prior_date": "2026-09-04",
+    "btc_ret_1d": 0.215,
+    "eth_ret_1d": 0.997,
+    "oi_qty": 106272.312,
+    "oi_chg_pct": -1.538,
+    "perp_turnover_usd": 3804025089.6227,
+    "perp_turnover_chg_pct": -75.63,
+    "spot_turnover_usd": 727162100.1671113,
+    "spot_turnover_chg_pct": -52.73,
+    "btc_etf_net_usd": 174595324.0,
+    "eth_etf_net_usd": 26461271.0,
+    "etf_lookback_sum_btc_usd": 770151038.0,
+    "etf_lookback_sum_eth_usd": 130725652.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.21%（小区间） · ETH +1.00% · OI 日变 -1.54% · 永续成交额 38.04 亿美金（日变 -75.6%） · BTC ETF 净流 +1.75 亿美金",
+    "weather_en": "Weather: BTC +0.21% · ETH +1.00% · OI -1.54% d/d · perp turnover 3.80B (-75.6% d/d) · BTC ETF net +174.60M",
+    "text_zh": "近况：BTC +0.21%（小区间） · ETH +1.00% · OI 日变 -1.54% · 永续成交额 38.04 亿美金（日变 -75.6%） · BTC ETF 净流 +1.75 亿美金",
+    "text_en": "Weather: BTC +0.21% · ETH +1.00% · OI -1.54% d/d · perp turnover 3.80B (-75.6% d/d) · BTC ETF net +174.60M"
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 4,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记：待复习钉 4 · 开放哨 0",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "template",
+  "narrative_model": null,
+  "llm_error": "timed out",
+  "brief_highlights": [
+    {
+      "text": "+0.21%",
+      "tone": "up"
+    },
+    {
+      "text": "+1.00%",
+      "tone": "up"
+    },
+    {
+      "text": "BTC",
+      "tone": "neutral"
+    },
+    {
+      "text": "ETH",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI -1.54%",
+      "tone": "down"
+    },
+    {
+      "text": "小区间",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-09-04",
+    "etf_eth_using_2026-09-04"
+  ]
+}

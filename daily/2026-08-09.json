@@ -1,0 +1,479 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-09",
+  "date_effective": "2026-08-09",
+  "as_of": "2026-09-03T08:12:26Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-09",
+    "prior_date": "2026-08-08",
+    "btc_ret_1d": -0.094,
+    "eth_ret_1d": -0.318,
+    "oi_qty": 107052.288,
+    "oi_chg_pct": -0.165,
+    "btc_etf_net_usd": 98845327.0,
+    "eth_etf_net_usd": 49601035.0,
+    "etf_lookback_sum_btc_usd": 471952786.0,
+    "etf_lookback_sum_eth_usd": 202609495.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.09%（小区间） · ETH -0.32% · OI 日变 -0.17% · BTC ETF 净流 +98.85 百万美金",
+    "weather_en": "Weather: BTC -0.09% · ETH -0.32% · OI -0.17% d/d · BTC ETF net +98.85M",
+    "text_zh": "近况：BTC -0.09%（小区间） · ETH -0.32% · OI 日变 -0.17% · BTC ETF 净流 +98.85 百万美金",
+    "text_en": "Weather: BTC -0.09% · ETH -0.32% · OI -0.17% d/d · BTC ETF net +98.85M"
+  },
+  "slots": {
+    "external": {
+      "kind": "pre_window",
+      "event": {
+        "id": "bls_cpi_2026_08",
+        "date": "2026-08-12",
+        "name_zh": "CPI（2026-07）",
+        "name_en": "CPI (Jul 2026)",
+        "source": "bls",
+        "series": "cpi",
+        "level": "high"
+      },
+      "badge_zh": "临近·T−3",
+      "badge_en": "Pre · T-3",
+      "phase": "pre",
+      "headline_zh": "美国 CPI · T−3",
+      "headline_en": "CPI (Jul 2026)",
+      "lead_zh": "距公布/决议 3 日；尚无官方读数。先预习机制，并追踪临近盘面。",
+      "station_zh": "临近·T−3",
+      "part1_zh": null,
+      "part2_zh": null,
+      "part3_zh": null,
+      "part4_zh": null,
+      "post_brief_zh": "倒计时 T−3。BLS 发布的消费者物价数据，是通胀与利率预期的核心输入之一。 届时重点：优先核心 CPI 同比；整体 CPI 含食品能源、波动更大。环比看短节奏，勿单月定趋势。 临近窗口：近一日 BTC 波动很小；窗口内有日触发驱动（见表「驱动」列）；距事件 T−3。",
+      "post_deep_zh": "【先预习，还没对答案】\n【假如读数偏热】物价/就业偏强 → 大家会想利息更久更紧 → 债息和美元有时更硬，股票和加密等风险资产常走「不太舒服」的剧本（加密是二传手，可脱钩）。\n【假如读数偏凉】反过来：降息/放水预期更容易起来，风险资产常更受欢迎；但若同时怕衰退，也可能先避险。\n【这条事件本身】读数公布后，市场通常重估降息/维持路径，美元与美债利率、美股风险偏好往往先动；加密资产较少被直接定价，更多经风险偏好与美元间接传导，且可能与美股脱钩。\n正式「偏热/偏凉」等公布日数字进卡再下。今天盘面只并排看。非投资建议。",
+      "post_reaction_zh": "近一日 BTC 波动很小；窗口内有日触发驱动（见表「驱动」列）；距事件 T−3",
+      "text_zh": "倒计时 T−3。BLS 发布的消费者物价数据，是通胀与利率预期的核心输入之一。 届时重点：优先核心 CPI 同比；整体 CPI 含食品能源、波动更大。环比看短节奏，勿单月定趋势。 临近窗口：近一日 BTC 波动很小；窗口内有日触发驱动（见表「驱动」列）；距事件 T−3。",
+      "text_en": null,
+      "has_official_result": false,
+      "result_status": "none",
+      "result_block": null,
+      "reaction": {
+        "schema": "tidewatch_pre_window_v1",
+        "kind": "pre",
+        "event_id": "bls_cpi_2026_08",
+        "event_date": "2026-08-12",
+        "digest_day": "2026-08-09",
+        "offset": -3,
+        "days_left": 3,
+        "window_days": 3,
+        "as_of_today": true,
+        "name_zh": "CPI（2026-07）",
+        "name_en": "CPI (Jul 2026)",
+        "series": "cpi",
+        "story": {
+          "title_zh": "美国 CPI",
+          "one_liner_zh": "BLS 发布的消费者物价数据，是通胀与利率预期的核心输入之一。",
+          "rope_zh": "通胀",
+          "path_zh": "读数公布后，市场通常重估降息/维持路径，美元与美债利率、美股风险偏好往往先动；加密资产较少被直接定价，更多经风险偏好与美元间接传导，且可能与美股脱钩。",
+          "watch_zh": "优先核心 CPI 同比；整体 CPI 含食品能源、波动更大。环比看短节奏，勿单月定趋势。"
+        },
+        "result_ok": false,
+        "rows": [
+          {
+            "date": "2026-08-09",
+            "offset": -3,
+            "label": "T-3",
+            "btc_ret_1d": -0.094,
+            "eth_ret_1d": -0.318,
+            "oi_chg_pct": -0.165,
+            "funding_ann_pct": 8.2355,
+            "funding_ann_chg_pp": 3.372,
+            "es_ret_1d": 0.582,
+            "nq_ret_1d": 1.175,
+            "vix_ret_1d": -1.65,
+            "dxy_ret_1d": -0.37,
+            "fired_ids": [
+              "liq_spike"
+            ],
+            "has_driver": true,
+            "weather_zh": "近况：BTC -0.09%（小区间） · ETH -0.32% · OI 日变 -0.17% · BTC ETF 净流 +98.85 百万美金",
+            "errors": [
+              "etf_btc_using_2026-08-07",
+              "etf_eth_using_2026-08-07"
+            ]
+          }
+        ],
+        "headers_plain": [
+          {
+            "key": "btc_ret_1d",
+            "name_zh": "BTC",
+            "what_zh": "比特币日涨跌幅。"
+          },
+          {
+            "key": "eth_ret_1d",
+            "name_zh": "ETH",
+            "what_zh": "以太坊日涨跌幅。"
+          },
+          {
+            "key": "oi_chg_pct",
+            "name_zh": "OI",
+            "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+          },
+          {
+            "key": "es_ret_1d",
+            "name_zh": "ES",
+            "what_zh": "标普期货日变，传统风险偏好参考。"
+          },
+          {
+            "key": "nq_ret_1d",
+            "name_zh": "NQ",
+            "what_zh": "纳指期货日变。"
+          },
+          {
+            "key": "vix_ret_1d",
+            "name_zh": "VIX",
+            "what_zh": "美股隐含波动；偏高常对应避险升温。"
+          },
+          {
+            "key": "dxy_ret_1d",
+            "name_zh": "DXY",
+            "what_zh": "美元指数日变。"
+          },
+          {
+            "key": "fired",
+            "name_zh": "驱动",
+            "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+          }
+        ],
+        "plain_zh": "近一日 BTC 波动很小；窗口内有日触发驱动（见表「驱动」列）；距事件 T−3",
+        "finger_zh": "近一日 BTC 波动很小；窗口内有日触发驱动（见表「驱动」列）；距事件 T−3",
+        "badge_zh": "临近·T−3",
+        "badge_en": "Pre · T-3",
+        "headline_zh": "美国 CPI · T−3",
+        "pin_href": "daily_20260812.html",
+        "rules": {
+          "no_attribution": true,
+          "no_future_rows": true,
+          "pre_result": true
+        }
+      },
+      "card": {
+        "event_id": "bls_cpi_2026_08",
+        "date": "2026-08-12",
+        "name_zh": "CPI（2026-07）",
+        "phase": "pre",
+        "phase_label_zh": "临近·T−3",
+        "has_official_result": false,
+        "result_block": null,
+        "reaction": {
+          "schema": "tidewatch_pre_window_v1",
+          "kind": "pre",
+          "event_id": "bls_cpi_2026_08",
+          "event_date": "2026-08-12",
+          "digest_day": "2026-08-09",
+          "offset": -3,
+          "days_left": 3,
+          "window_days": 3,
+          "as_of_today": true,
+          "name_zh": "CPI（2026-07）",
+          "name_en": "CPI (Jul 2026)",
+          "series": "cpi",
+          "story": {
+            "title_zh": "美国 CPI",
+            "one_liner_zh": "BLS 发布的消费者物价数据，是通胀与利率预期的核心输入之一。",
+            "rope_zh": "通胀",
+            "path_zh": "读数公布后，市场通常重估降息/维持路径，美元与美债利率、美股风险偏好往往先动；加密资产较少被直接定价，更多经风险偏好与美元间接传导，且可能与美股脱钩。",
+            "watch_zh": "优先核心 CPI 同比；整体 CPI 含食品能源、波动更大。环比看短节奏，勿单月定趋势。"
+          },
+          "result_ok": false,
+          "rows": [
+            {
+              "date": "2026-08-09",
+              "offset": -3,
+              "label": "T-3",
+              "btc_ret_1d": -0.094,
+              "eth_ret_1d": -0.318,
+              "oi_chg_pct": -0.165,
+              "funding_ann_pct": 8.2355,
+              "funding_ann_chg_pp": 3.372,
+              "es_ret_1d": 0.582,
+              "nq_ret_1d": 1.175,
+              "vix_ret_1d": -1.65,
+              "dxy_ret_1d": -0.37,
+              "fired_ids": [
+                "liq_spike"
+              ],
+              "has_driver": true,
+              "weather_zh": "近况：BTC -0.09%（小区间） · ETH -0.32% · OI 日变 -0.17% · BTC ETF 净流 +98.85 百万美金",
+              "errors": [
+                "etf_btc_using_2026-08-07",
+                "etf_eth_using_2026-08-07"
+              ]
+            }
+          ],
+          "headers_plain": [
+            {
+              "key": "btc_ret_1d",
+              "name_zh": "BTC",
+              "what_zh": "比特币日涨跌幅。"
+            },
+            {
+              "key": "eth_ret_1d",
+              "name_zh": "ETH",
+              "what_zh": "以太坊日涨跌幅。"
+            },
+            {
+              "key": "oi_chg_pct",
+              "name_zh": "OI",
+              "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+            },
+            {
+              "key": "es_ret_1d",
+              "name_zh": "ES",
+              "what_zh": "标普期货日变，传统风险偏好参考。"
+            },
+            {
+              "key": "nq_ret_1d",
+              "name_zh": "NQ",
+              "what_zh": "纳指期货日变。"
+            },
+            {
+              "key": "vix_ret_1d",
+              "name_zh": "VIX",
+              "what_zh": "美股隐含波动；偏高常对应避险升温。"
+            },
+            {
+              "key": "dxy_ret_1d",
+              "name_zh": "DXY",
+              "what_zh": "美元指数日变。"
+            },
+            {
+              "key": "fired",
+              "name_zh": "驱动",
+              "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+            }
+          ],
+          "plain_zh": "距「美国 CPI」T−3。BLS 发布的消费者物价数据，是通胀与利率预期的核心输入之一。 近一日 BTC 波动很小；窗口内有日触发驱动（见表「驱动」列）；距事件 T−3。观察重点：优先核心 CPI 同比；整体 CPI 含食品能源、波动更大。环比看短节奏，勿单月定趋势。 常见传导：读数公布后，市场通常重估降息/维持路径，美元与美债利率、美股风险偏好往往先动；加密资产较少被直接定价，更多经风险偏好与美元间接传导，且可能与美股脱钩。 尚无官方读数；表仅含已实现日。",
+          "finger_zh": "近一日 BTC 波动很小；窗口内有日触发驱动（见表「驱动」列）；距事件 T−3",
+          "badge_zh": "临近·T−3",
+          "badge_en": "Pre · T-3",
+          "headline_zh": "美国 CPI · T−3",
+          "pin_href": "daily_20260812.html",
+          "rules": {
+            "no_attribution": true,
+            "no_future_rows": true,
+            "pre_result": true
+          }
+        },
+        "story": {
+          "title_zh": "美国 CPI",
+          "one_liner_zh": "BLS 发布的消费者物价数据，是通胀与利率预期的核心输入之一。",
+          "rope_zh": "通胀",
+          "path_zh": "读数公布后，市场通常重估降息/维持路径，美元与美债利率、美股风险偏好往往先动；加密资产较少被直接定价，更多经风险偏好与美元间接传导，且可能与美股脱钩。",
+          "watch_zh": "优先核心 CPI 同比；整体 CPI 含食品能源、波动更大。环比看短节奏，勿单月定趋势。"
+        },
+        "template_id": "cpi"
+      }
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "清算层异常抬升",
+      "headline_en": "清算层异常抬升",
+      "conclusion_zh": "状态判断：清算层异常抬升。币侧 BTC -0.09%、ETH -0.32%。传统对照 ES +0.58%、VIX -1.65%。",
+      "conclusion_en": "状态判断：清算层异常抬升。币侧 BTC -0.09%、ETH -0.32%。传统对照 ES +0.58%、VIX -1.65%。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "-0.09%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "-0.32%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+3.37 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "8.24"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "-0.17%"
+        },
+        {
+          "key": "liq_vs_prior",
+          "label_zh": "清算/前日",
+          "display": "5.19×"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+23.51 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+1.72 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "+0.58%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+1.18%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "liq_spike",
+          "value": 5.194,
+          "threshold": 2.5,
+          "summary_zh": "清算量约为前一日的 5.19×",
+          "summary_en": "liquidation qty ~5.19× prior day",
+          "meta": {
+            "title_zh": "清算量相对前日尖峰",
+            "title_en": "Liquidation spike vs prior day",
+            "what_zh": "当日强平总量是否数倍于前一日，提示杠杆出清/挤压。",
+            "what_en": "Whether liquidation notional is multiple of prior day.",
+            "how_zh": "ratio = 今日清算 total_qty ÷ 昨日 total_qty。当 ratio ≥ liq_spike_vs_prior（默认 2.5）时触发。side 多空语义未最终确认，只报总量结构。",
+            "how_en": "ratio = today liq total_qty / prior. Fires if ratio ≥ liq_spike_vs_prior (default 2.5). Side long/short semantics unverified."
+          },
+          "observed": {
+            "btc_ret_1d": -0.094,
+            "eth_ret_1d": -0.318,
+            "funding_ann_pct": 8.2355,
+            "funding_ann_chg_pp": 3.372,
+            "oi_qty": 107052.288,
+            "oi_chg_pct": -0.165,
+            "liq_vs_prior": 5.194,
+            "iv_rv_spread": 23.51,
+            "iv_rv_spread_chg_pp": 1.72,
+            "vix_ret_1d": -1.65,
+            "btc_etf_net_usd": 98845327.0,
+            "eth_etf_net_usd": 49601035.0,
+            "value": 5.194,
+            "threshold": 2.5
+          },
+          "readout_zh": "观测清算量/前日 = 5.19×，阈值 ≥2.50×",
+          "readout_en": "liquidation qty ~5.19× prior day",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000
+          }
+        }
+      ],
+      "read_zh": "依据（程序）：\n- 观测清算量/前日 = 5.19×，阈值 ≥2.50×\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "read_en": "依据（程序）：\n- 观测清算量/前日 = 5.19×，阈值 ≥2.50×\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "状态判断：清算层异常抬升。币侧 BTC -0.09%、ETH -0.32%。传统对照 ES +0.58%、VIX -1.65%。",
+      "text_en": "状态判断：清算层异常抬升。币侧 BTC -0.09%、ETH -0.32%。传统对照 ES +0.58%、VIX -1.65%。",
+      "card": {
+        "date": "2026-08-09",
+        "prior_date": "2026-08-08",
+        "btc_ret_1d": -0.094,
+        "eth_ret_1d": -0.318,
+        "funding_ann_pct": 8.2355,
+        "funding_ann_chg_pp": 3.372,
+        "oi_qty": 107052.288,
+        "oi_prior_qty": 107228.858,
+        "oi_chg_pct": -0.165,
+        "liq_total": 43.44900000000001,
+        "liq_vs_prior": 5.194,
+        "iv_ann_pct": 34.93,
+        "rv_7_ann_pct": 11.4204,
+        "iv_rv_spread": 23.51,
+        "iv_rv_spread_chg_pp": 1.72,
+        "vix_ret_1d": -1.65,
+        "es_ret_1d": 0.582,
+        "nq_ret_1d": 1.175,
+        "dxy_ret_1d": -0.37,
+        "gold_ret_1d": 2.327,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-08-06",
+            "day": "2026-08-07"
+          },
+          "NQ": {
+            "prior": "2026-08-06",
+            "day": "2026-08-07"
+          },
+          "VIX": {
+            "prior": "2026-08-06",
+            "day": "2026-08-07"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记：待复习钉 2 · 开放哨 0",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "template",
+  "narrative_model": null,
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "-0.09%",
+      "tone": "down"
+    },
+    {
+      "text": "-0.32%",
+      "tone": "down"
+    },
+    {
+      "text": "BTC",
+      "tone": "neutral"
+    },
+    {
+      "text": "ETH",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI -0.17%",
+      "tone": "down"
+    },
+    {
+      "text": "异常",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-08-07",
+    "etf_eth_using_2026-08-07"
+  ],
+  "lark": {
+    "ok": false,
+    "skipped": true,
+    "reason": "no_webhook",
+    "hint": "Set LARK_DAILY_WEBHOOK_URL or LARK_WEBHOOK_URL"
+  }
+}

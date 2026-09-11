@@ -1,0 +1,136 @@
+{
+  "report_id": "weekly_20260824_20260830",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_low",
+      "name_zh": "偏震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "leverage_neutral",
+      "name_zh": "杠杆中性",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ]
+    },
+    "vol": {
+      "id": "mid",
+      "name_zh": "中等波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_rich",
+      "name_zh": "期权偏贵（IV 相对 RV 溢价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": 6.14
+    },
+    "tradfi_link": {
+      "id": "crypto_idiosyncratic",
+      "name_zh": "加密偏独立",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": -0.067,
+    "rv_ann": 30.85,
+    "iv_end": 36.99,
+    "iv_rv_spread": 6.14,
+    "funding_ann": 7.97,
+    "oi_chg": 0.749,
+    "perp_turnover_sum_usd": 89399229952.72,
+    "perp_turnover_sum_display_zh": "893.99 亿美金",
+    "perp_turnover_sum_display_en": "89.40B",
+    "perp_turnover_wow_pct": -20.44,
+    "perp_activity_id": "normal",
+    "spot_turnover_sum_usd": 9605039932.62,
+    "spot_turnover_sum_display_zh": "96.05 亿美金",
+    "spot_turnover_sum_display_en": "9.61B",
+    "etf_btc_net_usd": 924476387.0,
+    "etf_btc_net_display_zh": "+9.24 亿美金",
+    "etf_btc_net_display_en": "+924.48M",
+    "etf_eth_net_usd": 824419279.0,
+    "etf_eth_net_display_zh": "+8.24 亿美金",
+    "etf_eth_net_display_en": "+824.42M",
+    "etf_channel_id": "mild_inflow",
+    "etf_channel_zh": "温和流入",
+    "etf_channel_en": "mild inflow"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "mean_reversion",
+      "vol_harvest"
+    ],
+    "mismatched": [
+      "trend_following"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "BTC现货ETF净流能否连续第二周维持流入（或由温和流入转为流出/大幅放量）。",
+        "en": "Whether BTC spot ETF net flow stays positive a second week (or flips from mild inflow to outflow / a much larger print)."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_persist",
+      "rationale_zh": "本周已是流入斜率放缓的温和流入，且价格近乎走平；下期核对通道姿态是否续写，是观察现货需求韧性的直接哨。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "IV−RV点差（本周末约+6.1）是否收窄到中性附近，或在价格仍横盘时维持偏贵。",
+        "en": "Whether the IV−RV spread (~+6.1 at week-end) compresses toward neutral or stays rich while price remains range-bound."
+      },
+      "watchable": true,
+      "template_hint": "iv_still_rich",
+      "rationale_zh": "期权偏贵是本周核心矛盾之一；溢价去留直接关系到波动收割叙事是否还站得住。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "加密相对ES/NQ的“偏独立”是否延续：若传统续涨/VIX续落，BTC是否仍接近零相关走平或脱钩结束。",
+        "en": "Whether crypto’s idiosyncratic stance vs ES/NQ persists: if TradFi stays bid and VIX soft, does BTC remain near-uncorrelated flat or does the decouple end."
+      },
+      "watchable": true,
+      "template_hint": "decouple_persist",
+      "rationale_zh": "本周传统小涨而BTC走平，标签已是偏独立；下期可验证脱钩是短暂消化还是结构切换。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-08-24",
+    "end": "2026-08-30",
+    "label": "2026-08-24～2026-08-30",
+    "incomplete_end": false
+  }
+}

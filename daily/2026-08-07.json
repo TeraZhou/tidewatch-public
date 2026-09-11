@@ -1,0 +1,399 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-07",
+  "date_effective": "2026-08-07",
+  "as_of": "2026-09-03T08:12:23Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-07",
+    "prior_date": "2026-08-06",
+    "btc_ret_1d": 0.932,
+    "eth_ret_1d": 0.529,
+    "oi_qty": 106974.75,
+    "oi_chg_pct": 1.123,
+    "btc_etf_net_usd": 98845327.0,
+    "eth_etf_net_usd": 49601035.0,
+    "etf_lookback_sum_btc_usd": 853535546.0,
+    "etf_lookback_sum_eth_usd": 244939121.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.93%（小区间） · ETH +0.53% · OI 日变 +1.12% · BTC ETF 净流 +98.85 百万美金",
+    "weather_en": "Weather: BTC +0.93% · ETH +0.53% · OI +1.12% d/d · BTC ETF net +98.85M",
+    "text_zh": "近况：BTC +0.93%（小区间） · ETH +0.53% · OI 日变 +1.12% · BTC ETF 净流 +98.85 百万美金",
+    "text_en": "Weather: BTC +0.93% · ETH +0.53% · OI +1.12% d/d · BTC ETF net +98.85M"
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_nfp_2026_08",
+        "date": "2026-08-07",
+        "name_zh": "非农就业（2026-07）",
+        "name_en": "Employment Situation (Jul 2026)",
+        "source": "bls",
+        "series": "empsit",
+        "level": "high"
+      },
+      "badge_zh": "会前·非结果",
+      "badge_en": "Day-of · pre-result frame",
+      "phase": "day_of",
+      "headline_zh": "非农就业（2026-07） · 精读传导故事",
+      "headline_en": "Employment Situation (Jul 2026)",
+      "lead_zh": "钉日与市场波动同日并置",
+      "station_zh": "钉日与市场波动同日并置",
+      "part1_zh": "今天日历钉的是「非农就业（2026-07）」。美国公布就业「成绩单」的日子。用来看经济是热、是稳、还是在放缓。 潮观只当**已知日程钉子**，不是新闻热搜。",
+      "part1_en": null,
+      "part2_zh": "【会前·非结果】还不是判决书，只是**对答案日**的议程：非农人数、失业率与参与率、时薪。 无官方结果卡前，不装成「本次已议定」。",
+      "part2_en": null,
+      "part3_zh": "【传导故事 · 约2～4分钟精读 · 会前·非结果】\n\n第一拍·官方动哪根绳。就业冷热这根绳——人好不好找、工资涨不涨，会改写「经济要过热还是要放缓」的故事。\n\n第二拍·资金先改猜什么。资金会改猜：软着陆还是再加速，美联储还要不要保持紧，美元与股指情绪怎么摆。\n\n第三拍·股债汇与波动怎么跟。美元与美股风险偏好常同日重定价；债券看增长与加息/降息哪边的故事赢；波动可能短炒一把。\n\n第四拍·加密接在哪一环。加密同样多在情绪与美元的间接层；别默认「非农数字 = 币的涨跌原因」。\n\n第五拍·前后通常有多长（情景，非预测）。最吵多在公布日前后 1～2 天；大修订或与 FOMC 临近时，叙事可能拖数日；趋势仍要看连续多月。 近距 T−1～T+1；消化数日；框架看到下一两个数据与议息。 不确定：不确定卡在：单月噪声大、修订大、和通胀数据谁更被盯。\n\n第六拍·扣到本页你在哪一站。 站位：钉日与市场波动同日并置。 今日数字：BTC +0.93% · ETH +0.53% · ES +0.58% · VIX -1.65%。结合本页：官方轴到点，同时市场轴触发（iv_rv_spread_jump）。常见是当天博弈，仍不要写成「因非农就业（2026-07）所以涨跌」。\n\n以上是机制与时间位置，不是买卖点；禁止把本页涨跌写成「因该事件所以」。",
+      "part3_en": null,
+      "part4_zh": "官方轴：今日**是**官方日历钉日「非农就业（2026-07）」；角标 **会前·非结果**（无官方结果卡时不当成已出结果。）。 本页市场轴（程序数）：BTC +0.93% · ETH +0.53% · OI 日变 +1.12% · ES +0.58% · NQ +1.18% · VIX -1.65% · DXY -0.37%。 股币关系：BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。 你在故事的站位：**钉日与市场波动同日并置**。时间关系（非因果）：官方钉日与市场轴驱动（iv_rv_spread_jump）落在同一天，只是**并置**；仍可能有人事后看成滞后或当天定价，潮观不替你做这种判决。 因果留给你；潮观只翻译状态。非投资建议。",
+      "part4_en": null,
+      "post_brief_zh": null,
+      "post_deep_zh": null,
+      "post_reaction_zh": null,
+      "result_caption_zh": null,
+      "text_zh": "非农就业（2026-07） · 精读传导故事（会前·非结果）。钉日与市场波动同日并置",
+      "text_en": "Employment Situation (Jul 2026)",
+      "has_official_result": false,
+      "result_status": "failed",
+      "result_block": {
+        "ok": false,
+        "status": "failed",
+        "error": "bls_http_403",
+        "pending": false,
+        "event_id": "bls_nfp_2026_08",
+        "lines": [],
+        "source_urls": [],
+        "fetched_at": "2026-09-03T08:12:23Z",
+        "adapter": null,
+        "result_plain_zh": null,
+        "fixture": false
+      },
+      "result_plain_zh": null,
+      "reaction": null,
+      "card": {
+        "event_id": "bls_nfp_2026_08",
+        "date": "2026-08-07",
+        "name_zh": "非农就业（2026-07）",
+        "name_en": "Employment Situation (Jul 2026)",
+        "source": "bls",
+        "series": "empsit",
+        "level": "high",
+        "phase": "day_of",
+        "phase_label_zh": "会前·非结果",
+        "phase_label_en": "Day-of · pre-result frame",
+        "template_id": "nfp",
+        "template_title_zh": "非农就业（Employment Situation）",
+        "template_title_en": "Employment Situation (NFP)",
+        "plain_zh": "美国公布就业「成绩单」的日子。用来看经济是热、是稳、还是在放缓。",
+        "teach_channels_zh": "就业冷热→增长/利率叙事→美元与股指→加密间接。",
+        "what_zh": "BLS 就业形势报告日（非农、失业率等），劳动力市场的月度锚。",
+        "what_en": "BLS Employment Situation day.",
+        "agenda_framework": {
+          "zh": [
+            "非农人数",
+            "失业率与参与率",
+            "时薪",
+            "前值修订"
+          ],
+          "en": [
+            "Payrolls",
+            "Unemployment",
+            "AHE",
+            "Revisions"
+          ]
+        },
+        "story_beats": {
+          "rope_zh": "就业冷热这根绳——人好不好找、工资涨不涨，会改写「经济要过热还是要放缓」的故事。",
+          "guess_zh": "资金会改猜：软着陆还是再加速，美联储还要不要保持紧，美元与股指情绪怎么摆。",
+          "assets_zh": "美元与美股风险偏好常同日重定价；债券看增长与加息/降息哪边的故事赢；波动可能短炒一把。",
+          "crypto_zh": "加密同样多在情绪与美元的间接层；别默认「非农数字 = 币的涨跌原因」。",
+          "time_span_zh": "最吵多在公布日前后 1～2 天；大修订或与 FOMC 临近时，叙事可能拖数日；趋势仍要看连续多月。",
+          "uncertainty_zh": "不确定卡在：单月噪声大、修订大、和通胀数据谁更被盯。",
+          "horizon_note_zh": "近距 T−1～T+1；消化数日；框架看到下一两个数据与议息。"
+        },
+        "uncertainty_zh": "不确定卡在：单月噪声大、修订大、和通胀数据谁更被盯。",
+        "uncertainty_en": "Noise, revisions, sequencing vs CPI.",
+        "state_glance_slim": {
+          "date": "2026-08-07",
+          "prior_date": "2026-08-06",
+          "weather_zh": "近况：BTC +0.93%（小区间） · ETH +0.53% · OI 日变 +1.12% · BTC ETF 净流 +98.85 百万美金",
+          "btc_ret_1d": 0.932,
+          "eth_ret_1d": 0.529,
+          "oi_chg_pct": 1.123,
+          "funding_ann_pct": 6.1189,
+          "funding_ann_chg_pp": 5.223,
+          "liq_vs_prior": 1.389,
+          "iv_rv_spread": 21.12,
+          "iv_rv_spread_chg_pp": 13.17,
+          "es_ret_1d": 0.582,
+          "nq_ret_1d": 1.175,
+          "vix_ret_1d": -1.65,
+          "dxy_ret_1d": -0.37,
+          "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +0.93% · ES +0.58%）"
+        },
+        "nearby_driver_note": "本日程序驱动门闩：iv_rv_spread_jump。（仅时间邻接事实，非因本事件导致。）",
+        "prior_driver_hits": [],
+        "has_official_text": false,
+        "has_official_result": false,
+        "result_status": "failed",
+        "result_card": {
+          "schema": "tidewatch_result_card_v1",
+          "event_id": "bls_nfp_2026_08",
+          "series": "empsit",
+          "template_id": "empsit",
+          "event_date": "2026-08-07",
+          "ok": false,
+          "status": "failed",
+          "adapter": null,
+          "fetched_at": "2026-09-03T08:12:23Z",
+          "source_urls": [],
+          "values": {},
+          "prior_values": {},
+          "revision_note": null,
+          "statement_bullets": null,
+          "raw_ref": null,
+          "fixture": false,
+          "override": null,
+          "error": "bls_http_403"
+        },
+        "result_block": {
+          "ok": false,
+          "status": "failed",
+          "error": "bls_http_403",
+          "pending": false,
+          "event_id": "bls_nfp_2026_08",
+          "lines": [],
+          "source_urls": [],
+          "fetched_at": "2026-09-03T08:12:23Z",
+          "adapter": null,
+          "result_plain_zh": null,
+          "fixture": false
+        },
+        "rules": {
+          "no_news": true,
+          "no_price_attribution": true,
+          "pre_result_badge_required": true,
+          "part4_three_sentences": true,
+          "no_fully_priced_claim": true,
+          "part3_six_beat_story": true,
+          "read_minutes": "2-4",
+          "part1_part2_short": true,
+          "no_fake_print": true
+        },
+        "contrast_slots": {
+          "official_axis_zh": "官方轴：今日**是**官方日历钉日「非农就业（2026-07）」；角标 **会前·非结果**（无官方结果卡时不当成已出结果。）。",
+          "market_axis_zh": "本页市场轴（程序数）：BTC +0.93% · ETH +0.53% · OI 日变 +1.12% · ES +0.58% · NQ +1.18% · VIX -1.65% · DXY -0.37%。 股币关系：BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。",
+          "time_relation_zh": "时间关系（非因果）：官方钉日与市场轴驱动（iv_rv_spread_jump）落在同一天，只是**并置**；仍可能有人事后看成滞后或当天定价，潮观不替你做这种判决。 因果留给你；潮观只翻译状态。非投资建议。"
+        },
+        "story_station": {
+          "key": "day_of_move",
+          "label_zh": "钉日与市场波动同日并置",
+          "hook_zh": "结合本页：官方轴到点，同时市场轴触发（iv_rv_spread_jump）。常见是当天博弈，仍不要写成「因非农就业（2026-07）所以涨跌」。"
+        }
+      }
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "期权相对实现波动定价跳变",
+      "headline_en": "期权相对实现波动定价跳变",
+      "conclusion_zh": "状态判断：期权相对实现波动定价跳变。币侧 BTC +0.93%、ETH +0.53%。BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。",
+      "conclusion_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC +0.93%、ETH +0.53%。BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+0.93%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+0.53%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+5.22 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "6.12"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "+1.12%"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+21.12 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+13.17 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "+0.58%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+1.18%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "-1.65%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "iv_rv_spread_jump",
+          "value": 13.17,
+          "threshold": 8.0,
+          "summary_zh": "IV−RV 点差日变 +13.17 pp",
+          "summary_en": "IV−RV spread day change +13.17 pp",
+          "meta": {
+            "title_zh": "IV−RV 点差日变",
+            "title_en": "IV−RV spread day change",
+            "what_zh": "期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。",
+            "what_en": "Large one-day move in IV minus realized vol spread.",
+            "how_zh": "spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。",
+            "how_en": "spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": 0.932,
+            "eth_ret_1d": 0.529,
+            "funding_ann_pct": 6.1189,
+            "funding_ann_chg_pp": 5.223,
+            "oi_qty": 106974.75,
+            "oi_chg_pct": 1.123,
+            "liq_vs_prior": 1.389,
+            "iv_rv_spread": 21.12,
+            "iv_rv_spread_chg_pp": 13.17,
+            "vix_ret_1d": -1.65,
+            "btc_etf_net_usd": 98845327.0,
+            "eth_etf_net_usd": 49601035.0,
+            "value": 13.17,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 IV−RV 点差日变 13.17 pp（今日点差 21.12），阈值 |·|≥8.00 pp",
+          "readout_en": "IV−RV spread day change +13.17 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000
+          }
+        }
+      ],
+      "read_zh": "依据（程序）：\n- 观测 IV−RV 点差日变 13.17 pp（今日点差 21.12），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。 非投资建议。",
+      "read_en": "依据（程序）：\n- 观测 IV−RV 点差日变 13.17 pp（今日点差 21.12），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +0.93% · ES +0.58%）",
+      "tradfi_link_note_en": "BTC and ES same direction (BTC +0.93% · ES +0.58%)",
+      "text_zh": "状态判断：期权相对实现波动定价跳变。币侧 BTC +0.93%、ETH +0.53%。BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。",
+      "text_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC +0.93%、ETH +0.53%。BTC 与 ES 同向（BTC +0.93% · ES +0.58%）。",
+      "card": {
+        "date": "2026-08-07",
+        "prior_date": "2026-08-06",
+        "btc_ret_1d": 0.932,
+        "eth_ret_1d": 0.529,
+        "funding_ann_pct": 6.1189,
+        "funding_ann_chg_pp": 5.223,
+        "oi_qty": 106974.75,
+        "oi_prior_qty": 105787.11,
+        "oi_chg_pct": 1.123,
+        "liq_total": 72.70799999999997,
+        "liq_vs_prior": 1.389,
+        "iv_ann_pct": 33.94,
+        "rv_7_ann_pct": 12.8192,
+        "iv_rv_spread": 21.12,
+        "iv_rv_spread_chg_pp": 13.17,
+        "vix_ret_1d": -1.65,
+        "es_ret_1d": 0.582,
+        "nq_ret_1d": 1.175,
+        "dxy_ret_1d": -0.37,
+        "gold_ret_1d": 2.327,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-08-06",
+            "day": "2026-08-07"
+          },
+          "NQ": {
+            "prior": "2026-08-06",
+            "day": "2026-08-07"
+          },
+          "VIX": {
+            "prior": "2026-08-06",
+            "day": "2026-08-07"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +0.93% · ES +0.58%）",
+        "tradfi_link_note_en": "BTC and ES same direction (BTC +0.93% · ES +0.58%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记：待复习钉 2 · 开放哨 0",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "template",
+  "narrative_model": null,
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "+0.93%",
+      "tone": "up"
+    },
+    {
+      "text": "+0.53%",
+      "tone": "up"
+    },
+    {
+      "text": "BTC",
+      "tone": "neutral"
+    },
+    {
+      "text": "ETH",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI +1.12%",
+      "tone": "up"
+    },
+    {
+      "text": "异常",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [],
+  "lark": {
+    "ok": false,
+    "skipped": true,
+    "reason": "no_webhook",
+    "hint": "Set LARK_DAILY_WEBHOOK_URL or LARK_WEBHOOK_URL"
+  }
+}

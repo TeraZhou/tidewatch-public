@@ -1,0 +1,250 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-06-05",
+  "date_effective": "2026-06-05",
+  "as_of": "2026-08-31T10:33:43Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-06-05",
+    "prior_date": "2026-06-04",
+    "btc_ret_1d": -4.429,
+    "eth_ret_1d": -10.581,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -4.43%（有波动、未过异常默认线） · ETH -10.58%",
+    "weather_en": "Weather: BTC -4.43% · ETH -10.58%",
+    "text_zh": "近况偏弱：BTC 日跌 4.43%（有波动、未过异常默认线），ETH 重挫 10.58% 触发价格冲击；VIX 单日大涨近四成。",
+    "text_en": "Soft session: BTC -4.43%, ETH -10.58% price shock; VIX +39.67%."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_nfp_2026_06",
+        "date": "2026-06-05",
+        "name_zh": "非农就业（2026-05）",
+        "name_en": "Employment Situation (May 2026)",
+        "source": "bls"
+      },
+      "text_zh": "当日日历含非农就业（2026-05）。",
+      "text_en": "Calendar: Employment Situation (May 2026)"
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "ETH急跌叠加VIX冲击日",
+      "headline_en": "现货单日大幅波动",
+      "conclusion_zh": "【ETH急跌叠加VIX冲击日】今日市场处于风险偏好急剧收缩状态，主矛盾是价格端 ETH 异常下跌与传统波动率冲击共振；BTC 与 ES 同向下跌，跨资产联动偏弱。",
+      "conclusion_en": "Risk-off day: ETH price shock and VIX spike dominate; BTC moves with ES lower.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "-4.43%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "-10.58%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-2.68 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "-1.32"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "-2.18 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+2.77 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-2.64%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-4.79%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "+39.67%"
+        },
+        {
+          "key": "dxy_ret_1d",
+          "label_zh": "DXY 日变",
+          "display": "+0.66%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "price_shock_eth",
+          "value": -10.581,
+          "threshold": 5.0,
+          "direction": "down",
+          "summary_zh": "ETH 日涨跌 -10.58%（阈值 |·|≥5.0%）",
+          "summary_en": "ETH day return -10.58% (threshold 5.0%)",
+          "meta": {
+            "title_zh": "ETH 日收益冲击",
+            "title_en": "ETH day-return shock",
+            "what_zh": "以太坊现货单日涨跌幅度是否达到异常阈值。",
+            "what_en": "Whether ETH spot one-day move hits the shock threshold.",
+            "how_zh": "与 BTC 相同公式，标的为 ETH Spot 日 K；阈值同 price_shock_abs_pct（默认 5%）。",
+            "how_en": "Same as BTC; ETH Spot daily close-to-close; same threshold default 5%."
+          },
+          "observed": {
+            "btc_ret_1d": -4.429,
+            "eth_ret_1d": -10.581,
+            "funding_ann_pct": -1.3206,
+            "funding_ann_chg_pp": -2.682,
+            "liq_vs_prior": 1.111,
+            "iv_rv_spread": -2.18,
+            "iv_rv_spread_chg_pp": 2.77,
+            "vix_ret_1d": 39.675,
+            "value": -10.581,
+            "threshold": 5.0
+          },
+          "readout_zh": "观测 ETH 日收益 -10.58%，阈值 |·|≥5.00%",
+          "readout_en": "ETH day return -10.58% (threshold 5.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        },
+        {
+          "id": "vix_shock",
+          "value": 39.675,
+          "threshold": 15.0,
+          "summary_zh": "VIX 日变 +39.67%",
+          "summary_en": "VIX day change +39.67%",
+          "meta": {
+            "title_zh": "VIX 日变冲击",
+            "title_en": "VIX day shock",
+            "what_zh": "美股波动率指数单日波动是否极端，提示外生风险偏好冲击。",
+            "what_en": "Extreme one-day VIX move (external risk).",
+            "how_zh": "VIX 日收益 = (今日值÷昨日值 − 1)×100（看板 tradfi 序列）。|r| ≥ vix_shock_abs_pct（默认 15）时触发。",
+            "how_en": "VIX day return from cache. Fires if |r| ≥ vix_shock_abs_pct (default 15)."
+          },
+          "observed": {
+            "btc_ret_1d": -4.429,
+            "eth_ret_1d": -10.581,
+            "funding_ann_pct": -1.3206,
+            "funding_ann_chg_pp": -2.682,
+            "liq_vs_prior": 1.111,
+            "iv_rv_spread": -2.18,
+            "iv_rv_spread_chg_pp": 2.77,
+            "vix_ret_1d": 39.675,
+            "value": 39.675,
+            "threshold": 15.0
+          },
+          "readout_zh": "观测 VIX 日变 39.67%，阈值 |·|≥15.00%",
+          "readout_en": "VIX day change +39.67%",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "ETH 现货日收益 -10.58%，远超 5% 冲击阈值，BTC 同步 -4.43%。VIX 单日大涨 39.67%（阈值 15%），ES -2.64%、NQ -4.79%，与币圈同向，tradfi_link 明确 BTC 与 ES 同向下跌。funding 年化报 -1.32%、日变 -2.68 pp，杠杆情绪转冷；IV−RV 点差 -2.18 pp（日变 +2.77 pp）。美元指数 +0.66%，整体呈现外生波动冲击下的普跌格局。",
+      "read_en": "依据（程序）：\n- 观测 ETH 日收益 -10.58%，阈值 |·|≥5.00%\n- 观测 VIX 日变 39.67%，阈值 |·|≥15.00%\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 同向（BTC -4.43% · ES -2.64%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 同向（BTC -4.43% · ES -2.64%）",
+      "tradfi_link_note_en": "BTC and ES same direction (BTC -4.43% · ES -2.64%)",
+      "text_zh": "【ETH急跌叠加VIX冲击日】今日市场处于风险偏好急剧收缩状态，主矛盾是价格端 ETH 异常下跌与传统波动率冲击共振；BTC 与 ES 同向下跌，跨资产联动偏弱。",
+      "text_en": "Risk-off day: ETH price shock and VIX spike dominate; BTC moves with ES lower.",
+      "card": {
+        "date": "2026-06-05",
+        "prior_date": "2026-06-04",
+        "btc_ret_1d": -4.429,
+        "eth_ret_1d": -10.581,
+        "funding_ann_pct": -1.3206,
+        "funding_ann_chg_pp": -2.682,
+        "liq_vs_prior": 1.111,
+        "iv_ann_pct": 49.14,
+        "rv_7_ann_pct": 51.3154,
+        "iv_rv_spread": -2.18,
+        "iv_rv_spread_chg_pp": 2.77,
+        "vix_ret_1d": 39.675,
+        "es_ret_1d": -2.638,
+        "nq_ret_1d": -4.794,
+        "dxy_ret_1d": 0.664,
+        "gold_ret_1d": -3.099,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-06-04",
+            "day": "2026-06-05"
+          },
+          "NQ": {
+            "prior": "2026-06-04",
+            "day": "2026-06-05"
+          },
+          "VIX": {
+            "prior": "2026-06-04",
+            "day": "2026-06-05"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 同向（BTC -4.43% · ES -2.64%）",
+        "tradfi_link_note_en": "BTC and ES same direction (BTC -4.43% · ES -2.64%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：3 项观察仍开放，无到期钉选。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "ETH 重挫 10.58%",
+      "tone": "down"
+    },
+    {
+      "text": "触发价格冲击",
+      "tone": "warn"
+    },
+    {
+      "text": "VIX 单日大涨近四成",
+      "tone": "warn"
+    },
+    {
+      "text": "BTC 与 ES 同向下跌",
+      "tone": "down"
+    },
+    {
+      "text": "funding 年化报 -1.32%",
+      "tone": "down"
+    },
+    {
+      "text": "风险偏好急剧收缩",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

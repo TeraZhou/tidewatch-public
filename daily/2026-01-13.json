@@ -1,0 +1,250 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-01-13",
+  "date_effective": "2026-01-13",
+  "as_of": "2026-08-31T10:25:25Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-01-13",
+    "prior_date": "2026-01-12",
+    "btc_ret_1d": 4.51,
+    "eth_ret_1d": 7.432,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +4.51%（有波动、未过异常默认线） · ETH +7.43%",
+    "weather_en": "Weather: BTC +4.51% · ETH +7.43%",
+    "text_zh": "近况偏强：BTC +4.51%（有波动、未过异常默认线），ETH +7.43% 触发日收益冲击。",
+    "text_en": "Weather: BTC +4.51% · ETH +7.43% shock"
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_cpi_2026_01",
+        "date": "2026-01-13",
+        "name_zh": "CPI（2025-12）",
+        "name_en": "CPI (Dec 2025)",
+        "source": "bls"
+      },
+      "text_zh": "日历提示：今日为 CPI（2025-12）相关节点。",
+      "text_en": "Calendar: CPI (Dec 2025)"
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "ETH冲击与波动点差骤收",
+      "headline_en": "期权相对实现波动定价跳变",
+      "conclusion_zh": "【ETH冲击与波动点差骤收】今天加密处于强势上涨状态，主矛盾是 ETH 价格冲击叠加 IV−RV 点差大幅收窄；币与美股微跌、VIX 上行形成背离。",
+      "conclusion_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC +4.51%、ETH +7.43%。传统对照 ES -0.21%、VIX +5.69%。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+4.51%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+7.43%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-2.40 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "0.05"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+1.60 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-20.05 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.21%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-0.20%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "+5.69%"
+        },
+        {
+          "key": "dxy_ret_1d",
+          "label_zh": "DXY 日变",
+          "display": "+0.27%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "price_shock_eth",
+          "value": 7.432,
+          "threshold": 5.0,
+          "direction": "up",
+          "summary_zh": "ETH 日涨跌 +7.43%（阈值 |·|≥5.0%）",
+          "summary_en": "ETH day return +7.43% (threshold 5.0%)",
+          "meta": {
+            "title_zh": "ETH 日收益冲击",
+            "title_en": "ETH day-return shock",
+            "what_zh": "以太坊现货单日涨跌幅度是否达到异常阈值。",
+            "what_en": "Whether ETH spot one-day move hits the shock threshold.",
+            "how_zh": "与 BTC 相同公式，标的为 ETH Spot 日 K；阈值同 price_shock_abs_pct（默认 5%）。",
+            "how_en": "Same as BTC; ETH Spot daily close-to-close; same threshold default 5%."
+          },
+          "observed": {
+            "btc_ret_1d": 4.51,
+            "eth_ret_1d": 7.432,
+            "funding_ann_pct": 0.0482,
+            "funding_ann_chg_pp": -2.396,
+            "liq_vs_prior": 1.297,
+            "iv_rv_spread": 1.6,
+            "iv_rv_spread_chg_pp": -20.05,
+            "vix_ret_1d": 5.688,
+            "value": 7.432,
+            "threshold": 5.0
+          },
+          "readout_zh": "观测 ETH 日收益 7.43%，阈值 |·|≥5.00%",
+          "readout_en": "ETH day return +7.43% (threshold 5.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        },
+        {
+          "id": "iv_rv_spread_jump",
+          "value": -20.05,
+          "threshold": 8.0,
+          "summary_zh": "IV−RV 点差日变 -20.05 pp",
+          "summary_en": "IV−RV spread day change -20.05 pp",
+          "meta": {
+            "title_zh": "IV−RV 点差日变",
+            "title_en": "IV−RV spread day change",
+            "what_zh": "期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。",
+            "what_en": "Large one-day move in IV minus realized vol spread.",
+            "how_zh": "spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。",
+            "how_en": "spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": 4.51,
+            "eth_ret_1d": 7.432,
+            "funding_ann_pct": 0.0482,
+            "funding_ann_chg_pp": -2.396,
+            "liq_vs_prior": 1.297,
+            "iv_rv_spread": 1.6,
+            "iv_rv_spread_chg_pp": -20.05,
+            "vix_ret_1d": 5.688,
+            "value": -20.05,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 IV−RV 点差日变 -20.05 pp（今日点差 1.60），阈值 |·|≥8.00 pp",
+          "readout_en": "IV−RV spread day change -20.05 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "观测 ETH 日收益 +7.43%（阈值 |·|≥5%），BTC +4.51%。BTC IV−RV 点差收至 +1.60 pp，日变 −20.05 pp，隐含相对实现波动的溢价一日内显著压缩。funding 年化约 0.05%，日变 −2.40 pp。传统侧 ES −0.21%、NQ −0.20%、VIX +5.69%、DXY +0.27%，加密上涨与美股偏弱、波动升温不同向，呈现币股背离。",
+      "read_en": "依据（程序）：\n- 观测 ETH 日收益 7.43%，阈值 |·|≥5.00%\n- 观测 IV−RV 点差日变 -20.05 pp（今日点差 1.60），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "【ETH冲击与波动点差骤收】今天加密处于强势上涨状态，主矛盾是 ETH 价格冲击叠加 IV−RV 点差大幅收窄；币与美股微跌、VIX 上行形成背离。",
+      "text_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC +4.51%、ETH +7.43%。传统对照 ES -0.21%、VIX +5.69%。",
+      "card": {
+        "date": "2026-01-13",
+        "prior_date": "2026-01-12",
+        "btc_ret_1d": 4.51,
+        "eth_ret_1d": 7.432,
+        "funding_ann_pct": 0.0482,
+        "funding_ann_chg_pp": -2.396,
+        "liq_vs_prior": 1.297,
+        "iv_ann_pct": 41.69,
+        "rv_7_ann_pct": 40.094,
+        "iv_rv_spread": 1.6,
+        "iv_rv_spread_chg_pp": -20.05,
+        "vix_ret_1d": 5.688,
+        "es_ret_1d": -0.21,
+        "nq_ret_1d": -0.196,
+        "dxy_ret_1d": 0.273,
+        "gold_ret_1d": -0.328,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-01-12",
+            "day": "2026-01-13"
+          },
+          "NQ": {
+            "prior": "2026-01-12",
+            "day": "2026-01-13"
+          },
+          "VIX": {
+            "prior": "2026-01-12",
+            "day": "2026-01-13"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：尚有 3 个未闭环观察。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "ETH +7.43%",
+      "tone": "up"
+    },
+    {
+      "text": "BTC +4.51%",
+      "tone": "up"
+    },
+    {
+      "text": "−20.05 pp",
+      "tone": "warn"
+    },
+    {
+      "text": "币股背离",
+      "tone": "warn"
+    },
+    {
+      "text": "VIX +5.69%",
+      "tone": "down"
+    },
+    {
+      "text": "ES −0.21%",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

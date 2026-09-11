@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-23",
+  "date_effective": "2026-08-23",
+  "as_of": "2026-09-04T07:06:35Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-23",
+    "prior_date": "2026-08-22",
+    "btc_ret_1d": 0.855,
+    "eth_ret_1d": 1.685,
+    "oi_qty": 105549.98,
+    "oi_chg_pct": -0.269,
+    "perp_turnover_usd": 10079189363.4479,
+    "perp_turnover_chg_pct": 0.95,
+    "spot_turnover_usd": 1182628276.059433,
+    "spot_turnover_chg_pct": -17.52,
+    "btc_etf_net_usd": 307453306.0,
+    "eth_etf_net_usd": 184932209.0,
+    "etf_lookback_sum_btc_usd": 1430936317.0,
+    "etf_lookback_sum_eth_usd": 594859481.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.85%（小区间） · ETH +1.69% · OI 日变 -0.27% · 永续成交额 100.79 亿美金（日变 +0.9%） · BTC ETF 净流 +3.07 亿美金",
+    "weather_en": "Weather: BTC +0.85% · ETH +1.69% · OI -0.27% d/d · perp turnover 10.08B (+0.9% d/d) · BTC ETF net +307.45M",
+    "text_zh": "近况偏平静：BTC小涨约0.85%，ETH更强一点到1.69%。杠杆总量微降，永续成交略增，整体没有剧烈跳变。",
+    "text_en": "Quiet session: BTC +0.85%, ETH +1.69%. OI edged down, perp turnover slightly up."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：有人在问IV是什么、和VIX有何区别，可补一句白话对照。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC小涨约0.85%",
+      "tone": "up"
+    },
+    {
+      "text": "ETH更强一点到1.69%",
+      "tone": "up"
+    },
+    {
+      "text": "杠杆总量微降",
+      "tone": "down"
+    },
+    {
+      "text": "永续成交略增",
+      "tone": "up"
+    },
+    {
+      "text": "BTC与ES同向",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI微降0.27%",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-08-21",
+    "etf_eth_using_2026-08-21"
+  ]
+}

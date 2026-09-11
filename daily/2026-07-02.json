@@ -1,0 +1,214 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-07-02",
+  "date_effective": "2026-07-02",
+  "as_of": "2026-08-31T10:35:51Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-07-02",
+    "prior_date": "2026-07-01",
+    "btc_ret_1d": 2.559,
+    "eth_ret_1d": 5.653,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +2.56%（有波动、未过异常默认线） · ETH +5.65%",
+    "weather_en": "Weather: BTC +2.56% · ETH +5.65%",
+    "text_zh": "近况：BTC +2.56%（有波动、未过异常默认线），ETH +5.65% 触发日收益冲击；币侧上行、美股偏弱。",
+    "text_en": "BTC +2.56%, ETH +5.65% price shock; crypto up while US equities soft."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_nfp_2026_07",
+        "date": "2026-07-02",
+        "name_zh": "非农就业（2026-06）",
+        "name_en": "Employment Situation (Jun 2026)",
+        "source": "bls"
+      },
+      "text_zh": "日历：非农就业（2026-06）落地日。",
+      "text_en": "Calendar: Employment Situation (Jun 2026)"
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "ETH冲击领涨的股币背离日",
+      "headline_en": "现货单日大幅波动",
+      "conclusion_zh": "【ETH冲击领涨的股币背离日】今日主状态是 ETH 现货单日冲击领涨、BTC 跟涨但未过异常线；主矛盾在币侧价格冲击与美股（ES/NQ）走弱的背离，波动与杠杆未同步失控。",
+      "conclusion_en": "ETH spot shock leads the day with BTC milder gains; main tension is crypto upside vs softer ES/NQ, without runaway vol or leverage stress.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+2.56%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+5.65%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+2.10 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "10.95"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+5.18 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-3.41 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.20%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-1.79%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "-2.65%"
+        },
+        {
+          "key": "dxy_ret_1d",
+          "label_zh": "DXY 日变",
+          "display": "-0.52%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "price_shock_eth",
+          "value": 5.653,
+          "threshold": 5.0,
+          "direction": "up",
+          "summary_zh": "ETH 日涨跌 +5.65%（阈值 |·|≥5.0%）",
+          "summary_en": "ETH day return +5.65% (threshold 5.0%)",
+          "meta": {
+            "title_zh": "ETH 日收益冲击",
+            "title_en": "ETH day-return shock",
+            "what_zh": "以太坊现货单日涨跌幅度是否达到异常阈值。",
+            "what_en": "Whether ETH spot one-day move hits the shock threshold.",
+            "how_zh": "与 BTC 相同公式，标的为 ETH Spot 日 K；阈值同 price_shock_abs_pct（默认 5%）。",
+            "how_en": "Same as BTC; ETH Spot daily close-to-close; same threshold default 5%."
+          },
+          "observed": {
+            "btc_ret_1d": 2.559,
+            "eth_ret_1d": 5.653,
+            "funding_ann_pct": 10.95,
+            "funding_ann_chg_pp": 2.105,
+            "liq_vs_prior": 0.616,
+            "iv_rv_spread": 5.18,
+            "iv_rv_spread_chg_pp": -3.41,
+            "vix_ret_1d": -2.652,
+            "value": 5.653,
+            "threshold": 5.0
+          },
+          "readout_zh": "观测 ETH 日收益 5.65%，阈值 |·|≥5.00%",
+          "readout_en": "ETH day return +5.65% (threshold 5.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "Card 显示 ETH 日收益 +5.65%（|·|≥5% 阈值），BTC +2.56%；funding 年化升至 10.95%（日变 +2.10 pp），清算总量约 163、较前日比 0.62，杠杆成本抬升但强平未放大。IV 年化 40.45、RV7 约 35.27，IV−RV 点差 +5.18 pp（日变 −3.41 pp），隐含相对已实现溢价收窄。传统侧 ES −0.20%、NQ −1.79%、VIX −2.65%、DXY −0.52%，币与股指明显背离、风险情绪指标同步回落。整体读作：ETH 价格冲击主导的分化上涨日，而非全面风险-on 共振。",
+      "read_en": "ETH +5.65% hits shock threshold, BTC +2.56%; funding to 10.95% (+2.10 pp), liq ~163 vs prior 0.62. IV−RV spread +5.18 pp (−3.41 pp). ES/NQ down, VIX/DXY down—crypto-equity divergence.",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "【ETH冲击领涨的股币背离日】今日主状态是 ETH 现货单日冲击领涨、BTC 跟涨但未过异常线；主矛盾在币侧价格冲击与美股（ES/NQ）走弱的背离，波动与杠杆未同步失控。",
+      "text_en": "ETH spot shock leads the day with BTC milder gains; main tension is crypto upside vs softer ES/NQ, without runaway vol or leverage stress.",
+      "card": {
+        "date": "2026-07-02",
+        "prior_date": "2026-07-01",
+        "btc_ret_1d": 2.559,
+        "eth_ret_1d": 5.653,
+        "funding_ann_pct": 10.95,
+        "funding_ann_chg_pp": 2.105,
+        "liq_vs_prior": 0.616,
+        "iv_ann_pct": 40.45,
+        "rv_7_ann_pct": 35.2707,
+        "iv_rv_spread": 5.18,
+        "iv_rv_spread_chg_pp": -3.41,
+        "vix_ret_1d": -2.652,
+        "es_ret_1d": -0.202,
+        "nq_ret_1d": -1.789,
+        "dxy_ret_1d": -0.523,
+        "gold_ret_1d": 1.091,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-07-01",
+            "day": "2026-07-02"
+          },
+          "NQ": {
+            "prior": "2026-07-01",
+            "day": "2026-07-02"
+          },
+          "VIX": {
+            "prior": "2026-07-01",
+            "day": "2026-07-02"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：3 项观察仍在跟踪，无到期钉选。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "ETH +5.65%",
+      "tone": "up"
+    },
+    {
+      "text": "触发日收益冲击",
+      "tone": "warn"
+    },
+    {
+      "text": "BTC +2.56%",
+      "tone": "up"
+    },
+    {
+      "text": "美股偏弱",
+      "tone": "down"
+    },
+    {
+      "text": "funding 年化升至 10.95%",
+      "tone": "neutral"
+    },
+    {
+      "text": "币与股指明显背离",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

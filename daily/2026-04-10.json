@@ -1,0 +1,213 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-04-10",
+  "date_effective": "2026-04-10",
+  "as_of": "2026-08-31T10:31:21Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-04-10",
+    "prior_date": "2026-04-09",
+    "btc_ret_1d": 1.636,
+    "eth_ret_1d": 2.504,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +1.64%（有波动、未过异常默认线） · ETH +2.50%",
+    "weather_en": "Weather: BTC +1.64% · ETH +2.50%",
+    "text_zh": "近况偏暖：BTC +1.64%、ETH +2.50%，有波动但未过异常默认线；资金费率年化出现大幅跳变。",
+    "text_en": "Weather: BTC +1.64% · ETH +2.50%, with a sharp funding jump."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_cpi_2026_04",
+        "date": "2026-04-10",
+        "name_zh": "CPI（2026-03）",
+        "name_en": "CPI (Mar 2026)",
+        "source": "bls"
+      },
+      "text_zh": "日历提示：今日有 CPI（2026-03）相关节点。",
+      "text_en": "Calendar: CPI (Mar 2026)"
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "费率骤降下的温和上涨",
+      "headline_en": "资金费率年化急剧变化",
+      "conclusion_zh": "【费率骤降下的温和上涨】今天市场处于温和上涨状态，主矛盾是永续资金费率大幅回落带来的杠杆松动，价格仍录得正收益；与近乎持平的美股略显背离。",
+      "conclusion_en": "Mild up day driven by sharp funding drop (leverage easing) while crypto prints positive returns; slight divergence from flat US equities.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+1.64%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+2.50%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-8.33 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "-7.91"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+7.93 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-0.70 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.12%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+0.12%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "-1.33%"
+        },
+        {
+          "key": "dxy_ret_1d",
+          "label_zh": "DXY 日变",
+          "display": "-0.17%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "funding_jump",
+          "value": -8.331,
+          "threshold": 8.0,
+          "summary_zh": "funding 年化日变 -8.33 个百分点",
+          "summary_en": "funding ann. day change -8.33 pp",
+          "meta": {
+            "title_zh": "资金费率年化跳变",
+            "title_en": "Funding ann. jump",
+            "what_zh": "永续资金费率（年化）相对前一日是否大幅变化，提示杠杆拥挤/松动。",
+            "what_en": "Large day-over-day change in perpetual funding (annualized).",
+            "how_zh": "取看板缓存中 funding 序列的年化值（%）；Δ = 今日年化 − 昨日年化（百分点）。当 |Δ| ≥ funding_jump_pp（默认 8）时触发。",
+            "how_en": "Δ = today funding ann.% − prior day (percentage points). Fires if |Δ| ≥ funding_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": 1.636,
+            "eth_ret_1d": 2.504,
+            "funding_ann_pct": -7.9114,
+            "funding_ann_chg_pp": -8.331,
+            "liq_vs_prior": 0.793,
+            "iv_rv_spread": 7.93,
+            "iv_rv_spread_chg_pp": -0.7,
+            "vix_ret_1d": -1.334,
+            "value": -8.331,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 funding 年化日变 -8.33 个百分点，阈值 |·|≥8.00",
+          "readout_en": "funding ann. day change -8.33 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "BTC 日收益 +1.64%、ETH +2.50%，价格温和上行。资金费率年化日变 -8.33 个百分点至 -7.91%，触发跳变阈值，提示杠杆拥挤显著松动。IV−RV 点差仍处 +7.93 pp、日变 -0.70 pp，波动溢价略收。传统侧 ES -0.12%、NQ +0.12%、VIX -1.33%、DXY -0.17%，美股基本平淡、波动回落，币价上涨与股指非同向、略显背离。",
+      "read_en": "依据（程序）：\n- 观测 funding 年化日变 -8.33 个百分点，阈值 |·|≥8.00\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "【费率骤降下的温和上涨】今天市场处于温和上涨状态，主矛盾是永续资金费率大幅回落带来的杠杆松动，价格仍录得正收益；与近乎持平的美股略显背离。",
+      "text_en": "Mild up day driven by sharp funding drop (leverage easing) while crypto prints positive returns; slight divergence from flat US equities.",
+      "card": {
+        "date": "2026-04-10",
+        "prior_date": "2026-04-09",
+        "btc_ret_1d": 1.636,
+        "eth_ret_1d": 2.504,
+        "funding_ann_pct": -7.9114,
+        "funding_ann_chg_pp": -8.331,
+        "liq_vs_prior": 0.793,
+        "iv_ann_pct": 43.14,
+        "rv_7_ann_pct": 35.2134,
+        "iv_rv_spread": 7.93,
+        "iv_rv_spread_chg_pp": -0.7,
+        "vix_ret_1d": -1.334,
+        "es_ret_1d": -0.117,
+        "nq_ret_1d": 0.118,
+        "dxy_ret_1d": -0.172,
+        "gold_ret_1d": -0.632,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-04-09",
+            "day": "2026-04-10"
+          },
+          "NQ": {
+            "prior": "2026-04-09",
+            "day": "2026-04-10"
+          },
+          "VIX": {
+            "prior": "2026-04-09",
+            "day": "2026-04-10"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记仍有 3 项观察位待跟进。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC +1.64%",
+      "tone": "up"
+    },
+    {
+      "text": "ETH +2.50%",
+      "tone": "up"
+    },
+    {
+      "text": "资金费率年化日变 -8.33 个百分点",
+      "tone": "warn"
+    },
+    {
+      "text": "至 -7.91%",
+      "tone": "down"
+    },
+    {
+      "text": "与近乎持平的美股略显背离",
+      "tone": "neutral"
+    },
+    {
+      "text": "VIX -1.33%",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

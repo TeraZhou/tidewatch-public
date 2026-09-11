@@ -1,0 +1,81 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-12",
+  "date_effective": "2026-08-12",
+  "as_of": "2026-09-04T07:00:32Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-12",
+    "prior_date": "2026-08-11",
+    "btc_ret_1d": -0.189,
+    "eth_ret_1d": -0.148,
+    "oi_qty": 111095.574,
+    "oi_chg_pct": 1.666,
+    "perp_turnover_usd": 7296912639.604,
+    "perp_turnover_chg_pct": 7.82,
+    "spot_turnover_usd": 868963134.2285606,
+    "spot_turnover_chg_pct": 5.46,
+    "btc_etf_net_usd": -61163714.0,
+    "eth_etf_net_usd": 7379093.0,
+    "etf_lookback_sum_btc_usd": -200948412.0,
+    "etf_lookback_sum_eth_usd": -8973258.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.19%（小区间） · ETH -0.15% · OI 日变 +1.67% · 永续成交额 72.97 亿美金（日变 +7.8%） · BTC ETF 净流 -61.16 百万美金",
+    "weather_en": "Weather: BTC -0.19% · ETH -0.15% · OI +1.67% d/d · perp turnover 7.30B (+7.8% d/d) · BTC ETF net -61.16M",
+    "text_zh": "近况偏平静：BTC 微跌 0.19%、ETH 微跌 0.15%，都在小区间里晃。OI 日增 1.67%，永续成交额约 73 亿美金（+7.8%），BTC ETF 净流出约 6116 万美金。",
+    "text_en": "Quiet session: BTC -0.19%, ETH -0.15% in a tight range. OI +1.67% d/d, perp turnover ~7.3B (+7.8%), BTC ETF net ~-61M."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：还挂着「IV是什么意思，和VIX有什么区别」。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "微跌 0.19%",
+      "tone": "down"
+    },
+    {
+      "text": "OI 日增 1.67%",
+      "tone": "up"
+    },
+    {
+      "text": "永续成交额约 73 亿美金（+7.8%）",
+      "tone": "up"
+    },
+    {
+      "text": "资金费率年化 7.15%，日变 -3.80 个百分点",
+      "tone": "neutral"
+    },
+    {
+      "text": "VIX -4.78%",
+      "tone": "down"
+    },
+    {
+      "text": "略有背离",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

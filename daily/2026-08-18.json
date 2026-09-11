@@ -1,0 +1,81 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-18",
+  "date_effective": "2026-08-18",
+  "as_of": "2026-09-04T07:03:59Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-18",
+    "prior_date": "2026-08-17",
+    "btc_ret_1d": 0.3,
+    "eth_ret_1d": 0.222,
+    "oi_qty": 106292.381,
+    "oi_chg_pct": -0.116,
+    "perp_turnover_usd": 6285075890.8312,
+    "perp_turnover_chg_pct": -28.73,
+    "spot_turnover_usd": 759405329.8294215,
+    "spot_turnover_chg_pct": -16.49,
+    "btc_etf_net_usd": 189296469.0,
+    "eth_etf_net_usd": 71468047.0,
+    "etf_lookback_sum_btc_usd": 429221249.0,
+    "etf_lookback_sum_eth_usd": 102319247.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.30%（小区间） · ETH +0.22% · OI 日变 -0.12% · 永续成交额 62.85 亿美金（日变 -28.7%） · BTC ETF 净流 +1.89 亿美金",
+    "weather_en": "Weather: BTC +0.30% · ETH +0.22% · OI -0.12% d/d · perp turnover 6.29B (-28.7% d/d) · BTC ETF net +189.30M",
+    "text_zh": "今天币圈几乎原地踏步：BTC微涨0.30%，ETH跟涨0.22%，都在小区间里。杠杆存量几乎没动，永续成交却明显缩水，整体偏安静。",
+    "text_en": "Quiet session: BTC +0.30%, ETH +0.22% in a tight range; OI nearly flat, perp turnover down sharply."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV是什么、和VIX有何区别。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "微涨0.30%",
+      "tone": "up"
+    },
+    {
+      "text": "成交却明显缩水",
+      "tone": "down"
+    },
+    {
+      "text": "-28.7%",
+      "tone": "down"
+    },
+    {
+      "text": "与美股背离",
+      "tone": "warn"
+    },
+    {
+      "text": "+1.89亿美金",
+      "tone": "up"
+    },
+    {
+      "text": "偏安静",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-08-22",
+  "date_effective": "2026-08-22",
+  "as_of": "2026-09-04T07:06:03Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-08-22",
+    "prior_date": "2026-08-21",
+    "btc_ret_1d": -1.612,
+    "eth_ret_1d": -3.724,
+    "oi_qty": 105834.173,
+    "oi_chg_pct": -0.267,
+    "perp_turnover_usd": 9984280977.95,
+    "perp_turnover_chg_pct": -71.11,
+    "spot_turnover_usd": 1433768388.597238,
+    "spot_turnover_chg_pct": -57.85,
+    "btc_etf_net_usd": 307453306.0,
+    "eth_etf_net_usd": 184932209.0,
+    "etf_lookback_sum_btc_usd": 1620232786.0,
+    "etf_lookback_sum_eth_usd": 666327528.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -1.61%（有波动、未过异常默认线） · ETH -3.72% · OI 日变 -0.27% · 永续成交额 99.84 亿美金（日变 -71.1%） · BTC ETF 净流 +3.07 亿美金",
+    "weather_en": "Weather: BTC -1.61% · ETH -3.72% · OI -0.27% d/d · perp turnover 9.98B (-71.1% d/d) · BTC ETF net +307.45M",
+    "text_zh": "币圈温和回落：BTC 跌 1.61%、ETH 跌 3.72%，杠杆总量几乎没动，永续和现货成交都大幅缩量。美股小涨、波动率回落，两边暂时不同步。",
+    "text_en": "Mild crypto pullback: BTC -1.61%, ETH -3.72%; OI nearly flat, perp and spot turnover sharply lower. Equities edged up while VIX fell—temporary divergence."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记还挂着：IV 是什么、和 VIX 有何区别——可对照今日 IV−RV 点差与 VIX 回落一起看。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 跌 1.61%、ETH 跌 3.72%",
+      "tone": "down"
+    },
+    {
+      "text": "永续成交额 99.84 亿美金，日变 -71.1%",
+      "tone": "down"
+    },
+    {
+      "text": "OI 日变仅 -0.27%",
+      "tone": "neutral"
+    },
+    {
+      "text": "BTC 与 ES 明显背离",
+      "tone": "warn"
+    },
+    {
+      "text": "VIX -5.50%",
+      "tone": "down"
+    },
+    {
+      "text": "股市情绪在松，币圈交易却先冷了下来",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-08-21",
+    "etf_eth_using_2026-08-21"
+  ]
+}

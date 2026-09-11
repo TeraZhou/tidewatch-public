@@ -1,0 +1,212 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-05-01",
+  "date_effective": "2026-05-01",
+  "as_of": "2026-09-01T02:31:57Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-05-01",
+    "prior_date": "2026-04-30",
+    "btc_ret_1d": 2.468,
+    "eth_ret_1d": 1.689,
+    "oi_qty": 103865.507,
+    "oi_chg_pct": 8.963,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +2.47%（有波动、未过异常默认线） · ETH +1.69% · OI 日变 +8.96%",
+    "weather_en": "Weather: BTC +2.47% · ETH +1.69% · OI +8.96% d/d",
+    "text_zh": "近况：BTC +2.47%（有波动、未过异常默认线） · ETH +1.69% · OI 日变 +8.96%",
+    "text_en": "Weather: BTC +2.47% · ETH +1.69% · OI +8.96% d/d"
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "持仓量日变显著",
+      "headline_en": "持仓量日变显著",
+      "conclusion_zh": "状态判断：持仓量日变显著。币侧 BTC +2.47%、ETH +1.69%。传统对照 ES +0.20%、VIX +0.59%。",
+      "conclusion_en": "状态判断：持仓量日变显著。币侧 BTC +2.47%、ETH +1.69%。传统对照 ES +0.20%、VIX +0.59%。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+2.47%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+1.69%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+3.15 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "-0.90"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "+8.96%"
+        },
+        {
+          "key": "liq_vs_prior",
+          "label_zh": "清算/前日",
+          "display": "2.32×"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+10.17 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-7.13 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "+0.20%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+0.87%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "oi_jump",
+          "value": 8.963,
+          "threshold": 8.0,
+          "direction": "up",
+          "summary_zh": "OI 日变 +8.96%（总量结构，阈值 |·|≥8.0%）",
+          "summary_en": "OI day change +8.96% (total structure; threshold 8.0%)",
+          "meta": {
+            "title_zh": "持仓量（OI）日变跳变",
+            "title_en": "Open interest day jump",
+            "what_zh": "永续/合约持仓量总量相对前一日是否大幅增减，提示加杠杆或去杠杆的存量变化（总量结构，无多空 side）。",
+            "what_en": "Large day-over-day change in total open interest (structure only; no long/short side).",
+            "how_zh": "oi_chg_pct = (今日 oi_qty ÷ 昨日 oi_qty − 1)×100（看板 series.derivatives.oi）。当 |oi_chg_pct| ≥ oi_jump_abs_pct（默认 8）时触发。与 funding/liq 同读；禁止单独归因涨跌。",
+            "how_en": "oi_chg_pct = (today oi_qty / prior − 1)×100 from cache derivatives.oi. Fires if |pct| ≥ oi_jump_abs_pct (default 8). Read with funding/liq; no price attribution."
+          },
+          "observed": {
+            "btc_ret_1d": 2.468,
+            "eth_ret_1d": 1.689,
+            "funding_ann_pct": -0.9001,
+            "funding_ann_chg_pp": 3.15,
+            "oi_qty": 103865.507,
+            "oi_chg_pct": 8.963,
+            "liq_vs_prior": 2.324,
+            "iv_rv_spread": 10.17,
+            "iv_rv_spread_chg_pp": -7.13,
+            "vix_ret_1d": 0.592,
+            "value": 8.963,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 OI 日变 8.96%（总量 oi_qty 103865.5），阈值 |·|≥8.00%",
+          "readout_en": "OI day change +8.96% (total structure; threshold 8.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "依据（程序）：\n- 观测 OI 日变 8.96%（总量 oi_qty 103865.5），阈值 |·|≥8.00%\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "read_en": "依据（程序）：\n- 观测 OI 日变 8.96%（总量 oi_qty 103865.5），阈值 |·|≥8.00%\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "状态判断：持仓量日变显著。币侧 BTC +2.47%、ETH +1.69%。传统对照 ES +0.20%、VIX +0.59%。",
+      "text_en": "状态判断：持仓量日变显著。币侧 BTC +2.47%、ETH +1.69%。传统对照 ES +0.20%、VIX +0.59%。",
+      "card": {
+        "date": "2026-05-01",
+        "prior_date": "2026-04-30",
+        "btc_ret_1d": 2.468,
+        "eth_ret_1d": 1.689,
+        "funding_ann_pct": -0.9001,
+        "funding_ann_chg_pp": 3.15,
+        "oi_qty": 103865.507,
+        "oi_prior_qty": 95321.485,
+        "oi_chg_pct": 8.963,
+        "liq_total": 119.0100000000002,
+        "liq_vs_prior": 2.324,
+        "iv_ann_pct": 38.52,
+        "rv_7_ann_pct": 28.3521,
+        "iv_rv_spread": 10.17,
+        "iv_rv_spread_chg_pp": -7.13,
+        "vix_ret_1d": 0.592,
+        "es_ret_1d": 0.197,
+        "nq_ret_1d": 0.869,
+        "dxy_ret_1d": 0.133,
+        "gold_ret_1d": 0.329,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-04-30",
+            "day": "2026-05-01"
+          },
+          "NQ": {
+            "prior": "2026-04-30",
+            "day": "2026-05-01"
+          },
+          "VIX": {
+            "prior": "2026-04-30",
+            "day": "2026-05-01"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：待复习钉 0 · 开放哨 3",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "template",
+  "narrative_model": null,
+  "llm_error": "LLM HTTP 429: {\"error\":{\"message\":\"Concurrency limit exceeded for user, please retry later\",\"type\":\"rate_limit_error\"}}",
+  "brief_highlights": [
+    {
+      "text": "+2.47%",
+      "tone": "up"
+    },
+    {
+      "text": "+1.69%",
+      "tone": "up"
+    },
+    {
+      "text": "BTC",
+      "tone": "neutral"
+    },
+    {
+      "text": "ETH",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI +8.96%",
+      "tone": "up"
+    },
+    {
+      "text": "异常",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

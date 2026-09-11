@@ -1,0 +1,56 @@
+{
+  "schema": "tidewatch_result_card_v1",
+  "event_id": "fomc_2026_07",
+  "series": "fomc",
+  "template_id": "fomc",
+  "event_date": "2026-07-29",
+  "ok": true,
+  "status": "fetched",
+  "adapter": "fed_openmarket_http",
+  "fetched_at": "2026-09-04T08:31:17Z",
+  "source_urls": [
+    "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+  ],
+  "values": {
+    "fed_funds_lower": 3.5,
+    "fed_funds_upper": 3.75,
+    "changed": false,
+    "sep_present": false,
+    "effective_date": "2025-12-11",
+    "increase_bp": 0,
+    "decrease_bp": 0,
+    "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+    "meeting_date": "2026-07-29"
+  },
+  "prior_values": {
+    "fed_funds_lower": 3.75,
+    "fed_funds_upper": 4.0,
+    "effective_date": "2025-10-30"
+  },
+  "revision_note": null,
+  "statement_bullets": [
+    "The Committee decided to maintain the target range for the federal funds rate at 3-1/2 to 3-3/4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+    "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability.",
+    "Voting against the monetary policy action were Beth M. Hammack, Neel Kashkari, and Lorie K. Logan, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+  ],
+  "last_attempt_at": "2026-09-04T08:31:17Z",
+  "attempt_n": 1,
+  "poll_attempts": null,
+  "raw_ref": {
+    "effective_date": "2025-12-11",
+    "history_n": 30,
+    "as_of_event": "2026-07-29",
+    "changed": false,
+    "statement": {
+      "ok": true,
+      "n": 3,
+      "cached": false,
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260729a.htm"
+    }
+  },
+  "fixture": false,
+  "override": null,
+  "error": null
+}

@@ -1,0 +1,668 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2025-10-29",
+  "date_effective": "2025-10-29",
+  "as_of": "2026-09-03T08:49:54Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2025-10-29",
+    "prior_date": null,
+    "btc_ret_1d": null,
+    "eth_ret_1d": null,
+    "oi_qty": null,
+    "oi_chg_pct": null,
+    "btc_etf_net_usd": null,
+    "eth_etf_net_usd": null,
+    "etf_lookback_sum_btc_usd": null,
+    "etf_lookback_sum_eth_usd": null,
+    "label_jumps": [],
+    "weather_zh": "近况：暂无可用日收益",
+    "weather_en": "Weather: no day return available",
+    "text_zh": "近况：暂无可用日收益",
+    "text_en": "Weather: no day return available"
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "fomc_2025_10",
+        "date": "2025-10-29",
+        "name_zh": "FOMC 利率决议",
+        "name_en": "FOMC policy decision",
+        "source": "fomc",
+        "series": "fomc",
+        "level": "high"
+      },
+      "badge_zh": "会后·有结果",
+      "badge_en": "Post · official result in card",
+      "phase": "day_of_post",
+      "headline_zh": "FOMC 决议 · 公布日",
+      "headline_en": "FOMC policy decision",
+      "lead_zh": "美联储议息：目标利率与政策声明。 姿态：降息/转松。",
+      "station_zh": "偏静的框架精读日（日历接触为主）",
+      "part1_zh": "（会前对照）日历钉「FOMC 利率决议」。美联储开会：要不要动利率、声明怎么写。全球「钱松还是钱紧」最敏感的官方时刻之一。",
+      "part1_en": null,
+      "part2_zh": "（会前对照）当时还不是判决书，只谈议程框架：利率调不调、声明里就业/通胀/增长怎么平衡写、若有点阵或预测看路径分布。对答案正文见上方「短翻译 / 结果块」。",
+      "part2_en": null,
+      "part3_zh": "【传导故事 · 约2～4分钟精读 · 会后·有结果】\n\n第一拍·官方动哪根绳。政策利率这根绳——官方要不要把「借钱成本」拧紧或拧松一点，以及他们怎么描述经济。\n\n第二拍·资金先改猜什么。全球资金会先改猜：未来一年利率路径是「更高更久」还是「更快放松」，美元会偏强还是偏软。\n\n第三拍·股债汇与波动怎么跟。美债收益率与美元常最先重定价；美股与 VIX 跟着风险偏好起伏；波动（含期权 IV）可能在会前抬、会后重估。\n\n第四拍·加密接在哪一环。加密很少被点名，多半接在「风险偏好 / 美元松紧」后面：可能同向跟，也可能脱钩——所以是间接一环，不是一对一开关。\n\n第五拍·前后通常有多长（情景，非预测）。最吵多在决议日前后 1～2 个交易日；叙事消化常要数日；「路径框架」可能管到下一次议息。单次会议解释不了数月趋势。 近距约 T−1～T+1 交易日最吵；框架感可延伸到下一次 FOMC。 不确定：不确定卡在：会前已计入多少、声明/记者会有没有意外、股与币是否脱钩。\n\n第六拍·扣到本页你在哪一站。 站位：偏静的框架精读日（日历接触为主）。 结合本页：近况相对平静、近日也未见驱动门闩。今天更适合把「FOMC 利率决议」当**框架精读**——弄懂传导故事；本页涨跌不必硬塞进这根钉。\n\n以上是机制与时间位置，不是买卖点；禁止把本页涨跌写成「因该事件所以」。",
+      "part3_en": null,
+      "part4_zh": "站位：偏静的框架精读日（日历接触为主）。 官方轴：今日**是**官方日历钉日「FOMC 利率决议」；角标 **会后·有结果**（结果卡已入库，可对答案；仍不把涨跌写成「因该事件所以」。）。 本页市场轴：近况：暂无可用日收益 时间关系（非因果）：事件日前近日**未见**程序驱动门闩；今天这一页的主接触是官方日历钉「FOMC 利率决议」，市场轴相对平静。若公布后几日再出现驱动，那是市场轴后续，仍不自动写成「因该数据所以…」。 因果留给你；潮观只翻译状态。非投资建议。",
+      "part4_en": null,
+      "post_brief_zh": "读数：联邦基金目标区间 3.75–4.0%；changed 有调整。 一句话姿态：降息/转松。联邦基金目标区间 3.75%–4.00%。 今天盘面（和机制分开看）：见近况。近几日窗口：窗口内未触发日频驱动规则；公布日；后续交易日尚未计入。",
+      "post_deep_zh": "【先说结论】降息/转松 · 目标区间 3.75%–4.00%。\n联邦基金目标区间 3.75%–4.00%。 表上对应生效日 2025-10-30（联储 open-market 表，常为会后 +1 日）。 相对前次下调约 25 bp（表内 Decrease）；常见「偏松」叙事，但仍看声明。\n\n【怎么读这张卡】数字来自联储 open-market「目标区间」表（免 API key），不是声明全文。生效日可能是会后 +1。与 BTC/美股并置看，勿写「因 FOMC 所以涨跌」。\n\n【和降息/转松】区间下移时，市场常定价「钱松一点」：美债利率有时回、风险资产常走偏利多剧本；仍要听声明是「预防式松」还是「被数据逼松」。\n\n【钱会往哪想】政策利息像全球「借钱贵不贵」的总闸之一。\n· 加息或「更高更久」：美元易强、美债利率易上，股/信用/加密等风险资产常走偏利空剧本\n· 降息或明确转松：大致反过来，偏利多剧本\n声明怎么写，有时比区间本身还能加戏或降温。\n\n【会吵多久】前后 1～2 个交易日往往最热闹；大故事（降息路径等）可能要拖数周，直到下一份数据或下次开会。\n\n【怎么和本页盘面一起看】上面是「若读数偏热/偏凉，钱通常怎么想」；本页 BTC、美股、VIX 等是另一路事实，请并排看，别写成「因本次数据所以涨跌」。非投资建议。",
+      "post_reaction_zh": "窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+      "result_caption_zh": "字段释义见读数下方。机制为条件情景，非下单指令。",
+      "text_zh": "读数：联邦基金目标区间 3.75–4.0%；changed 有调整。 一句话姿态：降息/转松。联邦基金目标区间 3.75%–4.00%。 今天盘面（和机制分开看）：见近况。近几日窗口：窗口内未触发日频驱动规则；公布日；后续交易日尚未计入。",
+      "text_en": "FOMC policy decision",
+      "has_official_result": true,
+      "result_status": "fetched",
+      "result_block": {
+        "ok": true,
+        "status": "fetched",
+        "event_id": "fomc_2025_10",
+        "series": "fomc",
+        "lines": [
+          {
+            "label_zh": "联邦基金目标区间",
+            "key": "fed_funds_range",
+            "text": "3.75–4.0%"
+          },
+          {
+            "label_zh": "相对前次",
+            "key": "changed",
+            "text": "有调整"
+          }
+        ],
+        "lines_plain": [
+          {
+            "label_zh": "联邦基金目标区间",
+            "key": "fed_funds_range",
+            "text": "3.75–4.0%",
+            "name_zh": "联邦基金目标区间",
+            "jargon": "Fed funds target",
+            "what_zh": "美联储设定的隔夜利率目标区间。",
+            "why_zh": "决议日最核心的政策数字之一。"
+          },
+          {
+            "label_zh": "changed",
+            "key": "changed",
+            "text": "有调整",
+            "name_zh": "changed",
+            "jargon": "changed",
+            "what_zh": "",
+            "why_zh": ""
+          }
+        ],
+        "source_urls": [
+          "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+          "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        ],
+        "fetched_at": "2026-09-03T08:49:46Z",
+        "adapter": "fed_openmarket_http",
+        "result_plain_zh": "FOMC对答案：联邦基金目标区间 3.75–4.0% · 相对前次 有调整。单月/单次仍可能有噪音；趋势要更多数据。",
+        "fixture": false,
+        "revision_note": null,
+        "prior_values": {
+          "fed_funds_lower": 4.0,
+          "fed_funds_upper": 4.25,
+          "effective_date": "2025-09-18"
+        },
+        "values": {
+          "fed_funds_lower": 3.75,
+          "fed_funds_upper": 4.0,
+          "changed": true,
+          "sep_present": false,
+          "effective_date": "2025-10-30",
+          "increase_bp": 0,
+          "decrease_bp": 25,
+          "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+          "meeting_date": "2025-10-29"
+        }
+      },
+      "result_plain_zh": null,
+      "reaction": {
+        "schema": "tidewatch_reaction_v1",
+        "kind": "post",
+        "event_id": "fomc_2025_10",
+        "event_date": "2025-10-29",
+        "digest_day": "2025-10-29",
+        "offset": 0,
+        "window_days": 3,
+        "as_of_today": true,
+        "name_zh": "FOMC 利率决议",
+        "name_en": "FOMC policy decision",
+        "series": "fomc",
+        "template_id": "fomc",
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
+        },
+        "result_ok": true,
+        "result_mini_zh": "联邦基金目标区间 3.75–4.0% · changed 有调整",
+        "result_block": {
+          "ok": true,
+          "status": "fetched",
+          "event_id": "fomc_2025_10",
+          "series": "fomc",
+          "lines": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%"
+            },
+            {
+              "label_zh": "相对前次",
+              "key": "changed",
+              "text": "有调整"
+            }
+          ],
+          "lines_plain": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%",
+              "name_zh": "联邦基金目标区间",
+              "jargon": "Fed funds target",
+              "what_zh": "美联储设定的隔夜利率目标区间。",
+              "why_zh": "决议日最核心的政策数字之一。"
+            },
+            {
+              "label_zh": "changed",
+              "key": "changed",
+              "text": "有调整",
+              "name_zh": "changed",
+              "jargon": "changed",
+              "what_zh": "",
+              "why_zh": ""
+            }
+          ],
+          "source_urls": [
+            "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+          ],
+          "fetched_at": "2026-09-03T08:49:46Z",
+          "adapter": "fed_openmarket_http",
+          "result_plain_zh": "FOMC对答案：联邦基金目标区间 3.75–4.0% · 相对前次 有调整。单月/单次仍可能有噪音；趋势要更多数据。",
+          "fixture": false,
+          "revision_note": null,
+          "prior_values": {
+            "fed_funds_lower": 4.0,
+            "fed_funds_upper": 4.25,
+            "effective_date": "2025-09-18"
+          },
+          "values": {
+            "fed_funds_lower": 3.75,
+            "fed_funds_upper": 4.0,
+            "changed": true,
+            "sep_present": false,
+            "effective_date": "2025-10-30",
+            "increase_bp": 0,
+            "decrease_bp": 25,
+            "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "meeting_date": "2025-10-29"
+          }
+        },
+        "pin_href": "daily_20251029.html",
+        "rows": [
+          {
+            "date": "2025-10-29",
+            "offset": 0,
+            "label": "T·当天",
+            "btc_ret_1d": null,
+            "eth_ret_1d": null,
+            "oi_chg_pct": null,
+            "funding_ann_pct": null,
+            "funding_ann_chg_pp": null,
+            "es_ret_1d": null,
+            "nq_ret_1d": null,
+            "vix_ret_1d": null,
+            "dxy_ret_1d": null,
+            "fired_ids": [],
+            "has_driver": false,
+            "weather_zh": "近况：暂无可用日收益",
+            "errors": [
+              "no_spot_rows"
+            ]
+          }
+        ],
+        "headers_plain": [
+          {
+            "key": "btc_ret_1d",
+            "name_zh": "BTC",
+            "what_zh": "比特币日涨跌幅。"
+          },
+          {
+            "key": "eth_ret_1d",
+            "name_zh": "ETH",
+            "what_zh": "以太坊日涨跌幅。"
+          },
+          {
+            "key": "oi_chg_pct",
+            "name_zh": "OI",
+            "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+          },
+          {
+            "key": "es_ret_1d",
+            "name_zh": "ES",
+            "what_zh": "标普期货日变，传统风险偏好参考。"
+          },
+          {
+            "key": "nq_ret_1d",
+            "name_zh": "NQ",
+            "what_zh": "纳指期货日变。"
+          },
+          {
+            "key": "vix_ret_1d",
+            "name_zh": "VIX",
+            "what_zh": "美股隐含波动；偏高常对应避险升温。"
+          },
+          {
+            "key": "dxy_ret_1d",
+            "name_zh": "DXY",
+            "what_zh": "美元指数日变。"
+          },
+          {
+            "key": "fired",
+            "name_zh": "驱动",
+            "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+          }
+        ],
+        "plain_zh": "窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+        "finger_zh": "窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+        "badge_zh": "会后·公布日",
+        "badge_en": "Post · release day",
+        "headline_zh": "FOMC 决议 · 公布日",
+        "rules": {
+          "no_attribution": true,
+          "no_future_rows": true
+        }
+      },
+      "card": {
+        "event_id": "fomc_2025_10",
+        "date": "2025-10-29",
+        "name_zh": "FOMC 利率决议",
+        "name_en": "FOMC policy decision",
+        "source": "fomc",
+        "series": "fomc",
+        "level": "high",
+        "phase": "day_of_post",
+        "phase_label_zh": "会后·有结果",
+        "phase_label_en": "Post · official result in card",
+        "template_id": "fomc_decision",
+        "template_title_zh": "FOMC 利率决议",
+        "template_title_en": "FOMC policy decision",
+        "plain_zh": "美联储开会：要不要动利率、声明怎么写。全球「钱松还是钱紧」最敏感的官方时刻之一。",
+        "teach_channels_zh": "利率预期→美元与风险偏好→加密间接。",
+        "what_zh": "FOMC 政策利率与声明日，是美元路径与风险偏好定价的核心锚之一。",
+        "what_en": "FOMC policy decision / statement day.",
+        "agenda_framework": {
+          "zh": [
+            "利率调不调",
+            "声明里就业/通胀/增长怎么平衡写",
+            "若有点阵或预测看路径分布",
+            "主席记者会（有则）怎么讲后续"
+          ],
+          "en": [
+            "Rate hold/cut/hike",
+            "Statement balance",
+            "Dots/SEP if any",
+            "Press conference path talk"
+          ]
+        },
+        "story_beats": {
+          "rope_zh": "政策利率这根绳——官方要不要把「借钱成本」拧紧或拧松一点，以及他们怎么描述经济。",
+          "guess_zh": "全球资金会先改猜：未来一年利率路径是「更高更久」还是「更快放松」，美元会偏强还是偏软。",
+          "assets_zh": "美债收益率与美元常最先重定价；美股与 VIX 跟着风险偏好起伏；波动（含期权 IV）可能在会前抬、会后重估。",
+          "crypto_zh": "加密很少被点名，多半接在「风险偏好 / 美元松紧」后面：可能同向跟，也可能脱钩——所以是间接一环，不是一对一开关。",
+          "time_span_zh": "最吵多在决议日前后 1～2 个交易日；叙事消化常要数日；「路径框架」可能管到下一次议息。单次会议解释不了数月趋势。",
+          "uncertainty_zh": "不确定卡在：会前已计入多少、声明/记者会有没有意外、股与币是否脱钩。",
+          "horizon_note_zh": "近距约 T−1～T+1 交易日最吵；框架感可延伸到下一次 FOMC。"
+        },
+        "uncertainty_zh": "不确定卡在：会前已计入多少、声明/记者会有没有意外、股与币是否脱钩。",
+        "uncertainty_en": "Uncertainty: priced-in path, statement surprise, crypto-equity decoupling.",
+        "state_glance_slim": {
+          "date": "2025-10-29",
+          "prior_date": null,
+          "weather_zh": "近况：暂无可用日收益"
+        },
+        "nearby_driver_note": null,
+        "prior_driver_hits": [],
+        "has_official_text": true,
+        "has_official_result": true,
+        "result_status": "fetched",
+        "result_card": {
+          "schema": "tidewatch_result_card_v1",
+          "event_id": "fomc_2025_10",
+          "series": "fomc",
+          "template_id": "fomc",
+          "event_date": "2025-10-29",
+          "ok": true,
+          "status": "fetched",
+          "adapter": "fed_openmarket_http",
+          "fetched_at": "2026-09-03T08:49:46Z",
+          "source_urls": [
+            "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+          ],
+          "values": {
+            "fed_funds_lower": 3.75,
+            "fed_funds_upper": 4.0,
+            "changed": true,
+            "sep_present": false,
+            "effective_date": "2025-10-30",
+            "increase_bp": 0,
+            "decrease_bp": 25,
+            "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "meeting_date": "2025-10-29"
+          },
+          "prior_values": {
+            "fed_funds_lower": 4.0,
+            "fed_funds_upper": 4.25,
+            "effective_date": "2025-09-18"
+          },
+          "revision_note": null,
+          "statement_bullets": null,
+          "raw_ref": {
+            "effective_date": "2025-10-30",
+            "history_n": 30,
+            "as_of_event": "2025-10-29",
+            "changed": true
+          },
+          "fixture": false,
+          "override": null,
+          "error": null
+        },
+        "result_block": {
+          "ok": true,
+          "status": "fetched",
+          "event_id": "fomc_2025_10",
+          "series": "fomc",
+          "lines": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%"
+            },
+            {
+              "label_zh": "相对前次",
+              "key": "changed",
+              "text": "有调整"
+            }
+          ],
+          "lines_plain": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%",
+              "name_zh": "联邦基金目标区间",
+              "jargon": "Fed funds target",
+              "what_zh": "美联储设定的隔夜利率目标区间。",
+              "why_zh": "决议日最核心的政策数字之一。"
+            },
+            {
+              "label_zh": "changed",
+              "key": "changed",
+              "text": "有调整",
+              "name_zh": "changed",
+              "jargon": "changed",
+              "what_zh": "",
+              "why_zh": ""
+            }
+          ],
+          "source_urls": [
+            "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+          ],
+          "fetched_at": "2026-09-03T08:49:46Z",
+          "adapter": "fed_openmarket_http",
+          "result_plain_zh": "FOMC对答案：联邦基金目标区间 3.75–4.0% · 相对前次 有调整。单月/单次仍可能有噪音；趋势要更多数据。",
+          "fixture": false,
+          "revision_note": null,
+          "prior_values": {
+            "fed_funds_lower": 4.0,
+            "fed_funds_upper": 4.25,
+            "effective_date": "2025-09-18"
+          },
+          "values": {
+            "fed_funds_lower": 3.75,
+            "fed_funds_upper": 4.0,
+            "changed": true,
+            "sep_present": false,
+            "effective_date": "2025-10-30",
+            "increase_bp": 0,
+            "decrease_bp": 25,
+            "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "meeting_date": "2025-10-29"
+          }
+        },
+        "rules": {
+          "no_news": true,
+          "no_price_attribution": true,
+          "pre_result_badge_required": false,
+          "part4_three_sentences": true,
+          "no_fully_priced_claim": true,
+          "part3_six_beat_story": true,
+          "read_minutes": "2-4",
+          "part1_part2_short": true,
+          "no_fake_print": true
+        },
+        "contrast_slots": {
+          "official_axis_zh": "官方轴：今日**是**官方日历钉日「FOMC 利率决议」；角标 **会后·有结果**（结果卡已入库，可对答案；仍不把涨跌写成「因该事件所以」。）。",
+          "market_axis_zh": "本页市场轴：近况：暂无可用日收益",
+          "time_relation_zh": "时间关系（非因果）：事件日前近日**未见**程序驱动门闩；今天这一页的主接触是官方日历钉「FOMC 利率决议」，市场轴相对平静。若公布后几日再出现驱动，那是市场轴后续，仍不自动写成「因该数据所以…」。 因果留给你；潮观只翻译状态。非投资建议。"
+        },
+        "story_station": {
+          "key": "framework_day",
+          "label_zh": "偏静的框架精读日（日历接触为主）",
+          "hook_zh": "结合本页：近况相对平静、近日也未见驱动门闩。今天更适合把「FOMC 利率决议」当**框架精读**——弄懂传导故事；本页涨跌不必硬塞进这根钉。"
+        },
+        "reaction": {
+          "schema": "tidewatch_reaction_v1",
+          "kind": "post",
+          "event_id": "fomc_2025_10",
+          "event_date": "2025-10-29",
+          "digest_day": "2025-10-29",
+          "offset": 0,
+          "window_days": 3,
+          "as_of_today": true,
+          "name_zh": "FOMC 利率决议",
+          "name_en": "FOMC policy decision",
+          "series": "fomc",
+          "template_id": "fomc",
+          "story": {
+            "title_zh": "FOMC 决议",
+            "one_liner_zh": "美联储议息：目标利率与政策声明。",
+            "rope_zh": "政策利率",
+            "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+            "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
+          },
+          "result_ok": true,
+          "result_mini_zh": "联邦基金目标区间 3.75–4.0% · changed 有调整",
+          "result_block": {
+            "ok": true,
+            "status": "fetched",
+            "event_id": "fomc_2025_10",
+            "series": "fomc",
+            "lines": [
+              {
+                "label_zh": "联邦基金目标区间",
+                "key": "fed_funds_range",
+                "text": "3.75–4.0%"
+              },
+              {
+                "label_zh": "相对前次",
+                "key": "changed",
+                "text": "有调整"
+              }
+            ],
+            "lines_plain": [
+              {
+                "label_zh": "联邦基金目标区间",
+                "key": "fed_funds_range",
+                "text": "3.75–4.0%",
+                "name_zh": "联邦基金目标区间",
+                "jargon": "Fed funds target",
+                "what_zh": "美联储设定的隔夜利率目标区间。",
+                "why_zh": "决议日最核心的政策数字之一。"
+              },
+              {
+                "label_zh": "changed",
+                "key": "changed",
+                "text": "有调整",
+                "name_zh": "changed",
+                "jargon": "changed",
+                "what_zh": "",
+                "why_zh": ""
+              }
+            ],
+            "source_urls": [
+              "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+              "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            ],
+            "fetched_at": "2026-09-03T08:49:46Z",
+            "adapter": "fed_openmarket_http",
+            "result_plain_zh": "FOMC对答案：联邦基金目标区间 3.75–4.0% · 相对前次 有调整。单月/单次仍可能有噪音；趋势要更多数据。",
+            "fixture": false,
+            "revision_note": null,
+            "prior_values": {
+              "fed_funds_lower": 4.0,
+              "fed_funds_upper": 4.25,
+              "effective_date": "2025-09-18"
+            },
+            "values": {
+              "fed_funds_lower": 3.75,
+              "fed_funds_upper": 4.0,
+              "changed": true,
+              "sep_present": false,
+              "effective_date": "2025-10-30",
+              "increase_bp": 0,
+              "decrease_bp": 25,
+              "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+              "meeting_date": "2025-10-29"
+            }
+          },
+          "pin_href": "daily_20251029.html",
+          "rows": [
+            {
+              "date": "2025-10-29",
+              "offset": 0,
+              "label": "T·当天",
+              "btc_ret_1d": null,
+              "eth_ret_1d": null,
+              "oi_chg_pct": null,
+              "funding_ann_pct": null,
+              "funding_ann_chg_pp": null,
+              "es_ret_1d": null,
+              "nq_ret_1d": null,
+              "vix_ret_1d": null,
+              "dxy_ret_1d": null,
+              "fired_ids": [],
+              "has_driver": false,
+              "weather_zh": "近况：暂无可用日收益",
+              "errors": [
+                "no_spot_rows"
+              ]
+            }
+          ],
+          "headers_plain": [
+            {
+              "key": "btc_ret_1d",
+              "name_zh": "BTC",
+              "what_zh": "比特币日涨跌幅。"
+            },
+            {
+              "key": "eth_ret_1d",
+              "name_zh": "ETH",
+              "what_zh": "以太坊日涨跌幅。"
+            },
+            {
+              "key": "oi_chg_pct",
+              "name_zh": "OI",
+              "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+            },
+            {
+              "key": "es_ret_1d",
+              "name_zh": "ES",
+              "what_zh": "标普期货日变，传统风险偏好参考。"
+            },
+            {
+              "key": "nq_ret_1d",
+              "name_zh": "NQ",
+              "what_zh": "纳指期货日变。"
+            },
+            {
+              "key": "vix_ret_1d",
+              "name_zh": "VIX",
+              "what_zh": "美股隐含波动；偏高常对应避险升温。"
+            },
+            {
+              "key": "dxy_ret_1d",
+              "name_zh": "DXY",
+              "what_zh": "美元指数日变。"
+            },
+            {
+              "key": "fired",
+              "name_zh": "驱动",
+              "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+            }
+          ],
+          "plain_zh": "读数：联邦基金目标区间 3.75–4.0% · changed 有调整。「FOMC 决议」公布后窗口。窗口内未触发日频驱动规则；公布日；后续交易日尚未计入。仅含已实现日；与加密为间接并置，不作单次数据归因。",
+          "finger_zh": "窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+          "badge_zh": "会后·公布日",
+          "badge_en": "Post · release day",
+          "headline_zh": "FOMC 决议 · 公布日",
+          "rules": {
+            "no_attribution": true,
+            "no_future_rows": true
+          }
+        },
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
+        }
+      }
+    },
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 2,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记：待复习钉 2 · 开放哨 0",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "template",
+  "narrative_model": null,
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC",
+      "tone": "neutral"
+    },
+    {
+      "text": "ETH",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "no_spot_rows"
+  ]
+}

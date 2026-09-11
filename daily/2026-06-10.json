@@ -1,0 +1,77 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-06-10",
+  "date_effective": "2026-06-10",
+  "as_of": "2026-08-31T10:34:39Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-06-10",
+    "prior_date": "2026-06-09",
+    "btc_ret_1d": -0.355,
+    "eth_ret_1d": -1.094,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.35%（小区间） · ETH -1.09%",
+    "weather_en": "Weather: BTC -0.35% · ETH -1.09%",
+    "text_zh": "近况平静：BTC收跌0.35%处小区间，ETH跌1.09%。",
+    "text_en": "Calm: BTC -0.35% tight range, ETH -1.09%."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_cpi_2026_06",
+        "date": "2026-06-10",
+        "name_zh": "CPI（2026-05）",
+        "name_en": "CPI (May 2026)",
+        "source": "bls"
+      },
+      "text_zh": "日历：今日关注CPI（2026-05）。",
+      "text_en": "Calendar: CPI (May 2026)"
+    },
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：3个观察位仍在跟进。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC收跌0.35%",
+      "tone": "down"
+    },
+    {
+      "text": "ETH跌1.09%",
+      "tone": "down"
+    },
+    {
+      "text": "小区间",
+      "tone": "neutral"
+    },
+    {
+      "text": "与ES同向",
+      "tone": "neutral"
+    },
+    {
+      "text": "funding年化-0.99%",
+      "tone": "down"
+    },
+    {
+      "text": "VIX+11.83%",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

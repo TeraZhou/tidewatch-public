@@ -1,0 +1,250 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-02-13",
+  "date_effective": "2026-02-13",
+  "as_of": "2026-08-31T10:27:12Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-02-13",
+    "prior_date": "2026-02-12",
+    "btc_ret_1d": 3.896,
+    "eth_ret_1d": 5.179,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +3.90%（有波动、未过异常默认线） · ETH +5.18%",
+    "weather_en": "Weather: BTC +3.90% · ETH +5.18%",
+    "text_zh": "近况：BTC +3.90%、ETH +5.18%。ETH 触及价格冲击阈值，IV−RV 点差一日大幅跳升。",
+    "text_en": "Weather: BTC +3.90% · ETH +5.18%; ETH price shock with IV−RV spread jump."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_cpi_2026_02",
+        "date": "2026-02-13",
+        "name_zh": "CPI（2026-01）",
+        "name_en": "CPI (Jan 2026)",
+        "source": "bls"
+      },
+      "text_zh": "日历：CPI（2026-01）公布日。",
+      "text_en": "Calendar: CPI (Jan 2026)"
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "ETH冲击叠加波动点差急扩",
+      "headline_en": "期权相对实现波动定价跳变",
+      "conclusion_zh": "【ETH冲击叠加波动点差急扩】今日加密处于 ETH 价格冲击带动的普涨状态，主矛盾是现货大涨与 IV−RV 点差暴扩并存；美股近乎平盘，币与传统明显背离。",
+      "conclusion_en": "ETH price shock led a broad crypto up day; main tension is spot surge plus IV−RV spread blowout, while US equities were flat—clear crypto-tradfi divergence.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+3.90%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+5.18%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-5.05 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "1.35"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+8.55 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+47.46 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.01%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+0.14%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "-1.06%"
+        },
+        {
+          "key": "dxy_ret_1d",
+          "label_zh": "DXY 日变",
+          "display": "-0.05%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "price_shock_eth",
+          "value": 5.179,
+          "threshold": 5.0,
+          "direction": "up",
+          "summary_zh": "ETH 日涨跌 +5.18%（阈值 |·|≥5.0%）",
+          "summary_en": "ETH day return +5.18% (threshold 5.0%)",
+          "meta": {
+            "title_zh": "ETH 日收益冲击",
+            "title_en": "ETH day-return shock",
+            "what_zh": "以太坊现货单日涨跌幅度是否达到异常阈值。",
+            "what_en": "Whether ETH spot one-day move hits the shock threshold.",
+            "how_zh": "与 BTC 相同公式，标的为 ETH Spot 日 K；阈值同 price_shock_abs_pct（默认 5%）。",
+            "how_en": "Same as BTC; ETH Spot daily close-to-close; same threshold default 5%."
+          },
+          "observed": {
+            "btc_ret_1d": 3.896,
+            "eth_ret_1d": 5.179,
+            "funding_ann_pct": 1.3458,
+            "funding_ann_chg_pp": -5.046,
+            "liq_vs_prior": 0.898,
+            "iv_rv_spread": 8.55,
+            "iv_rv_spread_chg_pp": 47.46,
+            "vix_ret_1d": -1.057,
+            "value": 5.179,
+            "threshold": 5.0
+          },
+          "readout_zh": "观测 ETH 日收益 5.18%，阈值 |·|≥5.00%",
+          "readout_en": "ETH day return +5.18% (threshold 5.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        },
+        {
+          "id": "iv_rv_spread_jump",
+          "value": 47.46,
+          "threshold": 8.0,
+          "summary_zh": "IV−RV 点差日变 +47.46 pp",
+          "summary_en": "IV−RV spread day change +47.46 pp",
+          "meta": {
+            "title_zh": "IV−RV 点差日变",
+            "title_en": "IV−RV spread day change",
+            "what_zh": "期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。",
+            "what_en": "Large one-day move in IV minus realized vol spread.",
+            "how_zh": "spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。",
+            "how_en": "spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": 3.896,
+            "eth_ret_1d": 5.179,
+            "funding_ann_pct": 1.3458,
+            "funding_ann_chg_pp": -5.046,
+            "liq_vs_prior": 0.898,
+            "iv_rv_spread": 8.55,
+            "iv_rv_spread_chg_pp": 47.46,
+            "vix_ret_1d": -1.057,
+            "value": 47.46,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 IV−RV 点差日变 47.46 pp（今日点差 8.55），阈值 |·|≥8.00 pp",
+          "readout_en": "IV−RV spread day change +47.46 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "观测 ETH 日收益 +5.18%（达 |·|≥5% 冲击阈值），BTC +3.90%。IV−RV 点差报 +8.55 pp，日变 +47.46 pp，远超 8 pp 阈值，期权隐含波动相对 7 日实现波动显著走贵。funding 年化 1.35%、日变 −5.05 pp；清算总量约 65.0、为前日约 0.90 倍。对照传统：ES −0.01%、NQ +0.14%、VIX −1.06%、DXY −0.05%，股指几乎不动而波动率小降，加密独立上行，与美股呈背离而非同向。",
+      "read_en": "依据（程序）：\n- 观测 ETH 日收益 5.18%，阈值 |·|≥5.00%\n- 观测 IV−RV 点差日变 47.46 pp（今日点差 8.55），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "【ETH冲击叠加波动点差急扩】今日加密处于 ETH 价格冲击带动的普涨状态，主矛盾是现货大涨与 IV−RV 点差暴扩并存；美股近乎平盘，币与传统明显背离。",
+      "text_en": "ETH price shock led a broad crypto up day; main tension is spot surge plus IV−RV spread blowout, while US equities were flat—clear crypto-tradfi divergence.",
+      "card": {
+        "date": "2026-02-13",
+        "prior_date": "2026-02-12",
+        "btc_ret_1d": 3.896,
+        "eth_ret_1d": 5.179,
+        "funding_ann_pct": 1.3458,
+        "funding_ann_chg_pp": -5.046,
+        "liq_vs_prior": 0.898,
+        "iv_ann_pct": 52.04,
+        "rv_7_ann_pct": 43.4914,
+        "iv_rv_spread": 8.55,
+        "iv_rv_spread_chg_pp": 47.46,
+        "vix_ret_1d": -1.057,
+        "es_ret_1d": -0.007,
+        "nq_ret_1d": 0.142,
+        "dxy_ret_1d": -0.052,
+        "gold_ret_1d": 1.996,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-02-12",
+            "day": "2026-02-13"
+          },
+          "NQ": {
+            "prior": "2026-02-12",
+            "day": "2026-02-13"
+          },
+          "VIX": {
+            "prior": "2026-02-12",
+            "day": "2026-02-13"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：3 个观察位仍开，无到期钉选。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "+5.18%",
+      "tone": "up"
+    },
+    {
+      "text": "+3.90%",
+      "tone": "up"
+    },
+    {
+      "text": "价格冲击",
+      "tone": "warn"
+    },
+    {
+      "text": "+47.46 pp",
+      "tone": "warn"
+    },
+    {
+      "text": "−5.05 pp",
+      "tone": "down"
+    },
+    {
+      "text": "背离",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

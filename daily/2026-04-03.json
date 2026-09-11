@@ -1,0 +1,213 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-04-03",
+  "date_effective": "2026-04-03",
+  "as_of": "2026-08-31T10:30:49Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-04-03",
+    "prior_date": "2026-04-02",
+    "btc_ret_1d": 0.093,
+    "eth_ret_1d": -0.162,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.09%（小区间） · ETH -0.16%",
+    "weather_en": "Weather: BTC +0.09% · ETH -0.16%",
+    "text_zh": "近况偏平静：BTC +0.09% 落在小区间，ETH -0.16%，价格几乎横盘。",
+    "text_en": "Quiet tape: BTC +0.09% in a tight range, ETH -0.16%."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_nfp_2026_04",
+        "date": "2026-04-03",
+        "name_zh": "非农就业（2026-03）",
+        "name_en": "Employment Situation (Mar 2026)",
+        "source": "bls"
+      },
+      "text_zh": "日历：今日有非农就业（2026-03）数据窗口。",
+      "text_en": "Calendar: Employment Situation (Mar 2026)"
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "IV溢价急扩的横盘日",
+      "headline_en": "期权相对实现波动定价跳变",
+      "conclusion_zh": "【IV溢价急扩的横盘日】今日币价近乎横盘，主矛盾在波动侧：IV相对RV的溢价一日大幅走阔。价格与美股温和同向，风险偏好未明显背离。",
+      "conclusion_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC +0.09%、ETH -0.16%。传统对照 ES +0.07%、VIX -2.73%。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+0.09%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "-0.16%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+5.10 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "4.11"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+23.05 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+8.32 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "+0.07%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+0.10%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "-2.73%"
+        },
+        {
+          "key": "dxy_ret_1d",
+          "label_zh": "DXY 日变",
+          "display": "+0.38%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "iv_rv_spread_jump",
+          "value": 8.32,
+          "threshold": 8.0,
+          "summary_zh": "IV−RV 点差日变 +8.32 pp",
+          "summary_en": "IV−RV spread day change +8.32 pp",
+          "meta": {
+            "title_zh": "IV−RV 点差日变",
+            "title_en": "IV−RV spread day change",
+            "what_zh": "期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。",
+            "what_en": "Large one-day move in IV minus realized vol spread.",
+            "how_zh": "spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。",
+            "how_en": "spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": 0.093,
+            "eth_ret_1d": -0.162,
+            "funding_ann_pct": 4.1117,
+            "funding_ann_chg_pp": 5.097,
+            "liq_vs_prior": 0.256,
+            "iv_rv_spread": 23.05,
+            "iv_rv_spread_chg_pp": 8.32,
+            "vix_ret_1d": -2.73,
+            "value": 8.32,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 IV−RV 点差日变 8.32 pp（今日点差 23.05），阈值 |·|≥8.00 pp",
+          "readout_en": "IV−RV spread day change +8.32 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0
+          }
+        }
+      ],
+      "read_zh": "BTC日收益仅+0.09%、ETH-0.16%，价格落在小区间。IV−RV点差升至23.05、日变+8.32pp，触发阈值，意味着期权隐含波动相对近7日实现波动明显变贵。funding年化约4.11%、日变+5.10pp。对照传统市场：ES+0.07%、NQ+0.10%温和上涨，VIX-2.73%回落，币与股指同向微涨；DXY+0.38%。整体是价格平静、波动定价显著抬升的一天。",
+      "read_en": "依据（程序）：\n- 观测 IV−RV 点差日变 8.32 pp（今日点差 23.05），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "【IV溢价急扩的横盘日】今日币价近乎横盘，主矛盾在波动侧：IV相对RV的溢价一日大幅走阔。价格与美股温和同向，风险偏好未明显背离。",
+      "text_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC +0.09%、ETH -0.16%。传统对照 ES +0.07%、VIX -2.73%。",
+      "card": {
+        "date": "2026-04-03",
+        "prior_date": "2026-04-02",
+        "btc_ret_1d": 0.093,
+        "eth_ret_1d": -0.162,
+        "funding_ann_pct": 4.1117,
+        "funding_ann_chg_pp": 5.097,
+        "liq_vs_prior": 0.256,
+        "iv_ann_pct": 47.41,
+        "rv_7_ann_pct": 24.3585,
+        "iv_rv_spread": 23.05,
+        "iv_rv_spread_chg_pp": 8.32,
+        "vix_ret_1d": -2.73,
+        "es_ret_1d": 0.068,
+        "nq_ret_1d": 0.096,
+        "dxy_ret_1d": 0.381,
+        "gold_ret_1d": -2.753,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-04-01",
+            "day": "2026-04-02"
+          },
+          "NQ": {
+            "prior": "2026-04-01",
+            "day": "2026-04-02"
+          },
+          "VIX": {
+            "prior": "2026-04-01",
+            "day": "2026-04-02"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记仍有3项观察未闭环。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC +0.09%",
+      "tone": "up"
+    },
+    {
+      "text": "ETH -0.16%",
+      "tone": "down"
+    },
+    {
+      "text": "IV−RV点差升至23.05",
+      "tone": "warn"
+    },
+    {
+      "text": "日变+8.32pp",
+      "tone": "warn"
+    },
+    {
+      "text": "ES+0.07%、NQ+0.10%",
+      "tone": "up"
+    },
+    {
+      "text": "VIX-2.73%",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

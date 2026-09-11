@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="color-scheme" content="light" />
+<title>潮观 · 每日摘要</title>
+<style>
+
+:root {
+  --bg:#f4f1ea; --card:#fffcf7; --line:rgba(60,48,32,.1); --text:#1c1917; --muted:#57534e;
+  --accent:#0f766e; --accent-soft:rgba(15,118,110,.1); --up:#15803d; --down:#be123c;
+  --sider:#1c1917; --sider-text:#e7e5e4; --radius:16px;
+  --font:"SF Pro Display","Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+}
+*{box-sizing:border-box}
+html{height:100%;width:100%;overflow-x:hidden;scrollbar-gutter:stable;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;width:100%;max-width:100%;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.55;overflow-x:hidden;min-width:0;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.tw-zoom-banner{display:none;position:sticky;top:0;z-index:300;background:#b45309;color:#fff7ed;font-size:13px;font-weight:600;padding:10px 16px;text-align:center;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.tw-zoom-banner code{background:rgba(0,0,0,.2);padding:2px 6px;border-radius:6px;font-weight:700}
+.tw-zoom-banner button{margin-left:10px;font:inherit;font-size:12px;font-weight:700;border:0;border-radius:999px;padding:5px 12px;cursor:pointer;background:#fff7ed;color:#9a3412}
+.layout{display:block;min-height:100vh;width:100%;max-width:100%;overflow-x:hidden;position:relative}
+/* Fixed full-viewport dark rail — avoids sticky/flex beige hole when main is tall */
+.sider{
+  position:fixed;left:0;top:0;bottom:0;width:220px;z-index:40;
+  background:var(--sider);color:var(--sider-text);
+  padding:18px 14px 16px;box-sizing:border-box;
+  display:flex;flex-direction:column;gap:14px;
+  overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;
+}
+.brand{display:flex;gap:10px;align-items:center;padding:4px 8px;flex:0 0 auto}
+.logo{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#0f766e,#14b8a6);display:grid;place-items:center;font-weight:800;color:#042f2e}
+.brand .name{font-weight:700;font-size:15px}.brand .sub{font-size:11px;opacity:.65}
+.nav{display:flex;flex-direction:column;gap:6px;flex:0 0 auto}
+.nav-item{display:block;padding:10px 12px;border-radius:10px;color:var(--sider-text);text-decoration:none;font-size:13px;opacity:.85}
+.nav-item:hover,.nav-item.active{background:rgba(255,255,255,.08);opacity:1}
+.nav-item.active{outline:1px solid rgba(45,212,191,.35)}
+.nav-badge{font-size:10px;opacity:.7;margin-left:4px;border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:1px 6px}
+.sider-foot{padding:8px;flex:0 0 auto;margin-top:auto}
+.lang-seg{display:inline-flex;border:1px solid rgba(255,255,255,.15);border-radius:999px;padding:3px}
+.lang-seg button{border:0;background:transparent;color:inherit;padding:6px 10px;border-radius:999px;cursor:pointer;font-size:12px}
+.lang-seg button.active{background:rgba(45,212,191,.25)}
+.main{margin-left:220px;box-sizing:border-box;width:auto;min-width:0;max-width:none;padding:28px 28px 60px;overflow-x:hidden}
+.main > *{max-width:1100px}
+img,canvas,svg,video,table,pre{max-width:100%}
+.chart-box{width:100%;max-width:100%;overflow:hidden}
+.chart-box canvas{display:block;width:100%!important;max-width:100%!important}
+
+.page-h h1{margin:0 0 18px;font-size:22px}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){
+  .layout{display:flex;flex-direction:column}
+  .sider{position:relative;left:auto;top:auto;bottom:auto;width:100%;height:auto;max-height:none;z-index:1}
+  .sider-foot{margin-top:8px}
+  .main{margin-left:0;max-width:100%;width:100%}
+  .main > *{max-width:100%}
+  .cards{grid-template-columns:1fr}
+}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;text-decoration:none;color:inherit;display:block;transition:box-shadow .15s}
+.card:hover{box-shadow:0 12px 32px rgba(28,25,23,.08)}
+.card .meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+.card .l0{font-size:14px;font-weight:600;margin:0 0 10px;line-height:1.4}
+.card .pills{display:flex;flex-wrap:wrap;gap:6px}
+.pill{font-size:11px;padding:4px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.pill.s3{color:#b45309;border-color:rgba(180,83,9,.35);background:rgba(180,83,9,.08)}
+.pill.up{color:var(--up)}.pill.down{color:var(--down)}
+.section-label{font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:600}
+table.data{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);font-size:12px}
+table.data th,table.data td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right}
+table.data th:first-child,table.data td:first-child{text-align:left}
+table.data th{background:rgba(0,0,0,.03);color:var(--muted);font-weight:600}
+a.link{color:var(--accent);font-weight:600;text-decoration:none}
+.placeholder{background:var(--card);border:1px dashed var(--line);border-radius:var(--radius);padding:28px;color:var(--muted);font-size:14px}
+.up{color:var(--up)}.down{color:var(--down)}
+span.lang.zh,span.lang.en{display:none!important}
+body.lang-zh span.lang.zh{display:inline!important}
+body.lang-en span.lang.en{display:inline!important}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+.block{margin-bottom:18px}
+.block h2{font-size:15px;margin:0 0 10px}
+.attn-box{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;margin-top:8px}
+.attn-box h3{margin:0 0 10px;font-size:14px;color:var(--muted)}
+.dash-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:16px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius)}
+.dash-toolbar label{font-size:12px;color:var(--muted)}
+.dash-toolbar input{font:inherit;font-size:13px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:#fff}
+.dash-toolbar button,.chart-export{font:inherit;font-size:12px;padding:7px 12px;border-radius:8px;border:0;background:var(--accent);color:#ecfdf5;cursor:pointer;font-weight:600}
+.chart-export{background:transparent;color:var(--accent);border:1px solid rgba(15,118,110,.35)}
+.chart-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px 8px;margin-bottom:14px}
+.chart-card .ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.chart-card h2{margin:0;font-size:14px}
+.chart-box{height:280px;position:relative}
+.dash-meta{font-size:12px;color:var(--muted);margin-bottom:12px}
+.quick-ranges button{margin-right:4px;background:rgba(15,118,110,.12);color:var(--accent)}
+.btn-focus{background:#0d9488!important}
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(28,25,23,.45);z-index:100;align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal{background:var(--card);border-radius:16px;max-width:720px;width:100%;max-height:90vh;overflow:auto;padding:20px 22px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.modal h2{margin:0 0 12px;font-size:18px}
+.modal .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.modal .actions{display:flex;gap:8px;justify-content:flex-end;margin-top:14px}
+.modal .actions button{font:inherit;font-size:13px;padding:8px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+.modal .actions .primary{background:var(--accent);color:#ecfdf5}
+.modal .actions .ghost{background:transparent;border:1px solid var(--line);color:var(--text)}
+.focus-table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}
+.focus-table th,.focus-table td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:right}
+.focus-table th:first-child,.focus-table td:first-child{text-align:left}
+.focus-table th{color:var(--muted);font-weight:600;background:rgba(0,0,0,.03)}
+/* Daily digest — top brief + foldable day card */
+/* Daily digest — top brief + foldable day card */
+.daily-week-nav{display:flex;flex-direction:column;gap:10px;margin:0 0 14px}
+.daily-week-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.daily-week-row .lab{font-size:11px;font-weight:700;color:var(--muted);margin-right:4px;min-width:2.5em}
+.daily-week-nav a{font-size:12px;font-weight:600;padding:7px 12px;border-radius:999px;border:1px solid var(--line);color:var(--muted);text-decoration:none;background:var(--card)}
+.daily-week-nav a:hover{border-color:rgba(15,118,110,.35);color:var(--accent)}
+.daily-week-nav a.active{background:var(--accent);color:#ecfdf5;border-color:transparent}
+.daily-week-nav a.has-alert{box-shadow:inset 0 -2px 0 rgba(180,83,9,.55)}
+.daily-week-nav .day-row a{padding:6px 10px;font-variant-numeric:tabular-nums;border-left:3px solid transparent}
+.daily-week-nav .day-row a.heat-0{border-left-color:transparent}
+.daily-week-nav .day-row a.heat-1{border-left-color:rgba(15,118,110,.45);background:rgba(15,118,110,.06)}
+.daily-week-nav .day-row a.heat-2{border-left-color:rgba(180,83,9,.65);background:rgba(180,83,9,.08);color:#92400e}
+.daily-week-nav .day-row a.heat-3{border-left-color:#b91c1c;background:rgba(185,28,28,.1);color:#991b1b}
+.daily-week-nav .day-row a.heat-4{border-left-color:#7f1d1d;background:rgba(127,29,29,.16);color:#7f1d1d;font-weight:800}
+.daily-week-nav .day-row a.active.heat-2,
+.daily-week-nav .day-row a.active.heat-3,
+.daily-week-nav .day-row a.active.heat-4{color:#ecfdf5}
+.daily-week-nav .day-row a.active.heat-2{background:#b45309;border-color:#b45309}
+.daily-week-nav .day-row a.active.heat-3{background:#b91c1c;border-color:#b91c1c}
+.daily-week-nav .day-row a.active.heat-4{background:#7f1d1d;border-color:#7f1d1d}
+.daily-week-nav .day-row a.missing{opacity:.42;cursor:not-allowed;border-style:dashed;pointer-events:none}
+.daily-week-nav .day-row a.cal-pin{box-shadow:inset 0 -2px 0 rgba(15,118,110,.55)}
+.daily-week-nav .day-row a.today:not(.active){outline:1px dashed rgba(15,118,110,.45)}
+.cal-page{max-width:720px}
+.cal-page .cal-meta{font-size:13px;color:var(--muted);margin:0 0 14px;line-height:1.55}
+.cal-page .cal-legend{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin:0 0 14px;font-size:12px;color:var(--muted)}
+.cal-page .cal-legend .lg{display:inline-flex;align-items:center;gap:6px}
+.cal-page .cal-dot{width:8px;height:8px;border-radius:50%;display:inline-block;flex-shrink:0}
+.cal-page .cal-dot.fomc{background:#0f766e}
+.cal-page .cal-dot.cpi{background:#b45309}
+.cal-page .cal-dot.nfp{background:#7c3aed}
+.cal-page .cal-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px}
+.cal-page .cal-nav h2{margin:0;font-size:1.15rem;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+.cal-page .cal-nav button{font:inherit;font-size:13px;font-weight:600;padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer}
+.cal-page .cal-nav button:hover{border-color:rgba(15,118,110,.35);color:var(--accent)}
+.cal-page .cal-nav button:disabled{opacity:.35;cursor:not-allowed}
+.cal-page .cal-grid-wrap{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 14px 10px;box-shadow:0 8px 24px rgba(28,25,23,.04);margin:0 0 18px}
+.cal-page .cal-wdays{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:0 0 6px}
+.cal-page .cal-wdays span{text-align:center;font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.04em;padding:4px 0}
+.cal-page .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-page .cal-cell{position:relative;min-height:64px;border-radius:12px;border:1px solid transparent;padding:8px 6px 10px;display:flex;flex-direction:column;align-items:center;gap:4px;background:transparent;color:var(--ink);font:inherit;text-decoration:none;box-sizing:border-box}
+.cal-page .cal-cell.out{opacity:.28;pointer-events:none}
+.cal-page .cal-cell .dnum{font-size:13px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1}
+.cal-page .cal-cell .dots{display:flex;gap:3px;min-height:8px;align-items:center;justify-content:center}
+.cal-page .cal-cell.plain{cursor:default}
+.cal-page .cal-cell.event{cursor:pointer;border-color:rgba(15,118,110,.18);background:rgba(15,118,110,.04)}
+.cal-page .cal-cell.event:hover{border-color:rgba(15,118,110,.45);background:rgba(15,118,110,.1);transform:translateY(-1px)}
+.cal-page .cal-cell.event:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.cal-page .cal-cell.today:not(.event){outline:1px dashed rgba(15,118,110,.45);outline-offset:0}
+.cal-page .cal-cell.today.event{box-shadow:inset 0 0 0 1.5px rgba(15,118,110,.55)}
+.cal-page .cal-cell.no-digest .dnum{opacity:.85}
+.cal-page .cal-cell .miss{font-size:9px;font-weight:700;color:var(--muted);letter-spacing:.02em}
+.cal-page .cal-foot{border-top:1px solid var(--line);padding-top:14px;margin-top:4px}
+.cal-page .cal-foot h3{margin:0 0 8px;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.cal-page .cal-foot-block{margin:0 0 16px}
+.cal-page .cal-foot-block:last-child{margin-bottom:0}
+.cal-page .cal-foot-title{font-size:14px;font-weight:700;margin:0 0 8px;color:var(--ink)}
+.cal-page .cal-foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.cal-page .cal-foot li{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 12px;font-size:13px;line-height:1.45;padding:8px 10px;border-radius:10px;background:rgba(0,0,0,.02);border:1px solid var(--line)}
+.cal-page .cal-foot li .fd{font-variant-numeric:tabular-nums;font-weight:700;color:var(--accent);min-width:5.5em}
+.cal-page .cal-foot li .fn{flex:1;min-width:12em;color:var(--ink)}
+.cal-page .cal-foot li a{font-weight:600;color:var(--accent);text-decoration:none}
+.cal-page .cal-foot li a:hover{text-decoration:underline}
+.cal-page .cal-foot li a.muted{color:var(--muted);font-size:12px;font-weight:600}
+.cal-page .cal-foot .empty-note{font-size:13px;color:var(--muted);margin:0;padding:4px 0}
+.cal-page .pill-src{display:inline-block;font-size:10px;font-weight:700;padding:2px 7px;border-radius:999px;border:1px solid var(--line);vertical-align:middle}
+.cal-page .pill-src.fomc{background:rgba(15,118,110,.1);color:#0f766e;border-color:rgba(15,118,110,.25)}
+.cal-page .pill-src.cpi{background:rgba(180,83,9,.1);color:#b45309;border-color:rgba(180,83,9,.3)}
+.cal-page .pill-src.nfp{background:rgba(124,58,237,.1);color:#7c3aed;border-color:rgba(124,58,237,.3)}
+.daily-shell{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:0;overflow:visible;box-shadow:0 10px 28px rgba(28,25,23,.05);border-left:4px solid transparent}
+.daily-shell.heat-1{border-left-color:rgba(15,118,110,.5)}
+.daily-shell.heat-2{border-left-color:rgba(180,83,9,.75)}
+.daily-shell.heat-3{border-left-color:#b91c1c}
+.daily-shell.heat-4{border-left-color:#7f1d1d;box-shadow:0 10px 28px rgba(127,29,29,.12)}
+.daily-shell-h{padding:18px 22px 12px;border-bottom:1px solid var(--line);background:linear-gradient(180deg,rgba(15,118,110,.07),transparent);border-radius:20px 20px 0 0}
+.daily-shell.heat-2 .daily-shell-h{background:linear-gradient(180deg,rgba(180,83,9,.1),transparent)}
+.daily-shell.heat-3 .daily-shell-h,.daily-shell.heat-4 .daily-shell-h{background:linear-gradient(180deg,rgba(185,28,28,.1),transparent)}
+.daily-heat-badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.daily-heat-badge.heat-0{background:rgba(0,0,0,.05);color:var(--muted)}
+.daily-heat-badge.heat-1{background:rgba(15,118,110,.12);color:var(--accent)}
+.daily-heat-badge.heat-2{background:rgba(180,83,9,.15);color:#b45309}
+.daily-heat-badge.heat-3{background:rgba(185,28,28,.15);color:#b91c1c}
+.daily-heat-badge.heat-4{background:rgba(127,29,29,.2);color:#7f1d1d}
+.daily-chip.heat-2,.daily-chip.heat-3,.daily-chip.heat-4{font-weight:700}
+.daily-chip.heat-2{border-color:rgba(180,83,9,.45);background:rgba(180,83,9,.1)}
+.daily-chip.heat-3{border-color:rgba(185,28,28,.45);background:rgba(185,28,28,.1)}
+.daily-chip.heat-4{border-color:rgba(127,29,29,.5);background:rgba(127,29,29,.14)}
+/* daily page QA dock — align with weekly qa-dock */
+.daily-qa-dock{position:fixed;right:18px;bottom:18px;width:min(400px,calc(100% - 24px));z-index:200;display:flex;flex-direction:column;align-items:flex-end;--qa-accent:#0f766e;--qa-accent2:#0d9488;--qa-bg:rgba(255,252,247,.98);--qa-btn-text:#ecfdf5}
+.daily-qa-dock.collapsed{width:auto}
+.daily-qa-dock.collapsed .daily-qa-panel{display:none!important}
+.daily-qa-fab{display:none;border:0;border-radius:999px;padding:12px 18px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text);box-shadow:0 12px 28px rgba(28,25,23,.18)}
+.daily-qa-dock.collapsed .daily-qa-fab:not([hidden]){display:inline-flex;align-items:center;gap:6px}
+.daily-qa-panel{width:100%;border-radius:16px;border:1px solid rgba(15,118,110,.28);background:var(--qa-bg);box-shadow:0 16px 40px rgba(28,25,23,.14);overflow:hidden;max-height:min(78vh,640px);display:flex;flex-direction:column}
+.daily-qa-head{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid rgba(15,118,110,.12);background:linear-gradient(180deg,rgba(15,118,110,.08),transparent)}
+.daily-qa-head b{color:var(--qa-accent2);font-size:13px}
+.daily-qa-head-actions{display:inline-flex;gap:4px;align-items:center}
+.daily-qa-head-actions button{border:0;background:transparent;font:inherit;cursor:pointer;color:var(--muted);padding:6px 10px;border-radius:8px}
+.daily-qa-head-actions button:hover{background:rgba(15,118,110,.1);color:var(--text)}
+.daily-qa-ctx{margin:0;padding:8px 14px;font-size:12px;color:var(--muted);border-bottom:1px solid rgba(15,118,110,.08)}
+.daily-qa-thread{flex:1;overflow:auto;padding:12px 14px;min-height:100px;max-height:320px}
+.daily-qa-msg{margin:0 0 10px;font-size:13px;white-space:pre-wrap}
+.daily-qa-msg.user{color:var(--qa-accent2)}
+.daily-qa-msg.bot{padding:10px;border-radius:12px;border:1px solid rgba(15,118,110,.16);background:rgba(15,118,110,.06)}
+.daily-qa-msg.thinking{opacity:.9}
+.daily-qa-thinking{display:flex;align-items:center;gap:10px;padding:4px 0}
+.daily-qa-thinking-label{font-size:12px;color:var(--muted)}
+.daily-qa-orb{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 0deg,var(--qa-accent),var(--qa-accent2),transparent,var(--qa-accent));animation:qa-spin 1.1s linear infinite;flex-shrink:0}
+.daily-qa-orb::after{content:"";display:block;width:10px;height:10px;margin:4px;border-radius:50%;background:var(--qa-bg)}
+.daily-qa-dots{display:inline-flex;gap:4px;align-items:center}
+.daily-qa-dots i{width:6px;height:6px;border-radius:50%;background:var(--qa-accent2);opacity:.35;animation:qa-dot 1.2s ease-in-out infinite}
+.daily-qa-dots i:nth-child(2){animation-delay:.2s}
+.daily-qa-dots i:nth-child(3){animation-delay:.4s}
+@keyframes qa-spin{to{transform:rotate(360deg)}}
+@keyframes qa-dot{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.daily-qa-msg-actions{display:flex;gap:2px;align-items:center;margin-top:6px;opacity:0;transition:opacity .15s;flex-wrap:wrap}
+.daily-qa-msg:hover .daily-qa-msg-actions,.daily-qa-msg:focus-within .daily-qa-msg-actions{opacity:1}
+.daily-qa-icon-btn{border:0;background:transparent;cursor:pointer;padding:4px 6px;border-radius:8px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;line-height:0}
+.daily-qa-icon-btn:hover{background:rgba(15,118,110,.12);color:var(--text)}
+.daily-qa-icon-btn.copied{color:var(--qa-accent2)}
+.daily-qa-icon-btn svg{width:16px;height:16px;display:block}
+.daily-qa-pin{border:0;background:transparent;cursor:pointer;font-size:14px;margin-left:6px;opacity:.7}
+.daily-qa-pin:hover,.daily-qa-pin.on{opacity:1;color:#ca8a04}
+.daily-qa-form{display:flex;gap:8px;padding:12px;border-top:1px solid rgba(15,118,110,.12);align-items:stretch}
+.daily-qa-form textarea{flex:1;border-radius:12px;border:1px solid rgba(15,118,110,.2);padding:8px 10px;font:inherit;font-size:13px;min-height:56px;resize:vertical}
+.daily-qa-form button{border:0;border-radius:12px;padding:0 16px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text)}
+.daily-qa-form button:disabled{opacity:.55;cursor:wait}
+.daily-qa-foot{margin:0;padding:0 14px 10px;font-size:11px;color:var(--muted)}
+.daily-shell-h .day{font-size:20px;font-weight:700;letter-spacing:-.02em;margin:0 0 4px}
+.daily-shell-h .sub{font-size:12px;color:var(--muted);margin:0}
+.daily-back{display:inline-flex;align-items:center;gap:6px;margin:0 0 10px;padding:6px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);text-decoration:none;font-size:12px;font-weight:600}
+.daily-back:hover{border-color:rgba(15,118,110,.4);color:var(--accent);background:rgba(15,118,110,.06)}
+.daily-back .arr{font-size:14px;line-height:1}
+.daily-brief{padding:16px 22px 14px;border-bottom:1px solid var(--line)}
+.daily-brief-label{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+.daily-brief-text{font-size:15px;line-height:1.6;margin:0 0 12px;color:var(--text);white-space:normal;word-break:break-word}
+.daily-chips{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.daily-chip{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(0,0,0,.02);font-size:12px;font-weight:600;color:var(--muted)}
+.daily-chip .chip-k{opacity:.75;font-weight:600}
+.daily-chip .chip-v{font-variant-numeric:tabular-nums;font-weight:700;color:var(--text)}
+.daily-chip.up .chip-v{color:var(--up)}.daily-chip.down .chip-v{color:var(--down)}
+.daily-chip.on{border-color:rgba(15,118,110,.35);background:rgba(15,118,110,.08);color:var(--accent)}
+.daily-chip.warn{border-color:rgba(180,83,9,.4);background:rgba(180,83,9,.08);color:#b45309}
+.daily-chip.muted{opacity:.75}
+.daily-hl{display:inline;padding:0 .15em;border-radius:4px;background:rgba(15,118,110,.14);color:var(--accent);font-weight:700}
+.daily-hl.up{background:rgba(21,128,61,.12);color:var(--up)}
+.daily-hl.down{background:rgba(190,18,60,.1);color:var(--down)}
+.daily-hl.warn{background:rgba(180,83,9,.14);color:#b45309}
+.daily-details-wrap{border-bottom:1px solid var(--line)}
+.daily-fold{border-bottom:1px solid var(--line)}
+.daily-fold:last-child{border-bottom:0}
+.daily-fold>summary{cursor:pointer;list-style:none;padding:14px 22px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;font-weight:700;color:var(--text);user-select:none}
+.daily-fold>summary::-webkit-details-marker{display:none}
+.daily-fold>summary .fold-left{display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+.daily-fold>summary .fold-tag{font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);flex-shrink:0}
+.daily-fold>summary .fold-hint{font-size:12px;font-weight:500;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.daily-fold>summary .fold-chevron{flex-shrink:0;color:var(--muted);font-size:12px}
+.daily-fold>summary .fold-chevron::before{content:"▸"}
+.daily-fold[open]>summary .fold-chevron::before{content:"▾"}
+.daily-fold[open]>summary{border-bottom:1px dashed rgba(60,48,32,.08);background:rgba(0,0,0,.015)}
+.daily-fold-body{padding:14px 22px 18px;overflow:visible}
+.daily-sec-body{font-size:15px;line-height:1.65;margin:0 0 12px;white-space:pre-wrap;word-break:break-word;overflow-wrap:anywhere;font-weight:500;max-width:100%}
+.daily-nums{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 8px}
+.daily-num{min-width:120px;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.02)}
+.daily-num .k{font-size:11px;color:var(--muted);font-weight:600}
+.daily-num .v{font-size:22px;font-weight:700;font-variant-numeric:tabular-nums;margin-top:2px;letter-spacing:-.03em}
+.daily-num.up .v{color:var(--up)}.daily-num.down .v{color:var(--down)}
+.daily-compare{font-size:12px;color:var(--muted);margin:0}
+.daily-fold.driver>summary .fold-tag{color:#b45309}
+.daily-fold.driver[open]>summary{background:rgba(180,83,9,.04)}
+.daily-fold.external>summary .fold-tag{color:#0f766e}
+.daily-fold.external[open]>summary{background:rgba(15,118,110,.04)}
+.daily-ext-badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid rgba(15,118,110,.35);background:rgba(15,118,110,.1);color:#0f766e;margin:0 0 10px}
+.daily-ext-badge.pre{border-color:rgba(180,83,9,.4);background:rgba(180,83,9,.1);color:#b45309}
+.daily-ext-badge.post{border-color:rgba(15,118,110,.45);background:rgba(15,118,110,.14);color:#0f766e}
+.daily-ext-badge.reaction{border-color:rgba(29,78,216,.4);background:rgba(29,78,216,.1);color:#1d4ed8}
+.daily-result-block{margin:0 0 14px;padding:14px 16px;border-radius:14px;border:1px solid rgba(15,118,110,.28);background:linear-gradient(180deg,rgba(15,118,110,.08),rgba(15,118,110,.02))}
+.daily-result-block h4{margin:0 0 10px;font-size:14px;font-weight:800;color:#0f766e}
+.daily-result-lines{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 10px}
+.daily-result-pill{display:inline-flex;flex-direction:column;gap:2px;min-width:110px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.72)}
+.daily-result-pill .rk{font-size:11px;color:var(--muted);font-weight:600}
+.daily-result-pill .rv{font-size:18px;font-weight:800;font-variant-numeric:tabular-nums;color:var(--text)}
+.daily-result-pill .rj{font-size:10px;color:var(--muted);opacity:.85}
+.daily-result-explain{margin:8px 0 0;padding-left:18px;font-size:12px;color:var(--muted);line-height:1.55}
+.daily-result-explain b{color:var(--text);font-weight:600}
+.daily-result-plain{margin:0 0 8px;font-size:14px;line-height:1.65}
+.daily-result-src{margin:0;font-size:12px;color:var(--muted);line-height:1.5}
+.daily-result-pending{margin:0 0 12px;padding:10px 12px;border-radius:12px;border:1px dashed rgba(180,83,9,.45);background:rgba(180,83,9,.06);font-size:13px;color:#b45309}
+.daily-pre-fold{margin:12px 0;border:1px solid var(--line);border-radius:12px;padding:0 12px 8px;background:rgba(0,0,0,.015)}
+.daily-pre-fold>summary{cursor:pointer;font-weight:700;font-size:13px;padding:10px 0;color:var(--muted)}
+.daily-juxtapose{margin:12px 0 0;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.02);font-size:13px;line-height:1.65}
+.daily-post-brief{margin:0 0 14px;padding:12px 14px;border-radius:14px;border:1px solid rgba(15,118,110,.22);background:rgba(15,118,110,.05)}
+.daily-post-deep{margin:0 0 14px;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:rgba(0,0,0,.02)}
+.daily-post-brief .daily-sec-body,.daily-post-deep .daily-sec-body{margin:0}
+.daily-reaction{margin:0 0 14px;padding:14px 16px;border-radius:14px;border:1px solid rgba(29,78,216,.28);background:linear-gradient(180deg,rgba(29,78,216,.07),rgba(29,78,216,.02))}
+.daily-reaction h4{margin:0 0 8px;font-size:14px;font-weight:800;color:#1d4ed8}
+.daily-reaction-plain{margin:0 0 10px;font-size:14px;line-height:1.65}
+.daily-reaction-mini{margin:0 0 10px;font-size:12px;color:var(--muted)}
+.daily-reaction-table{width:100%;border-collapse:collapse;font-size:12px;font-variant-numeric:tabular-nums}
+.daily-reaction-table th,.daily-reaction-table td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:right}
+.daily-reaction-table th:first-child,.daily-reaction-table td:first-child{text-align:left}
+.daily-reaction-table th{font-weight:700;color:var(--muted);font-size:11px}
+.daily-reaction-table tr.is-today{background:rgba(29,78,216,.08)}
+.daily-reaction-table .drv{color:#b45309;font-weight:700}
+.daily-contrast .daily-sec-body{margin-bottom:10px}
+.daily-contrast b{color:var(--accent);font-weight:700}
+.daily-ext-lead{font-size:14px;line-height:1.55;margin:0 0 14px;padding:10px 12px;border-radius:12px;background:rgba(15,118,110,.08);border:1px solid rgba(15,118,110,.2);color:var(--text)}
+.daily-ext-lead b{color:var(--accent)}
+.daily-fold.external .daily-sec-body{font-size:14px;line-height:1.7}
+.daily-driver-headline{font-size:16px;font-weight:700;margin:0 0 8px;color:var(--text)}
+.daily-quiet{padding:4px 0 0;font-size:13px;color:var(--muted)}
+.daily-rules{margin:10px 0 0;padding-left:18px;font-size:12px;color:var(--muted)}
+.daily-foot{padding:14px 22px 18px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.daily-foot .links{font-size:13px}
+.daily-notes{margin-top:16px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.daily-notes summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--accent);list-style:none}
+.daily-notes summary::-webkit-details-marker{display:none}
+.daily-notes summary::before{content:"▸ ";opacity:.7}
+.daily-notes[open] summary::before{content:"▾ "}
+.daily-notes .body{margin-top:10px;font-size:12px;color:var(--muted);line-height:1.6}
+.daily-notes .body code{font-size:11px}
+.daily-meth-item{margin:0 0 12px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:rgba(0,0,0,.02)}
+.daily-meth-title{margin:0 0 6px;font-size:13px;font-weight:700}
+.daily-sec-label{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin:12px 0 8px}
+.daily-driver-headline{font-size:18px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px;color:var(--text)}
+
+</style>
+</head>
+<body class="lang-zh" data-lang="zh" data-public="1">
+<div id="twZoomBanner" class="tw-zoom-banner" role="status"></div>
+<div class="layout">
+  <aside class="sider">
+    <div class="brand"><div class="logo">潮</div>
+      <div><div class="name"><span class="lang zh">潮观</span><span class="lang en">Tidewatch</span></div>
+      <div class="sub"><span class="lang zh">市场状态翻译</span><span class="lang en">State translator</span></div></div>
+    </div>
+    <nav class="nav"><a class="nav-item " href="index.html"><span class="lang zh">周报集锦</span><span class="lang en">Weekly archive</span></a>
+<a class="nav-item " href="dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Data board</span></a>
+<a class="nav-item active" href="daily.html"><span class="lang zh">每日摘要</span><span class="lang en">Daily digest</span></a>
+<a class="nav-item " href="calendar.html"><span class="lang zh">宏观日历</span><span class="lang en">Macro calendar</span></a></nav>
+    <div class="sider-foot">
+      <div class="lang-seg" id="langSeg">
+        <button type="button" data-lang="zh" class="active">中文</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="page-h">
+      <h1><span class="lang zh">每日摘要</span><span class="lang en">Daily digest</span></h1>
+    </header>
+    
+    <div class="daily-week-nav"><div class="daily-week-row"><span class="lab"><span class="lang zh">周</span><span class="lang en">Wk</span></span><a class="has-alert" href="daily.html" title="2026-09-07～2026-09-13">09-07～09-13</a><a class="has-alert" href="daily_20260906.html" title="2026-08-31～2026-09-06">08-31～09-06</a><a class="has-alert" href="daily_20260830.html" title="2026-08-24～2026-08-30">08-24～08-30</a><a class="has-alert" href="daily_20260823.html" title="2026-08-17～2026-08-23">08-17～08-23</a><a class="has-alert" href="daily_20260816.html" title="2026-08-10～2026-08-16">08-10～08-16</a><a class="has-alert" href="daily_20260809.html" title="2026-08-03～2026-08-09">08-03～08-09</a><a class="" href="daily_20260729.html" title="2026-07-27～2026-08-02">07-27～08-02</a><a class="has-alert" href="daily_20260714.html" title="2026-07-13～2026-07-19">07-13～07-19</a><a class="has-alert" href="daily_20260702.html" title="2026-06-29～2026-07-05">06-29～07-05</a><a class="" href="daily_20260617.html" title="2026-06-15～2026-06-21">06-15～06-21</a><a class="" href="daily_20260610.html" title="2026-06-08～2026-06-14">06-08～06-14</a><a class="has-alert" href="daily_20260605.html" title="2026-06-01～2026-06-07">06-01～06-07</a></div><div class="daily-week-row day-row"><span class="lab"><span class="lang zh">日</span><span class="lang en">Day</span></span><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">02-09<span style="opacity:.7;font-weight:500">·一</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">02-10<span style="opacity:.7;font-weight:500">·二</span></a><a class="heat-1" href="daily_20260211.html" title="2026-02-11">02-11<span style="opacity:.7;font-weight:500">·三</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">02-12<span style="opacity:.7;font-weight:500">·四</span></a><a class="heat-3 active" href="daily_20260213.html" title="2026-02-13">02-13<span style="opacity:.7;font-weight:500">·五</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">02-14<span style="opacity:.7;font-weight:500">·六</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">02-15<span style="opacity:.7;font-weight:500">·日</span></a></div></div>
+    
+    <article class="daily-shell heat-3">
+      <header class="daily-shell-h">
+        <a class="daily-back" data-cal-back href="calendar.html">
+          <span class="arr" aria-hidden="true">←</span>
+          <span class="lang zh">返回宏观日历</span>
+          <span class="lang en">Back to calendar</span>
+        </a>
+        <p class="day">2026-02-13 <span class="daily-heat-badge heat-3" title="条件格式烈度 0-4">剧</span></p>
+        <p class="sub">
+          <span class="lang zh">潮观 · 每日摘要 · 摘要日按北京日历</span>
+          <span class="lang en">Tidewatch · Daily · digest day = Beijing calendar</span>
+        </p>
+        <p class="sub" style="margin-top:6px">
+          <span class="lang zh">生成于 <b>2026-08-31 18:27:12 北京时间</b>
+            <span style="opacity:.75">（as_of UTC 2026-08-31 10:27:12Z · 生成时刻，非收盘时刻）</span></span>
+          <span class="lang en">Generated <b>2026-08-31 18:27:12 北京时间</b>
+            <span style="opacity:.75">(as_of UTC 2026-08-31 10:27:12Z · job time, not close time)</span></span>
+        </p>
+      </header>
+
+      <div class="daily-brief">
+        <p class="daily-brief-label"><span class="lang zh">今日一览</span><span class="lang en">At a glance</span></p>
+        <p class="daily-brief-text">
+          <span class="lang zh">近况：BTC <span class="daily-hl up">+3.90%</span>、ETH <span class="daily-hl up">+5.18%</span>。ETH 触及<span class="daily-hl warn">价格冲击</span>阈值，IV−RV 点差一日大幅跳升。</span>
+          <span class="lang en">Weather: BTC <span class="daily-hl up">+3.90%</span> · ETH <span class="daily-hl up">+5.18%</span>; ETH price shock with IV−RV spread jump.</span>
+        </p>
+        <div class="daily-chips"><span class="daily-chip up heat-1"><span class="chip-k">BTC</span><span class="chip-v">+3.90%</span></span><span class="daily-chip up heat-3"><span class="chip-k">ETH</span><span class="chip-v">+5.18%</span></span><span class="daily-chip on"><span class="chip-k"><span class="lang zh">外生</span><span class="lang en">Ext</span></span><span class="chip-v">·</span></span><span class="daily-chip warn heat-3"><span class="chip-k"><span class="lang zh">驱动</span><span class="lang en">Driver</span></span><span class="chip-v">剧</span></span><span class="daily-chip on"><span class="chip-k"><span class="lang zh">认知</span><span class="lang en">Notes</span></span><span class="chip-v">·</span></span></div>
+        
+      </div>
+
+      <div class="daily-details-wrap">
+        
+        <details class="daily-fold weather">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">近况明细</span><span class="lang en">Weather detail</span></span>
+              <span class="fold-hint"><span class="lang zh">BTC +3.90% · ETH +5.18%</span><span class="lang en">BTC +3.90% · ETH +5.18%</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body">
+        <p class="daily-sec-body"><span class="lang zh">近况：BTC +3.90%、ETH +5.18%。ETH 触及价格冲击阈值，IV−RV 点差一日大幅跳升。</span><span class="lang en">Weather: BTC +3.90% · ETH +5.18%; ETH price shock with IV−RV spread jump.</span></p>
+        <div class="daily-nums">
+          <div class="daily-num up" title="btc_ret_1d program">
+            <div class="k">BTC</div>
+            <div class="v">+3.90%</div>
+          </div>
+          <div class="daily-num up" title="eth_ret_1d program">
+            <div class="k">ETH</div>
+            <div class="v">+5.18%</div>
+          </div>
+          <div class="daily-num " title="oi_chg_pct program · total OI structure only">
+            <div class="k">OI</div>
+            <div class="v">—</div>
+          </div>
+          
+          
+        </div>
+        <p class="daily-compare">
+          <span class="lang zh">对比收盘：2026-02-12 → 2026-02-13（程序数，两位小数）；OI 为总量日变%，无多空 side；永续/现货额=成交额美金（热闹程度，不能拆多空）；ETF=美现货净申赎 USD（ByKaranteli 聚合·非官方）</span>
+          <span class="lang en">Close-to-close：2026-02-12 → 2026-02-13 (program, 2 d.p.); OI = total d/d %; turnover = activity USD not L/S; ETF = US spot net flow</span>
+        </p>
+    </div>
+        </details>
+        
+        <details class="daily-fold external">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">外生 · 日历</span><span class="lang en">External</span></span>
+              <span class="fold-hint"><span class="lang zh">日历：CPI（2026-01）公布日。</span><span class="lang en">Calendar: CPI (Jan 2026)</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body">
+        <span class="daily-ext-badge pre"><span class="lang zh">会前·非结果</span><span class="lang en">pre-result</span></span>
+        
+        
+        
+        <p class="daily-sec-body"><span class="lang zh">日历：CPI（2026-01）公布日。</span></p>
+        <p class="daily-compare"><span class="lang zh">来源 bls · 模板 <code></code> · <code>bls_cpi_2026_02</code></span><span class="lang en">source bls · <code></code></span></p>
+        <p class="daily-compare"><a class="link" data-cal-back href="calendar.html"><span class="lang zh">宏观日历</span></a>
+           · <span class="lang zh">非投资建议 · 反归因</span></p>
+        </div>
+        </details>
+        
+        <details class="daily-fold driver">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">驱动 · 异常</span><span class="lang en">Driver</span></span>
+              <span class="fold-hint"><span class="lang zh">【ETH冲击叠加波动点差急扩】今日加密处于 ETH 价格冲击带动的普涨状态，主矛盾…</span><span class="lang en">ETH price shock led a broad crypto up day…</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body">
+        <p class="daily-sec-label" style="margin-top:0"><span class="lang zh">① 结论</span><span class="lang en">① Conclusion</span></p>
+        <p class="daily-driver-headline"><span class="lang zh">ETH冲击叠加波动点差急扩</span></p>
+        <p class="daily-sec-body"><span class="lang zh">【ETH冲击叠加波动点差急扩】今日加密处于 ETH 价格冲击带动的普涨状态，主矛盾是现货大涨与 IV−RV 点差暴扩并存；美股近乎平盘，币与传统明显背离。</span><span class="lang en">ETH price shock led a broad crypto up day; main tension is spot surge plus IV−RV spread blowout, while US equities were flat—clear crypto-tradfi divergence.</span></p>
+        
+        <p class="daily-sec-label"><span class="lang zh">② 关键数（程序 · 含传统对照）</span><span class="lang en">② Key metrics</span></p>
+        <div class="daily-nums"><div class="daily-num"><div class="k">BTC 日收益</div><div class="v" style="font-size:18px">+3.90%</div></div><div class="daily-num"><div class="k">ETH 日收益</div><div class="v" style="font-size:18px">+5.18%</div></div><div class="daily-num"><div class="k">funding 年化日变</div><div class="v" style="font-size:18px">-5.05 pp</div></div><div class="daily-num"><div class="k">funding 年化</div><div class="v" style="font-size:18px">1.35</div></div><div class="daily-num"><div class="k">IV−RV 点差</div><div class="v" style="font-size:18px">+8.55 pp</div></div><div class="daily-num"><div class="k">点差日变</div><div class="v" style="font-size:18px">+47.46 pp</div></div><div class="daily-num"><div class="k">ES 日收益</div><div class="v" style="font-size:18px">-0.01%</div></div><div class="daily-num"><div class="k">NQ 日收益</div><div class="v" style="font-size:18px">+0.14%</div></div><div class="daily-num"><div class="k">VIX 日变</div><div class="v" style="font-size:18px">-1.06%</div></div><div class="daily-num"><div class="k">DXY 日变</div><div class="v" style="font-size:18px">-0.05%</div></div></div>
+        <p class="daily-sec-label"><span class="lang zh">③ 这是什么异常 · 怎么算</span><span class="lang en">③ What / how (program)</span></p>
+        <div class="daily-meth-item"><p class="daily-meth-title"><code>price_shock_eth</code> · ETH 日收益冲击</p><p class="daily-compare"><span class="lang zh"><b>是什么</b>：以太坊现货单日涨跌幅度是否达到异常阈值。</span><span class="lang en"><b>What</b>: Whether ETH spot one-day move hits the shock threshold.</span></p><p class="daily-compare"><span class="lang zh"><b>怎么算</b>：与 BTC 相同公式，标的为 ETH Spot 日 K；阈值同 price_shock_abs_pct（默认 5%）。</span><span class="lang en"><b>How</b>: Same as BTC; ETH Spot daily close-to-close; same threshold default 5%.</span></p><p class="daily-compare"><span class="lang zh"><b>今日观测</b>：观测 ETH 日收益 5.18%，阈值 |·|≥5.00%</span><span class="lang en"><b>Observed</b>: ETH day return +5.18% (threshold 5.0%)</span></p></div><div class="daily-meth-item"><p class="daily-meth-title"><code>iv_rv_spread_jump</code> · IV−RV 点差日变</p><p class="daily-compare"><span class="lang zh"><b>是什么</b>：期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。</span><span class="lang en"><b>What</b>: Large one-day move in IV minus realized vol spread.</span></p><p class="daily-compare"><span class="lang zh"><b>怎么算</b>：spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。</span><span class="lang en"><b>How</b>: spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8).</span></p><p class="daily-compare"><span class="lang zh"><b>今日观测</b>：观测 IV−RV 点差日变 47.46 pp（今日点差 8.55），阈值 |·|≥8.00 pp</span><span class="lang en"><b>Observed</b>: IV−RV spread day change +47.46 pp</span></p></div>
+        <p class="daily-sec-label"><span class="lang zh">④ 怎么读</span><span class="lang en">④ How to read</span></p>
+        <p class="daily-sec-body"><span class="lang zh">观测 ETH 日收益 +5.18%（达 |·|≥5% 冲击阈值），BTC +3.90%。IV−RV 点差报 +8.55 pp，日变 +47.46 pp，远超 8 pp 阈值，期权隐含波动相对 7 日实现波动显著走贵。funding 年化 1.35%、日变 −5.05 pp；清算总量约 65.0、为前日约 0.90 倍。对照传统：ES −0.01%、NQ +0.14%、VIX −1.06%、DXY −0.05%，股指几乎不动而波动率小降，加密独立上行，与美股呈背离而非同向。</span><span class="lang en">依据（程序）：
+- 观测 ETH 日收益 5.18%，阈值 |·|≥5.00%
+- 观测 IV−RV 点差日变 47.46 pp（今日点差 8.55），阈值 |·|≥8.00 pp
+含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。</span></p>
+        <p class="daily-compare"><a class="link" href="dashboard.html"><span class="lang zh">打开数据看板</span><span class="lang en">Dashboard</span></a></p>
+        </div>
+        </details>
+        
+        <details class="daily-fold cognition">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">认知 · 潮记</span><span class="lang en">Cognition</span></span>
+              <span class="fold-hint"><span class="lang zh">潮记：3 个观察位仍开，无到期钉选。</span><span class="lang en">潮记：3 个观察位仍开，无到期钉选。</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body"><p class="daily-sec-body"><span class="lang zh">潮记：3 个观察位仍开，无到期钉选。</span><span class="lang en">潮记：3 个观察位仍开，无到期钉选。</span></p><p class="daily-compare"><span class="lang zh">认知槽仅本机潮记；公开站不展示钉/哨入口。</span><span class="lang en">Cognition slot is local Tide Notes only; hidden on public package.</span></p></div>
+        </details>
+        
+      </div>
+
+      <footer class="daily-foot">
+        <div class="links">
+          <a class="link" data-cal-back href="calendar.html"><span class="lang zh">宏观日历</span><span class="lang en">Calendar</span></a>
+          <a class="link" href="dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a>
+          · <a class="link" href="index.html"><span class="lang zh">周报集锦</span><span class="lang en">Archive</span></a>
+          
+           · <a class="link" href="event_bls_cpi_2026_02.html"><span class="lang zh">本事件轨迹</span><span class="lang en">Event track</span></a>
+        </div>
+        <div class="dash-meta" style="margin:0">
+          <span class="lang zh">本页为生成快照；更新说明见下方覆盖说明。</span>
+        </div>
+      </footer>
+    </article>
+
+    <details class="daily-notes">
+      <summary><span class="lang zh">数据口径与脚注</span><span class="lang en">Data notes &amp; methodology</span></summary>
+      <div class="body">
+      <p><span class="lang zh"><b>时间字段</b></span>
+         <span class="lang en"><b>Time fields</b></span></p>
+      <p><span class="lang zh">
+         <b>摘要日</b> <code>2026-02-13</code>：按 <b>北京时间日历</b>（Asia/Shanghai，UTC+8）认定的「哪一天的摘要」，不是 as_of 的时刻。
+         <br/><b>生成时间（as_of）</b>：本页 JSON 写出的时刻，即跑 <code>tidewatch daily</code> 的时间；
+         展示为 <b>2026-08-31 18:27:12 北京时间</b>（存储/机读 UTC：<code>2026-08-31 10:27:12Z</code>）。
+         <b>不是</b> K 线收盘时刻，也不是「数据截到北京时间几点的 tick」。
+         <br/><b>收益数据窗口</b>：近况 BTC/ETH 用对比日→摘要日（或有效 K 线日）的 <b>日 K 收盘→收盘</b>，见下。</span>
+         <span class="lang en">
+         <b>Digest day</b> <code>2026-02-13</code>: calendar day in Beijing (Asia/Shanghai).
+         <b>as_of</b>: when this digest was <b>generated</b> (job run time), shown as 2026-08-31 18:27:12 北京时间
+         (UTC <code>2026-08-31 10:27:12Z</code>) — not kline close time.
+         <b>Return window</b>: prior bar close → day bar close, below.</span></p>
+      <p><span class="lang zh"><b>日收益（近况大数）</b></span>
+         <span class="lang en"><b>Day return (headline %)</b></span></p>
+      <p><span class="lang zh">BTC / ETH =（当日 Spot 日 K <b>收盘</b> ÷ 上一有 K 线日收盘 − 1）× 100。
+         源：Datahub Binance Spot <code>daily_kline</code>，经看板缓存 <code>series_cache</code>。
+         摘要日 <code>2026-02-13</code>；对比日 <code>2026-02-12</code>
+         。
+         页面展示统一 <b>两位小数</b>；与文中 LLM 圆整冲突时以本行程序数为准。</span>
+         <span class="lang en">BTC/ETH = (Spot daily <b>close</b> ÷ prior bar close − 1)×100 from Datahub Binance Spot via dashboard cache.
+         Day <code>2026-02-13</code> vs prior <code>2026-02-12</code>. Display rounded to 2 dp; program numbers win over LLM rounding.</span></p>
+      <p><span class="lang zh"><b>近况人话</b>：LLM 润色，只许引用程序 Card；「小区间 / 平静」为叙述，不是独立指标。
+         <b>标签跳变</b>：以程序 <code>label_jumps</code> 为准（P0 常为空则不作强结论）。
+         <b>外生（D1-E）</b>：仅当摘要日命中本地宏观日历（<b>FOMC</b>）才出现（CPI/非农已硬放弃）。
+         程序组 <b>External card</b>（锚 + 议题模板 + 近况 slim + 可选驱动邻接事实）；
+         LLM 译为四段：①这是什么 ②议题框架 ③影响通道 ④与本页对照（<b>反归因</b>）。
+         会后利率区间来自联储 open-market 表（免 API key）。角标会前/会后。不是新闻 feed；禁止「因 FOMC 所以涨跌」。
+         日历源 <code>config/macro_calendar.yaml</code>；月历导航见「宏观日历」页。
+         <b>认知</b>：潮记待复习钉 / 开放哨计数。</span>
+         <span class="lang en">External = FOMC calendar pin only + External card + four-part LLM (anti-attribution). Rate range from Fed open-market page. Not a news feed.</span></p>
+      <p><span class="lang zh"><b>驱动（异常）口径</b> — 程序门闩，阈值在 <code>daily_digest.rules</code>：</span>
+         <span class="lang en"><b>Driver rules</b> (program; thresholds in config):</span></p>
+      <ul style="margin:6px 0 0;padding-left:18px">
+        <li><code>price_shock_btc/eth</code>：Spot 日 K 收盘→收盘收益 |r|≥price_shock_abs_pct（默认 5%）</li>
+        <li><code>funding_jump</code>：funding 年化% 日变 |Δ|≥funding_jump_pp（默认 8 个百分点）</li>
+        <li><code>oi_jump</code>：OI 总量日变 |oi_chg_pct|≥oi_jump_abs_pct（默认 8%）；近况低波也展示 OI 日变；与 funding/liq 同读；无多空 side、不归因涨跌</li>
+        <li><code>liq_spike</code>：清算 total_qty 今日/昨日 ≥liq_spike_vs_prior（默认 2.5×）；side 多空语义未最终确认</li>
+        <li><code>volume_spike</code>：永续成交额（美金）日变 |chg%|≥volume_spike_abs_pct（默认 80%）；只表示活跃度跳变，不能拆多空</li>
+        <li><code>iv_rv_spread_jump</code>：BTC IV−RV_7 点差的日变 |Δ|≥iv_rv_spread_jump_pp（默认 8 pp）</li>
+        <li><code>vix_shock</code>：VIX 日收益 |r|≥vix_shock_abs_pct（默认 15%）</li>
+        <li><code>etf_flow_spike</code>：BTC 现货 ETF 日净流 |USD|≥spike_abs_usd（默认 5 亿）</li>
+      </ul>
+      <p><span class="lang zh"><b>成交额</b>：近况展示永续/现货 turnover 美金（热闹程度，非多空）。
+         与看板 <code>derivatives.perp_turnover</code> / <code>spot_turnover</code> 同源；旧日期若无此卡，见页底「如何更新」。</span>
+         <span class="lang en"><b>Turnover</b>: activity USD on glance (not long/short). Re-run daily if the card is missing on old dates.</span></p>
+      <p><span class="lang zh">驱动展开为四段：①LLM 结论 ②程序关键数 ③规则「是什么/怎么算/今日观测」④LLM 解读（只基于 Card，失败回模板）。命中驱动时尝试 Lark。
+         页顶高亮词由 LLM 返回 <code>brief_highlights</code>（失败则程序兜底）；否定句不把「跳变」标成告警。</span>
+         <span class="lang en">Driver = four parts; Lark on driver; brief_highlights from LLM with program fallback.</span></p>
+      <p><span class="lang zh">叙事 llm · grok-4.5 · 真源 docs/13 · 非投资建议。</span>
+         <span class="lang en">narrative llm · docs/13 · Not investment advice.</span></p>
+    </div>
+    </details>
+
+    
+    <div class="chart-card" id="coverage-note" style="margin-top:16px">
+      <div class="ch"><h2><span class="lang zh">本页覆盖说明</span><span class="lang en">What this page covers</span></h2></div>
+      <div class="dash-meta" style="line-height:1.7;padding:4px 2px 10px;font-size:13px">
+        
+        <p style="margin:0 0 12px;padding:10px 12px;background:rgba(15,118,110,.06);border-radius:10px;border:1px solid rgba(15,118,110,.12)">
+          <span class="lang zh">
+            <b>读之前先知道：</b>每日摘要是「生成当时」留下的一页。
+            后来加的功能（比如成交额）只会出现在<strong>已经更新过的日期</strong>上；
+            更早的日期保持原样，<strong>不会自动全部重做</strong>。
+          </span>
+          <span class="lang en">
+            <b>Note:</b> each daily page is a snapshot from when it was built.
+            Newer fields only appear on refreshed days; older days stay as historical snapshots.
+          </span>
+        </p>
+        <p style="margin:0 0 10px"><span class="lang zh">你现在看的 <b>2026-02-13</b>：仍是<strong>历史页</strong>，可能没有成交额等新块——不是坏了，是当时生成后<strong>不再自动回改</strong>。</span><span class="lang en">This day <b>2026-02-13</b> is historical and was not backfilled.</span></p>
+        <p style="margin:0 0 8px"><span class="lang zh"><b>目前已更新的日期</b></span><span class="lang en"><b>Refreshed days</b></span></p>
+        <p style="margin:0 0 10px"><span class="lang zh">2026-08-10～2026-08-30（共 21 天），以及最新完整日 2026-09-03。
+          这些天近况里可以看到成交额等新信息。</span>
+          <span class="lang en">2026-08-10 through 2026-08-30 (21 days), plus latest full day 2026-09-03. These include turnover and related blocks.</span></p>
+        <p style="margin:0"><span class="lang zh"><b>其余日期</b>：历史数据，页面结构以生成时为准，缺新块是正常的。
+          若以后需要补某几天，跟助手说要更新日期即可。</span>
+          <span class="lang en"><b>All other days</b> remain historical. Ask if you want specific days refreshed.</span></p>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <p class="public-asof dash-meta" style="margin:18px 0 0;padding:0 4px;font-size:12px;opacity:.85"><span class="lang zh">公开只读站 · 无潮记/问潮观 · 数据截至 <b>2026-09-10</b></span><span class="lang en">Public read-only · no Tide Notes/Q&amp;A · data as-of <b>2026-09-10</b></span></p>
+  </main>
+</div>
+<script>
+(() => {
+  const body = document.body;
+  function applyLang(lang, persist=true) {
+    if (lang !== 'zh' && lang !== 'en') lang = 'zh';
+    body.classList.remove('lang-zh','lang-en');
+    body.classList.add('lang-'+lang);
+    body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang==='zh'?'zh-CN':'en');
+    document.querySelectorAll('#langSeg button').forEach(b => b.classList.toggle('active', b.dataset.lang===lang));
+    if (persist) try { localStorage.setItem('tidewatch-lang', lang); } catch(_){}
+  }
+  document.getElementById('langSeg')?.addEventListener('click', e => {
+    const b = e.target.closest('button[data-lang]'); if (!b) return;
+    applyLang(b.dataset.lang, true);
+  });
+  let lang = 'zh';
+  try { const s = localStorage.getItem('tidewatch-lang'); if (s==='zh'||s==='en') lang=s; } catch(_){}
+  applyLang(lang, false);
+
+  // Chrome stores zoom PER path — daily.html / learning.html often stick >100%.
+  function detectZoom() {
+    const ban = document.getElementById('twZoomBanner');
+    if (!ban) return;
+    let scale = 1;
+    try {
+      if (window.visualViewport && window.visualViewport.scale)
+        scale = window.visualViewport.scale;
+    } catch(_){}
+    const badVp = scale && Math.abs(scale - 1) > 0.02;
+    const path = (location.pathname || '') + ' ' + (location.href || '');
+    const stickyPath = /daily\.html|learning\.html|daily_\d+\.html/i.test(path);
+    const isFile = location.protocol === 'file:';
+    let show = !!badVp;
+    let pct = Math.round((scale || 1) * 100);
+    const softKey = 'tw_zoom_tip_sticky';
+    let soft = false;
+    try { soft = stickyPath && isFile && !sessionStorage.getItem(softKey); } catch(_){}
+    if (!show && soft) show = true;
+    if (!show) { ban.style.display = 'none'; return; }
+    const isMac = /Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent || '');
+    const key = isMac ? '⌘0' : 'Ctrl+0';
+    const zh = badVp
+      ? ('当前页缩放约 <code>' + pct + '%</code>。Chrome 按「每个地址」记缩放，侧栏进每日/潮记若曾放大会整页偏大。请按 <code>' + key + '</code>。建议 <code>http://127.0.0.1:8766/</code> 打开整站。')
+      : ('提示：正在用 <code>file://</code>。Chrome 可能对 daily/learning 单独记缩放。整页偏大请按 <code>' + key + '</code>；或 <code>python3 -m http.server 8766</code> 后打开 <code>http://127.0.0.1:8766/</code>。');
+    const en = badVp
+      ? ('Zoom ~<code>' + pct + '%</code>. Press <code>' + key + '</code>. Prefer <code>http://127.0.0.1:8766/</code>.')
+      : ('file:// open. If oversized, press <code>' + key + '</code> or use <code>http://127.0.0.1:8766/</code>.');
+    ban.style.display = 'block';
+    ban.innerHTML = body.classList.contains('lang-en') ? en : zh;
+    if (!ban.dataset.ready) {
+      ban.dataset.ready = '1';
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = body.classList.contains('lang-en') ? 'Dismiss' : '知道了';
+      b.addEventListener('click', () => {
+        ban.style.display = 'none';
+        try { if (soft) sessionStorage.setItem(softKey, '1'); } catch(_){}
+      });
+      ban.appendChild(document.createTextNode(' '));
+      ban.appendChild(b);
+    }
+  }
+  detectZoom();
+  setTimeout(detectZoom, 300);
+  window.visualViewport?.addEventListener('resize', detectZoom);
+  window.addEventListener('resize', detectZoom);
+
+
+  // Back to calendar: restore the month user came from (query from_month=YYYY-MM)
+  try {
+    const q = new URLSearchParams(location.search || '');
+    let fm = (q.get('from_month') || q.get('cal_month') || '').slice(0, 7);
+    if (!/^\d{4}-\d{2}$/.test(fm)) {
+      try { fm = sessionStorage.getItem('tw_cal_month') || ''; } catch(_){}
+    } else {
+      try { sessionStorage.setItem('tw_cal_month', fm); } catch(_){}
+    }
+    document.querySelectorAll('a[data-cal-back], a.daily-back').forEach(a => {
+      if (fm && /^\d{4}-\d{2}$/.test(fm)) {
+        a.setAttribute('href', 'calendar.html?month=' + encodeURIComponent(fm));
+      } else {
+        a.setAttribute('href', 'calendar.html');
+      }
+    });
+    // When landing on calendar with month=, remember it
+    if (location.pathname.endsWith('calendar.html') || location.href.includes('calendar.html')) {
+      const mq = new URLSearchParams(location.search || '').get('month') || '';
+      if (/^\d{4}-\d{2}$/.test(mq.slice(0,7))) {
+        try { sessionStorage.setItem('tw_cal_month', mq.slice(0,7)); } catch(_){}
+      }
+    }
+  } catch(_){}
+})();
+</script>
+</body>
+</html>

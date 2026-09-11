@@ -1,0 +1,136 @@
+{
+  "report_id": "weekly_20260831_20260906",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_high",
+      "name_zh": "高位震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "liquidation_driven_squeeze",
+      "name_zh": "清算驱动（上涨段挤压迹象）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ],
+      "caution": "liquidation side_semantics=raw_exchange_side_unverified"
+    },
+    "vol": {
+      "id": "high",
+      "name_zh": "高实现波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_fair",
+      "name_zh": "IV 与 RV 大致匹配",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": -4.03
+    },
+    "tradfi_link": {
+      "id": "crypto_idiosyncratic",
+      "name_zh": "加密偏独立",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": 3.424,
+    "rv_ann": 43.35,
+    "iv_end": 39.32,
+    "iv_rv_spread": -4.03,
+    "funding_ann": 3.16,
+    "oi_chg": -0.73,
+    "perp_turnover_sum_usd": 76288408200.86,
+    "perp_turnover_sum_display_zh": "762.88 亿美金",
+    "perp_turnover_sum_display_en": "76.29B",
+    "perp_turnover_wow_pct": -14.67,
+    "perp_activity_id": "normal",
+    "spot_turnover_sum_usd": 7860495268.44,
+    "spot_turnover_sum_display_zh": "78.60 亿美金",
+    "spot_turnover_sum_display_en": "7.86B",
+    "etf_btc_net_usd": 986853091.0,
+    "etf_btc_net_display_zh": "+9.87 亿美金",
+    "etf_btc_net_display_en": "+986.85M",
+    "etf_eth_net_usd": 218405535.0,
+    "etf_eth_net_display_zh": "+2.18 亿美金",
+    "etf_eth_net_display_en": "+218.41M",
+    "etf_channel_id": "mild_inflow",
+    "etf_channel_zh": "温和流入",
+    "etf_channel_en": "mild inflow"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "mean_reversion"
+    ],
+    "mismatched": [
+      "trend_following"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "下一周 BTC 现货 ETF 合计净流是否仍维持「温和流入」或转为流出（对照本周 +9.87 亿美金与 4 入 1 出）。",
+        "en": "Whether next week’s combined BTC spot ETF net stays mild inflow or flips to outflow (vs this week’s +986.85M and 4 in / 1 out)."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_persist",
+      "rationale_zh": "本周通道标签温和且与价格上涨并陈但未焊死因果，净流能否延续是下期最直接的外部核对哨。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "高实现波动（本周 RV ~43%）是否回落至更中性带，同时 IV−RV 是否仍大致匹配、不出现大幅转正或转负。",
+        "en": "Whether high realized vol (RV ~43% this week) cools toward a neutral band while IV−RV stays roughly matched without a large rich/cheap swing."
+      },
+      "watchable": true,
+      "template_hint": "vol_still_high",
+      "rationale_zh": "本周矛盾在「振幅已高但期权并不明显贵」，若 RV 不降而 IV 突然脱节，叙事会从公允切到溢价/折价。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "清算驱动挤压迹象是否消退：OI 周变与 funding 是否在无新峰值清算日的情况下重新抬升，或再出现类似 9/3 的清算笔数高峰。",
+        "en": "Whether liquidation-squeeze traces fade: OI change and funding rebuild without a new peak liquidation day, or another liquidation-count spike like Sep 3 appears."
+      },
+      "watchable": true,
+      "template_hint": "funding_ease",
+      "rationale_zh": "杠杆标签是本周路径的关键注解；OI 略降+温和 funding 若被新一轮清算峰值打断，高位震荡的性质会改变。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-08-31",
+    "end": "2026-09-06",
+    "label": "2026-08-31～2026-09-06",
+    "incomplete_end": false
+  }
+}

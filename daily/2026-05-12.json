@@ -1,0 +1,77 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-05-12",
+  "date_effective": "2026-05-12",
+  "as_of": "2026-08-31T10:33:12Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-05-12",
+    "prior_date": "2026-05-11",
+    "btc_ret_1d": -1.518,
+    "eth_ret_1d": -2.774,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -1.52%（有波动、未过异常默认线） · ETH -2.77%",
+    "weather_en": "Weather: BTC -1.52% · ETH -2.77%",
+    "text_zh": "近况偏弱但未过异常线：BTC 日跌 1.52%、ETH 跌 2.77%，波动有但标签平静。",
+    "text_en": "Soft but within bands: BTC -1.52%, ETH -2.77%; quiet labels."
+  },
+  "slots": {
+    "external": {
+      "kind": "calendar",
+      "event": {
+        "id": "bls_cpi_2026_05",
+        "date": "2026-05-12",
+        "name_zh": "CPI（2026-04）",
+        "name_en": "CPI (Apr 2026)",
+        "source": "bls"
+      },
+      "text_zh": "日历：今日关注 CPI（2026-04）。",
+      "text_en": "Calendar: CPI (Apr 2026)"
+    },
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 3,
+      "items": [],
+      "text_zh": "潮记：3 项观察仍开着。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 日跌 1.52%",
+      "tone": "down"
+    },
+    {
+      "text": "ETH 跌 2.77%",
+      "tone": "down"
+    },
+    {
+      "text": "funding 年化报 5.91%",
+      "tone": "up"
+    },
+    {
+      "text": "日变 +6.04 pp",
+      "tone": "up"
+    },
+    {
+      "text": "VIX 回落 2.12%",
+      "tone": "down"
+    },
+    {
+      "text": "同向偏弱",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v1",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

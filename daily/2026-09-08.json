@@ -1,0 +1,84 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-08",
+  "date_effective": "2026-09-08",
+  "as_of": "2026-09-09T02:11:26Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-08",
+    "prior_date": "2026-09-07",
+    "btc_ret_1d": -0.829,
+    "eth_ret_1d": -0.205,
+    "oi_qty": 106647.24,
+    "oi_chg_pct": -0.231,
+    "perp_turnover_usd": 10192615051.3562,
+    "perp_turnover_chg_pct": 35.62,
+    "spot_turnover_usd": 1510077235.7348557,
+    "spot_turnover_chg_pct": 79.8,
+    "btc_etf_net_usd": 174595324.0,
+    "eth_etf_net_usd": 26461271.0,
+    "etf_lookback_sum_btc_usd": 174595324.0,
+    "etf_lookback_sum_eth_usd": 26461271.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.83%（小区间） · ETH -0.20% · OI 日变 -0.23% · 永续成交额 101.93 亿美金（日变 +35.6%） · BTC ETF 净流 +1.75 亿美金",
+    "weather_en": "Weather: BTC -0.83% · ETH -0.20% · OI -0.23% d/d · perp turnover 10.19B (+35.6% d/d) · BTC ETF net +174.60M",
+    "text_zh": "今天偏平静：BTC 小回 -0.83%，ETH 几乎不动。量明显起来了，杠杆存量只微降，清算约为前一日的 1.8 倍。",
+    "text_en": "Quiet-ish session: BTC -0.83%, ETH flat. Turnover jumped; OI barely down."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 4,
+      "open_watches": 7,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：有人仍在问 IV 与 VIX 区别；当前钉 4、观察 7。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 小回 -0.83%",
+      "tone": "down"
+    },
+    {
+      "text": "量明显起来了",
+      "tone": "up"
+    },
+    {
+      "text": "杠杆存量只微降",
+      "tone": "neutral"
+    },
+    {
+      "text": "清算约为前一日的 1.8 倍",
+      "tone": "warn"
+    },
+    {
+      "text": "BTC 与 ES 同向走弱",
+      "tone": "neutral"
+    },
+    {
+      "text": "不是剧烈去杠杆",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-09-04",
+    "etf_eth_using_2026-09-04"
+  ]
+}
