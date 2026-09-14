@@ -2,7 +2,7 @@
   "schema_version": "context_v0.1",
   "report_id": "weekly_20260907_20260913",
   "report_type": "weekly",
-  "generated_at": "2026-09-14T02:18:12Z",
+  "generated_at": "2026-09-14T03:26:25Z",
   "as_of": "2026-09-13T23:59:59Z",
   "timezone_storage": "UTC",
   "timezone_display": "Asia/Shanghai",
@@ -60,7 +60,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.daily_kline",
-      "fetched_at": "2026-09-14T02:17:24Z",
+      "fetched_at": "2026-09-14T03:25:34Z",
       "notes": "Binance Spot+LinearSwap; argMax by recv_ts"
     },
     {
@@ -70,7 +70,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.open_interest",
-      "fetched_at": "2026-09-14T02:17:24Z"
+      "fetched_at": "2026-09-14T03:25:34Z"
     },
     {
       "id": "src_liq",
@@ -79,7 +79,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.liquidation",
-      "fetched_at": "2026-09-14T02:17:24Z",
+      "fetched_at": "2026-09-14T03:25:34Z",
       "notes": "side BUY/SELL raw; semantics unverified"
     },
     {
@@ -89,7 +89,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.contract_quote",
-      "fetched_at": "2026-09-14T02:17:24Z"
+      "fetched_at": "2026-09-14T03:25:34Z"
     },
     {
       "id": "src_tradfi_yahoo",
@@ -97,7 +97,7 @@
       "provider": "yahoo",
       "channel": "yfinance",
       "table_or_resource": "ES=F,NQ=F,^VIX,DX-Y.NYB,^TNX,GC=F",
-      "fetched_at": "2026-09-14T02:17:51Z",
+      "fetched_at": "2026-09-14T03:25:59Z",
       "notes": "TEMPORARY fallback — not Datahub; must footnote in HTML"
     },
     {
@@ -107,7 +107,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.option_volatility_kline",
-      "fetched_at": "2026-09-14T02:18:01Z",
+      "fetched_at": "2026-09-14T03:26:14Z",
       "notes": "Deribit BTC,ETH; daily close via argMax(close,start_time)"
     },
     {
@@ -656,9 +656,9 @@
             "2026-09-13",
             763,
             21.202,
-            51.292,
-            72.49400000000004,
-            5569482.106130004
+            51.291999999999994,
+            72.49400000000003,
+            5569482.106130005
           ]
         ],
         "unit": {
@@ -2636,357 +2636,8 @@
   },
   "tide_notes": {
     "enabled": true,
-    "resolved_watches": [
-      {
-        "id": "fc31813d-ccb7-4978-9bdb-f39208453c38",
-        "status": "missed",
-        "proposition": {
-          "zh": "下一周 BTC 现货 ETF 合计净流是否仍维持「温和流入」或转为流出（对照本周 +9.87 亿美金与 4 入 1 出）。",
-          "en": "Whether next week’s combined BTC spot ETF net stays mild inflow or flips to outflow (vs this week’s +986.85M and 4 in / 1 out)."
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": -462700000.0,
-          "observed_label_id": null,
-          "summary_zh": "net_sum_usd: 0.0 → -462700000.0（未成立）",
-          "summary_en": "features.etf_flow.assets.BTC.net_sum_usd: 0.0 → -462700000.0 (missed)",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期BTC现货ETF周净申赎约 -462700000.0 USD",
-          "observed_plain_en": "This period BTC spot ETF week net USD ≈ -462700000.0 USD",
-          "summary_plain_zh": "观察没对上：BTC现货ETF周净申赎从建立时的 0.00 USD 变为 -462700000.0 USD，未达到「高于建立时」的条件。",
-          "summary_plain_en": "Not met: BTC spot ETF week net USD moved 0.00 USD → -462700000.0 USD; did not satisfy “above baseline”.",
-          "evidence_zh": "net_sum_usd: 0.0 → -462700000.0（未成立）",
-          "evidence_en": "features.etf_flow.assets.BTC.net_sum_usd: 0.0 → -462700000.0 (missed)"
-        },
-        "tags": [
-          "etf_flow"
-        ],
-        "rule": {
-          "kind": "feature_compare",
-          "feature_key": "features.etf_flow.assets.BTC.net_sum_usd",
-          "op": "gt",
-          "baseline_value": 0
-        },
-        "template_id": "etf_flow_persist",
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w1"
-        }
-      },
-      {
-        "id": "cd6529a7-1519-4564-a6be-37947c1eefc3",
-        "status": "missed",
-        "proposition": {
-          "zh": "清算驱动挤压迹象是否消退：OI 周变与 funding 是否在无新峰值清算日的情况下重新抬升，或再出现类似 9/3 的清算笔数高峰。",
-          "en": "Whether liquidation-squeeze traces fade: OI change and funding rebuild without a new peak liquidation day, or another liquidation-count spike like Sep 3 appears."
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": 7.84,
-          "observed_label_id": null,
-          "summary_zh": "funding_end_ann_pct: 3.16 → 7.84（未成立）",
-          "summary_en": "crypto.BTC.funding_end_ann_pct: 3.16 → 7.84 (missed)",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期资金费率年化约 7.84%/年",
-          "observed_plain_en": "This period Funding ann. %/yr ≈ 7.84%/年",
-          "summary_plain_zh": "观察没对上：资金费率年化从建立时的 3.16%/年 变为 7.84%/年，未达到「低于建立时」的条件。",
-          "summary_plain_en": "Not met: Funding ann. %/yr moved 3.16%/年 → 7.84%/年; did not satisfy “below baseline”.",
-          "evidence_zh": "funding_end_ann_pct: 3.16 → 7.84（未成立）",
-          "evidence_en": "crypto.BTC.funding_end_ann_pct: 3.16 → 7.84 (missed)"
-        },
-        "tags": [
-          "funding_rate"
-        ],
-        "rule": {
-          "kind": "feature_compare",
-          "feature_key": "crypto.BTC.funding_end_ann_pct",
-          "op": "lt",
-          "baseline_value": 3.16
-        },
-        "template_id": "funding_ease",
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w3"
-        }
-      },
-      {
-        "id": "21bda6d5-e75b-4b25-a866-1dec11e616a9",
-        "status": "missed",
-        "proposition": {
-          "zh": "高实现波动（本周 RV ~43%）是否回落至更中性带，同时 IV−RV 是否仍大致匹配、不出现大幅转正或转负。",
-          "en": "Whether high realized vol (RV ~43% this week) cools toward a neutral band while IV−RV stays roughly matched without a large rich/cheap swing."
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": null,
-          "observed_label_id": "mid",
-          "summary_zh": "vol: 期望 high，本期 mid（未成立）",
-          "summary_en": "vol: want high, got mid",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期实现波动：中等波动",
-          "observed_plain_en": "This period Realized vol: mid",
-          "summary_plain_zh": "观察没对上：建立时盯的是「高实现波动」，这期变成「中等波动」。",
-          "summary_plain_en": "Not met: watched for “High realized vol”, this period is “mid”.",
-          "evidence_zh": "vol: 期望 high，本期 mid（未成立）",
-          "evidence_en": "vol: want high, got mid"
-        },
-        "tags": [
-          "vol"
-        ],
-        "rule": {
-          "kind": "label_equals",
-          "label_dim": "vol",
-          "label_id": "high",
-          "baseline_label_id": "high"
-        },
-        "template_id": "vol_still_high",
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w2"
-        }
-      },
-      {
-        "id": "daac8634-3ff7-48c8-9ec3-8544380af288",
-        "status": "missed",
-        "proposition": {
-          "zh": "下一周 BTC 现货 ETF 合计净流是否仍维持「温和流入」或转为流出（对照本周 +9.87 亿美金与 4 入 1 出）。",
-          "en": "Whether next week’s combined BTC spot ETF net stays mild inflow or flips to outflow (vs this week’s +986.85M and 4 in / 1 out)."
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": -462700000.0,
-          "observed_label_id": null,
-          "summary_zh": "net_sum_usd: 0.0 → -462700000.0（未成立）",
-          "summary_en": "features.etf_flow.assets.BTC.net_sum_usd: 0.0 → -462700000.0 (missed)",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期BTC现货ETF周净申赎约 -462700000.0 USD",
-          "observed_plain_en": "This period BTC spot ETF week net USD ≈ -462700000.0 USD",
-          "summary_plain_zh": "观察没对上：BTC现货ETF周净申赎从建立时的 0.00 USD 变为 -462700000.0 USD，未达到「高于建立时」的条件。",
-          "summary_plain_en": "Not met: BTC spot ETF week net USD moved 0.00 USD → -462700000.0 USD; did not satisfy “above baseline”.",
-          "evidence_zh": "net_sum_usd: 0.0 → -462700000.0（未成立）",
-          "evidence_en": "features.etf_flow.assets.BTC.net_sum_usd: 0.0 → -462700000.0 (missed)"
-        },
-        "tags": [
-          "etf_flow"
-        ],
-        "rule": {
-          "kind": "feature_compare",
-          "feature_key": "features.etf_flow.assets.BTC.net_sum_usd",
-          "op": "gt",
-          "baseline_value": 0
-        },
-        "template_id": "etf_flow_persist",
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w1"
-        }
-      },
-      {
-        "id": "99e7f6bc-b38b-4b31-ac2a-939459c73ca6",
-        "status": "missed",
-        "proposition": {
-          "zh": "假 hint 回退测试观察点正文",
-          "en": ""
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": null,
-          "observed_label_id": "iv_rich",
-          "summary_zh": "vol_premium: 期望 iv_fair，本期 iv_rich（未成立）",
-          "summary_en": "vol_premium: want iv_fair, got iv_rich",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期期权贵贱（IV 相对 RV）：期权偏贵（IV 相对 RV 溢价）",
-          "observed_plain_en": "This period Vol premium (IV vs RV): iv_rich",
-          "summary_plain_zh": "观察没对上：建立时盯的是「期权相对实现波动大致公允」，这期变成「期权偏贵（IV 相对 RV 溢价）」。",
-          "summary_plain_en": "Not met: watched for “IV roughly fair vs RV”, this period is “iv_rich”.",
-          "evidence_zh": "vol_premium: 期望 iv_fair，本期 iv_rich（未成立）",
-          "evidence_en": "vol_premium: want iv_fair, got iv_rich"
-        },
-        "tags": [
-          "observation",
-          "hint_fallback"
-        ],
-        "rule": {
-          "kind": "label_equals",
-          "label_dim": "vol_premium",
-          "label_id": "iv_fair",
-          "baseline_label_id": "iv_fair"
-        },
-        "template_id": null,
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w_fake"
-        }
-      },
-      {
-        "id": "5e7757b8-fb3d-4d61-8d30-61ce08d0a1b7",
-        "status": "missed",
-        "proposition": {
-          "zh": "下一周 BTC 现货 ETF 合计净流是否仍维持温和流入",
-          "en": "etf persist test"
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": -462700000.0,
-          "observed_label_id": null,
-          "summary_zh": "net_sum_usd: 0.0 → -462700000.0（未成立）",
-          "summary_en": "features.etf_flow.assets.BTC.net_sum_usd: 0.0 → -462700000.0 (missed)",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期BTC现货ETF周净申赎约 -462700000.0 USD",
-          "observed_plain_en": "This period BTC spot ETF week net USD ≈ -462700000.0 USD",
-          "summary_plain_zh": "观察没对上：BTC现货ETF周净申赎从建立时的 0.00 USD 变为 -462700000.0 USD，未达到「高于建立时」的条件。",
-          "summary_plain_en": "Not met: BTC spot ETF week net USD moved 0.00 USD → -462700000.0 USD; did not satisfy “above baseline”.",
-          "evidence_zh": "net_sum_usd: 0.0 → -462700000.0（未成立）",
-          "evidence_en": "features.etf_flow.assets.BTC.net_sum_usd: 0.0 → -462700000.0 (missed)"
-        },
-        "tags": [
-          "etf_flow"
-        ],
-        "rule": {
-          "kind": "feature_compare",
-          "feature_key": "features.etf_flow.assets.BTC.net_sum_usd",
-          "op": "gt",
-          "baseline_value": 0
-        },
-        "template_id": "etf_flow_persist",
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w1"
-        }
-      },
-      {
-        "id": "bab29bd0-8d8f-4ac7-ab2a-b48b2b28f8a3",
-        "status": "missed",
-        "proposition": {
-          "zh": "清算驱动挤压迹象是否消退：OI 周变与 funding 是否在无新峰值清算日的情况下重新抬升，或再出现类似 9/3 的清算笔数高峰。",
-          "en": "Whether liquidation-squeeze traces fade: OI change and funding rebuild without a new peak liquidation day, or another liquidation-count spike like Sep 3 appears."
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": 7.84,
-          "observed_label_id": null,
-          "summary_zh": "funding_end_ann_pct: 3.16 → 7.84（未成立）",
-          "summary_en": "crypto.BTC.funding_end_ann_pct: 3.16 → 7.84 (missed)",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期资金费率年化约 7.84%/年",
-          "observed_plain_en": "This period Funding ann. %/yr ≈ 7.84%/年",
-          "summary_plain_zh": "观察没对上：资金费率年化从建立时的 3.16%/年 变为 7.84%/年，未达到「低于建立时」的条件。",
-          "summary_plain_en": "Not met: Funding ann. %/yr moved 3.16%/年 → 7.84%/年; did not satisfy “below baseline”.",
-          "evidence_zh": "funding_end_ann_pct: 3.16 → 7.84（未成立）",
-          "evidence_en": "crypto.BTC.funding_end_ann_pct: 3.16 → 7.84 (missed)"
-        },
-        "tags": [
-          "funding_rate"
-        ],
-        "rule": {
-          "kind": "feature_compare",
-          "feature_key": "crypto.BTC.funding_end_ann_pct",
-          "op": "lt",
-          "baseline_value": 3.16
-        },
-        "template_id": "funding_ease",
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w3"
-        }
-      },
-      {
-        "id": "3836de20-3d26-4349-b50a-5de8c24a50ab",
-        "status": "missed",
-        "proposition": {
-          "zh": "高实现波动（本周 RV ~43%）是否回落至更中性带，同时 IV−RV 是否仍大致匹配、不出现大幅转正或转负。",
-          "en": "Whether high realized vol (RV ~43% this week) cools toward a neutral band while IV−RV stays roughly matched without a large rich/cheap swing."
-        },
-        "resolution": {
-          "resolved_at": "2026-09-14T02:18:12Z",
-          "report_id": "weekly_20260907_20260913",
-          "observed_value": null,
-          "observed_label_id": "mid",
-          "summary_zh": "vol: 期望 high，本期 mid（未成立）",
-          "summary_en": "vol: want high, got mid",
-          "status_label_zh": "未成立",
-          "status_label_en": "Not met",
-          "observed_plain_zh": "本期实现波动：中等波动",
-          "observed_plain_en": "This period Realized vol: mid",
-          "summary_plain_zh": "观察没对上：建立时盯的是「高实现波动」，这期变成「中等波动」。",
-          "summary_plain_en": "Not met: watched for “High realized vol”, this period is “mid”.",
-          "evidence_zh": "vol: 期望 high，本期 mid（未成立）",
-          "evidence_en": "vol: want high, got mid"
-        },
-        "tags": [
-          "vol"
-        ],
-        "rule": {
-          "kind": "label_equals",
-          "label_dim": "vol",
-          "label_id": "high",
-          "baseline_label_id": "high"
-        },
-        "template_id": "vol_still_high",
-        "source": {
-          "report_id": "weekly_20260831_20260906",
-          "pin_id": null,
-          "observation_id": "w2"
-        }
-      }
-    ],
-    "echo_preview": [
-      {
-        "id": "watch_fc31813d-ccb7-4978-9bdb-f39208453c38",
-        "kind": "watch_resolved",
-        "priority": 1,
-        "title_zh": "哨兑现 ✗",
-        "title_en": "Watch missed",
-        "body_zh": "下一周 BTC 现货 ETF 合计净流是否仍维持「温和流入」或转为流出（对照本周 +9.87 亿美金与 4 入 1 出）。 — net_sum_usd: 0.0 → -462700000.0（未成立）",
-        "body_en": "net_sum_usd: 0.0 → -462700000.0（未成立）",
-        "ref_id": "fc31813d-ccb7-4978-9bdb-f39208453c38",
-        "status": "missed",
-        "cta": [
-          {
-            "type": "scroll",
-            "anchor": "sec-watches"
-          }
-        ]
-      },
-      {
-        "id": "watch_cd6529a7-1519-4564-a6be-37947c1eefc3",
-        "kind": "watch_resolved",
-        "priority": 1,
-        "title_zh": "哨兑现 ✗",
-        "title_en": "Watch missed",
-        "body_zh": "清算驱动挤压迹象是否消退：OI 周变与 funding 是否在无新峰值清算日的情况下重新抬升，或再出现类似 9/3 的清算笔数高峰。 — funding_end_ann_pct: 3.16 → 7.84（未成立）",
-        "body_en": "funding_end_ann_pct: 3.16 → 7.84（未成立）",
-        "ref_id": "cd6529a7-1519-4564-a6be-37947c1eefc3",
-        "status": "missed",
-        "cta": [
-          {
-            "type": "scroll",
-            "anchor": "sec-watches"
-          }
-        ]
-      }
-    ],
+    "resolved_watches": [],
+    "echo_preview": [],
     "weekly_words": [
       {
         "id": "daily",
