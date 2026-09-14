@@ -334,7 +334,7 @@
       <div class="side-stack">
         <div class="card attn">
           <h3><span class="lang zh">关注等级</span><span class="lang en">Attention Level</span> · S1</h3>
-          <p><span class="lang zh">风险：</span><span class="lang en">Risk: </span><span class="lang zh">IV-RV 溢价仍宽、资金费率正但 OI 微降，若 risk-off 延续，波动与仓位摩擦可能放大。</span><span class="lang en">Wide IV-RV premium persists, funding positive yet OI slightly down; if risk-off continues, vol and positioning friction may amplify.</span><br/>
+          <p><span class="lang zh">风险：</span><span class="lang en">Risk: </span><span class="lang zh">IV-RV 溢价仍宽、资金费率正但 OI 微降，若 risk-off 延续，波动与仓位摩擦可能放大；杠杆读法：盯拥挤线（费率路径+OI）与出清线（2026-09-11 峰是否双高、次日是否退烧）。</span><span class="lang en">Wide IV-RV premium persists, funding positive yet OI slightly down; if risk-off continues, vol and positioning friction may amplify; Leverage read: crowding (funding path+OI) and flush (2026-09-11 peak dual-high? next-day cool-down?).</span><br/>
              <span class="lang zh">观察：</span><span class="lang en">Watch: </span><span class="lang zh">盯温和流出是否延续、IV 溢价能否收敛，以及永续活跃度是否继续降温。</span><span class="lang en">Watch whether mild outflow persists, if IV premium compresses, and whether perp activity keeps cooling.</span></p>
         </div>
         <div class="card watch">
@@ -386,7 +386,15 @@
       <div class="block-h"><h3>③ <span class="lang zh">杠杆结构</span><span class="lang en">Leverage Structure</span></h3>
         <div class="sub"><span class="lang zh">资金费率 · OI · 清算 · 永续成交额</span><span class="lang en">Funding · OI · Liq · Perp turnover</span> <button type="button" class="sec-ask" data-q="本周 funding 与 OI 如何合读？"><span class="lang zh">问</span><span class="lang en">Ask</span></button></div></div>
       <div class="card layer-plain-only" style="margin-bottom:12px">
-        <p class="plain" style="padding-top:16px"><span class="lang zh">杠杆中性：期末资金费率折年约 +7.84%，OI 周变动约 -0.6%，清算笔数峰值出现在 9 月 11 日；永续成交额合计约 652.65 亿美金、环比约 -14.5%，活跃度正常偏降温，未见拥挤加杠杆叙事。</span><span class="lang en">Leverage neutral: end funding ~+7.84%/yr, OI ~-0.6% WoW, liquidation-count peak on 11 Sep; perp turnover ~65.26B (~~-14.5% WoW), activity normal-to-cooler, no crowded leverage story.</span></p>
+        <p class="plain" style="padding-top:16px"><span class="lang zh">标签：杠杆中性。
+① 拥挤线（OI + 资金费率年化）：周初约 +3.16%/yr → 期末约 +7.84%/yr，租金全周抬升；OI 周变约 -0.61%（105565 → 104917），全周库存仅略变——更像摩擦周，而非匀速大拆/大堆杠杆。
+② 出清线（OI + 清算）：主峰日 09-11（2026-09-11）；峰值约 1.75× 周内中位清算量；价格同日约 +0.9%；当日 OI 约 103405；但 OI 周高在 2026-09-07（约 106894），峰值日并非双高；峰值日 OI 较前一日下降，偏出清/去库存与清算同日。次日 2026-09-12：OI 自峰值日回落至约 103322、funding 年化约 +5.25%/yr、价格约 +0.1%。
+③ 量旁证（永续成交额=活跃度）：周合计约 652.65 亿美金，WoW 约 -14.4%，活跃度中性；量侧用于核对热闹程度，不拆多空。
+收句：拥挤线与出清线并读 → 清算峰相对中位偏温和、峰值日并非 OI 周高（无「清算∥OI 双高」）、费率租金上升但 OI 库存不增、量旁证偏淡，共同支撑「杠杆中性」；禁止把清算/OI/funding 写成涨跌原因。</span><span class="lang en">Label: leverage_neutral.
+① Crowding (OI + funding ann.): ~+3.16%/yr → ~+7.84%/yr — rent rose over the week; OI week change ~-0.61% (105565 → 104917), inventory barely moved — friction week, not steady build/unwind.
+② Flush (OI + liquidations): peak day 2026-09-11; peak ~1.75× median liq qty; price that day ~+0.9%; OI that day ~103405; OI week-high was 2026-09-07 (~106894), not a dual-high peak day; OI down vs prior day — flush/de-stocking with liquidations. Next day 2026-09-12: OI eased to ~103322; funding ~+5.25%/yr; price ~+0.1%.
+③ Volume side (perp turnover = activity): week sum ~65.26B, WoW ~-14.4%, activity normal; activity only, not long/short.
+Close: crowding + flush lines → liq peak mild vs median; peak day ≠ OI week-high (no liq∥OI dual-high); funding rent up but OI inventory not building; volume side quieter — supports “leverage_neutral”; do not write liq/OI/funding as the cause of price.</span></p>
         <div class="callout">
           <b><span class="lang zh">小白速记</span><span class="lang en">Beginner notes</span></b><br/>
           <span class="lang zh">

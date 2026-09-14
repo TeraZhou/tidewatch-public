@@ -31,8 +31,8 @@
       ]
     },
     "risk": {
-      "zh": "IV-RV 溢价仍宽、资金费率正但 OI 微降，若 risk-off 延续，波动与仓位摩擦可能放大。",
-      "en": "Wide IV-RV premium persists, funding positive yet OI slightly down; if risk-off continues, vol and positioning friction may amplify."
+      "zh": "IV-RV 溢价仍宽、资金费率正但 OI 微降，若 risk-off 延续，波动与仓位摩擦可能放大；杠杆读法：盯拥挤线（费率路径+OI）与出清线（2026-09-11 峰是否双高、次日是否退烧）。",
+      "en": "Wide IV-RV premium persists, funding positive yet OI slightly down; if risk-off continues, vol and positioning friction may amplify; Leverage read: crowding (funding path+OI) and flush (2026-09-11 peak dual-high? next-day cool-down?)."
     },
     "watch": {
       "zh": "盯温和流出是否延续、IV 溢价能否收敛，以及永续活跃度是否继续降温。",
@@ -76,8 +76,8 @@
       "en": "Path labeled choppy: no sustained one-way trend inside the window, more range friction and drawdown under risk-off, closing well below baseline."
     },
     "leverage": {
-      "zh": "杠杆中性：期末资金费率折年约 +7.84%，OI 周变动约 -0.6%，清算笔数峰值出现在 9 月 11 日；永续成交额合计约 652.65 亿美金、环比约 -14.5%，活跃度正常偏降温，未见拥挤加杠杆叙事。",
-      "en": "Leverage neutral: end funding ~+7.84%/yr, OI ~-0.6% WoW, liquidation-count peak on 11 Sep; perp turnover ~65.26B (~~-14.5% WoW), activity normal-to-cooler, no crowded leverage story."
+      "zh": "标签：杠杆中性。\n① 拥挤线（OI + 资金费率年化）：周初约 +3.16%/yr → 期末约 +7.84%/yr，租金全周抬升；OI 周变约 -0.61%（105565 → 104917），全周库存仅略变——更像摩擦周，而非匀速大拆/大堆杠杆。\n② 出清线（OI + 清算）：主峰日 09-11（2026-09-11）；峰值约 1.75× 周内中位清算量；价格同日约 +0.9%；当日 OI 约 103405；但 OI 周高在 2026-09-07（约 106894），峰值日并非双高；峰值日 OI 较前一日下降，偏出清/去库存与清算同日。次日 2026-09-12：OI 自峰值日回落至约 103322、funding 年化约 +5.25%/yr、价格约 +0.1%。\n③ 量旁证（永续成交额=活跃度）：周合计约 652.65 亿美金，WoW 约 -14.4%，活跃度中性；量侧用于核对热闹程度，不拆多空。\n收句：拥挤线与出清线并读 → 清算峰相对中位偏温和、峰值日并非 OI 周高（无「清算∥OI 双高」）、费率租金上升但 OI 库存不增、量旁证偏淡，共同支撑「杠杆中性」；禁止把清算/OI/funding 写成涨跌原因。",
+      "en": "Label: leverage_neutral.\n① Crowding (OI + funding ann.): ~+3.16%/yr → ~+7.84%/yr — rent rose over the week; OI week change ~-0.61% (105565 → 104917), inventory barely moved — friction week, not steady build/unwind.\n② Flush (OI + liquidations): peak day 2026-09-11; peak ~1.75× median liq qty; price that day ~+0.9%; OI that day ~103405; OI week-high was 2026-09-07 (~106894), not a dual-high peak day; OI down vs prior day — flush/de-stocking with liquidations. Next day 2026-09-12: OI eased to ~103322; funding ~+5.25%/yr; price ~+0.1%.\n③ Volume side (perp turnover = activity): week sum ~65.26B, WoW ~-14.4%, activity normal; activity only, not long/short.\nClose: crowding + flush lines → liq peak mild vs median; peak day ≠ OI week-high (no liq∥OI dual-high); funding rent up but OI inventory not building; volume side quieter — supports “leverage_neutral”; do not write liq/OI/funding as the cause of price."
     },
     "etf": {
       "zh": "美现货 BTC ETF 合计净申赎约 -4.63 亿美金（温和流出，流出日 4、流入日 0），ETH ETF 净约 +1.97 亿；并陈 Binance 等口径现货成交额周合约 73.41 亿美金、环比约 -6.6%，总量热闹度正常偏缓，不与净流加总、不焊因果。",
@@ -1136,5 +1136,12 @@
     "vol_premium",
     "dvol"
   ],
-  "narrative_source": "llm"
+  "narrative_source": "llm+n1_program",
+  "n1_leverage_a": {
+    "pinned_at": "2026-09-14T03:48:10Z",
+    "scheme": "A_read_only",
+    "source": "program_n1_fix_this_week",
+    "label_id": "leverage_neutral",
+    "note_zh": "N1/N2 程序骨架：①拥挤 ②出清 ③量旁证 + 收句；数字锁 features/看板。"
+  }
 }
