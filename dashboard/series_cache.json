@@ -1,8 +1,8 @@
 {
   "schema_version": "dashboard_cache_v1",
   "start": "2025-12-31",
-  "end": "2026-09-10",
-  "fetched_at": "2026-09-11T08:31:18Z",
+  "end": "2026-09-13",
+  "fetched_at": "2026-09-14T02:13:29Z",
   "refresh_mode": "incremental",
   "fetch_start": "2026-09-05",
   "periods_per_year": 1095.0,
@@ -5853,6 +5853,21 @@
           "2026-09-10",
           3.006e-05,
           3.2916
+        ],
+        [
+          "2026-09-11",
+          6.04e-05,
+          6.6138
+        ],
+        [
+          "2026-09-12",
+          4.794e-05,
+          5.2494
+        ],
+        [
+          "2026-09-13",
+          7.157e-05,
+          7.8369
         ]
       ],
       "oi": [
@@ -6871,6 +6886,18 @@
         [
           "2026-09-10",
           106878.433
+        ],
+        [
+          "2026-09-11",
+          103404.871
+        ],
+        [
+          "2026-09-12",
+          103322.256
+        ],
+        [
+          "2026-09-13",
+          104917.346
         ]
       ],
       "liq": [
@@ -8641,9 +8668,9 @@
         [
           "2026-09-09",
           1048,
-          39.21000000000001,
+          39.209999999999994,
           63.05799999999997,
-          102.26800000000004
+          102.26800000000011
         ],
         [
           "2026-09-10",
@@ -8651,6 +8678,27 @@
           18.278999999999996,
           104.46400000000015,
           122.7430000000002
+        ],
+        [
+          "2026-09-11",
+          1241,
+          91.62000000000012,
+          87.54300000000005,
+          179.163
+        ],
+        [
+          "2026-09-12",
+          212,
+          2.813999999999998,
+          6.665999999999999,
+          9.479999999999992
+        ],
+        [
+          "2026-09-13",
+          763,
+          21.202,
+          51.292,
+          72.49400000000004
         ]
       ],
       "perp_turnover": [
@@ -9923,6 +9971,21 @@
           "2026-09-10",
           11054985093.6022,
           142694.888
+        ],
+        [
+          "2026-09-11",
+          16094199451.9552,
+          207305.258
+        ],
+        [
+          "2026-09-12",
+          3145981955.7815,
+          40726.68
+        ],
+        [
+          "2026-09-13",
+          5229233617.0931,
+          67943.457
         ]
       ],
       "spot_turnover": [
@@ -11195,6 +11258,21 @@
           "2026-09-10",
           1188117943.7720196,
           15320.36904
+        ],
+        [
+          "2026-09-11",
+          1528809492.0993094,
+          19713.27729
+        ],
+        [
+          "2026-09-12",
+          622849159.587739,
+          8060.44455
+        ],
+        [
+          "2026-09-13",
+          536092213.4014395,
+          6959.68366
         ]
       ]
     },
@@ -12215,6 +12293,18 @@
         [
           "2026-09-10",
           40.24
+        ],
+        [
+          "2026-09-11",
+          36.75
+        ],
+        [
+          "2026-09-12",
+          36.98
+        ],
+        [
+          "2026-09-13",
+          38.89
         ]
       ],
       "ETH_IV": [
@@ -13233,6 +13323,18 @@
         [
           "2026-09-10",
           53.36
+        ],
+        [
+          "2026-09-11",
+          51.76
+        ],
+        [
+          "2026-09-12",
+          52.61
+        ],
+        [
+          "2026-09-13",
+          54.29
         ]
       ],
       "BTC_RV_7": [
@@ -17717,6 +17819,14 @@
         [
           "2026-09-10",
           99.08999633789062
+        ],
+        [
+          "2026-09-11",
+          99.12000274658203
+        ],
+        [
+          "2026-09-13",
+          99.19100189208984
         ]
       ],
       "ES": [
@@ -18423,6 +18533,14 @@
         [
           "2026-09-10",
           7598.5
+        ],
+        [
+          "2026-09-11",
+          7659.5
+        ],
+        [
+          "2026-09-13",
+          7632.5
         ]
       ],
       "GOLD": [
@@ -19129,6 +19247,14 @@
         [
           "2026-09-10",
           4364.5
+        ],
+        [
+          "2026-09-11",
+          4366.2001953125
+        ],
+        [
+          "2026-09-13",
+          4391.7001953125
         ]
       ],
       "NQ": [
@@ -19835,6 +19961,14 @@
         [
           "2026-09-10",
           29135.25
+        ],
+        [
+          "2026-09-11",
+          29387.0
+        ],
+        [
+          "2026-09-13",
+          29064.5
         ]
       ],
       "US10Y": [
@@ -20533,6 +20667,10 @@
         [
           "2026-09-10",
           4.943999767303467
+        ],
+        [
+          "2026-09-11",
+          4.974999904632568
         ]
       ],
       "VIX": [
@@ -21239,6 +21377,10 @@
         [
           "2026-09-10",
           17.84000015258789
+        ],
+        [
+          "2026-09-11",
+          15.84000015258789
         ]
       ]
     },
@@ -22287,6 +22429,12 @@
           -282700000.0,
           55236799999.99995,
           null
+        ],
+        [
+          "2026-09-11",
+          -13200000.0,
+          55223599999.99995,
+          null
         ]
       ],
       "ETH_NET": [
@@ -23333,11 +23481,20 @@
           -29900000.0,
           13165700000.000002,
           null
+        ],
+        [
+          "2026-09-11",
+          216400000.0,
+          13382100000.000002,
+          null
         ]
       ]
     }
   },
-  "errors": [],
+  "errors": [
+    "spot BTC: datahub query failed (exit 1): \u001b[2m2026-09-14T02:13:33.410909Z\u001b[0m [\u001b[31m\u001b[1merror    \u001b[0m] \u001b[1msdk_call_error                \u001b[0m [\u001b[0m\u001b[1m\u001b[34mdatahub\u001b[0m]\u001b[0m \u001b[36mduration_ms\u001b[0m=\u001b[35m220\u001b[0m \u001b[36merror\u001b[0m=\u001b[35m'[Errno 8] nodename nor servname provided, or not known'\u001b[0m \u001b[36mfunction\u001b[0m=\u001b[35mclickhouse_query\u001b[0m\n╭───────────────────── Traceback (most recent call last) ──────────────────────╮\n│ /Users/mr80123ml/miniconda3/lib/python3.14/site-packages/httpx/_transports/d │\n│ efault.py:101 in map_httpcore_exceptions                                     │\n│                                                                              │\n│    98 │   if len(HTTPCORE_EXC_MAP) == 0:                                     │\n│    99 │   │   HTTPCORE_EXC_MAP = _load_httpcore_exceptions()                 │\n│   100 │   try:                                                               │\n│ ❱ 101 │   │   yield                                                          │\n│   102 │   except Exception as exc:                                           │\n│   103 │   │   mapped_exc = None                                              │\n│   104                                                                        │\n│                                                                              │\n│ /Users/mr80123ml/miniconda3/lib/python3.14/site-packages/httpx/_transports/d │\n│ efault.py:250 in handle_request                                              │\n│                                                                              │\n│   247 │   │   │   extensions=request.extensions,                             │\n│   248 │   │   )                                                              │\n│   249 │   │   with map_httpcore_exceptions():                                │\n│ ❱ 250 │   │   │   resp = self._pool.handle_request(req)                      │\n│   251 │   │                                                                  │\n│   252 │   │   assert isinstance(resp.stream, typing.Iterable)                │\n│   253  ",
+    "spot ETH: datahub query failed (exit 1): \u001b[2m2026-09-14T02:13:36.317927Z\u001b[0m [\u001b[31m\u001b[1merror    \u001b[0m] \u001b[1msdk_call_error                \u001b[0m [\u001b[0m\u001b[1m\u001b[34mdatahub\u001b[0m]\u001b[0m \u001b[36mduration_ms\u001b[0m=\u001b[35m504\u001b[0m \u001b[36merror\u001b[0m=\u001b[35m'[Errno 8] nodename nor servname provided, or not known'\u001b[0m \u001b[36mfunction\u001b[0m=\u001b[35mclickhouse_query\u001b[0m\n╭───────────────────── Traceback (most recent call last) ──────────────────────╮\n│ /Users/mr80123ml/miniconda3/lib/python3.14/site-packages/httpx/_transports/d │\n│ efault.py:101 in map_httpcore_exceptions                                     │\n│                                                                              │\n│    98 │   if len(HTTPCORE_EXC_MAP) == 0:                                     │\n│    99 │   │   HTTPCORE_EXC_MAP = _load_httpcore_exceptions()                 │\n│   100 │   try:                                                               │\n│ ❱ 101 │   │   yield                                                          │\n│   102 │   except Exception as exc:                                           │\n│   103 │   │   mapped_exc = None                                              │\n│   104                                                                        │\n│                                                                              │\n│ /Users/mr80123ml/miniconda3/lib/python3.14/site-packages/httpx/_transports/d │\n│ efault.py:250 in handle_request                                              │\n│                                                                              │\n│   247 │   │   │   extensions=request.extensions,                             │\n│   248 │   │   )                                                              │\n│   249 │   │   with map_httpcore_exceptions():                                │\n│ ❱ 250 │   │   │   resp = self._pool.handle_request(req)                      │\n│   251 │   │                                                                  │\n│   252 │   │   assert isinstance(resp.stream, typing.Iterable)                │\n│   253  "
+  ],
   "sources_note": {
     "crypto": "datahub market_data.*",
     "iv": "datahub option_volatility_kline",

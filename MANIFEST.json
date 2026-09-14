@@ -1,7 +1,7 @@
 {
   "schema": "tidewatch_public_v1",
-  "generated_at": "2026-09-11T08:32:24Z",
-  "data_as_of": "2026-09-10",
+  "generated_at": "2026-09-14T02:19:27Z",
+  "data_as_of": "2026-09-13",
   "source_output": "/Users/mr80123ml/Documents/Tidewatch/output",
   "dest": "/Users/mr80123ml/Documents/Tidewatch/public_site",
   "site": {
@@ -70,6 +70,9 @@
     "daily_2026-09-08": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20260908.html",
     "daily_2026-09-09": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20260909.html",
     "daily_2026-09-10": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20260910.html",
+    "daily_2026-09-11": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20260911.html",
+    "daily_2026-09-12": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20260912.html",
+    "daily_2026-09-13": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20260913.html",
     "daily_pin_2026-09-16": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20260916.html",
     "daily_pin_2026-10-28": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20261028.html",
     "daily_pin_2026-12-09": "/Users/mr80123ml/Documents/Tidewatch/public_site/site/daily_20261209.html",
@@ -96,14 +99,15 @@
     "report/weekly_20260810_20260816.html",
     "report/weekly_20260817_20260823.html",
     "report/weekly_20260824_20260830.html",
-    "report/weekly_20260831_20260906.html"
+    "report/weekly_20260831_20260906.html",
+    "report/weekly_20260907_20260913.html"
   ],
   "copied_files": {
     "dashboard": 1,
-    "daily": 63,
-    "context": 4,
-    "narrative": 4,
-    "snapshots": 4,
+    "daily": 66,
+    "context": 5,
+    "narrative": 5,
+    "snapshots": 5,
     "results": 71,
     "etf": 1
   },
@@ -113,7 +117,7 @@
     "ok": true,
     "errors": [],
     "warnings": [],
-    "report_count": 4,
-    "html_count": 105
+    "report_count": 5,
+    "html_count": 109
   }
 }
