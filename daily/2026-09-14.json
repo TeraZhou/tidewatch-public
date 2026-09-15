@@ -1,0 +1,532 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-14",
+  "date_effective": "2026-09-14",
+  "as_of": "2026-09-15T02:31:44Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-14",
+    "prior_date": "2026-09-13",
+    "btc_ret_1d": 1.753,
+    "eth_ret_1d": 1.56,
+    "oi_qty": 103536.015,
+    "oi_chg_pct": -1.317,
+    "perp_turnover_usd": 12938145663.8036,
+    "perp_turnover_chg_pct": 147.42,
+    "spot_turnover_usd": 1204563026.1329377,
+    "spot_turnover_chg_pct": 124.69,
+    "btc_etf_net_usd": 9700000.0,
+    "eth_etf_net_usd": 0.0,
+    "etf_lookback_sum_btc_usd": -286200000.0,
+    "etf_lookback_sum_eth_usd": 186500000.0,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +1.75%（有波动、未过异常默认线） · ETH +1.56% · OI 日变 -1.32% · 永续成交额 129.38 亿美金（日变 +147.4%） · BTC ETF 净流 +9.70 百万美金",
+    "weather_en": "Weather: BTC +1.75% · ETH +1.56% · OI -1.32% d/d · perp turnover 12.94B (+147.4% d/d) · BTC ETF net +9.70M",
+    "text_zh": "BTC 收涨约 1.75%，ETH 跟涨 1.56%；合约盘突然热闹，永续成交额日增逾一倍半，杠杆存量略降。美股期货同向偏强，VIX 抬升。",
+    "text_en": "BTC +1.75%, ETH +1.56%; perp turnover jumped hard while OI eased; ES same direction, VIX up."
+  },
+  "slots": {
+    "external": {
+      "kind": "pre_window",
+      "event": {
+        "id": "fomc_2026_09",
+        "date": "2026-09-16",
+        "name_zh": "FOMC 利率决议（含经济预测 SEP）",
+        "name_en": "FOMC decision + SEP",
+        "source": "fomc",
+        "series": "fomc",
+        "level": "high"
+      },
+      "badge_zh": "临近·T−2",
+      "badge_en": "Pre · T-2",
+      "phase": "pre",
+      "headline_zh": "FOMC · T−2 精读传导故事",
+      "headline_en": "FOMC decision + SEP",
+      "lead_zh": "距议息两天，本页已见成交额跳变与 VIX 抬升，先把融资锚怎么传到风险资产看清。",
+      "station_zh": "临近·T−2",
+      "part1_zh": null,
+      "part2_zh": null,
+      "part3_zh": null,
+      "part4_zh": null,
+      "post_brief_zh": "倒计时 T−2。美联储议息：目标利率与政策声明。 届时重点：目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。 临近窗口：近一日 BTC 波动偏大；VIX 抬升；窗口内有日触发驱动（见表「驱动」列）；距事件 T−2。",
+      "post_deep_zh": "【先预习，还没对答案】\n【假如读数偏热】物价/就业偏强 → 大家会想利息更久更紧 → 债息和美元有时更硬，股票和加密等风险资产常走「不太舒服」的剧本（加密是二传手，可脱钩）。\n【假如读数偏凉】反过来：降息/放水预期更容易起来，风险资产常更受欢迎；但若同时怕衰退，也可能先避险。\n【这条事件本身】目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。\n正式「偏热/偏凉」等公布日数字进卡再下。今天盘面只并排看。非投资建议。",
+      "post_reaction_zh": "近一日 BTC 波动偏大；VIX 抬升；窗口内有日触发驱动（见表「驱动」列）；距事件 T−2",
+      "text_zh": "倒计时 T−2。美联储议息：目标利率与政策声明。 届时重点：目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。 临近窗口：近一日 BTC 波动偏大；VIX 抬升；窗口内有日触发驱动（见表「驱动」列）；距事件 T−2。",
+      "text_en": null,
+      "has_official_result": false,
+      "result_status": "none",
+      "result_block": null,
+      "reaction": {
+        "schema": "tidewatch_pre_window_v1",
+        "kind": "pre",
+        "event_id": "fomc_2026_09",
+        "event_date": "2026-09-16",
+        "digest_day": "2026-09-14",
+        "offset": -2,
+        "days_left": 2,
+        "window_days": 3,
+        "as_of_today": true,
+        "name_zh": "FOMC 利率决议（含经济预测 SEP）",
+        "name_en": "FOMC decision + SEP",
+        "series": "fomc",
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
+        },
+        "result_ok": false,
+        "rows": [
+          {
+            "date": "2026-09-13",
+            "offset": -3,
+            "label": "T-3",
+            "btc_ret_1d": -0.565,
+            "eth_ret_1d": -1.933,
+            "oi_chg_pct": 1.544,
+            "funding_ann_pct": 7.8369,
+            "funding_ann_chg_pp": 2.588,
+            "es_ret_1d": -0.444,
+            "nq_ret_1d": -1.198,
+            "vix_ret_1d": -11.211,
+            "dxy_ret_1d": 0.163,
+            "fired_ids": [
+              "liq_spike"
+            ],
+            "has_driver": true,
+            "weather_zh": "近况：BTC -0.56%（小区间） · ETH -1.93% · OI 日变 +1.54% · 永续成交额 52.29 亿美金（日变 +66.2%） · BTC ETF 净流 -13.20 百万美金",
+            "errors": [
+              "etf_btc_using_2026-09-11",
+              "etf_eth_using_2026-09-11"
+            ]
+          },
+          {
+            "date": "2026-09-14",
+            "offset": -2,
+            "label": "T-2",
+            "btc_ret_1d": 1.753,
+            "eth_ret_1d": 1.56,
+            "oi_chg_pct": -1.317,
+            "funding_ann_pct": 3.9015,
+            "funding_ann_chg_pp": -3.935,
+            "es_ret_1d": 0.882,
+            "nq_ret_1d": 1.471,
+            "vix_ret_1d": 7.955,
+            "dxy_ret_1d": 0.323,
+            "fired_ids": [
+              "volume_spike"
+            ],
+            "has_driver": true,
+            "weather_zh": "近况：BTC +1.75%（有波动、未过异常默认线） · ETH +1.56% · OI 日变 -1.32% · 永续成交额 129.38 亿美金（日变 +147.4%） · BTC ETF 净流 +9.70 百万美金",
+            "errors": []
+          }
+        ],
+        "headers_plain": [
+          {
+            "key": "btc_ret_1d",
+            "name_zh": "BTC",
+            "what_zh": "比特币日涨跌幅。"
+          },
+          {
+            "key": "eth_ret_1d",
+            "name_zh": "ETH",
+            "what_zh": "以太坊日涨跌幅。"
+          },
+          {
+            "key": "oi_chg_pct",
+            "name_zh": "OI",
+            "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+          },
+          {
+            "key": "es_ret_1d",
+            "name_zh": "ES",
+            "what_zh": "标普期货日变，传统风险偏好参考。"
+          },
+          {
+            "key": "nq_ret_1d",
+            "name_zh": "NQ",
+            "what_zh": "纳指期货日变。"
+          },
+          {
+            "key": "vix_ret_1d",
+            "name_zh": "VIX",
+            "what_zh": "美股隐含波动；偏高常对应避险升温。"
+          },
+          {
+            "key": "dxy_ret_1d",
+            "name_zh": "DXY",
+            "what_zh": "美元指数日变。"
+          },
+          {
+            "key": "fired",
+            "name_zh": "驱动",
+            "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+          }
+        ],
+        "plain_zh": "近一日 BTC 波动偏大；VIX 抬升；窗口内有日触发驱动（见表「驱动」列）；距事件 T−2",
+        "finger_zh": "近一日 BTC 波动偏大；VIX 抬升；窗口内有日触发驱动（见表「驱动」列）；距事件 T−2",
+        "badge_zh": "临近·T−2",
+        "badge_en": "Pre · T-2",
+        "headline_zh": "FOMC 决议 · T−2",
+        "pin_href": "daily_20260916.html",
+        "rules": {
+          "no_attribution": true,
+          "no_future_rows": true,
+          "pre_result": true
+        }
+      },
+      "card": {
+        "event_id": "fomc_2026_09",
+        "date": "2026-09-16",
+        "name_zh": "FOMC 利率决议（含经济预测 SEP）",
+        "phase": "pre",
+        "phase_label_zh": "临近·T−2",
+        "has_official_result": false,
+        "result_block": null,
+        "reaction": {
+          "schema": "tidewatch_pre_window_v1",
+          "kind": "pre",
+          "event_id": "fomc_2026_09",
+          "event_date": "2026-09-16",
+          "digest_day": "2026-09-14",
+          "offset": -2,
+          "days_left": 2,
+          "window_days": 3,
+          "as_of_today": true,
+          "name_zh": "FOMC 利率决议（含经济预测 SEP）",
+          "name_en": "FOMC decision + SEP",
+          "series": "fomc",
+          "story": {
+            "title_zh": "FOMC 决议",
+            "one_liner_zh": "美联储议息：目标利率与政策声明。",
+            "rope_zh": "政策利率",
+            "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+            "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
+          },
+          "result_ok": false,
+          "rows": [
+            {
+              "date": "2026-09-13",
+              "offset": -3,
+              "label": "T-3",
+              "btc_ret_1d": -0.565,
+              "eth_ret_1d": -1.933,
+              "oi_chg_pct": 1.544,
+              "funding_ann_pct": 7.8369,
+              "funding_ann_chg_pp": 2.588,
+              "es_ret_1d": -0.444,
+              "nq_ret_1d": -1.198,
+              "vix_ret_1d": -11.211,
+              "dxy_ret_1d": 0.163,
+              "fired_ids": [
+                "liq_spike"
+              ],
+              "has_driver": true,
+              "weather_zh": "近况：BTC -0.56%（小区间） · ETH -1.93% · OI 日变 +1.54% · 永续成交额 52.29 亿美金（日变 +66.2%） · BTC ETF 净流 -13.20 百万美金",
+              "errors": [
+                "etf_btc_using_2026-09-11",
+                "etf_eth_using_2026-09-11"
+              ]
+            },
+            {
+              "date": "2026-09-14",
+              "offset": -2,
+              "label": "T-2",
+              "btc_ret_1d": 1.753,
+              "eth_ret_1d": 1.56,
+              "oi_chg_pct": -1.317,
+              "funding_ann_pct": 3.9015,
+              "funding_ann_chg_pp": -3.935,
+              "es_ret_1d": 0.882,
+              "nq_ret_1d": 1.471,
+              "vix_ret_1d": 7.955,
+              "dxy_ret_1d": 0.323,
+              "fired_ids": [
+                "volume_spike"
+              ],
+              "has_driver": true,
+              "weather_zh": "近况：BTC +1.75%（有波动、未过异常默认线） · ETH +1.56% · OI 日变 -1.32% · 永续成交额 129.38 亿美金（日变 +147.4%） · BTC ETF 净流 +9.70 百万美金",
+              "errors": []
+            }
+          ],
+          "headers_plain": [
+            {
+              "key": "btc_ret_1d",
+              "name_zh": "BTC",
+              "what_zh": "比特币日涨跌幅。"
+            },
+            {
+              "key": "eth_ret_1d",
+              "name_zh": "ETH",
+              "what_zh": "以太坊日涨跌幅。"
+            },
+            {
+              "key": "oi_chg_pct",
+              "name_zh": "OI",
+              "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+            },
+            {
+              "key": "es_ret_1d",
+              "name_zh": "ES",
+              "what_zh": "标普期货日变，传统风险偏好参考。"
+            },
+            {
+              "key": "nq_ret_1d",
+              "name_zh": "NQ",
+              "what_zh": "纳指期货日变。"
+            },
+            {
+              "key": "vix_ret_1d",
+              "name_zh": "VIX",
+              "what_zh": "美股隐含波动；偏高常对应避险升温。"
+            },
+            {
+              "key": "dxy_ret_1d",
+              "name_zh": "DXY",
+              "what_zh": "美元指数日变。"
+            },
+            {
+              "key": "fired",
+              "name_zh": "驱动",
+              "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+            }
+          ],
+          "plain_zh": "距「FOMC 决议」T−2。美联储议息：目标利率与政策声明。 近一日 BTC 波动偏大；VIX 抬升；窗口内有日触发驱动（见表「驱动」列）；距事件 T−2。观察重点：目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。 常见传导：目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。 尚无官方读数；表仅含已实现日。",
+          "finger_zh": "近一日 BTC 波动偏大；VIX 抬升；窗口内有日触发驱动（见表「驱动」列）；距事件 T−2",
+          "badge_zh": "临近·T−2",
+          "badge_en": "Pre · T-2",
+          "headline_zh": "FOMC 决议 · T−2",
+          "pin_href": "daily_20260916.html",
+          "rules": {
+            "no_attribution": true,
+            "no_future_rows": true,
+            "pre_result": true
+          }
+        },
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
+        },
+        "template_id": "fomc"
+      }
+    },
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "放量活跃的温和上涨日",
+      "headline_en": "多维结构触发异常",
+      "conclusion_zh": "【放量活跃的温和上涨日】主矛盾是合约活跃度骤升、价格只温和跟涨：永续成交额跳到约 129 亿美金，OI 略降、funding 回落。BTC 与 ES 同向，风险偏好未脱钩。",
+      "conclusion_en": "状态判断：多维结构触发异常。币侧 BTC +1.75%、ETH +1.56%。BTC 与 ES 同向（BTC +1.75% · ES +0.88%）。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+1.75%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+1.56%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-3.94 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "3.90"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "-1.32%"
+        },
+        {
+          "key": "liq_vs_prior",
+          "label_zh": "清算/前日",
+          "display": "1.53×"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "129.38 亿美金（+147%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "12.05 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+14.35 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-4.86 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "+0.88%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+1.47%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "volume_spike",
+          "value": 147.42,
+          "threshold": 80.0,
+          "direction": "up",
+          "summary_zh": "永续成交额日变 +147.4%（当日 129.38 亿美金；活跃度，非多空）",
+          "summary_en": "perp turnover d/d +147.4% (activity only)",
+          "meta": {
+            "title_zh": "永续成交额日变跳变",
+            "title_en": "Perp turnover day jump",
+            "what_zh": "币安 U 永续当日成交额（美金）相对前一日是否大幅变化——只说明合约盘「热闹/冷清」，不能拆多空。",
+            "what_en": "Large day-over-day change in Binance USDT-M perp turnover USD — activity only, not long/short.",
+            "how_zh": "perp_turnover_chg_pct = (今日 turnover ÷ 昨日 turnover − 1)×100（看板 derivatives.perp_turnover）。当 |chg| ≥ volume_spike_abs_pct（默认 80）时触发。与 funding/OI/清算并读；禁止写成多头/空头放量。",
+            "how_en": "chg% from cache perp_turnover day-over-day. Fires if |chg| ≥ volume_spike_abs_pct (default 80). Read with funding/OI/liq; not a long/short split."
+          },
+          "observed": {
+            "btc_ret_1d": 1.753,
+            "eth_ret_1d": 1.56,
+            "funding_ann_pct": 3.9015,
+            "funding_ann_chg_pp": -3.935,
+            "oi_qty": 103536.015,
+            "oi_chg_pct": -1.317,
+            "liq_vs_prior": 1.531,
+            "iv_rv_spread": 14.35,
+            "iv_rv_spread_chg_pp": -4.86,
+            "vix_ret_1d": 7.955,
+            "btc_etf_net_usd": 9700000.0,
+            "eth_etf_net_usd": 0.0,
+            "perp_turnover_usd": 12938145663.8036,
+            "perp_turnover_chg_pct": 147.42,
+            "spot_turnover_usd": 1204563026.1329377,
+            "value": 147.42,
+            "threshold": 80.0
+          },
+          "readout_zh": "观测永续成交额日变 147.42%（当日 129.38 亿美金），阈值 |·|≥80.00% · 活跃度非多空",
+          "readout_en": "perp turnover d/d +147.4% (activity only)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "BTC 日收益 +1.75%，ETH +1.56%。永续成交额 129.38 亿美金、日变 +147%，触发成交额跳变——只说明盘面热闹，不能拆多空。OI 日变 -1.32%，杠杆存量略收；funding 年化约 3.90%，日变 -3.94 个百分点；清算约为前日 1.53 倍。传统侧 ES +0.88%、NQ +1.47%，与 BTC 同向，VIX 日变约 +8%。翻译一句：钱在合约里转得更欢，总杠杆没堆高，价格跟美股风险资产一起走。",
+      "read_en": "依据（程序）：\n- 观测永续成交额日变 147.42%（当日 129.38 亿美金），阈值 |·|≥80.00% · 活跃度非多空\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 同向（BTC +1.75% · ES +0.88%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +1.75% · ES +0.88%）",
+      "tradfi_link_note_en": "BTC and ES same direction (BTC +1.75% · ES +0.88%)",
+      "text_zh": "【放量活跃的温和上涨日】主矛盾是合约活跃度骤升、价格只温和跟涨：永续成交额跳到约 129 亿美金，OI 略降、funding 回落。BTC 与 ES 同向，风险偏好未脱钩。",
+      "text_en": "状态判断：多维结构触发异常。币侧 BTC +1.75%、ETH +1.56%。BTC 与 ES 同向（BTC +1.75% · ES +0.88%）。",
+      "card": {
+        "date": "2026-09-14",
+        "prior_date": "2026-09-13",
+        "btc_ret_1d": 1.753,
+        "eth_ret_1d": 1.56,
+        "funding_ann_pct": 3.9015,
+        "funding_ann_chg_pp": -3.935,
+        "oi_qty": 103536.015,
+        "oi_prior_qty": 104917.346,
+        "oi_chg_pct": -1.317,
+        "liq_total": 110.99900000000028,
+        "liq_vs_prior": 1.531,
+        "perp_turnover_usd": 12938145663.8036,
+        "perp_turnover_chg_pct": 147.42,
+        "perp_turnover_display_zh": "129.38 亿美金",
+        "perp_turnover_display_en": "12.94B",
+        "spot_turnover_usd": 1204563026.1329377,
+        "spot_turnover_chg_pct": 124.69,
+        "spot_turnover_display_zh": "12.05 亿美金",
+        "spot_turnover_display_en": "1.20B",
+        "iv_ann_pct": 38.57,
+        "rv_7_ann_pct": 24.2239,
+        "iv_rv_spread": 14.35,
+        "iv_rv_spread_chg_pp": -4.86,
+        "vix_ret_1d": 7.955,
+        "es_ret_1d": 0.882,
+        "nq_ret_1d": 1.471,
+        "dxy_ret_1d": 0.323,
+        "gold_ret_1d": -0.633,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-09-13",
+            "day": "2026-09-14"
+          },
+          "NQ": {
+            "prior": "2026-09-13",
+            "day": "2026-09-14"
+          },
+          "VIX": {
+            "prior": "2026-09-11",
+            "day": "2026-09-14"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +1.75% · ES +0.88%）",
+        "tradfi_link_note_en": "BTC and ES same direction (BTC +1.75% · ES +0.88%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 0,
+      "open_watches": 6,
+      "items": [],
+      "text_zh": "潮记：6 个观察位仍开着，无到期钉。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 收涨约 1.75%",
+      "tone": "up"
+    },
+    {
+      "text": "永续成交额日增逾一倍半",
+      "tone": "warn"
+    },
+    {
+      "text": "杠杆存量略降",
+      "tone": "down"
+    },
+    {
+      "text": "与 ES 同向",
+      "tone": "neutral"
+    },
+    {
+      "text": "VIX 抬升",
+      "tone": "warn"
+    },
+    {
+      "text": "funding 回落",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}
