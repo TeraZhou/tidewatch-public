@@ -1,6 +1,6 @@
 {
   "schema": "tidewatch_public_v1",
-  "generated_at": "2026-09-16T03:53:54Z",
+  "generated_at": "2026-09-16T23:55:50Z",
   "data_as_of": "2026-09-15",
   "source_kind": "kitchen_view",
   "package_root": "public_site",
@@ -110,7 +110,7 @@
     "context": 5,
     "narrative": 5,
     "snapshots": 5,
-    "results": 72,
+    "results": 73,
     "etf": 1
   },
   "html_stripped": 0,
@@ -120,6 +120,6 @@
     "errors": [],
     "warnings": [],
     "report_count": 5,
-    "html_count": 111
+    "html_count": 112
   }
 }

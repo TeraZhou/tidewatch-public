@@ -5,52 +5,57 @@
   "template_id": "fomc",
   "event_date": "2026-09-16",
   "ok": true,
-  "status": "pre_snapshot",
+  "status": "fetched",
   "adapter": "fed_openmarket_http",
-  "fetched_at": "2026-09-16T03:45:59Z",
+  "fetched_at": "2026-09-16T23:55:11Z",
   "source_urls": [
     "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
   ],
   "values": {
-    "fed_funds_lower": 3.5,
-    "fed_funds_upper": 3.75,
-    "changed": false,
+    "fed_funds_lower": 3.75,
+    "fed_funds_upper": 4.0,
+    "changed": true,
     "sep_present": true,
-    "effective_date": "2025-12-11",
-    "increase_bp": 0,
+    "effective_date": "2026-09-17",
+    "increase_bp": 25,
     "decrease_bp": 0,
     "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
     "meeting_date": "2026-09-16"
   },
   "prior_values": {
-    "fed_funds_lower": 3.75,
-    "fed_funds_upper": 4.0,
-    "effective_date": "2025-10-30"
+    "fed_funds_lower": 3.5,
+    "fed_funds_upper": 3.75,
+    "effective_date": "2025-12-11"
   },
   "revision_note": null,
-  "statement_bullets": null,
-  "last_attempt_at": "2026-09-16T03:45:59Z",
-  "attempt_n": 2,
-  "poll_attempts": 2,
+  "statement_bullets": [
+    "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+    "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
+  ],
+  "last_attempt_at": "2026-09-16T23:55:11Z",
+  "attempt_n": 1,
+  "poll_attempts": 1,
   "raw_ref": {
-    "effective_date": "2025-12-11",
-    "history_n": 30,
+    "effective_date": "2026-09-17",
+    "history_n": 31,
     "as_of_event": "2026-09-16",
-    "changed": false,
+    "changed": true,
     "decision_logged_for": "2026-09-16",
-    "decision_row_matched": false,
+    "decision_row_matched": true,
     "statement": {
-      "ok": false,
-      "error": "fed_statement_http_404",
+      "ok": true,
+      "n": 2,
+      "cached": false,
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
     }
   },
   "fixture": false,
   "override": null,
   "error": null,
-  "lifecycle_terminal": false,
-  "lifecycle_kind": "pre_snapshot",
-  "lifecycle_reason": "before_release_window",
+  "lifecycle_terminal": true,
+  "lifecycle_kind": "decision",
+  "lifecycle_reason": "statement_bullets,effective_in_meeting_window,changed_in_window,adapter_decision_logged",
   "release_start_utc": "2026-09-16T18:00:00Z"
 }

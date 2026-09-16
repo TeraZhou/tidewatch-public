@@ -5,28 +5,108 @@
   "name_en": "FOMC decision + SEP",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "会前",
-  "result_ok": false,
+  "status_zh": "会后·公布日",
+  "result_ok": true,
   "result_block": {
-    "ok": false,
-    "status": "pre_snapshot",
-    "error": "before_release_window",
-    "pending": true,
+    "ok": true,
+    "status": "fetched",
+    "lifecycle_terminal": true,
+    "lifecycle_kind": "decision",
     "event_id": "fomc_2026_09",
-    "lines": [],
+    "series": "fomc",
+    "lines": [
+      {
+        "label_zh": "联邦基金目标区间",
+        "key": "fed_funds_range",
+        "text": "3.75–4.0%"
+      },
+      {
+        "label_zh": "相对前次",
+        "key": "changed",
+        "text": "加息约 25 bp"
+      },
+      {
+        "label_zh": "利率生效日",
+        "key": "effective_date",
+        "text": "2026-09-17"
+      },
+      {
+        "label_zh": "经济预测材料",
+        "key": "sep",
+        "text": "本场含 SEP/点阵"
+      }
+    ],
+    "lines_plain": [
+      {
+        "label_zh": "联邦基金目标区间",
+        "key": "fed_funds_range",
+        "text": "3.75–4.0%",
+        "name_zh": "联邦基金目标区间",
+        "jargon": "Fed funds target",
+        "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+        "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+      },
+      {
+        "label_zh": "相对前次决议",
+        "key": "changed",
+        "text": "加息约 25 bp",
+        "name_zh": "相对前次决议",
+        "jargon": "changed",
+        "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+        "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+      },
+      {
+        "label_zh": "利率生效日",
+        "key": "effective_date",
+        "text": "2026-09-17",
+        "name_zh": "利率生效日",
+        "jargon": "effective date",
+        "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+        "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+      },
+      {
+        "label_zh": "经济预测材料",
+        "key": "sep",
+        "text": "本场含 SEP/点阵",
+        "name_zh": "经济预测材料",
+        "jargon": "SEP / dot plot",
+        "what_zh": "部分会次会附带委员对增长、通胀、利率路径的预测汇总（点阵图等）。",
+        "why_zh": "比单次利率更能透露「更高更久 / 开始转松」的中期想象。"
+      }
+    ],
     "source_urls": [
       "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
     ],
-    "fetched_at": "2026-09-16T03:45:59Z",
-    "last_attempt_at": "2026-09-16T03:45:59Z",
-    "attempt_n": 2,
+    "fetched_at": "2026-09-16T23:55:11Z",
+    "last_attempt_at": "2026-09-16T23:55:11Z",
+    "attempt_n": 1,
     "adapter": "fed_openmarket_http",
-    "result_plain_zh": null,
+    "result_plain_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次是<strong>加息</strong>约 25 个基点。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。本场还带经济预测/点阵类材料，中期路径信息会多一层。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+    "result_teach_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次是<strong>加息</strong>约 25 个基点。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。本场还带经济预测/点阵类材料，中期路径信息会多一层。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
     "fixture": false,
-    "lifecycle_terminal": false,
-    "lifecycle_kind": "pre_snapshot",
-    "pre_snapshot": true
+    "revision_note": null,
+    "prior_values": {
+      "fed_funds_lower": 3.5,
+      "fed_funds_upper": 3.75,
+      "effective_date": "2025-12-11"
+    },
+    "values": {
+      "fed_funds_lower": 3.75,
+      "fed_funds_upper": 4.0,
+      "changed": true,
+      "sep_present": true,
+      "effective_date": "2026-09-17",
+      "increase_bp": 25,
+      "decrease_bp": 0,
+      "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "meeting_date": "2026-09-16"
+    },
+    "statement_bullets": [
+      "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+      "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
+    ]
   },
   "result_card": {
     "schema": "tidewatch_result_card_v1",
@@ -35,53 +115,58 @@
     "template_id": "fomc",
     "event_date": "2026-09-16",
     "ok": true,
-    "status": "pre_snapshot",
+    "status": "fetched",
     "adapter": "fed_openmarket_http",
-    "fetched_at": "2026-09-16T03:45:59Z",
+    "fetched_at": "2026-09-16T23:55:11Z",
     "source_urls": [
       "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
     ],
     "values": {
-      "fed_funds_lower": 3.5,
-      "fed_funds_upper": 3.75,
-      "changed": false,
+      "fed_funds_lower": 3.75,
+      "fed_funds_upper": 4.0,
+      "changed": true,
       "sep_present": true,
-      "effective_date": "2025-12-11",
-      "increase_bp": 0,
+      "effective_date": "2026-09-17",
+      "increase_bp": 25,
       "decrease_bp": 0,
       "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
       "meeting_date": "2026-09-16"
     },
     "prior_values": {
-      "fed_funds_lower": 3.75,
-      "fed_funds_upper": 4.0,
-      "effective_date": "2025-10-30"
+      "fed_funds_lower": 3.5,
+      "fed_funds_upper": 3.75,
+      "effective_date": "2025-12-11"
     },
     "revision_note": null,
-    "statement_bullets": null,
-    "last_attempt_at": "2026-09-16T03:45:59Z",
-    "attempt_n": 2,
-    "poll_attempts": 2,
+    "statement_bullets": [
+      "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+      "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
+    ],
+    "last_attempt_at": "2026-09-16T23:55:11Z",
+    "attempt_n": 1,
+    "poll_attempts": 1,
     "raw_ref": {
-      "effective_date": "2025-12-11",
-      "history_n": 30,
+      "effective_date": "2026-09-17",
+      "history_n": 31,
       "as_of_event": "2026-09-16",
-      "changed": false,
+      "changed": true,
       "decision_logged_for": "2026-09-16",
-      "decision_row_matched": false,
+      "decision_row_matched": true,
       "statement": {
-        "ok": false,
-        "error": "fed_statement_http_404",
+        "ok": true,
+        "n": 2,
+        "cached": false,
         "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
       }
     },
     "fixture": false,
     "override": null,
     "error": null,
-    "lifecycle_terminal": false,
-    "lifecycle_kind": "pre_snapshot",
-    "lifecycle_reason": "before_release_window",
+    "lifecycle_terminal": true,
+    "lifecycle_kind": "decision",
+    "lifecycle_reason": "statement_bullets,effective_in_meeting_window,changed_in_window,adapter_decision_logged",
     "release_start_utc": "2026-09-16T18:00:00Z"
   },
   "nodes": [
@@ -127,8 +212,8 @@
     {
       "date": "2026-09-16",
       "offset": 0,
-      "label_zh": "会前·非结果",
-      "phase": "day_of",
+      "label_zh": "会后·有结果",
+      "phase": "day_of_post",
       "has_digest": true,
       "href": "daily.html",
       "btc_ret_1d": -3.255,
@@ -159,27 +244,107 @@
       "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
     },
     "result_ok": true,
-    "result_mini_zh": null,
+    "result_mini_zh": "联邦基金目标区间 3.75–4.0% · 相对前次决议 加息约 25 bp · 利率生效日 2026-09-17",
     "result_block": {
-      "ok": false,
-      "status": "pre_snapshot",
-      "error": "before_release_window",
-      "pending": true,
+      "ok": true,
+      "status": "fetched",
+      "lifecycle_terminal": true,
+      "lifecycle_kind": "decision",
       "event_id": "fomc_2026_09",
-      "lines": [],
+      "series": "fomc",
+      "lines": [
+        {
+          "label_zh": "联邦基金目标区间",
+          "key": "fed_funds_range",
+          "text": "3.75–4.0%"
+        },
+        {
+          "label_zh": "相对前次",
+          "key": "changed",
+          "text": "加息约 25 bp"
+        },
+        {
+          "label_zh": "利率生效日",
+          "key": "effective_date",
+          "text": "2026-09-17"
+        },
+        {
+          "label_zh": "经济预测材料",
+          "key": "sep",
+          "text": "本场含 SEP/点阵"
+        }
+      ],
+      "lines_plain": [
+        {
+          "label_zh": "联邦基金目标区间",
+          "key": "fed_funds_range",
+          "text": "3.75–4.0%",
+          "name_zh": "联邦基金目标区间",
+          "jargon": "Fed funds target",
+          "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+          "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+        },
+        {
+          "label_zh": "相对前次决议",
+          "key": "changed",
+          "text": "加息约 25 bp",
+          "name_zh": "相对前次决议",
+          "jargon": "changed",
+          "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+          "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+        },
+        {
+          "label_zh": "利率生效日",
+          "key": "effective_date",
+          "text": "2026-09-17",
+          "name_zh": "利率生效日",
+          "jargon": "effective date",
+          "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+          "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+        },
+        {
+          "label_zh": "经济预测材料",
+          "key": "sep",
+          "text": "本场含 SEP/点阵",
+          "name_zh": "经济预测材料",
+          "jargon": "SEP / dot plot",
+          "what_zh": "部分会次会附带委员对增长、通胀、利率路径的预测汇总（点阵图等）。",
+          "why_zh": "比单次利率更能透露「更高更久 / 开始转松」的中期想象。"
+        }
+      ],
       "source_urls": [
         "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
       ],
-      "fetched_at": "2026-09-16T03:45:59Z",
-      "last_attempt_at": "2026-09-16T03:45:59Z",
-      "attempt_n": 2,
+      "fetched_at": "2026-09-16T23:55:11Z",
+      "last_attempt_at": "2026-09-16T23:55:11Z",
+      "attempt_n": 1,
       "adapter": "fed_openmarket_http",
-      "result_plain_zh": null,
+      "result_plain_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次是<strong>加息</strong>约 25 个基点。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。本场还带经济预测/点阵类材料，中期路径信息会多一层。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+      "result_teach_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次是<strong>加息</strong>约 25 个基点。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。本场还带经济预测/点阵类材料，中期路径信息会多一层。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
       "fixture": false,
-      "lifecycle_terminal": false,
-      "lifecycle_kind": "pre_snapshot",
-      "pre_snapshot": true
+      "revision_note": null,
+      "prior_values": {
+        "fed_funds_lower": 3.5,
+        "fed_funds_upper": 3.75,
+        "effective_date": "2025-12-11"
+      },
+      "values": {
+        "fed_funds_lower": 3.75,
+        "fed_funds_upper": 4.0,
+        "changed": true,
+        "sep_present": true,
+        "effective_date": "2026-09-17",
+        "increase_bp": 25,
+        "decrease_bp": 0,
+        "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+        "meeting_date": "2026-09-16"
+      },
+      "statement_bullets": [
+        "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+        "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
+      ]
     },
     "pin_href": "daily_20260916.html",
     "rows": [
@@ -250,7 +415,7 @@
         "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
       }
     ],
-    "plain_zh": "「FOMC 决议」公布后窗口。近一日 BTC 波动偏大；窗口内有日触发驱动（见表「驱动」列）；公布日；后续交易日尚未计入。仅含已实现日；与加密为间接并置，不作单次数据归因。",
+    "plain_zh": "读数：联邦基金目标区间 3.75–4.0% · 相对前次决议 加息约 25 bp · 利率生效日 2026-09-17。「FOMC 决议」公布后窗口。近一日 BTC 波动偏大；窗口内有日触发驱动（见表「驱动」列）；公布日；后续交易日尚未计入。仅含已实现日；与加密为间接并置，不作单次数据归因。",
     "finger_zh": "近一日 BTC 波动偏大；窗口内有日触发驱动（见表「驱动」列）；公布日；后续交易日尚未计入",
     "badge_zh": "会后·公布日",
     "badge_en": "Post · release day",
@@ -261,6 +426,6 @@
     }
   },
   "href": "event_fomc_2026_09.html",
-  "generated_at": "2026-09-16T03:46:40Z",
+  "generated_at": "2026-09-16T23:55:48Z",
   "as_of": "2026-09-16"
 }
