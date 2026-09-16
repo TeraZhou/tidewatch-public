@@ -398,8 +398,12 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
         <div class="callout">
           <b><span class="lang zh">小白速记</span><span class="lang en">Beginner notes</span></b><br/>
           <span class="lang zh">
-          · <b>资金费率 Funding</b>：多空「租金」，通常每 8 小时一期、一天 3 次。期末单期 0.0038%/period → 年化 <b>+4.18%/yr</b>。<br/>
-          · <b>未平仓量 OI</b>：未平合约总量。价涨 OI 不升更像挤压/换手。本周 OI 变化 3.653%。<br/>
+          · <b>资金费率 Funding</b>：多空「租金」，通常每 8 小时一期、一天 3 次。
+            <b>BTC</b> 期末年化 <b>+4.18%/yr</b>
+            （单期 0.0038%/period）；
+            <b>ETH</b> 期末年化 <b>—</b>
+            （U 本位对照，不改拥挤主判）。下图右轴：BTC 实线 + ETH 虚线。<br/>
+          · <b>未平仓量 OI</b>：未平合约总量（主看 BTC）。价涨 OI 不升更像挤压/换手。本周 OI 变化 3.653%。<br/>
           · <b>清算 Liquidation</b>：保证金不足强平。峰值日（笔数）2026-08-10（714 笔）。<br/>
           · <b>永续成交额</b>：合约盘有多「热闹」（turnover 美金），本周合计 <b>408.99 亿美金</b>
             · 较上完整周 -12.2%
@@ -407,8 +411,12 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
             <b>不是</b>多空拆分；与 funding/OI 并读，只标信号质量。
           </span>
           <span class="lang en">
-          · <b>Funding</b>: rent between longs/shorts; typically every 8h (3×/day). End period 0.0038%/period → ann. <b>+4.18%/yr</b>.<br/>
-          · <b>OI</b>: open interest. Price up without OI up often looks like squeeze/churn. OI chg 3.653%.<br/>
+          · <b>Funding</b>: rent between longs/shorts; typically every 8h (3×/day).
+            <b>BTC</b> end ann. <b>+4.18%/yr</b>
+            (period 0.0038%/period);
+            <b>ETH</b> end ann. <b>—</b>
+            (USDT-M对照; does not change crowding spine). Chart right axis: BTC solid + ETH dashed.<br/>
+          · <b>OI</b>: open interest (BTC primary). Price up without OI up often looks like squeeze/churn. OI chg 3.653%.<br/>
           · <b>Liquidation</b>: forced close on margin. Peak day (count) 2026-08-10 (714 prints).<br/>
           · <b>Perp turnover</b>: how busy the perp tape is (USD). Week sum <b>40.90B</b>
             · vs prior week -12.2%
@@ -463,7 +471,7 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
           <p class="plain layer-tech-only"><span class="lang zh">清算峰值笔数=714 @ 2026-08-10</span><span class="lang en">liq peak n=714 on 2026-08-10</span></p>
         </div>
         <div class="card"><div class="chart-box sm"><canvas id="chartOiFund"></canvas></div>
-          <p class="plain layer-plain-only"><span class="lang zh">左轴 OI（BTC）；右轴 funding 年化 %/年 · BTC + ETH 对照。</span><span class="lang en">Left OI (BTC); right funding ann. %/yr · BTC + ETH对照.</span></p>
+          <p class="plain layer-plain-only"><span class="lang zh">左轴 OI（BTC）；右轴资金费率年化：<b>BTC</b> +4.18%/yr 实线 · <b>ETH</b> — 虚线（对照）。</span><span class="lang en">Left OI (BTC); right funding ann.: <b>BTC</b> +4.18%/yr solid · <b>ETH</b> — dashed (对照).</span></p>
           <p class="plain layer-tech-only"><span class="lang zh">右轴=年化资金费率 %/年。BTC 单期=3.819e-05 · ETH 单期=（ETHUSDT LinearSwap，非 Inverse）。N2 拥挤主判仍只认 BTC。</span><span class="lang en">Right = ann. funding %/yr. BTC period=3.819e-05 · ETH period= (ETHUSDT LinearSwap, not inverse). N2 crowding spine stays BTC-only.</span></p>
         </div>
       </div>
@@ -797,7 +805,25 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
     Chart.defaults.color=t.muted; Chart.defaults.borderColor=t.line;
     const ticks={color:t.muted,font:{size:11}};
     const gx={display:false}, gy={color:t.line};
-    const lab=a=>(a||[]).map(r=>String(r[0]).slice(5));
+    // X-axis labels stay MM-DD (slice 5). Any series→label join MUST use dayKey()
+    // so full ISO "2026-09-06" and short "09-06" both hit the same map key.
+    const lab=a=>(a||[]).map(r=>dayKey(r[0]));
+    function dayKey(v){
+      const s=String(v==null?'':v);
+      if(s.length>=10 && s.charAt(4)==='-' && s.charAt(7)==='-') return s.slice(5,10);
+      if(s.length>=5 && s.charAt(2)==='-') return s.slice(0,5);
+      return s.length>=5 ? s.slice(-5) : s;
+    }
+    function mapByDay(rows, valIdx){
+      const m={};
+      (rows||[]).forEach(r=>{
+        if(!r || r[0]==null) return;
+        const v=r[valIdx==null?1:valIdx];
+        if(v==null || v==='') return;
+        m[dayKey(r[0])]=v;
+      });
+      return m;
+    }
 
     const langNow = () => (body.getAttribute('data-lang')==='en' ? 'en' : 'zh');
     const L = (zh,en) => langNow()==='en' ? en : zh;
@@ -839,19 +865,22 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
       const fundLabel = (data.fundingAnn && data.fundingAnn.length)
         ? L('BTC 资费年化 %/年','BTC funding ann. %/yr')
         : L('BTC 资费 %/期','BTC funding %/period');
-      const fm={}; fundSeries.forEach(r=>{ if(r&&r[0]!=null) fm[String(r[0]).slice(0,10)]=r[1]; });
-      const fem={}; fundEthSeries.forEach(r=>{ if(r&&r[0]!=null) fem[String(r[0]).slice(0,10)]=r[1]; });
+      // dayKey MUST match lab() (MM-DD). Never index with full YYYY-MM-DD against lab labels.
+      const fm=mapByDay(fundSeries, 1);
+      const fem=mapByDay(fundEthSeries, 1);
       const days=lab(data.oi);
+      const btcFundPts=days.map(d=> Object.prototype.hasOwnProperty.call(fm,d) ? fm[d] : null);
+      const ethFundPts=days.map(d=> Object.prototype.hasOwnProperty.call(fem,d) ? fem[d] : null);
       const ds=[
-        {type:'line',label:L('OI（BTC）','OI (BTC)'),data:data.oi.map(r=>r[1]),borderColor:t.c1,tension:.25,yAxisID:'y'},
-        {type:'line',label:fundLabel,data:days.map(d=> fm[d] ?? null),borderColor:t.c2,tension:.25,yAxisID:'y1'},
+        {type:'line',label:L('OI（BTC）','OI (BTC)'),data:data.oi.map(r=>r[1]),borderColor:t.c1,tension:.25,yAxisID:'y',pointRadius:2},
+        {type:'line',label:fundLabel,data:btcFundPts,borderColor:t.c2,tension:.25,yAxisID:'y1',pointRadius:2},
       ];
       if(fundEthSeries.length){
-        // ETH 对照轨：固定琥珀/青蓝虚线，避免与清算 c3 红混淆；与看板 ETH 色系接近
-        ds.push({type:'line',label:L('ETH 资费年化 %/年','ETH funding ann. %/yr'),data:days.map(d=> fem[d] ?? null),borderColor:'#0ea5e9',tension:.25,yAxisID:'y1',borderDash:[5,4],pointRadius:2});
+        // ETH 对照轨：固定青虚线（非清算红）；N2 拥挤主判仍只认 BTC
+        ds.push({type:'line',label:L('ETH 资费年化 %/年','ETH funding ann. %/yr'),data:ethFundPts,borderColor:'#0ea5e9',tension:.25,yAxisID:'y1',borderDash:[5,4],pointRadius:2});
       }
       charts.o=new Chart(document.getElementById('chartOiFund'),{data:{labels:days,datasets:ds},
-        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{position:'left',grid:gy,ticks:{...ticks,callback:v=>(v/1000).toFixed(0)+'k'}},y1:{position:'right',grid:{drawOnChartArea:false},ticks:{...ticks,callback:v=>v.toFixed(2)+'%'}}}}});
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{position:'left',grid:gy,ticks:{...ticks,callback:v=>(v/1000).toFixed(0)+'k'}},y1:{position:'right',grid:{drawOnChartArea:false},ticks:{...ticks,callback:v=>Number(v).toFixed(2)+'%'}}}}});
     }
     const usdCb = v => { const n=Number(v),a=Math.abs(n); if(a>=1e9)return (n/1e9).toFixed(1)+'B'; if(a>=1e8)return (n/1e8).toFixed(1)+'亿'; if(a>=1e6)return (n/1e6).toFixed(0)+'M'; return String(n); };
     if(document.getElementById('chartPerpVol') && data.perpTurnover && data.perpTurnover.length){

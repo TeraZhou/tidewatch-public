@@ -18,8 +18,8 @@
       "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
       "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
     ],
-    "fetched_at": "2026-09-16T03:15:05Z",
-    "last_attempt_at": "2026-09-16T03:15:05Z",
+    "fetched_at": "2026-09-16T03:45:59Z",
+    "last_attempt_at": "2026-09-16T03:45:59Z",
     "attempt_n": 2,
     "adapter": "fed_openmarket_http",
     "result_plain_zh": null,
@@ -37,7 +37,7 @@
     "ok": true,
     "status": "pre_snapshot",
     "adapter": "fed_openmarket_http",
-    "fetched_at": "2026-09-16T03:15:05Z",
+    "fetched_at": "2026-09-16T03:45:59Z",
     "source_urls": [
       "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
       "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
@@ -60,7 +60,7 @@
     },
     "revision_note": null,
     "statement_bullets": null,
-    "last_attempt_at": "2026-09-16T03:15:05Z",
+    "last_attempt_at": "2026-09-16T03:45:59Z",
     "attempt_n": 2,
     "poll_attempts": 2,
     "raw_ref": {
@@ -171,8 +171,8 @@
         "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
         "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
       ],
-      "fetched_at": "2026-09-16T03:15:05Z",
-      "last_attempt_at": "2026-09-16T03:15:05Z",
+      "fetched_at": "2026-09-16T03:45:59Z",
+      "last_attempt_at": "2026-09-16T03:45:59Z",
       "attempt_n": 2,
       "adapter": "fed_openmarket_http",
       "result_plain_zh": null,
@@ -261,6 +261,6 @@
     }
   },
   "href": "event_fomc_2026_09.html",
-  "generated_at": "2026-09-16T03:15:39Z",
+  "generated_at": "2026-09-16T03:46:40Z",
   "as_of": "2026-09-16"
 }

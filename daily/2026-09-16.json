@@ -2,7 +2,7 @@
   "schema": "daily_digest_v0",
   "date": "2026-09-16",
   "date_effective": "2026-09-15",
-  "as_of": "2026-09-16T03:15:39Z",
+  "as_of": "2026-09-16T03:46:39Z",
   "timezone_display": "Asia/Shanghai",
   "state_glance": {
     "date": "2026-09-15",
@@ -26,8 +26,8 @@
     "label_jumps": [],
     "weather_zh": "近况：BTC -3.25%（有波动、未过异常默认线） · ETH -4.67% · OI 日变 +3.79% · 永续成交额 182.25 亿美金（日变 +40.9%） · BTC ETF 净流 -2.89 亿美金",
     "weather_en": "Weather: BTC -3.25% · ETH -4.67% · OI +3.79% d/d · perp turnover 18.23B (+40.9% d/d) · BTC ETF net -288.70M",
-    "text_zh": "币圈回撤、成交与杠杆存量同步抬升：BTC -3.25%、ETH -4.67%，永续额跳到 182 亿美金量级，OI 日增约 3.8%。期权侧 IV−RV 点差一日收窄超 8 个点，和美股小涨形成背离。",
-    "text_en": "Crypto pullback with higher turnover and OI: BTC -3.25%, ETH -4.67%, perp ~$18.2B (+41% d/d), OI +3.8%. IV−RV spread compressed >8 pp; diverged from mild equity gains."
+    "text_zh": "BTC跌3.25%、ETH跌4.67%，永续成交额升至182.25亿美金（约+41%），OI日变+3.79%。期权IV−RV点差一日收窄8.61个百分点，美股小涨、币股背离。",
+    "text_en": "BTC -3.25%, ETH -4.67%; perp turnover 18.23B (+41%), OI +3.79%. IV−RV spread narrowed 8.61 pp in a day; BTC diverged from a mildly up ES."
   },
   "slots": {
     "external": {
@@ -44,23 +44,23 @@
       "badge_zh": "会前·非结果",
       "badge_en": "Day-of · pre-result frame",
       "phase": "day_of",
-      "headline_zh": "FOMC钉日 · 会前精读路径故事",
+      "headline_zh": "FOMC日 · 精读点阵路径",
       "headline_en": "FOMC decision + SEP",
-      "lead_zh": "官方日历钉在今日，本页仍是会前非结果；市场轴已有点差跳变与近几日量能/清算门闩，只并置时间邻接。",
+      "lead_zh": "官钉日遇上本页点差跳变与放量，只并置状态、不归因。",
       "station_zh": "会前已动 + 钉日仍有波动（并置）",
-      "part1_zh": "含 SEP 与点阵的 FOMC：除利率与声明，还有委员对增长、失业、通胀和未来利率路径的集体作业展示。",
+      "part1_zh": "带SEP与点阵图的FOMC利率决议，比普通议息多一层「以后利率大概往哪走」的集体作业。",
       "part1_en": null,
-      "part2_zh": "议程框架：利率与声明 → SEP 增长/失业/通胀区间 → 点阵图路径分布 → 相对上次 SEP 的位移。",
+      "part2_zh": "今天看：利率与声明、SEP增长/失业/通胀区间、点阵路径分布、相对上次SEP的位移。",
       "part2_en": null,
-      "part3_zh": "绳：同一根利率绳，外加「未来几季经济与利率被画成什么样」的大纲。猜：资金会改猜中期路径，点阵偏鹰或偏鸽会不会改写「更高更久」权重。资产：美元与久期敏感资产（美债、成长股）常更敏感，风险偏好与波动可能跟着路径叙事摆。加密：多在风险偏好与美元流动性的间接层，点阵不点名比特币，但会改全球风险资产舒不舒服。时间：当日～次日对答案，路径叙事可影响数周直到下次议息或重磅数据。不确定：点阵是否真代表共识、市场会否过度外推一条路径。",
+      "part3_zh": "绳：同一根利率绳，外加未来几季经济与利率被画成什么样的大纲。猜：资金改猜中期路径，点阵偏鹰或偏鸽，会否改写「更高更久」权重。资产：美元与久期敏感资产常更敏感，风险偏好与波动可能跟着路径叙事摆。加密：多在风险偏好与美元流动性的间接层，点阵不点名比特币，但会改全球风险资产舒不舒服。时间：当日～次日对答案，路径叙事可影响数周直到下次议息或重磅数据。不确定：点阵是否代表共识、市场会否过度外推一条路径。",
       "part3_en": null,
-      "part4_zh": "你在「会前已动 + 钉日仍有波动」站：结合本页，会前有过驱动，今日门闩 iv_rv_spread_jump 与官钉同日，更像对答案日遇上市场轴仍在动——只并置、不归因。近距 T−1～T+1，框架可管到下一次议息。精读 2～4 分钟即可。",
+      "part4_zh": "你在「会前已动+钉日仍有波动」站。本页门闩iv_rv_spread_jump与官钉同日，更像对答案日遇上市场轴仍在动；近几日还有成交与清算门闩邻接，只说明波动可部分发生在决议前，不等于已定价完毕。",
       "part4_en": null,
       "post_brief_zh": null,
       "post_deep_zh": null,
       "post_reaction_zh": null,
       "result_caption_zh": null,
-      "text_zh": "FOMC（含 SEP/点阵）钉日、角标会前·非结果；本页 BTC 回撤、点差急收、与 ES 背离，时间邻接近几日驱动，不把涨跌算在事件头上。",
+      "text_zh": "FOMC（含SEP）会前钉日：精读利率绳+点阵路径故事；本页已有点差急收与放量下跌，并置不归因。",
       "text_en": "FOMC decision + SEP",
       "has_official_result": false,
       "result_status": "pre_snapshot",
@@ -75,8 +75,8 @@
           "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
           "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
         ],
-        "fetched_at": "2026-09-16T03:15:05Z",
-        "last_attempt_at": "2026-09-16T03:15:05Z",
+        "fetched_at": "2026-09-16T03:45:59Z",
+        "last_attempt_at": "2026-09-16T03:45:59Z",
         "attempt_n": 2,
         "adapter": "fed_openmarket_http",
         "result_plain_zh": null,
@@ -183,7 +183,7 @@
           "ok": true,
           "status": "pre_snapshot",
           "adapter": "fed_openmarket_http",
-          "fetched_at": "2026-09-16T03:15:05Z",
+          "fetched_at": "2026-09-16T03:45:59Z",
           "source_urls": [
             "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
             "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
@@ -206,7 +206,7 @@
           },
           "revision_note": null,
           "statement_bullets": null,
-          "last_attempt_at": "2026-09-16T03:15:05Z",
+          "last_attempt_at": "2026-09-16T03:45:59Z",
           "attempt_n": 2,
           "poll_attempts": 2,
           "raw_ref": {
@@ -241,8 +241,8 @@
             "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
             "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
           ],
-          "fetched_at": "2026-09-16T03:15:05Z",
-          "last_attempt_at": "2026-09-16T03:15:05Z",
+          "fetched_at": "2026-09-16T03:45:59Z",
+          "last_attempt_at": "2026-09-16T03:45:59Z",
           "attempt_n": 2,
           "adapter": "fed_openmarket_http",
           "result_plain_zh": null,
@@ -277,10 +277,10 @@
     },
     "driver": {
       "kind": "anomaly",
-      "headline_zh": "点差急收、量能抬升的回撤日",
+      "headline_zh": "点差急收的放量下跌日",
       "headline_en": "期权相对实现波动定价跳变",
-      "conclusion_zh": "【点差急收、量能抬升的回撤日】主画面是价格回撤叠量能与 OI 抬升，IV−RV 点差一日收窄 8.61 个点成当日程序门闩；美股小涨、BTC 明显背离，杠杆存量在涨、清算约前日 2.2 倍。",
-      "conclusion_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC -3.25%、ETH -4.67%。BTC 与 ES 背离（BTC -3.25% · ES +0.56%）。",
+      "conclusion_zh": "【点差急收的放量下跌日】主矛盾在波动定价与价格：IV−RV点差一日收窄8.61个百分点，BTC跌3.25%、成交与清算同步抬升，并与美股ES小涨背离。",
+      "conclusion_en": "Main tension in vol pricing vs price: IV−RV spread narrowed 8.61 pp in a day as BTC fell 3.25% with higher turnover and liquidations, diverging from a mildly up ES.",
       "key_metrics": [
         {
           "key": "btc_ret_1d",
@@ -391,12 +391,12 @@
           }
         }
       ],
-      "read_zh": "BTC 日收益 -3.25%，ETH -4.67%；永续成交额 182.25 亿美金（+40.9%），现货约 16.6 亿（+37.7%），OI 从约 10.35 万张升至 10.75 万（+3.79%），清算总量约前日 2.18 倍。Funding 年化约 4.38%（日变 +0.48 pp），ETH funding 转负。IV−RV 点差今日 5.74、日变 -8.61 pp，触发点差跳变规则——翻译一句：期权隐含波动相对近一周实现波动，一天里「贵的程度」明显收窄。Tradfi：ES +0.56%、NQ +0.43%、VIX +0.59%，卡片写明 BTC 与 ES 背离；BTC/ETH ETF 当日净流分别约 -2.89 亿、-0.57 亿美金。只并读状态，不归因谁导致谁。",
+      "read_zh": "BTC日收益-3.25%，ETH-4.67%。永续成交额182.25亿美金（日变+40.9%），现货约16.59亿；OI日变+3.79%，清算约为前日2.18倍。BTC funding年化4.38%（+0.48pp），ETH funding年化转负。触发门闩是IV−RV点差日变-8.61pp，今日点差仍为+5.74pp。ES+0.56%、NQ+0.43%、VIX+0.59%，BTC与ES明显背离；BTC ETF净流-2.89亿美金。翻译一句：砸价、放量的同时，期权相对近一周实现波动的「贵」被一日大幅抽薄。",
       "read_en": "依据（程序）：\n- 观测 IV−RV 点差日变 -8.61 pp（今日点差 5.74），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 背离（BTC -3.25% · ES +0.56%）。 非投资建议。",
       "tradfi_link_note_zh": "BTC 与 ES 背离（BTC -3.25% · ES +0.56%）",
       "tradfi_link_note_en": "BTC vs ES divergence (BTC -3.25% · ES +0.56%)",
-      "text_zh": "【点差急收、量能抬升的回撤日】主画面是价格回撤叠量能与 OI 抬升，IV−RV 点差一日收窄 8.61 个点成当日程序门闩；美股小涨、BTC 明显背离，杠杆存量在涨、清算约前日 2.2 倍。",
-      "text_en": "状态判断：期权相对实现波动定价跳变。币侧 BTC -3.25%、ETH -4.67%。BTC 与 ES 背离（BTC -3.25% · ES +0.56%）。",
+      "text_zh": "【点差急收的放量下跌日】主矛盾在波动定价与价格：IV−RV点差一日收窄8.61个百分点，BTC跌3.25%、成交与清算同步抬升，并与美股ES小涨背离。",
+      "text_en": "Main tension in vol pricing vs price: IV−RV spread narrowed 8.61 pp in a day as BTC fell 3.25% with higher turnover and liquidations, diverging from a mildly up ES.",
       "card": {
         "date": "2026-09-15",
         "prior_date": "2026-09-14",
@@ -456,7 +456,7 @@
           "question": "IV是什么意思，和VIX有什么区别"
         }
       ],
-      "text_zh": "潮记待办：IV 是什么、和 VIX 有何区别——可对照今日 IV−RV 点差跳变一起看。",
+      "text_zh": "潮记待办：有人在问IV是什么、和VIX有何区别——可对照今日IV−RV点差门闩一起看。",
       "text_en": null
     }
   },
@@ -466,28 +466,28 @@
   "llm_error": null,
   "brief_highlights": [
     {
-      "text": "BTC -3.25%",
+      "text": "BTC跌3.25%、ETH跌4.67%",
       "tone": "down"
     },
     {
-      "text": "ETH -4.67%",
-      "tone": "down"
-    },
-    {
-      "text": "IV−RV 点差一日收窄 8.61 个点",
+      "text": "永续成交额升至182.25亿美金（约+41%）",
       "tone": "warn"
     },
     {
-      "text": "永续成交额 182.25 亿美金（+40.9%）",
-      "tone": "up"
-    },
-    {
-      "text": "OI 日增约 3.8%",
-      "tone": "up"
-    },
-    {
-      "text": "BTC 与 ES 背离",
+      "text": "IV−RV点差一日收窄8.61个百分点",
       "tone": "warn"
+    },
+    {
+      "text": "美股小涨、币股背离",
+      "tone": "neutral"
+    },
+    {
+      "text": "清算约为前日2.18倍",
+      "tone": "warn"
+    },
+    {
+      "text": "只并置状态、不归因",
+      "tone": "neutral"
     }
   ],
   "job": {
