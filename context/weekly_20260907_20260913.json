@@ -2,7 +2,7 @@
   "schema_version": "context_v0.1",
   "report_id": "weekly_20260907_20260913",
   "report_type": "weekly",
-  "generated_at": "2026-09-14T03:26:25Z",
+  "generated_at": "2026-09-16T03:22:09Z",
   "as_of": "2026-09-13T23:59:59Z",
   "timezone_storage": "UTC",
   "timezone_display": "Asia/Shanghai",
@@ -60,7 +60,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.daily_kline",
-      "fetched_at": "2026-09-14T03:25:34Z",
+      "fetched_at": "2026-09-16T03:20:57Z",
       "notes": "Binance Spot+LinearSwap; argMax by recv_ts"
     },
     {
@@ -70,7 +70,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.open_interest",
-      "fetched_at": "2026-09-14T03:25:34Z"
+      "fetched_at": "2026-09-16T03:20:57Z"
     },
     {
       "id": "src_liq",
@@ -79,7 +79,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.liquidation",
-      "fetched_at": "2026-09-14T03:25:34Z",
+      "fetched_at": "2026-09-16T03:20:57Z",
       "notes": "side BUY/SELL raw; semantics unverified"
     },
     {
@@ -89,16 +89,24 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.contract_quote",
-      "fetched_at": "2026-09-14T03:25:34Z"
+      "fetched_at": "2026-09-16T03:20:57Z"
     },
     {
       "id": "src_tradfi_yahoo",
       "role": "tradfi_bundle",
       "provider": "yahoo",
       "channel": "yfinance",
-      "table_or_resource": "ES=F,NQ=F,^VIX,DX-Y.NYB,^TNX,GC=F",
-      "fetched_at": "2026-09-14T03:25:59Z",
-      "notes": "TEMPORARY fallback — not Datahub; must footnote in HTML"
+      "table_or_resource": "ES=F,^VIX,DX-Y.NYB,GC=F",
+      "fetched_at": "2026-09-16T03:21:29Z",
+      "notes": "TEMPORARY fallback — not Datahub; must footnote in HTML; rate_limit_or_empty=NQ,US10Y (may be hole-filled later)"
+    },
+    {
+      "id": "src_tradfi_fill",
+      "role": "tradfi_fill",
+      "provider": "cache",
+      "channel": "per_ticker_hole_fill",
+      "table_or_resource": "NQ←context:weekly_20260907_20260913.json,US10Y←context:weekly_20260907_20260913.json",
+      "notes": "Per-ticker fill after Yahoo partial/rate-limit; not live Yahoo for filled names — footnote in HTML"
     },
     {
       "id": "src_option_vol",
@@ -107,7 +115,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.option_volatility_kline",
-      "fetched_at": "2026-09-14T03:26:14Z",
+      "fetched_at": "2026-09-16T03:21:56Z",
       "notes": "Deribit BTC,ETH; daily close via argMax(close,start_time)"
     },
     {
@@ -502,6 +510,81 @@
       }
     },
     "derivatives": {
+      "BTC_FUNDING": {
+        "source_id": "src_funding",
+        "freq": "1d",
+        "columns": [
+          "date",
+          "funding_rate",
+          "last",
+          "mark",
+          "index"
+        ],
+        "rows": [
+          [
+            "2026-09-06",
+            2.883e-05,
+            80301.1,
+            80304.4762069,
+            80352.79152174
+          ],
+          [
+            "2026-09-07",
+            4.561e-05,
+            79075.9,
+            79075.9,
+            79113.66608696
+          ],
+          [
+            "2026-09-08",
+            4.806e-05,
+            78425.6,
+            78426.34741304,
+            78454.76913043
+          ],
+          [
+            "2026-09-09",
+            3.559e-05,
+            78273.1,
+            78275.07597101,
+            78311.31478261
+          ],
+          [
+            "2026-09-10",
+            3.006e-05,
+            76535.7,
+            76535.6,
+            76565.92695652
+          ],
+          [
+            "2026-09-11",
+            6.04e-05,
+            77191.0,
+            77191.97084058,
+            77223.03108696
+          ],
+          [
+            "2026-09-12",
+            4.794e-05,
+            77242.8,
+            77251.05023988,
+            77286.0176087
+          ],
+          [
+            "2026-09-13",
+            7.157e-05,
+            76805.1,
+            76808.6788913,
+            76840.51934783
+          ]
+        ],
+        "unit": {
+          "funding_rate": "decimal_per_period",
+          "price": "USD"
+        },
+        "product": "LinearSwap",
+        "exch_symbol": "BTCUSDT"
+      },
       "BTC_OI": {
         "source_id": "src_oi",
         "freq": "1d",
@@ -632,8 +715,8 @@
             "2026-09-10",
             953,
             18.278999999999996,
-            104.46400000000018,
-            122.74300000000022,
+            104.46400000000015,
+            122.7430000000002,
             9446345.59526999
           ],
           [
@@ -667,7 +750,7 @@
         },
         "side_semantics": "raw_exchange_side_unverified"
       },
-      "BTC_FUNDING": {
+      "ETH_FUNDING": {
         "source_id": "src_funding",
         "freq": "1d",
         "columns": [
@@ -680,65 +763,67 @@
         "rows": [
           [
             "2026-09-06",
-            2.883e-05,
-            80301.1,
-            80304.4762069,
-            80352.79152174
+            6.81e-05,
+            2513.46,
+            2513.96208099,
+            2515.3355814
           ],
           [
             "2026-09-07",
-            4.561e-05,
-            79075.9,
-            79075.9,
-            79113.66608696
+            4.283e-05,
+            2488.79,
+            2488.8,
+            2490.08046512
           ],
           [
             "2026-09-08",
-            4.806e-05,
-            78425.6,
-            78426.34741304,
-            78454.76913043
+            5.211e-05,
+            2483.88,
+            2483.88026126,
+            2485.07108108
           ],
           [
             "2026-09-09",
-            3.559e-05,
-            78273.1,
-            78275.07597101,
-            78311.31478261
+            -1.177e-05,
+            2466.98,
+            2467.27648062,
+            2468.32534884
           ],
           [
             "2026-09-10",
-            3.006e-05,
-            76535.7,
-            76535.6,
-            76565.92695652
+            6.31e-06,
+            2436.82,
+            2436.82,
+            2438.03930233
           ],
           [
             "2026-09-11",
-            6.04e-05,
-            77191.0,
-            77191.97084058,
-            77223.03108696
+            -1.5e-07,
+            2515.47,
+            2515.60224031,
+            2516.43069767
           ],
           [
             "2026-09-12",
-            4.794e-05,
-            77242.8,
-            77251.05023988,
-            77286.0176087
+            4.575e-05,
+            2524.8,
+            2524.82127105,
+            2526.10813953
           ],
           [
             "2026-09-13",
-            7.157e-05,
-            76805.1,
-            76808.6788913,
-            76840.51934783
+            5.268e-05,
+            2475.48,
+            2475.65575969,
+            2477.10023256
           ]
         ],
         "unit": {
           "funding_rate": "decimal_per_period",
           "price": "USD"
-        }
+        },
+        "product": "LinearSwap",
+        "exch_symbol": "ETHUSDT"
       }
     },
     "tradfi": {
@@ -800,7 +885,10 @@
         "ticker": "NQ=F",
         "unit": {
           "close": "yahoo_native"
-        }
+        },
+        "filled": true,
+        "fill_from": "context:weekly_20260907_20260913.json",
+        "yahoo_error": "empty"
       },
       "VIX": {
         "source_id": "src_tradfi_yahoo",
@@ -894,7 +982,10 @@
         "ticker": "^TNX",
         "unit": {
           "close": "yahoo_native"
-        }
+        },
+        "filled": true,
+        "fill_from": "context:weekly_20260907_20260913.json",
+        "yahoo_error": "Too Many Requests. Rate limited. Try after a while."
       },
       "GOLD": {
         "source_id": "src_tradfi_yahoo",
@@ -906,19 +997,19 @@
         "rows": [
           [
             "2026-09-08",
-            4393.89990234375
+            4439.0
           ],
           [
             "2026-09-09",
-            4416.0
+            4460.7001953125
           ],
           [
             "2026-09-10",
-            4364.5
+            4407.2998046875
           ],
           [
             "2026-09-11",
-            4366.2001953125
+            4408.89990234375
           ]
         ],
         "ticker": "GC=F",
@@ -1502,7 +1593,87 @@
         "iv_currency": "ETH",
         "iv_unit": "ann_pct",
         "iv_rv_spread_end": 22.59,
-        "iv_rv_ratio_end": 1.713
+        "iv_rv_ratio_end": 1.713,
+        "funding_end": 5.268e-05,
+        "funding_end_display": "0.0053%/period",
+        "funding_end_ann_pct": 5.77,
+        "funding_end_ann_display": "+5.77%/yr",
+        "funding_periods_per_year": 1095.0,
+        "basis_end_bps": -5.831,
+        "funding_start": 6.81e-05,
+        "funding_start_ann_pct": 7.46,
+        "funding_daily_ann_pct": [
+          {
+            "date": "2026-08-31",
+            "funding_rate": 5.738e-05,
+            "ann_pct": 6.28
+          },
+          {
+            "date": "2026-09-01",
+            "funding_rate": 9.2e-07,
+            "ann_pct": 0.1
+          },
+          {
+            "date": "2026-09-02",
+            "funding_rate": 8.93e-05,
+            "ann_pct": 9.78
+          },
+          {
+            "date": "2026-09-03",
+            "funding_rate": 9.523e-05,
+            "ann_pct": 10.43
+          },
+          {
+            "date": "2026-09-04",
+            "funding_rate": 2.001e-05,
+            "ann_pct": 2.19
+          },
+          {
+            "date": "2026-09-05",
+            "funding_rate": 7.063e-05,
+            "ann_pct": 7.73
+          },
+          {
+            "date": "2026-09-06",
+            "funding_rate": 6.81e-05,
+            "ann_pct": 7.46
+          },
+          {
+            "date": "2026-09-07",
+            "funding_rate": 4.283e-05,
+            "ann_pct": 4.69
+          },
+          {
+            "date": "2026-09-08",
+            "funding_rate": 5.211e-05,
+            "ann_pct": 5.71
+          },
+          {
+            "date": "2026-09-09",
+            "funding_rate": -1.177e-05,
+            "ann_pct": -1.29
+          },
+          {
+            "date": "2026-09-10",
+            "funding_rate": 6.31e-06,
+            "ann_pct": 0.69
+          },
+          {
+            "date": "2026-09-11",
+            "funding_rate": -1.5e-07,
+            "ann_pct": -0.02
+          },
+          {
+            "date": "2026-09-12",
+            "funding_rate": 4.575e-05,
+            "ann_pct": 5.01
+          },
+          {
+            "date": "2026-09-13",
+            "funding_rate": 5.268e-05,
+            "ann_pct": 5.77
+          }
+        ]
       }
     },
     "tradfi": {
@@ -1514,11 +1685,11 @@
         "ret_window_pct": -0.809
       },
       "NQ": {
-        "start_close": 29565.25,
+        "start_close": 29538.75,
         "end_close": 29387.0,
-        "start_date_used": "2026-09-04",
+        "start_date_used": "2026-09-08",
         "end_date_used": "2026-09-11",
-        "ret_window_pct": -0.603
+        "ret_window_pct": -0.514
       },
       "VIX": {
         "start_close": 14.529999732971191,
@@ -1535,20 +1706,20 @@
         "ret_window_pct": -0.04
       },
       "US10Y": {
-        "start_close": 4.783999919891357,
+        "start_close": 4.806000232696533,
         "end_close": 4.974999904632568,
-        "start_date_used": "2026-09-04",
+        "start_date_used": "2026-09-08",
         "end_date_used": "2026-09-11",
-        "chg_bp": 19.1,
+        "chg_bp": 16.9,
         "end_level": 4.974999904632568,
         "ret_window_pct": null
       },
       "GOLD": {
-        "start_close": 4429.7998046875,
-        "end_close": 4366.2001953125,
+        "start_close": 4476.60009765625,
+        "end_close": 4408.89990234375,
         "start_date_used": "2026-09-04",
         "end_date_used": "2026-09-11",
-        "ret_window_pct": -1.436
+        "ret_window_pct": -1.512
       },
       "_window_note": "tradfi bracket 2026-09-04→2026-09-11 (US sessions bracketing crypto week); not identical to UTC crypto week"
     },
@@ -2577,9 +2748,9 @@
           "zh": "NQ 窗口 %",
           "en": "NQ window %"
         },
-        "current": "-0.6",
+        "current": "-0.5",
         "previous": "+0.2",
-        "delta": "-0.9",
+        "delta": "-0.8",
         "kind": "num"
       },
       {
@@ -2607,9 +2778,9 @@
           "zh": "US10Y 变化 bp",
           "en": "US10Y chg bp"
         },
-        "current": "+19.1",
+        "current": "+16.9",
         "previous": "+6.4",
-        "delta": "+12.7",
+        "delta": "+10.5",
         "kind": "num"
       },
       {
@@ -2617,7 +2788,7 @@
           "zh": "GOLD 窗口 %",
           "en": "GOLD window %"
         },
-        "current": "-1.4",
+        "current": "-1.5",
         "previous": "-1.1",
         "delta": "-0.4",
         "kind": "num"

@@ -96,34 +96,34 @@
     {
       "id": "w1",
       "text": {
-        "zh": "BTC 现货 ETF 净流是否延续温和流出，或出现单日转向流入。",
-        "en": "Whether BTC spot ETF nets stay in mild outflow or flip to a notable inflow day."
+        "zh": "BTC 美现货 ETF 净流是否继续温和流出，或出现单日/累计翻转向流入。",
+        "en": "Whether BTC US spot ETF net stays in mild outflow or flips toward inflow on a day or cumulative basis."
       },
       "watchable": true,
       "template_hint": "etf_flow_persist",
-      "rationale_zh": "本周由强流入转为温和流出，通道姿态是叙事转折点，下期可直接对净额与天数。",
+      "rationale_zh": "本周由上周强流入转为温和流出，通道姿态是本周与上周最大反差之一，适合作为下期核对哨。",
       "source": "llm_narrative"
     },
     {
       "id": "w2",
       "text": {
-        "zh": "IV-RV 点差是否仍维持在约 15–20 个百分点以上的「偏贵」区。",
-        "en": "Whether the IV-RV spread stays in a ‘rich’ zone roughly above 15–20 pp."
+        "zh": "Deribit BTC IV-RV 点差是否仍维持双位数溢价，或向实现波动收敛。",
+        "en": "Whether Deribit BTC IV-RV spread stays in double-digit richness or converges toward realized."
       },
       "watchable": true,
       "template_hint": "iv_still_rich",
-      "rationale_zh": "期末溢价约 19pp 是本周波动主矛盾，收敛或再扩都会改写 vol_harvest 合拍度。",
+      "rationale_zh": "期末溢价约 19 pt 且标签为期权偏贵，是波动结构的核心矛盾，收窄与否改变叙事重心。",
       "source": "llm_narrative"
     },
     {
       "id": "w3",
       "text": {
-        "zh": "永续成交额环比降温与 OI 微降是否延续，资金费率能否维持正值而不抬头。",
-        "en": "Whether perp turnover cooling and slight OI decline continue, and funding stays positive without spiking."
+        "zh": "资金费率年化与 OI 周变是否仍停留在杠杆中性带，清算是否再现峰值日。",
+        "en": "Whether funding ann. and OI wow remain in leverage-neutral band and if another liquidation peak day reappears."
       },
       "watchable": true,
       "template_hint": "funding_ease",
-      "rationale_zh": "杠杆中性是本周稳定器；若活跃度回升或费率急变，中性标签可能松动。",
+      "rationale_zh": "本周中性 + 小幅 OI 降 + 单日清算峰，需验证拥挤与出清是否升级，避免与价格涨跌焊死。",
       "source": "llm_narrative"
     }
   ],
