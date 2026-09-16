@@ -359,25 +359,243 @@ body.lang-en span.lang.en{display:inline!important}
       <h1><span class="lang zh">每日摘要</span><span class="lang en">Daily digest</span></h1>
     </header>
     
-        <div class="placeholder">
-          <p style="margin:0 0 12px">
-            <a class="daily-back" data-cal-back href="calendar.html">
-              <span class="arr" aria-hidden="true">←</span>
-              <span class="lang zh">返回宏观日历</span>
-              <span class="lang en">Back to calendar</span>
-            </a>
-          </p>
-          <p><span class="lang zh"><b>每日摘要</b> — 尚无生成。</span>
-             <span class="lang en"><b>Daily digest</b> — not generated yet.</span></p>
-          <p><span class="lang zh">日期 <code>2026-09-16</code> 为宏观日历钉日，但本地尚无该日摘要 JSON。</span><span class="lang en">Pin day <code>2026-09-16</code> — no local digest yet.</span></p>
-          <p><span class="lang zh">运行：<code>python3 -m tidewatch daily --date 2026-09-16</code>
-             （需看板缓存：<code>dashboard-refresh</code>）。
-             返回 <a class="link" href="calendar.html">宏观日历</a>。</span>
-             <span class="lang en">Run daily job after dashboard-refresh.
-             Back to <a class="link" href="calendar.html">macro calendar</a>.</span></p>
-        </div>
+    <div class="daily-week-nav"><div class="daily-week-row"><span class="lab"><span class="lang zh">周</span><span class="lang en">Wk</span></span><a class="active has-alert" href="daily.html" title="2026-09-14～2026-09-20">09-14～09-20</a><a class="has-alert" href="daily_20260913.html" title="2026-09-07～2026-09-13">09-07～09-13</a><a class="has-alert" href="daily_20260906.html" title="2026-08-31～2026-09-06">08-31～09-06</a><a class="has-alert" href="daily_20260830.html" title="2026-08-24～2026-08-30">08-24～08-30</a><a class="has-alert" href="daily_20260823.html" title="2026-08-17～2026-08-23">08-17～08-23</a><a class="has-alert" href="daily_20260816.html" title="2026-08-10～2026-08-16">08-10～08-16</a><a class="has-alert" href="daily_20260809.html" title="2026-08-03～2026-08-09">08-03～08-09</a><a class="" href="daily_20260729.html" title="2026-07-27～2026-08-02">07-27～08-02</a><a class="has-alert" href="daily_20260714.html" title="2026-07-13～2026-07-19">07-13～07-19</a><a class="has-alert" href="daily_20260702.html" title="2026-06-29～2026-07-05">06-29～07-05</a><a class="" href="daily_20260617.html" title="2026-06-15～2026-06-21">06-15～06-21</a><a class="" href="daily_20260610.html" title="2026-06-08～2026-06-14">06-08～06-14</a></div><div class="daily-week-row day-row"><span class="lab"><span class="lang zh">日</span><span class="lang en">Day</span></span><a class="heat-2" href="daily_20260914.html" title="2026-09-14">09-14<span style="opacity:.7;font-weight:500">·一</span></a><a class="heat-2" href="daily_20260915.html" title="2026-09-15">09-15<span style="opacity:.7;font-weight:500">·二</span></a><a class="heat-2 active today cal-pin" href="daily.html" title="2026-09-16 · FOMC 利率决议（含经济预测 SEP）">09-16<span style="opacity:.7;font-weight:500">·三</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">09-17<span style="opacity:.7;font-weight:500">·四</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">09-18<span style="opacity:.7;font-weight:500">·五</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">09-19<span style="opacity:.7;font-weight:500">·六</span></a><a class="heat-0 missing" href="#" title="尚无摘要 · 未生成">09-20<span style="opacity:.7;font-weight:500">·日</span></a></div></div>
+    <div class="placeholder" style="border-color:rgba(180,83,9,.4);margin-bottom:14px">no_bar_on_2026-09-16_using_2026-09-15</div>
+    <article class="daily-shell heat-2">
+      <header class="daily-shell-h">
+        <a class="daily-back" data-cal-back href="calendar.html">
+          <span class="arr" aria-hidden="true">←</span>
+          <span class="lang zh">返回宏观日历</span>
+          <span class="lang en">Back to calendar</span>
+        </a>
+        <p class="day">2026-09-16 <span class="daily-heat-badge heat-2" title="条件格式烈度 0-4">警</span></p>
+        <p class="sub">
+          <span class="lang zh">潮观 · 每日摘要 · 摘要日按北京日历</span>
+          <span class="lang en">Tidewatch · Daily · digest day = Beijing calendar</span>
+        </p>
+        <p class="sub" style="margin-top:6px">
+          <span class="lang zh">生成于 <b>2026-09-16 10:33:01 北京时间</b>
+            <span style="opacity:.75">（as_of UTC 2026-09-16 02:33:01Z · 生成时刻，非收盘时刻）</span></span>
+          <span class="lang en">Generated <b>2026-09-16 10:33:01 北京时间</b>
+            <span style="opacity:.75">(as_of UTC 2026-09-16 02:33:01Z · job time, not close time)</span></span>
+        </p>
+      </header>
+
+      <div class="daily-brief">
+        <p class="daily-brief-label"><span class="lang zh">今日一览</span><span class="lang en">At a glance</span></p>
+        <p class="daily-brief-text">
+          <span class="lang zh"><span class="daily-hl down">BTC回撤3.25%</span>，<span class="daily-hl down">ETH更弱跌4.67%</span>；<span class="daily-hl">OI反升约3.8%</span>，<span class="daily-hl up">永续成交额大增至182.25亿美金</span>。<span class="daily-hl warn">IV−RV点差一日收窄8.61个点</span>，且<span class="daily-hl warn">与ES小涨背离</span>。</span>
+          <span class="lang en">BTC <span class="daily-hl down">-3.25%</span>, ETH <span class="daily-hl down">-4.67%</span>; OI <span class="daily-hl up">+3.79%</span>, perp turnover 18.23B; IV−RV spread collapsed 8.61pp, diverged from ES up.</span>
+        </p>
+        <div class="daily-chips"><span class="daily-chip down heat-1"><span class="chip-k">BTC</span><span class="chip-v">-3.25%</span></span><span class="daily-chip down heat-1"><span class="chip-k">ETH</span><span class="chip-v">-4.67%</span></span><span class="daily-chip up heat-1"><span class="chip-k">OI</span><span class="chip-v">+3.79%</span></span><span class="daily-chip up" title="永续成交额 USD · 活跃度非多空"><span class="chip-k">永续额</span><span class="chip-v">182.25 亿美金 (+41%)</span></span><span class="daily-chip down" title="BTC spot ETF net flow USD · ByKaranteli"><span class="chip-k">BTC ETF</span><span class="chip-v">-2.89 亿美金</span></span><span class="daily-chip down" title="ETH spot ETF net flow USD · ByKaranteli"><span class="chip-k">ETH ETF</span><span class="chip-v">-56.70 百万美金</span></span><span class="daily-chip on"><span class="chip-k"><span class="lang zh">外生</span><span class="lang en">Ext</span></span><span class="chip-v">会前·非结果</span></span><span class="daily-chip warn heat-2"><span class="chip-k"><span class="lang zh">驱动</span><span class="lang en">Driver</span></span><span class="chip-v">警</span></span><span class="daily-chip on"><span class="chip-k"><span class="lang zh">认知</span><span class="lang en">Notes</span></span><span class="chip-v">·</span></span></div>
         
-    <p class="public-asof dash-meta" style="margin:18px 0 0;padding:0 4px;font-size:12px;opacity:.85"><span class="lang zh">公开只读站 · 无潮记/问潮观 · 数据截至 <b>2026-09-14</b></span><span class="lang en">Public read-only · no Tide Notes/Q&amp;A · data as-of <b>2026-09-14</b></span></p>
+      </div>
+
+      <div class="daily-details-wrap">
+        
+        <details class="daily-fold weather">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">近况明细</span><span class="lang en">Weather detail</span></span>
+              <span class="fold-hint"><span class="lang zh">BTC -3.25% · ETH -4.67%</span><span class="lang en">BTC -3.25% · ETH -4.67%</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body">
+        <p class="daily-sec-body"><span class="lang zh">BTC回撤3.25%，ETH更弱跌4.67%；OI反升约3.8%，永续成交额大增至182.25亿美金。IV−RV点差一日收窄8.61个点，且与ES小涨背离。</span><span class="lang en">BTC -3.25%, ETH -4.67%; OI +3.79%, perp turnover 18.23B; IV−RV spread collapsed 8.61pp, diverged from ES up.</span></p>
+        <div class="daily-nums">
+          <div class="daily-num down" title="btc_ret_1d program">
+            <div class="k">BTC</div>
+            <div class="v">-3.25%</div>
+          </div>
+          <div class="daily-num down" title="eth_ret_1d program">
+            <div class="k">ETH</div>
+            <div class="v">-4.67%</div>
+          </div>
+          <div class="daily-num up" title="oi_chg_pct program · total OI structure only">
+            <div class="k">OI</div>
+            <div class="v">+3.79%</div>
+          </div>
+          <div class="daily-num up" title="永续成交额 USD · 活跃度，不能拆多空"><div class="k">永续额</div><div class="v">182.25 亿美金（+41%）</div></div><div class="daily-num" title="现货成交额 USD · 与 ETF 并陈"><div class="k">现货额</div><div class="v">16.59 亿美金</div></div>
+          <div class="daily-num down" title="btc_etf_net_usd · ByKaranteli net USD"><div class="k">BTC ETF</div><div class="v">-2.89 亿美金</div></div><div class="daily-num down" title="eth_etf_net_usd · ByKaranteli net USD"><div class="k">ETH ETF</div><div class="v">-56.70 百万美金</div></div>
+        </div>
+        <p class="daily-compare">
+          <span class="lang zh">对比收盘：2026-09-14 → 2026-09-15（程序数，两位小数）；OI 为总量日变%，无多空 side；永续/现货额=成交额美金（热闹程度，不能拆多空）；ETF=美现货净申赎 USD（ByKaranteli 聚合·非官方）</span>
+          <span class="lang en">Close-to-close：2026-09-14 → 2026-09-15 (program, 2 d.p.); OI = total d/d %; turnover = activity USD not L/S; ETF = US spot net flow</span>
+        </p>
+    </div>
+        </details>
+        
+        <details class="daily-fold external">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">外生 · 日历</span><span class="lang en">External</span></span>
+              <span class="fold-hint"><span class="lang zh">官方钉日与本页波动轴同框：会前已有驱动门闩，只并置不归因。</span><span class="lang en">FOMC decision + SEP</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body">
+        <span class="daily-ext-badge pre"><span class="lang zh">会前·非结果</span><span class="lang en">Day-of · pre-result frame</span></span>
+        <p class="daily-driver-headline"><span class="lang zh">FOMC日·精读路径故事</span></p>
+        <p class="daily-ext-lead"><span class="lang zh">官方钉日与本页波动轴同框：会前已有驱动门闩，只并置不归因。</span></p>
+        
+        <p class="daily-sec-label" style="margin-top:0"><span class="lang zh">① 这是什么</span></p>
+        <p class="daily-sec-body"><span class="lang zh">带SEP与点阵图的FOMC利率决议，比普通议息多一层中期路径信息。</span></p>
+        <p class="daily-sec-label"><span class="lang zh">② 今天通常吵什么</span></p>
+        <p class="daily-sec-body"><span class="lang zh">议程：利率与声明、SEP增长/失业/通胀区间、点阵路径分布、相对上次SEP的位移。</span></p>
+        <ul style="margin:6px 0 0;padding-left:18px;font-size:13px;color:var(--muted)"><li>利率与声明</li><li>SEP 增长/失业/通胀区间</li><li>点阵图路径分布</li><li>相对上次 SEP 的位移</li></ul>
+        <p class="daily-sec-label"><span class="lang zh">③ 传导故事（六拍）</span></p>
+        <p class="daily-sec-body"><span class="lang zh">绳：同一根利率绳，外加未来几季经济与利率被画成什么样的大纲。猜：资金改猜中期路径，点阵偏鹰或偏鸽，会否改写「更高更久」权重。资产：美元与久期敏感资产常更敏感，风险偏好与波动可能跟着路径叙事摆。加密：多在风险偏好与美元流动性的间接层，点阵不直接点名比特币。时间：当日～次日对答案，路径叙事可影响数周。不确定：点阵是否代表共识、会否过度外推一条路径。</span></p>
+        <p class="daily-sec-label"><span class="lang zh">④ 站位</span></p>
+        <div class="daily-contrast"><p class="daily-sec-body"><span class="lang zh"><b>官方轴。</b>官方轴：今日**是**官方日历钉日「FOMC 利率决议（含经济预测 SEP）」；角标 **会前·非结果**（无官方结果卡时不当成已出结果。）。</span></p><p class="daily-sec-body"><span class="lang zh"><b>市场轴。</b>本页市场轴（程序数）：BTC -3.25% · ETH -4.67% · OI 日变 +3.79% · ES +0.48% · NQ +0.32% · VIX +0.58% · DXY +0.23%。 股币关系：BTC 与 ES 背离（BTC -3.25% · ES +0.48%）。</span></p><p class="daily-sec-body"><span class="lang zh"><b>时间关系。</b>时间关系（非因果）：在「FOMC 利率决议（含经济预测 SEP）」官方钉之前，市场轴已在 2026-09-15、2026-09-14、2026-09-13 出现过驱动门闩（iv_rv_spread_jump、volume_spike、liq_spike）。这只说明**波动可能部分发生在公布/决议前**（常见超前定价情景之一），并不等于「已经定价完毕」，也不解释那些涨跌的原因。 因果留给你；潮观只翻译状态。非投资建议。</span></p></div>
+        
+        <p class="daily-compare"><span class="lang zh">来源 fomc · 模板 <code>fomc_sep</code> · <code>fomc_2026_09</code></span><span class="lang en">source fomc · <code>fomc_sep</code></span></p>
+        <p class="daily-compare"><a class="link" data-cal-back href="calendar.html"><span class="lang zh">宏观日历</span></a>
+           · <span class="lang zh">非投资建议 · 数字以结果卡 / 本页程序数为准</span></p>
+        </div>
+        </details>
+        
+        <details class="daily-fold driver">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">驱动 · 异常</span><span class="lang en">Driver</span></span>
+              <span class="fold-hint"><span class="lang zh">【点差急收的股币背离日】币圈明显回撤，BTC与美股期货走势背离；IV−RV点差一日…</span><span class="lang en">状态判断：期权相对实现波动定价跳变。币侧 BTC -3.25%、ETH -4.67…</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body">
+        <p class="daily-sec-label" style="margin-top:0"><span class="lang zh">① 结论</span><span class="lang en">① Conclusion</span></p>
+        <p class="daily-driver-headline"><span class="lang zh">点差急收的股币背离日</span></p>
+        <p class="daily-sec-body"><span class="lang zh">【点差急收的股币背离日】币圈明显回撤，BTC与美股期货走势背离；IV−RV点差一日收窄8.61个百分点，波动溢价快速回落。成交与OI同步抬升，更像有波动的换手日。</span><span class="lang en">状态判断：期权相对实现波动定价跳变。币侧 BTC -3.25%、ETH -4.67%。BTC 与 ES 背离（BTC -3.25% · ES +0.48%）。</span></p>
+        <p class="daily-compare"><span class="lang zh"><b>与传统</b>：BTC 与 ES 背离（BTC -3.25% · ES +0.48%）</span></p>
+        <p class="daily-sec-label"><span class="lang zh">② 关键数（程序 · 含传统对照）</span><span class="lang en">② Key metrics</span></p>
+        <div class="daily-nums"><div class="daily-num"><div class="k">BTC 日收益</div><div class="v" style="font-size:18px">-3.25%</div></div><div class="daily-num"><div class="k">ETH 日收益</div><div class="v" style="font-size:18px">-4.67%</div></div><div class="daily-num"><div class="k">funding 年化日变</div><div class="v" style="font-size:18px">+0.48 pp</div></div><div class="daily-num"><div class="k">funding 年化</div><div class="v" style="font-size:18px">4.38</div></div><div class="daily-num"><div class="k">OI 日变</div><div class="v" style="font-size:18px">+3.79%</div></div><div class="daily-num"><div class="k">清算/前日</div><div class="v" style="font-size:18px">2.18×</div></div><div class="daily-num"><div class="k">永续成交额</div><div class="v" style="font-size:18px">182.25 亿美金（+41%）</div></div><div class="daily-num"><div class="k">现货成交额</div><div class="v" style="font-size:18px">16.59 亿美金</div></div><div class="daily-num"><div class="k">IV−RV 点差</div><div class="v" style="font-size:18px">+5.74 pp</div></div><div class="daily-num"><div class="k">点差日变</div><div class="v" style="font-size:18px">-8.61 pp</div></div></div>
+        <p class="daily-sec-label"><span class="lang zh">③ 这是什么异常 · 怎么算</span><span class="lang en">③ What / how (program)</span></p>
+        <div class="daily-meth-item"><p class="daily-meth-title"><code>iv_rv_spread_jump</code> · IV−RV 点差日变</p><p class="daily-compare"><span class="lang zh"><b>是什么</b>：期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。</span><span class="lang en"><b>What</b>: Large one-day move in IV minus realized vol spread.</span></p><p class="daily-compare"><span class="lang zh"><b>怎么算</b>：spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。</span><span class="lang en"><b>How</b>: spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8).</span></p><p class="daily-compare"><span class="lang zh"><b>今日观测</b>：观测 IV−RV 点差日变 -8.61 pp（今日点差 5.74），阈值 |·|≥8.00 pp</span><span class="lang en"><b>Observed</b>: IV−RV spread day change -8.61 pp</span></p></div>
+        <p class="daily-sec-label"><span class="lang zh">④ 怎么读</span><span class="lang en">④ How to read</span></p>
+        <p class="daily-sec-body"><span class="lang zh">BTC日收益-3.25%，ETH-4.67%。永续成交额182.25亿美金（+41%），现货约16.59亿（+38%）。OI升至约10.75万张、+3.79%，清算约为前日2.18倍；funding年化4.38%、日变+0.48pp。触发门闩是IV−RV：今日点差+5.74pp，日变-8.61pp。ES+0.48%、NQ+0.32%，BTC与ES背离。翻译一句：市场愿付的波动保险费相对实际晃动一下子便宜了不少，价格在跌、杠杆存量却还在加。</span><span class="lang en">依据（程序）：
+- 观测 IV−RV 点差日变 -8.61 pp（今日点差 5.74），阈值 |·|≥8.00 pp
+含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 背离（BTC -3.25% · ES +0.48%）。 非投资建议。</span></p>
+        <p class="daily-compare"><a class="link" href="dashboard.html"><span class="lang zh">打开数据看板</span><span class="lang en">Dashboard</span></a></p>
+        </div>
+        </details>
+        
+        <details class="daily-fold cognition">
+          <summary>
+            <span class="fold-left">
+              <span class="fold-tag"><span class="lang zh">认知 · 潮记</span><span class="lang en">Cognition</span></span>
+              <span class="fold-hint"><span class="lang zh">潮记待办：有人在问IV和VIX区别——正好碰上点差跳变日，可对照本页IV−RV。</span><span class="lang en">潮记待办：有人在问IV和VIX区别——正好碰上点差跳变日，可对照本页IV−RV。</span></span>
+            </span>
+            <span class="fold-chevron" aria-hidden="true"></span>
+          </summary>
+          <div class="daily-fold-body"><p class="daily-sec-body"><span class="lang zh">潮记待办：有人在问IV和VIX区别——正好碰上点差跳变日，可对照本页IV−RV。</span><span class="lang en">潮记待办：有人在问IV和VIX区别——正好碰上点差跳变日，可对照本页IV−RV。</span></p><p class="daily-compare"><span class="lang zh">认知槽仅本机潮记；公开站不展示钉/哨入口。</span><span class="lang en">Cognition slot is local Tide Notes only; hidden on public package.</span></p></div>
+        </details>
+        
+      </div>
+
+      <footer class="daily-foot">
+        <div class="links">
+          <a class="link" data-cal-back href="calendar.html"><span class="lang zh">宏观日历</span><span class="lang en">Calendar</span></a>
+          <a class="link" href="dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a>
+          · <a class="link" href="index.html"><span class="lang zh">周报集锦</span><span class="lang en">Archive</span></a>
+          
+           · <a class="link" href="event_fomc_2026_09.html"><span class="lang zh">本事件轨迹</span><span class="lang en">Event track</span></a>
+        </div>
+        <div class="dash-meta" style="margin:0">
+          <span class="lang zh">本页为生成快照；更新说明见下方覆盖说明。</span>
+        </div>
+      </footer>
+    </article>
+
+    <details class="daily-notes">
+      <summary><span class="lang zh">数据口径与脚注</span><span class="lang en">Data notes &amp; methodology</span></summary>
+      <div class="body">
+      <p><span class="lang zh"><b>时间字段</b></span>
+         <span class="lang en"><b>Time fields</b></span></p>
+      <p><span class="lang zh">
+         <b>摘要日</b> <code>2026-09-16</code>：按 <b>北京时间日历</b>（Asia/Shanghai，UTC+8）认定的「哪一天的摘要」，不是 as_of 的时刻。
+         <br/><b>生成时间（as_of）</b>：本页 JSON 写出的时刻，即跑 <code>tidewatch daily</code> 的时间；
+         展示为 <b>2026-09-16 10:33:01 北京时间</b>（存储/机读 UTC：<code>2026-09-16 02:33:01Z</code>）。
+         <b>不是</b> K 线收盘时刻，也不是「数据截到北京时间几点的 tick」。
+         <br/><b>收益数据窗口</b>：近况 BTC/ETH 用对比日→摘要日（或有效 K 线日）的 <b>日 K 收盘→收盘</b>，见下。</span>
+         <span class="lang en">
+         <b>Digest day</b> <code>2026-09-16</code>: calendar day in Beijing (Asia/Shanghai).
+         <b>as_of</b>: when this digest was <b>generated</b> (job run time), shown as 2026-09-16 10:33:01 北京时间
+         (UTC <code>2026-09-16 02:33:01Z</code>) — not kline close time.
+         <b>Return window</b>: prior bar close → day bar close, below.</span></p>
+      <p><span class="lang zh"><b>日收益（近况大数）</b></span>
+         <span class="lang en"><b>Day return (headline %)</b></span></p>
+      <p><span class="lang zh">BTC / ETH =（当日 Spot 日 K <b>收盘</b> ÷ 上一有 K 线日收盘 − 1）× 100。
+         源：Datahub Binance Spot <code>daily_kline</code>，经看板缓存 <code>series_cache</code>。
+         摘要日 <code>2026-09-16</code>；对比日 <code>2026-09-14</code>
+         ；有效 K 线日 2026-09-15。
+         页面展示统一 <b>两位小数</b>；与文中 LLM 圆整冲突时以本行程序数为准。</span>
+         <span class="lang en">BTC/ETH = (Spot daily <b>close</b> ÷ prior bar close − 1)×100 from Datahub Binance Spot via dashboard cache.
+         Day <code>2026-09-16</code> vs prior <code>2026-09-14</code>. Display rounded to 2 dp; program numbers win over LLM rounding.</span></p>
+      <p><span class="lang zh"><b>近况人话</b>：LLM 润色，只许引用程序 Card；「小区间 / 平静」为叙述，不是独立指标。
+         <b>标签跳变</b>：以程序 <code>label_jumps</code> 为准（P0 常为空则不作强结论）。
+         <b>外生（D1-E）</b>：仅当摘要日命中本地宏观日历（<b>FOMC</b>）才出现（CPI/非农已硬放弃）。
+         程序组 <b>External card</b>（锚 + 议题模板 + 近况 slim + 可选驱动邻接事实）；
+         LLM 译为四段：①这是什么 ②议题框架 ③影响通道 ④与本页对照（<b>反归因</b>）。
+         会后利率区间来自联储 open-market 表（免 API key）。角标会前/会后。不是新闻 feed；禁止「因 FOMC 所以涨跌」。
+         日历源 <code>config/macro_calendar.yaml</code>；月历导航见「宏观日历」页。
+         <b>认知</b>：潮记待复习钉 / 开放哨计数。</span>
+         <span class="lang en">External = FOMC calendar pin only + External card + four-part LLM (anti-attribution). Rate range from Fed open-market page. Not a news feed.</span></p>
+      <p><span class="lang zh"><b>驱动（异常）口径</b> — 程序门闩，阈值在 <code>daily_digest.rules</code>：</span>
+         <span class="lang en"><b>Driver rules</b> (program; thresholds in config):</span></p>
+      <ul style="margin:6px 0 0;padding-left:18px">
+        <li><code>price_shock_btc/eth</code>：Spot 日 K 收盘→收盘收益 |r|≥price_shock_abs_pct（默认 5%）</li>
+        <li><code>funding_jump</code>：funding 年化% 日变 |Δ|≥funding_jump_pp（默认 8 个百分点）</li>
+        <li><code>oi_jump</code>：OI 总量日变 |oi_chg_pct|≥oi_jump_abs_pct（默认 8%）；近况低波也展示 OI 日变；与 funding/liq 同读；无多空 side、不归因涨跌</li>
+        <li><code>liq_spike</code>：清算 total_qty 今日/昨日 ≥liq_spike_vs_prior（默认 2.5×）；side 多空语义未最终确认</li>
+        <li><code>volume_spike</code>：永续成交额（美金）日变 |chg%|≥volume_spike_abs_pct（默认 80%）；只表示活跃度跳变，不能拆多空</li>
+        <li><code>iv_rv_spread_jump</code>：BTC IV−RV_7 点差的日变 |Δ|≥iv_rv_spread_jump_pp（默认 8 pp）</li>
+        <li><code>vix_shock</code>：VIX 日收益 |r|≥vix_shock_abs_pct（默认 15%）</li>
+        <li><code>etf_flow_spike</code>：BTC 现货 ETF 日净流 |USD|≥spike_abs_usd（默认 5 亿）</li>
+      </ul>
+      <p><span class="lang zh"><b>成交额</b>：近况展示永续/现货 turnover 美金（热闹程度，非多空）。
+         与看板 <code>derivatives.perp_turnover</code> / <code>spot_turnover</code> 同源；旧日期若无此卡，见页底「如何更新」。</span>
+         <span class="lang en"><b>Turnover</b>: activity USD on glance (not long/short). Re-run daily if the card is missing on old dates.</span></p>
+      <p><span class="lang zh">驱动展开为四段：①LLM 结论 ②程序关键数 ③规则「是什么/怎么算/今日观测」④LLM 解读（只基于 Card，失败回模板）。命中驱动时尝试 Lark。
+         页顶高亮词由 LLM 返回 <code>brief_highlights</code>（失败则程序兜底）；否定句不把「跳变」标成告警。</span>
+         <span class="lang en">Driver = four parts; Lark on driver; brief_highlights from LLM with program fallback.</span></p>
+      <p><span class="lang zh">叙事 llm · grok-4.5 · 真源 docs/13 · 非投资建议。</span>
+         <span class="lang en">narrative llm · docs/13 · Not investment advice.</span></p>
+    </div>
+    </details>
+
+    
+    <div class="chart-card" id="coverage-note" style="margin-top:16px">
+      <div class="ch"><h2><span class="lang zh">本页覆盖说明</span><span class="lang en">What this page covers</span></h2></div>
+      <div class="dash-meta" style="line-height:1.7;padding:4px 2px 10px;font-size:13px">
+        
+        <p style="margin:0 0 12px;padding:10px 12px;background:rgba(15,118,110,.06);border-radius:10px;border:1px solid rgba(15,118,110,.12)">
+          <span class="lang zh">
+            <b>读之前先知道：</b>每日摘要是「生成当时」留下的一页。
+            后来加的功能（比如成交额）只会出现在<strong>已经更新过的日期</strong>上；
+            更早的日期保持原样，<strong>不会自动全部重做</strong>。
+          </span>
+          <span class="lang en">
+            <b>Note:</b> each daily page is a snapshot from when it was built.
+            Newer fields only appear on refreshed days; older days stay as historical snapshots.
+          </span>
+        </p>
+        <p style="margin:0 0 10px"><span class="lang zh">你现在看的 <b>2026-09-16</b>：仍是<strong>历史页</strong>，可能没有成交额等新块——不是坏了，是当时生成后<strong>不再自动回改</strong>。</span><span class="lang en">This day <b>2026-09-16</b> is historical and was not backfilled.</span></p>
+        <p style="margin:0 0 8px"><span class="lang zh"><b>目前已更新的日期</b></span><span class="lang en"><b>Refreshed days</b></span></p>
+        <p style="margin:0 0 10px"><span class="lang zh">2026-08-10～2026-08-30（共 21 天），以及最新完整日 2026-09-03。
+          这些天近况里可以看到成交额等新信息。</span>
+          <span class="lang en">2026-08-10 through 2026-08-30 (21 days), plus latest full day 2026-09-03. These include turnover and related blocks.</span></p>
+        <p style="margin:0"><span class="lang zh"><b>其余日期</b>：历史数据，页面结构以生成时为准，缺新块是正常的。
+          若以后需要补某几天，跟助手说要更新日期即可。</span>
+          <span class="lang en"><b>All other days</b> remain historical. Ask if you want specific days refreshed.</span></p>
+        
+      </div>
+    </div>
+    
+
+    
+
+    <p class="public-asof dash-meta" style="margin:18px 0 0;padding:0 4px;font-size:12px;opacity:.85"><span class="lang zh">公开只读站 · 无潮记/问潮观 · 数据截至 <b>2026-09-15</b></span><span class="lang en">Public read-only · no Tide Notes/Q&amp;A · data as-of <b>2026-09-15</b></span></p>
   </main>
 </div>
 <script>

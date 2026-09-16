@@ -1,0 +1,264 @@
+{
+  "event_id": "fomc_2026_09",
+  "event_date": "2026-09-16",
+  "name_zh": "FOMC 利率决议（含经济预测 SEP）",
+  "name_en": "FOMC decision + SEP",
+  "series": "fomc",
+  "template_id": "fomc",
+  "status_zh": "会前",
+  "result_ok": false,
+  "result_block": {
+    "ok": false,
+    "status": "pre_snapshot",
+    "error": "before_release_window",
+    "pending": true,
+    "event_id": "fomc_2026_09",
+    "lines": [],
+    "source_urls": [
+      "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    ],
+    "fetched_at": "2026-09-16T02:32:15Z",
+    "last_attempt_at": "2026-09-16T02:32:15Z",
+    "attempt_n": 2,
+    "adapter": "fed_openmarket_http",
+    "result_plain_zh": null,
+    "fixture": false,
+    "lifecycle_terminal": false,
+    "lifecycle_kind": "pre_snapshot",
+    "pre_snapshot": true
+  },
+  "result_card": {
+    "schema": "tidewatch_result_card_v1",
+    "event_id": "fomc_2026_09",
+    "series": "fomc",
+    "template_id": "fomc",
+    "event_date": "2026-09-16",
+    "ok": true,
+    "status": "pre_snapshot",
+    "adapter": "fed_openmarket_http",
+    "fetched_at": "2026-09-16T02:32:15Z",
+    "source_urls": [
+      "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    ],
+    "values": {
+      "fed_funds_lower": 3.5,
+      "fed_funds_upper": 3.75,
+      "changed": false,
+      "sep_present": true,
+      "effective_date": "2025-12-11",
+      "increase_bp": 0,
+      "decrease_bp": 0,
+      "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "meeting_date": "2026-09-16"
+    },
+    "prior_values": {
+      "fed_funds_lower": 3.75,
+      "fed_funds_upper": 4.0,
+      "effective_date": "2025-10-30"
+    },
+    "revision_note": null,
+    "statement_bullets": null,
+    "last_attempt_at": "2026-09-16T02:32:15Z",
+    "attempt_n": 2,
+    "poll_attempts": 2,
+    "raw_ref": {
+      "effective_date": "2025-12-11",
+      "history_n": 30,
+      "as_of_event": "2026-09-16",
+      "changed": false,
+      "decision_logged_for": "2026-09-16",
+      "decision_row_matched": false,
+      "statement": {
+        "ok": false,
+        "error": "fed_statement_http_404",
+        "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+      }
+    },
+    "fixture": false,
+    "override": null,
+    "error": null,
+    "lifecycle_terminal": false,
+    "lifecycle_kind": "pre_snapshot",
+    "lifecycle_reason": "before_release_window",
+    "release_start_utc": "2026-09-16T18:00:00Z"
+  },
+  "nodes": [
+    {
+      "date": "2026-09-13",
+      "offset": -3,
+      "label_zh": "会前",
+      "phase": "pre",
+      "has_digest": true,
+      "href": "daily_20260913.html",
+      "btc_ret_1d": -0.565,
+      "eth_ret_1d": -1.933,
+      "oi_chg_pct": 1.544,
+      "driver": true,
+      "weather_zh": "近况：BTC -0.56%（小区间） · ETH -1.93% · OI 日变 +1.54% · 永续成交额 52.29 亿美金（日变 +66.2%） · BTC ETF 净流 -13.20 百万美金"
+    },
+    {
+      "date": "2026-09-14",
+      "offset": -2,
+      "label_zh": "会前",
+      "phase": "pre",
+      "has_digest": true,
+      "href": "daily_20260914.html",
+      "btc_ret_1d": 1.753,
+      "eth_ret_1d": 1.56,
+      "oi_chg_pct": -1.317,
+      "driver": true,
+      "weather_zh": "近况：BTC +1.75%（有波动、未过异常默认线） · ETH +1.56% · OI 日变 -1.32% · 永续成交额 129.38 亿美金（日变 +147.4%） · BTC ETF 净流 +9.70 百万美金"
+    },
+    {
+      "date": "2026-09-15",
+      "offset": -1,
+      "label_zh": "会前",
+      "phase": "pre",
+      "has_digest": true,
+      "href": "daily_20260915.html",
+      "btc_ret_1d": -3.255,
+      "eth_ret_1d": -4.67,
+      "oi_chg_pct": 3.792,
+      "driver": true,
+      "weather_zh": "近况：BTC -3.25%（有波动、未过异常默认线） · ETH -4.67% · OI 日变 +3.79% · 永续成交额 182.25 亿美金（日变 +40.9%） · BTC ETF 净流 -2.89 亿美金"
+    },
+    {
+      "date": "2026-09-16",
+      "offset": 0,
+      "label_zh": "会前·非结果",
+      "phase": "day_of",
+      "has_digest": true,
+      "href": "daily.html",
+      "btc_ret_1d": -3.255,
+      "eth_ret_1d": -4.67,
+      "oi_chg_pct": 3.792,
+      "driver": true,
+      "weather_zh": "近况：BTC -3.25%（有波动、未过异常默认线） · ETH -4.67% · OI 日变 +3.79% · 永续成交额 182.25 亿美金（日变 +40.9%） · BTC ETF 净流 -2.89 亿美金"
+    }
+  ],
+  "reaction": {
+    "schema": "tidewatch_reaction_v1",
+    "kind": "post",
+    "event_id": "fomc_2026_09",
+    "event_date": "2026-09-16",
+    "digest_day": "2026-09-16",
+    "offset": 0,
+    "window_days": 3,
+    "as_of_today": true,
+    "name_zh": "FOMC 利率决议（含经济预测 SEP）",
+    "name_en": "FOMC decision + SEP",
+    "series": "fomc",
+    "template_id": "fomc",
+    "story": {
+      "title_zh": "FOMC 决议",
+      "one_liner_zh": "美联储议息：目标利率与政策声明。",
+      "rope_zh": "政策利率",
+      "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+      "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
+    },
+    "result_ok": true,
+    "result_mini_zh": null,
+    "result_block": {
+      "ok": false,
+      "status": "pre_snapshot",
+      "error": "before_release_window",
+      "pending": true,
+      "event_id": "fomc_2026_09",
+      "lines": [],
+      "source_urls": [
+        "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+      ],
+      "fetched_at": "2026-09-16T02:32:15Z",
+      "last_attempt_at": "2026-09-16T02:32:15Z",
+      "attempt_n": 2,
+      "adapter": "fed_openmarket_http",
+      "result_plain_zh": null,
+      "fixture": false,
+      "lifecycle_terminal": false,
+      "lifecycle_kind": "pre_snapshot",
+      "pre_snapshot": true
+    },
+    "pin_href": "daily_20260916.html",
+    "rows": [
+      {
+        "date": "2026-09-15",
+        "offset": -1,
+        "label": "T-1",
+        "btc_ret_1d": -3.255,
+        "eth_ret_1d": -4.67,
+        "oi_chg_pct": 3.792,
+        "funding_ann_pct": 4.38,
+        "funding_ann_chg_pp": 0.478,
+        "es_ret_1d": 0.479,
+        "nq_ret_1d": 0.315,
+        "vix_ret_1d": 0.585,
+        "dxy_ret_1d": 0.228,
+        "fired_ids": [
+          "iv_rv_spread_jump"
+        ],
+        "has_driver": true,
+        "weather_zh": "近况：BTC -3.25%（有波动、未过异常默认线） · ETH -4.67% · OI 日变 +3.79% · 永续成交额 182.25 亿美金（日变 +40.9%） · BTC ETF 净流 -2.89 亿美金",
+        "errors": [
+          "no_bar_on_2026-09-16_using_2026-09-15"
+        ]
+      }
+    ],
+    "headers_plain": [
+      {
+        "key": "btc_ret_1d",
+        "name_zh": "BTC",
+        "what_zh": "比特币日涨跌幅。"
+      },
+      {
+        "key": "eth_ret_1d",
+        "name_zh": "ETH",
+        "what_zh": "以太坊日涨跌幅。"
+      },
+      {
+        "key": "oi_chg_pct",
+        "name_zh": "OI",
+        "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+      },
+      {
+        "key": "es_ret_1d",
+        "name_zh": "ES",
+        "what_zh": "标普期货日变，传统风险偏好参考。"
+      },
+      {
+        "key": "nq_ret_1d",
+        "name_zh": "NQ",
+        "what_zh": "纳指期货日变。"
+      },
+      {
+        "key": "vix_ret_1d",
+        "name_zh": "VIX",
+        "what_zh": "美股隐含波动；偏高常对应避险升温。"
+      },
+      {
+        "key": "dxy_ret_1d",
+        "name_zh": "DXY",
+        "what_zh": "美元指数日变。"
+      },
+      {
+        "key": "fired",
+        "name_zh": "驱动",
+        "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+      }
+    ],
+    "plain_zh": "「FOMC 决议」公布后窗口。近一日 BTC 波动偏大；窗口内有日触发驱动（见表「驱动」列）；公布日；后续交易日尚未计入。仅含已实现日；与加密为间接并置，不作单次数据归因。",
+    "finger_zh": "近一日 BTC 波动偏大；窗口内有日触发驱动（见表「驱动」列）；公布日；后续交易日尚未计入",
+    "badge_zh": "会后·公布日",
+    "badge_en": "Post · release day",
+    "headline_zh": "FOMC 决议 · 公布日",
+    "rules": {
+      "no_attribution": true,
+      "no_future_rows": true
+    }
+  },
+  "href": "event_fomc_2026_09.html",
+  "generated_at": "2026-09-16T02:33:01Z",
+  "as_of": "2026-09-16"
+}

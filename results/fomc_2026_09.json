@@ -5,9 +5,9 @@
   "template_id": "fomc",
   "event_date": "2026-09-16",
   "ok": true,
-  "status": "fetched",
+  "status": "pre_snapshot",
   "adapter": "fed_openmarket_http",
-  "fetched_at": "2026-09-04T08:31:18Z",
+  "fetched_at": "2026-09-16T02:32:15Z",
   "source_urls": [
     "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
     "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
@@ -30,14 +30,16 @@
   },
   "revision_note": null,
   "statement_bullets": null,
-  "last_attempt_at": "2026-09-04T08:31:18Z",
-  "attempt_n": 1,
-  "poll_attempts": null,
+  "last_attempt_at": "2026-09-16T02:32:15Z",
+  "attempt_n": 2,
+  "poll_attempts": 2,
   "raw_ref": {
     "effective_date": "2025-12-11",
     "history_n": 30,
     "as_of_event": "2026-09-16",
     "changed": false,
+    "decision_logged_for": "2026-09-16",
+    "decision_row_matched": false,
     "statement": {
       "ok": false,
       "error": "fed_statement_http_404",
@@ -46,5 +48,9 @@
   },
   "fixture": false,
   "override": null,
-  "error": null
+  "error": null,
+  "lifecycle_terminal": false,
+  "lifecycle_kind": "pre_snapshot",
+  "lifecycle_reason": "before_release_window",
+  "release_start_utc": "2026-09-16T18:00:00Z"
 }
