@@ -290,7 +290,9 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Neel Kashkari; Adriana D. Kugler; Alberto G. Musalem; and Christopher J. Waller. Neel Kashkari voted as an alternate member at this meeting."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:32:34Z"
+    "generated_at": "2026-09-17T04:55:33Z",
+    "narrative_source": "program",
+    "llm_error": "timed out"
   },
   "nodes": [
     {
@@ -325,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_05.html",
-  "generated_at": "2026-09-17T04:32:34Z",
+  "generated_at": "2026-09-17T04:57:19Z",
   "as_of": "2026-09-17",
   "data_as_of": "2026-09-16"
 }

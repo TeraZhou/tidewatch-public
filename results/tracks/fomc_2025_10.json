@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.75–4%",
-    "lead_zh": "走廊下移约 25bp → 3.75–4% · 数据截至 **2026-09-16**（T−1 完整日）",
-    "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：常规决议场**（日历未标 SEP）；主信息看走廊与声明，不假装有点阵表。\n下一钉：**2025-12-10**（FOMC 利率决议（含经济预测 SEP））。",
-    "attitude_zh": "**态度：偏松一档。** 走廊下移约 25bp → 3.75–4% 声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）。",
+    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约 25bp，至 3.75–4%。",
+    "primer_zh": "FOMC 全年大约开 8 次会，决定联邦基金利率目标走廊并发布声明。SEP 是点阵与经济预测摘要，委员对利率路径、增长、通胀、失业率的看法汇总，本场未标 SEP、无点阵细数可解析。下次钉在 2025-12-10 的 FOMC（含经济预测 SEP）。本次动作已落地：由上次 4–4.25% 降至 3.75–4%，降息约 25bp，生效日 2025-10-30。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp 至 3.75–4%，声明仍点出通胀偏高并指向更快回到 2% 目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -136,8 +136,8 @@
         "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "**决议日 2025-10-29**：无币圈异常驱动槽。\n**读法：** 官方态度 **偏松一档**（走廊下移约 25bp → 3.75–4%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
-    "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2025-12-10**",
+    "narrative_zh": "会前走廊停在 4–4.25%。\n会后结果短表对齐：本次走廊 3.75–4%，动作降息约 25bp，生效 2025-10-30；本场未标 SEP。\n态度与 stance 一致为偏松一档，走廊下移约 25bp。决议日 T 宽表量价字段均为空，无可用点位、涨跌幅、成交或持仓变动可读，故本场叙事只落在利率走廊与声明钩子，不外推资产路径。",
+    "watch_zh": "盯 2025-12-10 下场 FOMC（含 SEP）点阵与预测更新 · 声明后续对通胀回 2% 的措辞是否加码 · 生效后资金面与波动是否延续反应窗",
     "status_zh": "反应中（数据至 T+322/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -290,7 +290,9 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target r…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:32:34Z"
+    "generated_at": "2026-09-17T04:58:27Z",
+    "narrative_source": "llm",
+    "llm_error": null
   },
   "nodes": [
     {
@@ -325,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_10.html",
-  "generated_at": "2026-09-17T04:32:34Z",
+  "generated_at": "2026-09-17T04:58:43Z",
   "as_of": "2026-09-17",
   "data_as_of": "2026-09-16"
 }

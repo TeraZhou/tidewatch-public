@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "走廊下移约 25bp → 4.25–4.5% · 数据截至 **2026-09-16**（T−1 完整日）",
-    "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：常规决议场**（日历未标 SEP）；主信息看走廊与声明，不假装有点阵表。\n下一钉：**2025-03-19**（FOMC 利率决议（含经济预测 SEP））。",
-    "attitude_zh": "**态度：偏松一档。** 走廊下移约 25bp → 4.25–4.5% 指向更快回到 2% 物价目标；仍框在双使命内（摘意，非全文）。",
+    "lead_zh": "会后定调偏松一档：走廊下移约25bp至4.25–4.5%。",
+    "primer_zh": "FOMC一年大约开八次会，决定联邦基金利率走廊并发布声明。SEP是经济预测摘要，委员对增长、失业、通胀和利率路径的点阵展望，本场未标SEP、点阵细数未解析。本次动作为降息约25bp，上次走廊4.5–4.75%，本次4.25–4.5%，生效标注2024-12-19。下一钉是2025-03-19的FOMC利率决议（含经济预测SEP）。",
+    "attitude_zh": "偏松一档，走廊下移约25bp至4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -136,8 +136,8 @@
         "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "**决议日 2025-01-29**：无币圈异常驱动槽。\n**读法：** 官方态度 **偏松一档**（走廊下移约 25bp → 4.25–4.5%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
-    "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2025-03-19**",
+    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次下移至4.25–4.5%，动作降息约25bp，态度偏松一档。\n声明钩子指向更快回到2%物价目标，仍框在双使命内。本场无SEP可对读。\n反应窗数据行（决议日T）量价与资金字段均为空，无表内具体涨跌幅或亿元级流动可并置；只呈现走廊与动作本身。",
+    "watch_zh": "下一场2025-03-19含SEP·盯新点阵与声明措辞是否延续偏松·走廊与双使命表述变化",
     "status_zh": "反应中（数据至 T+595/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -290,7 +290,9 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:32:34Z"
+    "generated_at": "2026-09-17T04:54:54Z",
+    "narrative_source": "llm",
+    "llm_error": null
   },
   "nodes": [
     {
@@ -325,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_01.html",
-  "generated_at": "2026-09-17T04:32:34Z",
+  "generated_at": "2026-09-17T04:55:13Z",
   "as_of": "2026-09-17",
   "data_as_of": "2026-09-16"
 }

@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "走廊下移约 25bp → 3.5–3.75% · 数据截至 **2026-09-16**（T−1 完整日）",
-    "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：常规决议场**（日历未标 SEP）；主信息看走廊与声明，不假装有点阵表。\n下一钉：**2026-03-18**（FOMC 利率决议（含经济预测 SEP））。",
-    "attitude_zh": "**态度：偏松一档。** 走廊下移约 25bp → 3.5–3.75% 声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）。",
+    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约 25bp 至 3.5–3.75%。",
+    "primer_zh": "FOMC 一年大约开八次会，决定联邦基金利率目标走廊，并视场次发布经济预测摘要 SEP。SEP 是委员对增长、失业、通胀和未来利率路径的集中看法，点阵图把每人预期利率点在一张图上，方便对照中枢与分歧。本场未标 SEP，点阵细数未解析，故不描述具体路径点。下一钉是 2026-03-18 的 FOMC 利率决议（含经济预测 SEP）。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。",
+    "attitude_zh": "态度偏松一档，走廊下移约 25bp 至 3.5–3.75%，与结果短表一致。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -136,8 +136,8 @@
         "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "**决议日 2026-01-28**：BTC +0.06%、ETH -0.53%、永续约 110.9 亿（+6.5%）、OI -0.36%、BTC ETF 约 -0.20 亿、无币圈异常驱动槽。\n**读法：** 官方态度 **偏松一档**（走廊下移约 25bp → 3.5–3.75%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
-    "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2026-03-18**",
+    "narrative_zh": "决议落地：上次走廊 3.75–4%，本次 3.5–3.75%，动作降息约 25bp，生效标注 2025-12-11。\n决议日 T（2026-01-28）量价：BTC +0.06%、ETH -0.53%；永续成交 110.9 亿、较对比 +6.5%；持仓 OI -0.36%；BTC ETF 资金流 -0.20 亿。反应窗内价格近乎走平、成交放大、持仓与 ETF 小幅收缩，未见单边失控波动。",
+    "watch_zh": "盯 2026-03-18 下一场 FOMC（含 SEP）的走廊与点阵中枢 · 声明后续对通胀回 2% 的措辞是否加码 · 反应窗外量价能否延续 T 日成交放大、价格窄幅特征",
     "status_zh": "反应中（数据至 T+231/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -290,7 +290,9 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Beth M. Hammack; Philip N. Jefferson; Neel Kashkari; Lorie K. Logan; and Anna Paulson. Voting against this action were Stephen I. Miran and Christopher J. Waller, who preferred to lower the t…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:32:34Z"
+    "generated_at": "2026-09-17T04:59:06Z",
+    "narrative_source": "llm",
+    "llm_error": null
   },
   "nodes": [
     {
@@ -325,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2026_01.html",
-  "generated_at": "2026-09-17T04:32:34Z",
+  "generated_at": "2026-09-17T04:59:25Z",
   "as_of": "2026-09-17",
   "data_as_of": "2026-09-16"
 }

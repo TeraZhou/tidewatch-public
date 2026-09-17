@@ -123,9 +123,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "走廊下移约 25bp → 3.5–3.75% · 数据截至 **2026-09-16**（T−1 完整日）",
-    "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：日历标注含 SEP/点阵类材料。** 潮观目前只确认「有这份材料」，**尚未解析点阵细数**，因此不编「点阵中位数/明年降几码」——主信息仍看利率走廊动作。\n下一钉：**2026-07-29**（FOMC 利率决议）。",
-    "attitude_zh": "**态度：偏松一档。** 走廊下移约 25bp → 3.5–3.75% 声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）。",
+    "lead_zh": "本场偏松一档，走廊下移约25bp至3.5–3.75%。",
+    "primer_zh": "FOMC一年大约开8次会，决定联邦基金利率走廊并发布声明。SEP是经济预测摘要，点阵图汇总委员对未来利率路径的看法。本场有SEP材料，但点阵细数未解析，不展开路径点。下一钉是2026-07-29的FOMC利率决议。",
+    "attitude_zh": "态度偏松一档；声明强调通胀仍偏高，指向更快回到2%物价目标（摘意）。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -148,8 +148,8 @@
         "text": "有材料 · 点阵细数未解析"
       }
     ],
-    "narrative_zh": "**决议日 2026-06-17**：BTC -1.77%、ETH -2.36%、OI -3.02%、BTC ETF 约 -0.82 亿、无币圈异常驱动槽。\n**读法：** 官方态度 **偏松一档**（走廊下移约 25bp → 3.5–3.75%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
-    "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2026-07-29**",
+    "narrative_zh": "会后对照：上次走廊3.75–4%，本次3.5–3.75%，动作降息约25bp（生效按表记2025-12-11）。\n决议日T量价：BTC -1.77%，ETH -2.36%，OI -3.02%，BTC ETF -0.82亿。反应窗数据仍在更新中。",
+    "watch_zh": "盯2026-07-29下一场FOMC · 后续声明与量价是否延续决议日幅度",
     "status_zh": "反应中（数据至 T+91/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -312,7 +312,9 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:32:34Z"
+    "generated_at": "2026-09-17T05:00:03Z",
+    "narrative_source": "llm",
+    "llm_error": null
   },
   "nodes": [
     {
@@ -347,7 +349,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-09-17T04:32:34Z",
+  "generated_at": "2026-09-17T05:00:21Z",
   "as_of": "2026-09-17",
   "data_as_of": "2026-09-16"
 }
