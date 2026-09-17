@@ -1,0 +1,331 @@
+{
+  "event_id": "fomc_2025_05",
+  "event_date": "2025-05-07",
+  "name_zh": "FOMC 利率决议",
+  "name_en": "FOMC policy decision",
+  "series": "fomc",
+  "template_id": "fomc",
+  "status_zh": "反应中（数据至 T+497/3）",
+  "result_ok": true,
+  "result_block": {
+    "ok": true,
+    "status": "fetched",
+    "lifecycle_terminal": true,
+    "lifecycle_kind": "decision",
+    "event_id": "fomc_2025_05",
+    "series": "fomc",
+    "lines": [
+      {
+        "label_zh": "联邦基金目标区间",
+        "key": "fed_funds_range",
+        "text": "4.25–4.5%"
+      },
+      {
+        "label_zh": "相对前次",
+        "key": "changed",
+        "text": "按兵不动（维持区间）"
+      },
+      {
+        "label_zh": "利率生效日",
+        "key": "effective_date",
+        "text": "2024-12-19"
+      }
+    ],
+    "lines_plain": [
+      {
+        "label_zh": "联邦基金目标区间",
+        "key": "fed_funds_range",
+        "text": "4.25–4.5%",
+        "name_zh": "联邦基金目标区间",
+        "jargon": "Fed funds target",
+        "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+        "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+      },
+      {
+        "label_zh": "相对前次决议",
+        "key": "changed",
+        "text": "按兵不动（维持区间）",
+        "name_zh": "相对前次决议",
+        "jargon": "changed",
+        "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+        "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+      },
+      {
+        "label_zh": "利率生效日",
+        "key": "effective_date",
+        "text": "2024-12-19",
+        "name_zh": "利率生效日",
+        "jargon": "effective date",
+        "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+        "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+      }
+    ],
+    "source_urls": [
+      "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm"
+    ],
+    "fetched_at": "2026-09-04T08:31:10Z",
+    "last_attempt_at": "2026-09-04T08:31:10Z",
+    "attempt_n": 1,
+    "adapter": "fed_openmarket_http",
+    "result_plain_zh": null,
+    "result_teach_zh": null,
+    "fixture": false,
+    "revision_note": null,
+    "prior_values": {
+      "fed_funds_lower": 4.5,
+      "fed_funds_upper": 4.75,
+      "effective_date": "2024-11-08"
+    },
+    "values": {
+      "fed_funds_lower": 4.25,
+      "fed_funds_upper": 4.5,
+      "changed": false,
+      "sep_present": false,
+      "effective_date": "2024-12-19",
+      "increase_bp": 0,
+      "decrease_bp": 0,
+      "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "meeting_date": "2025-05-07"
+    },
+    "statement_bullets": [
+      "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. Uncertainty about the economic outlook has increased further. The Committee is attentive to the risks to both sides of its dual mandate and judges that the risks of higher unemployment and higher inflation have risen.",
+      "In support of its goals, the Committee decided to maintain the target range for the federal funds rate at 4-1/4 to 4-1/2 percent. In considering the extent and timing of additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks.…",
+      "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's…",
+      "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Neel Kashkari; Adriana D. Kugler; Alberto G. Musalem; and Christopher J. Waller. Neel Kashkari voted as an alternate member at this meeting."
+    ],
+    "a1_hide_glossary": true
+  },
+  "a1": {
+    "schema": "a1_macro_copy_v1",
+    "a1_version": "a1_macro_copy_v1",
+    "event_id": "fomc_2025_05",
+    "event_date": "2025-05-07",
+    "name_zh": "FOMC 利率决议",
+    "data_as_of": "2026-09-16",
+    "calendar_today": "2026-09-17",
+    "terminal": true,
+    "has_sep": false,
+    "phase": "post_window",
+    "badge_zh": "会后·反应窗",
+    "badge_en": "Post · reaction",
+    "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
+    "lead_zh": "走廊下移约 25bp → 4.25–4.5% · 数据截至 **2026-09-16**（T−1 完整日）",
+    "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：常规决议场**（日历未标 SEP）；主信息看走廊与声明，不假装有点阵表。\n下一钉：**2025-06-18**（FOMC 利率决议（含经济预测 SEP））。",
+    "attitude_zh": "**态度：偏松一档。** 走廊下移约 25bp → 4.25–4.5% 声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）。",
+    "result_lines": [
+      {
+        "label_zh": "上次走廊",
+        "text": "4.5–4.75%"
+      },
+      {
+        "label_zh": "本次走廊",
+        "text": "4.25–4.5%"
+      },
+      {
+        "label_zh": "动作",
+        "text": "降息约 25bp"
+      },
+      {
+        "label_zh": "生效",
+        "text": "2024-12-19"
+      },
+      {
+        "label_zh": "SEP",
+        "text": "本场未标 SEP"
+      }
+    ],
+    "narrative_zh": "**决议日 2025-05-07**：无币圈异常驱动槽。\n**读法：** 官方态度 **偏松一档**（走廊下移约 25bp → 4.25–4.5%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
+    "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2025-06-18**",
+    "status_zh": "反应中（数据至 T+497/3）",
+    "stance": {
+      "label_zh": "偏松一档",
+      "detail_zh": "走廊下移约 25bp → 4.25–4.5%",
+      "direction": "cut",
+      "bp": "25",
+      "range_zh": "4.25–4.5%",
+      "prior_range_zh": "4.5–4.75%",
+      "statement_hook_zh": "声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）",
+      "effective_date": "2024-12-19"
+    },
+    "next_fomc": {
+      "date": "2025-06-18",
+      "id": "fomc_2025_06",
+      "name_zh": "FOMC 利率决议（含经济预测 SEP）"
+    },
+    "wide_table": {
+      "data_as_of": "2026-09-16",
+      "calendar_today": "2026-09-17",
+      "event_date": "2025-05-07",
+      "pre_n": 3,
+      "post_n": 3,
+      "rows": [
+        {
+          "date": "2025-05-07",
+          "offset": 0,
+          "label_zh": "决议日 T",
+          "phase": "pin",
+          "has_digest": true,
+          "btc_ret_1d": null,
+          "eth_ret_1d": null,
+          "oi_chg_pct": null,
+          "perp_turnover_usd": null,
+          "perp_turnover_chg_pct": null,
+          "funding_ann_pct": null,
+          "eth_funding_ann_pct": null,
+          "es_ret_1d": null,
+          "vix_ret_1d": null,
+          "dxy_ret_1d": null,
+          "btc_etf_net_usd": null,
+          "driver": false,
+          "btc_s": null,
+          "eth_s": null,
+          "oi_s": null,
+          "perp_s": null,
+          "perp_chg_s": null,
+          "fund_s": null,
+          "es_s": null,
+          "vix_s": null,
+          "dxy_s": null,
+          "etf_s": null,
+          "href": "daily_20250507.html"
+        }
+      ]
+    },
+    "result_block": {
+      "ok": true,
+      "status": "fetched",
+      "lifecycle_terminal": true,
+      "lifecycle_kind": "decision",
+      "event_id": "fomc_2025_05",
+      "series": "fomc",
+      "lines": [
+        {
+          "label_zh": "联邦基金目标区间",
+          "key": "fed_funds_range",
+          "text": "4.25–4.5%"
+        },
+        {
+          "label_zh": "相对前次",
+          "key": "changed",
+          "text": "按兵不动（维持区间）"
+        },
+        {
+          "label_zh": "利率生效日",
+          "key": "effective_date",
+          "text": "2024-12-19"
+        }
+      ],
+      "lines_plain": [
+        {
+          "label_zh": "联邦基金目标区间",
+          "key": "fed_funds_range",
+          "text": "4.25–4.5%",
+          "name_zh": "联邦基金目标区间",
+          "jargon": "Fed funds target",
+          "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+          "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+        },
+        {
+          "label_zh": "相对前次决议",
+          "key": "changed",
+          "text": "按兵不动（维持区间）",
+          "name_zh": "相对前次决议",
+          "jargon": "changed",
+          "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+          "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+        },
+        {
+          "label_zh": "利率生效日",
+          "key": "effective_date",
+          "text": "2024-12-19",
+          "name_zh": "利率生效日",
+          "jargon": "effective date",
+          "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+          "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+        }
+      ],
+      "source_urls": [
+        "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+        "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250507a.htm"
+      ],
+      "fetched_at": "2026-09-04T08:31:10Z",
+      "last_attempt_at": "2026-09-04T08:31:10Z",
+      "attempt_n": 1,
+      "adapter": "fed_openmarket_http",
+      "result_plain_zh": null,
+      "result_teach_zh": null,
+      "fixture": false,
+      "revision_note": null,
+      "prior_values": {
+        "fed_funds_lower": 4.5,
+        "fed_funds_upper": 4.75,
+        "effective_date": "2024-11-08"
+      },
+      "values": {
+        "fed_funds_lower": 4.25,
+        "fed_funds_upper": 4.5,
+        "changed": false,
+        "sep_present": false,
+        "effective_date": "2024-12-19",
+        "increase_bp": 0,
+        "decrease_bp": 0,
+        "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+        "meeting_date": "2025-05-07"
+      },
+      "statement_bullets": [
+        "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. Uncertainty about the economic outlook has increased further. The Committee is attentive to the risks to both sides of its dual mandate and judges that the risks of higher unemployment and higher inflation have risen.",
+        "In support of its goals, the Committee decided to maintain the target range for the federal funds rate at 4-1/4 to 4-1/2 percent. In considering the extent and timing of additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks.…",
+        "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's…",
+        "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Neel Kashkari; Adriana D. Kugler; Alberto G. Musalem; and Christopher J. Waller. Neel Kashkari voted as an alternate member at this meeting."
+      ],
+      "a1_hide_glossary": true
+    },
+    "statement_bullets": [
+      "The Committee seeks to achieve maximum employment and inflation at the rate of 2 percent over the longer run. Uncertainty about the economic outlook has increased further. The Committee is attentive to the risks to both sides of its dual mandate and judges that the risks of higher unemployment and higher inflation have risen.",
+      "In support of its goals, the Committee decided to maintain the target range for the federal funds rate at 4-1/4 to 4-1/2 percent. In considering the extent and timing of additional adjustments to the target range for the federal funds rate, the Committee will carefully assess incoming data, the evolving outlook, and the balance of risks.…",
+      "In assessing the appropriate stance of monetary policy, the Committee will continue to monitor the implications of incoming information for the economic outlook. The Committee would be prepared to adjust the stance of monetary policy as appropriate if risks emerge that could impede the attainment of the Committee's goals. The Committee's…",
+      "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Neel Kashkari; Adriana D. Kugler; Alberto G. Musalem; and Christopher J. Waller. Neel Kashkari voted as an alternate member at this meeting."
+    ],
+    "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
+    "generated_at": "2026-09-17T04:32:34Z"
+  },
+  "nodes": [
+    {
+      "date": "2025-05-07",
+      "offset": 0,
+      "label_zh": "决议日 T",
+      "phase": "pin",
+      "has_digest": true,
+      "btc_ret_1d": null,
+      "eth_ret_1d": null,
+      "oi_chg_pct": null,
+      "perp_turnover_usd": null,
+      "perp_turnover_chg_pct": null,
+      "funding_ann_pct": null,
+      "eth_funding_ann_pct": null,
+      "es_ret_1d": null,
+      "vix_ret_1d": null,
+      "dxy_ret_1d": null,
+      "btc_etf_net_usd": null,
+      "driver": false,
+      "btc_s": null,
+      "eth_s": null,
+      "oi_s": null,
+      "perp_s": null,
+      "perp_chg_s": null,
+      "fund_s": null,
+      "es_s": null,
+      "vix_s": null,
+      "dxy_s": null,
+      "etf_s": null,
+      "href": "daily_20250507.html"
+    }
+  ],
+  "href": "event_fomc_2025_05.html",
+  "generated_at": "2026-09-17T04:32:34Z",
+  "as_of": "2026-09-17",
+  "data_as_of": "2026-09-16"
+}

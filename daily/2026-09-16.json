@@ -2,7 +2,7 @@
   "schema": "daily_digest_v0",
   "date": "2026-09-16",
   "date_effective": "2026-09-16",
-  "as_of": "2026-09-17T02:32:41Z",
+  "as_of": "2026-09-17T04:32:19Z",
   "timezone_display": "Asia/Shanghai",
   "state_glance": {
     "date": "2026-09-16",
@@ -26,8 +26,8 @@
     "label_jumps": [],
     "weather_zh": "近况：BTC +0.74%（小区间） · ETH +0.83% · OI 日变 +0.44% · 永续成交额 118.48 亿美金（日变 -35.0%） · BTC ETF 净流 -1.52 亿美金",
     "weather_en": "Weather: BTC +0.74% · ETH +0.83% · OI +0.44% d/d · perp turnover 11.85B (-35.0% d/d) · BTC ETF net -151.80M",
-    "text_zh": "近况偏平静：BTC +0.74%、ETH +0.83%，都在小区间；永续成交额缩到 118.48 亿美金（日变约 -35%），现货也明显降温，OI 仅微增 +0.44%。BTC 现货 ETF 净流 -1.52 亿美金。和 ES 同向小涨。",
-    "text_en": "Quiet tape: BTC +0.74%, ETH +0.83%; perp turnover 11.85B (-35% d/d), OI +0.44%; BTC ETF net -152M. Same direction as ES."
+    "text_zh": "近况偏平静：BTC、ETH 小区间收涨，永续与现货成交额都明显缩量，OI 微增。funding 年化抬升，BTC 与 ES 同向。",
+    "text_en": "Quiet tape: BTC/ETH small green, perp and spot turnover down hard, OI slightly up. Funding higher; BTC same direction as ES."
   },
   "slots": {
     "external": {
@@ -42,25 +42,25 @@
         "level": "high"
       },
       "badge_zh": "会后·有结果",
-      "badge_en": "Post · official result in card",
+      "badge_en": "Post · result",
       "phase": "day_of_post",
-      "headline_zh": "FOMC · 已对答案",
+      "headline_zh": "FOMC · 加息 25bp → 3.75–4%",
       "headline_en": "FOMC decision + SEP",
-      "lead_zh": "利率走廊已落地并带 SEP；并排看本页缩量小涨与股指同向，只对答案、不写因果。",
+      "lead_zh": "上次 3.5–3.75%，走廊上移约 25bp → 3.75–4% · 数据截至 **2026-09-16**（T−1 完整日）",
       "station_zh": "故事可能已演了一截（事件前市场轴有过驱动）",
-      "part1_zh": "含 SEP/点阵的 FOMC：除了利率决议与声明，还展示委员对以后经济与利率路径的集体预测。",
+      "part1_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：日历标注含 SEP/点阵类材料。** 潮观目前只确认「有这份材料」，**尚未解析点阵细数**，因此不编「点阵中位数/明年降几码」——主信息仍看利率走廊动作。\n下一钉：**2026-10-28**（FOMC 利率决议）。",
       "part1_en": null,
-      "part2_zh": "当时议程：利率与声明 → SEP 增长/失业/通胀区间 → 点阵路径分布 → 相对上次 SEP 的位移。",
+      "part2_zh": null,
       "part2_en": null,
-      "part3_zh": "绳：同一根利率绳，外加「未来几季被画成什么样」的大纲。猜：资金会改猜中期路径，点阵偏鹰或偏鸽会不会改写「更高更久」权重。资产：美元与久期敏感资产常更敏，风险偏好与波动可能跟着路径叙事摆。加密：多在风险偏好与美元流动性的间接层，点阵不点名比特币。时间：当日～次日对答案，路径叙事可影响数周。不确定：点阵是否共识、会否被过度外推。",
+      "part3_zh": null,
       "part3_en": null,
-      "part4_zh": "站位：会后·有结果（公布日）。故事可能已演了一截——会前近日出现过 iv_rv 点差跳变、成交与清算相关门闩，只作时间邻接，不等于定价完毕，也不等于由该事件导致。官方轴与市场轴并排看即可。",
+      "part4_zh": null,
       "part4_en": null,
-      "post_brief_zh": "读数：联邦基金目标区间 3.75–4.0%；相对前次决议 加息约 25 bp；利率生效日 2026-09-17；经济预测材料 本场含 SEP/点阵。 一句话姿态：加息/转紧。联邦基金目标区间 3.75%–4.00%。 今天盘面（和机制分开看）：BTC +0.74% · ETH +0.83% · VIX +2.96% · ES +0.97% · OI +0.44% · DXY +0.67%。近几日窗口：窗口内未触发日频驱动规则；公布日；后续交易日尚未计入。",
-      "post_deep_zh": "【先说结论】加息/转紧 · 目标区间 3.75%–4.00%。\n联邦基金目标区间 3.75%–4.00%。 表上对应生效日 2026-09-17（联储 open-market 表，常为会后 +1 日）。 相对前次上调约 25 bp（表内 Increase）；常见「偏紧」叙事。\n\n【怎么读这张卡】数字来自联储 open-market「目标区间」表（免 API key），不是声明全文。生效日可能是会后 +1。与 BTC/美股并置看，勿写「因 FOMC 所以涨跌」。\n\n【和加息/转紧】区间上移或「更高更久」时，钱更贵的叙事抬头；美元与美债利率有时更硬，股/信用/加密等风险资产常走偏利空剧本（加密是二传手）。\n\n【声明里在说什么（摘录，不是全文）】\n· The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.\n· Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability.\n声明措辞有时比利率数字更能左右「更高更久 / 开始转松」的预期；这里只摘要点，完整以联储原文为准。\n\n【钱会往哪想】政策利息像全球「借钱贵不贵」的总闸之一。\n· 加息或「更高更久」：美元易强、美债利率易上，股/信用/加密等风险资产常走偏利空剧本\n· 降息或明确转松：大致反过来，偏利多剧本\n声明怎么写，有时比区间本身还能加戏或降温。\n\n【股票、加密这些「风险资产」】\n在「更紧/更久」的剧本里，通常不太舒服：钱贵了，估值和胆量都容易缩（偏利空情景）。\n加密多半跟风险情绪走，是二传手——常一起抖，也可以和股市脱钩。\n记住：这是课堂上的「通常会怎样」，不是叫你今天一定要卖，也不是说「因为这份 CPI，所以 K 线这样走」。\n\n【会吵多久】前后 1～2 个交易日往往最热闹；大故事（降息路径等）可能要拖数周，直到下一份数据或下次开会。\n\n【怎么和本页盘面一起看】上面是「若读数偏热/偏凉，钱通常怎么想」；本页 BTC、美股、VIX 等是另一路事实，请并排看，别写成「因本次数据所以涨跌」。非投资建议。",
+      "post_brief_zh": "会前 **2026-09-15（会前 T-1）**：BTC -3.25%、ETH -4.67%、永续约 182.3 亿（+40.9%）、OI +3.79%、BTC ETF 净流约 -2.89 亿、当日有异常驱动槽。\n另 **2026-09-14** BTC +1.75%、永续 129.4 亿（+147.4%）。\n**决议日 2026-09-16**：BTC +0.74%、ETH +0.83%、永续约 118.5 亿（-35.0%）、OI +0.44%、BTC 资费年化约 10.3%、BTC ETF 约 -1.52 亿、无币圈异常驱动槽。\n**读法：** 官方态度 **偏紧一档**（上次 3.5–3.75%，走廊上移约 25bp → 3.75–4%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
+      "post_deep_zh": null,
       "post_reaction_zh": "窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
-      "result_caption_zh": "字段释义见读数下方。机制为条件情景，非下单指令。",
-      "text_zh": "读数：联邦基金目标区间 3.75–4.0%；相对前次决议 加息约 25 bp；利率生效日 2026-09-17；经济预测材料 本场含 SEP/点阵。 一句话姿态：加息/转紧。联邦基金目标区间 3.75%–4.00%。 今天盘面（和机制分开看）：BTC +0.74% · ETH +0.83% · VIX +2.96% · ES +0.97% · OI +0.44% · DXY +0.67%。近几日窗口：窗口内未触发日频驱动规则；公布日；后续交易日尚未计入。",
+      "result_caption_zh": "**态度：偏紧一档。** 上次 3.5–3.75%，走廊上移约 25bp → 3.75–4% 声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）。",
+      "text_zh": "会前 **2026-09-15（会前 T-1）**：BTC -3.25%、ETH -4.67%、永续约 182.3 亿（+40.9%）、OI +3.79%、BTC ETF 净流约 -2.89 亿、当日有异常驱动槽。\n另 **2026-09-14** BTC +1.75%、永续 129.4 亿（+147.4%）。\n**决议日 2026-09-16**：BTC +0.74%、ETH +0.83%、永续约 118.5 亿（-35.0%）、OI +0.44%、BTC 资费年化约 10.3%、BTC ETF 约 -1.52 亿、无币圈异常驱动槽。\n**读法：** 官方态度 **偏紧一档**（上次 3.5–3.75%，走廊上移约 25bp → 3.75–4%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
       "text_en": "FOMC decision + SEP",
       "has_official_result": true,
       "result_status": "fetched",
@@ -140,8 +140,8 @@
         "last_attempt_at": "2026-09-16T23:55:11Z",
         "attempt_n": 1,
         "adapter": "fed_openmarket_http",
-        "result_plain_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次是<strong>加息</strong>约 25 个基点。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。本场还带经济预测/点阵类材料，中期路径信息会多一层。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
-        "result_teach_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次是<strong>加息</strong>约 25 个基点。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。本场还带经济预测/点阵类材料，中期路径信息会多一层。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+        "result_plain_zh": null,
+        "result_teach_zh": null,
         "fixture": false,
         "revision_note": null,
         "prior_values": {
@@ -163,7 +163,8 @@
         "statement_bullets": [
           "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
           "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
-        ]
+        ],
+        "a1_hide_glossary": true
       },
       "result_plain_zh": null,
       "reaction": {
@@ -840,7 +841,462 @@
           "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
           "watch_zh": "目标区间是否调整；若有 SEP/点阵，多一层中期路径信息。"
         }
-      }
+      },
+      "a1": {
+        "schema": "a1_macro_copy_v1",
+        "a1_version": "a1_macro_copy_v1",
+        "event_id": "fomc_2026_09",
+        "event_date": "2026-09-16",
+        "name_zh": "FOMC 利率决议（含经济预测 SEP）",
+        "data_as_of": "2026-09-16",
+        "calendar_today": "2026-09-17",
+        "terminal": true,
+        "has_sep": true,
+        "phase": "day_of_post",
+        "badge_zh": "会后·有结果",
+        "badge_en": "Post · result",
+        "headline_zh": "FOMC · 加息 25bp → 3.75–4%",
+        "lead_zh": "上次 3.5–3.75%，走廊上移约 25bp → 3.75–4% · 数据截至 **2026-09-16**（T−1 完整日）",
+        "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：日历标注含 SEP/点阵类材料。** 潮观目前只确认「有这份材料」，**尚未解析点阵细数**，因此不编「点阵中位数/明年降几码」——主信息仍看利率走廊动作。\n下一钉：**2026-10-28**（FOMC 利率决议）。",
+        "attitude_zh": "**态度：偏紧一档。** 上次 3.5–3.75%，走廊上移约 25bp → 3.75–4% 声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）。",
+        "result_lines": [
+          {
+            "label_zh": "上次走廊",
+            "text": "3.5–3.75%"
+          },
+          {
+            "label_zh": "本次走廊",
+            "text": "3.75–4%"
+          },
+          {
+            "label_zh": "动作",
+            "text": "加息约 25bp"
+          },
+          {
+            "label_zh": "生效",
+            "text": "2026-09-17"
+          },
+          {
+            "label_zh": "SEP",
+            "text": "有材料 · 点阵细数未解析"
+          }
+        ],
+        "narrative_zh": "会前 **2026-09-15（会前 T-1）**：BTC -3.25%、ETH -4.67%、永续约 182.3 亿（+40.9%）、OI +3.79%、BTC ETF 净流约 -2.89 亿、当日有异常驱动槽。\n另 **2026-09-14** BTC +1.75%、永续 129.4 亿（+147.4%）。\n**决议日 2026-09-16**：BTC +0.74%、ETH +0.83%、永续约 118.5 亿（-35.0%）、OI +0.44%、BTC 资费年化约 10.3%、BTC ETF 约 -1.52 亿、无币圈异常驱动槽。\n**读法：** 官方态度 **偏紧一档**（上次 3.5–3.75%，走廊上移约 25bp → 3.75–4%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
+        "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2026-10-28**",
+        "status_zh": "会后·公布日数据已入表",
+        "stance": {
+          "label_zh": "偏紧一档",
+          "detail_zh": "上次 3.5–3.75%，走廊上移约 25bp → 3.75–4%",
+          "direction": "hike",
+          "bp": "25",
+          "range_zh": "3.75–4%",
+          "prior_range_zh": "3.5–3.75%",
+          "statement_hook_zh": "声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）",
+          "effective_date": "2026-09-17"
+        },
+        "next_fomc": {
+          "date": "2026-10-28",
+          "id": "fomc_2026_10",
+          "name_zh": "FOMC 利率决议"
+        },
+        "wide_table": {
+          "data_as_of": "2026-09-16",
+          "calendar_today": "2026-09-17",
+          "event_date": "2026-09-16",
+          "pre_n": 3,
+          "post_n": 3,
+          "rows": [
+            {
+              "date": "2026-09-13",
+              "offset": -3,
+              "label_zh": "会前 T-3",
+              "phase": "pre",
+              "has_digest": true,
+              "btc_ret_1d": -0.565,
+              "eth_ret_1d": -1.933,
+              "oi_chg_pct": 1.544,
+              "perp_turnover_usd": 5229233617.0931,
+              "perp_turnover_chg_pct": 66.22,
+              "funding_ann_pct": 7.8369,
+              "eth_funding_ann_pct": null,
+              "es_ret_1d": -0.444,
+              "vix_ret_1d": -11.211,
+              "dxy_ret_1d": 0.163,
+              "btc_etf_net_usd": -13200000.0,
+              "driver": true,
+              "btc_s": "-0.56%",
+              "eth_s": "-1.93%",
+              "oi_s": "+1.54%",
+              "perp_s": "52.3 亿",
+              "perp_chg_s": "+66.2%",
+              "fund_s": "7.8%",
+              "es_s": "-0.44%",
+              "vix_s": "-11.21%",
+              "dxy_s": "+0.16%",
+              "etf_s": "-0.13 亿",
+              "href": "daily_20260913.html"
+            },
+            {
+              "date": "2026-09-14",
+              "offset": -2,
+              "label_zh": "会前 T-2",
+              "phase": "pre",
+              "has_digest": true,
+              "btc_ret_1d": 1.753,
+              "eth_ret_1d": 1.56,
+              "oi_chg_pct": -1.317,
+              "perp_turnover_usd": 12938145663.8036,
+              "perp_turnover_chg_pct": 147.42,
+              "funding_ann_pct": 3.9015,
+              "eth_funding_ann_pct": null,
+              "es_ret_1d": 0.816,
+              "vix_ret_1d": 7.955,
+              "dxy_ret_1d": 0.311,
+              "btc_etf_net_usd": 9700000.0,
+              "driver": true,
+              "btc_s": "+1.75%",
+              "eth_s": "+1.56%",
+              "oi_s": "-1.32%",
+              "perp_s": "129.4 亿",
+              "perp_chg_s": "+147.4%",
+              "fund_s": "3.9%",
+              "es_s": "+0.82%",
+              "vix_s": "+7.96%",
+              "dxy_s": "+0.31%",
+              "etf_s": "0.10 亿",
+              "href": "daily_20260914.html"
+            },
+            {
+              "date": "2026-09-15",
+              "offset": -1,
+              "label_zh": "会前 T-1",
+              "phase": "pre",
+              "has_digest": true,
+              "btc_ret_1d": -3.255,
+              "eth_ret_1d": -4.67,
+              "oi_chg_pct": 3.792,
+              "perp_turnover_usd": 18225493034.5534,
+              "perp_turnover_chg_pct": 40.87,
+              "funding_ann_pct": 4.38,
+              "eth_funding_ann_pct": null,
+              "es_ret_1d": 0.479,
+              "vix_ret_1d": 0.585,
+              "dxy_ret_1d": 0.228,
+              "btc_etf_net_usd": -288700000.0,
+              "driver": true,
+              "btc_s": "-3.25%",
+              "eth_s": "-4.67%",
+              "oi_s": "+3.79%",
+              "perp_s": "182.3 亿",
+              "perp_chg_s": "+40.9%",
+              "fund_s": "4.4%",
+              "es_s": "+0.48%",
+              "vix_s": "+0.58%",
+              "dxy_s": "+0.23%",
+              "etf_s": "-2.89 亿",
+              "href": "daily_20260915.html"
+            },
+            {
+              "date": "2026-09-16",
+              "offset": 0,
+              "label_zh": "决议日 T",
+              "phase": "pin",
+              "has_digest": true,
+              "btc_ret_1d": 0.742,
+              "eth_ret_1d": 0.834,
+              "oi_chg_pct": 0.442,
+              "perp_turnover_usd": 11847690082.1074,
+              "perp_turnover_chg_pct": -34.99,
+              "funding_ann_pct": 10.2591,
+              "eth_funding_ann_pct": 3.619,
+              "es_ret_1d": null,
+              "vix_ret_1d": null,
+              "dxy_ret_1d": null,
+              "btc_etf_net_usd": -151800000.0,
+              "driver": false,
+              "btc_s": "+0.74%",
+              "eth_s": "+0.83%",
+              "oi_s": "+0.44%",
+              "perp_s": "118.5 亿",
+              "perp_chg_s": "-35.0%",
+              "fund_s": "10.3%",
+              "es_s": null,
+              "vix_s": null,
+              "dxy_s": null,
+              "etf_s": "-1.52 亿",
+              "href": "daily_20260916.html"
+            }
+          ]
+        },
+        "result_block": {
+          "ok": true,
+          "status": "fetched",
+          "lifecycle_terminal": true,
+          "lifecycle_kind": "decision",
+          "event_id": "fomc_2026_09",
+          "series": "fomc",
+          "lines": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%"
+            },
+            {
+              "label_zh": "相对前次",
+              "key": "changed",
+              "text": "加息约 25 bp"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17"
+            },
+            {
+              "label_zh": "经济预测材料",
+              "key": "sep",
+              "text": "本场含 SEP/点阵"
+            }
+          ],
+          "lines_plain": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%",
+              "name_zh": "联邦基金目标区间",
+              "jargon": "Fed funds target",
+              "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+              "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+            },
+            {
+              "label_zh": "相对前次决议",
+              "key": "changed",
+              "text": "加息约 25 bp",
+              "name_zh": "相对前次决议",
+              "jargon": "changed",
+              "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+              "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17",
+              "name_zh": "利率生效日",
+              "jargon": "effective date",
+              "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+              "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+            },
+            {
+              "label_zh": "经济预测材料",
+              "key": "sep",
+              "text": "本场含 SEP/点阵",
+              "name_zh": "经济预测材料",
+              "jargon": "SEP / dot plot",
+              "what_zh": "部分会次会附带委员对增长、通胀、利率路径的预测汇总（点阵图等）。",
+              "why_zh": "比单次利率更能透露「更高更久 / 开始转松」的中期想象。"
+            }
+          ],
+          "source_urls": [
+            "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm"
+          ],
+          "fetched_at": "2026-09-16T23:55:11Z",
+          "last_attempt_at": "2026-09-16T23:55:11Z",
+          "attempt_n": 1,
+          "adapter": "fed_openmarket_http",
+          "result_plain_zh": null,
+          "result_teach_zh": null,
+          "fixture": false,
+          "revision_note": null,
+          "prior_values": {
+            "fed_funds_lower": 3.5,
+            "fed_funds_upper": 3.75,
+            "effective_date": "2025-12-11"
+          },
+          "values": {
+            "fed_funds_lower": 3.75,
+            "fed_funds_upper": 4.0,
+            "changed": true,
+            "sep_present": true,
+            "effective_date": "2026-09-17",
+            "increase_bp": 25,
+            "decrease_bp": 0,
+            "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "meeting_date": "2026-09-16"
+          },
+          "statement_bullets": [
+            "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+            "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
+          ],
+          "a1_hide_glossary": true
+        },
+        "statement_bullets": [
+          "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+          "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
+        ],
+        "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
+        "generated_at": "2026-09-17T04:32:19Z"
+      },
+      "a1_version": "a1_macro_copy_v1",
+      "a1_result_lines": [
+        {
+          "label_zh": "上次走廊",
+          "text": "3.5–3.75%"
+        },
+        {
+          "label_zh": "本次走廊",
+          "text": "3.75–4%"
+        },
+        {
+          "label_zh": "动作",
+          "text": "加息约 25bp"
+        },
+        {
+          "label_zh": "生效",
+          "text": "2026-09-17"
+        },
+        {
+          "label_zh": "SEP",
+          "text": "有材料 · 点阵细数未解析"
+        }
+      ],
+      "a1_watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2026-10-28**",
+      "a1_footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
+      "a1_wide_table": {
+        "data_as_of": "2026-09-16",
+        "calendar_today": "2026-09-17",
+        "event_date": "2026-09-16",
+        "pre_n": 3,
+        "post_n": 3,
+        "rows": [
+          {
+            "date": "2026-09-13",
+            "offset": -3,
+            "label_zh": "会前 T-3",
+            "phase": "pre",
+            "has_digest": true,
+            "btc_ret_1d": -0.565,
+            "eth_ret_1d": -1.933,
+            "oi_chg_pct": 1.544,
+            "perp_turnover_usd": 5229233617.0931,
+            "perp_turnover_chg_pct": 66.22,
+            "funding_ann_pct": 7.8369,
+            "eth_funding_ann_pct": null,
+            "es_ret_1d": -0.444,
+            "vix_ret_1d": -11.211,
+            "dxy_ret_1d": 0.163,
+            "btc_etf_net_usd": -13200000.0,
+            "driver": true,
+            "btc_s": "-0.56%",
+            "eth_s": "-1.93%",
+            "oi_s": "+1.54%",
+            "perp_s": "52.3 亿",
+            "perp_chg_s": "+66.2%",
+            "fund_s": "7.8%",
+            "es_s": "-0.44%",
+            "vix_s": "-11.21%",
+            "dxy_s": "+0.16%",
+            "etf_s": "-0.13 亿",
+            "href": "daily_20260913.html"
+          },
+          {
+            "date": "2026-09-14",
+            "offset": -2,
+            "label_zh": "会前 T-2",
+            "phase": "pre",
+            "has_digest": true,
+            "btc_ret_1d": 1.753,
+            "eth_ret_1d": 1.56,
+            "oi_chg_pct": -1.317,
+            "perp_turnover_usd": 12938145663.8036,
+            "perp_turnover_chg_pct": 147.42,
+            "funding_ann_pct": 3.9015,
+            "eth_funding_ann_pct": null,
+            "es_ret_1d": 0.816,
+            "vix_ret_1d": 7.955,
+            "dxy_ret_1d": 0.311,
+            "btc_etf_net_usd": 9700000.0,
+            "driver": true,
+            "btc_s": "+1.75%",
+            "eth_s": "+1.56%",
+            "oi_s": "-1.32%",
+            "perp_s": "129.4 亿",
+            "perp_chg_s": "+147.4%",
+            "fund_s": "3.9%",
+            "es_s": "+0.82%",
+            "vix_s": "+7.96%",
+            "dxy_s": "+0.31%",
+            "etf_s": "0.10 亿",
+            "href": "daily_20260914.html"
+          },
+          {
+            "date": "2026-09-15",
+            "offset": -1,
+            "label_zh": "会前 T-1",
+            "phase": "pre",
+            "has_digest": true,
+            "btc_ret_1d": -3.255,
+            "eth_ret_1d": -4.67,
+            "oi_chg_pct": 3.792,
+            "perp_turnover_usd": 18225493034.5534,
+            "perp_turnover_chg_pct": 40.87,
+            "funding_ann_pct": 4.38,
+            "eth_funding_ann_pct": null,
+            "es_ret_1d": 0.479,
+            "vix_ret_1d": 0.585,
+            "dxy_ret_1d": 0.228,
+            "btc_etf_net_usd": -288700000.0,
+            "driver": true,
+            "btc_s": "-3.25%",
+            "eth_s": "-4.67%",
+            "oi_s": "+3.79%",
+            "perp_s": "182.3 亿",
+            "perp_chg_s": "+40.9%",
+            "fund_s": "4.4%",
+            "es_s": "+0.48%",
+            "vix_s": "+0.58%",
+            "dxy_s": "+0.23%",
+            "etf_s": "-2.89 亿",
+            "href": "daily_20260915.html"
+          },
+          {
+            "date": "2026-09-16",
+            "offset": 0,
+            "label_zh": "决议日 T",
+            "phase": "pin",
+            "has_digest": true,
+            "btc_ret_1d": 0.742,
+            "eth_ret_1d": 0.834,
+            "oi_chg_pct": 0.442,
+            "perp_turnover_usd": 11847690082.1074,
+            "perp_turnover_chg_pct": -34.99,
+            "funding_ann_pct": 10.2591,
+            "eth_funding_ann_pct": 3.619,
+            "es_ret_1d": null,
+            "vix_ret_1d": null,
+            "dxy_ret_1d": null,
+            "btc_etf_net_usd": -151800000.0,
+            "driver": false,
+            "btc_s": "+0.74%",
+            "eth_s": "+0.83%",
+            "oi_s": "+0.44%",
+            "perp_s": "118.5 亿",
+            "perp_chg_s": "-35.0%",
+            "fund_s": "10.3%",
+            "es_s": null,
+            "vix_s": null,
+            "dxy_s": null,
+            "etf_s": "-1.52 亿",
+            "href": "daily_20260916.html"
+          }
+        ]
+      },
+      "data_as_of": "2026-09-16",
+      "statement_bullets": [
+        "The Committee decided to raise the target range for the federal funds rate by 1/4 percentage point to 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+        "Inflation remains elevated. Today's policy action will support a timelier return to the Committee's 2 percent goal. The Committee will deliver price stability."
+      ],
+      "event_track_href": "event_fomc_2026_09.html"
     },
     "driver": null,
     "cognition": {
@@ -853,7 +1309,7 @@
           "question": "IV是什么意思，和VIX有什么区别"
         }
       ],
-      "text_zh": "潮记待办：还欠一问——IV 是什么、和 VIX 有何区别。",
+      "text_zh": "潮记待办：有人在问「IV 是什么、和 VIX 有何区别」——可对照本页 IV−RV 点差与 VIX 日变各记一笔。",
       "text_en": null
     }
   },
@@ -863,19 +1319,23 @@
   "llm_error": null,
   "brief_highlights": [
     {
-      "text": "BTC +0.74%",
+      "text": "小区间收涨",
       "tone": "up"
     },
     {
-      "text": "永续成交额缩到 118.48 亿美金（日变约 -35%）",
+      "text": "成交显著萎缩",
       "tone": "down"
     },
     {
-      "text": "OI 仅微增 +0.44%",
-      "tone": "neutral"
+      "text": "永续成交额 118.48 亿美金（-35%）",
+      "tone": "down"
     },
     {
-      "text": "3.75–4.0%",
+      "text": "funding 年化抬升",
+      "tone": "warn"
+    },
+    {
+      "text": "与 ES 同向",
       "tone": "neutral"
     },
     {
@@ -883,8 +1343,8 @@
       "tone": "warn"
     },
     {
-      "text": "与 ES 同向",
-      "tone": "up"
+      "text": "3.75–4.0%",
+      "tone": "neutral"
     }
   ],
   "job": {
