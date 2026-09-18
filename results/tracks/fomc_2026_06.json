@@ -1,11 +1,11 @@
 {
   "event_id": "fomc_2026_06",
   "event_date": "2026-06-17",
-  "name_zh": "FOMC 利率决议（含经济预测 SEP）",
-  "name_en": "FOMC decision + SEP",
+  "name_zh": "FOMC 利率决议",
+  "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+91/3）",
+  "status_zh": "反应中（数据至 T+92/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -29,11 +29,6 @@
         "label_zh": "利率生效日",
         "key": "effective_date",
         "text": "2025-12-11"
-      },
-      {
-        "label_zh": "经济预测材料",
-        "key": "sep",
-        "text": "本场含 SEP/点阵"
       }
     ],
     "lines_plain": [
@@ -63,15 +58,6 @@
         "jargon": "effective date",
         "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
         "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
-      },
-      {
-        "label_zh": "经济预测材料",
-        "key": "sep",
-        "text": "本场含 SEP/点阵",
-        "name_zh": "经济预测材料",
-        "jargon": "SEP / dot plot",
-        "what_zh": "部分会次会附带委员对增长、通胀、利率路径的预测汇总（点阵图等）。",
-        "why_zh": "比单次利率更能透露「更高更久 / 开始转松」的中期想象。"
       }
     ],
     "source_urls": [
@@ -114,18 +100,18 @@
     "a1_version": "a1_macro_copy_v1",
     "event_id": "fomc_2026_06",
     "event_date": "2026-06-17",
-    "name_zh": "FOMC 利率决议（含经济预测 SEP）",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "name_zh": "FOMC 利率决议",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": true,
-    "has_sep": true,
+    "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "本场偏松一档，走廊下移约25bp至3.5–3.75%。",
-    "primer_zh": "FOMC一年大约开8次会，决定联邦基金利率走廊并发布声明。SEP是经济预测摘要，点阵图汇总委员对未来利率路径的看法。本场有SEP材料，但点阵细数未解析，不展开路径点。下一钉是2026-07-29的FOMC利率决议。",
-    "attitude_zh": "态度偏松一档；声明强调通胀仍偏高，指向更快回到2%物价目标（摘意）。",
+    "lead_zh": "会后定调偏松一档：走廊下移约25bp至3.5–3.75%，声明仍点出通胀偏高、指向更快回到2%目标。",
+    "primer_zh": "FOMC一年大约开八次会，每次给出联邦基金利率目标走廊并发布声明。本次已将走廊自3.75–4%下移约25bp至3.5–3.75%。下一钉落在2026-07-29的FOMC利率决议，继续看走廊与声明如何衔接。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%，声明仍强调通胀偏高、指向更快回到2%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -142,15 +128,11 @@
       {
         "label_zh": "生效",
         "text": "2025-12-11"
-      },
-      {
-        "label_zh": "SEP",
-        "text": "有材料 · 点阵细数未解析"
       }
     ],
-    "narrative_zh": "会后对照：上次走廊3.75–4%，本次3.5–3.75%，动作降息约25bp（生效按表记2025-12-11）。\n决议日T量价：BTC -1.77%，ETH -2.36%，OI -3.02%，BTC ETF -0.82亿。反应窗数据仍在更新中。",
-    "watch_zh": "盯2026-07-29下一场FOMC · 后续声明与量价是否延续决议日幅度",
-    "status_zh": "反应中（数据至 T+91/3）",
+    "narrative_zh": "决议日T（2026-06-17）量价一并记下：BTC -1.77%，ETH -2.36%，永续开仓 -3.02%，BTC资金费率 2.9%；标普ES -1.25%，VIX +12.37%，美元指数DXY +0.55%；BTC现货ETF净流出约0.82亿。\n会后读法与结果短表对齐：上次走廊3.75–4%，本次3.5–3.75%，动作降息约25bp（生效标注2025-12-11）。声明侧强调通胀仍偏高，并指向更快回到2%物价目标。反应窗数据已拉长至T+侧，上述幅度即本场可见的即时量价脚印，不外推因果。",
+    "watch_zh": "盯走廊是否稳在3.5–3.75%、声明对通胀与2%目标的后续措辞，以及盘面量价能否消化决议日波动；下一钉2026-07-29 FOMC再核对接力。",
+    "status_zh": "反应中（数据至 T+92/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -167,8 +149,8 @@
       "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2026-06-17",
       "pre_n": 3,
       "post_n": 3,
@@ -184,11 +166,12 @@
           "oi_chg_pct": -3.023,
           "perp_turnover_usd": null,
           "perp_turnover_chg_pct": null,
-          "funding_ann_pct": null,
+          "funding_ann_pct": 2.8547,
           "eth_funding_ann_pct": null,
-          "es_ret_1d": null,
-          "vix_ret_1d": null,
-          "dxy_ret_1d": null,
+          "es_ret_1d": -1.25,
+          "nq_ret_1d": -1.025,
+          "vix_ret_1d": 12.371,
+          "dxy_ret_1d": 0.553,
           "btc_etf_net_usd": -82163665.0,
           "driver": false,
           "btc_s": "-1.77%",
@@ -196,10 +179,11 @@
           "oi_s": "-3.02%",
           "perp_s": null,
           "perp_chg_s": null,
-          "fund_s": null,
-          "es_s": null,
-          "vix_s": null,
-          "dxy_s": null,
+          "fund_s": "2.9%",
+          "es_s": "-1.25%",
+          "nq_s": "-1.02%",
+          "vix_s": "+12.37%",
+          "dxy_s": "+0.55%",
           "etf_s": "-0.82 亿",
           "href": "daily_20260617.html"
         }
@@ -227,11 +211,6 @@
           "label_zh": "利率生效日",
           "key": "effective_date",
           "text": "2025-12-11"
-        },
-        {
-          "label_zh": "经济预测材料",
-          "key": "sep",
-          "text": "本场含 SEP/点阵"
         }
       ],
       "lines_plain": [
@@ -261,15 +240,6 @@
           "jargon": "effective date",
           "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
           "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
-        },
-        {
-          "label_zh": "经济预测材料",
-          "key": "sep",
-          "text": "本场含 SEP/点阵",
-          "name_zh": "经济预测材料",
-          "jargon": "SEP / dot plot",
-          "what_zh": "部分会次会附带委员对增长、通胀、利率路径的预测汇总（点阵图等）。",
-          "why_zh": "比单次利率更能透露「更高更久 / 开始转松」的中期想象。"
         }
       ],
       "source_urls": [
@@ -312,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T05:00:03Z",
+    "generated_at": "2026-09-18T02:44:12Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -328,11 +298,12 @@
       "oi_chg_pct": -3.023,
       "perp_turnover_usd": null,
       "perp_turnover_chg_pct": null,
-      "funding_ann_pct": null,
+      "funding_ann_pct": 2.8547,
       "eth_funding_ann_pct": null,
-      "es_ret_1d": null,
-      "vix_ret_1d": null,
-      "dxy_ret_1d": null,
+      "es_ret_1d": -1.25,
+      "nq_ret_1d": -1.025,
+      "vix_ret_1d": 12.371,
+      "dxy_ret_1d": 0.553,
       "btc_etf_net_usd": -82163665.0,
       "driver": false,
       "btc_s": "-1.77%",
@@ -340,16 +311,17 @@
       "oi_s": "-3.02%",
       "perp_s": null,
       "perp_chg_s": null,
-      "fund_s": null,
-      "es_s": null,
-      "vix_s": null,
-      "dxy_s": null,
+      "fund_s": "2.9%",
+      "es_s": "-1.25%",
+      "nq_s": "-1.02%",
+      "vix_s": "+12.37%",
+      "dxy_s": "+0.55%",
       "etf_s": "-0.82 亿",
       "href": "daily_20260617.html"
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-09-17T05:00:21Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:44:32Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }

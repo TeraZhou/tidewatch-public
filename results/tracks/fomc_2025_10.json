@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+322/3）",
+  "status_zh": "反应中（数据至 T+323/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -103,17 +103,17 @@
     "event_id": "fomc_2025_10",
     "event_date": "2025-10-29",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.75–4%",
-    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约 25bp，至 3.75–4%。",
-    "primer_zh": "FOMC 全年大约开 8 次会，决定联邦基金利率目标走廊并发布声明。SEP 是点阵与经济预测摘要，委员对利率路径、增长、通胀、失业率的看法汇总，本场未标 SEP、无点阵细数可解析。下次钉在 2025-12-10 的 FOMC（含经济预测 SEP）。本次动作已落地：由上次 4–4.25% 降至 3.75–4%，降息约 25bp，生效日 2025-10-30。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。",
-    "attitude_zh": "偏松一档：走廊下移约 25bp 至 3.75–4%，声明仍点出通胀偏高并指向更快回到 2% 目标。",
+    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约 25bp 至 3.75–4%。",
+    "primer_zh": "FOMC 一年大约开八次会，每次给出联邦基金利率目标走廊并发布声明。本次已将走廊从 4–4.25% 下调约 25bp 至 3.75–4%，生效日 2025-10-30。声明侧强调通胀仍偏高，并指向更快回到 2% 物价目标。下一钉是 2025-12-10 的 FOMC 利率决议，继续看走廊与声明如何衔接。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp 至 3.75–4%，声明仍强调通胀偏高并指向更快回到 2%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,15 +130,11 @@
       {
         "label_zh": "生效",
         "text": "2025-10-30"
-      },
-      {
-        "label_zh": "SEP",
-        "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "会前走廊停在 4–4.25%。\n会后结果短表对齐：本次走廊 3.75–4%，动作降息约 25bp，生效 2025-10-30；本场未标 SEP。\n态度与 stance 一致为偏松一档，走廊下移约 25bp。决议日 T 宽表量价字段均为空，无可用点位、涨跌幅、成交或持仓变动可读，故本场叙事只落在利率走廊与声明钩子，不外推资产路径。",
-    "watch_zh": "盯 2025-12-10 下场 FOMC（含 SEP）点阵与预测更新 · 声明后续对通胀回 2% 的措辞是否加码 · 生效后资金面与波动是否延续反应窗",
-    "status_zh": "反应中（数据至 T+322/3）",
+    "narrative_zh": "决议落地：上次走廊 4–4.25%，本次走廊 3.75–4%，动作降息约 25bp，2025-10-30 起生效。\n会前到会后的并置很直接——政策利率走廊一次性下移约 25bp，态度落在偏松一档；声明仍点出通胀偏高，同时把表述拧向更快回到 2% 目标。\n本场 wide 表在决议日 T 各资产与资金面字段均为空，读法以结果短表与立场为准，不外推未给出的涨跌幅度。",
+    "watch_zh": "盯新走廊 3.75–4% 是否稳、声明后续措辞有无再松/再紧信号，以及盘面在生效后的量价反应；下一钉 2025-12-10 决议前继续对照走廊与声明，不看点阵类材料。",
+    "status_zh": "反应中（数据至 T+323/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.75–4%",
@@ -152,11 +148,11 @@
     "next_fomc": {
       "date": "2025-12-10",
       "id": "fomc_2025_12",
-      "name_zh": "FOMC 利率决议（含经济预测 SEP）"
+      "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2025-10-29",
       "pre_n": 3,
       "post_n": 3,
@@ -175,6 +171,7 @@
           "funding_ann_pct": null,
           "eth_funding_ann_pct": null,
           "es_ret_1d": null,
+          "nq_ret_1d": null,
           "vix_ret_1d": null,
           "dxy_ret_1d": null,
           "btc_etf_net_usd": null,
@@ -186,6 +183,7 @@
           "perp_chg_s": null,
           "fund_s": null,
           "es_s": null,
+          "nq_s": null,
           "vix_s": null,
           "dxy_s": null,
           "etf_s": null,
@@ -290,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target r…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:58:27Z",
+    "generated_at": "2026-09-18T02:40:38Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -309,6 +307,7 @@
       "funding_ann_pct": null,
       "eth_funding_ann_pct": null,
       "es_ret_1d": null,
+      "nq_ret_1d": null,
       "vix_ret_1d": null,
       "dxy_ret_1d": null,
       "btc_etf_net_usd": null,
@@ -320,6 +319,7 @@
       "perp_chg_s": null,
       "fund_s": null,
       "es_s": null,
+      "nq_s": null,
       "vix_s": null,
       "dxy_s": null,
       "etf_s": null,
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_10.html",
-  "generated_at": "2026-09-17T04:58:43Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:41:22Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }

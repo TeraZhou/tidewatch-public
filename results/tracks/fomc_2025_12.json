@@ -1,11 +1,11 @@
 {
   "event_id": "fomc_2025_12",
   "event_date": "2025-12-10",
-  "name_zh": "FOMC 利率决议（含经济预测 SEP）",
-  "name_en": "FOMC decision + SEP",
+  "name_zh": "FOMC 利率决议",
+  "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+280/3）",
+  "status_zh": "反应中（数据至 T+281/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -29,11 +29,6 @@
         "label_zh": "利率生效日",
         "key": "effective_date",
         "text": "2025-12-11"
-      },
-      {
-        "label_zh": "经济预测材料",
-        "key": "sep",
-        "text": "本场含 SEP/点阵"
       }
     ],
     "lines_plain": [
@@ -63,15 +58,6 @@
         "jargon": "effective date",
         "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
         "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
-      },
-      {
-        "label_zh": "经济预测材料",
-        "key": "sep",
-        "text": "本场含 SEP/点阵",
-        "name_zh": "经济预测材料",
-        "jargon": "SEP / dot plot",
-        "what_zh": "部分会次会附带委员对增长、通胀、利率路径的预测汇总（点阵图等）。",
-        "why_zh": "比单次利率更能透露「更高更久 / 开始转松」的中期想象。"
       }
     ],
     "source_urls": [
@@ -117,18 +103,18 @@
     "a1_version": "a1_macro_copy_v1",
     "event_id": "fomc_2025_12",
     "event_date": "2025-12-10",
-    "name_zh": "FOMC 利率决议（含经济预测 SEP）",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "name_zh": "FOMC 利率决议",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": true,
-    "has_sep": true,
+    "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "走廊由 3.75–4% 下移约 25bp 至 3.5–3.75%，偏松一档落地，自 2025-12-11 生效。",
-    "primer_zh": "FOMC 一年大约开 8 次会，投票决定联邦基金利率目标走廊并发布政策声明。SEP 是季度经济预测摘要，里面的点阵图汇总委员对未来利率路径的个人看法。本场有 SEP 材料，但点阵细数未解析，故不展开具体路径点。下一钉是 2026-01-28 的 FOMC 利率决议。声明摘意强调通胀仍偏高，同时指向更快回到 2% 物价目标。",
-    "attitude_zh": "偏松一档：降息约 25bp，走廊至 3.5–3.75%。",
+    "lead_zh": "走廊下移约25bp至3.5–3.75%，立场偏松一档。",
+    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率目标走廊并发布政策声明。本次将走廊从上次的3.75–4%下调至3.5–3.75%，动作是降息约25bp，自2025-12-11生效。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉是2026-01-28的FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -145,15 +131,11 @@
       {
         "label_zh": "生效",
         "text": "2025-12-11"
-      },
-      {
-        "label_zh": "SEP",
-        "text": "有材料 · 点阵细数未解析"
       }
     ],
-    "narrative_zh": "会前走廊停在 3.75–4%。\n会后动作落地：降息约 25bp，走廊下移至 3.5–3.75%，生效日 2025-12-11。态度标签为偏松一档。\n本场附带 SEP，结果表标注「有材料 · 点阵细数未解析」，因此只确认有材料、不编造点阵路径。决议日 T 的量价与资金面字段均为空，反应窗叙事以走廊变动与声明钩子为主，不外推未给出的涨跌幅度。",
-    "watch_zh": "盯声明后续对通胀仍偏高、更快回 2% 目标的传导表述 · 下一场 FOMC 钉在 2026-01-28",
-    "status_zh": "反应中（数据至 T+280/3）",
+    "narrative_zh": "会前利率走廊位于3.75–4%。\n会后结果落地：降息约25bp，新走廊为3.5–3.75%，自2025-12-11生效；态度对应偏松一档，声明侧仍强调通胀偏高并指向更快回到2%目标。\n本场宽表决议日T量价字段为空，反应窗读法以走廊与声明变动本身为主。",
+    "watch_zh": "盯新走廊3.5–3.75%的定价消化、声明中通胀与2%目标表述的后续解读，以及2026-01-28下一场FOMC。",
+    "status_zh": "反应中（数据至 T+281/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -170,8 +152,8 @@
       "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2025-12-10",
       "pre_n": 3,
       "post_n": 3,
@@ -190,6 +172,7 @@
           "funding_ann_pct": null,
           "eth_funding_ann_pct": null,
           "es_ret_1d": null,
+          "nq_ret_1d": null,
           "vix_ret_1d": null,
           "dxy_ret_1d": null,
           "btc_etf_net_usd": null,
@@ -201,6 +184,7 @@
           "perp_chg_s": null,
           "fund_s": null,
           "es_s": null,
+          "nq_s": null,
           "vix_s": null,
           "dxy_s": null,
           "etf_s": null,
@@ -230,11 +214,6 @@
           "label_zh": "利率生效日",
           "key": "effective_date",
           "text": "2025-12-11"
-        },
-        {
-          "label_zh": "经济预测材料",
-          "key": "sep",
-          "text": "本场含 SEP/点阵"
         }
       ],
       "lines_plain": [
@@ -264,15 +243,6 @@
           "jargon": "effective date",
           "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
           "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
-        },
-        {
-          "label_zh": "经济预测材料",
-          "key": "sep",
-          "text": "本场含 SEP/点阵",
-          "name_zh": "经济预测材料",
-          "jargon": "SEP / dot plot",
-          "what_zh": "部分会次会附带委员对增长、通胀、利率路径的预测汇总（点阵图等）。",
-          "why_zh": "比单次利率更能透露「更高更久 / 开始转松」的中期想象。"
         }
       ],
       "source_urls": [
@@ -321,7 +291,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target range for the federal…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:58:43Z",
+    "generated_at": "2026-09-18T02:41:22Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -340,6 +310,7 @@
       "funding_ann_pct": null,
       "eth_funding_ann_pct": null,
       "es_ret_1d": null,
+      "nq_ret_1d": null,
       "vix_ret_1d": null,
       "dxy_ret_1d": null,
       "btc_etf_net_usd": null,
@@ -351,6 +322,7 @@
       "perp_chg_s": null,
       "fund_s": null,
       "es_s": null,
+      "nq_s": null,
       "vix_s": null,
       "dxy_s": null,
       "etf_s": null,
@@ -358,7 +330,7 @@
     }
   ],
   "href": "event_fomc_2025_12.html",
-  "generated_at": "2026-09-17T04:59:06Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:41:47Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }

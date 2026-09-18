@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+231/3）",
+  "status_zh": "反应中（数据至 T+232/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -103,17 +103,17 @@
     "event_id": "fomc_2026_01",
     "event_date": "2026-01-28",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约 25bp 至 3.5–3.75%。",
-    "primer_zh": "FOMC 一年大约开八次会，决定联邦基金利率目标走廊，并视场次发布经济预测摘要 SEP。SEP 是委员对增长、失业、通胀和未来利率路径的集中看法，点阵图把每人预期利率点在一张图上，方便对照中枢与分歧。本场未标 SEP，点阵细数未解析，故不描述具体路径点。下一钉是 2026-03-18 的 FOMC 利率决议（含经济预测 SEP）。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。",
-    "attitude_zh": "态度偏松一档，走廊下移约 25bp 至 3.5–3.75%，与结果短表一致。",
+    "lead_zh": "会后反应窗：走廊下移约25bp至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC一年大约开八次会，每次定联邦基金利率走廊并发声明。本次已将走廊从3.75–4%下调约25bp至3.5–3.75%。下一钉盯2026-03-18的FOMC利率决议。声明摘意强调通胀仍偏高、指向更快回到2%物价目标。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,15 +130,11 @@
       {
         "label_zh": "生效",
         "text": "2025-12-11"
-      },
-      {
-        "label_zh": "SEP",
-        "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊 3.75–4%，本次 3.5–3.75%，动作降息约 25bp，生效标注 2025-12-11。\n决议日 T（2026-01-28）量价：BTC +0.06%、ETH -0.53%；永续成交 110.9 亿、较对比 +6.5%；持仓 OI -0.36%；BTC ETF 资金流 -0.20 亿。反应窗内价格近乎走平、成交放大、持仓与 ETF 小幅收缩，未见单边失控波动。",
-    "watch_zh": "盯 2026-03-18 下一场 FOMC（含 SEP）的走廊与点阵中枢 · 声明后续对通胀回 2% 的措辞是否加码 · 反应窗外量价能否延续 T 日成交放大、价格窄幅特征",
-    "status_zh": "反应中（数据至 T+231/3）",
+    "narrative_zh": "决议日T（2026-01-28）盘面：BTC +0.06%，ETH -0.53%，永续成交110.9亿（+6.5%），OI -0.36%，BTC资金费率7.9%。\n同步参考：ES -0.02%，VIX +0.00%，DXY +0.24%，BTC ETF -0.20亿。\n会前走廊3.75–4%，会后落地3.5–3.75%、降息约25bp（生效标注2025-12-11），量价在反应窗里按上表幅度展开，未见单边极端拉伸。",
+    "watch_zh": "盯声明后续表述与通胀路径措辞、走廊是否站稳3.5–3.75%、盘面量价能否消化本次25bp、下一钉2026-03-18决议。",
+    "status_zh": "反应中（数据至 T+232/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -152,11 +148,11 @@
     "next_fomc": {
       "date": "2026-03-18",
       "id": "fomc_2026_03",
-      "name_zh": "FOMC 利率决议（含经济预测 SEP）"
+      "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2026-01-28",
       "pre_n": 3,
       "post_n": 3,
@@ -172,11 +168,12 @@
           "oi_chg_pct": -0.356,
           "perp_turnover_usd": 11091286350.5205,
           "perp_turnover_chg_pct": 6.46,
-          "funding_ann_pct": null,
+          "funding_ann_pct": 7.895,
           "eth_funding_ann_pct": null,
-          "es_ret_1d": null,
-          "vix_ret_1d": null,
-          "dxy_ret_1d": null,
+          "es_ret_1d": -0.018,
+          "nq_ret_1d": 0.319,
+          "vix_ret_1d": 0.0,
+          "dxy_ret_1d": 0.239,
           "btc_etf_net_usd": -19644889.0,
           "driver": false,
           "btc_s": "+0.06%",
@@ -184,10 +181,11 @@
           "oi_s": "-0.36%",
           "perp_s": "110.9 亿",
           "perp_chg_s": "+6.5%",
-          "fund_s": null,
-          "es_s": null,
-          "vix_s": null,
-          "dxy_s": null,
+          "fund_s": "7.9%",
+          "es_s": "-0.02%",
+          "nq_s": "+0.32%",
+          "vix_s": "+0.00%",
+          "dxy_s": "+0.24%",
           "etf_s": "-0.20 亿",
           "href": "daily_20260128.html"
         }
@@ -290,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Beth M. Hammack; Philip N. Jefferson; Neel Kashkari; Lorie K. Logan; and Anna Paulson. Voting against this action were Stephen I. Miran and Christopher J. Waller, who preferred to lower the t…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:59:06Z",
+    "generated_at": "2026-09-18T02:41:47Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -306,11 +304,12 @@
       "oi_chg_pct": -0.356,
       "perp_turnover_usd": 11091286350.5205,
       "perp_turnover_chg_pct": 6.46,
-      "funding_ann_pct": null,
+      "funding_ann_pct": 7.895,
       "eth_funding_ann_pct": null,
-      "es_ret_1d": null,
-      "vix_ret_1d": null,
-      "dxy_ret_1d": null,
+      "es_ret_1d": -0.018,
+      "nq_ret_1d": 0.319,
+      "vix_ret_1d": 0.0,
+      "dxy_ret_1d": 0.239,
       "btc_etf_net_usd": -19644889.0,
       "driver": false,
       "btc_s": "+0.06%",
@@ -318,16 +317,17 @@
       "oi_s": "-0.36%",
       "perp_s": "110.9 亿",
       "perp_chg_s": "+6.5%",
-      "fund_s": null,
-      "es_s": null,
-      "vix_s": null,
-      "dxy_s": null,
+      "fund_s": "7.9%",
+      "es_s": "-0.02%",
+      "nq_s": "+0.32%",
+      "vix_s": "+0.00%",
+      "dxy_s": "+0.24%",
       "etf_s": "-0.20 亿",
       "href": "daily_20260128.html"
     }
   ],
   "href": "event_fomc_2026_01.html",
-  "generated_at": "2026-09-17T04:59:25Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:42:06Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }

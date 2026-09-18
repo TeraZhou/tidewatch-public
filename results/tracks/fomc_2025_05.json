@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+497/3）",
+  "status_zh": "反应中（数据至 T+498/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -103,17 +103,17 @@
     "event_id": "fomc_2025_05",
     "event_date": "2025-05-07",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "走廊下移约 25bp → 4.25–4.5% · 数据截至 **2026-09-16**（T−1 完整日）",
-    "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n**SEP（经济预测摘要）** 只在部分会次附带：委员对增长、失业、通胀和未来利率路径的预测；市场说的「点阵图」多在这里。\n**本场：常规决议场**（日历未标 SEP）；主信息看走廊与声明，不假装有点阵表。\n下一钉：**2025-06-18**（FOMC 利率决议（含经济预测 SEP））。",
-    "attitude_zh": "**态度：偏松一档。** 走廊下移约 25bp → 4.25–4.5% 声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）。",
+    "lead_zh": "本次偏松一档：联邦基金利率走廊下移约 25bp 至 4.25–4.5%。",
+    "primer_zh": "FOMC 每年约召开 8 次，主要定联邦基金利率目标走廊并发布政策声明。本次已将走廊由 4.5–4.75% 下调约 25bp 至 4.25–4.5%。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。下一钉为 2025-06-18 的 FOMC 利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp 至 4.25–4.5%，声明仍强调通胀偏高并指向更快回到 2% 物价目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,15 +130,11 @@
       {
         "label_zh": "生效",
         "text": "2024-12-19"
-      },
-      {
-        "label_zh": "SEP",
-        "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "**决议日 2025-05-07**：无币圈异常驱动槽。\n**读法：** 官方态度 **偏松一档**（走廊下移约 25bp → 4.25–4.5%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
-    "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2025-06-18**",
-    "status_zh": "反应中（数据至 T+497/3）",
+    "narrative_zh": "决议结果已落地：上次走廊 4.5–4.75%，本次走廊 4.25–4.5%，动作为降息约 25bp，生效标注为 2024-12-19。\n会前宽表在本场 T 日量价字段均为空，无可用的会前已走幅度可并置；会后读法以结果短表为准——走廊下移约 25bp，态度落在偏松一档，声明侧仍点出通胀偏高并指向更快回到 2% 目标。\n反应窗内请直接对照走廊新位置与声明措辞，勿外推未给出的涨跌或成交变化。",
+    "watch_zh": "盯新走廊 4.25–4.5% 是否站稳、声明里通胀与 2% 目标表述的后续微调，以及盘面在反应窗的承接；下一钉 2025-06-18 FOMC。",
+    "status_zh": "反应中（数据至 T+498/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 4.25–4.5%",
@@ -152,11 +148,11 @@
     "next_fomc": {
       "date": "2025-06-18",
       "id": "fomc_2025_06",
-      "name_zh": "FOMC 利率决议（含经济预测 SEP）"
+      "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2025-05-07",
       "pre_n": 3,
       "post_n": 3,
@@ -175,6 +171,7 @@
           "funding_ann_pct": null,
           "eth_funding_ann_pct": null,
           "es_ret_1d": null,
+          "nq_ret_1d": null,
           "vix_ret_1d": null,
           "dxy_ret_1d": null,
           "btc_etf_net_usd": null,
@@ -186,6 +183,7 @@
           "perp_chg_s": null,
           "fund_s": null,
           "es_s": null,
+          "nq_s": null,
           "vix_s": null,
           "dxy_s": null,
           "etf_s": null,
@@ -290,9 +288,9 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Neel Kashkari; Adriana D. Kugler; Alberto G. Musalem; and Christopher J. Waller. Neel Kashkari voted as an alternate member at this meeting."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:55:33Z",
-    "narrative_source": "program",
-    "llm_error": "timed out"
+    "generated_at": "2026-09-18T02:39:11Z",
+    "narrative_source": "llm",
+    "llm_error": null
   },
   "nodes": [
     {
@@ -309,6 +307,7 @@
       "funding_ann_pct": null,
       "eth_funding_ann_pct": null,
       "es_ret_1d": null,
+      "nq_ret_1d": null,
       "vix_ret_1d": null,
       "dxy_ret_1d": null,
       "btc_etf_net_usd": null,
@@ -320,6 +319,7 @@
       "perp_chg_s": null,
       "fund_s": null,
       "es_s": null,
+      "nq_s": null,
       "vix_s": null,
       "dxy_s": null,
       "etf_s": null,
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_05.html",
-  "generated_at": "2026-09-17T04:57:19Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:39:33Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }

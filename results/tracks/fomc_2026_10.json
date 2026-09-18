@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "会前（数据截至 2026-09-16）",
+  "status_zh": "会前（数据截至 2026-09-17）",
   "result_ok": false,
   "result_block": null,
   "a1": {
@@ -14,21 +14,21 @@
     "event_id": "fomc_2026_10",
     "event_date": "2026-10-28",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": false,
     "has_sep": false,
     "phase": "pre",
-    "badge_zh": "会前 · T−42",
-    "badge_en": "Pre · T−42",
-    "headline_zh": "FOMC · 会前（还剩 42 天）",
-    "lead_zh": "距 2026 年 10 月 28 日决议仍有约 42 天，会前观察期数据截至 9 月 16 日。",
-    "primer_zh": "美联储每年大约举行 8 次 FOMC 会议，决定联邦基金利率目标区间。SEP 是经济预测摘要与点阵图，汇总委员对增长、通胀、失业及未来利率路径的看法。本场 10 月决议无 SEP。点阵细数未解析，不编路径点。下一钉为 12 月 9 日 FOMC，将含经济预测 SEP。",
+    "badge_zh": "会前 · T−41",
+    "badge_en": "Pre · T−41",
+    "headline_zh": "FOMC · 会前（还剩 41 天）",
+    "lead_zh": "距 2026 年 10 月 28 日决议还有 41 天，数据截至 9 月 17 日的会前观察期。",
+    "primer_zh": "FOMC 一年大约开 8 次会，每次给出联邦基金利率目标走廊并发布声明。本场定在 10 月 28 日。再下一钉是 12 月 9 日的利率决议。会前只看倒计时与已公布数据，不预判走廊结果。",
     "attitude_zh": "",
     "result_lines": [],
-    "narrative_zh": "会前阶段（terminal=false），宽表按 T−1 截断且当前 wide_rows 为空，无已给出的具体涨跌幅或成交额可陈。\n数据截至 2026-09-16，距 10 月 28 日决议 T−42，仅能确认处于会前窗口，不涉及任何已落地的利率走廊结果。",
-    "watch_zh": "盯 10 月 28 日决议公布 · 会前就业与通胀数据陆续释放 · 下一场 12 月 9 日含 SEP 的会议",
-    "status_zh": "会前（数据截至 2026-09-16）",
+    "narrative_zh": "当前为会前 T−41 阶段，数据截至 2026-09-17。宽表无额外量价行可引用，因此本场叙事只落在日程本身：距离 10 月 28 日决议还剩 41 天，市场处于常规会前等待窗口。不涉及未给出的涨跌幅度或成交额。下一观察锚点是决议当天的走廊与声明，以及随后的 12 月 9 日会议。",
+    "watch_zh": "盯 10 月 28 日走廊与声明原文、决议后盘面反应；再往后看 12 月 9 日下一钉。",
+    "status_zh": "会前（数据截至 2026-09-17）",
     "stance": {
       "label_zh": "",
       "detail_zh": "",
@@ -37,11 +37,11 @@
     "next_fomc": {
       "date": "2026-12-09",
       "id": "fomc_2026_12",
-      "name_zh": "FOMC 利率决议（含经济预测 SEP）"
+      "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2026-10-28",
       "pre_n": 3,
       "post_n": 3,
@@ -50,13 +50,13 @@
     "result_block": null,
     "statement_bullets": null,
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T05:01:01Z",
+    "generated_at": "2026-09-18T02:47:47Z",
     "narrative_source": "llm",
     "llm_error": null
   },
   "nodes": [],
   "href": "event_fomc_2026_10.html",
-  "generated_at": "2026-09-17T05:01:28Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:48:12Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }

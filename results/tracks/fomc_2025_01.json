@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+595/3）",
+  "status_zh": "反应中（数据至 T+596/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -103,17 +103,17 @@
     "event_id": "fomc_2025_01",
     "event_date": "2025-01-29",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "会后定调偏松一档：走廊下移约25bp至4.25–4.5%。",
-    "primer_zh": "FOMC一年大约开八次会，决定联邦基金利率走廊并发布声明。SEP是经济预测摘要，委员对增长、失业、通胀和利率路径的点阵展望，本场未标SEP、点阵细数未解析。本次动作为降息约25bp，上次走廊4.5–4.75%，本次4.25–4.5%，生效标注2024-12-19。下一钉是2025-03-19的FOMC利率决议（含经济预测SEP）。",
-    "attitude_zh": "偏松一档，走廊下移约25bp至4.25–4.5%。",
+    "lead_zh": "走廊下移约25bp至4.25–4.5%，站位偏松一档。",
+    "primer_zh": "FOMC每年约开8次会，主要标定联邦基金利率走廊并发布声明。本次动作已落地为降息约25bp，新走廊4.25–4.5%。声明摘意指向更快回到2%物价目标，仍框在双使命内。下一钉是2025年3月19日的FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%，指向更快回到2%物价目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,15 +130,11 @@
       {
         "label_zh": "生效",
         "text": "2024-12-19"
-      },
-      {
-        "label_zh": "SEP",
-        "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次下移至4.25–4.5%，动作降息约25bp，态度偏松一档。\n声明钩子指向更快回到2%物价目标，仍框在双使命内。本场无SEP可对读。\n反应窗数据行（决议日T）量价与资金字段均为空，无表内具体涨跌幅或亿元级流动可并置；只呈现走廊与动作本身。",
-    "watch_zh": "下一场2025-03-19含SEP·盯新点阵与声明措辞是否延续偏松·走廊与双使命表述变化",
-    "status_zh": "反应中（数据至 T+595/3）",
+    "narrative_zh": "会前走廊为4.5–4.75%。\n会后并置：动作降息约25bp，本次走廊落到4.25–4.5%，生效标注2024-12-19。\n态度与结果一致，偏松一档；声明摘意强调更快回到2%物价目标，同时仍框在双使命内。\n决议日宽表量价字段均为空，无额外百分比或亿元级幅度可对读。",
+    "watch_zh": "盯4.25–4.5%走廊是否稳住、声明后续措辞变化，以及盘面量价对照；下一钉2025年3月19日决议。",
+    "status_zh": "反应中（数据至 T+596/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 4.25–4.5%",
@@ -152,11 +148,11 @@
     "next_fomc": {
       "date": "2025-03-19",
       "id": "fomc_2025_03",
-      "name_zh": "FOMC 利率决议（含经济预测 SEP）"
+      "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2025-01-29",
       "pre_n": 3,
       "post_n": 3,
@@ -175,6 +171,7 @@
           "funding_ann_pct": null,
           "eth_funding_ann_pct": null,
           "es_ret_1d": null,
+          "nq_ret_1d": null,
           "vix_ret_1d": null,
           "dxy_ret_1d": null,
           "btc_etf_net_usd": null,
@@ -186,6 +183,7 @@
           "perp_chg_s": null,
           "fund_s": null,
           "es_s": null,
+          "nq_s": null,
           "vix_s": null,
           "dxy_s": null,
           "etf_s": null,
@@ -290,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T04:54:54Z",
+    "generated_at": "2026-09-18T02:38:04Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -309,6 +307,7 @@
       "funding_ann_pct": null,
       "eth_funding_ann_pct": null,
       "es_ret_1d": null,
+      "nq_ret_1d": null,
       "vix_ret_1d": null,
       "dxy_ret_1d": null,
       "btc_etf_net_usd": null,
@@ -320,6 +319,7 @@
       "perp_chg_s": null,
       "fund_s": null,
       "es_s": null,
+      "nq_s": null,
       "vix_s": null,
       "dxy_s": null,
       "etf_s": null,
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_01.html",
-  "generated_at": "2026-09-17T04:55:13Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:38:27Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }

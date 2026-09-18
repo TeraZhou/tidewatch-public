@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+49/3）",
+  "status_zh": "反应中（数据至 T+50/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -102,17 +102,17 @@
     "event_id": "fomc_2026_07",
     "event_date": "2026-07-29",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-09-16",
-    "calendar_today": "2026-09-17",
+    "data_as_of": "2026-09-17",
+    "calendar_today": "2026-09-18",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "会后定调偏松一档：走廊下移约25bp至3.5–3.75%。",
-    "primer_zh": "FOMC一年大约开8次利率决议，是美联储定政策利率走廊的主场。SEP是点阵图与经济预测摘要，用来看委员对未来利率路径、增长和通胀的分散看法。本场未标SEP，点阵细数未解析，没有路径点可对。下一钉是2026-09-16那场，含经济预测SEP。声明摘意强调通胀仍偏高，并指向更快回到2%物价目标。",
-    "attitude_zh": "态度偏松一档，走廊下移约25bp至3.5–3.75%，声明仍点出通胀偏高并指向更快回2%。",
+    "lead_zh": "本次降息约25bp，走廊由3.75–4%下移至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC一年大约开8次会，每次主要设定联邦基金利率走廊并发布声明。走廊与声明是当场锚点，不另做预测材料展开。下一钉是2026-09-16的FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。声明强调通胀仍偏高，指向更快回到2%物价目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -129,15 +129,11 @@
       {
         "label_zh": "生效",
         "text": "2025-12-11"
-      },
-      {
-        "label_zh": "SEP",
-        "text": "本场未标 SEP"
       }
     ],
-    "narrative_zh": "决议日落定：上次走廊3.75–4%，本次降至3.5–3.75%，动作降息约25bp（生效标注2025-12-11）。\nT日量价：BTC +0.11%，ETH -0.60%，OI +1.06%，BTC ETF 录得0.32亿。反应窗数据已拉长至T+49附近，本场无SEP可对点阵。",
-    "watch_zh": "盯下一场2026-09-16含SEP的决议与点阵更新 · 通胀回2%表述是否延续 · 走廊与量价是否继续按偏松一档定价",
-    "status_zh": "反应中（数据至 T+49/3）",
+    "narrative_zh": "决议日T：走廊从上次3.75–4%下调至本次3.5–3.75%，动作降息约25bp。\n当日BTC +0.11%，ETH -0.60%；OI +1.06%，BTC资金费率9.2%。ES -1.53%，VIX +13.45%，DXY -0.57%；BTC ETF 0.32亿。\n会前至会后并置看，利率走廊已下移落地，风险资产与波动率在T日给出上述幅度。",
+    "watch_zh": "继续盯声明措辞与盘面量价能否延续T日幅度；下一钉2026-09-16 FOMC的走廊与声明。",
+    "status_zh": "反应中（数据至 T+50/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -151,11 +147,11 @@
     "next_fomc": {
       "date": "2026-09-16",
       "id": "fomc_2026_09",
-      "name_zh": "FOMC 利率决议（含经济预测 SEP）"
+      "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-16",
-      "calendar_today": "2026-09-17",
+      "data_as_of": "2026-09-17",
+      "calendar_today": "2026-09-18",
       "event_date": "2026-07-29",
       "pre_n": 3,
       "post_n": 3,
@@ -171,11 +167,12 @@
           "oi_chg_pct": 1.06,
           "perp_turnover_usd": null,
           "perp_turnover_chg_pct": null,
-          "funding_ann_pct": null,
+          "funding_ann_pct": 9.2265,
           "eth_funding_ann_pct": null,
-          "es_ret_1d": null,
-          "vix_ret_1d": null,
-          "dxy_ret_1d": null,
+          "es_ret_1d": -1.527,
+          "nq_ret_1d": -2.077,
+          "vix_ret_1d": 13.454,
+          "dxy_ret_1d": -0.572,
           "btc_etf_net_usd": 32109894.0,
           "driver": false,
           "btc_s": "+0.11%",
@@ -183,10 +180,11 @@
           "oi_s": "+1.06%",
           "perp_s": null,
           "perp_chg_s": null,
-          "fund_s": null,
-          "es_s": null,
-          "vix_s": null,
-          "dxy_s": null,
+          "fund_s": "9.2%",
+          "es_s": "-1.53%",
+          "nq_s": "-2.08%",
+          "vix_s": "+13.45%",
+          "dxy_s": "-0.57%",
           "etf_s": "0.32 亿",
           "href": "daily_20260729.html"
         }
@@ -287,7 +285,7 @@
       "Voting against the monetary policy action were Beth M. Hammack, Neel Kashkari, and Lorie K. Logan, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-17T05:00:21Z",
+    "generated_at": "2026-09-18T02:44:32Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -303,11 +301,12 @@
       "oi_chg_pct": 1.06,
       "perp_turnover_usd": null,
       "perp_turnover_chg_pct": null,
-      "funding_ann_pct": null,
+      "funding_ann_pct": 9.2265,
       "eth_funding_ann_pct": null,
-      "es_ret_1d": null,
-      "vix_ret_1d": null,
-      "dxy_ret_1d": null,
+      "es_ret_1d": -1.527,
+      "nq_ret_1d": -2.077,
+      "vix_ret_1d": 13.454,
+      "dxy_ret_1d": -0.572,
       "btc_etf_net_usd": 32109894.0,
       "driver": false,
       "btc_s": "+0.11%",
@@ -315,16 +314,17 @@
       "oi_s": "+1.06%",
       "perp_s": null,
       "perp_chg_s": null,
-      "fund_s": null,
-      "es_s": null,
-      "vix_s": null,
-      "dxy_s": null,
+      "fund_s": "9.2%",
+      "es_s": "-1.53%",
+      "nq_s": "-2.08%",
+      "vix_s": "+13.45%",
+      "dxy_s": "-0.57%",
       "etf_s": "0.32 亿",
       "href": "daily_20260729.html"
     }
   ],
   "href": "event_fomc_2026_07.html",
-  "generated_at": "2026-09-17T05:00:37Z",
-  "as_of": "2026-09-17",
-  "data_as_of": "2026-09-16"
+  "generated_at": "2026-09-18T02:46:17Z",
+  "as_of": "2026-09-18",
+  "data_as_of": "2026-09-17"
 }
