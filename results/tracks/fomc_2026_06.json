@@ -109,9 +109,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "联储将联邦基金利率走廊下移约25bp至3.5–3.75%，站位偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次走廊由3.75–4%下调至3.5–3.75%，动作是降息约25bp。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉是2026年7月29日的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
+    "lead_zh": "会后偏松一档落地：走廊下移约25bp至3.5–3.75%，声明仍点出通胀偏高、指向更快回到2%目标。",
+    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已把走廊从3.75–4%下调约25bp至3.5–3.75%。下一钉盯2026-07-29那次决议与声明。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%，声明仍强调通胀偏高、指向更快回到2%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,8 +130,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊3.75–4%，本次3.5–3.75%，降息约25bp。\n决议日T盘面：BTC -1.77%，ETH -2.36%，永续OI -3.02%，BTC资金费率2.9%，标普ES -1.25%，VIX +12.37%，美元DXY +0.55%，BTC ETF净流出0.82亿。反应窗内量价同步给出上述幅度。",
-    "watch_zh": "盯声明里通胀仍偏高、更快回到2%目标的表述如何被定价；走廊3.5–3.75%的实际传导；盘面续动与下一钉2026-07-29决议。",
+    "narrative_zh": "决议日T盘面同步走弱：BTC -1.77%、ETH -2.36%，永续OI -3.02%，BTC资金费率仍报2.9%。美股期货ES -1.25%，VIX +12.37%，美元DXY +0.55%，BTC ETF净流出约0.82亿。\n走廊由上次3.75–4%下移至本次3.5–3.75%，动作记为降息约25bp；声明侧强调通胀仍偏高，并指向更快回到2%物价目标。反应窗数据已记到决议当日量价与资金流向。",
+    "watch_zh": "盯走廊是否稳在3.5–3.75%、声明后续措辞、盘面波动与资金续流，以及下一钉2026-07-29决议。",
     "status_zh": "反应中（数据至 T+94/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -282,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-20T02:46:04Z",
+    "generated_at": "2026-09-20T03:49:14Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -321,7 +321,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-09-20T02:46:34Z",
+  "generated_at": "2026-09-20T03:49:28Z",
   "as_of": "2026-09-20",
   "data_as_of": "2026-09-19"
 }
