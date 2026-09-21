@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "决议将走廊自 4.5–4.75% 下移约 25bp 至 4.25–4.5%，站位偏松一档。",
-    "primer_zh": "FOMC 每年约开 8 次会，主要定联邦基金利率目标走廊并发声明。本次走廊已调至 4.25–4.5%，动作是降息约 25bp。声明摘意指向更快回到 2% 物价目标，仍框在双使命内。下一钉为 2025-05-07 的 FOMC 利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约 25bp → 4.25–4.5%。",
+    "lead_zh": "会后定调偏松一档，联邦基金利率走廊下移约 25bp 至 4.25–4.5%。",
+    "primer_zh": "FOMC 一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从 4.5–4.75% 下调约 25bp 至 4.25–4.5%。声明摘意指向更快回到 2% 物价目标，仍框在双使命内。下一钉是 2025-05-07 的 FOMC 利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp，至 4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "结果表对读：上次走廊 4.5–4.75%，本次走廊 4.25–4.5%，动作降息约 25bp，生效标注 2024-12-19。\n会后反应窗宽表仅决议日 T 一行，BTC、ETH、永续、OI、资金费率、ES、VIX、DXY、BTC ETF 均为空，暂无量价幅度可并置；叙事只落在走廊下移约 25bp 与偏松一档态度，与 result_lines/stance 一致。",
-    "watch_zh": "盯走廊是否稳在 4.25–4.5%、声明是否延续更快回到 2% 目标的表述，以及下一钉 2025-05-07 前的盘面与流动性。",
+    "narrative_zh": "决议落地：上次走廊 4.5–4.75%，本次走廊 4.25–4.5%，动作降息约 25bp。\n生效标注为 2024-12-19。反应窗内量价宽表当日字段多为空，未见可引用的具体涨跌幅或亿元级资金数字，故只并置走廊结果本身：从上一档下移一档至新区间。\n态度与结果短表一致，属偏松一档操作。",
+    "watch_zh": "盯新走廊 4.25–4.5% 是否站稳、声明里对物价目标与双使命的后续表述，以及盘面在反应窗的延续；下一钉 2025-05-07 FOMC。",
     "status_zh": "反应中（数据至 T+550/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; and Jeffrey R. Schmid. Voting against this action was Christopher J. Waller, who supported no…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-21T03:08:18Z",
+    "generated_at": "2026-09-21T07:12:57Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_03.html",
-  "generated_at": "2026-09-21T03:08:44Z",
+  "generated_at": "2026-09-21T07:13:12Z",
   "as_of": "2026-09-21",
   "data_as_of": "2026-09-20"
 }

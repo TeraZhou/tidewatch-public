@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.75–4%",
-    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约25bp至3.75–4%。",
-    "primer_zh": "FOMC一年大约开八次会，每次给出联邦基金利率目标走廊并发布声明。本次已将走廊从4–4.25%下调约25bp至3.75–4%，生效日2025-10-30。声明摘意强调通胀仍偏高，并指向更快回到2%物价目标。下一钉落在2025-12-10的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.75–4%，声明仍点出通胀偏高并指向更快回到2%目标。",
+    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约 25bp 至 3.75–4%，自 10 月 30 日起生效。",
+    "primer_zh": "FOMC 一年大约开八次会，每次给出联邦基金利率目标走廊并发布声明。本次已把走廊从上次的 4–4.25% 下调约 25bp 至 3.75–4%。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。下一钉是 2025-12-10 的 FOMC 利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp → 3.75–4%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2025-10-30"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊4–4.25%，本次走廊3.75–4%，动作降息约25bp，2025-10-30起生效。\n会前宽表在本场T日量价字段均为空，反应窗内未见可引用的BTC/ETH、永续、OI、资金费率、ES、VIX、DXY或BTC ETF变动幅度，故本场叙事只锚定走廊下移本身与声明钩子，不做未给出的涨跌拼接。\n态度与结果短表一致：偏松一档，走廊下移约25bp。",
-    "watch_zh": "盯新走廊3.75–4%是否站稳、声明后续表述有无微调、盘面在反应窗的量价承接，以及下一钉2025-12-10决议。",
+    "narrative_zh": "决议日 T（2025-10-29）落地：上次走廊 4–4.25%，本次走廊 3.75–4%，动作为降息约 25bp，生效日 2025-10-30。\n会前至会后并置，核心变化就是这一档约 25bp 的走廊下移；本场宽表未给出可引用的 BTC/ETH、永续、OI、资金费率、ES、VIX、DXY 或 BTC ETF 净流入等量价数字，故不作额外涨跌叙述。\n态度与结果短表一致：偏松一档，走廊已按约 25bp 下移并挂上新区间。",
+    "watch_zh": "盯新走廊 3.75–4% 是否稳固、声明里通胀仍偏高与更快回到 2% 目标的表述如何被市场消化，以及盘面在生效日之后的延续；下一钉 2025-12-10 FOMC。",
     "status_zh": "反应中（数据至 T+326/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target r…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-21T03:09:57Z",
+    "generated_at": "2026-09-21T07:14:13Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_10.html",
-  "generated_at": "2026-09-21T03:10:12Z",
+  "generated_at": "2026-09-21T07:14:28Z",
   "as_of": "2026-09-21",
   "data_as_of": "2026-09-20"
 }

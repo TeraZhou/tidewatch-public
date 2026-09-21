@@ -2,8 +2,8 @@
   "schema_version": "narrative_v0.3",
   "report_id": "monthly_202608",
   "model": "grok-4.5",
-  "prompt_version": "narrative_prompt_v1-monthly",
-  "generated_at": "2026-09-20T08:35:46Z",
+  "prompt_version": "narrative_prompt_v1-monthly-insight",
+  "generated_at": "2026-09-21T04:04:44Z",
   "i18n": {
     "default": "zh",
     "languages": [
@@ -13,8 +13,8 @@
   },
   "l0": {
     "one_liner": {
-      "zh": "加密与传统呈「同向 risk-on」：BTC 窗口 +25.0%，趋势 强趋势上涨，杠杆 清算驱动（上涨段挤压迹象）；实现波动 高实现波动，期权相对 RV IV 与 RV 大致匹配；现货 ETF 通道「强流入」（BTC 月净流 +35.39 亿美金）。",
-      "en": "Crypto vs TradFi reads as “Risk-On Sync”: BTC +25.0%, trend Strong Uptrend, leverage Liquidation-Driven Squeeze; realized vol High Realized Vol, options vs RV IV Fair (vs RV); spot ETF channel “strong inflow” (BTC month net +3.54B)."
+      "zh": "本月加密走出大幅上攻：BTC约+25%、ETH更强约+32%，与美股温和上扬同属风险偏好回暖，但幅度明显更大；月中出现过一波加速与清算峰值，现货ETF通道同步录得强流入。",
+      "en": "Crypto staged a strong advance this month: BTC roughly +25%, ETH stronger near +32%, aligned with mild equity risk-on but far larger in scale; a mid-month acceleration and liquidation peak sat beside strong spot ETF channel inflows."
     },
     "three_numbers": {
       "zh": [
@@ -31,12 +31,12 @@
       ]
     },
     "risk": {
-      "zh": "高实现波动下，回吐与拥挤释放仍是主要风险叙事；杠杆读法：盯拥挤线（费率路径+OI）与出清线（2026-08-21 峰是否双高、次日是否退烧）。",
-      "en": "With high realized vol, pullback and crowding unwind remain the main risk story; Leverage read: crowding (funding path+OI) and flush (2026-08-21 peak dual-high? next-day cool-down?)."
+      "zh": "实现波动仍偏高，杠杆侧曾现上涨段挤压痕迹，月末资金费率年化约+9.3%显示多头仍愿付费；若上攻节奏放缓，拥挤与波动容易一起回吐。",
+      "en": "Realized vol stayed elevated and leverage showed upside-squeeze traces; end-month funding near +9.3% ann. means longs still pay to stay long—if the advance cools, crowding and vol can unwind together."
     },
     "watch": {
-      "zh": "盯现货 ETF 净申赎能否延续、资金费率与关键价格平台。",
-      "en": "Watch whether spot ETF net flows persist, plus funding and key price levels."
+      "zh": "下月优先看ETF净流能否维持、资金费率与未平仓是否继续松动，以及实现波动是否从高位回落。",
+      "en": "Next month prioritize whether ETF net flows hold, whether funding and open interest ease further, and whether realized vol cools from elevated levels."
     },
     "attention_level": "S3",
     "attention_name": {
@@ -68,44 +68,44 @@
   },
   "sections": {
     "compare": {
-      "zh": "本月加密 BTC +25.0%，美股 ES +2.7% / NQ +3.8%，黄金 +10.3%。联动标签：同向 risk-on。现货 ETF 通道 BTC 月净流 +35.39 亿美金（强流入），与杠杆结构分开读。若全球风险偏好一致，常看到股和币同向；若相反，主引擎更可能在加密内部（杠杆、清算、情绪、现货通道），传统市场只提供背景板。",
-      "en": "Crypto BTC +25.0%; US equities ES +2.7% / NQ +3.8%; gold +10.3%. Link label: Risk-On Sync. Spot ETF channel BTC month net +3.54B (strong inflow); read apart from perp leverage. Global risk-on often moves stocks and crypto together; when they diverge, the main engine is more often inside crypto (leverage, liquidations, sentiment, spot ETF pipe), with TradFi as backdrop."
+      "zh": "本月加密与传统大致同向偏暖：美股期货ES约+2.7%、NQ约+3.8%，VIX约-9.8%，美元指数几乎走平、美债收益率略下、黄金约+10.3%。BTC/ETH涨幅远超股指，属于「同向风险偏好、加密弹性更大」的对照，而不是完全脱钩。",
+      "en": "Crypto and TradFi leaned warmer in the same direction this month: ES roughly +2.7%, NQ +3.8%, VIX about -9.8%, dollar nearly flat, yields a touch lower, gold about +10.3%. BTC/ETH gains far outpaced equities—a same-way risk-on read with much higher crypto beta, not a full decoupling."
     },
     "path": {
-      "zh": "BTC 自基点收盘 62887.88 至期末 78581.29，窗口收益 +25.0%。最强单日 +7.3%（2026-08-21），最弱 -3.0%（2026-08-28）。 ETH 同期 +32.5%，弹性往往更大。",
-      "en": "BTC from baseline close 62887.88 to 78581.29, window +25.0%. Best day +7.3% (2026-08-21); weakest -3.0% (2026-08-28). ETH same window +32.5% (often higher beta)."
+      "zh": "价格路径不是匀速爬坡。月内前段偏震荡整理，中段（约8月17–23前后）出现大幅加速上攻，随后高位附近再度收窄波动、接近走平，月末又带一点高位震荡上沿。全月BTC窗口收益约+25.0%，ETH约+32.5%，主升段集中、前后更像蓄势与消化。",
+      "en": "The path was not a steady grind. Early month leaned choppy, mid-month (around Aug 17–23) saw a sharp acceleration higher, then range tightened near the highs with a near-flat stretch, and the month closed with some high-level chop. Full-month BTC about +25.0%, ETH about +32.5%—gains concentrated in the surge window, bookended by digestion."
     },
     "leverage": {
-      "zh": "标签：清算驱动（上涨段挤压迹象）。\n① 拥挤线（OI + 资金费率年化）：月初约 +4.53%/yr → 期末约 +9.31%/yr，租金全月抬升；OI 月变约 -1.41%（109543 → 108003），库存月内回落，偏去杠杆。\n② 出清线（OI + 清算）：主峰日 08-21（2026-08-21）；峰值约 11.13× 月内中位清算量；价格同日约 +7.3%；当日 OI 约 106118；但 OI 月高在 2026-08-14（约 112008），峰值日并非双高；峰值日 OI 较前一日下降，偏出清/去库存与清算同日。次日 2026-08-22：OI 自峰值日回落至约 105834、funding 年化约 +10.95%/yr、价格约 -1.6%。 side 语义未核验，此处只并陈结构，不判多空谁爆。\n③ 量旁证（永续成交额=活跃度）：月合计约 3081.19 亿美金，环比约 +13.0%，活跃度中性；量侧用于核对热闹程度，不拆多空。\n收句：拥挤线路径 + 出清线「峰值双高/事件尖峰」共同支撑「清算驱动（上涨段挤压迹象）」；禁止把清算/OI/funding 写成涨跌原因。 side 语义未核验，只并陈结构。",
-      "en": "Label: liquidation_driven_squeeze.\n① Crowding (OI + funding ann.): ~+4.53%/yr → ~+9.31%/yr — rent rose over the month; OI month change ~-1.41% (109543 → 108003), inventory down on the month — lean deleveraging.\n② Flush (OI + liquidations): peak day 2026-08-21; peak ~11.13× median liq qty; price that day ~+7.3%; OI that day ~106118; OI month-high was 2026-08-14 (~112008), not a dual-high peak day; OI down vs prior day — flush/de-stocking with liquidations. Next day 2026-08-22: OI eased to ~105834; funding ~+10.95%/yr; price ~-1.6%. Side semantics unverified — structure only, no long/short blame.\n③ Volume side (perp turnover = activity): month sum ~308.12B, WoW ~+13.0%, activity normal; activity only, not long/short.\nClose: lines ①–③ check whether label “liquidation_driven_squeeze” holds; do not write liq/OI/funding as the cause of price."
+      "zh": "杠杆侧可以按「拥挤→出清痕迹→成交热闹度」来读。月末永续资金费率年化约+9.31%，多头仍在为借杠杆付一点拥挤租，但幅度不算极端。全月未平仓规模约-1.4%，略有收缩，说明涨势并非单纯靠仓位堆叠放大。清算笔数峰值出现在8月21日（约3379笔），落在月中加速段附近，更像上涨过程中的空头/被动仓出清痕迹，不宜直接说成涨跌的「原因」。永续成交额合计约3081亿美金、较上月口径活跃度约+13%，现货合计约336亿美金、约+6%，两边都偏正常偏热，量能跟上了价格弹性，但没有夸张到失控。整体是：有过挤压式出清的痕迹，费率正、OI略降，杠杆没有全面失控式拥挤。",
+      "en": "Leverage reads as crowding → clearance traces → turnover heat. End-month perp funding about +9.31% annualized means longs still pay a modest crowding rent, not an extreme one. Open interest finished about -1.4% on the month, a slight shrink, so the rally was not pure position pile-on. Liquidation count peaked around Aug 21 (about 3,379), near the mid-month acceleration—more like short/passive clearance in an upside stretch than a simple “cause” of the move. Perp turnover summed about $308.1B (activity up roughly 13% vs the prior-month lens), spot about $33.6B (up about 6%)—both normal-to-lively, volume kept up with price elasticity without looking runaway. Net: squeeze-style clearance traces, positive funding, slightly lower OI—crowding present but not a full blow-off."
     },
     "etf": {
-      "zh": "美现货 BTC ETF 本月合计净流入约 +35.39 亿美金（流入日 16、流出日 5），通道标签「强流入」；单日最大净流入约 +6.06 亿（8 月 20 日），最大净流出约 −2.02 亿（8 月 28 日）。ETH 现货 ETF 同步净流入约 +18.52 亿美金。累计余额口径 BTC 约 549.2 亿、ETH 约 130.9 亿美金（社区聚合、非发行人官方）。净申赎与杠杆、成交并陈观察，不把流入直接焊死为本月涨跌原因；现货合计成交约 336 亿美金，与通道活跃度同向偏暖。",
-      "en": "US spot BTC ETFs posted about +3.54B USD net inflow this month (16 inflow days, 5 outflow), channel labeled strong inflow; largest daily net about +606M (20 Aug), largest outflow about −202M (28 Aug). ETH spot ETFs added roughly +1.85B USD net. Cumulative totals near 54.92B BTC / 13.09B ETH USD (community aggregate, not issuer-official). Read flows beside leverage and turnover—do not weld inflows as the cause of this month’s returns; spot turnover ~33.60B USD sat in a similarly warm band."
+      "zh": "本月美现货BTC ETF合计净申赎约+35.39亿美金，属强流入通道：约16个流入日、5个流出日，单日最大净流入约6.06亿（8月20日）、单日最大净流出约-2.02亿（8月28日）；累计存量口径约549亿美金。ETH类约+18.52亿美金。现货成交额本月合计约336亿美金，可与通道流量并陈：一边是上市基金份额的美元净申赎，一边是交易所现货热闹程度，二者都偏活跃，但不把流入写成涨价原因。",
+      "en": "US spot BTC ETFs logged about +$3.54B net creations this month—a strong-inflow channel: roughly 16 inflow days vs 5 outflow, peak day about +$606M (Aug 20), trough about -$202M (Aug 28); cumulative about $54.9B. ETH-linked about +$1.85B. Spot exchange turnover summed about $33.6B—place beside the channel as activity, not as proof that flows “caused” price. Both the USD creation pipe and spot heat looked active."
     },
     "spot_volume": {
       "zh": "Binance 现货成交额（turnover 美金，程序月合计）：本月 <b>336.05 亿美金</b>，相对上完整周 +6.3%（活跃度「中性」；上月约 315.98 亿美金）。峰值日 2026-08-21（34.02 亿美金）。这是交易所现货「换手热闹程度」，与 ETF 净申赎同属现货世界、只并陈；对照永续周成交额 3081.19 亿美金——两者量级不同，**禁止相加**，也**不能**拆多空。",
       "en": "Binance spot turnover (USD, program month sum): this month <b>33.60B</b>, vs prior full week +6.3% (activity “normal”; prior ~31.60B). Peak day 2026-08-21 (3.40B). Spot tape busyness beside ETF net flow — same spot world, no sum with perp (308.12B); not a long/short split."
     },
     "vol_teach": {
-      "zh": "先分清两个「波动」：RV（已实现/历史波动）是后视镜——价格已经抖得有多厉害；IV（隐含波动率）是保险报价——期权市场觉得未来会抖多厉害。RV 偏高 = 刚走过的路很颠；RV 偏低 = 最近相对平静。IV 偏高 = 保险贵，市场愿为未来不确定性付更高价；IV 偏低 = 保险便宜。IV 持续抬升 = 保费在变贵；IV 回落 = 紧张定价在缓解。RV 抬头 = 实现波动在升温；RV 回落 = 颠簸在缓和。二者同向升温 = 又颠又贵；同向降温 = 整体变稳。IV 升而 RV 不高 = 预期/谨慎溢价可能先行；RV 高而 IV 降 = 实现仍猛但保费在退或滞后。核心看 IV−RV：保险相对「刚实现的颠簸」贵了还是便宜了。以下只描述环境，不是买卖建议。",
-      "en": "Two vols, not one: RV (realized) is the rear-view mirror—how rough price already was; IV (implied) is the insurance quote—how rough the options market prices the future. High RV = the road just traveled was bumpy; low RV = recent calm. High IV = expensive insurance; low IV = cheap insurance. Rising IV = insurance getting dearer; falling IV = stress premium easing. Rising RV = realized heat building; falling RV = bumps cooling. Both up = rough and expensive; both down = regime cooling. IV up / RV not extreme = caution or event premium may lead; RV hot / IV down = realized still fierce but insurance lagging or fading. Key gauge: IV−RV—rich or cheap insurance vs just-realized moves. Environment only—not trade advice."
+      "zh": "实现波动（RV）看的是过去一段时间价格实际蹦得有多厉害，像「已经发生的颠簸」。隐含波动（IV）来自期权价格，像市场愿意为未来颠簸付多少保费。IV明显高于RV时，期权相对偏贵；明显低于时，相对偏便宜；接近则大致匹配。",
+      "en": "Realized vol (RV) measures how hard price actually bounced—past bumps. Implied vol (IV) comes from options prices—what the market charges for future bumps. IV well above RV means options look relatively expensive; well below means relatively cheap; near each other means roughly fair."
     },
     "vol_week": {
-      "zh": "本期 BTC：RV（后视镜）窗口年化约 41.5%；IV（Deribit 保险报价）期末约 37.6%，自基点 35.6% 小幅抬升（+2.0 个百分点）。 ETH：IV 51.3% / RV 66.9%。",
-      "en": "This month BTC: RV (rear-view) ~41.5% ann.; IV (Deribit insurance) end ~37.6%; from baseline 35.6% edged up (+2.0 pct pts). ETH: IV 51.3% / RV 66.9%."
+      "zh": "本月实现波动偏高：BTC年化实现波动约41.5%，ETH约66.9%。月末BTC期权隐含波动约37.6%，与实现波动大致匹配（隐含减实现约-3.9个百分点），没有明显偏贵或偏便宜到极端。",
+      "en": "Realized vol ran elevated this month: BTC realized about 41.5% ann., ETH about 66.9%. End-month BTC implied vol about 37.6%, roughly matched to realized (IV−RV about -3.9 pts)—neither clearly rich nor cheap in the extreme."
     },
     "vol_combo": {
-      "zh": "IV 升而 RV 并未同步极高：保险在加价，但「刚实现的颠簸」还没那么夸张——偏谨慎/事件溢价或预期先行。 IV−RV 约 -3.9 个百分点：贵贱大致匹配。",
-      "en": "IV up while RV is not extreme: insurance re-priced higher before (or beyond) just-realized roughness. IV−RV ≈ -3.9 pct pts: roughly fair vs realized."
+      "zh": "合读：价格大涨、实现波动抬高，但月末IV并未大幅高于RV，说明期权保费没有在高波动之后明显溢价堆积；波动「发生了」，定价侧大致跟上而不是脱节。",
+      "en": "Together: a large price advance lifted realized vol, yet end-month IV did not sit far above RV—option premia did not pile into a rich premium after the move; vol happened, and pricing roughly kept pace rather than disconnecting."
     },
     "vol_price_iv": {
-      "zh": "本月价涨且 IV 也升：上涨并未让保险费降温，定价仍在为不确定性付费。",
-      "en": "Price up + IV up: the rally did not cool option insurance; uncertainty is still being priced."
+      "zh": "大涨月里实现波动抬升很常见；本月末IV略低于RV一点，更像「波动已经实现、保费未明显加价」，而不是恐慌式抢保险。",
+      "en": "Elevated realized vol is common in a strong-up month; IV slightly under RV at month-end reads more like “vol already delivered, premia not heavily marked up” than a scramble for insurance."
     },
     "vol_vix": {
-      "zh": "加密 IV 与 VIX（-9.8%）方向背离：币圈期权定价与美股紧张度未同步。仍勿把 VIX 读成加密 IV。",
-      "en": "Crypto IV diverged from VIX (-9.8%): option stress in crypto is not tracking US equities. Still never read VIX as crypto IV."
+      "zh": "传统侧VIX本月约-9.8%，股指波动预期在回落；加密实现波动却偏高。两边都偏「风险偏好回暖」，但加密价格弹性与已实现颠簸远大于股指，波动故事并不完全同一节奏。",
+      "en": "TradFi VIX fell about 9.8% this month as equity vol expectations eased; crypto realized vol stayed high. Both sides leaned risk-on, but crypto’s price elasticity and delivered bumps far exceeded equities—the vol stories were not identical in tempo."
     },
     "vol_tech": "source=Deribit option_volatility_kline · currency=BTC · iv_end=37.63 · iv_start=35.64 · iv_chg_pts=1.99 · rv_ann=41.53 method=log_return_stdev_sqrt_365 · iv_rv_spread_end=-3.9 · vol_premium=iv_fair · ETH iv=51.31 rv=66.94 · vix_ret=-9.756 · iv_vs_vix=opposite",
     "tradfi": {
@@ -231,66 +231,66 @@
       }
     },
     "tradfi_summary": {
-      "zh": "股 ES/NQ +2.7%/+3.8%，VIX -9.8%，DXY -0.1%，10Y -2.5bp，黄金 +10.3%。先分清背景与主引擎，避免用单一宏观指标硬套币价。VIX 与加密 IV 数字不可混用。",
-      "en": "Equities ES/NQ +2.7%/+3.8%; VIX -9.8%; DXY -0.1%; 10Y -2.5bp; gold +10.3%. Separate backdrop from main engine; don’t force one macro print onto coin price. Never mix VIX with crypto IV levels."
+      "zh": "传统资产本月偏风险偏好：股指期货温和上涨，VIX回落，美元几乎不动，十年期美债收益率约下行2.5个基点，黄金约+10.3%。整体是股债商品并不恐慌、偏暖的环境，加密涨幅显著更大。",
+      "en": "TradFi leaned risk-on: equity futures mildly higher, VIX lower, dollar nearly flat, 10Y yield about -2.5 bp, gold about +10.3%. A non-panicky, warmer backdrop across stocks/bonds/commodities—while crypto gains were much larger."
     },
     "three_conclusions": [
       {
-        "zh": "本月 BTC/ETH 收在强趋势上涨，并与股指温和收高、VIX 回落构成同向 risk-on，月度主线是风险偏好扩张而非加密独自脱钩。",
-        "en": "BTC/ETH closed the month in a strong uptrend alongside milder equity gains and a softer VIX—risk-on sync, not crypto-only decoupling."
+        "zh": "本月主线是加密大幅上攻（BTC约+25%、ETH约+32%），与美股温和risk-on同向，但弹性大得多；月中加速段贡献了主要涨幅。",
+        "en": "The month’s through-line was a large crypto advance (BTC ~+25%, ETH ~+32%), same direction as mild equity risk-on but with far higher beta; the mid-month surge delivered most of the gains."
       },
       {
-        "zh": "杠杆侧的清算峰值与中段加速同向，更像上涨段挤压痕迹；费率正、OI 略降，仓位总量并未随涨幅失控膨胀。",
-        "en": "Liquidation peaks aligned with the mid-month thrust, reading more as upside squeeze texture; funding positive, OI slightly down—positioning did not balloon unchecked with price."
+        "zh": "现货ETF呈强流入（BTC净流入约+35.39亿美金），可与偏热的现货/永续成交并陈；杠杆上费率正、OI略降、月中有过清算峰值，更像上涨中的出清痕迹而非全面失控。",
+        "en": "Spot ETFs showed strong inflow (BTC net about +$3.54B), set beside lively spot/perp turnover; leverage had positive funding, slightly lower OI, and a mid-month liquidation peak—clearance traces inside the rally, not a full blow-off."
       },
       {
-        "zh": "美现货 BTC ETF 本月强流入（约 +35.39 亿美金）与 ETH ETF 净流入并陈，现货通道与正常偏热的成交一起，构成与趋势月同向的流动性背景（并不焊死因果）。",
-        "en": "US spot BTC ETFs’ strong monthly inflow (~+3.54B USD) plus ETH ETF nets, beside normally warm turnover, form a liquidity backdrop aligned with the trend month (correlation noted, causation not welded)."
+        "zh": "实现波动偏高而月末IV与RV大致匹配；下月重点核对流入是否延续、拥挤租是否升温，以及高波动是否降温。",
+        "en": "Realized vol was elevated while end-month IV roughly matched RV; next month check whether inflows persist, crowding rent heats up, and whether high vol cools."
       }
     ],
     "watch_items": [
       {
         "id": "w1",
         "text": {
-          "zh": "资金费率年化 +9.31%/yr 能否回落？",
-          "en": "Can annualized funding (+9.31%/yr) ease?"
+          "zh": "下月美现货BTC ETF净流是否仍维持数亿至十亿级以上的累计净流入，而非转为明显净流出。",
+          "en": "Whether next month’s US spot BTC ETF net stays in cumulative multi-hundred-million to billion-plus inflow, rather than flipping to clear outflow."
         },
         "watchable": true,
-        "template_hint": null,
-        "rationale_zh": "",
-        "source": "template_fallback_item"
+        "template_hint": "etf_flow_persist",
+        "rationale_zh": "本月通道从温和跳到约+35.39亿强流入，是月度主线的重要并陈证据，下月能否延续直接改变「通道热度」叙事。",
+        "source": "llm_narrative"
       },
       {
         "id": "w2",
         "text": {
-          "zh": "价格能否站稳高位平台（期末约 78581）？",
-          "en": "Can price hold the high plateau (~78581)?"
+          "zh": "下月月末资金费率年化是否仍明显高于中性、未平仓是否止跌回升，从而显示杠杆拥挤重新堆积。",
+          "en": "Whether end-month funding stays clearly above neutral annualized and open interest stops falling and rebuilds—signaling leverage crowding restacking."
         },
         "watchable": true,
-        "template_hint": null,
-        "rationale_zh": "",
-        "source": "template_fallback_item"
+        "template_hint": "funding_ease",
+        "rationale_zh": "本月费率约+9.3%年化、OI约-1.4%，且月中有过清算峰值；若下月费率再抬、OI回升，拥挤风险会从「有痕迹」变成「再堆积」。",
+        "source": "llm_narrative"
       },
       {
-        "id": "w_etf",
+        "id": "w3",
         "text": {
-          "zh": "下期 BTC 现货 ETF 月净流能否维持本月量级（本月 +35.39 亿美金，姿态 强流入）？",
-          "en": "Next week: can BTC spot ETF net flow hold this month’s scale (+3.54B, strong inflow)?"
+          "zh": "下月BTC实现波动是否仍停留在约40%年化以上的偏高水平，或明显回落到更中性区间。",
+          "en": "Whether next month BTC realized vol remains elevated near 40%+ ann. or cools toward a more neutral band."
         },
         "watchable": true,
-        "template_hint": null,
-        "rationale_zh": "",
-        "source": "template_fallback_item"
+        "template_hint": "vol_still_high",
+        "rationale_zh": "本月RV约41.5%、价格弹性大，波动环境决定趋势段是否还「好跟」以及回撤会有多陡，是下月核对主线能否延续的硬指标。",
+        "source": "llm_narrative"
       }
     ],
     "strategy_env": {
       "matched": {
-        "zh": "· 趋势跟踪类：趋势标签为「强趋势上涨」，方向性叙事更顺。 窗口绝对收益约 25.0%，幅度不小。\n  （旁注：实现波动高或清算偏尖——即便趋势环境在，路径也可能很颠/拥挤。）",
-        "en": "· Trend-following: Trend label is “strong_uptrend”; directional backdrop is clearer. Window |return| ~25.0% is material.\n  (Note: high realized vol or liquidation spike — trend backdrop can still be a rough path.)"
+        "zh": "本月价格主线是顺方向的大幅上攻，并伴随中段加速与实现波动偏高，更贴近「顺势跟踪趋势段」一类环境，而不是来回削波段的震荡市假设。",
+        "en": "The month’s main line was a directional advance with a mid-month acceleration and elevated realized vol—closer to an environment that fits trend-following through the impulse than to a mean-reversion chop assumption."
       },
       "mismatched": {
-        "zh": "· 震荡/均值回归类：强趋势标签下，均值回归/纯震荡假设的条件更弱。",
-        "en": "· Mean-reversion / range: Under a strong-trend label, pure mean-reversion conditions are weaker."
+        "zh": "若假设价格会快速回到原区间、靠高抛低吸，本月中段单边加速与全月大涨会反复打脸这类路径；波动抬高时，逆势接刀的容错也更差。",
+        "en": "Assumptions that price would quickly snap back to a prior range and reward fade-the-move logic were repeatedly challenged by the mid-month one-way surge and full-month gains; higher vol also shrinks the margin for error on lean-against-trend fades."
       },
       "disclaimer": {
         "zh": "策略环境 = 条件匹配度，不是投资建议；不推荐具体产品，不给出仓位。",
@@ -309,7 +309,7 @@
             },
             "status": "match",
             "why": {
-              "zh": "趋势标签为「强趋势上涨」，方向性叙事更顺。 窗口绝对收益约 25.0%，幅度不小。",
+              "zh": "价格主线偏顺势上攻，方向性叙事更顺。 窗口绝对收益约 25.0%，幅度不小。",
               "en": "Trend label is “strong_uptrend”; directional backdrop is clearer. Window |return| ~25.0% is material."
             },
             "note": {
@@ -370,7 +370,7 @@
             },
             "status": "match",
             "why": {
-              "zh": "趋势标签为「强趋势上涨」，方向性叙事更顺。 窗口绝对收益约 25.0%，幅度不小。",
+              "zh": "价格主线偏顺势上攻，方向性叙事更顺。 窗口绝对收益约 25.0%，幅度不小。",
               "en": "Trend label is “strong_uptrend”; directional backdrop is clearer. Window |return| ~25.0% is material."
             },
             "note": {
@@ -443,8 +443,8 @@
         "label": "2026年07月（2026-07-01～2026-07-31）"
       },
       "summary": {
-        "zh": "相对上月：BTC 窗口收益由约 +7.3% 抬升至约 +25.0%，趋势与杠杆叙事明显转强；美现货 BTC ETF 净流由约 +1.73 亿美金扩至约 +35.39 亿美金，通道姿态转为强流入；关注层级由偏记录上调至当日优先（S1→S3）。上月偏温和的推进，在本月被更陡的趋势段与更厚的现货通道所取代。",
-        "en": "Versus the prior month: BTC window return lifted from about +7.3% to about +25.0%, with stronger trend and leverage narrative; US spot BTC ETF net flow expanded from roughly +172.8M USD to about +3.54B USD, channel stance shifting to strong inflow; attention stepped up from note-taking toward same-day priority (S1→S3). The prior month’s milder advance gave way this month to a steeper trend leg and a much thicker spot channel."
+        "zh": "相对上月：BTC窗口收益由约+7.3%升至约+25.0%，上攻斜率明显变陡；美现货BTC ETF净流由约+1.73亿美金跳升至约+35.39亿美金，通道从温和转为强流入；关注重心也从「记一笔」升到更需要盯盘的节奏。趋势更干净、现货通道更热，是本月相对上月最醒目的变化。",
+        "en": "Versus the prior month: BTC window return rose from about +7.3% to about +25.0%, a much steeper advance; US spot BTC ETF net went from about +$173M to about +$3.54B, channel stance shifting from mild to strong inflow; attention tone moved up a notch. Cleaner trend and a hotter spot ETF pipe were the standout month-on-month changes."
       },
       "rows": [
         {
@@ -609,8 +609,8 @@
         },
         {
           "dim": {
-            "zh": "永续成交额（周合计）",
-            "en": "Perp turnover (week sum)"
+            "zh": "永续成交额（月合计）",
+            "en": "Perp turnover (month sum)"
           },
           "current": {
             "zh": "3081.19 亿美金",
@@ -629,8 +629,8 @@
         },
         {
           "dim": {
-            "zh": "现货成交额（周合计）",
-            "en": "Spot turnover (week sum)"
+            "zh": "现货成交额（月合计）",
+            "en": "Spot turnover (month sum)"
           },
           "current": {
             "zh": "336.05 亿美金",
@@ -649,8 +649,8 @@
         },
         {
           "dim": {
-            "zh": "BTC ETF 周净流",
-            "en": "BTC ETF week net"
+            "zh": "BTC ETF 月净流",
+            "en": "BTC ETF month net"
           },
           "current": {
             "zh": "+35.39 亿美金",
@@ -668,8 +668,8 @@
         },
         {
           "dim": {
-            "zh": "ETH ETF 周净流",
-            "en": "ETH ETF week net"
+            "zh": "ETH ETF 月净流",
+            "en": "ETH ETF month net"
           },
           "current": {
             "zh": "+18.52 亿美金",
@@ -781,7 +781,7 @@
       }
     }
   },
-  "tech_notes": "narrative_v0.3 llm primary + template ground; MONTHLY period language + scrub; numbers/labels locked from context; watch_items from LLM; sections.leverage forced to N1/N2 program skeleton (① crowding ② flush ③ volume).",
+  "tech_notes": "narrative_v0.3 monthly insight A + template ground; period scrub 本月→本月; numbers locked; watch_items from LLM; 小白文风; sections.leverage = LLM insight (N2 skeleton skipped).",
   "llm_guidance": {
     "style": "paragraph_first_free_prose",
     "must_ground_numbers_in_context": true,
@@ -813,12 +813,11 @@
     "vol_premium",
     "dvol"
   ],
-  "narrative_source": "llm+n1_program",
+  "narrative_source": "llm",
   "n1_leverage_a": {
-    "pinned_at": "2026-09-20T08:35:46Z",
-    "scheme": "A_read_only",
+    "skipped": true,
+    "reason": "monthly_insight_A_llm_leverage",
     "source": "program_n2_auto",
-    "label_id": "liquidation_driven_squeeze",
-    "note_zh": "N1/N2 程序骨架：①拥挤 ②出清 ③量旁证 + 收句；数字锁 features/看板。"
+    "note_zh": "月报洞察制·杠杆 A：不强制 N2 骨架；杠杆段以 LLM/模板人话为准，数字仍锁 card。"
   }
 }

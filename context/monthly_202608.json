@@ -2,7 +2,7 @@
   "schema_version": "context_v0.1",
   "report_id": "monthly_202608",
   "report_type": "monthly",
-  "generated_at": "2026-09-20T08:34:18Z",
+  "generated_at": "2026-09-21T04:03:24Z",
   "as_of": "2026-08-31T23:59:59Z",
   "timezone_storage": "UTC",
   "timezone_display": "Asia/Shanghai",
@@ -60,7 +60,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.daily_kline",
-      "fetched_at": "2026-09-20T08:32:25Z",
+      "fetched_at": "2026-09-21T04:01:32Z",
       "notes": "Binance Spot+LinearSwap; argMax by recv_ts"
     },
     {
@@ -70,7 +70,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.open_interest",
-      "fetched_at": "2026-09-20T08:32:25Z"
+      "fetched_at": "2026-09-21T04:01:32Z"
     },
     {
       "id": "src_liq",
@@ -79,7 +79,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.liquidation",
-      "fetched_at": "2026-09-20T08:32:25Z",
+      "fetched_at": "2026-09-21T04:01:32Z",
       "notes": "side BUY/SELL raw; semantics unverified"
     },
     {
@@ -89,7 +89,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.contract_quote",
-      "fetched_at": "2026-09-20T08:32:25Z"
+      "fetched_at": "2026-09-21T04:01:32Z"
     },
     {
       "id": "src_tradfi_yahoo",
@@ -97,7 +97,7 @@
       "provider": "yahoo",
       "channel": "yfinance",
       "table_or_resource": "ES=F,NQ=F,^VIX,DX-Y.NYB,^TNX,GC=F",
-      "fetched_at": "2026-09-20T08:33:01Z",
+      "fetched_at": "2026-09-21T04:02:09Z",
       "notes": "TEMPORARY fallback — not Datahub; must footnote in HTML"
     },
     {
@@ -107,7 +107,7 @@
       "channel": "clickhouse",
       "cluster": "quotes",
       "table_or_resource": "market_data.option_volatility_kline",
-      "fetched_at": "2026-09-20T08:33:12Z",
+      "fetched_at": "2026-09-21T04:02:20Z",
       "notes": "Deribit BTC,ETH; daily close via argMax(close,start_time)"
     },
     {

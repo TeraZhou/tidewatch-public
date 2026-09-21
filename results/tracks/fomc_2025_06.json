@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "本场偏松一档，走廊下移约 25bp 至 4.25–4.5%。",
-    "primer_zh": "美联储每年大约召开 8 次 FOMC 会议。每次核心是设定联邦基金利率目标走廊并发布政策声明。走廊与声明共同构成短端锚点。下一钉为 2025-07-30 的 FOMC 利率决议。",
-    "attitude_zh": "态度偏松一档：走廊下移约 25bp → 4.25–4.5%。",
+    "lead_zh": "本次决议偏松一档，联邦基金利率走廊下移约 25bp 至 4.25–4.5%。",
+    "primer_zh": "FOMC 一年大约开八次会，主要定联邦基金利率走廊并发布声明。走廊是政策利率的操作区间，声明说明委员会对通胀与就业的权衡。下次利率决议钉在 2025-07-30。本场已落地，反应窗继续观察声明措辞与盘面衔接。",
+    "attitude_zh": "态度：偏松一档（走廊下移约 25bp → 4.25–4.5%）。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "决议前走廊为 4.5–4.75%。\n本次动作为降息约 25bp，新走廊落在 4.25–4.5%，生效标注为 2024-12-19。\n声明强调通胀仍偏高，并指向更快回到 2% 物价目标。\n会前走廊与会后新区间并置，幅度约 25bp 下移，进入反应窗对照观察。",
-    "watch_zh": "盯 4.25–4.5% 新走廊落地与声明通胀表述；对照盘面短端与风险资产反应；下一钉 2025-07-30 FOMC。",
+    "narrative_zh": "会前走廊为 4.5–4.75%。会后结果：动作降息约 25bp，本次走廊 4.25–4.5%，生效标注 2024-12-19。\n宽表决议日 T 量价字段均为空，本场特有读法只落在走廊下移约 25bp 与声明钩子——声明强调通胀仍偏高，并指向更快回到 2% 物价目标（摘意）。偏松一档已确认，无额外涨跌数字可并置。",
+    "watch_zh": "盯声明里通胀仍偏高、更快回到 2% 目标的表述如何被定价；走廊 4.25–4.5% 是否站稳；下一钉 2025-07-30 决议前的量价与资金面变化。",
     "status_zh": "反应中（数据至 T+459/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-21T03:09:00Z",
+    "generated_at": "2026-09-21T07:13:29Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_06.html",
-  "generated_at": "2026-09-21T03:09:25Z",
+  "generated_at": "2026-09-21T07:13:43Z",
   "as_of": "2026-09-21",
   "data_as_of": "2026-09-20"
 }
