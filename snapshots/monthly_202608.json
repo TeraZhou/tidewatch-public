@@ -1,0 +1,75 @@
+{
+  "report_id": "monthly_202608",
+  "report_type": "monthly",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "strong_uptrend",
+      "name_zh": "强趋势上涨",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "liquidation_driven_squeeze",
+      "name_zh": "清算驱动（上涨段挤压迹象）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ],
+      "caution": "liquidation side_semantics=raw_exchange_side_unverified"
+    },
+    "vol": {
+      "id": "high",
+      "name_zh": "高实现波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_fair",
+      "name_zh": "IV 与 RV 大致匹配",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": -3.9
+    },
+    "tradfi_link": {
+      "id": "risk_on_sync",
+      "name_zh": "同向 risk-on",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S3",
+      "name_zh": "当日优先",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": 24.955,
+    "rv_ann": 41.53,
+    "funding_ann": 9.31,
+    "oi_chg": -1.405,
+    "perp_turnover": 308118807113.59
+  },
+  "window": {
+    "start": "2026-08-01",
+    "end": "2026-08-31",
+    "baseline_date": "2026-07-31"
+  }
+}

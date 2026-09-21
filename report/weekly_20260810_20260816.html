@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>潮观 Tidewatch · weekly_20260810_20260816</title>
+<title>潮观 Tidewatch · 周报 · weekly_20260810_20260816</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 
@@ -281,14 +281,14 @@
 
 </style>
 </head>
-<body class="layer-plain lang-zh" data-theme="paper" data-lang="zh">
+<body class="layer-plain lang-zh" data-theme="paper" data-lang="zh" data-report-type="weekly">
   <div class="topbar"><div class="topbar-inner">
     <div class="brand"><div class="logo">潮</div>
       <div><h1><span class="lang zh">潮观 · 周报</span><span class="lang en">Tidewatch · Weekly</span></h1>
       <p>2026-08-10～2026-08-16 · weekly_20260810_20260816</p></div>
     </div>
     <div class="toolbar">
-      <nav class="site-nav" aria-label="Tidewatch site"><a class="pill site-link" href="../site/index.html"><span class="lang zh">周报集锦</span><span class="lang en">Archive</span></a><a class="pill site-link" href="../site/dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a><a class="pill site-link site-link-muted" href="../site/daily.html" title="WIP"><span class="lang zh">每日</span><span class="lang en">Daily</span></a></nav>
+      <nav class="site-nav" aria-label="Tidewatch site"><a class="pill site-link" href="../site/index.html"><span class="lang zh">周报集锦</span><span class="lang en">Weekly</span></a><a class="pill site-link" href="../site/monthly.html"><span class="lang zh">月报集锦</span><span class="lang en">Monthly archive</span></a><a class="pill site-link" href="../site/dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a><a class="pill site-link site-link-muted" href="../site/daily.html"><span class="lang zh">每日</span><span class="lang en">Daily</span></a></nav>
       <div class="seg" id="langSeg" title="Language">
         <button type="button" data-lang="zh" class="active">中文</button>
         <button type="button" data-lang="en" class="">EN</button>
@@ -440,7 +440,7 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
           （LinearSwap ETHUSDT · 对照轨，不改拥挤/N2 主判 · 非 Inverse）
           · 单期=（—）
           · ETH 基差  bps<br/>
-          · 永续 turnover 周合计=40898758994.91 USD（408.99 亿美金）
+          · 永续 turnover 本周合计=40898758994.91 USD（408.99 亿美金）
           · wow=-12.17% · activity=normal
           · peak=2026-08-10 · product=LinearSwap · exchange=Binance
           · <b>forbid</b> direction_from_total_volume
@@ -554,22 +554,22 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
       <div class="card layer-plain-only" style="margin-bottom:12px" id="sec-spot-volume">
         <p class="plain" style="padding-top:12px"><span class="lang zh">Binance 现货成交额（turnover 美金，程序周合计）：本周 &lt;b&gt;46.76 亿美金&lt;/b&gt;，相对上完整周 -4.8%（活跃度「中性」；上周约 49.14 亿美金）。峰值日 2026-08-10（8.81 亿美金）。这是交易所现货「换手热闹程度」，与 ETF 净申赎同属现货世界、只并陈；对照永续周成交额 408.99 亿美金——两者量级不同，**禁止相加**，也**不能**拆多空。</span><span class="lang en">Binance spot turnover (USD, program week sum): this week &lt;b&gt;4.68B&lt;/b&gt;, vs prior full week -4.8% (activity “normal”; prior ~4.91B). Peak day 2026-08-10 (880.50M). Spot tape busyness beside ETF net flow — same spot world, no sum with perp (40.90B); not a long/short split.</span></p>
         <div class="callout">
-          <b><span class="lang zh">现货成交 · 本周程序数（必读）</span><span class="lang en">Spot turnover · week program numbers</span></b><br/>
+          <b><span class="lang zh">现货成交 · 本周程序数（必读）</span><span class="lang en">Spot turnover · this week program numbers</span></b><br/>
           <span class="lang zh">
-          · 周合计 <b>46.76 亿美金</b>
+          · 本周合计 <b>46.76 亿美金</b>
             · 较上完整周 -4.8%
             · 活跃「normal」
             · 峰值日 2026-08-10
               （8.81 亿美金）<br/>
-          · 对照永续周合计 <b>408.99 亿美金</b>——量级不同，<b>禁止相加</b>；都只是热闹程度，<b>不能拆多空</b>。
+          · 对照永续本周合计 <b>408.99 亿美金</b>——量级不同，<b>禁止相加</b>；都只是热闹程度，<b>不能拆多空</b>。
           </span>
           <span class="lang en">
-          · Week sum <b>4.68B</b>
-            · vs prior -4.8%
+          · this week sum <b>4.68B</b>
+            · vs prior week -4.8%
             · activity “normal”
             · peak 2026-08-10
               (880.50M)<br/>
-          · Beside perp week <b>40.90B</b> — do not add; activity only.
+          · Beside perp this week <b>40.90B</b> — do not add; activity only.
           </span>
         </div>
       </div>
@@ -597,7 +597,7 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
         <div class="card">
           <div class="chart-box sm"><canvas id="chartSpotVol"></canvas></div>
           <p class="plain layer-plain-only"><span class="lang zh">柱=Binance 现货日成交额（turnover 美金）。本周日历日；只读活跃度。</span>
-             <span class="lang en">Bars = Binance spot daily turnover USD (week days). Activity only.</span></p>
+             <span class="lang en">Bars = Binance spot turnover USD. this week calendar days; activity only.</span></p>
         </div>
       </div>
     </section>
@@ -693,8 +693,8 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
             <table class="data">
               <thead><tr>
                 <th><span class="lang zh">维度</span><span class="lang en">Dim</span></th>
-                <th><span class="lang zh">上周</span><span class="lang en">Prior</span></th>
-                <th><span class="lang zh">本周</span><span class="lang en">This</span></th>
+                <th><span class="lang zh">上周</span><span class="lang en">Prior week</span></th>
+                <th><span class="lang zh">本周</span><span class="lang en">Week</span></th>
                 <th>Δ</th>
               </tr></thead>
               <tbody><tr><td colspan="4">—</td></tr></tbody>
@@ -1112,14 +1112,15 @@ Close: neutral holds — no strong dual-high, no flush-dominated squeeze case; b
       const dim = tag.dataset.dim || '';
       const id = tag.dataset.id || '';
       const lang = body.getAttribute('data-lang')||'zh';
+      const isMonthly = (body.getAttribute('data-report-type')||'') === 'monthly';
       const qs = lang==='en' ? [
         `What does label ${id||dim} mean?`,
-        `Which numbers support ${id||dim} this week?`,
-        `Did ${dim} change vs last week?`,
+        isMonthly ? `Which numbers support ${id||dim} this month?` : `Which numbers support ${id||dim} this week?`,
+        isMonthly ? `Did ${dim} change vs last month?` : `Did ${dim} change vs last week?`,
       ] : [
         `标签 ${id||dim} 的规则是什么？`,
-        `本周哪些数支撑 ${id||dim}？`,
-        `${dim} 和上周比是否跳变？`,
+        isMonthly ? `本月哪些数支撑 ${id||dim}？` : `本周哪些数支撑 ${id||dim}？`,
+        isMonthly ? `${dim} 和上月比是否跳变？` : `${dim} 和上周比是否跳变？`,
       ];
       coachEl = document.createElement('div');
       coachEl.className = 'coach-pop';

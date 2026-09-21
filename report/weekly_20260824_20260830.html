@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>潮观 Tidewatch · weekly_20260824_20260830</title>
+<title>潮观 Tidewatch · 周报 · weekly_20260824_20260830</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <style>
 
@@ -281,14 +281,14 @@
 
 </style>
 </head>
-<body class="layer-plain lang-zh" data-theme="paper" data-lang="zh">
+<body class="layer-plain lang-zh" data-theme="paper" data-lang="zh" data-report-type="weekly">
   <div class="topbar"><div class="topbar-inner">
     <div class="brand"><div class="logo">潮</div>
       <div><h1><span class="lang zh">潮观 · 周报</span><span class="lang en">Tidewatch · Weekly</span></h1>
       <p>2026-08-24～2026-08-30 · weekly_20260824_20260830</p></div>
     </div>
     <div class="toolbar">
-      <nav class="site-nav" aria-label="Tidewatch site"><a class="pill site-link" href="../site/index.html"><span class="lang zh">周报集锦</span><span class="lang en">Archive</span></a><a class="pill site-link" href="../site/dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a><a class="pill site-link site-link-muted" href="../site/daily.html" title="WIP"><span class="lang zh">每日</span><span class="lang en">Daily</span></a></nav>
+      <nav class="site-nav" aria-label="Tidewatch site"><a class="pill site-link" href="../site/index.html"><span class="lang zh">周报集锦</span><span class="lang en">Weekly</span></a><a class="pill site-link" href="../site/monthly.html"><span class="lang zh">月报集锦</span><span class="lang en">Monthly archive</span></a><a class="pill site-link" href="../site/dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a><a class="pill site-link site-link-muted" href="../site/daily.html"><span class="lang zh">每日</span><span class="lang en">Daily</span></a></nav>
       <div class="seg" id="langSeg" title="Language">
         <button type="button" data-lang="zh" class="active">中文</button>
         <button type="button" data-lang="en" class="">EN</button>
@@ -440,7 +440,7 @@ Close: cooling-but-still-mid-high crowding + flush “peak without dual-high / w
           （LinearSwap ETHUSDT · 对照轨，不改拥挤/N2 主判 · 非 Inverse）
           · 单期=（—）
           · ETH 基差  bps<br/>
-          · 永续 turnover 周合计=89399229952.72 USD（893.99 亿美金）
+          · 永续 turnover 本周合计=89399229952.72 USD（893.99 亿美金）
           · wow=-20.44% · activity=normal
           · peak=2026-08-25 · product=LinearSwap · exchange=Binance
           · <b>forbid</b> direction_from_total_volume
@@ -554,22 +554,22 @@ Close: cooling-but-still-mid-high crowding + flush “peak without dual-high / w
       <div class="card layer-plain-only" style="margin-bottom:12px" id="sec-spot-volume">
         <p class="plain" style="padding-top:12px"><span class="lang zh">Binance 现货成交额（turnover 美金，程序周合计）：本周 &lt;b&gt;96.05 亿美金&lt;/b&gt;，相对上完整周 -21.3%（活跃度「中性」；上周约 122.04 亿美金）。峰值日 2026-08-24（23.68 亿美金）。这是交易所现货「换手热闹程度」，与 ETF 净申赎同属现货世界、只并陈；对照永续周成交额 893.99 亿美金——两者量级不同，**禁止相加**，也**不能**拆多空。</span><span class="lang en">Binance spot turnover (USD, program week sum): this week &lt;b&gt;9.61B&lt;/b&gt;, vs prior full week -21.3% (activity “normal”; prior ~12.20B). Peak day 2026-08-24 (2.37B). Spot tape busyness beside ETF net flow — same spot world, no sum with perp (89.40B); not a long/short split.</span></p>
         <div class="callout">
-          <b><span class="lang zh">现货成交 · 本周程序数（必读）</span><span class="lang en">Spot turnover · week program numbers</span></b><br/>
+          <b><span class="lang zh">现货成交 · 本周程序数（必读）</span><span class="lang en">Spot turnover · this week program numbers</span></b><br/>
           <span class="lang zh">
-          · 周合计 <b>96.05 亿美金</b>
+          · 本周合计 <b>96.05 亿美金</b>
             · 较上完整周 -21.3%
             · 活跃「normal」
             · 峰值日 2026-08-24
               （23.68 亿美金）<br/>
-          · 对照永续周合计 <b>893.99 亿美金</b>——量级不同，<b>禁止相加</b>；都只是热闹程度，<b>不能拆多空</b>。
+          · 对照永续本周合计 <b>893.99 亿美金</b>——量级不同，<b>禁止相加</b>；都只是热闹程度，<b>不能拆多空</b>。
           </span>
           <span class="lang en">
-          · Week sum <b>9.61B</b>
-            · vs prior -21.3%
+          · this week sum <b>9.61B</b>
+            · vs prior week -21.3%
             · activity “normal”
             · peak 2026-08-24
               (2.37B)<br/>
-          · Beside perp week <b>89.40B</b> — do not add; activity only.
+          · Beside perp this week <b>89.40B</b> — do not add; activity only.
           </span>
         </div>
       </div>
@@ -597,7 +597,7 @@ Close: cooling-but-still-mid-high crowding + flush “peak without dual-high / w
         <div class="card">
           <div class="chart-box sm"><canvas id="chartSpotVol"></canvas></div>
           <p class="plain layer-plain-only"><span class="lang zh">柱=Binance 现货日成交额（turnover 美金）。本周日历日；只读活跃度。</span>
-             <span class="lang en">Bars = Binance spot daily turnover USD (week days). Activity only.</span></p>
+             <span class="lang en">Bars = Binance spot turnover USD. this week calendar days; activity only.</span></p>
         </div>
       </div>
     </section>
@@ -693,8 +693,8 @@ Close: cooling-but-still-mid-high crowding + flush “peak without dual-high / w
             <table class="data">
               <thead><tr>
                 <th><span class="lang zh">维度</span><span class="lang en">Dim</span></th>
-                <th><span class="lang zh">上周</span><span class="lang en">Prior</span></th>
-                <th><span class="lang zh">本周</span><span class="lang en">This</span></th>
+                <th><span class="lang zh">上周</span><span class="lang en">Prior week</span></th>
+                <th><span class="lang zh">本周</span><span class="lang en">Week</span></th>
                 <th>Δ</th>
               </tr></thead>
               <tbody><tr><td><span class="lang zh">BTC 窗口收益 %</span><span class="lang en">BTC window return %</span></td><td>+23.6</td><td>-0.1</td><td class="down">-23.6</td></tr><tr><td><span class="lang zh">ETH 窗口收益 %</span><span class="lang en">ETH window return %</span></td><td>+31.3</td><td>-1.9</td><td class="down">-33.2</td></tr><tr><td><span class="lang zh">趋势</span><span class="lang en">Trend</span></td><td><span class="lang zh">强趋势上涨</span><span class="lang en">strong_uptrend</span></td><td><span class="lang zh">偏震荡</span><span class="lang en">chop_low</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">杠杆</span><span class="lang en">Leverage</span></td><td><span class="lang zh">清算驱动（上涨段挤压迹象）</span><span class="lang en">liquidation_driven_squeeze</span></td><td><span class="lang zh">杠杆中性</span><span class="lang en">leverage_neutral</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">实现波动</span><span class="lang en">Realized vol</span></td><td><span class="lang zh">高实现波动</span><span class="lang en">high</span></td><td><span class="lang zh">中等波动</span><span class="lang en">mid</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">IV 溢价</span><span class="lang en">IV premium</span></td><td><span class="lang zh">期权偏便宜（IV 相对 RV 折价）</span><span class="lang en">iv_cheap</span></td><td><span class="lang zh">期权偏贵（IV 相对 RV 溢价）</span><span class="lang en">iv_rich</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">传统联动</span><span class="lang en">TradFi link</span></td><td><span class="lang zh">脱钩：股弱币强</span><span class="lang en">decoupled_crypto_up_equity_down</span></td><td><span class="lang zh">加密偏独立</span><span class="lang en">crypto_idiosyncratic</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">RV 年化 %</span><span class="lang en">RV ann. %</span></td><td>65.0</td><td>30.9</td><td class="down">-34.2</td></tr><tr><td><span class="lang zh">IV 期末 %</span><span class="lang en">IV end %</span></td><td>43.2</td><td>37.0</td><td class="down">-6.2</td></tr><tr><td><span class="lang zh">IV−RV</span><span class="lang en">IV−RV</span></td><td>-21.8</td><td>+6.1</td><td class="up">+28.0</td></tr><tr><td><span class="lang zh">Funding 年化 %</span><span class="lang en">Funding ann. %</span></td><td>+10.95</td><td>+7.97</td><td class="down">-2.98</td></tr><tr><td><span class="lang zh">OI 变化 %</span><span class="lang en">OI chg %</span></td><td>-4.9</td><td>+0.7</td><td class="up">+5.6</td></tr><tr><td><span class="lang zh">永续成交额（周合计）</span><span class="lang en">Perp turnover (week sum)</span></td><td><span class="lang zh">1123.63 亿美金</span><span class="lang en">112.36B</span></td><td><span class="lang zh">893.99 亿美金</span><span class="lang en">89.40B</span></td><td class="down">-20.4%</td></tr><tr><td><span class="lang zh">现货成交额（周合计）</span><span class="lang en">Spot turnover (week sum)</span></td><td><span class="lang zh">122.04 亿美金</span><span class="lang en">12.20B</span></td><td><span class="lang zh">96.05 亿美金</span><span class="lang en">9.61B</span></td><td class="down">-21.3%</td></tr><tr><td><span class="lang zh">BTC ETF 周净流</span><span class="lang en">BTC ETF week net</span></td><td><span class="lang zh">+19.18 亿美金</span><span class="lang en">+1.92B</span></td><td><span class="lang zh">+9.24 亿美金</span><span class="lang en">+924.48M</span></td><td class="down"><span class="lang zh">-9.93 亿美金</span><span class="lang en">-993.31M</span></td></tr><tr><td><span class="lang zh">ETH ETF 周净流</span><span class="lang en">ETH ETF week net</span></td><td><span class="lang zh">+6.97 亿美金</span><span class="lang en">+697.18M</span></td><td><span class="lang zh">+8.24 亿美金</span><span class="lang en">+824.42M</span></td><td class="up"><span class="lang zh">+1.27 亿美金</span><span class="lang en">+127.24M</span></td></tr><tr><td><span class="lang zh">ETF 通道姿态</span><span class="lang en">ETF channel stance</span></td><td><span class="lang zh">强流入</span><span class="lang en">strong inflow</span></td><td><span class="lang zh">温和流入</span><span class="lang en">mild inflow</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">ES 窗口 %</span><span class="lang en">ES window %</span></td><td>-1.5</td><td>+0.4</td><td class="up">+1.9</td></tr><tr><td><span class="lang zh">NQ 窗口 %</span><span class="lang en">NQ window %</span></td><td>-2.5</td><td>+0.4</td><td class="up">+2.9</td></tr><tr><td><span class="lang zh">VIX 窗口 %</span><span class="lang en">VIX window %</span></td><td>+6.2</td><td>-4.6</td><td class="down">-10.8</td></tr><tr><td><span class="lang zh">DXY 窗口 %</span><span class="lang en">DXY window %</span></td><td>-0.9</td><td>+0.9</td><td class="up">+1.8</td></tr><tr><td><span class="lang zh">US10Y 变化 bp</span><span class="lang en">US10Y chg bp</span></td><td>+4.2</td><td>-1.8</td><td class="down">-6.0</td></tr><tr><td><span class="lang zh">GOLD 窗口 %</span><span class="lang en">GOLD window %</span></td><td>+5.6</td><td>-3.2</td><td class="down">-8.7</td></tr><tr><td><span class="lang zh">关注等级</span><span class="lang en">Attention</span></td><td>S3</td><td>S1</td><td class="">—</td></tr></tbody>
@@ -1112,14 +1112,15 @@ Close: cooling-but-still-mid-high crowding + flush “peak without dual-high / w
       const dim = tag.dataset.dim || '';
       const id = tag.dataset.id || '';
       const lang = body.getAttribute('data-lang')||'zh';
+      const isMonthly = (body.getAttribute('data-report-type')||'') === 'monthly';
       const qs = lang==='en' ? [
         `What does label ${id||dim} mean?`,
-        `Which numbers support ${id||dim} this week?`,
-        `Did ${dim} change vs last week?`,
+        isMonthly ? `Which numbers support ${id||dim} this month?` : `Which numbers support ${id||dim} this week?`,
+        isMonthly ? `Did ${dim} change vs last month?` : `Did ${dim} change vs last week?`,
       ] : [
         `标签 ${id||dim} 的规则是什么？`,
-        `本周哪些数支撑 ${id||dim}？`,
-        `${dim} 和上周比是否跳变？`,
+        isMonthly ? `本月哪些数支撑 ${id||dim}？` : `本周哪些数支撑 ${id||dim}？`,
+        isMonthly ? `${dim} 和上月比是否跳变？` : `${dim} 和上周比是否跳变？`,
       ];
       coachEl = document.createElement('div');
       coachEl.className = 'coach-pop';
