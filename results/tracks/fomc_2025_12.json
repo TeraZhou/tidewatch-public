@@ -112,9 +112,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "会后定调偏松一档：走廊下移约 25bp 至 3.5–3.75%，自 2025-12-11 生效。",
-    "primer_zh": "FOMC 一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从 3.75–4% 下调约 25bp 至 3.5–3.75%。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。下一钉是 2026-01-28 的 FOMC 利率决议。",
-    "attitude_zh": "态度偏松一档：降息约 25bp，走廊下移至 3.5–3.75%。",
+    "lead_zh": "偏松一档：走廊下移约 25bp 至 3.5–3.75%，声明仍点通胀偏高、指向更快回到 2%。",
+    "primer_zh": "FOMC 一年大约开 8 次会，主要定联邦基金利率走廊并发布声明。本次已把走廊从 3.75–4% 下调约 25bp 至 3.5–3.75%，生效日 2025-12-11。下一钉是 2026-01-28 的 FOMC 利率决议。市场会继续对照声明措辞与走廊位置。",
+    "attitude_zh": "态度偏松一档：降约 25bp，走廊落在 3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -133,8 +133,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊 3.75–4%，本次动作降息约 25bp，新走廊 3.5–3.75%，生效日 2025-12-11。\n会前宽表在 T 日量价字段多为空，本次可读核心就是走廊下移这约 25bp 的幅度与声明对通胀仍偏高、更快回 2% 目标的表述并置。反应窗仍在延续，盘面具体涨跌未在本表给出，故只锚定利率结果本身。",
-    "watch_zh": "盯新走廊 3.5–3.75% 如何被定价、声明里通胀与 2% 目标表述的后续解读，以及盘面在反应窗的量价；下一钉 2026-01-28 FOMC。",
+    "narrative_zh": "决议落地：上次走廊 3.75–4%，本次 3.5–3.75%，动作降息约 25bp，2025-12-11 生效。\n会后读法对齐结果短表——走廊明确下移一档，声明强调通胀仍偏高并指向更快回到 2% 物价目标。宽表决议日 T 量价字段为空，本场特有信息集中在利率走廊与声明钩子，而非盘面瞬时跳动。",
+    "watch_zh": "盯新走廊 3.5–3.75% 是否稳、声明里通胀与 2% 目标表述后续有无微调、盘面利率敏感资产反应，以及下一钉 2026-01-28 决议。",
     "status_zh": "反应中（数据至 T+284/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -291,7 +291,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target range for the federal…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-21T02:54:34Z",
+    "generated_at": "2026-09-21T03:10:12Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -330,7 +330,7 @@
     }
   ],
   "href": "event_fomc_2025_12.html",
-  "generated_at": "2026-09-21T02:54:49Z",
+  "generated_at": "2026-09-21T03:10:37Z",
   "as_of": "2026-09-21",
   "data_as_of": "2026-09-20"
 }
