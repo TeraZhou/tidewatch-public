@@ -1,0 +1,276 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-25",
+  "date_effective": "2026-09-25",
+  "as_of": "2026-09-27T06:43:32Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-25",
+    "prior_date": "2026-09-24",
+    "btc_ret_1d": -0.368,
+    "eth_ret_1d": 0.132,
+    "oi_qty": 95204.61,
+    "oi_chg_pct": -0.69,
+    "funding_ann_pct": 0.853,
+    "funding_ann_chg_pp": 0.638,
+    "eth_funding_ann_pct": 7.1909,
+    "eth_funding_ann_chg_pp": 4.131,
+    "perp_turnover_usd": 11276517980.293,
+    "perp_turnover_chg_pct": -15.59,
+    "spot_turnover_usd": 1520256978.6934962,
+    "spot_turnover_chg_pct": -3.29,
+    "btc_etf_net_usd": 134500000.0,
+    "eth_etf_net_usd": 87000000.0,
+    "etf_lookback_sum_btc_usd": 2385800000.0,
+    "etf_lookback_sum_eth_usd": 689800000.0,
+    "es_ret_1d": 0.473,
+    "nq_ret_1d": 2.674,
+    "vix_ret_1d": -4.438,
+    "dxy_ret_1d": 0.24,
+    "gold_ret_1d": -0.262,
+    "tradfi_sessions": {
+      "ES": {
+        "prior": "2026-09-24",
+        "day": "2026-09-25"
+      },
+      "NQ": {
+        "prior": "2026-09-20",
+        "day": "2026-09-21"
+      },
+      "VIX": {
+        "prior": "2026-09-21",
+        "day": "2026-09-22"
+      }
+    },
+    "tradfi_link_note_zh": "BTC 与 ES 背离（BTC -0.37% · ES +0.47%）",
+    "tradfi_link_note_en": "BTC vs ES divergence (BTC -0.37% · ES +0.47%)",
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.37%（小区间） · ETH +0.13% · OI 日变 -0.69% · 永续成交额 112.77 亿美金（日变 -15.6%） · BTC ETF 净流 +1.34 亿美金",
+    "weather_en": "Weather: BTC -0.37% · ETH +0.13% · OI -0.69% d/d · perp turnover 11.28B (-15.6% d/d) · BTC ETF net +134.50M",
+    "text_zh": "BTC 小跌 0.37%、ETH 微涨，价格几乎横在小区间。永续成交明显缩量，杠杆存量略减，ETF 仍净流入。",
+    "text_en": "BTC -0.37%, ETH slightly up in a tight range; perp turnover down sharply, OI edged lower, ETFs still net inflows."
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "点差急收的平静小跌日",
+      "headline_en": "期权相对实现波动定价跳变",
+      "conclusion_zh": "【点差急收的平静小跌日】价格几乎横盘，主矛盾在波动定价：IV−RV 点差一日大幅回摆；同时币圈与美股期货走势背离。",
+      "conclusion_en": "Price barely moved; the main story is a sharp one-day swing in the IV−RV spread, with BTC diverging from ES.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "-0.37%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+0.13%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+0.64 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "0.85"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "-0.69%"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "112.77 亿美金（-16%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "15.20 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "-17.71 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+9.22 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "+0.47%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "+2.67%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "-4.44%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "iv_rv_spread_jump",
+          "value": 9.22,
+          "threshold": 8.0,
+          "summary_zh": "IV−RV 点差日变 +9.22 pp",
+          "summary_en": "IV−RV spread day change +9.22 pp",
+          "meta": {
+            "title_zh": "IV−RV 点差日变",
+            "title_en": "IV−RV spread day change",
+            "what_zh": "期权隐含波动相对实现波动的「贵/便宜」一日是否大幅移动。",
+            "what_en": "Large one-day move in IV minus realized vol spread.",
+            "how_zh": "spread = BTC IV（日）− BTC RV_7（年化%）。Δspread = 今日 spread − 昨日 spread（百分点）。当 |Δ| ≥ iv_rv_spread_jump_pp（默认 8）时触发。",
+            "how_en": "spread = BTC IV − BTC RV_7 (ann.%). Δ = day-over-day spread change in pp. Fires if |Δ| ≥ iv_rv_spread_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": -0.368,
+            "eth_ret_1d": 0.132,
+            "funding_ann_pct": 0.853,
+            "funding_ann_chg_pp": 0.638,
+            "oi_qty": 95204.61,
+            "oi_chg_pct": -0.69,
+            "liq_vs_prior": 0.711,
+            "iv_rv_spread": -17.71,
+            "iv_rv_spread_chg_pp": 9.22,
+            "vix_ret_1d": -4.438,
+            "btc_etf_net_usd": 134500000.0,
+            "eth_etf_net_usd": 87000000.0,
+            "perp_turnover_usd": 11276517980.293,
+            "perp_turnover_chg_pct": -15.59,
+            "spot_turnover_usd": 1520256978.6934962,
+            "value": 9.22,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 IV−RV 点差日变 9.22 pp（今日点差 -17.71），阈值 |·|≥8.00 pp",
+          "readout_en": "IV−RV spread day change +9.22 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "BTC 日收益 -0.37%，ETH +0.13%。OI 日变 -0.69%，永续成交额 112.77 亿美金（日变约 -16%），现货也略缩。IV−RV 点差今日 -17.71、日变 +9.22 个百分点，触发大幅移动规则。Funding 年化约 0.85%（日变 +0.64 pp），ETH funding 更高更跳。传统侧 ES +0.47%、NQ 更强、VIX 大降，BTC 与 ES 明显背离。翻译一句：价钱没怎么动，成交冷清了些，但期权相对近期实际波动的「贵便宜」标签在快速调整。",
+      "read_en": "依据（程序）：\n- 观测 IV−RV 点差日变 9.22 pp（今日点差 -17.71），阈值 |·|≥8.00 pp\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 背离（BTC -0.37% · ES +0.47%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 背离（BTC -0.37% · ES +0.47%）",
+      "tradfi_link_note_en": "BTC vs ES divergence (BTC -0.37% · ES +0.47%)",
+      "text_zh": "【点差急收的平静小跌日】价格几乎横盘，主矛盾在波动定价：IV−RV 点差一日大幅回摆；同时币圈与美股期货走势背离。",
+      "text_en": "Price barely moved; the main story is a sharp one-day swing in the IV−RV spread, with BTC diverging from ES.",
+      "card": {
+        "date": "2026-09-25",
+        "prior_date": "2026-09-24",
+        "btc_ret_1d": -0.368,
+        "eth_ret_1d": 0.132,
+        "funding_ann_pct": 0.853,
+        "funding_ann_chg_pp": 0.638,
+        "eth_funding_ann_pct": 7.1909,
+        "eth_funding_ann_chg_pp": 4.131,
+        "oi_qty": 95204.61,
+        "oi_prior_qty": 95866.115,
+        "oi_chg_pct": -0.69,
+        "liq_total": 79.06600000000026,
+        "liq_vs_prior": 0.711,
+        "perp_turnover_usd": 11276517980.293,
+        "perp_turnover_chg_pct": -15.59,
+        "perp_turnover_display_zh": "112.77 亿美金",
+        "perp_turnover_display_en": "11.28B",
+        "spot_turnover_usd": 1520256978.6934962,
+        "spot_turnover_chg_pct": -3.29,
+        "spot_turnover_display_zh": "15.20 亿美金",
+        "spot_turnover_display_en": "1.52B",
+        "iv_ann_pct": 34.62,
+        "rv_7_ann_pct": 52.3282,
+        "iv_rv_spread": -17.71,
+        "iv_rv_spread_chg_pp": 9.22,
+        "vix_ret_1d": -4.438,
+        "es_ret_1d": 0.473,
+        "nq_ret_1d": 2.674,
+        "dxy_ret_1d": 0.24,
+        "gold_ret_1d": -0.262,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-09-24",
+            "day": "2026-09-25"
+          },
+          "NQ": {
+            "prior": "2026-09-20",
+            "day": "2026-09-21"
+          },
+          "VIX": {
+            "prior": "2026-09-21",
+            "day": "2026-09-22"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 背离（BTC -0.37% · ES +0.47%）",
+        "tradfi_link_note_en": "BTC vs ES divergence (BTC -0.37% · ES +0.47%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 5,
+      "open_watches": 3,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：有人在问 IV 是什么、和 VIX 有何区别，可顺手补一句对照。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 小跌 0.37%",
+      "tone": "down"
+    },
+    {
+      "text": "永续成交明显缩量",
+      "tone": "down"
+    },
+    {
+      "text": "ETF 仍净流入",
+      "tone": "up"
+    },
+    {
+      "text": "IV−RV 点差一日大幅回摆",
+      "tone": "warn"
+    },
+    {
+      "text": "与美股期货走势背离",
+      "tone": "neutral"
+    },
+    {
+      "text": "点差急收 +9.22pp 至 -17.71",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}

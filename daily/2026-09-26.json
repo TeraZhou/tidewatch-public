@@ -1,0 +1,109 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-09-26",
+  "date_effective": "2026-09-26",
+  "as_of": "2026-09-27T06:43:58Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-09-26",
+    "prior_date": "2026-09-25",
+    "btc_ret_1d": 0.396,
+    "eth_ret_1d": 0.175,
+    "oi_qty": 94510.604,
+    "oi_chg_pct": -0.729,
+    "funding_ann_pct": 5.0863,
+    "funding_ann_chg_pp": 4.233,
+    "eth_funding_ann_pct": 6.2097,
+    "eth_funding_ann_chg_pp": -0.981,
+    "perp_turnover_usd": 3054196832.9714,
+    "perp_turnover_chg_pct": -72.92,
+    "spot_turnover_usd": 677578219.0470139,
+    "spot_turnover_chg_pct": -55.43,
+    "btc_etf_net_usd": 134500000.0,
+    "eth_etf_net_usd": 87000000.0,
+    "etf_lookback_sum_btc_usd": 1386800000.0,
+    "etf_lookback_sum_eth_usd": 419800000.0,
+    "es_ret_1d": 0.473,
+    "nq_ret_1d": 2.674,
+    "vix_ret_1d": -4.438,
+    "dxy_ret_1d": 0.24,
+    "gold_ret_1d": -0.262,
+    "tradfi_sessions": {
+      "ES": {
+        "prior": "2026-09-24",
+        "day": "2026-09-25"
+      },
+      "NQ": {
+        "prior": "2026-09-20",
+        "day": "2026-09-21"
+      },
+      "VIX": {
+        "prior": "2026-09-21",
+        "day": "2026-09-22"
+      }
+    },
+    "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +0.40% · ES +0.47%）",
+    "tradfi_link_note_en": "BTC and ES same direction (BTC +0.40% · ES +0.47%)",
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.40%（小区间） · ETH +0.17% · OI 日变 -0.73% · 永续成交额 30.54 亿美金（日变 -72.9%） · BTC ETF 净流 +1.34 亿美金",
+    "weather_en": "Weather: BTC +0.40% · ETH +0.17% · OI -0.73% d/d · perp turnover 3.05B (-72.9% d/d) · BTC ETF net +134.50M",
+    "text_zh": "近况偏平静：BTC 小涨约 0.4%，ETH 更弱。永续成交额大幅回落，杠杆存量略减，ETF 仍见净流入，和美股期货同向。",
+    "text_en": "Quiet session: BTC +0.40%, ETH softer. Perp turnover plunged, OI edged down, ETF still net inflow; aligned with ES."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 5,
+      "open_watches": 3,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：有人在问 IV 是什么、和 VIX 有何区别，可抽空补一眼。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "小涨约 0.4%",
+      "tone": "up"
+    },
+    {
+      "text": "永续成交额大幅回落",
+      "tone": "down"
+    },
+    {
+      "text": "量能骤冷的小涨日",
+      "tone": "neutral"
+    },
+    {
+      "text": "日变 -72.9%",
+      "tone": "down"
+    },
+    {
+      "text": "与 BTC 同向",
+      "tone": "up"
+    },
+    {
+      "text": "杠杆存量略减",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-09-25",
+    "etf_eth_using_2026-09-25"
+  ]
+}
