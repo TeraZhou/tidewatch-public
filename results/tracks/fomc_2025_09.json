@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4–4.25%",
-    "lead_zh": "美联储将利率走廊下移约25bp至4–4.25%，立场偏松一档。",
-    "primer_zh": "FOMC每年大约开8次会，每次定联邦基金利率走廊并发布声明。本次把走廊从4.25–4.5%下调约25bp至4–4.25%，2025-09-18起生效。声明摘意强调通胀仍偏高、指向更快回到2%物价目标。下一钉是2025-10-29的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至4–4.25%。",
+    "lead_zh": "美联储将联邦基金利率走廊下移约25bp至4–4.25%，立场偏松一档。",
+    "primer_zh": "FOMC一年大约开8次会。每次主要定联邦基金利率目标走廊并发布政策声明。本次动作已落地：降息约25bp，新走廊4–4.25%，2025-09-18生效。下一钉是2025-10-29的FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 4–4.25%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2025-09-18"
       }
     ],
-    "narrative_zh": "会前走廊停在4.25–4.5%。\n决议日T（2025-09-17）落地降息约25bp，新走廊4–4.25%，次日生效。\n态度落在「偏松一档」：走廊下移一档，同时声明仍点出通胀偏高、要更快靠拢2%目标。宽表当日量价字段为空，本场叙事以走廊与声明变动为主。",
-    "watch_zh": "盯新走廊4–4.25%是否站稳、声明里通胀与2%目标表述的后续解读、盘面利率敏感资产反应，以及下一钉2025-10-29决议。",
+    "narrative_zh": "会前走廊停在4.25–4.5%。会后结果明确：动作降息约25bp，走廊下移至4–4.25%，生效日2025-09-18。\n声明侧强调通胀仍偏高，并指向更快回到2%物价目标。本场特有读法就是「上档4.25–4.5% → 下移一档到4–4.25%」的并置，幅度锚定在约25bp。",
+    "watch_zh": "继续盯走廊是否稳在4–4.25%、声明里通胀与回2%表述的后续解读，以及盘面反应；下一钉锁定2025-10-29决议。",
     "status_zh": "反应中（数据至 T+375/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller. Voting against this action was Stephen I. Miran, who preferred to…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-28T01:53:41Z",
+    "generated_at": "2026-09-28T02:34:55Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_09.html",
-  "generated_at": "2026-09-28T01:53:58Z",
+  "generated_at": "2026-09-28T02:35:08Z",
   "as_of": "2026-09-28",
   "data_as_of": "2026-09-27"
 }

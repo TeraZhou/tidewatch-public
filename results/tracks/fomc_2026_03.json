@@ -111,8 +111,8 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "会后反应窗：走廊下移约25bp至3.5–3.75%，态度偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊自3.75–4%下调约25bp至3.5–3.75%。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉盯2026-04-29决议。",
+    "lead_zh": "决议将走廊下移约25bp至3.5–3.75%，站位偏松一档。",
+    "primer_zh": "FOMC一年大约开八次会，每次定联邦基金利率走廊并发布声明。本次动作是降息约25bp，走廊从3.75–4%调至3.5–3.75%。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉在2026-04-29。生效日标注为2025-12-11。",
     "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。",
     "result_lines": [
       {
@@ -132,8 +132,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日T：走廊由上次3.75–4%下移至本次3.5–3.75%，动作降息约25bp。\n同日量价：BTC -3.60%，ETH -4.92%，永续OI -7.81%，BTC资金费 -1.0%；ES -1.42%，VIX +12.16%，DXY +0.51%，BTC ETF -1.64亿。风险资产与杠杆同步收缩，波动与美元走强并置。",
-    "watch_zh": "盯声明后续表述与通胀路径、盘面能否消化T日回撤，以及下一钉2026-04-29走廊与声明。",
+    "narrative_zh": "决议日T（2026-03-18）量价：BTC -3.60%，ETH -4.92%，永续持仓OI -7.81%，BTC资金费 -1.0%。\n同步宏观：ES -1.42%，VIX +12.16%，DXY +0.51%；BTC ETF净流 -1.64亿。\n会后反应窗内，风险资产与波动指标同日给出上述幅度，走廊已落在3.5–3.75%。",
+    "watch_zh": "盯声明后续解读与通胀表述、盘面延续的量价与ETF流向，以及下一钉2026-04-29的走廊与声明。",
     "status_zh": "反应中（数据至 T+193/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Beth M. Hammack; Philip N. Jefferson; Neel Kashkari; Lorie K. Logan; Anna Paulson; and Christopher J. Waller. Voting against this action was Stephen I. Miran, who preferred to lower the targe…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-28T01:54:41Z",
+    "generated_at": "2026-09-28T02:35:56Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2026_03.html",
-  "generated_at": "2026-09-28T01:54:52Z",
+  "generated_at": "2026-09-28T02:36:14Z",
   "as_of": "2026-09-28",
   "data_as_of": "2026-09-27"
 }

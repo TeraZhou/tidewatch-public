@@ -109,9 +109,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "美联储将走廊下移约25bp至3.5–3.75%，立场偏松一档。",
-    "primer_zh": "FOMC一年大约开8次会，每次定联邦基金利率走廊并发布声明。本次动作是降息约25bp，走廊从3.75–4%移至3.5–3.75%。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉是2026-07-29的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。",
+    "lead_zh": "美联储将利率走廊下移约25bp至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC每年大约召开8次会议，主要设定联邦基金利率走廊并发布政策声明。本次决议已落地，走廊由上次的3.75–4%调整为3.5–3.75%。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一场FOMC利率决议定在2026年7月29日。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,8 +130,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊3.75–4%，本次3.5–3.75%，降息约25bp（生效标注2025-12-11）。\n\n决议日T盘面：BTC -1.77%，ETH -2.36%，永续持仓OI -3.02%，BTC资金费率2.9%；标普ES -1.25%，VIX +12.37%，美元DXY +0.55%；BTC ETF净流出0.82亿。风险资产与股指同步走弱，波动与美元偏强，ETF资金亦现净流出。",
-    "watch_zh": "继续盯声明后续表述与通胀路径措辞、利率走廊维持情况，以及盘面量价与资金续流；下一钉2026-07-29 FOMC。",
+    "narrative_zh": "决议日（T）量价同步走弱：BTC跌1.77%，ETH跌2.36%，永续开仓兴趣OI降3.02%，BTC ETF净流出0.82亿。风险资产与股指联动，ES跌1.25%，VIX大涨12.37%，美元指数DXY升0.55%；资金费率funding_btc报2.9%。\n\n会后反应窗内，降息约25bp落地与声明“通胀仍偏高、更快回到2%”并置，盘面呈现避险升温、杠杆收缩的即时特征，而非单边乐观定价。",
+    "watch_zh": "继续盯声明后续通胀与目标表述如何被市场消化、BTC/ETH及OI与ETF流向能否稳住、VIX与DXY波动是否收敛；下一钉看2026年7月29日FOMC走廊与声明。",
     "status_zh": "反应中（数据至 T+102/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -282,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-28T01:55:09Z",
+    "generated_at": "2026-09-28T02:36:37Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -321,7 +321,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-09-28T01:55:27Z",
+  "generated_at": "2026-09-28T02:36:55Z",
   "as_of": "2026-09-28",
   "data_as_of": "2026-09-27"
 }
