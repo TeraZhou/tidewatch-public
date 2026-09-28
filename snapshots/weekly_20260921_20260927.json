@@ -1,0 +1,138 @@
+{
+  "report_id": "weekly_20260921_20260927",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_high",
+      "name_zh": "高位震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "liquidation_driven_squeeze",
+      "name_zh": "清算驱动（上涨段挤压迹象）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ],
+      "caution": "liquidation side_semantics=raw_exchange_side_unverified"
+    },
+    "vol": {
+      "id": "high",
+      "name_zh": "高实现波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_cheap",
+      "name_zh": "期权偏便宜（IV 相对 RV 折价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": -17.18
+    },
+    "tradfi_link": {
+      "id": "risk_on_sync",
+      "name_zh": "同向 risk-on",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": 4.058,
+    "rv_ann": 52.25,
+    "iv_end": 35.07,
+    "iv_rv_spread": -17.18,
+    "funding_ann": 2.23,
+    "eth_funding_ann": 3.41,
+    "oi_chg": -12.674,
+    "perp_turnover_sum_usd": 90223628448.44,
+    "perp_turnover_sum_display_zh": "902.24 亿美金",
+    "perp_turnover_sum_display_en": "90.22B",
+    "perp_turnover_wow_pct": 7.95,
+    "perp_activity_id": "normal",
+    "spot_turnover_sum_usd": 11008186388.62,
+    "spot_turnover_sum_display_zh": "110.08 亿美金",
+    "spot_turnover_sum_display_en": "11.01B",
+    "etf_btc_net_usd": 2385800000.0,
+    "etf_btc_net_display_zh": "+23.86 亿美金",
+    "etf_btc_net_display_en": "+2.39B",
+    "etf_eth_net_usd": 689800000.0,
+    "etf_eth_net_display_zh": "+6.90 亿美金",
+    "etf_eth_net_display_en": "+689.80M",
+    "etf_channel_id": "strong_inflow",
+    "etf_channel_zh": "强流入",
+    "etf_channel_en": "strong inflow"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "mean_reversion"
+    ],
+    "mismatched": [
+      "trend_following",
+      "vol_harvest"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "下期核对：美现货 BTC ETF 净流是否仍维持多日净流入、通道是否仍标强流入。",
+        "en": "Next check: whether US spot BTC ETF net stays multi-day inflow and the channel remains strong-inflow."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_persist",
+      "rationale_zh": "本周净流从近乎持平跃至 +23.86 亿且全日流入，是最大的通道变量，需看是否续航而非单周脉冲。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "下期核对：BTC OI 周变是否止跌、资金费率年化是否仍温和或重新抬升。",
+        "en": "Next check: whether BTC OI weekly change stops falling and funding ann. stays mild or re-lifts."
+      },
+      "watchable": true,
+      "template_hint": "funding_ease",
+      "rationale_zh": "本周 OI 大幅回落叠加上涨挤压，若费率与 OI 重新抬头，拥挤叙事会切换。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "下期核对：IV-RV 折价是否收窄（IV 是否追上高 RV）或 RV 自身是否回落。",
+        "en": "Next check: whether the IV-RV discount narrows (IV catching high RV) or RV itself cools."
+      },
+      "watchable": true,
+      "template_hint": "iv_still_cheap",
+      "rationale_zh": "高实现波动与期权偏便宜是本周结构矛盾，收窄或持续直接改变波动叙事。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-09-21",
+    "end": "2026-09-27",
+    "label": "2026-09-21～2026-09-27",
+    "incomplete_end": false
+  }
+}
