@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "本次偏松一档，联邦基金利率走廊下移约 25bp 至 3.5–3.75%。",
-    "primer_zh": "FOMC 一年大约开八次会，主要定联邦基金利率走廊并发布声明。走廊是政策利率的操作区间，声明说明委员会对通胀与就业的权衡。下次利率决议钉在 2026-06-17。本场已落地为降息约 25bp。",
-    "attitude_zh": "偏松一档：走廊下移约 25bp 至 3.5–3.75%，声明强调通胀仍偏高、指向更快回到 2% 物价目标。",
+    "lead_zh": "美联储偏松一档，走廊下移约25bp至3.5–3.75%。",
+    "primer_zh": "FOMC一年大约开8次会，主要敲定联邦基金利率走廊并发布政策声明。本次走廊已从3.75–4%下调至3.5–3.75%，动作降息约25bp。声明强调通胀仍偏高，指向更快回到2%物价目标。下一钉是2026年6月17日的FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日 T（2026-04-29）：BTC -0.74%、ETH -1.59%，永续 OI -2.19%，BTC 资金费 -4.7%，ES -0.04%，VIX +5.50%，DXY +0.30%，BTC ETF 净流出 1.38 亿。\n会后 T+2（2026-05-01）：BTC +2.47%、ETH +1.69%，OI 回升 +8.96%，资金费 -0.9%，ES +0.20%，VIX +0.59%，DXY +0.13%。\n并置看，决议当日风险资产与杠杆同步收缩、波动抬升；两日后价格与 OI 明显修复，走廊已从上次 3.75–4% 下移至 3.5–3.75%。",
-    "watch_zh": "盯声明后续表述是否延续、盘面量价与资金费能否稳住、以及下一钉 2026-06-17 走廊与声明。",
+    "narrative_zh": "决议日T（2026-04-29）：BTC -0.74%，ETH -1.59%，OI -2.19%，BTC资金费率 -4.7%，ES -0.04%，VIX +5.50%，DXY +0.30%，BTC ETF -1.38亿，风险资产与杠杆同步收缩。\n会后T+2（2026-05-01）：BTC +2.47%，ETH +1.69%，OI +8.96%，BTC资金费率 -0.9%，ES +0.20%，VIX +0.59%，DXY +0.13%。反应窗内先抑后扬，持仓回补明显，费率仍偏弱。",
+    "watch_zh": "继续盯声明后续表述与通胀路径措辞、盘面能否延续T+2的BTC/ETH反弹与OI回升，以及下一钉2026-06-17决议的走廊与声明。",
     "status_zh": "反应中（数据至 T+152/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -320,7 +320,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Philip N. Jefferson; Anna Paulson; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target range for the federal funds rate by 1/4 perce…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-29T02:05:54Z",
+    "generated_at": "2026-09-29T02:38:54Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -391,7 +391,7 @@
     }
   ],
   "href": "event_fomc_2026_04.html",
-  "generated_at": "2026-09-29T02:06:12Z",
+  "generated_at": "2026-09-29T02:39:18Z",
   "as_of": "2026-09-29",
   "data_as_of": "2026-09-28"
 }

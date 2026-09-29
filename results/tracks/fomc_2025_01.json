@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "美联储将联邦基金利率走廊下移约25bp至4.25–4.5%，立场偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从4.5–4.75%下调约25bp至4.25–4.5%。下一钉落在2025-03-19的FOMC利率决议。声明摘意指向更快回到2%物价目标，仍框在双使命内。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%。",
+    "lead_zh": "本场偏松一档，走廊下移约 25bp 至 4.25–4.5%。",
+    "primer_zh": "FOMC 全年大约召开 8 次会议，每次主要定政策利率走廊并发布声明。本次已将走廊从上次 4.5–4.75% 下调约 25bp 至 4.25–4.5%。声明摘意指向更快回到 2% 物价目标，仍框在双使命内。下一钉是 2025-03-19 的 FOMC 利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp → 4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次走廊4.25–4.5%，动作是降息约25bp，生效日为2024-12-19。\n\n会前到会后并置看，走廊明确下移一档约25bp，态度落在偏松一档；声明钩子强调更快回到2%物价目标，同时仍框在双使命内。本场宽表决议日T量价字段为空，反应窗以走廊与声明文本本身为主轴。",
-    "watch_zh": "盯声明全文措辞与双使命表述是否延续；盘面利率敏感资产对4.25–4.5%走廊的消化；下一钉2025-03-19 FOMC决议日走廊与声明是否再动。",
+    "narrative_zh": "会前走廊停在 4.5–4.75%。\n会后落地为降息约 25bp，新走廊 4.25–4.5%，生效按 2024-12-19 计。态度明确偏松一档，声明侧重更快回归 2% 通胀目标、仍框双使命。本窗 wide 表决议日量价字段为空，读法以走廊与声明结果为主。",
+    "watch_zh": "盯新走廊 4.25–4.5% 与声明后续传导、盘面反应；下一钉 2025-03-19 FOMC。",
     "status_zh": "反应中（数据至 T+607/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-29T02:03:00Z",
+    "generated_at": "2026-09-29T02:35:30Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_01.html",
-  "generated_at": "2026-09-29T02:03:19Z",
+  "generated_at": "2026-09-29T02:35:50Z",
   "as_of": "2026-09-29",
   "data_as_of": "2026-09-28"
 }
