@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+60/3）",
+  "status_zh": "反应中（数据至 T+61/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -102,17 +102,17 @@
     "event_id": "fomc_2026_07",
     "event_date": "2026-07-29",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-09-27",
-    "calendar_today": "2026-09-28",
+    "data_as_of": "2026-09-28",
+    "calendar_today": "2026-09-29",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "美联储将走廊下移约25bp至3.5–3.75%，立场偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，每次定联邦基金利率走廊并发布声明。本次已落地降息约25bp、走廊至3.5–3.75%。下一钉是2026-09-16的FOMC利率决议。市场继续对照声明措辞与盘面量价消化。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%；声明强调通胀仍偏高，并指向更快回到2%物价目标。",
+    "lead_zh": "会后定调偏松一档：走廊下移约25bp至3.5–3.75%，声明仍点出通胀偏高并指向更快回到2%目标。",
+    "primer_zh": "FOMC一年大约开八次会，每次主要定联邦基金利率走廊并发布声明。本次已将走廊从3.75–4%下调约25bp至3.5–3.75%。下一钉落在2026-09-16的FOMC利率决议。市场继续对照声明措辞与走廊位置定价。",
+    "attitude_zh": "态度偏松一档：降息约25bp、走廊至3.5–3.75%，声明同时强调通胀仍偏高并指向更快回到2%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -131,9 +131,9 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日落定：上次走廊3.75–4%，本次降至3.5–3.75%，动作降息约25bp。\n当日反应窗里，BTC +0.11%、ETH -0.60%，永续持仓OI +1.06%，BTC资金费率9.2%；BTC ETF净流入0.32亿。风险资产与美元同步波动：ES -1.53%，VIX +13.45%，DXY -0.57%。量价显示决议当日多空切换并不剧烈，波动主要集中在股指与波动率端。",
-    "watch_zh": "盯声明后续传导与通胀表述是否加码；盘面继续看BTC/ETH波动、OI与ETF流向、VIX与DXY；下一钉2026-09-16 FOMC走廊与声明。",
-    "status_zh": "反应中（数据至 T+60/3）",
+    "narrative_zh": "决议日落定降息约25bp，走廊由上次3.75–4%下移至3.5–3.75%。\n当日量价：BTC +0.11%、ETH -0.60%，永续OI +1.06%，BTC资金费率9.2%；ES -1.53%、VIX +13.45%、DXY -0.57%，BTC ETF净流入0.32亿。风险资产与波动指标同日分化，美元小幅走弱。\n声明侧强调通胀仍偏高，并指向更快回到2%物价目标，与走廊下移形成「偏松一档但通胀提醒仍在」的并置读法。",
+    "watch_zh": "盯走廊是否稳在3.5–3.75%、声明通胀与2%目标表述有无后续微调，以及盘面BTC/ETH、OI、ETF与ES、VIX、DXY的延续；下一钉2026-09-16决议。",
+    "status_zh": "反应中（数据至 T+61/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -150,8 +150,8 @@
       "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-09-27",
-      "calendar_today": "2026-09-28",
+      "data_as_of": "2026-09-28",
+      "calendar_today": "2026-09-29",
       "event_date": "2026-07-29",
       "pre_n": 3,
       "post_n": 3,
@@ -285,7 +285,7 @@
       "Voting against the monetary policy action were Beth M. Hammack, Neel Kashkari, and Lorie K. Logan, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-09-28T02:36:55Z",
+    "generated_at": "2026-09-29T02:06:28Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -324,7 +324,7 @@
     }
   ],
   "href": "event_fomc_2026_07.html",
-  "generated_at": "2026-09-28T02:37:12Z",
-  "as_of": "2026-09-28",
-  "data_as_of": "2026-09-27"
+  "generated_at": "2026-09-29T02:06:45Z",
+  "as_of": "2026-09-29",
+  "data_as_of": "2026-09-28"
 }
