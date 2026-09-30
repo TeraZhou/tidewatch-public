@@ -2,9 +2,9 @@
   "schema_version": "dashboard_cache_v2",
   "start": "2025-12-31",
   "end": "2026-09-29",
-  "fetched_at": "2026-09-30T01:57:53Z",
+  "fetched_at": "2026-09-30T02:30:06Z",
   "refresh_mode": "incremental",
-  "fetch_start": "2026-09-23",
+  "fetch_start": "2026-09-24",
   "periods_per_year": 1095.0,
   "primary": "BTC",
   "secondary": [
@@ -21170,7 +21170,7 @@
         ],
         [
           "2026-09-29",
-          7744.75
+          7746.5
         ]
       ],
       "GOLD": [
