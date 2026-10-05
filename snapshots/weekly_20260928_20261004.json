@@ -1,0 +1,138 @@
+{
+  "report_id": "weekly_20260928_20261004",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_low",
+      "name_zh": "偏震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "liquidation_driven_squeeze",
+      "name_zh": "清算驱动（上涨段挤压迹象）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ],
+      "caution": "liquidation side_semantics=raw_exchange_side_unverified"
+    },
+    "vol": {
+      "id": "mid",
+      "name_zh": "中等波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_rich",
+      "name_zh": "期权偏贵（IV 相对 RV 溢价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": 15.37
+    },
+    "tradfi_link": {
+      "id": "crypto_idiosyncratic",
+      "name_zh": "加密偏独立",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": 2.436,
+    "rv_ann": 21.13,
+    "iv_end": 36.5,
+    "iv_rv_spread": 15.37,
+    "funding_ann": 8.19,
+    "eth_funding_ann": 10.71,
+    "oi_chg": 3.515,
+    "perp_turnover_sum_usd": 79598010811.81,
+    "perp_turnover_sum_display_zh": "795.98 亿美金",
+    "perp_turnover_sum_display_en": "79.60B",
+    "perp_turnover_wow_pct": -11.78,
+    "perp_activity_id": "normal",
+    "spot_turnover_sum_usd": 9375783787.8,
+    "spot_turnover_sum_display_zh": "93.76 亿美金",
+    "spot_turnover_sum_display_en": "9.38B",
+    "etf_btc_net_usd": 82900000.0,
+    "etf_btc_net_display_zh": "+82.90 百万美金",
+    "etf_btc_net_display_en": "+82.90M",
+    "etf_eth_net_usd": -118000000.0,
+    "etf_eth_net_display_zh": "-1.18 亿美金",
+    "etf_eth_net_display_en": "-118.00M",
+    "etf_channel_id": "neutral",
+    "etf_channel_zh": "中性/拉锯",
+    "etf_channel_en": "neutral"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "mean_reversion",
+      "vol_harvest"
+    ],
+    "mismatched": [
+      "trend_following"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "BTC 现货 ETF 净流是否继续停留在中性区间（单周 |净额| 不大），还是重新出现连续大额净申购/净赎回日。",
+        "en": "Whether BTC spot ETF net stays inside a neutral band (modest |net|) or re-prints clustered large inflow/outflow days."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_persist",
+      "rationale_zh": "本周已从上周强流入骤降至中性，下期核对通道姿态是否翻转或钝化，是现货通道温度的直接哨点。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "Deribit BTC IV-RV 点差是否仍维持双位数溢价，或向 RV 靠拢收窄。",
+        "en": "Whether Deribit BTC IV-RV spread stays in double-digit premium or compresses toward RV."
+      },
+      "watchable": true,
+      "template_hint": "iv_still_rich",
+      "rationale_zh": "本周溢价约 15 pp 且标签偏贵，是 vol_harvest 逻辑能否延续的核心观察。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "资金费率年化是否从期末 +8.19% 附近明显回落，同时 OI 是否停止继续抬升。",
+        "en": "Whether funding ann eases materially from ~+8.19% end-of-week while OI stops climbing."
+      },
+      "watchable": true,
+      "template_hint": "funding_ease",
+      "rationale_zh": "清算驱动挤压后仍留温和正费与 OI 增，若费不下、仓不减，震荡中再出清风险仍在。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-09-28",
+    "end": "2026-10-04",
+    "label": "2026-09-28～2026-10-04",
+    "incomplete_end": false
+  }
+}

@@ -1,0 +1,325 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-10-04",
+  "date_effective": "2026-10-04",
+  "as_of": "2026-10-05T07:21:12Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-10-04",
+    "prior_date": "2026-10-03",
+    "btc_ret_1d": 2.096,
+    "eth_ret_1d": 1.478,
+    "oi_qty": 97443.891,
+    "oi_chg_pct": -0.487,
+    "funding_ann_pct": 8.1939,
+    "funding_ann_chg_pp": 9.668,
+    "eth_funding_ann_pct": 10.7146,
+    "eth_funding_ann_chg_pp": 6.554,
+    "perp_turnover_usd": 5736194884.7588,
+    "perp_turnover_chg_pct": 56.91,
+    "spot_turnover_usd": 683674414.6744858,
+    "spot_turnover_chg_pct": 17.11,
+    "btc_etf_net_usd": 31700000.0,
+    "eth_etf_net_usd": -17300000.0,
+    "etf_lookback_sum_btc_usd": -14300000.0,
+    "etf_lookback_sum_eth_usd": -132300000.0,
+    "es_ret_1d": 0.689,
+    "nq_ret_1d": -0.638,
+    "vix_ret_1d": -6.589,
+    "dxy_ret_1d": 0.218,
+    "gold_ret_1d": -1.984,
+    "tradfi_sessions": {
+      "ES": {
+        "prior": "2026-10-01",
+        "day": "2026-10-02"
+      },
+      "NQ": {
+        "prior": "2026-09-27",
+        "day": "2026-09-28"
+      },
+      "VIX": {
+        "prior": "2026-10-01",
+        "day": "2026-10-02"
+      }
+    },
+    "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +2.10% · ES +0.69%）",
+    "tradfi_link_note_en": "BTC and ES same direction (BTC +2.10% · ES +0.69%)",
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +2.10%（有波动、未过异常默认线） · ETH +1.48% · OI 日变 -0.49% · 永续成交额 57.36 亿美金（日变 +56.9%） · BTC ETF 净流 +31.70 百万美金",
+    "weather_en": "Weather: BTC +2.10% · ETH +1.48% · OI -0.49% d/d · perp turnover 5.74B (+56.9% d/d) · BTC ETF net +31.70M",
+    "text_zh": "BTC 收涨约 2.1%、ETH 跟涨，永续成交明显放量；但清算量近前日 5 倍、资金费率年化大幅跳升，杠杆在重新计费。与 ES 同向。",
+    "text_en": "BTC +2.1% with heavier perp turnover; liq ~5× prior and funding annualized jumped hard—leverage repricing. Same direction as ES."
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "清算尖峰伴费率跳升的涨日",
+      "headline_en": "清算层异常抬升",
+      "conclusion_zh": "【清算尖峰伴费率跳升的涨日】BTC 温和收涨，主矛盾在杠杆侧：清算量达前日约 5 倍、资金费率年化一日跳升近 10 个百分点，OI 仅微降；价格与 ES 同向，不是单边无声上涨。",
+      "conclusion_en": "状态判断：清算层异常抬升。币侧 BTC +2.10%、ETH +1.48%。BTC 与 ES 同向（BTC +2.10% · ES +0.69%）。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "+2.10%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "+1.48%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "+9.67 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "8.19"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "-0.49%"
+        },
+        {
+          "key": "liq_vs_prior",
+          "label_zh": "清算/前日",
+          "display": "4.97×"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "57.36 亿美金（+57%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "6.84 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+15.37 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-4.69 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "+0.69%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-0.64%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "funding_jump",
+          "value": 9.668,
+          "threshold": 8.0,
+          "summary_zh": "funding 年化日变 +9.67 个百分点",
+          "summary_en": "funding ann. day change +9.67 pp",
+          "meta": {
+            "title_zh": "资金费率年化跳变",
+            "title_en": "Funding ann. jump",
+            "what_zh": "永续资金费率（年化）相对前一日是否大幅变化，提示杠杆拥挤/松动。",
+            "what_en": "Large day-over-day change in perpetual funding (annualized).",
+            "how_zh": "取看板缓存中 funding 序列的年化值（%）；Δ = 今日年化 − 昨日年化（百分点）。当 |Δ| ≥ funding_jump_pp（默认 8）时触发。",
+            "how_en": "Δ = today funding ann.% − prior day (percentage points). Fires if |Δ| ≥ funding_jump_pp (default 8)."
+          },
+          "observed": {
+            "btc_ret_1d": 2.096,
+            "eth_ret_1d": 1.478,
+            "funding_ann_pct": 8.1939,
+            "funding_ann_chg_pp": 9.668,
+            "oi_qty": 97443.891,
+            "oi_chg_pct": -0.487,
+            "liq_vs_prior": 4.97,
+            "iv_rv_spread": 15.37,
+            "iv_rv_spread_chg_pp": -4.69,
+            "vix_ret_1d": -6.589,
+            "btc_etf_net_usd": 31700000.0,
+            "eth_etf_net_usd": -17300000.0,
+            "perp_turnover_usd": 5736194884.7588,
+            "perp_turnover_chg_pct": 56.91,
+            "spot_turnover_usd": 683674414.6744858,
+            "value": 9.668,
+            "threshold": 8.0
+          },
+          "readout_zh": "观测 funding 年化日变 9.67 个百分点，阈值 |·|≥8.00",
+          "readout_en": "funding ann. day change +9.67 pp",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        },
+        {
+          "id": "liq_spike",
+          "value": 4.97,
+          "threshold": 2.5,
+          "summary_zh": "清算量约为前一日的 4.97×",
+          "summary_en": "liquidation qty ~4.97× prior day",
+          "meta": {
+            "title_zh": "清算量相对前日尖峰",
+            "title_en": "Liquidation spike vs prior day",
+            "what_zh": "当日强平总量是否数倍于前一日，提示杠杆出清/挤压。",
+            "what_en": "Whether liquidation notional is multiple of prior day.",
+            "how_zh": "ratio = 今日清算 total_qty ÷ 昨日 total_qty。当 ratio ≥ liq_spike_vs_prior（默认 2.5）时触发。side 多空语义未最终确认，只报总量结构。",
+            "how_en": "ratio = today liq total_qty / prior. Fires if ratio ≥ liq_spike_vs_prior (default 2.5). Side long/short semantics unverified."
+          },
+          "observed": {
+            "btc_ret_1d": 2.096,
+            "eth_ret_1d": 1.478,
+            "funding_ann_pct": 8.1939,
+            "funding_ann_chg_pp": 9.668,
+            "oi_qty": 97443.891,
+            "oi_chg_pct": -0.487,
+            "liq_vs_prior": 4.97,
+            "iv_rv_spread": 15.37,
+            "iv_rv_spread_chg_pp": -4.69,
+            "vix_ret_1d": -6.589,
+            "btc_etf_net_usd": 31700000.0,
+            "eth_etf_net_usd": -17300000.0,
+            "perp_turnover_usd": 5736194884.7588,
+            "perp_turnover_chg_pct": 56.91,
+            "spot_turnover_usd": 683674414.6744858,
+            "value": 4.97,
+            "threshold": 2.5
+          },
+          "readout_zh": "观测清算量/前日 = 4.97×，阈值 ≥2.50×",
+          "readout_en": "liquidation qty ~4.97× prior day",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "先看数字：BTC +2.10%、ETH +1.48%；永续成交额 57.36 亿美金（日变 +57%），现货约 6.84 亿也增；清算/前日 = 4.97×，OI 日变 -0.49%；funding 年化 8.19%、日变 +9.67 pp（ETH funding 同步抬升）。机制上，放量 + 清算尖峰 + 费率急升，像杠杆仓位在上涨中被清理并重新计费，拥挤度信号变响，但 OI 存量只是略减。传统侧：BTC 与 ES 同向（ES +0.69%），NQ 小跌、VIX 大跌约 6.6%。翻译一句：钱在动、仓位在换价，不是平静阴跌或单边无波动的涨。",
+      "read_en": "依据（程序）：\n- 观测 funding 年化日变 9.67 个百分点，阈值 |·|≥8.00\n- 观测清算量/前日 = 4.97×，阈值 ≥2.50×\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 同向（BTC +2.10% · ES +0.69%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +2.10% · ES +0.69%）",
+      "tradfi_link_note_en": "BTC and ES same direction (BTC +2.10% · ES +0.69%)",
+      "text_zh": "【清算尖峰伴费率跳升的涨日】BTC 温和收涨，主矛盾在杠杆侧：清算量达前日约 5 倍、资金费率年化一日跳升近 10 个百分点，OI 仅微降；价格与 ES 同向，不是单边无声上涨。",
+      "text_en": "状态判断：清算层异常抬升。币侧 BTC +2.10%、ETH +1.48%。BTC 与 ES 同向（BTC +2.10% · ES +0.69%）。",
+      "card": {
+        "date": "2026-10-04",
+        "prior_date": "2026-10-03",
+        "btc_ret_1d": 2.096,
+        "eth_ret_1d": 1.478,
+        "funding_ann_pct": 8.1939,
+        "funding_ann_chg_pp": 9.668,
+        "eth_funding_ann_pct": 10.7146,
+        "eth_funding_ann_chg_pp": 6.554,
+        "oi_qty": 97443.891,
+        "oi_prior_qty": 97921.017,
+        "oi_chg_pct": -0.487,
+        "liq_total": 49.238000000000014,
+        "liq_vs_prior": 4.97,
+        "perp_turnover_usd": 5736194884.7588,
+        "perp_turnover_chg_pct": 56.91,
+        "perp_turnover_display_zh": "57.36 亿美金",
+        "perp_turnover_display_en": "5.74B",
+        "spot_turnover_usd": 683674414.6744858,
+        "spot_turnover_chg_pct": 17.11,
+        "spot_turnover_display_zh": "6.84 亿美金",
+        "spot_turnover_display_en": "683.67M",
+        "iv_ann_pct": 36.5,
+        "rv_7_ann_pct": 21.1301,
+        "iv_rv_spread": 15.37,
+        "iv_rv_spread_chg_pp": -4.69,
+        "vix_ret_1d": -6.589,
+        "es_ret_1d": 0.689,
+        "nq_ret_1d": -0.638,
+        "dxy_ret_1d": 0.218,
+        "gold_ret_1d": -1.984,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-10-01",
+            "day": "2026-10-02"
+          },
+          "NQ": {
+            "prior": "2026-09-27",
+            "day": "2026-09-28"
+          },
+          "VIX": {
+            "prior": "2026-10-01",
+            "day": "2026-10-02"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +2.10% · ES +0.69%）",
+        "tradfi_link_note_en": "BTC and ES same direction (BTC +2.10% · ES +0.69%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 5,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办还剩约 5 个钉；有人在问 IV 是什么、和 VIX 有何区别，可顺手补一句波动口径。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 收涨约 2.1%",
+      "tone": "up"
+    },
+    {
+      "text": "清算量近前日 5 倍",
+      "tone": "warn"
+    },
+    {
+      "text": "资金费率年化大幅跳升",
+      "tone": "warn"
+    },
+    {
+      "text": "永续成交明显放量",
+      "tone": "up"
+    },
+    {
+      "text": "与 ES 同向",
+      "tone": "neutral"
+    },
+    {
+      "text": "清算/前日 4.97×",
+      "tone": "warn"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-10-02",
+    "etf_eth_using_2026-10-02"
+  ]
+}

@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>潮观 Tidewatch · 季报 · quarterly_2026Q3</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+
+  :root, [data-theme="paper"] {
+    --bg:#f4f1ea; --card:#fffcf7; --card2:#f7f2e9; --topbar-bg:rgba(255,252,247,.92);
+    --line:rgba(60,48,32,.1); --text:#1c1917; --muted:#57534e; --dim:#78716c;
+    --accent:#0f766e; --accent-soft:rgba(15,118,110,.1); --accent2:#0d9488; --accent-glow:rgba(15,118,110,.16);
+    --up:#15803d; --down:#be123c; --warn:#b45309; --shadow:0 14px 40px rgba(28,25,23,.08); --radius:18px;
+    --glow1:rgba(15,118,110,.07); --glow2:rgba(180,83,9,.05); --glow3:rgba(190,18,60,.04);
+    --chart-1:#0f766e; --chart-2:#b45309; --chart-3:#be123c; --chart-4:#1d4ed8; --chart-5:#78716c;
+    --qa-accent:#0f766e; --qa-accent2:#0d9488; --qa-bg:rgba(255,252,247,.97);
+    --qa-border:color-mix(in srgb,#0f766e 28%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#0f766e 10%,#fffcf7),#fffcf7);
+    --qa-user:#0d9488; --qa-btn-text:#ecfdf5;
+    --font:"SF Pro Display","Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  [data-theme="mist"] {
+    --bg:#f3f5f7; --card:#fff; --card2:#f8fafc; --topbar-bg:rgba(255,255,255,.92);
+    --line:rgba(15,23,42,.08); --text:#0f172a; --muted:#64748b; --dim:#94a3b8;
+    --accent:#0d9488; --accent-soft:rgba(13,148,136,.1); --accent2:#14b8a6; --accent-glow:rgba(13,148,136,.16);
+    --up:#059669; --down:#e11d48; --warn:#d97706; --shadow:0 12px 36px rgba(15,23,42,.06);
+    --glow1:rgba(13,148,136,.06); --glow2:rgba(217,119,6,.04); --glow3:rgba(225,29,72,.03);
+    --chart-1:#0d9488; --chart-2:#d97706; --chart-3:#e11d48; --chart-4:#2563eb; --chart-5:#64748b;
+    --qa-accent:#0d9488; --qa-accent2:#14b8a6; --qa-bg:rgba(255,255,255,.97);
+    --qa-border:color-mix(in srgb,#0d9488 28%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#0d9488 10%,#fff),#fff);
+    --qa-user:#0f766e; --qa-btn-text:#f0fdfa;
+  }
+  [data-theme="ink"] {
+    --bg:#fafafa; --card:#fff; --card2:#f5f5f5; --topbar-bg:rgba(250,250,250,.94);
+    --line:rgba(0,0,0,.08); --text:#111; --muted:#525252; --dim:#737373;
+    --accent:#171717; --accent-soft:rgba(23,23,23,.06); --accent2:#404040; --accent-glow:rgba(23,23,23,.12);
+    --up:#16a34a; --down:#dc2626; --warn:#ca8a04; --shadow:0 10px 30px rgba(0,0,0,.06);
+    --glow1:rgba(0,0,0,.03); --glow2:rgba(22,163,74,.04); --glow3:rgba(220,38,38,.03);
+    --chart-1:#171717; --chart-2:#16a34a; --chart-3:#dc2626; --chart-4:#2563eb; --chart-5:#737373;
+    --qa-accent:#171717; --qa-accent2:#404040; --qa-bg:#fff;
+    --qa-border:color-mix(in srgb,#171717 22%,transparent);
+    --qa-head:linear-gradient(180deg,rgba(23,23,23,.06),#fff);
+    --qa-user:#404040; --qa-btn-text:#fafafa;
+  }
+  [data-theme="forest"] {
+    --bg:#f2f7f3; --card:#fbfffc; --card2:#f0f7f2; --topbar-bg:rgba(251,255,252,.92);
+    --line:rgba(20,83,45,.1); --text:#14532d; --muted:#3f6212; --dim:#4d7c0f;
+    --accent:#15803d; --accent-soft:rgba(21,128,61,.1); --accent2:#16a34a; --accent-glow:rgba(21,128,61,.16);
+    --up:#15803d; --down:#b91c1c; --warn:#a16207; --shadow:0 12px 36px rgba(20,83,45,.07);
+    --glow1:rgba(21,128,61,.07); --glow2:rgba(161,98,7,.05); --glow3:rgba(185,28,28,.04);
+    --chart-1:#15803d; --chart-2:#a16207; --chart-3:#b91c1c; --chart-4:#0369a1; --chart-5:#4d7c0f;
+    --qa-accent:#15803d; --qa-accent2:#16a34a; --qa-bg:rgba(251,255,252,.97);
+    --qa-border:color-mix(in srgb,#15803d 28%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#15803d 10%,#fbfffc),#fbfffc);
+    --qa-user:#16a34a; --qa-btn-text:#f0fdf4;
+  }
+  [data-theme="rose"] {
+    --bg:#faf6f5; --card:#fffbfb; --card2:#faf3f2; --topbar-bg:rgba(255,251,251,.92);
+    --line:rgba(127,29,29,.08); --text:#1c1917; --muted:#7c6f6a; --dim:#a8a29e;
+    --accent:#9f1239; --accent-soft:rgba(159,18,57,.08); --accent2:#be123c; --accent-glow:rgba(159,18,57,.14);
+    --up:#15803d; --down:#e11d48; --warn:#b45309; --shadow:0 12px 36px rgba(28,25,23,.06);
+    --glow1:rgba(159,18,57,.05); --glow2:rgba(21,128,61,.04); --glow3:rgba(180,83,9,.04);
+    --chart-1:#9f1239; --chart-2:#b45309; --chart-3:#e11d48; --chart-4:#0f766e; --chart-5:#78716c;
+    --qa-accent:#9f1239; --qa-accent2:#be123c; --qa-bg:rgba(255,251,251,.97);
+    --qa-border:color-mix(in srgb,#9f1239 26%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#9f1239 9%,#fffbfb),#fffbfb);
+    --qa-user:#be123c; --qa-btn-text:#fff1f2;
+  }
+  [data-theme="slate"] {
+    --bg:#0c0f12; --card:#161b22; --card2:#1c232c; --topbar-bg:rgba(12,15,18,.86);
+    --line:rgba(148,163,170,.14); --text:#e9eef2; --muted:#9aa7b2; --dim:#6f7d89;
+    --accent:#2dd4bf; --accent-soft:rgba(45,212,191,.14); --accent2:#5eead4; --accent-glow:rgba(45,212,191,.28);
+    --up:#34d399; --down:#fb7185; --warn:#fbbf24; --shadow:0 18px 50px rgba(0,0,0,.4);
+    --glow1:rgba(45,212,191,.11); --glow2:rgba(251,191,36,.06); --glow3:rgba(251,113,133,.05);
+    --chart-1:#2dd4bf; --chart-2:#fbbf24; --chart-3:#fb7185; --chart-4:#a3e635; --chart-5:#94a3b8;
+    --qa-accent:#2dd4bf; --qa-accent2:#5eead4; --qa-bg:rgba(22,27,34,.96);
+    --qa-border:color-mix(in srgb,#2dd4bf 32%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#2dd4bf 14%,#161b22),#161b22);
+    --qa-user:#5eead4; --qa-btn-text:#042f2e;
+  }
+  [data-theme="graphite"] {
+    --bg:#121212; --card:#1e1e1e; --card2:#262626; --topbar-bg:rgba(18,18,18,.9);
+    --line:rgba(255,255,255,.08); --text:#f5f5f5; --muted:#a3a3a3; --dim:#737373;
+    --accent:#e5e5e5; --accent-soft:rgba(229,229,229,.08); --accent2:#d4d4d4; --accent-glow:rgba(229,229,229,.14);
+    --up:#4ade80; --down:#f87171; --warn:#fbbf24; --shadow:0 18px 50px rgba(0,0,0,.5);
+    --glow1:rgba(255,255,255,.04); --glow2:rgba(74,222,128,.05); --glow3:rgba(248,113,113,.05);
+    --chart-1:#e5e5e5; --chart-2:#4ade80; --chart-3:#f87171; --chart-4:#60a5fa; --chart-5:#a3a3a3;
+    --qa-accent:#e5e5e5; --qa-accent2:#d4d4d4; --qa-bg:rgba(30,30,30,.96);
+    --qa-border:color-mix(in srgb,#e5e5e5 22%,transparent);
+    --qa-head:linear-gradient(180deg,rgba(229,229,229,.08),#1e1e1e);
+    --qa-user:#d4d4d4; --qa-btn-text:#171717;
+  }
+  [data-theme="ocean"] {
+    --bg:#0b1220; --card:#151f36; --card2:#1a2742; --topbar-bg:rgba(11,18,32,.78);
+    --line:rgba(148,163,184,.16); --text:#e8eefc; --muted:#9aa8c7; --dim:#6b7a99;
+    --accent:#5b8cff; --accent-soft:rgba(91,140,255,.14); --accent2:#3dd6c6; --accent-glow:rgba(91,140,255,.3);
+    --up:#3dd68c; --down:#ff6b8a; --warn:#ffb020; --shadow:0 18px 50px rgba(0,0,0,.35);
+    --glow1:rgba(91,140,255,.16); --glow2:rgba(61,214,198,.1); --glow3:rgba(255,107,138,.06);
+    --chart-1:#5b8cff; --chart-2:#3dd6c6; --chart-3:#ff6b8a; --chart-4:#ffb020; --chart-5:#94a3b8;
+    --qa-accent:#5b8cff; --qa-accent2:#82a9ff; --qa-bg:rgba(21,31,54,.96);
+    --qa-border:color-mix(in srgb,#5b8cff 32%,transparent);
+    --qa-head:linear-gradient(180deg,color-mix(in srgb,#5b8cff 14%,#151f36),#151f36);
+    --qa-user:#82a9ff; --qa-btn-text:#0b1220;
+  }
+  *{box-sizing:border-box} body{margin:0;font-family:var(--font);color:var(--text);background:radial-gradient(1200px 600px at 10% -10%,var(--glow1),transparent 60%),radial-gradient(900px 500px at 90% 0,var(--glow2),transparent 55%),var(--bg);min-height:100vh;line-height:1.65}
+  .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:var(--topbar-bg);border-bottom:1px solid var(--line)}
+  .topbar-inner{max-width:1120px;margin:0 auto;padding:14px 20px;display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:grid;place-items:center;font-weight:800;color:var(--bg);box-shadow:0 0 24px var(--accent-glow)}
+  .brand h1{font-size:15px;margin:0}.brand p{margin:0;font-size:12px;color:var(--muted)}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .seg{display:inline-flex;padding:4px;border-radius:999px;border:1px solid var(--line);background:rgba(127,127,127,.06)}
+  .seg button{border:0;background:transparent;color:var(--muted);padding:8px 12px;border-radius:999px;cursor:pointer;font-size:12px}
+  .seg button.active{background:var(--accent-soft);color:var(--text);font-weight:600}
+  .pill{font-size:12px;padding:7px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+  .pill.s2{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent);background:color-mix(in srgb,var(--warn) 12%,transparent)}
+  .theme-label{font-size:11px;color:var(--dim)}.theme-pick{display:inline-flex;gap:8px;align-items:center}
+  .theme-pick select{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--text);font:inherit;font-size:12px;font-weight:600;padding:8px 28px 8px 12px;border-radius:999px;cursor:pointer;min-width:120px}
+  .wrap{max-width:1120px;margin:0 auto;padding:28px 20px 140px}
+  .hero{display:grid;grid-template-columns:1.4fr .8fr;gap:18px;margin-bottom:22px}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+  .card-pad{padding:22px}.kicker{font-size:12px;color:var(--accent2);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+  .hero h2{margin:0 0 10px;font-size:26px;line-height:1.25}.lead{color:var(--muted);font-size:14px}
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .metric{background:rgba(0,0,0,.05);border:1px solid var(--line);border-radius:14px;padding:12px}
+  .metric .l{font-size:11px;color:var(--dim)}.metric .v{font-size:16px;font-weight:700;margin-top:4px}
+  .side-stack{display:flex;flex-direction:column;gap:12px}
+  .attn{padding:16px;background:linear-gradient(135deg,color-mix(in srgb,var(--warn) 14%,transparent),transparent 55%),var(--card)}
+  .attn h3{margin:0 0 6px;font-size:14px;color:var(--warn)}.attn p{margin:0;font-size:13px;color:var(--muted)}
+  .watch{padding:16px}.watch h3{margin:0 0 8px;font-size:13px;color:var(--muted)}.watch ol{margin:0;padding-left:18px;font-size:13px}
+  .tags{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}
+  @media(max-width:900px){.tags{grid-template-columns:1fr 1fr}}
+  .tag{padding:14px;border-radius:16px;border:1px solid var(--line);background:var(--card2)}
+  .tag .t{font-size:11px;color:var(--dim)}.tag .n{font-size:15px;font-weight:700;margin:6px 0}.tag .d{font-size:12px;color:var(--muted)}
+  .tag.trend{border-color:color-mix(in srgb,var(--up) 35%,transparent)}.tag.lev{border-color:color-mix(in srgb,var(--warn) 35%,transparent)}
+  .tag.vol{border-color:color-mix(in srgb,var(--down) 35%,transparent)}.tag.link{border-color:color-mix(in srgb,var(--accent) 35%,transparent)}
+  .block{margin-bottom:18px}.block-h{display:flex;justify-content:space-between;margin:8px 4px 12px}.block-h h3{margin:0;font-size:18px}.block-h .sub{color:var(--dim);font-size:12px}
+  .grid-2{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}@media(max-width:900px){.grid-2{grid-template-columns:1fr}}
+  .chart-box{padding:16px;height:300px}.chart-box.sm{height:250px}
+  .plain{padding:0 22px 16px;color:var(--muted);font-size:14px}.plain strong{color:var(--text)}
+  .callout{margin:0 22px 16px;padding:12px;border-radius:12px;background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);font-size:13px;color:var(--muted)}
+  .callout b{color:var(--accent2)}
+  table.data{width:100%;border-collapse:collapse;font-size:12px} table.data th,table.data td{padding:8px;border-bottom:1px solid var(--line);text-align:right}
+  table.data th:first-child,table.data td:first-child{text-align:left}.up{color:var(--up)}.down{color:var(--down)}
+  details.fold{margin:0 22px 12px} details.fold summary{cursor:pointer;color:var(--accent2);font-size:13px}
+  .trad-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:12px 16px 18px}@media(max-width:800px){.trad-grid{grid-template-columns:1fr}}
+  .trad{border:1px solid var(--line);border-radius:14px;padding:14px;background:rgba(0,0,0,.03)}
+  .trad .name{display:flex;justify-content:space-between}.trad .q{margin-top:8px;font-size:12px;color:var(--muted)}.trad .q span{color:var(--dim)}
+  .conclusions{padding:8px 22px 18px}.conclusions li{margin:8px 0}
+  .env-pre{white-space:pre-wrap;font-family:inherit;font-size:13px;color:var(--muted);margin:0 22px 12px;line-height:1.7}
+  a.site-link{text-decoration:none;color:var(--accent);border-color:color-mix(in srgb,var(--accent) 35%,transparent);background:var(--accent-soft);font-weight:600}
+  .site-nav{display:inline-flex;gap:6px;flex-wrap:wrap;align-items:center;margin-right:4px}
+  a.site-link-muted{opacity:.72;font-weight:500}
+  a.site-link:hover{filter:brightness(0.97)}
+  a.site-a{color:var(--accent2);font-weight:600;text-decoration:none} a.site-a:hover{text-decoration:underline}
+  details.week-diff{margin:12px 16px 16px} details.week-diff summary{cursor:pointer;color:var(--text);font-size:14px;line-height:1.5}
+  .foot{margin-top:24px;padding:16px;border-radius:var(--radius);border:1px dashed color-mix(in srgb,var(--dim) 40%,transparent);font-size:12px;color:var(--dim)}
+  /* Layer visibility:
+     - plain: hide tech-only
+     - tech: hide plain-only / beginner
+     - l0: hide both plain and tech section bodies (keep L0 hero)
+     - all: show everything
+  */
+  body.layer-l0 .layer-plain,
+  body.layer-l0 .layer-tech,
+  body.layer-l0 .layer-plain-only,
+  body.layer-l0 .layer-tech-only { display: none !important; }
+  body.layer-plain .layer-tech-only { display: none !important; }
+  body.layer-tech .layer-plain-only { display: none !important; }
+  /* Language mode: whole-page zh OR en — no inline mix */
+  span.lang.zh, span.lang.en { display: none !important; }
+  body.lang-zh span.lang.zh { display: inline !important; }
+  body.lang-en span.lang.en { display: inline !important; }
+  .qa-dock{position:fixed;right:18px;bottom:18px;width:min(380px,calc(100vw - 24px));z-index:80}
+  .qa-dock.collapsed{width:auto}
+  .qa-dock.collapsed .qa-panel{display:none}
+  .qa-fab{display:none;border:0;border-radius:999px;padding:12px 18px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text);box-shadow:var(--shadow)}
+  .qa-dock.collapsed .qa-fab{display:inline-flex;align-items:center;gap:6px}
+  .qa-fab[hidden]{display:none!important}
+  .qa-panel{border-radius:18px;border:1px solid var(--qa-border);background:var(--qa-bg);box-shadow:var(--shadow);overflow:hidden}
+  .qa-head{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border-bottom:1px solid color-mix(in srgb,var(--qa-accent) 16%,transparent);background:var(--qa-head)}
+  .qa-head b{color:var(--qa-accent2);font-size:13px}
+  .qa-head-actions{display:inline-flex;gap:4px;align-items:center}
+  .qa-head button{border:0;background:transparent;color:var(--muted);cursor:pointer;font:inherit;font-size:13px;padding:4px 8px;border-radius:8px}
+  .qa-head button:hover{background:color-mix(in srgb,var(--qa-accent) 10%,transparent);color:var(--text)}
+  #qaMinimize{font-size:18px;line-height:1;font-weight:600;padding:2px 10px}
+  .qa-body{padding:12px;max-height:260px;overflow:auto}.qa-hint{font-size:12px;color:var(--muted)}
+  .qa-thread .msg{margin:0 0 8px;font-size:13px;white-space:pre-wrap}.qa-thread .msg.user{color:var(--qa-user)}
+  .qa-thread .msg.bot{padding:10px;border-radius:12px;border:1px solid color-mix(in srgb,var(--qa-accent) 16%,transparent);background:color-mix(in srgb,var(--qa-accent) 6%,transparent)}
+  .qa-thread .msg.thinking{opacity:.9}
+  .qa-thinking{display:flex;align-items:center;gap:10px;padding:4px 0}
+  .qa-thinking-label{font-size:12px;color:var(--muted)}
+  .qa-orb{width:18px;height:18px;border-radius:50%;background:conic-gradient(from 0deg,var(--qa-accent),var(--qa-accent2),transparent,var(--qa-accent));animation:qa-spin 1.1s linear infinite;flex-shrink:0}
+  .qa-orb::after{content:"";display:block;width:10px;height:10px;margin:4px;border-radius:50%;background:var(--qa-bg)}
+  .qa-dots{display:inline-flex;gap:4px;align-items:center}
+  .qa-dots i{width:6px;height:6px;border-radius:50%;background:var(--qa-accent2);opacity:.35;animation:qa-dot 1.2s ease-in-out infinite}
+  .qa-dots i:nth-child(2){animation-delay:.2s}
+  .qa-dots i:nth-child(3){animation-delay:.4s}
+  @keyframes qa-spin{to{transform:rotate(360deg)}}
+  @keyframes qa-dot{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+  .qa-form{display:flex;gap:8px;padding:12px;border-top:1px solid color-mix(in srgb,var(--qa-accent) 14%,transparent);align-items:stretch}
+  .qa-inputs{flex:1;display:flex;flex-direction:column;gap:6px}
+  .qa-form textarea{width:100%;height:56px;border-radius:12px;border:1px solid color-mix(in srgb,var(--qa-accent) 18%,transparent);padding:8px;font:inherit;font-size:13px;background:#fff;color:var(--text);resize:vertical}
+  .qa-form textarea.qa-external{height:72px;border-style:dashed}
+  [data-theme="slate"] .qa-form textarea,[data-theme="graphite"] .qa-form textarea,[data-theme="ocean"] .qa-form textarea{background:rgba(0,0,0,.25);color:var(--text)}
+  .qa-form button#qaSubmit{border:0;border-radius:12px;padding:0 14px;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text)}
+  .qa-form button:disabled{opacity:.55;cursor:wait}
+  .qa-mode-seg{display:inline-flex;padding:3px;border-radius:999px;border:1px solid color-mix(in srgb,var(--qa-accent) 22%,transparent);background:color-mix(in srgb,var(--qa-accent) 6%,transparent);margin-bottom:8px}
+  .qa-mode-seg button{border:0;background:transparent;color:var(--muted);padding:6px 10px;border-radius:999px;cursor:pointer;font:inherit;font-size:11px}
+  .qa-mode-seg button.active{background:var(--qa-accent);color:var(--qa-btn-text);font-weight:600}
+  .qa-review-hint{font-size:12px;color:var(--qa-accent2);margin:0 0 8px}
+  .qa-review-hint a{color:inherit;font-weight:600}
+  .qa-pin{border:0;background:transparent;cursor:pointer;font-size:14px;margin-left:6px;opacity:.7}
+  .qa-pin:hover,.qa-pin.on{opacity:1}
+  .qa-pin.on{color:#ca8a04}
+  .qa-msg-actions{display:flex;gap:2px;align-items:center;margin-top:6px;opacity:0;transition:opacity .15s}
+  .qa-thread .msg:hover .qa-msg-actions,.qa-thread .msg:focus-within .qa-msg-actions{opacity:1}
+  .qa-icon-btn{border:0;background:transparent;cursor:pointer;padding:4px 6px;border-radius:8px;color:var(--muted);display:inline-flex;align-items:center;justify-content:center;line-height:0}
+  .qa-icon-btn:hover{background:color-mix(in srgb,var(--qa-accent) 12%,transparent);color:var(--text)}
+  .qa-icon-btn.copied{color:var(--qa-accent2)}
+  .qa-icon-btn svg{width:16px;height:16px;display:block}
+  .badge{font-size:10px;padding:2px 6px;border-radius:999px;border:1px solid color-mix(in srgb,var(--qa-accent) 22%,transparent);margin-left:6px}
+  .echo-strip{margin-top:14px;padding:10px 12px;border-radius:12px;border:1px dashed color-mix(in srgb,var(--accent,#0f766e) 35%,transparent);background:color-mix(in srgb,var(--accent,#0f766e) 6%,transparent)}
+  .echo-kicker{font-size:11px;font-weight:700;color:var(--accent,#0f766e);margin-bottom:6px;letter-spacing:.02em}
+  .echo-row{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-top:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
+  .echo-row:first-of-type{border-top:0}
+  .echo-main{flex:1;font-size:13px;line-height:1.45}
+  .echo-main b{display:block;margin-bottom:2px}
+  .echo-body{color:var(--muted);font-size:12px}
+  .echo-dismiss{border:0;background:transparent;cursor:pointer;font-size:16px;line-height:1;color:var(--muted);padding:2px 6px;border-radius:6px}
+  .echo-dismiss:hover{background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--text)}
+  .weekly-words{margin-top:10px;font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+  .word-chip{cursor:default}
+  .tag.coach{cursor:pointer;transition:box-shadow .15s}
+  .tag.coach:hover{box-shadow:0 0 0 2px color-mix(in srgb,var(--accent,#0f766e) 35%,transparent)}
+  .ia-toc a{color:var(--accent);text-decoration:none;font-weight:600}
+  .ia-toc a:hover{text-decoration:underline}
+  .sec-ask{margin-left:8px;font:inherit;font-size:11px;padding:3px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent,#0f766e) 35%,transparent);background:transparent;color:var(--accent,#0f766e);cursor:pointer;font-weight:600}
+  .sec-ask:hover{background:color-mix(in srgb,var(--accent,#0f766e) 10%,transparent)}
+  .obs-watch-btn{margin-left:8px;font:inherit;font-size:11px;padding:2px 10px;border-radius:999px;border:1px solid color-mix(in srgb,var(--accent,#0f766e) 40%,transparent);background:color-mix(in srgb,var(--accent,#0f766e) 8%,transparent);color:var(--accent,#0f766e);cursor:pointer;font-weight:600;vertical-align:middle}
+  .obs-watch-btn:hover{background:color-mix(in srgb,var(--accent,#0f766e) 16%,transparent)}
+  .obs-watch-btn.on{background:var(--accent,#0f766e);color:#ecfdf5;border-color:transparent}
+  .obs-item{margin-bottom:6px;line-height:1.5}
+  .watch-modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:120;display:flex;align-items:center;justify-content:center;padding:16px}
+  .watch-modal{background:var(--qa-bg,#fff);border-radius:16px;border:1px solid var(--qa-border,rgba(0,0,0,.12));max-width:420px;width:100%;padding:16px;box-shadow:var(--shadow);max-height:min(80vh,560px);overflow:auto}
+  .watch-modal h4{margin:0 0 10px;font-size:15px}
+  .watch-modal .tpl{display:block;width:100%;text-align:left;margin:0 0 8px;padding:10px 12px;border-radius:10px;border:1px solid color-mix(in srgb,var(--qa-accent) 20%,transparent);background:color-mix(in srgb,var(--qa-accent) 5%,transparent);cursor:pointer;font:inherit;font-size:13px}
+  .watch-modal .tpl:hover{border-color:var(--qa-accent)}
+  .watch-modal .tpl b{display:block;margin-bottom:4px}
+  .watch-modal .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+  .watch-modal button.primary{border:0;border-radius:10px;padding:8px 14px;font:inherit;font-weight:700;cursor:pointer;background:linear-gradient(135deg,var(--qa-accent),var(--qa-accent2));color:var(--qa-btn-text)}
+  .watch-modal button.ghost{border:0;background:transparent;cursor:pointer;font:inherit;color:var(--muted);padding:8px 10px}
+  .st-honored{color:#15803d;font-weight:700}
+  .st-missed{color:#b45309;font-weight:700}
+  .st-unknown,.st-dismissed{color:var(--muted)}
+  .watch-intro{font-size:13px;line-height:1.55;margin:0 0 4px;color:var(--muted)}
+  .watch-cards{display:flex;flex-direction:column;gap:10px;margin:8px 0 4px}
+  .watch-card{
+    border:1px solid color-mix(in srgb,var(--line) 90%,transparent);border-radius:12px;
+    padding:12px 14px;background:color-mix(in srgb,var(--card,#fff) 92%,transparent);
+  }
+  .watch-card.st-honored{border-color:color-mix(in srgb,#15803d 28%,transparent);background:color-mix(in srgb,#15803d 5%,transparent)}
+  .watch-card.st-missed{border-color:color-mix(in srgb,#b45309 28%,transparent);background:color-mix(in srgb,#b45309 5%,transparent)}
+  .watch-badge{
+    display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px;
+    margin-bottom:8px;border:1px solid transparent;
+  }
+  .watch-badge.st-honored{color:#15803d;background:color-mix(in srgb,#15803d 12%,transparent);border-color:color-mix(in srgb,#15803d 25%,transparent)}
+  .watch-badge.st-missed{color:#b45309;background:color-mix(in srgb,#b45309 12%,transparent);border-color:color-mix(in srgb,#b45309 25%,transparent)}
+  .watch-badge.st-unknown,.watch-badge.st-dismissed{color:var(--muted);background:rgba(0,0,0,.04);border-color:var(--line)}
+  .watch-prop{font-size:14px;font-weight:600;margin:0 0 8px;line-height:1.4}
+  .watch-line{font-size:13px;margin:0 0 4px;color:var(--muted);line-height:1.45}
+  .watch-tech .tech-id{font-size:10px;opacity:.65;margin-top:2px;font-family:ui-monospace,monospace}
+  .watch-evidence{margin-top:6px;font-size:12px}
+  .watch-evidence summary{cursor:pointer;color:var(--accent,#0f766e);font-weight:600}
+  .watch-evidence .ev-body{margin-top:6px;padding:8px 10px;border-radius:8px;background:rgba(0,0,0,.03);font-size:11px;line-height:1.45}
+  .coach-pop{position:absolute;z-index:90;min-width:220px;max-width:300px;padding:10px;border-radius:12px;border:1px solid color-mix(in srgb,var(--accent,#0f766e) 28%,transparent);background:var(--card,#fff);box-shadow:var(--shadow);font-size:12px}
+  .coach-pop button{display:block;width:100%;text-align:left;margin:4px 0 0;padding:8px 10px;border-radius:8px;border:1px solid color-mix(in srgb,var(--accent) 18%,transparent);background:transparent;cursor:pointer;font:inherit;font-size:12px}
+  .coach-pop button:hover{background:color-mix(in srgb,var(--accent) 8%,transparent)}
+
+</style>
+</head>
+<body class="layer-plain lang-zh" data-theme="paper" data-lang="zh" data-report-type="quarterly">
+  <div class="topbar"><div class="topbar-inner">
+    <div class="brand"><div class="logo">潮</div>
+      <div><h1><span class="lang zh">潮观 · 季报</span><span class="lang en">Tidewatch · Quarterly</span></h1>
+      <p>2026年Q3（2026-07-01～2026-09-30） · quarterly_2026Q3</p></div>
+    </div>
+    <div class="toolbar">
+      <nav class="site-nav" aria-label="Tidewatch site"><a class="pill site-link" href="../site/index.html"><span class="lang zh">周报集锦</span><span class="lang en">Weekly</span></a><a class="pill site-link" href="../site/monthly.html"><span class="lang zh">月报集锦</span><span class="lang en">Monthly archive</span></a><a class="pill site-link" href="../site/dashboard.html"><span class="lang zh">数据看板</span><span class="lang en">Board</span></a><a class="pill site-link site-link-muted" href="../site/daily.html"><span class="lang zh">每日</span><span class="lang en">Daily</span></a></nav>
+      <div class="seg" id="langSeg" title="Language">
+        <button type="button" data-lang="zh" class="active">中文</button>
+        <button type="button" data-lang="en" class="">EN</button>
+      </div>
+      <div class="seg" id="layerSeg">
+        <button type="button" data-layer="l0"><span class="lang zh">30秒</span><span class="lang en">30s</span></button>
+        <button type="button" data-layer="plain" class="active"><span class="lang zh">小白</span><span class="lang en">Beginner</span></button>
+        <button type="button" data-layer="tech"><span class="lang zh">技术</span><span class="lang en">Technical</span></button>
+        <button type="button" data-layer="all"><span class="lang zh">全部</span><span class="lang en">All</span></button>
+      </div>
+      <div class="theme-pick">
+        <span class="theme-label"><span class="lang zh">色调</span><span class="lang en">Theme</span></span>
+        <select id="themeSelect" aria-label="Theme">
+          <optgroup label="Light">
+            <option value="paper">Paper</option><option value="mist">Mist</option>
+            <option value="ink">Ink</option><option value="forest">Forest</option>
+            <option value="rose">Rose</option>
+          </optgroup>
+          <optgroup label="Dark">
+            <option value="slate">Slate</option><option value="graphite">Graphite</option>
+            <option value="ocean">Ocean</option>
+          </optgroup>
+        </select>
+      </div>
+      <span class="pill s2"><span class="lang zh">关注等级</span><span class="lang en">Attention Level</span> S3 · <span class="lang zh">当日优先</span><span class="lang en">S3 Priority Today</span></span>
+    </div>
+  </div></div>
+
+  <div class="wrap">
+    <div class="hero">
+      <div class="card card-pad">
+        <div class="kicker"><span class="lang zh">L0 · 30 秒摘要</span><span class="lang en">L0 · 30s Summary</span></div>
+        <h2><span class="lang zh">加密与传统呈「同向 risk-on」：BTC 窗口 +42.6%，趋势 强趋势上涨，杠杆 清算驱动（上涨段挤压迹象）；实现波动 高实现波动，期权相对 RV IV 与 RV 大致匹配；现货 ETF 通道「强流入」（BTC 周净流 +63.60 亿美金）。</span><span class="lang en">Crypto vs TradFi reads as “Risk-On Sync”: BTC +42.6%, trend Strong Uptrend, leverage Liquidation-Driven Squeeze; realized vol High Realized Vol, options vs RV IV Fair (vs RV); spot ETF channel “strong inflow” (BTC week net +6.36B).</span></h2>
+        <p class="lead layer-tech-only"><span class="lang zh">标签 id：trend=strong_uptrend · leverage=liquidation_driven_squeeze · vol=high · premium=iv_fair · link=risk_on_sync · as_of=2026-09-30T23:59:59Z</span><span class="lang en">Labels: trend=strong_uptrend · leverage=liquidation_driven_squeeze · vol=high · premium=iv_fair · link=risk_on_sync · as_of=2026-09-30T23:59:59Z</span></p>
+        <div class="metrics">
+          <div class="metric"><div class="l"><span class="lang zh">关键数 1</span><span class="lang en">Key #1</span></div><div class="v"><span class="lang zh">BTC 窗口收益 +42.6%</span><span class="lang en">BTC window return +42.6%</span></div></div>
+          <div class="metric"><div class="l"><span class="lang zh">关键数 2</span><span class="lang en">Key #2</span></div><div class="v"><span class="lang zh">最大单日 +7.3%（2026-08-21）</span><span class="lang en">Max daily +7.3% (2026-08-21)</span></div></div>
+          <div class="metric"><div class="l"><span class="lang zh">关键数 3</span><span class="lang en">Key #3</span></div><div class="v"><span class="lang zh">ES +5.4%</span><span class="lang en">ES +5.4%</span></div></div>
+        </div>
+        
+        
+      </div>
+      <div class="side-stack">
+        <div class="card attn">
+          <h3><span class="lang zh">关注等级</span><span class="lang en">Attention Level</span> · S3</h3>
+          <p><span class="lang zh">风险：</span><span class="lang en">Risk: </span><span class="lang zh">高实现波动下，回吐与拥挤释放仍是主要风险叙事。</span><span class="lang en">With high realized vol, pullback and crowding unwind remain the main risk story.</span><br/>
+             <span class="lang zh">观察：</span><span class="lang en">Watch: </span><span class="lang zh">盯现货 ETF 净申赎能否延续、资金费率与关键价格平台。</span><span class="lang en">Watch whether spot ETF net flows persist, plus funding and key price levels.</span></p>
+        </div>
+        <div class="card watch">
+          <h3><span class="lang zh">观察点</span><span class="lang en">Watch Items</span></h3>
+          <ol><li class="obs-item" data-watch-id="w1"><span class="lang zh">资金费率年化 +8.77%/yr 能否回落？</span><span class="lang en">Can annualized funding (+8.77%/yr) ease?</span></li><li class="obs-item" data-watch-id="w2"><span class="lang zh">价格能否站稳高位平台（期末约 83624）？</span><span class="lang en">Can price hold the high plateau (~83624)?</span></li><li class="obs-item" data-watch-id="w_etf"><span class="lang zh">下期 BTC 现货 ETF 周净流能否维持本季量级（本季 +63.60 亿美金，姿态 强流入）？</span><span class="lang en">Next week: can BTC spot ETF net flow hold this quarter’s scale (+6.36B, strong inflow)?</span></li></ol>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tags layer-plain layer-tech" id="labelTags">
+      <div class="tag trend coach" data-dim="trend" data-id="strong_uptrend"><div class="t"><span class="lang zh">趋势质地</span><span class="lang en">Trend Regime</span></div><div class="n"><span class="lang zh">强趋势上涨</span><span class="lang en">Strong Uptrend</span></div>
+        <div class="d layer-tech-only">id=strong_uptrend</div></div>
+      <div class="tag lev coach" data-dim="leverage" data-id="liquidation_driven_squeeze"><div class="t"><span class="lang zh">杠杆结构</span><span class="lang en">Leverage Structure</span></div><div class="n"><span class="lang zh">清算驱动（上涨段挤压迹象）</span><span class="lang en">Liquidation-Driven Squeeze</span></div>
+        <div class="d layer-tech-only">id=liquidation_driven_squeeze</div></div>
+      <div class="tag vol coach" data-dim="vol_premium" data-id="iv_fair"><div class="t"><span class="lang zh">波动</span><span class="lang en">Volatility</span></div><div class="n"><span class="lang zh">高实现波动</span><span class="lang en">High Realized Vol</span></div>
+        <div class="d layer-tech-only">id=high · premium=iv_fair</div></div>
+      <div class="tag link coach" data-dim="tradfi_link" data-id="risk_on_sync"><div class="t"><span class="lang zh">传统联动</span><span class="lang en">TradFi Link</span></div><div class="n"><span class="lang zh">同向 risk-on</span><span class="lang en">Risk-On Sync</span></div>
+        <div class="d layer-tech-only">id=risk_on_sync</div></div>
+    </div>
+
+    
+    <nav class="card ia-toc layer-plain layer-tech" id="sec-toc" style="margin:0 0 16px;padding:14px 18px">
+      <div class="kicker" style="margin-bottom:8px"><span class="lang zh">本季读法 · 目录</span><span class="lang en">This quarter · outline</span></div>
+      <ol style="margin:0;padding-left:1.2em;line-height:1.7;font-size:14px">
+        <li><a href="#sec-path"><span class="lang zh">价格主线</span><span class="lang en">Price through-line</span></a></li>
+        <li><a href="#sec-leverage"><span class="lang zh">杠杆怎么读</span><span class="lang en">Leverage</span></a></li>
+        <li><a href="#sec-etf"><span class="lang zh">现货通道</span><span class="lang en">Spot channel</span></a></li>
+        <li><a href="#sec-vol"><span class="lang zh">波动环境</span><span class="lang en">Volatility</span></a></li>
+        <li><a href="#sec-tradfi"><span class="lang zh">与传统对照</span><span class="lang en">vs TradFi</span></a></li>
+        <li><a href="#sec-week-diff"><span class="lang zh">与上季对比</span><span class="lang en">vs prior quarter</span></a></li>
+        <li><a href="#sec-conclusions"><span class="lang zh">三句收束</span><span class="lang en">Takeaways</span></a></li>
+      </ol>
+      <p class="plain" style="margin:10px 0 0;font-size:13px;color:var(--muted)"><span class="lang zh">不是周报/月报检查清单：按本季主线读，数字作证据。</span><span class="lang en">Not a weekly/monthly checklist — read the quarter through-line; numbers are evidence.</span></p>
+    </nav>
+
+    <section class="block" id="sec-path">
+      <div class="block-h"><h3><span class="lang zh">一、价格主线</span><span class="lang en">1. Price through-line</span></h3>
+        <div class="sub"><span class="lang zh">BTC + ETH · 现货</span><span class="lang en">BTC + ETH · Spot</span></div></div>
+      <div class="card">
+        <div class="chart-box" style="height:340px"><canvas id="chartPrice"></canvas></div>
+        <p class="plain layer-plain-only"><span class="lang zh">本季比特币从上一季的负收益翻成强势收涨约42.6%，以太坊更强约+70.9%。节奏不是一条直线：季内8月左右出现过明显加速上攻，随后9月更多在高位来回，但仍录得正收益。整体属于风险偏好回暖下的趋势上行，而非窄幅磨蹭。对照上季的回撤，本季斜率与幅度都明显抬升。</span><span class="lang en">This quarter Bitcoin flipped from the prior quarter’s negative return into a strong finish near +42.6%; Ethereum ran harder at about +70.9%. The path was not a straight line: around August inside the quarter there was a clear acceleration higher, then September spent more time chopping at elevated levels while still ending positive. Overall it reads as trend-up inside a risk-on tone, not tight range grind. Versus the prior quarter’s pullback, both slope and magnitude stepped up.</span></p>
+        <p class="plain layer-tech-only"><span class="lang zh">BTC 基点→期末 58624.71→83623.6（42.642%）· 最强日 7.275% @ 2026-08-21 · 最弱日 -3.255% @ 2026-09-15 · ETH 70.865% · 源 daily_kline</span><span class="lang en">BTC baseline→end 58624.71→83623.6 (42.642%) · max 7.275% @ 2026-08-21 · min -3.255% @ 2026-09-15 · ETH 70.865% · daily_kline</span></p>
+        <div class="callout layer-plain-only">
+          <b><span class="lang zh">读图</span><span class="lang en">Chart</span></b>
+          <span class="lang zh">：左轴 BTC，右轴 ETH（双轴只看走势形状）。BTC 窗口 42.642% · ETH 70.865%。</span>
+          <span class="lang en">: BTC left axis, ETH right (shape only). BTC window 42.642% · ETH 70.865%.</span>
+        </div>
+        <div class="callout layer-tech-only">
+          <span class="lang zh"><b>图</b> 双轴：BTC 左 / ETH 右。数据源 Datahub <code>market_data.daily_kline</code>。</span>
+          <span class="lang en"><b>Chart</b> Dual axis BTC/ETH from Datahub <code>market_data.daily_kline</code>.</span>
+        </div>
+        <details class="fold"><summary><span class="lang zh">日表（BTC Spot）</span><span class="lang en">Daily table (BTC Spot)</span></summary><div class="table-wrap">
+          <table class="data" id="tblSpot"><thead><tr><th><span class="lang zh">日期</span><span class="lang en">Date</span></th><th>O</th><th>H</th><th>L</th><th>C</th><th><span class="lang zh">涨跌</span><span class="lang en">Return</span></th><th>Vol</th></tr></thead><tbody></tbody></table>
+        </div></details>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-leverage">
+      <div class="block-h"><h3><span class="lang zh">二、杠杆怎么读</span><span class="lang en">2. Leverage read</span></h3>
+        <div class="sub"><span class="lang zh">资金费率 · OI · 清算 · 永续成交额</span><span class="lang en">Funding · OI · Liq · Perp turnover</span> <button type="button" class="sec-ask" data-q="本季 funding 与 OI 如何合读？"><span class="lang zh">问</span><span class="lang en">Ask</span></button></div></div>
+      <div class="card layer-plain-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">杠杆画像偏「上涨段挤压」：季末资金费率折年约+8.77%，不算极端拥挤，但持仓量本季回落约12.1%。清算笔数峰值出现在季内8月21日前后（约3379笔量级），与价格加速段重合，像空头或高杠杆仓位被挤压后的痕迹。永续成交额本季合计约9244亿美金，现货约1031亿美金，活跃度正常偏热闹，但持仓下降说明部分杠杆在上涨中被消化或主动降仓。不把清算方向焊死成单边故事，只观察：趋势上行时杠杆并未简单堆积，反而伴随回落与脉冲式清算。</span><span class="lang en">Leverage read as upside-squeeze traces: end-of-quarter funding annualized near +8.77%—not extreme crowding—while open interest fell about 12.1% over the quarter. Liquidation count peaked around 21 Aug inside the quarter (order of ~3379), lining up with the price acceleration stretch, consistent with shorts or high-leverage books getting squeezed. Perp turnover summed about $924.4B and spot about $103.1B—normal-to-lively activity—yet the OI drop shows leverage was digested or cut into the rise rather than simply stacking. We do not lock liquidation side into a one-way story; the observation is that the uptrend came with OI decline and pulse liquidations, not unchecked build.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">小白速记</span><span class="lang en">Beginner notes</span></b><br/>
+          <span class="lang zh">
+          · <b>资金费率 Funding</b>：多空「租金」，通常每 8 小时一期、一天 3 次。
+            <b>BTC</b> 期末年化 <b>+8.77%/yr</b>
+            （单期 0.0080%/period）；
+            <b>ETH</b> 期末年化 <b>+6.30%/yr</b>
+            （U 本位对照，不改拥挤主判）。下图右轴：BTC 实线 + ETH 虚线。<br/>
+          · <b>未平仓量 OI</b>：未平合约总量（主看 BTC）。价涨 OI 不升更像挤压/换手。本季 OI 变化 -12.07%。<br/>
+          · <b>清算 Liquidation</b>：保证金不足强平。峰值日（笔数）2026-08-21（3379 笔）。<br/>
+          · <b>永续成交额</b>：合约盘有多「热闹」（turnover 美金），本季合计 <b>9243.97 亿美金</b>
+            · 较上完整周 -9.7%
+            · 活跃度「中性」。
+            <b>不是</b>多空拆分；与 funding/OI 并读，只标信号质量。
+          </span>
+          <span class="lang en">
+          · <b>Funding</b>: rent between longs/shorts; typically every 8h (3×/day).
+            <b>BTC</b> end ann. <b>+8.77%/yr</b>
+            (period 0.0080%/period);
+            <b>ETH</b> end ann. <b>+6.30%/yr</b>
+            (USDT-M对照; does not change crowding spine). Chart right axis: BTC solid + ETH dashed.<br/>
+          · <b>OI</b>: open interest (BTC primary). Price up without OI up often looks like squeeze/churn. OI chg -12.07%.<br/>
+          · <b>Liquidation</b>: forced close on margin. Peak day (count) 2026-08-21 (3379 prints).<br/>
+          · <b>Perp turnover</b>: how busy the perp tape is (USD). Week sum <b>924.40B</b>
+            · vs prior week -9.7%
+            · activity “normal”.
+            <b>Not</b> a long/short split — activity quality next to funding/OI.
+          </span>
+        </div>
+      </div>
+      <div class="card layer-tech-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px">
+          <span class="lang zh">
+          资金费率是<strong>每期结算</strong>费率（不是日费率）。Binance U 本位永续通常<strong>每 8 小时一期（一天 3 次）</strong>。
+          年化近似：费率 × 3 × 365（便于比较的 %/年，不是承诺收益）。<br/><br/>
+          <b>BTC</b> 期末费率=8.007e-05（0.0080%/period）
+          → 年化 +8.77%/yr
+          · OI 变化 -12.07%
+          · 期末基差 -3.931 bps
+          · 清算峰值笔数=3379 @ 2026-08-21
+          · side 语义=raw_exchange_side_unverified<br/>
+          · <b>ETH</b> 期末资费年化 +6.30%/yr
+          （LinearSwap ETHUSDT · 对照轨，不改拥挤/N2 主判 · 非 Inverse）
+          · 单期=5.749e-05（0.0057%/period）
+          · ETH 基差 -4.506 bps<br/>
+          · 永续 turnover 本季合计=924397255561.04 USD（9243.97 亿美金）
+          · wow=-9.69% · activity=normal
+          · peak=2026-08-21 · product=LinearSwap · exchange=Binance
+          · <b>forbid</b> direction_from_total_volume
+          </span>
+          <span class="lang en">
+          Funding is per-settlement (not daily). Binance USDT-M: typically every 8h (3×/day).
+          Ann. ≈ rate × 3 × 365 (comparable %/yr, not a promised return).<br/><br/>
+          <b>BTC</b> end funding=8.007e-05 (0.0080%/period)
+          → ann. +8.77%/yr
+          · OI chg -12.07%
+          · basis_end -3.931 bps
+          · liq peak n=3379 @ 2026-08-21
+          · side_semantics=raw_exchange_side_unverified<br/>
+          · <b>ETH</b> end funding ann. +6.30%/yr
+          (LinearSwap ETHUSDT · secondary对照; does not change N2 crowding spine · not inverse)
+          · period=5.749e-05 (0.0057%/period)
+          · ETH basis -4.506 bps<br/>
+          · perp turnover week sum=924397255561.04 USD (924.40B)
+          · wow=-9.69% · activity=normal
+          · peak=2026-08-21 · product=LinearSwap · exchange=Binance
+          · <b>forbid</b> direction_from_total_volume
+          </span>
+        </p>
+      </div>
+      <div class="grid-2">
+        <div class="card"><div class="chart-box sm"><canvas id="chartLiq"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">清算：笔数（柱）+ BUY/SELL 侧 qty（线）。尖峰日更重要。side 为交易所原始字段，多空语义未最终确认。</span><span class="lang en">Liq: count (bars) + BUY/SELL side qty (lines). Peaks matter. Side is raw exchange field — long/short semantics unverified.</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">清算峰值笔数=3379 @ 2026-08-21</span><span class="lang en">liq peak n=3379 on 2026-08-21</span></p>
+        </div>
+        <div class="card"><div class="chart-box sm"><canvas id="chartOiFund"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">左轴 OI（BTC）；右轴资金费率年化：<b>BTC</b> +8.77%/yr 实线 · <b>ETH</b> +6.30%/yr 虚线（对照）。</span><span class="lang en">Left OI (BTC); right funding ann.: <b>BTC</b> +8.77%/yr solid · <b>ETH</b> +6.30%/yr dashed (对照).</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">右轴=年化资金费率 %/年。BTC 单期=8.007e-05 · ETH 单期=5.749e-05（ETHUSDT LinearSwap，非 Inverse）。N2 拥挤主判仍只认 BTC。</span><span class="lang en">Right = ann. funding %/yr. BTC period=8.007e-05 · ETH period=5.749e-05 (ETHUSDT LinearSwap, not inverse). N2 crowding spine stays BTC-only.</span></p>
+        </div>
+      </div>
+      <div class="card" style="margin-top:12px">
+        <div class="chart-box sm"><canvas id="chartPerpVol"></canvas></div>
+        <p class="plain layer-plain-only"><span class="lang zh">永续日成交额（turnover 美金柱）。只读活跃度；禁止解读为多头/空头成交量。</span><span class="lang en">Perp daily turnover (USD bars). Activity only — not long/short volume.</span></p>
+        <p class="plain layer-tech-only"><span class="lang zh">daily_kline · LinearSwap · turnover USD · 单所 Binance</span><span class="lang en">daily_kline · LinearSwap · turnover USD · Binance only</span></p>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-etf">
+      <div class="block-h"><h3><span class="lang zh">三、现货通道（ETF · 成交额）</span><span class="lang en">3. Spot channel (ETF · turnover)</span></h3>
+        <div class="sub"><span class="lang zh">美现货净申赎 · 交易所现货成交额 · 非杠杆</span><span class="lang en">US spot ETF net · exchange spot turnover · not leverage</span> </div></div>
+      <div class="card layer-plain-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">本季美现货比特币ETF通道呈强流入：合计净流入约+63.60亿美金，流入日42天、流出日22天；单日最大净流入约9.99亿（季内9月21日量级），也出现过约4.5亿量级的单日净流出。以太坊现货ETF同期净流入约+30.50亿美金。与上季净流出形成鲜明对照。只并陈通道松紧与价格同季上行，不把流入写成涨价的唯一原因。</span><span class="lang en">This quarter the US spot Bitcoin ETF channel showed strong inflow: net about +6.36B, with 42 inflow days and 22 outflow days; max single-day net near $999M (around 21 Sep inside the quarter) and a notable outflow day near $450M. Spot ETH ETFs added roughly +3.05B net over the same window. That contrasts sharply with the prior quarter’s net outflow. We place channel tone beside the same-quarter price advance—no welded claim that flows alone caused the move.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">小白速记 · ETF 净申赎</span><span class="lang en">Beginner · ETF net flow</span></b><br/>
+          <span class="lang zh">
+          · <b>净申赎</b>：授权参与商创建/赎回份额带来的资金进出，不是 ETF 二级市场价格涨跌。<br/>
+          · 本季 BTC 通道合计 <b>+63.60 亿美金</b>
+            · ETH <b>+30.50 亿美金</b>
+            · 姿态 <b>强流入</b>。<br/>
+          · 与杠杆块对照：现货管道 vs 永续拥挤；<b>禁止</b>「因流入所以涨跌」。
+          </span>
+          <span class="lang en">
+          · <b>Net flow</b> = creations/redemptions, not share price.<br/>
+          · BTC <b>+6.36B</b>
+            · ETH <b>+3.05B</b>
+            · channel <b>strong inflow</b>.<br/>
+          · Read with leverage; no causal price call.
+          </span>
+        </div>
+      </div>
+      <div class="card layer-plain-only" style="margin-bottom:12px" id="sec-spot-volume">
+        <p class="plain" style="padding-top:12px"><span class="lang zh">Binance 现货成交额（turnover 美金，程序周合计）：本季 &lt;b&gt;1031.27 亿美金&lt;/b&gt;，相对上完整周 -5.8%（活跃度「中性」；上季约 1094.80 亿美金）。峰值日 2026-08-21（34.02 亿美金）。这是交易所现货「换手热闹程度」，与 ETF 净申赎同属现货世界、只并陈；对照永续周成交额 9243.97 亿美金——两者量级不同，**禁止相加**，也**不能**拆多空。</span><span class="lang en">Binance spot turnover (USD, program week sum): this quarter &lt;b&gt;103.13B&lt;/b&gt;, vs prior full week -5.8% (activity “normal”; prior ~109.48B). Peak day 2026-08-21 (3.40B). Spot tape busyness beside ETF net flow — same spot world, no sum with perp (924.40B); not a long/short split.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">现货成交 · 本季程序数（必读）</span><span class="lang en">Spot turnover · this quarter program numbers</span></b><br/>
+          <span class="lang zh">
+          · 本季合计 <b>1031.27 亿美金</b>
+            · 较上完整季 -5.8%
+            · 活跃「normal」
+            · 峰值日 2026-08-21
+              （34.02 亿美金）<br/>
+          · 对照永续本季合计 <b>9243.97 亿美金</b>——量级不同，<b>禁止相加</b>；都只是热闹程度，<b>不能拆多空</b>。
+          </span>
+          <span class="lang en">
+          · this quarter sum <b>103.13B</b>
+            · vs prior quarter -5.8%
+            · activity “normal”
+            · peak 2026-08-21
+              (3.40B)<br/>
+          · Beside perp this quarter <b>924.40B</b> — do not add; activity only.
+          </span>
+        </div>
+      </div>
+      <div class="card layer-tech-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px">
+          <span class="lang zh">
+          ETF status=ok · provider=farside_mirror · USD
+          · authority=community_aggregate<br/>
+          BTC net_sum=6359600000.0 · inflow_days=42 · outflow_days=22<br/>
+          ETH net_sum=3050000000.0 · channel_id=strong_inflow<br/>
+          Spot turnover week_sum=103126608491.03 USD · wow=-5.8%
+          · product=Spot · exchange=Binance · <b>forbid</b> L/S split · <b>forbid</b> sum with perp/ETF
+          </span>
+          <span class="lang en">
+          ETF status=ok · provider=farside_mirror<br/>
+          Spot turnover week_sum=103126608491.03 · wow=-5.8% · Spot · Binance · activity only
+          </span>
+        </p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="chart-box sm"><canvas id="chartEtf"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">柱=ETF 日净流（USD）。</span><span class="lang en">Bars = ETF daily net USD.</span></p>
+        </div>
+        <div class="card">
+          <div class="chart-box sm"><canvas id="chartSpotVol"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">柱=Binance 现货日成交额（turnover 美金）。本季日历日；只读活跃度。</span>
+             <span class="lang en">Bars = Binance spot turnover USD. this quarter calendar days; activity only.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-vol">
+      <div class="block-h"><h3><span class="lang zh">四、波动环境</span><span class="lang en">4. Volatility regime</span></h3>
+        <div class="sub"><span class="lang zh">IV 对 RV · BTC · ETH</span><span class="lang en">IV vs RV · BTC · ETH</span> <button type="button" class="sec-ask" data-q="本季 IV−RV 是贵是便宜？"><span class="lang zh">问</span><span class="lang en">Ask</span></button></div></div>
+      <div class="card layer-plain-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">本期 BTC：RV（后视镜）窗口年化约 38.1%；IV（Deribit 保险报价）期末约 35.2%，自基点 44.5% 明显回落（-9.3 个百分点）。 ETH：IV 49.4% / RV 52.6%。</span><span class="lang en">This quarter BTC: RV (rear-view) ~38.1% ann.; IV (Deribit insurance) end ~35.2%; from baseline 44.5% fell clearly (-9.3 pct pts). ETH: IV 49.4% / RV 52.6%.</span></p>
+        <div class="callout">
+          <b><span class="lang zh">读法 · 后视镜 vs 保险报价</span><span class="lang en">How to read · rear-view vs insurance</span></b>
+          <div style="margin-top:8px"><span class="lang zh">先分清两个「波动」：RV（已实现/历史波动）是后视镜——价格已经抖得有多厉害；IV（隐含波动率）是保险报价——期权市场觉得未来会抖多厉害。RV 偏高 = 刚走过的路很颠；RV 偏低 = 最近相对平静。IV 偏高 = 保险贵，市场愿为未来不确定性付更高价；IV 偏低 = 保险便宜。IV 持续抬升 = 保费在变贵；IV 回落 = 紧张定价在缓解。RV 抬头 = 实现波动在升温；RV 回落 = 颠簸在缓和。二者同向升温 = 又颠又贵；同向降温 = 整体变稳。IV 升而 RV 不高 = 预期/谨慎溢价可能先行；RV 高而 IV 降 = 实现仍猛但保费在退或滞后。核心看 IV−RV：保险相对「刚实现的颠簸」贵了还是便宜了。以下只描述环境，不是买卖建议。</span><span class="lang en">Two vols, not one: RV (realized) is the rear-view mirror—how rough price already was; IV (implied) is the insurance quote—how rough the options market prices the future. High RV = the road just traveled was bumpy; low RV = recent calm. High IV = expensive insurance; low IV = cheap insurance. Rising IV = insurance getting dearer; falling IV = stress premium easing. Rising RV = realized heat building; falling RV = bumps cooling. Both up = rough and expensive; both down = regime cooling. IV up / RV not extreme = caution or event premium may lead; RV hot / IV down = realized still fierce but insurance lagging or fading. Key gauge: IV−RV—rich or cheap insurance vs just-realized moves. Environment only—not trade advice.</span></div>
+        </div>
+        <p class="plain"><strong><span class="lang zh">本季组合：</span><span class="lang en">This quarter: </span></strong><span class="lang zh">IV−RV 约 -2.9 个百分点：贵贱大致匹配。</span><span class="lang en">IV−RV ≈ -2.9 pct pts: roughly fair vs realized.</span></p>
+        <p class="plain"><span class="lang zh">本季价格上涨且 IV 下降，常见「涨的时候保险变便宜」——顺风时紧张定价缓解（机制描述，非预测）。</span><span class="lang en">Price up + IV down: insurance often cheapens in a tailwind (mechanism, not a forecast).</span></p>
+        <p class="plain"><span class="lang zh">VIX 是美股 IV 温度计（本季 +0.0%）；本节加密 IV 是币圈保险费，只做角色对照。</span><span class="lang en">VIX is the US equity IV gauge (+0.0% this quarter); crypto IV here is coin-options insurance—role parallel only.</span></p>
+        <div class="callout">
+          <span class="lang zh">
+          · 本季 RV ≈ <b>38.1%</b> 年化 · IV 期末 ≈ <b>35.23%</b>（Deribit）<br/>
+          · IV−RV ≈ <b>-2.9</b> 个百分点 → IV 与 RV 大致匹配
+          </span>
+          <span class="lang en">
+          · RV ≈ <b>38.1%</b> ann. · IV end ≈ <b>35.23%</b> (Deribit)<br/>
+          · IV−RV ≈ <b>-2.9</b> pct → IV Fair (vs RV)
+          </span>
+        </div>
+      </div>
+      <div class="card layer-tech-only" style="margin-bottom:12px">
+        <p class="plain" style="padding-top:16px"><span class="lang zh">source=Deribit option_volatility_kline · currency=BTC · iv_end=35.23 · iv_start=44.54 · iv_chg_pts=-9.31 · rv_ann=38.1 method=log_return_stdev_sqrt_365 · iv_rv_spread_end=-2.87 · vol_premium=iv_fair · ETH iv=49.35 rv=52.57 · vix_ret=0.0 · iv_vs_vix=flat</span><span class="lang en">source=Deribit option_volatility_kline · currency=BTC · iv_end=35.23 · iv_start=44.54 · iv_chg_pts=-9.31 · rv_ann=38.1 method=log_return_stdev_sqrt_365 · iv_rv_spread_end=-2.87 · vol_premium=iv_fair · ETH iv=49.35 rv=52.57 · vix_ret=0.0 · iv_vs_vix=flat</span></p>
+        <div class="callout">
+          <span class="lang zh"><b>技术</b> IV 来自 Datahub <code>market_data.option_volatility_kline</code>
+         （Deribit/BTC）；
+          日频 argMax(close,start_time)。RV：对数收益标准差 × √365。不构成期权买卖建议。</span>
+          <span class="lang en"><b>Tech</b> IV: <code>market_data.option_volatility_kline</code>
+          (Deribit/BTC);
+          daily argMax(close,start_time). RV: log-return stdev × √365. No option trade advice.</span>
+        </div>
+      </div>
+      <div class="grid-2">
+        <div class="card"><div class="chart-box sm"><canvas id="chartIv"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">BTC IV 日末曲线（年化 %）。</span><span class="lang en">BTC daily IV close (ann. %).</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">日频 IV · Deribit</span><span class="lang en">Daily IV · Deribit</span></p>
+        </div>
+        <div class="card"><div class="chart-box sm"><canvas id="chartIvRv"></canvas></div>
+          <p class="plain layer-plain-only"><span class="lang zh">期末 IV vs 窗口 RV。柱差 ≈ IV−RV。</span><span class="lang en">IV end vs window RV. Gap ≈ IV−RV.</span></p>
+          <p class="plain layer-tech-only"><span class="lang zh">IV−RV 点差=-2.87</span><span class="lang en">spread=-2.87</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-tradfi">
+      <div class="block-h"><h3><span class="lang zh">五、与传统市场对照</span><span class="lang en">5. vs Traditional markets</span></h3>
+        <div class="sub"><span class="lang zh">含 VIX；与加密 IV 角色对照、数字不混用</span><span class="lang en">Includes VIX; role-parallel to crypto IV, numbers not mixed</span></div></div>
+      <div class="card" style="margin-bottom:12px"><div class="chart-box sm"><canvas id="chartTrad"></canvas></div>
+        <p class="plain layer-plain-only"><span class="lang zh">归一化对照（起点=100）</span><span class="lang en">Normalized (start=100)</span></p></div>
+      <div class="card"><div class="trad-grid">
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">ES · 标普期货</span><span class="lang en">ES · S&amp;P 500 Futures</span></b>
+            <span class="chg up"><span class="lang zh">+5.4%</span><span class="lang en">+5.4%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">标普500股指期货</span><span class="lang en">S&amp;P 500 index futures</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">+5.4%</span><span class="lang en">+5.4%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">风险偏好升温</span><span class="lang en">Risk-on appetite rising</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">需结合全周方向理解。</span><span class="lang en">Read with the full-week direction.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">NQ · 纳指期货</span><span class="lang en">NQ · Nasdaq 100 Futures</span></b>
+            <span class="chg up"><span class="lang zh">+0.3%</span><span class="lang en">+0.3%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">纳斯达克100期货</span><span class="lang en">Nasdaq 100 futures</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">+0.3%</span><span class="lang en">+0.3%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">科技风险偏好升温</span><span class="lang en">Tech risk appetite rising</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">需结合全周方向理解。</span><span class="lang en">Read with the full-week direction.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">VIX · 恐慌指数</span><span class="lang en">VIX · Fear gauge</span></b>
+            <span class="chg "><span class="lang zh">+0.0%</span><span class="lang en">+0.0%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">美股隐含波动指数 VIX</span><span class="lang en">US equity implied volatility index (VIX)</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">+0.0%</span><span class="lang en">+0.0%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">紧张度缓解</span><span class="lang en">Stress easing</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">VIX 中低位小动通常解释不了币的大涨跌；与上一节加密 IV 只做角色对照。</span><span class="lang en">Small VIX moves rarely explain big crypto moves; role-parallel to crypto IV only.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">DXY · 美元指数</span><span class="lang en">DXY · US Dollar Index</span></b>
+            <span class="chg up"><span class="lang zh">+0.5%</span><span class="lang en">+0.5%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">美元指数</span><span class="lang en">US Dollar Index</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">+0.5%</span><span class="lang en">+0.5%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">美元走强</span><span class="lang en">USD stronger</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">美元走强时对风险资产偏逆风。</span><span class="lang en">Stronger USD is often a headwind for risk assets.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">US10Y · 十年美债</span><span class="lang en">US10Y · 10Y Yield</span></b>
+            <span class="chg up"><span class="lang zh">约 22.1 bp</span><span class="lang en">~22.1 bp</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">10Y 美债收益率</span><span class="lang en">US 10-year Treasury yield</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">约 22.1 bp</span><span class="lang en">~22.1 bp</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">折现率压力上升</span><span class="lang en">Discount-rate pressure rising</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">利率与币涨跌若相反，则不是单纯降息交易。</span><span class="lang en">If yields move opposite crypto, this is not a pure cut-trade story.</span></div>
+          </div></div>
+        
+          <div class="trad"><div class="name"><b><span class="lang zh">GOLD · 黄金</span><span class="lang en">GOLD · Gold</span></b>
+            <span class="chg down"><span class="lang zh">-1.4%</span><span class="lang en">-1.4%</span></span></div>
+          <div class="q">
+            <div><span><span class="lang zh">是什么</span><span class="lang en">What</span>：</span><span class="lang zh">黄金</span><span class="lang en">Gold</span></div>
+            <div><span><span class="lang zh">怎么变</span><span class="lang en">Change</span>：</span><span class="lang zh">-1.4%</span><span class="lang en">-1.4%</span></div>
+            <div><span><span class="lang zh">意味什么</span><span class="lang en">Why it matters</span>：</span><span class="lang zh">上述叙事减弱</span><span class="lang en">Those narratives fading</span></div>
+            <div><span><span class="lang zh">和加密</span><span class="lang en">vs Crypto</span>：</span><span class="lang zh">与币关系需看结构，不宜硬套。</span><span class="lang en">Link to crypto is structural—not mechanical.</span></div>
+          </div></div>
+      </div>
+      <p class="plain layer-plain-only"><strong><span class="lang zh">总结：</span><span class="lang en">Summary: </span></strong><span class="lang zh">股 ES/NQ +5.4%/+0.3%，VIX +0.0%，DXY +0.5%，10Y 22.1bp，黄金 -1.4%。先分清背景与主引擎，避免用单一宏观指标硬套币价。VIX 与加密 IV 数字不可混用。</span><span class="lang en">Equities ES/NQ +5.4%/+0.3%; VIX +0.0%; DXY +0.5%; 10Y 22.1bp; gold -1.4%. Separate backdrop from main engine; don’t force one macro print onto coin price. Never mix VIX with crypto IV levels.</span></p></div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-compare">
+      <div class="block-h"><h3><span class="lang zh">对照读法</span><span class="lang en">Compare read</span></h3></div>
+      <div class="card"><p class="plain" style="padding-top:18px"><span class="lang zh">本季加密 BTC +42.6%，美股 ES +5.4% / NQ +0.3%，黄金 -1.4%。联动标签：同向 risk-on。现货 ETF 通道 BTC 周净流 +63.60 亿美金（强流入），与杠杆结构分开读。若全球风险偏好一致，常看到股和币同向；若相反，主引擎更可能在加密内部（杠杆、清算、情绪、现货通道），传统市场只提供背景板。</span><span class="lang en">Crypto BTC +42.6%; US equities ES +5.4% / NQ +0.3%; gold -1.4%. Link label: Risk-On Sync. Spot ETF channel BTC week net +6.36B (strong inflow); read apart from perp leverage. Global risk-on often moves stocks and crypto together; when they diverge, the main engine is more often inside crypto (leverage, liquidations, sentiment, spot ETF pipe), with TradFi as backdrop.</span></p></div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-week-diff">
+      <div class="block-h"><h3><span class="lang zh">六、与上季比什么变了</span><span class="lang en">6. What changed vs prior quarter</span></h3>
+        <div class="sub"><span class="lang zh">可展开 · 含传统 · 可跳转上期</span><span class="lang en">Expandable · includes TradFi · link prior</span></div></div>
+      <div class="card">
+        <details class="fold week-diff" open>
+          <summary><span class="lang zh">摘要：</span><span class="lang en">Summary: </span><span class="lang zh">BTC 收益 -14.1%→+42.6%；标签变化：趋势、杠杆、IV 溢价、传统联动、ETF 通道姿态；关注 S2→S3；BTC ETF 净流 -48.94 亿美金→+63.60 亿美金。</span><span class="lang en">BTC return -14.1%→+42.6%; label shifts: Trend, Leverage, IV premium, TradFi link, ETF channel stance; attention S2→S3; BTC ETF net -4.89B→+6.36B.</span></summary>
+          <div class="table-wrap" style="padding:12px 16px 8px">
+            <table class="data">
+              <thead><tr>
+                <th><span class="lang zh">维度</span><span class="lang en">Dim</span></th>
+                <th><span class="lang zh">上季</span><span class="lang en">Prior quarter</span></th>
+                <th><span class="lang zh">本季</span><span class="lang en">Quarter</span></th>
+                <th>Δ</th>
+              </tr></thead>
+              <tbody><tr><td><span class="lang zh">BTC 窗口收益 %</span><span class="lang en">BTC window return %</span></td><td>-14.1</td><td>+42.6</td><td class="up">+56.8</td></tr><tr><td><span class="lang zh">ETH 窗口收益 %</span><span class="lang en">ETH window return %</span></td><td>-25.3</td><td>+70.9</td><td class="up">+96.2</td></tr><tr><td><span class="lang zh">趋势</span><span class="lang en">Trend</span></td><td><span class="lang zh">强趋势下跌</span><span class="lang en">strong_downtrend</span></td><td><span class="lang zh">强趋势上涨</span><span class="lang en">strong_uptrend</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">杠杆</span><span class="lang en">Leverage</span></td><td><span class="lang zh">杠杆中性</span><span class="lang en">leverage_neutral</span></td><td><span class="lang zh">清算驱动（上涨段挤压迹象）</span><span class="lang en">liquidation_driven_squeeze</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">实现波动</span><span class="lang en">Realized vol</span></td><td><span class="lang zh">高实现波动</span><span class="lang en">high</span></td><td><span class="lang zh">高实现波动</span><span class="lang en">high</span></td><td>—</td></tr><tr><td><span class="lang zh">IV 溢价</span><span class="lang en">IV premium</span></td><td><span class="lang zh">期权偏贵（IV 相对 RV 溢价）</span><span class="lang en">iv_rich</span></td><td><span class="lang zh">IV 与 RV 大致匹配</span><span class="lang en">iv_fair</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">传统联动</span><span class="lang en">TradFi link</span></td><td><span class="lang zh">脱钩：股强币弱</span><span class="lang en">decoupled_crypto_down_equity_up</span></td><td><span class="lang zh">同向 risk-on</span><span class="lang en">risk_on_sync</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">RV 年化 %</span><span class="lang en">RV ann. %</span></td><td>36.9</td><td>38.1</td><td class="">1.2</td></tr><tr><td><span class="lang zh">IV 期末 %</span><span class="lang en">IV end %</span></td><td>44.5</td><td>35.2</td><td class="down">-9.3</td></tr><tr><td><span class="lang zh">IV−RV</span><span class="lang en">IV−RV</span></td><td>+7.7</td><td>-2.9</td><td class="down">-10.5</td></tr><tr><td><span class="lang zh">Funding 年化 %</span><span class="lang en">Funding ann. %</span></td><td>+6.06</td><td>+8.77</td><td class="up">+2.71</td></tr><tr><td><span class="lang zh">OI 变化 %</span><span class="lang en">OI chg %</span></td><td>+21.6</td><td>-12.1</td><td class="down">-33.7</td></tr><tr><td><span class="lang zh">永续成交额（周合计）</span><span class="lang en">Perp turnover (week sum)</span></td><td><span class="lang zh">10072.27 亿美金</span><span class="lang en">1007.23B</span></td><td><span class="lang zh">9243.97 亿美金</span><span class="lang en">924.40B</span></td><td class="down">-8.2%</td></tr><tr><td><span class="lang zh">现货成交额（周合计）</span><span class="lang en">Spot turnover (week sum)</span></td><td><span class="lang zh">1079.90 亿美金</span><span class="lang en">107.99B</span></td><td><span class="lang zh">1031.27 亿美金</span><span class="lang en">103.13B</span></td><td class="down">-4.5%</td></tr><tr><td><span class="lang zh">BTC ETF 周净流</span><span class="lang en">BTC ETF week net</span></td><td><span class="lang zh">-48.94 亿美金</span><span class="lang en">-4.89B</span></td><td><span class="lang zh">+63.60 亿美金</span><span class="lang en">+6.36B</span></td><td class="up"><span class="lang zh">+112.54 亿美金</span><span class="lang en">+11.25B</span></td></tr><tr><td><span class="lang zh">ETH ETF 周净流</span><span class="lang en">ETH ETF week net</span></td><td><span class="lang zh">-7.16 亿美金</span><span class="lang en">-715.50M</span></td><td><span class="lang zh">+30.50 亿美金</span><span class="lang en">+3.05B</span></td><td class="up"><span class="lang zh">+37.66 亿美金</span><span class="lang en">+3.77B</span></td></tr><tr><td><span class="lang zh">ETF 通道姿态</span><span class="lang en">ETF channel stance</span></td><td><span class="lang zh">强流出</span><span class="lang en">strong outflow</span></td><td><span class="lang zh">强流入</span><span class="lang en">strong inflow</span> · ↻</td><td>—</td></tr><tr><td><span class="lang zh">ES 窗口 %</span><span class="lang en">ES window %</span></td><td>+15.4</td><td>+5.4</td><td class="down">-10.0</td></tr><tr><td><span class="lang zh">NQ 窗口 %</span><span class="lang en">NQ window %</span></td><td>+0.3</td><td>+0.3</td><td class="up">+0.0</td></tr><tr><td><span class="lang zh">VIX 窗口 %</span><span class="lang en">VIX window %</span></td><td>+0.0</td><td>+0.0</td><td class="up">+0.0</td></tr><tr><td><span class="lang zh">DXY 窗口 %</span><span class="lang en">DXY window %</span></td><td>+0.5</td><td>+0.5</td><td class="up">+0.0</td></tr><tr><td><span class="lang zh">US10Y 变化 bp</span><span class="lang en">US10Y chg bp</span></td><td>-6.8</td><td>+22.1</td><td class="up">+28.9</td></tr><tr><td><span class="lang zh">GOLD 窗口 %</span><span class="lang en">GOLD window %</span></td><td>-1.4</td><td>-1.4</td><td class="up">+0.0</td></tr><tr><td><span class="lang zh">关注等级</span><span class="lang en">Attention</span></td><td>S2</td><td>S3</td><td class="">—</td></tr></tbody>
+            </table>
+          </div>
+          <p class="plain" style="padding-top:0"><span class="lang zh">传统缺数时显示 —（来源脚注见文末）。</span><span class="lang en">Missing TradFi shows — (see footnotes).</span></p>
+          
+        </details>
+        <div id="sec-watches" style="padding:12px 16px 16px;border-top:1px solid color-mix(in srgb,var(--line) 80%,transparent)">
+          <h4 style="margin:0 0 8px;font-size:14px"><span class="lang zh">哨兑现</span><span class="lang en">Watch resolutions</span></h4>
+          <p class="plain"><span class="lang zh">本期无哨兑现（开放哨将在下期周报自动核对）。</span><span class="lang en">No watches resolved this quarter.</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-conclusions">
+      <div class="block-h"><h3><span class="lang zh">七、三句收束</span><span class="lang en">7. Three takeaways</span></h3></div>
+      <div class="card conclusions"><ol><li><span class="lang zh">本季主线是「回撤后的强势风险偏好修复」：BTC约+42.6%、ETH约+70.9%，与上季明显负收益对照，趋势上行且季内完成加速到高位震荡的切换。</span><span class="lang en">The quarter’s core story is a strong risk-on repair after the prior quarter’s pullback: BTC ~+42.6%, ETH ~+70.9%, a clear flip from prior negative returns, with trend-up that shifted from acceleration into elevated chop inside the quarter.</span></li><li><span class="lang zh">杠杆与波动并陈：上涨中出现清算峰值与持仓回落约12%，资金费率温和正值；实现波动偏高而IV大致贴合，说明行情有热度但并非无杠杆单向堆出来的平静牛。</span><span class="lang en">Leverage and vol side by side: upside came with a liquidation peak and OI down ~12%, funding only mildly positive; realized vol elevated while IV roughly matched—heat without a calm, pure-leverage grind higher.</span></li><li><span class="lang zh">现货ETF通道本季强流入（BTC约+63.60亿、ETH约+30.50亿），与价格同季上行并陈；传统资产同向但弱得多，加密弹性显著更大。下季关键在于流入与趋势、波动是否续上。</span><span class="lang en">Spot ETF channel strong inflow this quarter (BTC ~+6.36B, ETH ~+3.05B) sits beside the same-quarter advance; TradFi aligned but far weaker, crypto elasticity much larger. Next quarter hinges on whether flows, trend, and vol regime continue together.</span></li></ol></div>
+    </section>
+
+    <section class="block layer-plain layer-tech" id="sec-strategy">
+      <div class="block-h"><h3><span class="lang zh">附录 · 策略环境（非推荐）</span><span class="lang en">Appendix · Strategy backdrop (not advice)</span></h3>
+        <div class="sub"><span class="lang zh">条件匹配 · 非产品推荐</span><span class="lang en">Condition fit · not product advice</span> <button type="button" class="sec-ask" data-q="为何趋势跟踪 match 或不 match？"><span class="lang zh">问</span><span class="lang en">Ask</span></button></div></div>
+      <div class="card">
+        <details class="fold">
+          <summary><span class="lang zh">展开条件匹配说明（非产品推荐）</span><span class="lang en">Expand condition-fit notes (not product advice)</span></summary>
+          <p class="plain" style="padding-top:16px"><strong><span class="lang zh">更匹配的环境</span><span class="lang en">Better-matched backdrop</span></strong></p>
+          <pre class="env-pre"><span class="lang zh">· 趋势跟踪类：价格主线偏顺势上攻，方向性叙事更顺。 窗口绝对收益约 42.6%，幅度不小。
+  （旁注：实现波动高或清算偏尖——即便趋势环境在，路径也可能很颠/拥挤。）</span><span class="lang en">· Trend-following: Trend label is “strong_uptrend”; directional backdrop is clearer. Window |return| ~42.6% is material.
+  (Note: high realized vol or liquidation spike — trend backdrop can still be a rough path.)</span></pre>
+          <p class="plain"><strong><span class="lang zh">更不匹配的环境</span><span class="lang en">Weaker-matched backdrop</span></strong></p>
+          <pre class="env-pre"><span class="lang zh">· 震荡/均值回归类：强趋势标签下，均值回归/纯震荡假设的条件更弱。</span><span class="lang en">· Mean-reversion / range: Under a strong-trend label, pure mean-reversion conditions are weaker.</span></pre>
+          <div class="callout"><span class="lang zh">策略环境 = 条件匹配度，不是投资建议；不推荐具体产品，不给出仓位。</span><span class="lang en">Strategy backdrop = condition fit, not investment advice; no products, no position sizes.</span></div>
+        </details>
+      </div>
+    </section>
+
+
+
+    <section class="block layer-plain layer-tech">
+      <div class="block-h"><h3><span class="lang zh">关注等级说明</span><span class="lang en">Attention legend</span></h3></div>
+      <div class="card" style="padding:12px 16px"><details class="fold attn-fold"><summary><span class="lang zh">关注等级说明</span><span class="lang en">Attention levels</span></summary><table class="data attn-legend"><thead><tr><th>ID</th><th><span class="lang zh">含义</span><span class="lang en">Meaning</span></th><th><span class="lang zh">现行规则</span><span class="lang en">Current rule</span></th></tr></thead><tbody><tr><td><b>S3</b></td><td><span class="lang zh">当日优先</span><span class="lang en">Priority today</span></td><td><span class="lang zh">|BTC 窗口收益| ≥ 15%</span><span class="lang en">|BTC window return| ≥ 15%</span></td></tr><tr><td><b>S2</b></td><td><span class="lang zh">值得抬头</span><span class="lang en">Worth a look</span></td><td><span class="lang zh">|BTC 窗口收益| ≥ 8%，或与美股明显脱钩</span><span class="lang en">|BTC window return| ≥ 8%, or clear equity decoupling</span></td></tr><tr><td><b>S1</b></td><td><span class="lang zh">记一笔</span><span class="lang en">Note it</span></td><td><span class="lang zh">默认：有行情但不极端</span><span class="lang en">Default: active but not extreme</span></td></tr><tr><td><b>S0</b></td><td><span class="lang zh">可忽略</span><span class="lang en">Skip</span></td><td><span class="lang zh">|收益| &lt; 2% 且最大单日波幅 &lt; 2%</span><span class="lang en">|return| &lt; 2% and max daily |move| &lt; 2%</span></td></tr></tbody></table><p class="plain" style="padding:8px 0 0"><span class="lang zh">关注等级 = 注意力分级，不是涨跌预测，也不是买卖建议。阈值可在配置中调整。</span><span class="lang en">Attention = how much to look — not a forecast or trade advice. Thresholds are configurable.</span></p></details></div>
+    </section>
+
+    <div class="foot">
+      <div><strong><span class="lang zh">数据脚注</span><span class="lang en">Data Footnotes</span></strong></div>
+      <ul style="margin:8px 0 0 18px;padding:0">
+        <li><span class="lang zh">数据截至 as_of=2026-09-30T23:59:59Z · 生成 generated=2026-10-05T07:27:00Z</span><span class="lang en">as_of=2026-09-30T23:59:59Z · generated=2026-10-05T07:27:00Z</span></li>
+        <li><span class="lang zh">公开只读 · 无潮记/问潮观/收成哨</span><span class="lang en">Public read-only · no Notes/Q&amp;A/watch</span></li>
+        <li><span class="lang zh">标签规则 labels=label_rules_v0 · 特征 features=features_v0</span><span class="lang en">labels=label_rules_v0 · features=features_v0</span></li>
+        <li><span class="lang zh">叙事 narrative=grok-4.5 / narrative_prompt_v1-quarterly-insight · 季报 IA=insight</span><span class="lang en">narrative=grok-4.5 / narrative_prompt_v1-quarterly-insight · quarterly IA=insight</span></li>
+        <li><span class="lang zh">datahub · 加密 K 线 · market_data.daily_kline</span><span class="lang en">datahub · crypto OHLCV · market_data.daily_kline</span></li><li><span class="lang zh">datahub · 加密未平仓 · market_data.open_interest</span><span class="lang en">datahub · crypto OI · market_data.open_interest</span></li><li><span class="lang zh">datahub · 加密清算 · market_data.liquidation</span><span class="lang en">datahub · crypto liquidation · market_data.liquidation</span></li><li><span class="lang zh">datahub · 加密资金费率 · market_data.contract_quote</span><span class="lang en">datahub · crypto funding · market_data.contract_quote</span></li><li><span class="lang zh">yahoo · 传统市场包 · ES=F</span><span class="lang en">yahoo · tradfi bundle · ES=F</span></li><li><span class="lang zh">cache · tradfi_fill · NQ←context:weekly_20260921_20260927.json,VIX←context:weekly_20260921_20260927.json,DXY←context:weekly_20260921_20260927.json,US10Y←context:weekly_20260921_20260927.json,GOLD←context:weekly_20260921_20260927.json</span><span class="lang en">cache · tradfi_fill · NQ←context:weekly_20260921_20260927.json,VIX←context:weekly_20260921_20260927.json,DXY←context:weekly_20260921_20260927.json,US10Y←context:weekly_20260921_20260927.json,GOLD←context:weekly_20260921_20260927.json</span></li><li><span class="lang zh">datahub · 加密 IV 指数 · market_data.option_volatility_kline</span><span class="lang en">datahub · crypto IV index · market_data.option_volatility_kline</span></li><li><span class="lang zh">farside_mirror · etf_spot_net_flow · https://raw.githubusercontent.com/haturatu/crypto-etf-flow/main/etf_btc.csv</span><span class="lang en">farside_mirror · etf_spot_net_flow · https://raw.githubusercontent.com/haturatu/crypto-etf-flow/main/etf_btc.csv</span></li>
+        <li><span class="lang zh">传统若 provider=yahoo，则非 Datahub。若见 rate_limit / fill，表示 Yahoo 限频后按标的从缓存补洞，不是「没有行情」。</span><span class="lang en">TradFi via Yahoo is not Datahub. rate_limit/fill = per-ticker hole-fill after Yahoo limits — not “no market”.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  
+<script type="application/json" id="tw-data">{"spot": [["2026-06-30", 60260.2, 60276.54, 58201.0, 58624.71, 19639.82787, 1157911191.4893565], ["2026-07-01", 58624.71, 61334.0, 57800.19, 60024.0, 25093.44662, 1491051306.8189511], ["2026-07-02", 60024.0, 62200.0, 59588.0, 61560.0, 21382.14163, 1308156569.7200918], ["2026-07-03", 61560.0, 62979.86, 61248.86, 62583.26, 14048.98627, 870359931.5832849], ["2026-07-04", 62583.26, 63461.99, 62328.24, 63144.01, 9139.8274, 574233846.0826051], ["2026-07-05", 63144.01, 63999.0, 62436.59, 63650.0, 9172.07758, 577866444.607444], ["2026-07-06", 63650.01, 64700.0, 61306.84, 64042.02, 21435.28437, 1347956046.4032269], ["2026-07-07", 64042.93, 64314.0, 62671.39, 63363.99, 16834.20823, 1069267686.8886092], ["2026-07-08", 63364.0, 63761.99, 61544.56, 62290.0, 18620.09796, 1160087170.620036], ["2026-07-09", 62290.01, 63500.0, 61705.29, 63230.0, 16742.80672, 1050849813.269484], ["2026-07-10", 63230.01, 64692.83, 62926.01, 64161.72, 17589.00122, 1126097961.002051], ["2026-07-11", 64161.72, 64504.11, 63819.0, 63819.0, 9151.97432, 587469874.5668087], ["2026-07-12", 63819.01, 64290.11, 63640.83, 63780.0, 13914.83703, 889938572.3679433], ["2026-07-13", 63780.0, 64425.0, 61824.97, 62334.52, 21682.50204, 1361096729.9510434], ["2026-07-14", 62334.52, 65100.0, 62272.2, 65043.98, 20552.41384, 1310854500.6805303], ["2026-07-15", 65043.99, 65600.0, 64485.0, 64756.28, 18401.89741, 1195648323.7685184], ["2026-07-16", 64756.28, 64997.52, 63748.74, 63830.2, 18764.52679, 1206498386.3771937], ["2026-07-17", 63830.2, 64387.99, 62537.56, 63931.67, 18189.89389, 1152546029.3402514], ["2026-07-18", 63931.67, 64865.0, 63886.65, 64834.22, 8031.18012, 515954648.6863699], ["2026-07-19", 64834.21, 64967.25, 64280.0, 64722.54, 8379.91474, 541559101.9129946], ["2026-07-20", 64722.55, 65799.0, 63100.0, 65255.51, 21323.48702, 1379182710.2630444], ["2026-07-21", 65255.51, 66956.15, 65148.75, 66556.16, 18618.28087, 1232802690.07422], ["2026-07-22", 66556.15, 66739.89, 65553.67, 66114.49, 18074.86602, 1193958918.306832], ["2026-07-23", 66114.5, 66313.14, 64650.0, 65098.97, 14698.22673, 959991207.460394], ["2026-07-24", 65098.98, 65808.59, 63739.75, 64139.99, 16821.2718, 1086879409.1640515], ["2026-07-25", 64140.0, 64475.28, 63810.0, 64375.0, 8863.0503, 568282056.0835841], ["2026-07-26", 64375.01, 65577.0, 64293.81, 65399.99, 7933.06089, 513834097.4623594], ["2026-07-27", 65400.0, 65744.6, 63605.56, 63755.86, 14791.90543, 961311197.9853868], ["2026-07-28", 63755.86, 64100.0, 62742.47, 63915.0, 13889.82996, 881901504.4936239], ["2026-07-29", 63915.0, 64744.81, 63267.34, 63984.28, 16780.11912, 1075624907.649938], ["2026-07-30", 63984.29, 65176.6, 63603.92, 64780.02, 17131.58486, 1104856756.9244137], ["2026-07-31", 64780.03, 65409.56, 62466.0, 62887.88, 20475.60686, 1302023180.8966825], ["2026-08-01", 62887.88, 63150.0, 62275.0, 62823.64, 7563.08904, 475812069.762356], ["2026-08-02", 62823.65, 63796.33, 62806.58, 63570.0, 8387.01154, 531238376.4212737], ["2026-08-03", 63570.01, 64080.0, 62300.0, 63520.0, 15543.29743, 983698515.9557792], ["2026-08-04", 63520.0, 64549.16, 63322.01, 64106.56, 13690.47909, 875057683.2964723], ["2026-08-05", 64106.55, 65025.22, 63880.0, 64665.23, 12742.85528, 820929974.2552497], ["2026-08-06", 64665.24, 64999.0, 64172.0, 64323.61, 9864.43284, 637366646.7167077], ["2026-08-07", 64323.61, 65390.99, 64166.0, 64923.19, 11807.40403, 765604113.5355588], ["2026-08-08", 64923.2, 65192.54, 64784.19, 64962.6, 5760.14298, 374451358.8306199], ["2026-08-09", 64962.6, 65474.46, 64730.08, 64901.59, 7031.23606, 457366207.4042235], ["2026-08-10", 64901.59, 65391.14, 63806.27, 63970.01, 13638.40877, 880502559.6531125], ["2026-08-11", 63970.01, 64515.43, 63238.0, 63600.0, 12891.63248, 823992195.6659181], ["2026-08-12", 63600.01, 64500.0, 63310.34, 63479.99, 13627.06822, 868963134.2285606], ["2026-08-13", 63479.99, 64010.0, 62802.27, 63490.86, 10793.85853, 685844694.2494848], ["2026-08-14", 63490.86, 63617.45, 62535.24, 63043.56, 12340.82899, 777408844.7057977], ["2026-08-15", 63043.56, 63187.98, 62920.0, 63086.01, 5405.16038, 340890632.3578836], ["2026-08-16", 63086.01, 63390.0, 62716.0, 62900.0, 4737.23135, 298698048.5551315], ["2026-08-17", 62900.0, 64610.01, 62751.1, 64532.1, 14255.64713, 909366051.0685228], ["2026-08-18", 64532.11, 65058.81, 64027.85, 64725.42, 11789.91312, 759405329.8294215], ["2026-08-19", 64725.42, 70000.0, 64166.0, 69334.79, 29054.29976, 1954769139.093191], ["2026-08-20", 69334.78, 73400.0, 68902.22, 73025.15, 35904.79287, 2562053707.609983], ["2026-08-21", 73027.02, 79500.0, 73027.02, 78338.03, 44339.56568, 3401672760.033361], ["2026-08-22", 78338.03, 78828.15, 76500.0, 77074.93, 18524.50847, 1433768388.597238], ["2026-08-23", 77074.94, 78052.85, 75545.67, 77734.0, 15367.23185, 1182628276.059433], ["2026-08-24", 77734.0, 80000.0, 76670.01, 78992.75, 30179.29391, 2367960844.302849], ["2026-08-25", 78992.76, 81272.62, 77851.0, 78539.14, 24772.51394, 1972170530.2745976], ["2026-08-26", 78539.13, 79251.6, 77632.58, 79023.75, 14613.75887, 1148236055.8792386], ["2026-08-27", 79023.75, 80848.74, 78546.13, 80249.58, 16265.53695, 1297370375.4734786], ["2026-08-28", 80249.59, 81478.87, 76888.0, 77845.87, 19756.43646, 1560927602.278941], ["2026-08-29", 77845.88, 78330.0, 77382.37, 78230.0, 7016.30257, 545867984.8485777], ["2026-08-30", 78230.0, 79400.0, 77000.0, 77682.0, 9085.42405, 712506539.5644648], ["2026-08-31", 77682.0, 79250.0, 77392.0, 78581.29, 15303.90602, 1198158182.2374198], ["2026-09-01", 78581.3, 79220.61, 76420.0, 77439.0, 14130.63949, 1101387276.6513293], ["2026-09-02", 77439.01, 77792.0, 76264.0, 77340.01, 13070.9782, 1008333112.5875232], ["2026-09-03", 77340.01, 82300.0, 76968.0, 81270.37, 19806.42247, 1579639079.847165], ["2026-09-04", 81270.37, 81427.75, 78660.0, 79660.77, 19198.62549, 1538393292.4845457], ["2026-09-05", 79660.77, 80200.0, 79442.0, 79831.75, 9117.2402, 727162100.1671113], ["2026-09-06", 79831.75, 80559.99, 79233.0, 80341.83, 8854.81827, 707422224.4650549], ["2026-09-07", 80341.83, 80443.99, 78680.0, 79112.01, 10572.45495, 839882674.5423373], ["2026-09-08", 79112.0, 79485.0, 77620.01, 78455.8, 19235.06605, 1510077235.7348557], ["2026-09-09", 78455.8, 79760.0, 77770.0, 78306.43, 14129.92027, 1114730666.1522026], ["2026-09-10", 78306.43, 78564.39, 76464.0, 76568.72, 15320.36904, 1188117943.7720196], ["2026-09-11", 76568.73, 79890.0, 76046.58, 77225.7, 19713.27729, 1528809492.0993094], ["2026-09-12", 77225.71, 77505.67, 77059.75, 77278.73, 8060.44455, 622849159.587739], ["2026-09-13", 77278.73, 77450.0, 76500.0, 76842.01, 6959.68366, 536092213.4014395], ["2026-09-14", 76842.01, 79600.0, 76388.72, 78189.21, 15413.48971, 1204563026.1329377], ["2026-09-15", 78189.2, 78250.46, 74967.97, 75644.48, 21682.71734, 1658732238.399597], ["2026-09-16", 75644.48, 76560.76, 75064.82, 76206.01, 14887.98431, 1129239634.1136029], ["2026-09-17", 76206.0, 77179.47, 76000.0, 76417.01, 10925.02219, 836425871.0388924], ["2026-09-18", 76417.01, 81400.0, 76296.0, 80883.87, 23907.77962, 1897722787.409994], ["2026-09-19", 80883.86, 81951.0, 80844.58, 81249.99, 10663.76706, 867621845.5839787], ["2026-09-20", 81249.99, 81497.33, 80126.04, 81178.0, 10993.68293, 887777953.2912456], ["2026-09-21", 81178.01, 87395.67, 80850.22, 86620.0, 31963.17872, 2702559883.822699], ["2026-09-22", 86620.01, 86717.6, 85114.0, 86208.56, 21328.45813, 1834036114.8607607], ["2026-09-23", 86208.57, 87278.54, 83500.01, 84397.6, 22150.93277, 1887736866.156798], ["2026-09-24", 84397.6, 84942.45, 82874.93, 84410.24, 18703.61971, 1572042147.6733966], ["2026-09-25", 84410.24, 85255.0, 83183.0, 84099.99, 18056.26519, 1520256978.6934962], ["2026-09-26", 84100.0, 84473.58, 83798.0, 84433.1, 8058.06465, 677578219.0470139], ["2026-09-27", 84433.11, 85159.03, 84132.0, 84472.0, 9615.12963, 813976178.3611975], ["2026-09-28", 84472.01, 84999.0, 82563.0, 83500.01, 20960.72462, 1746910498.4279687], ["2026-09-29", 83500.01, 84563.99, 82775.94, 83663.66, 13461.55331, 1126045075.038149], ["2026-09-30", 83663.66, 85649.95, 82956.11, 83623.6, 18522.82001, 1557658297.3238585]], "eth": [["2026-06-30", 1572.01], ["2026-07-01", 1609.58], ["2026-07-02", 1700.57], ["2026-07-03", 1758.21], ["2026-07-04", 1780.64], ["2026-07-05", 1785.65], ["2026-07-06", 1799.56], ["2026-07-07", 1771.45], ["2026-07-08", 1743.54], ["2026-07-09", 1745.16], ["2026-07-10", 1796.85], ["2026-07-11", 1787.76], ["2026-07-12", 1806.8], ["2026-07-13", 1776.72], ["2026-07-14", 1891.87], ["2026-07-15", 1917.86], ["2026-07-16", 1864.71], ["2026-07-17", 1841.93], ["2026-07-18", 1862.61], ["2026-07-19", 1872.23], ["2026-07-20", 1904.77], ["2026-07-21", 1930.09], ["2026-07-22", 1934.25], ["2026-07-23", 1878.38], ["2026-07-24", 1861.44], ["2026-07-25", 1874.89], ["2026-07-26", 1954.72], ["2026-07-27", 1892.53], ["2026-07-28", 1922.23], ["2026-07-29", 1910.72], ["2026-07-30", 1918.31], ["2026-07-31", 1862.6], ["2026-08-01", 1844.94], ["2026-08-02", 1885.36], ["2026-08-03", 1860.5], ["2026-08-04", 1869.75], ["2026-08-05", 1908.9], ["2026-08-06", 1904.1], ["2026-08-07", 1914.18], ["2026-08-08", 1916.74], ["2026-08-09", 1910.65], ["2026-08-10", 1873.16], ["2026-08-11", 1882.59], ["2026-08-12", 1879.81], ["2026-08-13", 1886.15], ["2026-08-14", 1882.2], ["2026-08-15", 1882.64], ["2026-08-16", 1876.0], ["2026-08-17", 1913.6], ["2026-08-18", 1917.85], ["2026-08-19", 2252.8], ["2026-08-20", 2326.82], ["2026-08-21", 2516.3], ["2026-08-22", 2422.6], ["2026-08-23", 2463.41], ["2026-08-24", 2482.31], ["2026-08-25", 2442.64], ["2026-08-26", 2506.78], ["2026-08-27", 2510.94], ["2026-08-28", 2442.8], ["2026-08-29", 2457.67], ["2026-08-30", 2416.88], ["2026-08-31", 2467.65], ["2026-09-01", 2418.57], ["2026-09-02", 2391.92], ["2026-09-03", 2507.51], ["2026-09-04", 2455.85], ["2026-09-05", 2480.34], ["2026-09-06", 2514.48], ["2026-09-07", 2490.16], ["2026-09-08", 2485.06], ["2026-09-09", 2468.13], ["2026-09-10", 2438.27], ["2026-09-11", 2516.43], ["2026-09-12", 2525.93], ["2026-09-13", 2477.1], ["2026-09-14", 2515.75], ["2026-09-15", 2398.26], ["2026-09-16", 2418.26], ["2026-09-17", 2447.28], ["2026-09-18", 2612.14], ["2026-09-19", 2632.69], ["2026-09-20", 2645.21], ["2026-09-21", 2776.19], ["2026-09-22", 2753.63], ["2026-09-23", 2684.71], ["2026-09-24", 2688.05], ["2026-09-25", 2691.61], ["2026-09-26", 2696.33], ["2026-09-27", 2688.65], ["2026-09-28", 2688.71], ["2026-09-29", 2677.98], ["2026-09-30", 2686.01]], "fundingPct": [["2026-06-30", 0.005532], ["2026-07-01", 0.008078], ["2026-07-02", 0.01], ["2026-07-03", 0.01], ["2026-07-04", 0.009533], ["2026-07-05", 0.007684], ["2026-07-06", 0.01], ["2026-07-07", 0.004846], ["2026-07-08", 0.006226000000000001], ["2026-07-09", 0.009105], ["2026-07-10", 0.01], ["2026-07-11", 0.004651], ["2026-07-12", 0.0015359999999999998], ["2026-07-13", 0.008278], ["2026-07-14", 0.01], ["2026-07-15", 0.0024579999999999997], ["2026-07-16", 0.007639000000000001], ["2026-07-17", 0.0030710000000000004], ["2026-07-18", 0.00040599999999999995], ["2026-07-19", 0.004902], ["2026-07-20", 0.005409], ["2026-07-21", 0.004005], ["2026-07-22", -0.00035], ["2026-07-23", 0.007591], ["2026-07-24", 0.0060479999999999996], ["2026-07-25", 0.003878], ["2026-07-26", 0.0061470000000000006], ["2026-07-27", 0.004208], ["2026-07-28", 0.01], ["2026-07-29", 0.008426], ["2026-07-30", 0.01], ["2026-07-31", 0.004139], ["2026-08-01", 0.004539], ["2026-08-02", 0.01], ["2026-08-03", 0.003042], ["2026-08-04", 0.0016799999999999999], ["2026-08-05", 0.006595], ["2026-08-06", 0.0008179999999999999], ["2026-08-07", 0.005588], ["2026-08-08", 0.004442], ["2026-08-09", 0.007521000000000001], ["2026-08-10", 0.002338], ["2026-08-11", 0.01], ["2026-08-12", 0.006526], ["2026-08-13", 0.008545], ["2026-08-14", 0.006808999999999999], ["2026-08-15", 0.0009860000000000001], ["2026-08-16", 0.003819], ["2026-08-17", 0.005164], ["2026-08-18", 0.001617], ["2026-08-19", 0.009655], ["2026-08-20", 0.004964], ["2026-08-21", 0.01], ["2026-08-22", 0.01], ["2026-08-23", 0.01], ["2026-08-24", 0.005853], ["2026-08-25", 0.007789], ["2026-08-26", 0.004605], ["2026-08-27", 0.006632], ["2026-08-28", 0.01], ["2026-08-29", 0.008293], ["2026-08-30", 0.007281], ["2026-08-31", 0.008502], ["2026-09-01", 0.007995], ["2026-09-02", 0.007195], ["2026-09-03", 0.008539], ["2026-09-04", 0.001014], ["2026-09-05", 0.0035700000000000003], ["2026-09-06", 0.002883], ["2026-09-07", 0.004561], ["2026-09-08", 0.0048059999999999995], ["2026-09-09", 0.0035590000000000005], ["2026-09-10", 0.003006], ["2026-09-11", 0.006039999999999999], ["2026-09-12", 0.004794], ["2026-09-13", 0.007156999999999999], ["2026-09-14", 0.003563], ["2026-09-15", 0.004], ["2026-09-16", 0.009369], ["2026-09-17", 0.007769], ["2026-09-18", 0.006588], ["2026-09-19", 0.01], ["2026-09-20", 0.0042], ["2026-09-21", 0.007603], ["2026-09-22", 0.001021], ["2026-09-23", 0.000101], ["2026-09-24", 0.000196], ["2026-09-25", 0.000779], ["2026-09-26", 0.004645], ["2026-09-27", 0.002034], ["2026-09-28", 0.003842], ["2026-09-29", 0.007737], ["2026-09-30", 0.008007]], "fundingAnn": [["2026-06-30", 6.06], ["2026-07-01", 8.85], ["2026-07-02", 10.95], ["2026-07-03", 10.95], ["2026-07-04", 10.44], ["2026-07-05", 8.41], ["2026-07-06", 10.95], ["2026-07-07", 5.31], ["2026-07-08", 6.82], ["2026-07-09", 9.97], ["2026-07-10", 10.95], ["2026-07-11", 5.09], ["2026-07-12", 1.68], ["2026-07-13", 9.06], ["2026-07-14", 10.95], ["2026-07-15", 2.69], ["2026-07-16", 8.36], ["2026-07-17", 3.36], ["2026-07-18", 0.44], ["2026-07-19", 5.37], ["2026-07-20", 5.92], ["2026-07-21", 4.39], ["2026-07-22", -0.38], ["2026-07-23", 8.31], ["2026-07-24", 6.62], ["2026-07-25", 4.25], ["2026-07-26", 6.73], ["2026-07-27", 4.61], ["2026-07-28", 10.95], ["2026-07-29", 9.23], ["2026-07-30", 10.95], ["2026-07-31", 4.53], ["2026-08-01", 4.97], ["2026-08-02", 10.95], ["2026-08-03", 3.33], ["2026-08-04", 1.84], ["2026-08-05", 7.22], ["2026-08-06", 0.9], ["2026-08-07", 6.12], ["2026-08-08", 4.86], ["2026-08-09", 8.24], ["2026-08-10", 2.56], ["2026-08-11", 10.95], ["2026-08-12", 7.15], ["2026-08-13", 9.36], ["2026-08-14", 7.46], ["2026-08-15", 1.08], ["2026-08-16", 4.18], ["2026-08-17", 5.65], ["2026-08-18", 1.77], ["2026-08-19", 10.57], ["2026-08-20", 5.44], ["2026-08-21", 10.95], ["2026-08-22", 10.95], ["2026-08-23", 10.95], ["2026-08-24", 6.41], ["2026-08-25", 8.53], ["2026-08-26", 5.04], ["2026-08-27", 7.26], ["2026-08-28", 10.95], ["2026-08-29", 9.08], ["2026-08-30", 7.97], ["2026-08-31", 9.31], ["2026-09-01", 8.75], ["2026-09-02", 7.88], ["2026-09-03", 9.35], ["2026-09-04", 1.11], ["2026-09-05", 3.91], ["2026-09-06", 3.16], ["2026-09-07", 4.99], ["2026-09-08", 5.26], ["2026-09-09", 3.9], ["2026-09-10", 3.29], ["2026-09-11", 6.61], ["2026-09-12", 5.25], ["2026-09-13", 7.84], ["2026-09-14", 3.9], ["2026-09-15", 4.38], ["2026-09-16", 10.26], ["2026-09-17", 8.51], ["2026-09-18", 7.21], ["2026-09-19", 10.95], ["2026-09-20", 4.6], ["2026-09-21", 8.33], ["2026-09-22", 1.12], ["2026-09-23", 0.11], ["2026-09-24", 0.21], ["2026-09-25", 0.85], ["2026-09-26", 5.09], ["2026-09-27", 2.23], ["2026-09-28", 4.21], ["2026-09-29", 8.47], ["2026-09-30", 8.77]], "fundingAnnEth": [["2026-06-30", 6.74], ["2026-07-01", 2.2], ["2026-07-02", 8.59], ["2026-07-03", 10.67], ["2026-07-04", 8.56], ["2026-07-05", 9.03], ["2026-07-06", 8.37], ["2026-07-07", 1.66], ["2026-07-08", 7.9], ["2026-07-09", 2.95], ["2026-07-10", 5.54], ["2026-07-11", 0.71], ["2026-07-12", 2.39], ["2026-07-13", 0.01], ["2026-07-14", 4.22], ["2026-07-15", 4.85], ["2026-07-16", 7.55], ["2026-07-17", 2.82], ["2026-07-18", -1.38], ["2026-07-19", 3.15], ["2026-07-20", 2.93], ["2026-07-21", 1.19], ["2026-07-22", 0.45], ["2026-07-23", -1.27], ["2026-07-24", 5.94], ["2026-07-25", -2.06], ["2026-07-26", 10.95], ["2026-07-27", 1.59], ["2026-07-28", 6.28], ["2026-07-29", 4.26], ["2026-07-30", 6.36], ["2026-07-31", 7.38], ["2026-08-01", 3.03], ["2026-08-02", 10.95], ["2026-08-03", 5.87], ["2026-08-04", 3.88], ["2026-08-05", 0.43], ["2026-08-06", -0.71], ["2026-08-07", 0.09], ["2026-08-08", 3.54], ["2026-08-09", 5.34], ["2026-08-10", 1.2], ["2026-08-11", 10.95], ["2026-08-12", 5.7], ["2026-08-13", 2.95], ["2026-08-14", 5.65], ["2026-08-15", -0.4], ["2026-08-16", 2.99], ["2026-08-17", 5.07], ["2026-08-18", 3.94], ["2026-08-19", 10.95], ["2026-08-20", 9.89], ["2026-08-21", 10.95], ["2026-08-22", 10.95], ["2026-08-23", 10.95], ["2026-08-24", 10.2], ["2026-08-25", 3.39], ["2026-08-26", 10.95], ["2026-08-27", 2.31], ["2026-08-28", 1.71], ["2026-08-29", 3.43], ["2026-08-30", 2.69], ["2026-08-31", 6.28], ["2026-09-01", 0.1], ["2026-09-02", 9.78], ["2026-09-03", 10.43], ["2026-09-04", 2.19], ["2026-09-05", 7.73], ["2026-09-06", 7.46], ["2026-09-07", 4.69], ["2026-09-08", 5.71], ["2026-09-09", -1.29], ["2026-09-10", 0.69], ["2026-09-11", -0.02], ["2026-09-12", 5.01], ["2026-09-13", 5.77], ["2026-09-14", 1.41], ["2026-09-15", -0.32], ["2026-09-16", 3.62], ["2026-09-17", 4.06], ["2026-09-18", 10.95], ["2026-09-19", 10.95], ["2026-09-20", 8.94], ["2026-09-21", 6.15], ["2026-09-22", 10.26], ["2026-09-23", 5.75], ["2026-09-24", 3.06], ["2026-09-25", 7.19], ["2026-09-26", 6.21], ["2026-09-27", 3.41], ["2026-09-28", 7.7], ["2026-09-29", 7.27], ["2026-09-30", 6.3]], "fundingPeriodsPerYear": 1095.0, "oi": [["2026-06-30", 108509.802], ["2026-07-01", 103466.083], ["2026-07-02", 106954.131], ["2026-07-03", 106251.913], ["2026-07-04", 106413.784], ["2026-07-05", 105300.006], ["2026-07-06", 102707.595], ["2026-07-07", 99425.709], ["2026-07-08", 100379.325], ["2026-07-09", 100166.648], ["2026-07-10", 103955.721], ["2026-07-11", 101404.835], ["2026-07-12", 100697.845], ["2026-07-13", 107330.016], ["2026-07-14", 105324.028], ["2026-07-15", 103012.029], ["2026-07-16", 101778.498], ["2026-07-17", 100193.65], ["2026-07-18", 101443.407], ["2026-07-19", 102393.561], ["2026-07-20", 101283.584], ["2026-07-21", 104341.524], ["2026-07-22", 102257.511], ["2026-07-23", 104603.6], ["2026-07-24", 106134.062], ["2026-07-25", 107526.406], ["2026-07-26", 104373.407], ["2026-07-27", 105617.13], ["2026-07-28", 103272.522], ["2026-07-29", 104367.469], ["2026-07-30", 106615.301], ["2026-07-31", 109542.791], ["2026-08-01", 108535.629], ["2026-08-02", 109146.028], ["2026-08-03", 108575.544], ["2026-08-04", 108247.166], ["2026-08-05", 107124.416], ["2026-08-06", 105787.11], ["2026-08-07", 106974.75], ["2026-08-08", 107228.858], ["2026-08-09", 107052.288], ["2026-08-10", 106299.974], ["2026-08-11", 109275.491], ["2026-08-12", 111095.574], ["2026-08-13", 109602.33], ["2026-08-14", 112007.936], ["2026-08-15", 111517.11], ["2026-08-16", 110962.944], ["2026-08-17", 106416.222], ["2026-08-18", 106292.381], ["2026-08-19", 107509.38], ["2026-08-20", 107639.105], ["2026-08-21", 106117.954], ["2026-08-22", 105834.173], ["2026-08-23", 105549.98], ["2026-08-24", 107235.577], ["2026-08-25", 106612.254], ["2026-08-26", 105613.227], ["2026-08-27", 108781.899], ["2026-08-28", 105627.288], ["2026-08-29", 107692.981], ["2026-08-30", 106340.905], ["2026-08-31", 108003.454], ["2026-09-01", 108318.0], ["2026-09-02", 107671.06], ["2026-09-03", 112737.102], ["2026-09-04", 107932.455], ["2026-09-05", 106272.312], ["2026-09-06", 105564.709], ["2026-09-07", 106894.082], ["2026-09-08", 106647.24], ["2026-09-09", 105094.943], ["2026-09-10", 106878.433], ["2026-09-11", 103404.871], ["2026-09-12", 103322.256], ["2026-09-13", 104917.346], ["2026-09-14", 103536.015], ["2026-09-15", 107462.363], ["2026-09-16", 107937.167], ["2026-09-17", 108265.189], ["2026-09-18", 107958.521], ["2026-09-19", 107666.309], ["2026-09-20", 107797.314], ["2026-09-21", 109182.26], ["2026-09-22", 106713.207], ["2026-09-23", 98496.344], ["2026-09-24", 95866.115], ["2026-09-25", 95204.61], ["2026-09-26", 94510.604], ["2026-09-27", 94135.2], ["2026-09-28", 92792.959], ["2026-09-29", 92467.475], ["2026-09-30", 95412.894]], "liq": [["2026-06-30", 1201, 26.681000000000015, 146.8670000000002, 173.5480000000003], ["2026-07-01", 1570, 144.1230000000002, 120.80000000000032, 264.9229999999998], ["2026-07-02", 1218, 116.90800000000004, 46.21499999999999, 163.12300000000025], ["2026-07-03", 724, 108.39000000000011, 24.413, 132.80300000000008], ["2026-07-04", 533, 37.94099999999999, 14.413999999999994, 52.35499999999996], ["2026-07-05", 562, 48.258, 19.71200000000002, 67.97], ["2026-07-06", 1311, 118.76199999999996, 102.78200000000008, 221.5440000000001], ["2026-07-07", 1177, 51.11600000000006, 48.353, 99.46900000000014], ["2026-07-08", 1125, 32.58900000000002, 91.06800000000008, 123.65700000000014], ["2026-07-09", 780, 93.39100000000012, 24.138000000000027, 117.52900000000028], ["2026-07-10", 685, 54.504999999999974, 19.612999999999985, 74.1180000000001], ["2026-07-11", 345, 12.900999999999996, 13.963, 26.86400000000001], ["2026-07-12", 491, 14.431999999999997, 32.902, 47.334], ["2026-07-13", 1131, 36.580000000000005, 139.3820000000001, 175.9620000000002], ["2026-07-14", 847, 127.95500000000013, 13.284999999999988, 141.24000000000004], ["2026-07-15", 858, 58.02600000000006, 22.938, 80.96400000000027], ["2026-07-16", 934, 29.08300000000001, 69.66200000000008, 98.7450000000002], ["2026-07-17", 1185, 51.214, 89.3060000000002, 140.52000000000015], ["2026-07-18", 310, 26.228999999999996, 2.601999999999998, 28.830999999999985], ["2026-07-19", 447, 21.387000000000008, 14.476999999999991, 35.864000000000004], ["2026-07-20", 991, 76.52700000000003, 53.48800000000001, 130.01500000000013], ["2026-07-21", 871, 86.05500000000009, 26.28899999999999, 112.34400000000018], ["2026-07-22", 744, 29.810000000000013, 35.45500000000002, 65.26499999999999], ["2026-07-23", 701, 17.408000000000012, 57.191000000000045, 74.59900000000016], ["2026-07-24", 864, 26.715000000000007, 89.88099999999999, 116.59600000000016], ["2026-07-25", 291, 11.691, 11.824999999999996, 23.51600000000002], ["2026-07-26", 416, 57.47399999999998, 3.852999999999996, 61.327], ["2026-07-27", 1011, 48.30800000000003, 116.13500000000003, 164.4430000000002], ["2026-07-28", 910, 39.980999999999995, 63.19800000000002, 103.17900000000036], ["2026-07-29", 1000, 54.29700000000001, 92.09300000000016, 146.38999999999993], ["2026-07-30", 612, 37.11399999999999, 11.043, 48.15699999999994], ["2026-07-31", 915, 23.012000000000004, 107.1970000000001, 130.20900000000026], ["2026-08-01", 368, 5.229999999999997, 47.42200000000001, 52.65199999999997], ["2026-08-02", 444, 35.08699999999999, 10.117999999999991, 45.20500000000002], ["2026-08-03", 807, 41.83599999999998, 62.599000000000096, 104.4350000000001], ["2026-08-04", 666, 48.43500000000004, 29.011999999999997, 77.44699999999993], ["2026-08-05", 764, 91.53599999999996, 17.140000000000008, 108.67600000000007], ["2026-08-06", 601, 29.41000000000002, 22.94600000000001, 52.355999999999945], ["2026-08-07", 661, 48.897, 23.811000000000007, 72.70799999999997], ["2026-08-08", 189, 6.209999999999998, 2.1559999999999997, 8.365999999999994], ["2026-08-09", 478, 24.507000000000012, 18.941999999999993, 43.44900000000001], ["2026-08-10", 714, 14.251000000000005, 78.59100000000005, 92.84200000000013], ["2026-08-11", 550, 17.495, 56.98800000000002, 74.48300000000005], ["2026-08-12", 616, 29.275000000000013, 31.678000000000004, 60.953], ["2026-08-13", 609, 24.284000000000013, 50.21999999999994, 74.50400000000008], ["2026-08-14", 710, 12.681999999999992, 49.64899999999995, 62.33099999999991], ["2026-08-15", 154, 3.0369999999999986, 6.616999999999999, 9.65399999999999], ["2026-08-16", 252, 7.697999999999998, 21.649999999999988, 29.347999999999985], ["2026-08-17", 603, 111.68200000000004, 12.218999999999983, 123.90100000000017], ["2026-08-18", 465, 51.89300000000002, 10.932, 62.82499999999998], ["2026-08-19", 1894, 795.6119999999985, 66.14699999999998, 861.7589999999971], ["2026-08-20", 1969, 289.0889999999989, 68.271, 357.35999999999694], ["2026-08-21", 3379, 437.88899999999666, 185.53300000000016, 623.4219999999943], ["2026-08-22", 1669, 65.52800000000002, 137.3940000000001, 202.92199999999977], ["2026-08-23", 1014, 65.03100000000003, 81.752, 146.78299999999996], ["2026-08-24", 1761, 108.68000000000022, 67.74499999999999, 176.42499999999998], ["2026-08-25", 1602, 80.94500000000022, 132.70600000000013, 213.6509999999999], ["2026-08-26", 1069, 46.54300000000002, 40.70200000000003, 87.24500000000016], ["2026-08-27", 1050, 80.66700000000013, 26.885000000000037, 107.55200000000043], ["2026-08-28", 1469, 54.43199999999996, 127.52500000000042, 181.9570000000001], ["2026-08-29", 352, 17.553000000000008, 6.1720000000000015, 23.725000000000012], ["2026-08-30", 702, 40.262, 63.44300000000001, 103.70500000000006], ["2026-08-31", 886, 44.73100000000004, 28.642000000000017, 73.37300000000015], ["2026-09-01", 1070, 27.29100000000001, 92.05500000000004, 119.34600000000012], ["2026-09-02", 1039, 35.562000000000026, 51.24499999999995, 86.80700000000024], ["2026-09-03", 1619, 263.32, 31.483999999999988, 294.8039999999994], ["2026-09-04", 1076, 41.56600000000002, 92.629, 134.19500000000022], ["2026-09-05", 366, 17.265999999999995, 7.858, 25.12400000000002], ["2026-09-06", 516, 23.460000000000026, 13.272999999999987, 36.733000000000025], ["2026-09-07", 610, 9.688000000000002, 47.03100000000003, 56.719000000000015], ["2026-09-08", 892, 25.325000000000017, 79.06299999999993, 104.388], ["2026-09-09", 1048, 39.209999999999994, 63.05799999999997, 102.26800000000011], ["2026-09-10", 953, 18.278999999999996, 104.46400000000018, 122.74300000000022], ["2026-09-11", 1241, 91.62000000000012, 87.54300000000005, 179.163], ["2026-09-12", 212, 2.813999999999998, 6.665999999999999, 9.479999999999992], ["2026-09-13", 763, 21.202, 51.292, 72.49400000000004], ["2026-09-14", 1101, 86.65900000000015, 24.340000000000025, 110.99900000000028], ["2026-09-15", 1429, 54.48800000000001, 187.72000000000023, 242.20800000000008], ["2026-09-16", 1141, 44.17799999999996, 52.638999999999974, 96.81700000000016], ["2026-09-17", 856, 39.208, 23.63300000000004, 62.841000000000015], ["2026-09-18", 1612, 272.69899999999933, 17.717000000000006, 290.4159999999992], ["2026-09-19", 864, 52.51900000000001, 16.69899999999999, 69.21800000000017], ["2026-09-20", 739, 29.17000000000002, 36.26000000000001, 65.43000000000006], ["2026-09-21", 1973, 265.6199999999992, 36.39800000000002, 302.01799999999906], ["2026-09-22", 1157, 50.522999999999975, 37.934000000000005, 88.45700000000032], ["2026-09-23", 1279, 44.08399999999998, 113.74700000000006, 157.83100000000007], ["2026-09-24", 1147, 47.08500000000005, 64.18600000000008, 111.2710000000002], ["2026-09-25", 913, 38.61799999999998, 40.44799999999999, 79.06600000000026], ["2026-09-26", 306, 10.891000000000002, 5.367000000000003, 16.257999999999992], ["2026-09-27", 663, 30.144000000000037, 13.858999999999996, 44.00300000000004], ["2026-09-28", 1378, 40.790000000000035, 89.09700000000001, 129.88700000000017], ["2026-09-29", 828, 30.13900000000002, 31.601, 61.740000000000045], ["2026-09-30", 917, 73.31700000000004, 39.209999999999965, 112.52700000000034]], "perpTurnover": [["2026-07-01", 15695432641.03], ["2026-07-02", 14413324176.5], ["2026-07-03", 8221425342.6], ["2026-07-04", 5005363317.9], ["2026-07-05", 5838939676.61], ["2026-07-06", 15274506289.39], ["2026-07-07", 11244581262.1], ["2026-07-08", 10156440443.2], ["2026-07-09", 9464862498.71], ["2026-07-10", 8884001490.36], ["2026-07-11", 3443175595.13], ["2026-07-12", 3842437074.52], ["2026-07-13", 12292237296.25], ["2026-07-14", 12181241959.76], ["2026-07-15", 8592277953.36], ["2026-07-16", 8392177738.27], ["2026-07-17", 10503446852.19], ["2026-07-18", 3163687038.28], ["2026-07-19", 4055891561.13], ["2026-07-20", 11632181714.24], ["2026-07-21", 9194862592.71], ["2026-07-22", 7707124517.22], ["2026-07-23", 8138975806.32], ["2026-07-24", 9530027824.82], ["2026-07-25", 2965064790.4], ["2026-07-26", 4260757162.04], ["2026-07-27", 9585011782.51], ["2026-07-28", 9155492233.06], ["2026-07-29", 11532338882.87], ["2026-07-30", 7285615069.24], ["2026-07-31", 11118195413.66], ["2026-08-01", 3435251324.17], ["2026-08-02", 5321527670.05], ["2026-08-03", 9601999380.34], ["2026-08-04", 8312596119.48], ["2026-08-05", 9345411514.19], ["2026-08-06", 6412456134.21], ["2026-08-07", 8062923719.97], ["2026-08-08", 1718341936.13], ["2026-08-09", 3111939060.72], ["2026-08-10", 8314792239.08], ["2026-08-11", 6767717137.0], ["2026-08-12", 7296912639.6], ["2026-08-13", 7789208113.29], ["2026-08-14", 6629197390.35], ["2026-08-15", 1584147765.82], ["2026-08-16", 2516783709.77], ["2026-08-17", 8818500412.46], ["2026-08-18", 6285075890.83], ["2026-08-19", 21955019535.96], ["2026-08-20", 20683034859.67], ["2026-08-21", 34557712020.47], ["2026-08-22", 9984280977.95], ["2026-08-23", 10079189363.45], ["2026-08-24", 18239977752.8], ["2026-08-25", 19059809092.55], ["2026-08-26", 10545240245.39], ["2026-08-27", 13198367933.73], ["2026-08-28", 17556593691.14], ["2026-08-29", 3750001659.41], ["2026-08-30", 7049239577.7], ["2026-08-31", 10135558245.91], ["2026-09-01", 11776717838.4], ["2026-09-02", 10953865065.03], ["2026-09-03", 19112047796.15], ["2026-09-04", 15610664657.88], ["2026-09-05", 3804025089.62], ["2026-09-06", 4895529507.87], ["2026-09-07", 7515827536.56], ["2026-09-08", 10192615051.36], ["2026-09-09", 12031993145.32], ["2026-09-10", 11054985093.6], ["2026-09-11", 16094199451.96], ["2026-09-12", 3145981955.78], ["2026-09-13", 5229233617.09], ["2026-09-14", 12938145663.8], ["2026-09-15", 18225493034.55], ["2026-09-16", 11847690082.11], ["2026-09-17", 9114233834.99], ["2026-09-18", 17532094697.34], ["2026-09-19", 6110413786.64], ["2026-09-20", 7808352640.77], ["2026-09-21", 24548362248.5], ["2026-09-22", 14562495627.66], ["2026-09-23", 17788925404.32], ["2026-09-24", 13359972851.94], ["2026-09-25", 11276517980.29], ["2026-09-26", 3054196832.97], ["2026-09-27", 5633157502.74], ["2026-09-28", 13130173370.81], ["2026-09-29", 10284427480.66], ["2026-09-30", 14875011604.34]], "spotTurnover": [["2026-07-01", 1491051306.82], ["2026-07-02", 1308156569.72], ["2026-07-03", 870359931.58], ["2026-07-04", 574233846.08], ["2026-07-05", 577866444.61], ["2026-07-06", 1347956046.4], ["2026-07-07", 1069267686.89], ["2026-07-08", 1160087170.62], ["2026-07-09", 1050849813.27], ["2026-07-10", 1126097961.0], ["2026-07-11", 587469874.57], ["2026-07-12", 889938572.37], ["2026-07-13", 1361096729.95], ["2026-07-14", 1310854500.68], ["2026-07-15", 1195648323.77], ["2026-07-16", 1206498386.38], ["2026-07-17", 1152546029.34], ["2026-07-18", 515954648.69], ["2026-07-19", 541559101.91], ["2026-07-20", 1379182710.26], ["2026-07-21", 1232802690.07], ["2026-07-22", 1193958918.31], ["2026-07-23", 959991207.46], ["2026-07-24", 1086879409.16], ["2026-07-25", 568282056.08], ["2026-07-26", 513834097.46], ["2026-07-27", 961311197.99], ["2026-07-28", 881901504.49], ["2026-07-29", 1075624907.65], ["2026-07-30", 1104856756.92], ["2026-07-31", 1302023180.9], ["2026-08-01", 475812069.76], ["2026-08-02", 531238376.42], ["2026-08-03", 983698515.96], ["2026-08-04", 875057683.3], ["2026-08-05", 820929974.26], ["2026-08-06", 637366646.72], ["2026-08-07", 765604113.54], ["2026-08-08", 374451358.83], ["2026-08-09", 457366207.4], ["2026-08-10", 880502559.65], ["2026-08-11", 823992195.67], ["2026-08-12", 868963134.23], ["2026-08-13", 685844694.25], ["2026-08-14", 777408844.71], ["2026-08-15", 340890632.36], ["2026-08-16", 298698048.56], ["2026-08-17", 909366051.07], ["2026-08-18", 759405329.83], ["2026-08-19", 1954769139.09], ["2026-08-20", 2562053707.61], ["2026-08-21", 3401672760.03], ["2026-08-22", 1433768388.6], ["2026-08-23", 1182628276.06], ["2026-08-24", 2367960844.3], ["2026-08-25", 1972170530.27], ["2026-08-26", 1148236055.88], ["2026-08-27", 1297370375.47], ["2026-08-28", 1560927602.28], ["2026-08-29", 545867984.85], ["2026-08-30", 712506539.56], ["2026-08-31", 1198158182.24], ["2026-09-01", 1101387276.65], ["2026-09-02", 1008333112.59], ["2026-09-03", 1579639079.85], ["2026-09-04", 1538393292.48], ["2026-09-05", 727162100.17], ["2026-09-06", 707422224.47], ["2026-09-07", 839882674.54], ["2026-09-08", 1510077235.73], ["2026-09-09", 1114730666.15], ["2026-09-10", 1188117943.77], ["2026-09-11", 1528809492.1], ["2026-09-12", 622849159.59], ["2026-09-13", 536092213.4], ["2026-09-14", 1204563026.13], ["2026-09-15", 1658732238.4], ["2026-09-16", 1129239634.11], ["2026-09-17", 836425871.04], ["2026-09-18", 1897722787.41], ["2026-09-19", 867621845.58], ["2026-09-20", 887777953.29], ["2026-09-21", 2702559883.82], ["2026-09-22", 1834036114.86], ["2026-09-23", 1887736866.16], ["2026-09-24", 1572042147.67], ["2026-09-25", 1520256978.69], ["2026-09-26", 677578219.05], ["2026-09-27", 813976178.36], ["2026-09-28", 1746910498.43], ["2026-09-29", 1126045075.04], ["2026-09-30", 1557658297.32]], "es": [["2026-06-30", 7548.25], ["2026-07-01", 7543.5], ["2026-07-02", 7528.25], ["2026-07-06", 7591.5], ["2026-07-07", 7551.25], ["2026-07-08", 7528.75], ["2026-07-09", 7588.75], ["2026-07-10", 7620.25], ["2026-07-13", 7563.0], ["2026-07-14", 7591.25], ["2026-07-15", 7614.75], ["2026-07-16", 7577.75], ["2026-07-17", 7497.75], ["2026-07-20", 7484.25], ["2026-07-21", 7545.75], ["2026-07-22", 7540.25], ["2026-07-23", 7445.0], ["2026-07-24", 7447.5], ["2026-07-27", 7448.25], ["2026-07-28", 7465.25], ["2026-07-29", 7351.25], ["2026-07-30", 7472.5], ["2026-07-31", 7519.25], ["2026-08-03", 7628.25], ["2026-08-04", 7765.5], ["2026-08-05", 7749.5], ["2026-08-06", 7734.75], ["2026-08-07", 7779.75], ["2026-08-10", 7776.75], ["2026-08-11", 7747.5], ["2026-08-12", 7770.5], ["2026-08-13", 7822.5], ["2026-08-14", 7805.0], ["2026-08-17", 7768.75], ["2026-08-18", 7714.0], ["2026-08-19", 7729.0], ["2026-08-20", 7662.5], ["2026-08-21", 7691.25], ["2026-08-24", 7669.75], ["2026-08-25", 7692.0], ["2026-08-26", 7690.0], ["2026-08-27", 7742.5], ["2026-08-28", 7722.0], ["2026-08-31", 7699.0], ["2026-09-01", 7642.75], ["2026-09-02", 7676.5], ["2026-09-03", 7754.75], ["2026-09-04", 7722.0], ["2026-09-08", 7680.5], ["2026-09-09", 7643.75], ["2026-09-10", 7598.5], ["2026-09-11", 7659.5], ["2026-09-14", 7625.0], ["2026-09-15", 7589.25], ["2026-09-16", 7556.5], ["2026-09-17", 7640.0], ["2026-09-18", 7657.35009765625], ["2026-09-21", 7833.5], ["2026-09-22", 7831.75], ["2026-09-23", 7772.5], ["2026-09-24", 7767.0], ["2026-09-25", 7803.75]], "nq": [["2026-09-21", 30784.75], ["2026-09-22", 31028.5], ["2026-09-23", 30764.75], ["2026-09-24", 30766.75], ["2026-09-25", 30889.25]], "gold": [["2026-09-21", 4383.89990234375], ["2026-09-22", 4376.39990234375], ["2026-09-23", 4318.39990234375], ["2026-09-24", 4298.0], ["2026-09-25", 4321.2001953125]], "dxy": [["2026-09-21", 100.43000030517578], ["2026-09-22", 100.5999984741211], ["2026-09-23", 101.0999984741211], ["2026-09-24", 101.29000091552734], ["2026-09-25", 100.97000122070312]], "btcIv": [["2026-06-30", 44.54], ["2026-07-01", 42.91], ["2026-07-02", 40.45], ["2026-07-03", 39.47], ["2026-07-04", 39.18], ["2026-07-05", 38.67], ["2026-07-06", 37.26], ["2026-07-07", 38.87], ["2026-07-08", 39.53], ["2026-07-09", 37.29], ["2026-07-10", 36.23], ["2026-07-11", 36.78], ["2026-07-12", 37.2], ["2026-07-13", 37.78], ["2026-07-14", 36.48], ["2026-07-15", 35.98], ["2026-07-16", 36.37], ["2026-07-17", 36.33], ["2026-07-18", 35.72], ["2026-07-19", 36.11], ["2026-07-20", 36.26], ["2026-07-21", 37.32], ["2026-07-22", 38.01], ["2026-07-23", 38.47], ["2026-07-24", 37.02], ["2026-07-25", 37.71], ["2026-07-26", 37.34], ["2026-07-27", 37.45], ["2026-07-28", 37.24], ["2026-07-29", 37.45], ["2026-07-30", 35.55], ["2026-07-31", 35.64], ["2026-08-01", 35.55], ["2026-08-02", 35.05], ["2026-08-03", 34.76], ["2026-08-04", 34.04], ["2026-08-05", 34.66], ["2026-08-06", 34.98], ["2026-08-07", 33.94], ["2026-08-08", 34.23], ["2026-08-09", 34.93], ["2026-08-10", 36.33], ["2026-08-11", 36.13], ["2026-08-12", 35.82], ["2026-08-13", 34.81], ["2026-08-14", 34.74], ["2026-08-15", 35.02], ["2026-08-16", 35.16], ["2026-08-17", 34.72], ["2026-08-18", 34.9], ["2026-08-19", 37.84], ["2026-08-20", 39.44], ["2026-08-21", 43.29], ["2026-08-22", 42.27], ["2026-08-23", 43.18], ["2026-08-24", 43.41], ["2026-08-25", 43.28], ["2026-08-26", 40.37], ["2026-08-27", 41.52], ["2026-08-28", 38.34], ["2026-08-29", 37.43], ["2026-08-30", 36.99], ["2026-08-31", 37.63], ["2026-09-01", 37.93], ["2026-09-02", 37.19], ["2026-09-03", 39.78], ["2026-09-04", 37.96], ["2026-09-05", 38.66], ["2026-09-06", 39.32], ["2026-09-07", 38.79], ["2026-09-08", 39.92], ["2026-09-09", 40.2], ["2026-09-10", 40.24], ["2026-09-11", 36.75], ["2026-09-12", 36.98], ["2026-09-13", 38.89], ["2026-09-14", 38.57], ["2026-09-15", 39.01], ["2026-09-16", 36.19], ["2026-09-17", 33.59], ["2026-09-18", 35.46], ["2026-09-19", 36.32], ["2026-09-20", 35.65], ["2026-09-21", 38.14], ["2026-09-22", 37.4], ["2026-09-23", 35.81], ["2026-09-24", 36.04], ["2026-09-25", 34.62], ["2026-09-26", 34.92], ["2026-09-27", 35.07], ["2026-09-28", 35.93], ["2026-09-29", 35.12], ["2026-09-30", 35.23]], "ethIv": [["2026-06-30", 58.98], ["2026-07-01", 56.89], ["2026-07-02", 55.11], ["2026-07-03", 53.55], ["2026-07-04", 52.97], ["2026-07-05", 53.08], ["2026-07-06", 52.63], ["2026-07-07", 53.27], ["2026-07-08", 53.37], ["2026-07-09", 51.99], ["2026-07-10", 49.81], ["2026-07-11", 50.58], ["2026-07-12", 50.99], ["2026-07-13", 51.07], ["2026-07-14", 49.52], ["2026-07-15", 49.03], ["2026-07-16", 49.2], ["2026-07-17", 48.96], ["2026-07-18", 49.28], ["2026-07-19", 49.74], ["2026-07-20", 50.42], ["2026-07-21", 50.99], ["2026-07-22", 51.6], ["2026-07-23", 51.63], ["2026-07-24", 50.52], ["2026-07-25", 51.52], ["2026-07-26", 51.7], ["2026-07-27", 51.87], ["2026-07-28", 53.02], ["2026-07-29", 52.46], ["2026-07-30", 50.71], ["2026-07-31", 50.21], ["2026-08-01", 50.8], ["2026-08-02", 49.74], ["2026-08-03", 49.18], ["2026-08-04", 47.81], ["2026-08-05", 48.04], ["2026-08-06", 47.98], ["2026-08-07", 47.44], ["2026-08-08", 48.08], ["2026-08-09", 49.1], ["2026-08-10", 49.72], ["2026-08-11", 49.3], ["2026-08-12", 49.36], ["2026-08-13", 48.54], ["2026-08-14", 47.18], ["2026-08-15", 47.54], ["2026-08-16", 47.49], ["2026-08-17", 46.29], ["2026-08-18", 46.1], ["2026-08-19", 52.54], ["2026-08-20", 52.57], ["2026-08-21", 57.73], ["2026-08-22", 57.01], ["2026-08-23", 60.31], ["2026-08-24", 58.44], ["2026-08-25", 58.15], ["2026-08-26", 56.06], ["2026-08-27", 57.08], ["2026-08-28", 50.85], ["2026-08-29", 51.11], ["2026-08-30", 51.76], ["2026-08-31", 51.31], ["2026-09-01", 51.83], ["2026-09-02", 50.92], ["2026-09-03", 53.28], ["2026-09-04", 51.09], ["2026-09-05", 51.72], ["2026-09-06", 53.19], ["2026-09-07", 52.6], ["2026-09-08", 53.86], ["2026-09-09", 53.73], ["2026-09-10", 53.36], ["2026-09-11", 51.76], ["2026-09-12", 52.61], ["2026-09-13", 54.29], ["2026-09-14", 54.92], ["2026-09-15", 55.19], ["2026-09-16", 52.83], ["2026-09-17", 50.11], ["2026-09-18", 49.92], ["2026-09-19", 50.81], ["2026-09-20", 51.5], ["2026-09-21", 52.61], ["2026-09-22", 51.12], ["2026-09-23", 51.56], ["2026-09-24", 51.04], ["2026-09-25", 48.03], ["2026-09-26", 49.02], ["2026-09-27", 48.96], ["2026-09-28", 49.98], ["2026-09-29", 48.98], ["2026-09-30", 49.35]], "ivRvBars": {"labels": ["BTC", "ETH"], "iv": [35.23, 49.35], "rv": [38.1, 52.57]}, "etfBtc": [["2026-07-01", -296000000.0, 50908399999.99994], ["2026-07-02", 223500000.0, 51131899999.99994], ["2026-07-06", 265700000.0, 51397599999.99993], ["2026-07-07", 21500000.0, 51419099999.99993], ["2026-07-08", -84900000.0, 51334199999.99993], ["2026-07-09", -95300000.0, 51238899999.99993], ["2026-07-10", 90400000.0, 51329299999.99993], ["2026-07-13", -424700000.0, 50904599999.99993], ["2026-07-14", 181100000.0, 51085699999.99993], ["2026-07-15", 107700000.0, 51193399999.99993], ["2026-07-16", 79100000.0, 51272499999.99992], ["2026-07-17", 132300000.00000001, 51404799999.99993], ["2026-07-20", 226800000.0, 51631599999.99993], ["2026-07-21", 203200000.0, 51834799999.99993], ["2026-07-22", 69100000.0, 51903899999.99993], ["2026-07-23", -225100000.0, 51678799999.99993], ["2026-07-24", -240100000.0, 51438699999.99993], ["2026-07-27", -11600000.0, 51427099999.99993], ["2026-07-28", -49700000.0, 51377399999.99994], ["2026-07-29", 32100000.0, 51409499999.99993], ["2026-07-30", 233100000.0, 51642599999.99993], ["2026-07-31", -265399999.99999997, 51377199999.99993], ["2026-08-03", 170100000.0, 51547299999.99993], ["2026-08-04", 211500000.0, 51758799999.99993], ["2026-08-05", 244400000.0, 52003199999.99993], ["2026-08-06", 137600000.0, 52140799999.99993], ["2026-08-07", 101700000.0, 52242499999.99992], ["2026-08-10", -144600000.0, 52097899999.99993], ["2026-08-11", 7800000.0, 52105699999.99993], ["2026-08-12", -61100000.0, 52044599999.99993], ["2026-08-13", -131100000.0, 51913499999.99993], ["2026-08-14", -56200000.0, 51857299999.99994], ["2026-08-17", 297500000.0, 52154799999.99994], ["2026-08-18", 189300000.0, 52344099999.99994], ["2026-08-19", 517200000.00000006, 52861299999.99994], ["2026-08-20", 606300000.0, 53467599999.99994], ["2026-08-21", 307500000.0, 53775099999.99994], ["2026-08-24", 337600000.0, 54112699999.99994], ["2026-08-25", 314300000.0, 54426999999.99994], ["2026-08-26", 232200000.0, 54659199999.99994], ["2026-08-27", 242300000.0, 54901499999.99994], ["2026-08-28", -201900000.0, 54699599999.99994], ["2026-08-31", 216700000.0, 54916299999.99994], ["2026-09-01", -236500000.0, 54679799999.99994], ["2026-09-02", 101100000.0, 54780899999.99994], ["2026-09-03", 730800000.0, 55511699999.99994], ["2026-09-04", 174600000.0, 55686299999.99994], ["2026-09-08", -46600000.0, 55639699999.99994], ["2026-09-09", -120200000.0, 55519499999.99994], ["2026-09-10", -282700000.0, 55236799999.99995], ["2026-09-11", -13200000.0, 55223599999.99995], ["2026-09-14", 159900000.0, 55383499999.99995], ["2026-09-15", -450400000.0, 54933099999.99995], ["2026-09-16", -295900000.0, 54637199999.99995], ["2026-09-17", 159500000.0, 54796699999.99995], ["2026-09-18", 433000000.0, 55229699999.99995], ["2026-09-21", 999000000.0, 56228699999.99995], ["2026-09-22", 714700000.0, 56943399999.99995], ["2026-09-23", 346900000.0, 57290299999.99995], ["2026-09-24", 190700000.0, 57480999999.99994], ["2026-09-25", 134500000.0, 57615499999.99994], ["2026-09-28", 31000000.0, 57646499999.99994], ["2026-09-29", 66200000.0, 57712699999.99994], ["2026-09-30", -148700000.0, 57563999999.99994]], "etfEth": [["2026-07-01", 14800000.0, 10888300000.000006], ["2026-07-02", 29000000.0, 10917300000.000006], ["2026-07-06", 20700000.0, 10938000000.000008], ["2026-07-07", 26900000.0, 10964900000.000008], ["2026-07-08", 70500000.0, 11035400000.000008], ["2026-07-09", -52200000.0, 10983200000.000006], ["2026-07-10", 18400000.0, 11001600000.000006], ["2026-07-13", -15400000.0, 10986200000.000006], ["2026-07-14", 58300000.0, 11044500000.000006], ["2026-07-15", 53900000.0, 11098400000.000006], ["2026-07-16", -28000000.0, 11070400000.000006], ["2026-07-17", 36700000.0, 11107100000.000006], ["2026-07-20", 38000000.0, 11145100000.000006], ["2026-07-21", 37500000.0, 11182600000.000006], ["2026-07-22", 72700000.0, 11255300000.000006], ["2026-07-23", 26300000.0, 11281600000.000006], ["2026-07-24", -70700000.0, 11210900000.000006], ["2026-07-27", 11700000.0, 11222600000.000006], ["2026-07-28", 14500000.0, 11237100000.000006], ["2026-07-29", -18600000.0, 11218500000.000006], ["2026-07-30", 13200000.0, 11231700000.000006], ["2026-07-31", 9000000.0, 11240700000.000006], ["2026-08-03", -11300000.0, 11229400000.000008], ["2026-08-04", 53700000.0, 11283100000.000008], ["2026-08-05", 60800000.0, 11343900000.000008], ["2026-08-06", 92100000.0, 11436000000.000008], ["2026-08-07", 49600000.0, 11485600000.000008], ["2026-08-10", -14600000.0, 11471000000.000008], ["2026-08-11", -1700000.0, 11469300000.000006], ["2026-08-12", 7400000.0, 11476700000.000006], ["2026-08-13", 6700000.0, 11483400000.000008], ["2026-08-14", 0.0, 11483400000.000008], ["2026-08-17", 30900000.0, 11514300000.000006], ["2026-08-18", 71400000.0, 11585700000.000006], ["2026-08-19", 189100000.0, 11774800000.000006], ["2026-08-20", 220700000.0, 11995500000.000008], ["2026-08-21", 184800000.0, 12180300000.000006], ["2026-08-24", 115600000.0, 12295900000.000008], ["2026-08-25", 179800000.0, 12475700000.000006], ["2026-08-26", 192400000.0, 12668100000.000006], ["2026-08-27", 234400000.0, 12902500000.000006], ["2026-08-28", 102100000.0, 13004600000.000006], ["2026-08-31", 87600000.0, 13092200000.000006], ["2026-09-01", 10900000.0, 13103100000.000006], ["2026-09-02", -48200000.0, 13054900000.000006], ["2026-09-03", 141400000.0, 13196300000.000004], ["2026-09-04", 26400000.0, 13222700000.000004], ["2026-09-08", -24300000.0, 13198400000.000006], ["2026-09-09", 34700000.0, 13233100000.000006], ["2026-09-10", -29900000.0, 13203200000.000006], ["2026-09-11", 216400000.0, 13419600000.000006], ["2026-09-14", 121100000.0, 13540700000.000006], ["2026-09-15", -142000000.0, 13398700000.000006], ["2026-09-16", -224100000.0, 13174600000.000006], ["2026-09-17", -39300000.0, 13135300000.000006], ["2026-09-18", 143700000.0, 13279000000.000008], ["2026-09-21", 270000000.0, 13549000000.000008], ["2026-09-22", 162200000.0, 13711200000.000008], ["2026-09-23", 104500000.0, 13815700000.000008], ["2026-09-24", 66099999.99999999, 13881800000.000008], ["2026-09-25", 87000000.0, 13968800000.000008], ["2026-09-28", 17100000.0, 13985900000.00001], ["2026-09-29", -2800000.0, 13983100000.00001], ["2026-09-30", -59600000.0, 13923500000.00001]]}</script>
+<script type="application/json" id="tw-meta">{"report_id": "quarterly_2026Q3", "theme_default": "paper", "lang_default": "zh", "qa_api_base": "", "section_prompts": {"leverage": ["本季 funding 与 OI 如何合读？", "清算 BUY/SELL 侧不对称说明什么？（side 语义未最终确认）"], "vol": ["本季 IV−RV 是贵是便宜？", "IV 与滚动 RV 走势是否同向？"], "strategy": ["为何趋势跟踪 match 或不 match？"]}, "label_coach": true, "tide_notes_enabled": false, "public_mode": true, "report_type": "quarterly", "ia": "quarterly_insight"}</script>
+<script>
+
+(() => {
+  const body = document.body;
+  const THEME_IDS = ['paper','mist','ink','forest','rose','slate','graphite','ocean'];
+  const data = JSON.parse(document.getElementById('tw-data').textContent);
+  const meta = JSON.parse(document.getElementById('tw-meta').textContent);
+
+  function cssVar(n){ return getComputedStyle(body).getPropertyValue(n).trim(); }
+  function hexAlpha(hex,a){
+    hex=String(hex||'').replace('#','').trim();
+    if(hex.length===3) hex=hex.split('').map(c=>c+c).join('');
+    if(hex.length!==6) return hex;
+    const r=parseInt(hex.slice(0,2),16),g=parseInt(hex.slice(2,4),16),b=parseInt(hex.slice(4,6),16);
+    return `rgba(${r},${g},${b},${a})`;
+  }
+  function tc(){ return {
+    c1:cssVar('--chart-1')||'#0f766e', c2:cssVar('--chart-2')||'#b45309', c3:cssVar('--chart-3')||'#be123c',
+    c4:cssVar('--chart-4')||'#1d4ed8', c5:cssVar('--chart-5')||'#78716c',
+    muted:cssVar('--muted')||'#57534e', dim:cssVar('--dim')||'#78716c', line:cssVar('--line')||'rgba(0,0,0,.1)'
+  };}
+
+  document.getElementById('layerSeg').addEventListener('click', e => {
+    const btn=e.target.closest('button[data-layer]'); if(!btn) return;
+    e.currentTarget.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const layer=btn.dataset.layer;
+    body.classList.remove('layer-l0','layer-plain','layer-tech','layer-all');
+    body.classList.add(layer==='all'?'layer-all':('layer-'+layer));
+  });
+
+  // table
+  const tb=document.querySelector('#tblSpot tbody');
+  if(tb && data.spot){
+    let prev=null;
+    data.spot.forEach(r=>{
+      const ret=prev==null?null:(r[4]/prev-1)*100;
+      const tr=document.createElement('tr');
+      const cls=ret==null?'':(ret>=0?'up':'down');
+      const txt=ret==null?'—':((ret>=0?'+':'')+ret.toFixed(2)+'%');
+      const f=x=>Number(x).toLocaleString('en-US',{maximumFractionDigits:1});
+      tr.innerHTML=`<td>${String(r[0]).slice(5)}</td><td>${f(r[1])}</td><td>${f(r[2])}</td><td>${f(r[3])}</td><td>${f(r[4])}</td><td class="${cls}">${txt}</td><td>${f(r[5])}</td>`;
+      tb.appendChild(tr); prev=r[4];
+    });
+  }
+
+  const charts={};
+  function destroy(){ Object.values(charts).forEach(c=>{try{c.destroy()}catch(_){}}); Object.keys(charts).forEach(k=>delete charts[k]); }
+  function norm(rows){ if(!rows||!rows.length) return []; const b=rows[0][1]; return rows.map(r=>100*r[1]/b); }
+
+  // Click legend = solo that series; click same again = show all (same as dashboard)
+  function legendClickSolo(e, legendItem, legend) {
+    const chart = legend.chart;
+    const idx = legendItem.datasetIndex;
+    if (chart.data.datasets.length <= 1) return;
+    const onlyThis = chart.data.datasets.every((_, i) => {
+      const m = chart.getDatasetMeta(i);
+      const hidden = m.hidden === true || (m.hidden === null && chart.data.datasets[i].hidden === true);
+      return i === idx ? !hidden : hidden;
+    });
+    chart.data.datasets.forEach((_, i) => {
+      chart.getDatasetMeta(i).hidden = onlyThis ? false : (i !== idx);
+    });
+    chart.update();
+  }
+  function leg(t){ return {display:true, labels:{boxWidth:12, color:t.muted}, onClick: legendClickSolo}; }
+
+  function buildCharts(){
+    if(typeof Chart==='undefined') return;
+    destroy();
+    const t=tc();
+    Chart.defaults.color=t.muted; Chart.defaults.borderColor=t.line;
+    const ticks={color:t.muted,font:{size:11}};
+    const gx={display:false}, gy={color:t.line};
+    // X-axis labels stay MM-DD (slice 5). Any series→label join MUST use dayKey()
+    // so full ISO "2026-09-06" and short "09-06" both hit the same map key.
+    const lab=a=>(a||[]).map(r=>dayKey(r[0]));
+    function dayKey(v){
+      const s=String(v==null?'':v);
+      if(s.length>=10 && s.charAt(4)==='-' && s.charAt(7)==='-') return s.slice(5,10);
+      if(s.length>=5 && s.charAt(2)==='-') return s.slice(0,5);
+      return s.length>=5 ? s.slice(-5) : s;
+    }
+    function mapByDay(rows, valIdx){
+      const m={};
+      (rows||[]).forEach(r=>{
+        if(!r || r[0]==null) return;
+        const v=r[valIdx==null?1:valIdx];
+        if(v==null || v==='') return;
+        m[dayKey(r[0])]=v;
+      });
+      return m;
+    }
+
+    const langNow = () => (body.getAttribute('data-lang')==='en' ? 'en' : 'zh');
+    const L = (zh,en) => langNow()==='en' ? en : zh;
+
+    if(document.getElementById('chartPrice') && data.spot){
+      const hasEth = data.eth && data.eth.length;
+      const ds = [{
+        label:L('BTC 现货','BTC Spot'), data:data.spot.map(r=>r[4]), borderColor:t.c1,
+        backgroundColor:hexAlpha(t.c1,.12), fill:true, tension:.25, pointRadius:3, yAxisID:'y'
+      }];
+      if(hasEth){
+        // align ETH to BTC dates where possible
+        const em={}; (data.eth||[]).forEach(r=>{ em[String(r[0]).slice(0,10)]=r[1]; em[String(r[0]).slice(5)]=r[1]; });
+        ds.push({
+          label:L('ETH 现货','ETH Spot'), data:data.spot.map(r=> em[String(r[0]).slice(0,10)] ?? em[String(r[0]).slice(5)] ?? null),
+          borderColor:t.c2, backgroundColor:hexAlpha(t.c2,.08), fill:false, tension:.25, pointRadius:3, yAxisID:'y1'
+        });
+      }
+      charts.p=new Chart(document.getElementById('chartPrice'),{type:'line',data:{labels:lab(data.spot),datasets:ds},
+        options:{responsive:true,maintainAspectRatio:false,
+          plugins:{legend:leg(t)},
+          scales:{
+            x:{grid:gx,ticks},
+            y:{position:'left',grid:gy,ticks:{...ticks,callback:v=>(v/1000).toFixed(1)+'k'}, title:{display:true,text:'BTC $',color:t.dim}},
+            y1:{position:'right',display:!!hasEth,grid:{drawOnChartArea:false},ticks:{...ticks,callback:v=>Number(v).toFixed(0)}, title:{display:!!hasEth,text:'ETH $',color:t.dim}}
+          }}});
+    }
+    if(document.getElementById('chartLiq') && data.liq){
+      charts.l=new Chart(document.getElementById('chartLiq'),{data:{labels:lab(data.liq),datasets:[
+        {type:'bar',label:L('清算笔数','Liq count'),data:data.liq.map(r=>r[1]),backgroundColor:hexAlpha(t.c3,.45),yAxisID:'y'},
+        {type:'line',label:L('BUY 侧 qty','BUY side qty'),data:data.liq.map(r=>r[2]),borderColor:t.c1,tension:.25,yAxisID:'y1',pointRadius:2},
+        {type:'line',label:L('SELL 侧 qty','SELL side qty'),data:data.liq.map(r=>r[3]),borderColor:t.c3,tension:.25,yAxisID:'y1',pointRadius:2},
+        {type:'line',label:L('合计 qty','Total qty'),data:data.liq.map(r=>r[4]),borderColor:t.c2,tension:.25,yAxisID:'y1',pointRadius:2,borderDash:[4,3]}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{position:'left',grid:gy,ticks},y1:{position:'right',grid:{drawOnChartArea:false},ticks}}}});
+    }
+    if(document.getElementById('chartOiFund') && data.oi){
+      const fundSeries = (data.fundingAnn && data.fundingAnn.length) ? data.fundingAnn : (data.fundingPct||[]);
+      const fundEthSeries = data.fundingAnnEth || [];
+      const fundLabel = (data.fundingAnn && data.fundingAnn.length)
+        ? L('BTC 资费年化 %/年','BTC funding ann. %/yr')
+        : L('BTC 资费 %/期','BTC funding %/period');
+      // dayKey MUST match lab() (MM-DD). Never index with full YYYY-MM-DD against lab labels.
+      const fm=mapByDay(fundSeries, 1);
+      const fem=mapByDay(fundEthSeries, 1);
+      const days=lab(data.oi);
+      const btcFundPts=days.map(d=> Object.prototype.hasOwnProperty.call(fm,d) ? fm[d] : null);
+      const ethFundPts=days.map(d=> Object.prototype.hasOwnProperty.call(fem,d) ? fem[d] : null);
+      const ds=[
+        {type:'line',label:L('OI（BTC）','OI (BTC)'),data:data.oi.map(r=>r[1]),borderColor:t.c1,tension:.25,yAxisID:'y',pointRadius:2},
+        {type:'line',label:fundLabel,data:btcFundPts,borderColor:t.c2,tension:.25,yAxisID:'y1',pointRadius:2},
+      ];
+      if(fundEthSeries.length){
+        // ETH 对照轨：固定青虚线（非清算红）；N2 拥挤主判仍只认 BTC
+        ds.push({type:'line',label:L('ETH 资费年化 %/年','ETH funding ann. %/yr'),data:ethFundPts,borderColor:'#0ea5e9',tension:.25,yAxisID:'y1',borderDash:[5,4],pointRadius:2});
+      }
+      charts.o=new Chart(document.getElementById('chartOiFund'),{data:{labels:days,datasets:ds},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{position:'left',grid:gy,ticks:{...ticks,callback:v=>(v/1000).toFixed(0)+'k'}},y1:{position:'right',grid:{drawOnChartArea:false},ticks:{...ticks,callback:v=>Number(v).toFixed(2)+'%'}}}}});
+    }
+    const usdCb = v => { const n=Number(v),a=Math.abs(n); if(a>=1e9)return (n/1e9).toFixed(1)+'B'; if(a>=1e8)return (n/1e8).toFixed(1)+'亿'; if(a>=1e6)return (n/1e6).toFixed(0)+'M'; return String(n); };
+    if(document.getElementById('chartPerpVol') && data.perpTurnover && data.perpTurnover.length){
+      charts.pv=new Chart(document.getElementById('chartPerpVol'),{type:'bar',data:{labels:lab(data.perpTurnover),datasets:[
+        {label:L('永续成交额 USD','Perp turnover USD'),data:data.perpTurnover.map(r=>r[1]),backgroundColor:hexAlpha(t.c1,.55)}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:usdCb}}}}});
+    }
+    if(document.getElementById('chartSpotVol') && data.spotTurnover && data.spotTurnover.length){
+      charts.sv=new Chart(document.getElementById('chartSpotVol'),{type:'bar',data:{labels:lab(data.spotTurnover),datasets:[
+        {label:L('现货成交额 USD','Spot turnover USD'),data:data.spotTurnover.map(r=>r[1]),backgroundColor:hexAlpha(t.c2,.55)}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:usdCb}}}}});
+    }
+    if(document.getElementById('chartTrad') && data.es && data.es.length){
+      charts.t=new Chart(document.getElementById('chartTrad'),{type:'line',data:{labels:lab(data.es),datasets:[
+        {label:'ES',data:norm(data.es),borderColor:t.c1,tension:.25,pointRadius:2},
+        {label:'NQ',data:norm(data.nq),borderColor:t.c5,tension:.25,pointRadius:2},
+        {label:'GOLD',data:norm(data.gold),borderColor:t.c2,tension:.25,pointRadius:2},
+        {label:'DXY',data:norm(data.dxy),borderColor:t.c4,tension:.25,pointRadius:2}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks}}}});
+    }
+    if(document.getElementById('chartEtf') && ((data.etfBtc&&data.etfBtc.length)||(data.etfEth&&data.etfEth.length))){
+      const base=(data.etfBtc&&data.etfBtc.length)?data.etfBtc:data.etfEth;
+      const labels=lab(base);
+      const mapNet=(rows)=>{const m={};(rows||[]).forEach(r=>{m[String(r[0]).slice(0,10)]=r[1];});return base.map(r=>m[String(r[0]).slice(0,10)]??null);};
+      const ds=[];
+      if(data.etfBtc&&data.etfBtc.length) ds.push({type:'bar',label:'BTC net',data:mapNet(data.etfBtc),backgroundColor:'rgba(15,118,110,.45)'});
+      if(data.etfEth&&data.etfEth.length) ds.push({type:'bar',label:'ETH net',data:mapNet(data.etfEth),backgroundColor:'rgba(180,83,9,.4)'});
+      charts.etf=new Chart(document.getElementById('chartEtf'),{data:{labels,datasets:ds},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:v=>{const n=Number(v),a=Math.abs(n);if(a>=1e9)return (n/1e9).toFixed(1)+'B';if(a>=1e6)return (n/1e6).toFixed(0)+'M';return String(n);}}}}}});
+    }
+    if(document.getElementById('chartIv') && data.btcIv && data.btcIv.length){
+      const ivDs=[{label:L('BTC IV（Deribit）','BTC IV (Deribit)'),data:data.btcIv.map(r=>r[1]),borderColor:t.c1,backgroundColor:hexAlpha(t.c1,.12),fill:true,tension:.25,pointRadius:3}];
+      if(data.ethIv && data.ethIv.length){
+        const em={}; data.ethIv.forEach(r=>{em[String(r[0]).slice(0,10)]=r[1]; em[String(r[0]).slice(5)]=r[1];});
+        ivDs.push({label:L('ETH IV','ETH IV'),data:data.btcIv.map(r=>em[String(r[0]).slice(0,10)]??em[String(r[0]).slice(5)]??null),borderColor:t.c2,fill:false,tension:.25,pointRadius:3});
+      }
+      charts.iv=new Chart(document.getElementById('chartIv'),{type:'line',data:{labels:lab(data.btcIv),datasets:ivDs},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},
+          scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:v=>v.toFixed(1)+'%'}}}}});
+    }
+    if(document.getElementById('chartIvRv') && data.ivRvBars){
+      const b=data.ivRvBars;
+      const labs=b.labels||['BTC'];
+      charts.ivrv=new Chart(document.getElementById('chartIvRv'),{type:'bar',data:{labels:labs,datasets:[
+        {label:L('IV 期末 %','IV end %'),data:(b.iv||[]).map(v=>v==null?null:v),backgroundColor:hexAlpha(t.c1,.7)},
+        {label:L('RV 窗口 %','RV window %'),data:(b.rv||[]).map(v=>v==null?null:v),backgroundColor:hexAlpha(t.c2,.7)}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:leg(t)},
+          scales:{x:{grid:gx,ticks},y:{grid:gy,ticks:{...ticks,callback:v=>v.toFixed(0)+'%'}}}}});
+    }
+  }
+
+  function applyLang(lang, persist=true){
+    if(lang!=='zh' && lang!=='en') lang='zh';
+    body.classList.remove('lang-zh','lang-en');
+    body.classList.add('lang-'+lang);
+    body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang==='zh'?'zh-CN':'en');
+    const seg=document.getElementById('langSeg');
+    if(seg){ seg.querySelectorAll('button').forEach(b=>{ b.classList.toggle('active', b.dataset.lang===lang); }); }
+    if(persist){ try{ localStorage.setItem('tidewatch-lang', lang);}catch(_){}}
+    buildCharts();
+  }
+  const langSeg=document.getElementById('langSeg');
+  if(langSeg){
+    langSeg.addEventListener('click', e=>{
+      const btn=e.target.closest('button[data-lang]'); if(!btn) return;
+      applyLang(btn.dataset.lang, true);
+    });
+  }
+
+  const sel=document.getElementById('themeSelect');
+  function applyTheme(name, persist=true){
+    if(!THEME_IDS.includes(name)) name='paper';
+    body.setAttribute('data-theme', name);
+    if(sel) sel.value=name;
+    if(persist){ try{ localStorage.setItem('tidewatch-theme', name);}catch(_){}}
+    buildCharts();
+  }
+  sel.addEventListener('change', ()=>applyTheme(sel.value,true));
+  let initial = meta.theme_default || 'paper';
+  try{ const s=localStorage.getItem('tidewatch-theme'); if(s && THEME_IDS.includes(s)) initial=s; if(s==='sand'||s==='violet') initial='paper'; }catch(_){}
+  body.setAttribute('data-theme', initial); if(sel) sel.value=initial;
+  let langInit = (meta && meta.lang_default) || 'zh';
+  try{ const s=localStorage.getItem('tidewatch-lang'); if(s==='zh'||s==='en') langInit=s; }catch(_){}
+  applyLang(langInit, false);  // also buildCharts
+
+  const knowledge=[
+    {keys:['资金费率','funding','费率','年化','8小时'],ans:'资金费率 Funding Rate 是永续多空「每一期」结算的租金，不是日费率。Binance U本位永续通常每8小时一期、一天3次。正费率通常偏多。本报告另给出按一天3次粗算的年化%/年，方便对比高低。'},
+    {keys:['oi','OI','未平仓','持仓'],ans:'OI Open Interest 是未平仓量。价涨 OI 不增，更像挤压/平仓而非仓位翻倍堆多。'},
+    {keys:['清算','强平','爆仓','liquidation'],ans:'清算 Liquidation 是保证金不足强平。峰值日见本报告杠杆图。side 语义可能未最终确认。'},
+    {keys:['脱钩','美股','ES','NQ','decoupl'],ans:'脱钩 Decoupling = 币与美股方向不一致，不能简单用股市解释币。'},
+    {keys:['隐含','IV','iv','DVOL','dvol','保险'],ans:'隐含波动率 IV = 期权市场的「保险报价」（未来会抖多厉害）。本报告主序列来自 Deribit 波动指数。IV 高只说明保险费贵，不是买卖建议。见④波动环境。'},
+    {keys:['已实现','历史波动','RV','rv','后视镜'],ans:'已实现/历史波动 RV = 后视镜：价格已经抖得有多厉害，用窗口内日收益算年化近似。与 IV 对比看 IV−RV。'},
+    {keys:['溢价','IV-RV','IV−RV','贵不贵','偏贵','偏便宜'],ans:'IV−RV（波动溢价）看保险费相对刚实现波动是贵了还是便宜了。正溢价偏贵、负值偏便宜——只描述环境，不构成期权买卖建议。数字见④节。'},
+    {keys:['VIX','恐慌'],ans:'VIX 是美股隐含波动温度计；加密 IV（DVOL 类）是币圈保险费。角色类似，数字不可混用。'},
+    {keys:['DXY','美元'],ans:'美元指数 DXY 强弱；走弱常作流动性弱背景，未必是主引擎。'},
+    {keys:['10Y','美债','利率'],ans:'十年美债收益率是利率锚；与币涨跌相反时，不是单纯降息交易。'},
+    {keys:['黄金','GOLD','gold'],ans:'黄金偏强可与币同向，但仍是不同资产逻辑。'},
+  ];
+  const thread=document.getElementById('qaThread');
+  const form=document.getElementById('qaForm');
+  const input=document.getElementById('qaInput');
+  const qaExternal=document.getElementById('qaExternal');
+  const qaSubmit=document.getElementById('qaSubmit');
+  const qaDock=document.getElementById('tidewatch-qa');
+  const qaFab=document.getElementById('qaExpand');
+  const qaModeSeg=document.getElementById('qaModeSeg');
+  const qaReviewHint=document.getElementById('qaReviewHint');
+  const qaApi = (meta.qa_api_base || '').replace(/\/$/,'');
+  let qaBusy = false;
+  let qaExternalMode = false;
+  let qaSession = null;
+  try { qaSession = sessionStorage.getItem('tidewatch-qa-session'); } catch(_){}
+  if (!qaSession) {
+    qaSession = 's_' + Math.random().toString(36).slice(2) + Date.now().toString(36);
+    try { sessionStorage.setItem('tidewatch-qa-session', qaSession); } catch(_){}
+  }
+
+  function setQaCollapsed(on){
+    if(!qaDock) return;
+    qaDock.classList.toggle('collapsed', !!on);
+    if(qaFab){
+      if(on) qaFab.removeAttribute('hidden');
+      else qaFab.setAttribute('hidden','');
+    }
+    try{ localStorage.setItem('tidewatch-qa-collapsed', on ? '1' : '0'); }catch(_){}
+  }
+  try{
+    if(localStorage.getItem('tidewatch-qa-collapsed')==='1') setQaCollapsed(true);
+  }catch(_){}
+  document.getElementById('qaMinimize')?.addEventListener('click', ()=> setQaCollapsed(true));
+  qaFab?.addEventListener('click', ()=> {
+    setQaCollapsed(false);
+    try{ input && input.focus(); }catch(_){}
+  });
+
+  function setExternalMode(on){
+    qaExternalMode = !!on;
+    if(qaModeSeg){
+      qaModeSeg.querySelectorAll('button').forEach(b=>{
+        b.classList.toggle('active', (b.dataset.qamode==='external')===qaExternalMode || (b.dataset.qamode==='report')===!qaExternalMode);
+      });
+    }
+    if(qaExternal){
+      if(qaExternalMode) qaExternal.removeAttribute('hidden');
+      else qaExternal.setAttribute('hidden','');
+    }
+    try{ localStorage.setItem('tidewatch-qa-ext-mode', qaExternalMode ? '1' : '0'); }catch(_){}
+  }
+  try{ if(localStorage.getItem('tidewatch-qa-ext-mode')==='1') setExternalMode(true); }catch(_){}
+  qaModeSeg?.addEventListener('click', e=>{
+    const b=e.target.closest('button[data-qamode]'); if(!b) return;
+    setExternalMode(b.dataset.qamode==='external');
+  });
+
+  async function refreshDueHint(){
+    if(!qaReviewHint) return;
+    try{
+      const r = await fetch(qaApi + '/api/tide-notes/summary?report_id=' + encodeURIComponent(meta.report_id||''));
+      if(!r.ok){
+        const r2 = await fetch(qaApi + '/api/pins/due');
+        if(!r2.ok) return;
+        const d = await r2.json();
+        const n = d.due_count || 0;
+        if(n>0){
+          qaReviewHint.hidden = false;
+          const lang = body.getAttribute('data-lang')||'zh';
+          qaReviewHint.innerHTML = lang==='en'
+            ? `You have <b>${n}</b> pin(s) due · `
+            : `有 <b>${n}</b> 条收藏待复习 · `;
+        } else qaReviewHint.hidden = true;
+        return;
+      }
+      const d = await r.json();
+      const n = d.due_pins || 0;
+      const ow = d.open_watches || 0;
+      if(n>0 || ow>0){
+        qaReviewHint.hidden = false;
+        const lang = body.getAttribute('data-lang')||'zh';
+        qaReviewHint.innerHTML = lang==='en'
+          ? `Due pins <b>${n}</b> · open watches <b>${ow}</b> · `
+          : `待复习钉 <b>${n}</b> · 开放哨 <b>${ow}</b> · `;
+      } else {
+        qaReviewHint.hidden = true;
+      }
+    }catch(_){ qaReviewHint.hidden = true; }
+  }
+  refreshDueHint();
+
+  // Echo strip dismiss
+  document.getElementById('echoStrip')?.addEventListener('click', async (e)=>{
+    const btn = e.target.closest('.echo-dismiss');
+    if(!btn) return;
+    const eid = btn.dataset.echoId;
+    const row = btn.closest('.echo-row');
+    try{
+      await fetch(qaApi + '/api/tide-notes/echoes/dismiss', {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ report_id: meta.report_id, echo_id: eid })
+      });
+    }catch(_){}
+    if(row) row.remove();
+    const strip = document.getElementById('echoStrip');
+    if(strip && !strip.querySelector('.echo-row')) strip.remove();
+  });
+
+  function openQaWithQuestion(q){
+    setQaCollapsed(false);
+    if(input){ input.value = q; input.focus(); }
+  }
+
+  // Section ask buttons
+  document.querySelectorAll('.sec-ask').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const q = btn.getAttribute('data-q') || '';
+      if(q) openQaWithQuestion(q);
+    });
+  });
+
+  // Label coach
+  if(meta.label_coach){
+    let coachEl = null;
+    function hideCoach(){ if(coachEl){ coachEl.remove(); coachEl=null; } }
+    document.getElementById('labelTags')?.addEventListener('click', (e)=>{
+      const tag = e.target.closest('.tag.coach');
+      if(!tag) return;
+      e.stopPropagation();
+      hideCoach();
+      const dim = tag.dataset.dim || '';
+      const id = tag.dataset.id || '';
+      const lang = body.getAttribute('data-lang')||'zh';
+      const isMonthly = (body.getAttribute('data-report-type')||'') === 'monthly';
+      const qs = lang==='en' ? [
+        `What does label ${id||dim} mean?`,
+        isMonthly ? `Which numbers support ${id||dim} this quarter?` : `Which numbers support ${id||dim} this quarter?`,
+        isMonthly ? `Did ${dim} change vs last quarter?` : `Did ${dim} change vs last quarter?`,
+      ] : [
+        `标签 ${id||dim} 的规则是什么？`,
+        isMonthly ? `本季哪些数支撑 ${id||dim}？` : `本季哪些数支撑 ${id||dim}？`,
+        isMonthly ? `${dim} 和上季比是否跳变？` : `${dim} 和上季比是否跳变？`,
+      ];
+      coachEl = document.createElement('div');
+      coachEl.className = 'coach-pop';
+      coachEl.innerHTML = `<b>${lang==='en'?'Label coach':'标签教练'} · ${id||dim}</b>` +
+        qs.map(q=>`<button type="button" data-cq="${q.replace(/"/g,'&quot;')}">${q}</button>`).join('');
+      tag.style.position='relative';
+      tag.appendChild(coachEl);
+      coachEl.addEventListener('click', (ev)=>{
+        const b = ev.target.closest('button[data-cq]');
+        if(!b) return;
+        hideCoach();
+        openQaWithQuestion(b.getAttribute('data-cq'));
+      });
+    });
+    document.addEventListener('click', ()=> hideCoach());
+  }
+
+  async function createWatchFromObservation(btn){
+    const lang = body.getAttribute('data-lang')||'zh';
+    const hint = (btn.dataset.templateHint || '').trim();
+    const propZh = btn.dataset.propZh || '';
+    const propEn = btn.dataset.propEn || '';
+    const obsId = btn.dataset.watchId || '';
+    const serverHint = lang==='en'
+      ? ' Is `python -m tidewatch qa-server` running on ' + qaApi + '?'
+      : ' 请确认已运行：python -m tidewatch qa-server（' + qaApi + '）';
+    const post = async (tid) => {
+      let resp;
+      try {
+        resp = await fetch(qaApi + '/api/watches/from-observation', {
+          method:'POST', headers:{'Content-Type':'application/json'},
+          body: JSON.stringify({
+            report_id: meta.report_id,
+            observation_id: obsId,
+            template_id: tid || undefined,
+            proposition_zh: propZh,
+            proposition_en: propEn,
+          })
+        });
+      } catch (netErr) {
+        const e = new Error((lang==='en'?'Cannot reach QA server.':'连不上问答服务。') + serverHint);
+        e.cause = netErr;
+        throw e;
+      }
+      let data;
+      try { data = await resp.json(); } catch (_) {
+        throw new Error((lang==='en'?'Bad response from QA server.':'问答服务返回异常。') + ' HTTP ' + resp.status + serverHint);
+      }
+      // 业务错误（unknown_template 等）返回 data 让调用方回退；网络/非 JSON 才 throw
+      return data;
+    };
+    try{
+      // 1) 有 hint：先试模板；失败则 2) 仅观察点正文；再失败才弹模板选择
+      if(hint){
+        const data = await post(hint);
+        if(data && data.ok){
+          btn.classList.add('on');
+          btn.disabled = true;
+          alert(lang==='en'?'Watch created from observation':'已从观察点收成哨');
+          refreshDueHint();
+          return;
+        }
+        console.warn('from-observation hint failed', data);
+      }
+      if(propZh){
+        const data2 = await post(undefined);
+        if(data2 && data2.ok){
+          btn.classList.add('on');
+          btn.disabled = true;
+          alert(lang==='en'?'Watch created from observation':'已从观察点收成哨');
+          refreshDueHint();
+          return;
+        }
+        console.warn('from-observation prop-only failed', data2);
+      }
+      const bg = document.createElement('div');
+      bg.className = 'watch-modal-bg';
+      bg.innerHTML = `<div class="watch-modal" role="dialog">
+        <h4>${lang==='en'?'Link rule for this observation':'为这条观察点选择核对规则'}</h4>
+        <p style="font-size:12px;color:var(--muted);margin:0 0 10px">${propZh || propEn}</p>
+        <div class="tpl-list"><p style="font-size:12px">Loading…</p></div>
+        <div class="row"><button type="button" class="ghost" data-x="1">${lang==='en'?'Cancel':'取消'}</button></div>
+      </div>`;
+      document.body.appendChild(bg);
+      const close = ()=> bg.remove();
+      bg.addEventListener('click', e=>{ if(e.target===bg || e.target.closest('[data-x]')) close(); });
+      const box = bg.querySelector('.tpl-list');
+      let d;
+      try {
+        const tr = await fetch(qaApi + '/api/watches/templates?report_id=' + encodeURIComponent(meta.report_id||''));
+        d = await tr.json();
+      } catch (netErr) {
+        box.innerHTML = '<p style="color:#b91c1c;font-size:13px">' +
+          (lang==='en'?'Cannot load templates.':'无法加载规则模板。') + serverHint + '</p>';
+        return;
+      }
+      const tpls = d.templates || [];
+      if(!tpls.length){
+        box.innerHTML = '<p style="font-size:13px">' +
+          (lang==='en'?'No templates — restart qa-server':'无模板 — 请重启 qa-server') + '</p>';
+        return;
+      }
+      box.innerHTML = tpls.map(t=>`<button type="button" class="tpl" data-tid="${t.template_id}">
+        <b>${(lang==='en'?(t.proposition_en||t.proposition_zh):t.proposition_zh)||t.template_id}</b>
+        <span style="font-size:11px;opacity:.7">${t.template_id}</span>
+      </button>`).join('');
+      box.querySelectorAll('.tpl').forEach(tb=>{
+        tb.addEventListener('click', async ()=>{
+          try{
+            const data = await post(tb.dataset.tid);
+            if(data.ok){
+              close();
+              btn.classList.add('on');
+              btn.disabled = true;
+              alert(lang==='en'?'Watch created':'已加入开放哨');
+              refreshDueHint();
+            } else alert(data.error||'failed');
+          }catch(err){ alert((lang==='en')?'Failed: ':'失败：') + (err && err.message ? err.message : err); }
+        });
+      });
+    }catch(err){
+      alert((lang==='en')?'Watch failed: ':'收成哨失败：') + (err && err.message ? err.message : err);
+    }
+  }
+  document.querySelectorAll('.obs-watch-btn').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{ e.preventDefault(); createWatchFromObservation(btn); });
+  });
+
+  const ICON_COPY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+  const ICON_CHECK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>';
+
+  async function copyText(text, btn){
+    const t = String(text || '');
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) await navigator.clipboard.writeText(t);
+      else {
+        const ta=document.createElement('textarea');
+        ta.value=t; ta.style.position='fixed'; ta.style.left='-9999px';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); ta.remove();
+      }
+      if (btn) {
+        btn.classList.add('copied');
+        btn.innerHTML = ICON_CHECK;
+        btn.title = (body.getAttribute('data-lang')==='en') ? 'Copied' : '已复制';
+        setTimeout(()=>{ btn.classList.remove('copied'); btn.innerHTML=ICON_COPY; btn.title=(body.getAttribute('data-lang')==='en')?'Copy':'复制'; }, 1500);
+      }
+    } catch (err) {
+      alert('复制失败：' + err);
+    }
+  }
+
+  function makeCopyBtn(text, titleZh, titleEn){
+    const btn=document.createElement('button');
+    btn.type='button';
+    btn.className='qa-icon-btn';
+    btn.title = (body.getAttribute('data-lang')==='en') ? (titleEn||'Copy') : (titleZh||'复制');
+    btn.setAttribute('aria-label', btn.title);
+    btn.innerHTML = ICON_COPY;
+    btn.addEventListener('click', (e)=>{ e.stopPropagation(); copyText(text, btn); });
+    return btn;
+  }
+
+  function add(role, text, tag, pinPayload){
+    const d=document.createElement('div');
+    d.className='msg '+role;
+    const prefix = role==='user' ? '你：' : '潮观：';
+    const bodyText = String(text || '');
+    d.appendChild(document.createTextNode(prefix + bodyText));
+
+    const actions=document.createElement('div');
+    actions.className='qa-msg-actions';
+    // Gemini-like: copy question / copy answer
+    if (role==='user') {
+      actions.appendChild(makeCopyBtn(bodyText, '复制问题', 'Copy question'));
+      const reuse=document.createElement('button');
+      reuse.type='button';
+      reuse.className='qa-icon-btn';
+      reuse.title=(body.getAttribute('data-lang')==='en')?'Use again':'再次提问';
+      reuse.setAttribute('aria-label', reuse.title);
+      reuse.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 3 3 12 12 12"/></svg>';
+      reuse.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        if(input){ input.value = bodyText; input.focus(); }
+        setQaCollapsed(false);
+      });
+      actions.appendChild(reuse);
+    } else if (role==='bot') {
+      actions.appendChild(makeCopyBtn(bodyText, '复制回答', 'Copy answer'));
+    }
+
+    if (tag || (pinPayload && pinPayload.pinnable)) {
+      if(tag){ const t=document.createElement('span'); t.style.cssText='font-size:10px;opacity:.65;margin-right:4px'; t.textContent=tag; actions.appendChild(t); }
+      if(pinPayload && pinPayload.pinnable!==false && role==='bot'){
+        const star=document.createElement('button');
+        star.type='button';
+        star.className='qa-pin';
+        star.title=(body.getAttribute('data-lang')==='en')?'Pin to Tide Notes':'收藏到潮记';
+        star.textContent='☆';
+        star.addEventListener('click', async ()=>{
+          if(star.classList.contains('on')) return;
+          try{
+            const resp=await fetch(qaApi+'/api/pins',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(pinPayload)});
+            const data=await resp.json();
+            if(data.ok){ star.textContent='★'; star.classList.add('on'); refreshDueHint(); }
+            else alert(data.error||'收藏失败');
+          }catch(err){ alert('收藏失败：'+err); }
+        });
+        actions.appendChild(star);
+        // 收成哨仅在周报观察点；问答只保留 ☆钉
+      }
+    }
+    if (actions.childNodes.length) d.appendChild(actions);
+    thread.appendChild(d);
+    thread.scrollTop=thread.scrollHeight;
+    return d;
+  }
+  function addThinking(){
+    const d=document.createElement('div');
+    d.className='msg bot thinking';
+    d.id='qaThinking';
+    const lang = body.getAttribute('data-lang') || 'zh';
+    const label = lang==='en' ? 'Thinking' : '思考中';
+    d.innerHTML = '<div class="qa-thinking"><span class="qa-orb" aria-hidden="true"></span>'
+      + '<span class="qa-thinking-label">'+label+'</span>'
+      + '<span class="qa-dots" aria-hidden="true"><i></i><i></i><i></i></span></div>';
+    thread.appendChild(d);
+    thread.scrollTop=thread.scrollHeight;
+    return d;
+  }
+  function removeThinking(){
+    const el=document.getElementById('qaThinking');
+    if(el) el.remove();
+  }
+  function localAns(q){
+    const h=knowledge.find(k=>k.keys.some(x=>q.toLowerCase().includes(x.toLowerCase())));
+    return h ? h.ans + '（离线词库）' : '离线词库未覆盖，且 LLM 未接通。请先运行：python -m tidewatch qa-server';
+  }
+  function modeTag(mode){
+    if(mode==='grounded') return '本报告 · grounded';
+    if(mode==='general') return '通识 · general';
+    if(mode==='external_echo') return '外部对照 · external';
+    if(mode==='refuse') return '拒答 · refuse';
+    if(mode==='error') return '错误 · error';
+    return mode || '';
+  }
+  async function sendQa(){
+    if(qaBusy) return;
+    const q=input.value.trim();
+    const ext = (qaExternal && !qaExternal.hidden) ? qaExternal.value.trim() : '';
+    if(!q && !ext) return;
+    add('user', q || '(外部材料对照)');
+    input.value='';
+    qaBusy = true;
+    if(qaSubmit) qaSubmit.disabled = true;
+    addThinking();
+    const lang = body.getAttribute('data-lang') || 'zh';
+    const layer = (body.className.match(/layer-(\w+)/)||[])[1] || 'plain';
+    try {
+      const resp = await fetch(qaApi + '/api/report-qa', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          report_id: meta.report_id,
+          question: q,
+          external_mode: qaExternalMode,
+          external_material: ext || undefined,
+          session_id: qaSession,
+          ui_layer: layer,
+          lang: lang,
+        }),
+      });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      removeThinking();
+      if(data.hint){
+        const h=document.createElement('div');
+        h.className='msg bot';
+        h.style.opacity='.8';
+        h.textContent='提示：'+data.hint;
+        thread.appendChild(h);
+      }
+      add('bot', data.answer_md || '(空回复)', modeTag(data.mode) + (data.model ? ' · ' + data.model : ''), {
+        question: q || '(外部材料对照)',
+        answer_md: data.answer_md,
+        report_id: meta.report_id,
+        mode: data.mode,
+        model: data.model,
+        tags: data.suggested_tags,
+        terms_taught: data.terms_taught,
+        pinnable: data.pinnable !== false && data.mode !== 'refuse' && data.mode !== 'error',
+      });
+      if(typeof data.due_count==='number' && qaReviewHint){
+        if(data.due_count>0){
+          qaReviewHint.hidden=false;
+          qaReviewHint.innerHTML = (lang==='en'?'Due pins: ':'待复习：') + data.due_count +
+            ' · ';
+        }
+      }
+    } catch (err) {
+      removeThinking();
+      add('bot', localAns(q), '离线降级 · ' + (err && err.message ? err.message : 'fetch failed'));
+    } finally {
+      qaBusy = false;
+      if(qaSubmit) qaSubmit.disabled = false;
+    }
+  }
+  form.addEventListener('submit', e => { e.preventDefault(); sendQa(); });
+  // Enter = send; Shift+Enter = newline (main box)
+  function bindEnterSend(el){
+    el?.addEventListener('keydown', e => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendQa();
+      }
+    });
+  }
+  bindEnterSend(input);
+  bindEnterSend(qaExternal);
+  document.getElementById('qaClear').addEventListener('click',()=>{ thread.innerHTML=''; removeThinking(); });
+})();
+
+</script>
+</body>
+</html>
