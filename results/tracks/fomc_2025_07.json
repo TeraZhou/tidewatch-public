@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "本次偏松一档，联邦基金利率走廊下移约25bp至4.25–4.5%。",
-    "primer_zh": "FOMC每年约召开8次，每次决议设定联邦基金利率目标走廊并发布政策声明。走廊是隔夜利率的操作区间，声明说明委员会对通胀与就业的权衡。下一钉为2025-09-17的FOMC利率决议。市场会对照声明措辞与走廊变动幅度。",
-    "attitude_zh": "态度偏松一档：走廊下移约25bp至4.25–4.5%。",
+    "lead_zh": "走廊下移约 25bp 至 4.25–4.5%，态度偏松一档。",
+    "primer_zh": "FOMC 每年约召开 8 次会议，主要设定联邦基金利率目标走廊并发布政策声明。本次决议已将走廊从上次 4.5–4.75% 调整为 4.25–4.5%。声明为配套沟通文本。下一场 FOMC 利率决议定于 2025-09-17。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp → 4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次下移至4.25–4.5%，动作降息约25bp，生效日按表为2024-12-19。\n会前无可用量价宽表数字可并置；会后以结果短表为准，走廊明确收窄25bp一档，声明摘意强调通胀仍偏高、指向更快回到2%物价目标。反应窗内仅能锚定上述走廊与声明要点，无其他表内涨跌幅度可引用。",
-    "watch_zh": "盯声明后续传导与走廊是否稳住在4.25–4.5%；盘面量价是否与25bp降息幅度匹配；下一钉2025-09-17决议前的数据与声明措辞变化。",
+    "narrative_zh": "会前走廊为 4.5–4.75%。会后落地：动作降息约 25bp，本次走廊 4.25–4.5%，生效标注 2024-12-19。\n声明强调通胀仍偏高，指向更快回到 2% 物价目标（摘意）。\n决议日 T 量价与资金面字段暂无具体读数，反应窗以走廊与声明文本为准。",
+    "watch_zh": "继续盯走廊位置与声明表述，以及盘面反应；下一钉为 2025-09-17 FOMC 利率决议。",
     "status_zh": "反应中（数据至 T+434/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Alberto G. Musalem; and Jeffrey R. Schmid. Voting against this action were Michelle W. Bowman and Christopher J. Waller, who preferred to lower the targ…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-08T01:36:26Z",
+    "generated_at": "2026-10-08T02:37:32Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_07.html",
-  "generated_at": "2026-10-08T01:36:42Z",
+  "generated_at": "2026-10-08T02:37:52Z",
   "as_of": "2026-10-08",
   "data_as_of": "2026-10-07"
 }
