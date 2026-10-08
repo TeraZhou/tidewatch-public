@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+109/3）",
+  "status_zh": "反应中（数据至 T+112/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -101,17 +101,17 @@
     "event_id": "fomc_2026_06",
     "event_date": "2026-06-17",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-10-04",
-    "calendar_today": "2026-10-05",
+    "data_as_of": "2026-10-07",
+    "calendar_today": "2026-10-08",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "会后偏松一档落地：走廊下移约25bp至3.5–3.75%，声明仍强调通胀偏高并指向更快回到2%目标。",
-    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从3.75–4%下调约25bp至3.5–3.75%。下一钉盯2026-07-29决议。声明与走廊是主线，盘面量价作对照。",
-    "attitude_zh": "态度偏松一档：走廊下移约25bp至3.5–3.75%，声明强调通胀仍偏高、指向更快回到2%物价目标。",
+    "lead_zh": "偏松一档，联邦基金利率走廊下移约 25bp 至 3.5–3.75%。",
+    "primer_zh": "FOMC 每年约召开 8 次，主要定联邦基金利率走廊并发布政策声明。本次已将走廊由 3.75–4% 下调至 3.5–3.75%。下一钉为 2026-07-29 决议。声明与走廊是会后主读点。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp 至 3.5–3.75%，声明仍点出通胀偏高并指向更快回到 2% 目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,9 +130,9 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日T（2026-06-17）走廊落地为降息约25bp、3.5–3.75%（上次3.75–4%）。\n当日BTC -1.77%、ETH -2.36%，永续OI -3.02%，BTC资金费率2.9%；ES -1.25%，VIX +12.37%，DXY +0.55%，BTC ETF -0.82亿。\n风险资产与股指同步回撤、波动抬升、美元偏强，ETF净流出与OI收缩同现，反应窗内量价偏谨慎。",
-    "watch_zh": "盯走廊是否稳在3.5–3.75%、声明后续表述、盘面BTC/ETH与OI及ETF流向能否缓和，下一钉2026-07-29决议。",
-    "status_zh": "反应中（数据至 T+109/3）",
+    "narrative_zh": "决议落地：上次走廊 3.75–4%，本次 3.5–3.75%，动作降息约 25bp。\n决议日 T 盘面：BTC -1.77%，ETH -2.36%，永续 OI -3.02%，BTC 资金费率 2.9%；ES -1.25%，VIX +12.37%，DXY +0.55%；BTC ETF 净流出 0.82 亿。\n声明强调通胀仍偏高，并指向更快回到 2% 物价目标。会前至会后并置看，降息落地当日风险资产与股指同步回撤、波动与美元走强、ETF 小幅流出。",
+    "watch_zh": "盯走廊与声明后续表述、盘面量价能否稳住，以及下一钉 2026-07-29 决议。",
+    "status_zh": "反应中（数据至 T+112/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -149,8 +149,8 @@
       "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-10-04",
-      "calendar_today": "2026-10-05",
+      "data_as_of": "2026-10-07",
+      "calendar_today": "2026-10-08",
       "event_date": "2026-06-17",
       "pre_n": 3,
       "post_n": 3,
@@ -282,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-05T07:40:05Z",
+    "generated_at": "2026-10-08T01:38:24Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -321,7 +321,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-10-05T07:40:18Z",
-  "as_of": "2026-10-05",
-  "data_as_of": "2026-10-04"
+  "generated_at": "2026-10-08T01:38:40Z",
+  "as_of": "2026-10-08",
+  "data_as_of": "2026-10-07"
 }
