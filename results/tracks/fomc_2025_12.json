@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+301/3）",
+  "status_zh": "反应中（数据至 T+302/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -104,17 +104,17 @@
     "event_id": "fomc_2025_12",
     "event_date": "2025-12-10",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-10-07",
-    "calendar_today": "2026-10-08",
+    "data_as_of": "2026-10-08",
+    "calendar_today": "2026-10-09",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "美联储降息约25bp，走廊下移至3.5–3.75%，态度偏松一档。",
-    "primer_zh": "FOMC每年大约召开8次会议，主要标定联邦基金利率目标走廊并发布政策声明。本次将走廊从上次的3.75–4%下调约25bp至3.5–3.75%，自2025-12-11生效。声明强调通胀仍偏高，指向更快回到2%物价目标。下一场FOMC利率决议在2026-01-28。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
+    "lead_zh": "本次偏松一档，走廊下移约 25bp 至 3.5–3.75%。",
+    "primer_zh": "美联储每年约召开 8 次 FOMC 会议。每次主要设定联邦基金利率目标走廊并发布政策声明。走廊与声明是市场定价的核心锚。下一钉为 2026-01-28 的 FOMC 利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp → 3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -133,9 +133,9 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "会前走廊停留在3.75–4%。会后宣布降息约25bp，新走廊定为3.5–3.75%，生效日2025-12-11。\n声明摘意强调通胀仍偏高，并指向更快回到2%物价目标。本次调整对应偏松一档立场，走廊整体下移约25bp。",
-    "watch_zh": "盯声明全文表述、走廊落地后的盘面反应，以及2026-01-28下一场决议。",
-    "status_zh": "反应中（数据至 T+301/3）",
+    "narrative_zh": "决议前走廊停留在 3.75–4%。本次动作降息约 25bp，新走廊落在 3.5–3.75%，自 2025-12-11 起生效。\n声明强调通胀仍偏高，并指向更快回到 2% 物价目标。态度与走廊下移幅度一致，整体偏松一档。",
+    "watch_zh": "盯新走廊 3.5–3.75% 落地与声明后续解读，以及盘面反应；下一钉 2026-01-28 FOMC。",
+    "status_zh": "反应中（数据至 T+302/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -152,8 +152,8 @@
       "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-10-07",
-      "calendar_today": "2026-10-08",
+      "data_as_of": "2026-10-08",
+      "calendar_today": "2026-10-09",
       "event_date": "2025-12-10",
       "pre_n": 3,
       "post_n": 3,
@@ -291,7 +291,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target range for the federal…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-08T02:38:16Z",
+    "generated_at": "2026-10-09T01:37:35Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -330,7 +330,7 @@
     }
   ],
   "href": "event_fomc_2025_12.html",
-  "generated_at": "2026-10-08T02:38:35Z",
-  "as_of": "2026-10-08",
-  "data_as_of": "2026-10-07"
+  "generated_at": "2026-10-09T01:37:58Z",
+  "as_of": "2026-10-09",
+  "data_as_of": "2026-10-08"
 }
