@@ -1,0 +1,1155 @@
+{
+  "schema_version": "narrative_v0.3",
+  "report_id": "weekly_20261005_20261011",
+  "model": "grok-4.5",
+  "prompt_version": "narrative_prompt_v1",
+  "generated_at": "2026-10-12T01:38:36Z",
+  "i18n": {
+    "default": "zh",
+    "languages": [
+      "zh",
+      "en"
+    ]
+  },
+  "l0": {
+    "one_liner": {
+      "zh": "本周加密独自走弱：BTC 窗口约 -3.2%、ETH 更深，传统偏稳而链路呈「加密偏独立」；趋势偏震荡、杠杆中性，实现波动中等但期权相对 RV 偏贵，美现货 BTC ETF 合计净流约 -6.79 亿美金（温和流出）。",
+      "en": "Crypto moved weaker on its own: BTC window ~-3.2%, ETH deeper, while TradFi stayed steadier—link reads crypto-idiosyncratic; choppy trend, neutral leverage, mid realized vol but options rich vs RV; US spot BTC ETF net ~-678.90M (mild outflow)."
+    },
+    "three_numbers": {
+      "zh": [
+        "BTC 窗口收益 -3.2%",
+        "最大单日 +1.1%（2026-10-09）",
+        "ES +1.1%",
+        "BTC ETF 周净流 -6.79 亿美金"
+      ],
+      "en": [
+        "BTC window return -3.2%",
+        "Max daily +1.1% (2026-10-09)",
+        "ES +1.1%",
+        "BTC ETF week net -678.90M"
+      ]
+    },
+    "risk": {
+      "zh": "中等波动叠加 IV 溢价与 OI 回撤并存，若拥挤再起或现货通道加力，震荡易被放大；清算峰已现但未标成双高主线；杠杆读法：盯拥挤线（费率路径+OI）与出清线（2026-10-08 峰是否双高、次日是否退烧）。",
+      "en": "Mid vol plus IV premium alongside OI pullback: any re-crowding or stronger spot-channel pressure can stretch the chop; a liquidation peak printed but is not framed as dual-high driver; Leverage read: crowding (funding path+OI) and flush (2026-10-08 peak dual-high? next-day cool-down?)."
+    },
+    "watch": {
+      "zh": "盯 ETF 温和流出是否延续、IV-RV 溢价能否收窄，以及偏震荡是否仍拒绝趋势跟随。",
+      "en": "Watch whether mild ETF outflow persists, whether the IV–RV premium narrows, and whether chop keeps rejecting trend-following."
+    },
+    "attention_level": "S1",
+    "attention_name": {
+      "zh": "记一笔",
+      "en": "S1 Note"
+    }
+  },
+  "labels_plain": {
+    "trend": {
+      "zh": "偏震荡",
+      "en": "Mild Chop"
+    },
+    "leverage": {
+      "zh": "杠杆中性",
+      "en": "Leverage Neutral"
+    },
+    "vol": {
+      "zh": "中等波动",
+      "en": "Medium Vol"
+    },
+    "vol_premium": {
+      "zh": "期权偏贵（IV 相对 RV 溢价）",
+      "en": "IV Rich (vs RV)"
+    },
+    "tradfi_link": {
+      "zh": "加密偏独立",
+      "en": "Crypto-Idiosyncratic"
+    }
+  },
+  "sections": {
+    "compare": {
+      "zh": "BTC 约 -3.2%、ETH 约 -7.0%，明显弱于同期 ES 约 +1.1%、NQ 近乎持平与黄金约 +1.3%；美元与十年期小幅变动、VIX 回落，传统风险偏好并未同步塌陷，标签落在「加密偏独立」而非同跌共振。",
+      "en": "BTC ~-3.2% and ETH ~-7.0% lagged ES ~+1.1%, flat-ish NQ and gold ~+1.3%; mild DXY/US10Y moves and a softer VIX show TradFi risk appetite did not collapse in lockstep—label stays crypto-idiosyncratic, not joint selloff."
+    },
+    "path": {
+      "zh": "窗口以偏震荡为主：价格下台阶但未走出单边趋势标签，基准自 10-04 收盘至 10-11，回撤与来回交织，更像区间内消化而非趋势加速。",
+      "en": "Path stayed chop-leaning: price stepped lower without earning a one-way trend tag; from 10-04 baseline close through 10-11, pullback mixed with two-way trade—range digestion more than trend acceleration."
+    },
+    "leverage": {
+      "zh": "标签：杠杆中性。\n① 拥挤线（OI + 资金费率年化）：周初约 +8.19%/yr → 期末约 +0.64%/yr，租金全周降温；OI 周变约 -5.20%（97444 → 92374），库存周内回落，偏去杠杆。\n② 出清线（OI + 清算）：主峰日 10-08（2026-10-08）；峰值约 4.35× 周内中位清算量；价格同日约 -1.9%；当日 OI 约 92998；但 OI 周高在 2026-10-07（约 95827），峰值日并非双高；峰值日 OI 较前一日下降，偏出清/去库存与清算同日。次日 2026-10-09：OI 自峰值日回落至约 92523、funding 年化约 +5.85%/yr、价格约 +1.1%。\n③ 量旁证（永续成交额=活跃度）：周合计约 716.04 亿美金，环比约 -10.0%，活跃度中性；量侧用于核对热闹程度，不拆多空。\n收句：拥挤线与出清线并读 → 峰值日并非 OI 周高（无「清算∥OI 双高」）、量旁证偏淡，共同支撑「杠杆中性」；禁止把清算/OI/funding 写成涨跌原因。",
+      "en": "Label: leverage_neutral.\n① Crowding (OI + funding ann.): ~+8.19%/yr → ~+0.64%/yr — rent cooled over the week; OI week change ~-5.20% (97444 → 92374), inventory down on the week — lean deleveraging.\n② Flush (OI + liquidations): peak day 2026-10-08; peak ~4.35× median liq qty; price that day ~-1.9%; OI that day ~92998; OI week-high was 2026-10-07 (~95827), not a dual-high peak day; OI down vs prior day — flush/de-stocking with liquidations. Next day 2026-10-09: OI eased to ~92523; funding ~+5.85%/yr; price ~+1.1%.\n③ Volume side (perp turnover = activity): week sum ~71.60B, WoW ~-10.0%, activity normal; activity only, not long/short.\nClose: crowding + flush lines → peak day ≠ OI week-high (no liq∥OI dual-high); funding rent up but OI inventory not building; volume side quieter — supports “leverage_neutral”; do not write liq/OI/funding as the cause of price."
+    },
+    "etf": {
+      "zh": "美现货 BTC ETF 合计净申赎约 -6.79 亿美金（温和流出：2 入 3 出，单日最大流出约 -4.85 亿在 10-07，最大流入约 +1.19 亿在 10-06）；ETH 合计约 -5.42 亿、五日皆净出。并陈 Binance 口径现货成交额周合计约 82.13 亿美金、环比约 -12%，总量热闹度同步降温——只对照通道与换手，不把净流焊成涨跌原因。",
+      "en": "US spot BTC ETF aggregate net ~-678.90M (mild outflow: 2 in / 3 out; largest daily out ~-484.9M on 10-07, largest in ~+118.8M on 10-06); ETH net ~-542.20M with five outflow days. Alongside, spot exchange turnover ~8.21B on the week, WoW ~-12%—activity cooled in parallel. Channel and turnover only; no causal weld to the price path."
+    },
+    "spot_volume": {
+      "zh": "Binance 现货成交额（turnover 美金，程序周合计）：本周 <b>82.13 亿美金</b>，相对上完整周 -12.4%（活跃度「中性」；上周约 93.76 亿美金）。峰值日 2026-10-08（17.79 亿美金）。这是交易所现货「换手热闹程度」，与 ETF 净申赎同属现货世界、只并陈；对照永续周成交额 716.04 亿美金——两者量级不同，**禁止相加**，也**不能**拆多空。",
+      "en": "Binance spot turnover (USD, program week sum): this week <b>8.21B</b>, vs prior full week -12.4% (activity “normal”; prior ~9.38B). Peak day 2026-10-08 (1.78B). Spot tape busyness beside ETF net flow — same spot world, no sum with perp (71.60B); not a long/short split."
+    },
+    "vol_teach": {
+      "zh": "中等 RV 说明路径有波动但未极端；IV 明显高于 RV，意味着期权定价仍在为尾部或事件付费，偏贵时「卖波动」逻辑更常被讨论，却仍取决于拥挤与路径是否配合。",
+      "en": "Mid RV means the path moved without extremes; IV well above RV means options still price tail/event risk. Richness often invites harvest talk, but only if crowding and path cooperate."
+    },
+    "vol_week": {
+      "zh": "BTC 实现波动年化约 27%，落在中等波动；期末 Deribit IV 约 37%，IV-RV 点差约 +10 个百分点，期权相对实现偏贵标签成立。",
+      "en": "BTC realized vol ~27% ann. sits mid; end Deribit IV ~37%, IV–RV spread ~+10 pp—options rich versus realized holds."
+    },
+    "vol_combo": {
+      "zh": "中等实现 + 期权偏贵 + 杠杆中性：波动有「价格」但杠杆层未同步加码，组合更贴近震荡里的波动收割与均值回归，而非趋势杠杆放大。",
+      "en": "Mid realized + rich options + neutral leverage: vol has a price tag while the leverage layer did not reload—closer to harvest/mean-reversion in chop than trend-levered extension."
+    },
+    "vol_price_iv": {
+      "zh": "价格周线收负的同时 IV 仍高于 RV，显示下跌未自动「砸平」隐含溢价；ETH 端 IV 约 51% 对 RV 约 45%，溢价结构类似但实现更高一档。",
+      "en": "Negative price week while IV stayed above RV—the decline did not automatically crush the implied premium; ETH IV ~51% vs RV ~45% shows a similar rich structure at a higher realized tier."
+    },
+    "vol_vix": {
+      "zh": "VIX 窗口约 -3.1%，传统恐慌温度下降，与加密中等 RV、偏贵 IV 并陈，更衬托本周「加密偏独立」：传统波动降温并未映射成加密期权便宜。",
+      "en": "VIX ~-3.1% cooled TradFi fear gauges; set beside crypto mid RV and rich IV, it sharpens the idiosyncratic read—softer equity vol did not translate into cheap crypto options."
+    },
+    "vol_tech": "source=Deribit option_volatility_kline · currency=BTC · iv_end=37.34 · iv_start=36.5 · iv_chg_pts=0.84 · rv_ann=27.17 method=log_return_stdev_sqrt_365 · iv_rv_spread_end=10.17 · vol_premium=iv_rich · ETH iv=50.72 rv=44.7 · vix_ret=-3.07 · iv_vs_vix=opposite",
+    "tradfi": {
+      "ES": {
+        "what": {
+          "zh": "标普500股指期货",
+          "en": "S&P 500 index futures"
+        },
+        "change": {
+          "zh": "+1.1%",
+          "en": "+1.1%"
+        },
+        "means": {
+          "zh": "风险偏好升温",
+          "en": "Risk-on appetite rising"
+        },
+        "vs_crypto": {
+          "zh": "与币方向相反（脱钩迹象）。",
+          "en": "Opposite crypto (decoupling signal)."
+        },
+        "ret_window_pct": 1.061,
+        "chg_bp": null
+      },
+      "NQ": {
+        "what": {
+          "zh": "纳斯达克100期货",
+          "en": "Nasdaq 100 futures"
+        },
+        "change": {
+          "zh": "+0.2%",
+          "en": "+0.2%"
+        },
+        "means": {
+          "zh": "科技风险偏好升温",
+          "en": "Tech risk appetite rising"
+        },
+        "vs_crypto": {
+          "zh": "与币方向相反（脱钩迹象）。",
+          "en": "Opposite crypto (decoupling signal)."
+        },
+        "ret_window_pct": 0.151,
+        "chg_bp": null
+      },
+      "VIX": {
+        "what": {
+          "zh": "美股隐含波动指数 VIX",
+          "en": "US equity implied volatility index (VIX)"
+        },
+        "change": {
+          "zh": "-3.1%",
+          "en": "-3.1%"
+        },
+        "means": {
+          "zh": "紧张度缓解",
+          "en": "Stress easing"
+        },
+        "vs_crypto": {
+          "zh": "VIX 中低位小动通常解释不了币的大涨跌；与上一节加密 IV 只做角色对照。",
+          "en": "Small VIX moves rarely explain big crypto moves; role-parallel to crypto IV only."
+        },
+        "ret_window_pct": -3.07,
+        "chg_bp": null
+      },
+      "DXY": {
+        "what": {
+          "zh": "美元指数",
+          "en": "US Dollar Index"
+        },
+        "change": {
+          "zh": "+0.3%",
+          "en": "+0.3%"
+        },
+        "means": {
+          "zh": "美元走强",
+          "en": "USD stronger"
+        },
+        "vs_crypto": {
+          "zh": "美元走强时对风险资产偏逆风。",
+          "en": "Stronger USD is often a headwind for risk assets."
+        },
+        "ret_window_pct": 0.275,
+        "chg_bp": null
+      },
+      "US10Y": {
+        "what": {
+          "zh": "10Y 美债收益率",
+          "en": "US 10-year Treasury yield"
+        },
+        "change": {
+          "zh": "约 -3.3 bp",
+          "en": "~-3.3 bp"
+        },
+        "means": {
+          "zh": "压力缓解",
+          "en": "Pressure easing"
+        },
+        "vs_crypto": {
+          "zh": "利率与币涨跌若相反，则不是单纯降息交易。",
+          "en": "If yields move opposite crypto, this is not a pure cut-trade story."
+        },
+        "ret_window_pct": null,
+        "chg_bp": -3.3
+      },
+      "GOLD": {
+        "what": {
+          "zh": "黄金",
+          "en": "Gold"
+        },
+        "change": {
+          "zh": "+1.3%",
+          "en": "+1.3%"
+        },
+        "means": {
+          "zh": "避险或货币宽松叙事",
+          "en": "Safe-haven or easing narrative"
+        },
+        "vs_crypto": {
+          "zh": "与币关系需看结构，不宜硬套。",
+          "en": "Link to crypto is structural—not mechanical."
+        },
+        "ret_window_pct": 1.297,
+        "chg_bp": null
+      }
+    },
+    "tradfi_summary": {
+      "zh": "美股括号内 ES 小涨、NQ 近平，黄金跟涨，美元微升、美债收益率约 -3.3 bp，VIX 回落；传统整体偏稳偏暖，与加密下跌带形成反差，支撑「加密偏独立」标签。",
+      "en": "In the US Fri–Fri bracket ES edged up, NQ nearly flat, gold firmer, DXY slightly higher, US10Y ~-3.3 bp, VIX lower—TradFi steadier/warmer versus crypto’s down week, supporting the idiosyncratic label."
+    },
+    "three_conclusions": [
+      {
+        "zh": "加密本周明显偏独立：BTC/ETH 收负而 ES/黄金偏暖、VIX 回落，同跌叙事不成立。",
+        "en": "Crypto ran idiosyncratic: BTC/ETH negative while ES/gold firmer and VIX softer—no joint-risk-off story."
+      },
+      {
+        "zh": "结构是偏震荡 + 杠杆中性 + 中等 RV，但期权相对实现偏贵，价格跌了溢价仍在。",
+        "en": "Setup is chop + neutral leverage + mid RV, yet options stay rich vs realized—premium survived the down week."
+      },
+      {
+        "zh": "现货通道转温和流出（BTC 净约 -6.79 亿）且现货/永续成交额环比降温，与杠杆回撤并陈，值得下期对照是否延续。",
+        "en": "Spot channel flipped to mild outflow (BTC net ~-678.90M) with spot/perp turnover cooler WoW, parallel to OI pullback—worth checking persistence next week."
+      }
+    ],
+    "watch_items": [
+      {
+        "id": "w1",
+        "text": {
+          "zh": "BTC 美现货 ETF 合计净流是否仍停留在温和流出（或单日再现数亿级流出）。",
+          "en": "Whether US spot BTC ETF aggregate net stays in mild-outflow territory (or reprints multi-hundred-million outflow days)."
+        },
+        "watchable": true,
+        "template_hint": "etf_flow_persist",
+        "rationale_zh": "本周由上周净流入翻成约 -6.79 亿，通道姿态是最大标签切换之一，适合作为下期核对哨。",
+        "source": "llm_narrative"
+      },
+      {
+        "id": "w2",
+        "text": {
+          "zh": "IV-RV 点差是否仍维持约双位数溢价，或随中等 RV 路径收窄。",
+          "en": "Whether the IV–RV spread holds a double-digit premium or narrows along the mid-RV path."
+        },
+        "watchable": true,
+        "template_hint": "iv_still_rich",
+        "rationale_zh": "期末溢价约 +10pp 且标签期权偏贵，是波动结构矛盾核心，可验证是否被市场「磨掉」。",
+        "source": "llm_narrative"
+      },
+      {
+        "id": "w3",
+        "text": {
+          "zh": "偏震荡标签下，OI 与资金费率是否继续低温中性，不出现重新拥挤。",
+          "en": "Under chop, whether OI and funding stay low-neutral without re-crowding."
+        },
+        "watchable": true,
+        "template_hint": "funding_ease",
+        "rationale_zh": "本周 OI 约 -5%、资金费率年化仅约 +0.64%，杠杆中性是路径约束；若升温则与本周叙事分叉。",
+        "source": "llm_narrative"
+      }
+    ],
+    "strategy_env": {
+      "matched": {
+        "zh": "偏震荡 + 中等波动 + 杠杆中性，使均值回归更贴合来回路径；IV 相对 RV 溢价则给波动收割类思路留下结构匹配（解释匹配，非推荐）。",
+        "en": "Chop + mid vol + neutral leverage fits mean-reversion to two-way paths; IV rich vs RV structurally aligns with vol-harvest framing (match explanation, not a recommendation)."
+      },
+      "mismatched": {
+        "zh": "趋势跟随与「偏震荡」、窗口收负且未标趋势强化相斥：缺少可持续方向与杠杆顺风，硬跟趋势易与标签打架。",
+        "en": "Trend-following clashes with chop_low and a negative window without trend reinforcement—no durable direction or leverage tailwind."
+      },
+      "disclaimer": {
+        "zh": "策略环境 = 条件匹配度，不是投资建议；不推荐具体产品，不给出仓位。",
+        "en": "Strategy backdrop = condition fit, not investment advice; no products, no position sizes."
+      },
+      "raw": {
+        "version": "strategy_env_v0",
+        "enabled": true,
+        "primary": "BTC",
+        "families": [
+          {
+            "id": "trend_following",
+            "name": {
+              "zh": "趋势跟踪类",
+              "en": "Trend-following"
+            },
+            "status": "mismatch",
+            "why": {
+              "zh": "趋势标签为「偏震荡」，缺少清晰单边趋势条件。",
+              "en": "Trend label “chop_low” lacks a clear one-way trend condition."
+            },
+            "note": {
+              "zh": "旁注：实现波动高或清算偏尖——即便趋势环境在，路径也可能很颠/拥挤。",
+              "en": "Note: high realized vol or liquidation spike — trend backdrop can still be a rough path."
+            },
+            "evidence": [
+              "labels.trend",
+              "crypto.BTC.ret_window_pct",
+              "crypto.BTC.liq_peak_vs_median"
+            ]
+          },
+          {
+            "id": "mean_reversion",
+            "name": {
+              "zh": "震荡/均值回归类",
+              "en": "Mean-reversion / range"
+            },
+            "status": "match",
+            "why": {
+              "zh": "趋势偏震荡/磨盘（偏震荡），更接近区间来回而非单边趋势条件。",
+              "en": "Trend reads choppy/grind (chop_low); closer to range-bound than one-way trend."
+            },
+            "note": null,
+            "evidence": [
+              "labels.trend",
+              "labels.vol"
+            ]
+          },
+          {
+            "id": "vol_harvest",
+            "name": {
+              "zh": "波动收割/卖保费类环境",
+              "en": "Vol-harvest / premium backdrop"
+            },
+            "status": "match",
+            "why": {
+              "zh": "IV 相对 RV 偏贵（期权偏贵（IV 相对 RV 溢价）），且实现波动未标成极端高波——讨论「保险偏贵/收保费」类环境时条件更常被提起。",
+              "en": "IV rich vs RV (iv_rich) and realized vol not extreme-high — a backdrop often discussed for “premium harvesting” *environments*."
+            },
+            "note": {
+              "zh": "仅描述期权保险费相对实现波动的环境，不是买卖期权或任何产品的建议。",
+              "en": "Describes insurance-vs-realized backdrop only — not advice to trade options or any product."
+            },
+            "evidence": [
+              "labels.vol_premium",
+              "labels.vol",
+              "crypto.BTC.iv_rv_spread_end"
+            ]
+          }
+        ],
+        "matched": [
+          {
+            "id": "mean_reversion",
+            "name": {
+              "zh": "震荡/均值回归类",
+              "en": "Mean-reversion / range"
+            },
+            "status": "match",
+            "why": {
+              "zh": "趋势偏震荡/磨盘（偏震荡），更接近区间来回而非单边趋势条件。",
+              "en": "Trend reads choppy/grind (chop_low); closer to range-bound than one-way trend."
+            },
+            "note": null,
+            "evidence": [
+              "labels.trend",
+              "labels.vol"
+            ]
+          },
+          {
+            "id": "vol_harvest",
+            "name": {
+              "zh": "波动收割/卖保费类环境",
+              "en": "Vol-harvest / premium backdrop"
+            },
+            "status": "match",
+            "why": {
+              "zh": "IV 相对 RV 偏贵（期权偏贵（IV 相对 RV 溢价）），且实现波动未标成极端高波——讨论「保险偏贵/收保费」类环境时条件更常被提起。",
+              "en": "IV rich vs RV (iv_rich) and realized vol not extreme-high — a backdrop often discussed for “premium harvesting” *environments*."
+            },
+            "note": {
+              "zh": "仅描述期权保险费相对实现波动的环境，不是买卖期权或任何产品的建议。",
+              "en": "Describes insurance-vs-realized backdrop only — not advice to trade options or any product."
+            },
+            "evidence": [
+              "labels.vol_premium",
+              "labels.vol",
+              "crypto.BTC.iv_rv_spread_end"
+            ]
+          }
+        ],
+        "mismatched": [
+          {
+            "id": "trend_following",
+            "name": {
+              "zh": "趋势跟踪类",
+              "en": "Trend-following"
+            },
+            "status": "mismatch",
+            "why": {
+              "zh": "趋势标签为「偏震荡」，缺少清晰单边趋势条件。",
+              "en": "Trend label “chop_low” lacks a clear one-way trend condition."
+            },
+            "note": {
+              "zh": "旁注：实现波动高或清算偏尖——即便趋势环境在，路径也可能很颠/拥挤。",
+              "en": "Note: high realized vol or liquidation spike — trend backdrop can still be a rough path."
+            },
+            "evidence": [
+              "labels.trend",
+              "crypto.BTC.ret_window_pct",
+              "crypto.BTC.liq_peak_vs_median"
+            ]
+          }
+        ],
+        "neutral": [],
+        "disclaimer": {
+          "zh": "策略环境 = 条件匹配度，不是投资建议；不推荐具体产品，不给出仓位。",
+          "en": "Strategy backdrop = condition fit, not investment advice; no products, no position sizes."
+        }
+      }
+    },
+    "week_diff": {
+      "summary": {
+        "zh": "相对上周：BTC 收益由约 +2.4% 转为约 -3.2%；标签侧重杠杆姿态与 ETF 通道变化；BTC 现货 ETF 净流由约 +0.83 亿转为约 -6.79 亿美金，流出加长、与价格走弱同周出现但仅并陈。",
+        "en": "Vs prior week: BTC return +2.4%→-3.2%; label emphasis shifts on leverage stance and ETF channel; BTC spot ETF net +82.90M→-678.90M—outflow lengthened alongside the softer price week, shown in parallel only."
+      },
+      "has_previous": true,
+      "previous_report_id": "weekly_20260928_20261004",
+      "previous_href": "./weekly_20260928_20261004.html",
+      "rows": [
+        {
+          "dim": {
+            "zh": "BTC 窗口收益 %",
+            "en": "BTC window return %"
+          },
+          "current": "-3.2",
+          "previous": "+2.4",
+          "delta": "-5.6",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "ETH 窗口收益 %",
+            "en": "ETH window return %"
+          },
+          "current": "-7.0",
+          "previous": "+1.4",
+          "delta": "-8.4",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "趋势",
+            "en": "Trend"
+          },
+          "current": {
+            "zh": "偏震荡",
+            "en": "chop_low"
+          },
+          "previous": {
+            "zh": "偏震荡",
+            "en": "chop_low"
+          },
+          "changed": false,
+          "kind": "label",
+          "from_id": "chop_low",
+          "to_id": "chop_low"
+        },
+        {
+          "dim": {
+            "zh": "杠杆",
+            "en": "Leverage"
+          },
+          "current": {
+            "zh": "杠杆中性",
+            "en": "leverage_neutral"
+          },
+          "previous": {
+            "zh": "清算驱动（上涨段挤压迹象）",
+            "en": "liquidation_driven_squeeze"
+          },
+          "changed": true,
+          "kind": "label",
+          "from_id": "liquidation_driven_squeeze",
+          "to_id": "leverage_neutral"
+        },
+        {
+          "dim": {
+            "zh": "实现波动",
+            "en": "Realized vol"
+          },
+          "current": {
+            "zh": "中等波动",
+            "en": "mid"
+          },
+          "previous": {
+            "zh": "中等波动",
+            "en": "mid"
+          },
+          "changed": false,
+          "kind": "label",
+          "from_id": "mid",
+          "to_id": "mid"
+        },
+        {
+          "dim": {
+            "zh": "IV 溢价",
+            "en": "IV premium"
+          },
+          "current": {
+            "zh": "期权偏贵（IV 相对 RV 溢价）",
+            "en": "iv_rich"
+          },
+          "previous": {
+            "zh": "期权偏贵（IV 相对 RV 溢价）",
+            "en": "iv_rich"
+          },
+          "changed": false,
+          "kind": "label",
+          "from_id": "iv_rich",
+          "to_id": "iv_rich"
+        },
+        {
+          "dim": {
+            "zh": "传统联动",
+            "en": "TradFi link"
+          },
+          "current": {
+            "zh": "加密偏独立",
+            "en": "crypto_idiosyncratic"
+          },
+          "previous": {
+            "zh": "加密偏独立",
+            "en": "crypto_idiosyncratic"
+          },
+          "changed": false,
+          "kind": "label",
+          "from_id": "crypto_idiosyncratic",
+          "to_id": "crypto_idiosyncratic"
+        },
+        {
+          "dim": {
+            "zh": "RV 年化 %",
+            "en": "RV ann. %"
+          },
+          "current": "27.2",
+          "previous": "21.1",
+          "delta": "6.0",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "IV 期末 %",
+            "en": "IV end %"
+          },
+          "current": "37.3",
+          "previous": "36.5",
+          "delta": "0.8",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "IV−RV",
+            "en": "IV−RV"
+          },
+          "current": "+10.2",
+          "previous": "+15.4",
+          "delta": "-5.2",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "Funding 年化 %",
+            "en": "Funding ann. %"
+          },
+          "current": "+0.64",
+          "previous": "+8.19",
+          "delta": "-7.55",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "OI 变化 %",
+            "en": "OI chg %"
+          },
+          "current": "-5.2",
+          "previous": "+3.5",
+          "delta": "-8.7",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "永续成交额（周合计）",
+            "en": "Perp turnover (week sum)"
+          },
+          "current": {
+            "zh": "716.04 亿美金",
+            "en": "71.60B"
+          },
+          "previous": {
+            "zh": "795.98 亿美金",
+            "en": "79.60B"
+          },
+          "delta": "-10.0%",
+          "kind": "num",
+          "note": {
+            "zh": "活跃度·非多空",
+            "en": "activity·not L/S"
+          }
+        },
+        {
+          "dim": {
+            "zh": "现货成交额（周合计）",
+            "en": "Spot turnover (week sum)"
+          },
+          "current": {
+            "zh": "82.13 亿美金",
+            "en": "8.21B"
+          },
+          "previous": {
+            "zh": "93.76 亿美金",
+            "en": "9.38B"
+          },
+          "delta": "-12.4%",
+          "kind": "num",
+          "note": {
+            "zh": "活跃度·非多空",
+            "en": "activity·not L/S"
+          }
+        },
+        {
+          "dim": {
+            "zh": "BTC ETF 周净流",
+            "en": "BTC ETF week net"
+          },
+          "current": {
+            "zh": "-6.79 亿美金",
+            "en": "-678.90M"
+          },
+          "previous": {
+            "zh": "+82.90 百万美金",
+            "en": "+82.90M"
+          },
+          "delta": {
+            "zh": "-7.62 亿美金",
+            "en": "-761.80M"
+          },
+          "kind": "etf"
+        },
+        {
+          "dim": {
+            "zh": "ETH ETF 周净流",
+            "en": "ETH ETF week net"
+          },
+          "current": {
+            "zh": "-5.42 亿美金",
+            "en": "-542.20M"
+          },
+          "previous": {
+            "zh": "-1.18 亿美金",
+            "en": "-118.00M"
+          },
+          "delta": {
+            "zh": "-4.24 亿美金",
+            "en": "-424.20M"
+          },
+          "kind": "etf"
+        },
+        {
+          "dim": {
+            "zh": "ETF 通道姿态",
+            "en": "ETF channel stance"
+          },
+          "current": {
+            "zh": "温和流出",
+            "en": "mild outflow"
+          },
+          "previous": {
+            "zh": "中性/拉锯",
+            "en": "neutral"
+          },
+          "changed": true,
+          "kind": "label",
+          "from_id": "neutral",
+          "to_id": "mild_outflow"
+        },
+        {
+          "dim": {
+            "zh": "ES 窗口 %",
+            "en": "ES window %"
+          },
+          "current": "+1.1",
+          "previous": "+0.0",
+          "delta": "+1.1",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "NQ 窗口 %",
+            "en": "NQ window %"
+          },
+          "current": "+0.2",
+          "previous": "+0.0",
+          "delta": "+0.2",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "VIX 窗口 %",
+            "en": "VIX window %"
+          },
+          "current": "-3.1",
+          "previous": "+0.0",
+          "delta": "-3.1",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "DXY 窗口 %",
+            "en": "DXY window %"
+          },
+          "current": "+0.3",
+          "previous": "+0.0",
+          "delta": "+0.3",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "US10Y 变化 bp",
+            "en": "US10Y chg bp"
+          },
+          "current": "-3.3",
+          "previous": "+0.0",
+          "delta": "-3.3",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "GOLD 窗口 %",
+            "en": "GOLD window %"
+          },
+          "current": "+1.3",
+          "previous": "+0.0",
+          "delta": "+1.3",
+          "kind": "num"
+        },
+        {
+          "dim": {
+            "zh": "关注等级",
+            "en": "Attention"
+          },
+          "current": "S1",
+          "previous": "S1",
+          "changed": false,
+          "kind": "attention"
+        }
+      ],
+      "raw": {
+        "has_previous": true,
+        "previous_report_id": "weekly_20260928_20261004",
+        "previous_href": "./weekly_20260928_20261004.html",
+        "previous_window": {
+          "start": "2026-09-28",
+          "end": "2026-10-04",
+          "label": "2026-09-28～2026-10-04",
+          "incomplete_end": false
+        },
+        "summary": {
+          "zh": "BTC 收益 +2.4%→-3.2%；标签变化：杠杆、ETF 通道姿态；BTC ETF 净流 +82.90 百万美金→-6.79 亿美金。",
+          "en": "BTC return +2.4%→-3.2%; label shifts: Leverage, ETF channel stance; BTC ETF net +82.90M→-678.90M."
+        },
+        "rows": [
+          {
+            "dim": {
+              "zh": "BTC 窗口收益 %",
+              "en": "BTC window return %"
+            },
+            "current": "-3.2",
+            "previous": "+2.4",
+            "delta": "-5.6",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "ETH 窗口收益 %",
+              "en": "ETH window return %"
+            },
+            "current": "-7.0",
+            "previous": "+1.4",
+            "delta": "-8.4",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "趋势",
+              "en": "Trend"
+            },
+            "current": {
+              "zh": "偏震荡",
+              "en": "chop_low"
+            },
+            "previous": {
+              "zh": "偏震荡",
+              "en": "chop_low"
+            },
+            "changed": false,
+            "kind": "label",
+            "from_id": "chop_low",
+            "to_id": "chop_low"
+          },
+          {
+            "dim": {
+              "zh": "杠杆",
+              "en": "Leverage"
+            },
+            "current": {
+              "zh": "杠杆中性",
+              "en": "leverage_neutral"
+            },
+            "previous": {
+              "zh": "清算驱动（上涨段挤压迹象）",
+              "en": "liquidation_driven_squeeze"
+            },
+            "changed": true,
+            "kind": "label",
+            "from_id": "liquidation_driven_squeeze",
+            "to_id": "leverage_neutral"
+          },
+          {
+            "dim": {
+              "zh": "实现波动",
+              "en": "Realized vol"
+            },
+            "current": {
+              "zh": "中等波动",
+              "en": "mid"
+            },
+            "previous": {
+              "zh": "中等波动",
+              "en": "mid"
+            },
+            "changed": false,
+            "kind": "label",
+            "from_id": "mid",
+            "to_id": "mid"
+          },
+          {
+            "dim": {
+              "zh": "IV 溢价",
+              "en": "IV premium"
+            },
+            "current": {
+              "zh": "期权偏贵（IV 相对 RV 溢价）",
+              "en": "iv_rich"
+            },
+            "previous": {
+              "zh": "期权偏贵（IV 相对 RV 溢价）",
+              "en": "iv_rich"
+            },
+            "changed": false,
+            "kind": "label",
+            "from_id": "iv_rich",
+            "to_id": "iv_rich"
+          },
+          {
+            "dim": {
+              "zh": "传统联动",
+              "en": "TradFi link"
+            },
+            "current": {
+              "zh": "加密偏独立",
+              "en": "crypto_idiosyncratic"
+            },
+            "previous": {
+              "zh": "加密偏独立",
+              "en": "crypto_idiosyncratic"
+            },
+            "changed": false,
+            "kind": "label",
+            "from_id": "crypto_idiosyncratic",
+            "to_id": "crypto_idiosyncratic"
+          },
+          {
+            "dim": {
+              "zh": "RV 年化 %",
+              "en": "RV ann. %"
+            },
+            "current": "27.2",
+            "previous": "21.1",
+            "delta": "6.0",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "IV 期末 %",
+              "en": "IV end %"
+            },
+            "current": "37.3",
+            "previous": "36.5",
+            "delta": "0.8",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "IV−RV",
+              "en": "IV−RV"
+            },
+            "current": "+10.2",
+            "previous": "+15.4",
+            "delta": "-5.2",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "Funding 年化 %",
+              "en": "Funding ann. %"
+            },
+            "current": "+0.64",
+            "previous": "+8.19",
+            "delta": "-7.55",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "OI 变化 %",
+              "en": "OI chg %"
+            },
+            "current": "-5.2",
+            "previous": "+3.5",
+            "delta": "-8.7",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "永续成交额（周合计）",
+              "en": "Perp turnover (week sum)"
+            },
+            "current": {
+              "zh": "716.04 亿美金",
+              "en": "71.60B"
+            },
+            "previous": {
+              "zh": "795.98 亿美金",
+              "en": "79.60B"
+            },
+            "delta": "-10.0%",
+            "kind": "num",
+            "note": {
+              "zh": "活跃度·非多空",
+              "en": "activity·not L/S"
+            }
+          },
+          {
+            "dim": {
+              "zh": "现货成交额（周合计）",
+              "en": "Spot turnover (week sum)"
+            },
+            "current": {
+              "zh": "82.13 亿美金",
+              "en": "8.21B"
+            },
+            "previous": {
+              "zh": "93.76 亿美金",
+              "en": "9.38B"
+            },
+            "delta": "-12.4%",
+            "kind": "num",
+            "note": {
+              "zh": "活跃度·非多空",
+              "en": "activity·not L/S"
+            }
+          },
+          {
+            "dim": {
+              "zh": "BTC ETF 周净流",
+              "en": "BTC ETF week net"
+            },
+            "current": {
+              "zh": "-6.79 亿美金",
+              "en": "-678.90M"
+            },
+            "previous": {
+              "zh": "+82.90 百万美金",
+              "en": "+82.90M"
+            },
+            "delta": {
+              "zh": "-7.62 亿美金",
+              "en": "-761.80M"
+            },
+            "kind": "etf"
+          },
+          {
+            "dim": {
+              "zh": "ETH ETF 周净流",
+              "en": "ETH ETF week net"
+            },
+            "current": {
+              "zh": "-5.42 亿美金",
+              "en": "-542.20M"
+            },
+            "previous": {
+              "zh": "-1.18 亿美金",
+              "en": "-118.00M"
+            },
+            "delta": {
+              "zh": "-4.24 亿美金",
+              "en": "-424.20M"
+            },
+            "kind": "etf"
+          },
+          {
+            "dim": {
+              "zh": "ETF 通道姿态",
+              "en": "ETF channel stance"
+            },
+            "current": {
+              "zh": "温和流出",
+              "en": "mild outflow"
+            },
+            "previous": {
+              "zh": "中性/拉锯",
+              "en": "neutral"
+            },
+            "changed": true,
+            "kind": "label",
+            "from_id": "neutral",
+            "to_id": "mild_outflow"
+          },
+          {
+            "dim": {
+              "zh": "ES 窗口 %",
+              "en": "ES window %"
+            },
+            "current": "+1.1",
+            "previous": "+0.0",
+            "delta": "+1.1",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "NQ 窗口 %",
+              "en": "NQ window %"
+            },
+            "current": "+0.2",
+            "previous": "+0.0",
+            "delta": "+0.2",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "VIX 窗口 %",
+              "en": "VIX window %"
+            },
+            "current": "-3.1",
+            "previous": "+0.0",
+            "delta": "-3.1",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "DXY 窗口 %",
+              "en": "DXY window %"
+            },
+            "current": "+0.3",
+            "previous": "+0.0",
+            "delta": "+0.3",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "US10Y 变化 bp",
+              "en": "US10Y chg bp"
+            },
+            "current": "-3.3",
+            "previous": "+0.0",
+            "delta": "-3.3",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "GOLD 窗口 %",
+              "en": "GOLD window %"
+            },
+            "current": "+1.3",
+            "previous": "+0.0",
+            "delta": "+1.3",
+            "kind": "num"
+          },
+          {
+            "dim": {
+              "zh": "关注等级",
+              "en": "Attention"
+            },
+            "current": "S1",
+            "previous": "S1",
+            "changed": false,
+            "kind": "attention"
+          }
+        ]
+      }
+    }
+  },
+  "tech_notes": "narrative_v0.3 llm primary + template ground; numbers/labels locked from context; watch_items from LLM; sections.leverage forced to N1/N2 program skeleton (① crowding ② flush ③ volume).",
+  "llm_guidance": {
+    "style": "paragraph_first_free_prose",
+    "must_ground_numbers_in_context": true,
+    "must_not_change_labels": true,
+    "must_not_pitch_products": true,
+    "may_rewrite_section_strings": true,
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "vol_must_cover": [
+      "RV_vs_IV_metaphor",
+      "level_high_low",
+      "path_up_down",
+      "co_move_and_divergence",
+      "iv_minus_rv",
+      "vix_role_not_same_number"
+    ]
+  },
+  "glossary_used": [
+    "funding_rate",
+    "open_interest",
+    "liquidation",
+    "decoupling",
+    "VIX",
+    "DXY",
+    "realized_vol",
+    "implied_vol",
+    "vol_premium",
+    "dvol"
+  ],
+  "narrative_source": "llm+n1_program",
+  "n1_leverage_a": {
+    "pinned_at": "2026-10-12T01:38:36Z",
+    "scheme": "A_read_only",
+    "source": "program_n2_auto",
+    "label_id": "leverage_neutral",
+    "note_zh": "N1/N2 程序骨架：①拥挤 ②出清 ③量旁证 + 收句；数字锁 features/看板。"
+  }
+}
