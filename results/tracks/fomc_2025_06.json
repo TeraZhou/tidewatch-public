@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "美联储将走廊下移约25bp至4.25–4.5%，态度偏松一档。",
-    "primer_zh": "FOMC一年大约开8次会，主要定联邦基金利率走廊并发布声明。本次决议把走廊从上次的4.5–4.75%下调约25bp至4.25–4.5%。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉是2025-07-30的FOMC利率决议。生效日标注为2024-12-19。",
-    "attitude_zh": "偏松一档：走廊下移约25bp → 4.25–4.5%。",
+    "lead_zh": "本次决议偏松一档，联邦基金利率走廊下移约25bp至4.25–4.5%。",
+    "primer_zh": "FOMC一年约开八次会，每次给出联邦基金利率目标走廊并发布声明。走廊是隔夜政策利率的操作区间。下次利率决议钉在2025-07-30。声明会说明对通胀与目标的考量。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "会前走廊停在4.5–4.75%。\n会后落地为降息约25bp，新走廊4.25–4.5%，较上次下移约25bp，态度落在偏松一档。\n声明摘意强调通胀仍偏高，并指向更快回到2%物价目标。目前处于会后反应窗，表内决议日量价字段为空，未见具体涨跌幅度可引用。",
-    "watch_zh": "继续盯声明措辞如何被定价、走廊4.25–4.5%下的盘面反应，以及下一钉2025-07-30决议。",
+    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次下调至4.25–4.5%，动作降息约25bp。\n态度对应偏松一档，走廊下移约25bp。声明强调通胀仍偏高，并指向更快回到2%物价目标（摘意）。\n生效标注为2024-12-19。宽表决议日T量价字段未给出有效读数，故本场叙事以走廊与声明结果为主，不作盘面涨跌延伸。",
+    "watch_zh": "盯声明对通胀仍偏高、更快回到2%目标的表述如何被市场消化；走廊4.25–4.5%是否稳；下一钉2025-07-30决议前的量价与资金面变化。",
     "status_zh": "反应中（数据至 T+482/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-14T02:08:56Z",
+    "generated_at": "2026-10-14T02:38:35Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_06.html",
-  "generated_at": "2026-10-14T02:09:20Z",
+  "generated_at": "2026-10-14T02:38:54Z",
   "as_of": "2026-10-14",
   "data_as_of": "2026-10-13"
 }
