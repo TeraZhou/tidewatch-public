@@ -1,7 +1,7 @@
 {
   "schema": "tidewatch_public_v1",
-  "generated_at": "2026-10-13T02:39:14Z",
-  "data_as_of": "2026-10-12",
+  "generated_at": "2026-10-14T02:07:52Z",
+  "data_as_of": "2026-10-13",
   "source_kind": "kitchen_view",
   "package_root": "public_site",
   "site": {
@@ -102,6 +102,7 @@
     "daily_2026-10-10": "site/daily_20261010.html",
     "daily_2026-10-11": "site/daily_20261011.html",
     "daily_2026-10-12": "site/daily_20261012.html",
+    "daily_2026-10-13": "site/daily_20261013.html",
     "daily_pin_2026-10-28": "site/daily_20261028.html",
     "daily_pin_2026-12-09": "site/daily_20261209.html",
     "calendar": "site/calendar.html",
@@ -141,7 +142,7 @@
   ],
   "copied_files": {
     "dashboard": 1,
-    "daily": 95,
+    "daily": 96,
     "context": 12,
     "narrative": 12,
     "snapshots": 12,
@@ -155,6 +156,6 @@
     "errors": [],
     "warnings": [],
     "report_count": 9,
-    "html_count": 163
+    "html_count": 164
   }
 }
