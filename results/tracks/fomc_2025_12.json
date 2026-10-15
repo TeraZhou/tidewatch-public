@@ -112,9 +112,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "美联储将利率走廊下调约25bp至3.5–3.75%，立场偏松一档。",
-    "primer_zh": "FOMC每年大约召开8次，每次定联邦基金利率走廊并发布声明。本次走廊已从3.75–4%下移至3.5–3.75%，动作降息约25bp，2025-12-11生效。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一场决议钉在2026-01-28。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
+    "lead_zh": "偏松一档：走廊下移约 25bp 至 3.5–3.75%，声明仍强调通胀偏高、指向更快回到 2%。",
+    "primer_zh": "FOMC 一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从 3.75–4% 下调约 25bp 至 3.5–3.75%，生效日 2025-12-11。下一钉是 2026-01-28 的 FOMC 利率决议。市场继续对照声明措辞与走廊位置。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp 至 3.5–3.75%，声明强调通胀仍偏高、指向更快回到 2%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -133,8 +133,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "会前利率走廊位于3.75–4%。\n会后决议将走廊下移约25bp至3.5–3.75%，自2025-12-11生效；动作明确为降息约25bp，态度落在偏松一档。声明侧重点仍是通胀偏高，同时给出更快回归2%物价目标的指向。",
-    "watch_zh": "继续盯声明措辞与市场消化、走廊实际运行，以及下一钉2026-01-28 FOMC决议。",
+    "narrative_zh": "会前走廊停在 3.75–4%。\n会后落地为降息约 25bp，新走廊 3.5–3.75%，生效 2025-12-11。态度落在偏松一档：下移幅度明确，声明摘意仍点出通胀偏高，并指向更快回到 2% 物价目标。\n宽表决议日 T 量价字段为空，本次叙事只锚定结果短表与立场：上次 3.75–4% → 本次 3.5–3.75%，动作降息约 25bp。",
+    "watch_zh": "盯新走廊 3.5–3.75% 是否站稳、声明里通胀与 2% 目标的后续表述，以及盘面在生效日之后的反应；下一钉 2026-01-28 FOMC。",
     "status_zh": "反应中（数据至 T+308/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -291,7 +291,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target range for the federal…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-15T01:28:48Z",
+    "generated_at": "2026-10-15T02:38:17Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -330,7 +330,7 @@
     }
   ],
   "href": "event_fomc_2025_12.html",
-  "generated_at": "2026-10-15T01:29:07Z",
+  "generated_at": "2026-10-15T02:38:40Z",
   "as_of": "2026-10-15",
   "data_as_of": "2026-10-14"
 }
