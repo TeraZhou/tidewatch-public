@@ -111,8 +111,8 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "走廊下移约25bp至3.5–3.75%，立场偏松一档。",
-    "primer_zh": "FOMC一年大约开8次会，主要定联邦基金利率走廊并发布声明。本次将走廊从3.75–4%下调至3.5–3.75%，动作降息约25bp。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一场FOMC利率决议在2026-03-18。",
+    "lead_zh": "走廊下移约25bp至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC每年大约召开8次会议，主要设定联邦基金利率目标走廊并发布政策声明。本次将走廊从3.75–4%下调至3.5–3.75%，降息约25bp。声明强调通胀仍偏高，指向更快回到2%物价目标。下一场FOMC利率决议在2026-03-18。",
     "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。",
     "result_lines": [
       {
@@ -132,8 +132,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "会前走廊为3.75–4%。会后落地为3.5–3.75%，降息约25bp，生效标注2025-12-11；声明侧强调通胀仍偏高、指向更快回到2%物价目标。\n决议日T盘面：BTC +0.06%，ETH -0.53%；永续成交110.9亿（+6.5%），OI -0.36%，BTC资金费率7.9%。ES -0.02%，VIX +0.00%，DXY +0.24%；BTC ETF -0.20亿。",
-    "watch_zh": "盯走廊与声明后续解读、盘面量价与资金续流，下一钉2026-03-18 FOMC。",
+    "narrative_zh": "会后反应窗（决议日T）读法：BTC +0.06%，ETH -0.53%；永续成交额110.9亿（+6.5%），OI -0.36%，BTC资金费率7.9%。ES -0.02%，VIX持平+0.00%，DXY +0.24%，BTC ETF -0.20亿。\n并置结果：上次走廊3.75–4%，本次3.5–3.75%，动作降息约25bp（生效按表2025-12-11）。声明侧强调通胀仍偏高、指向更快回到2%目标。盘面量价以表内幅度为准，未见单边剧烈漂移。",
+    "watch_zh": "盯走廊是否维持3.5–3.75%、声明后续表述与通胀路径措辞，以及盘面量价（成交/OI/ETF）与下一钉2026-03-18决议。",
     "status_zh": "反应中（数据至 T+263/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Beth M. Hammack; Philip N. Jefferson; Neel Kashkari; Lorie K. Logan; and Anna Paulson. Voting against this action were Stephen I. Miran and Christopher J. Waller, who preferred to lower the t…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-19T01:41:43Z",
+    "generated_at": "2026-10-19T02:39:58Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2026_01.html",
-  "generated_at": "2026-10-19T01:42:05Z",
+  "generated_at": "2026-10-19T02:40:22Z",
   "as_of": "2026-10-19",
   "data_as_of": "2026-10-18"
 }
