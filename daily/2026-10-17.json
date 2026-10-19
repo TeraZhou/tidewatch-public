@@ -1,0 +1,279 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-10-17",
+  "date_effective": "2026-10-17",
+  "as_of": "2026-10-19T01:30:22Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-10-17",
+    "prior_date": "2026-10-16",
+    "btc_ret_1d": -0.153,
+    "eth_ret_1d": -0.855,
+    "oi_qty": 94259.604,
+    "oi_chg_pct": 0.221,
+    "funding_ann_pct": 6.9949,
+    "funding_ann_chg_pp": -3.955,
+    "eth_funding_ann_pct": 5.2352,
+    "eth_funding_ann_chg_pp": -0.472,
+    "perp_turnover_usd": 3647102636.3942,
+    "perp_turnover_chg_pct": -67.94,
+    "spot_turnover_usd": 573731477.3069952,
+    "spot_turnover_chg_pct": -52.52,
+    "btc_etf_net_usd": -82400000.0,
+    "eth_etf_net_usd": -69700000.0,
+    "etf_lookback_sum_btc_usd": -163000000.0,
+    "etf_lookback_sum_eth_usd": -234700000.0,
+    "es_ret_1d": -1.113,
+    "nq_ret_1d": -2.496,
+    "vix_ret_1d": 21.446,
+    "dxy_ret_1d": -0.157,
+    "gold_ret_1d": 0.264,
+    "tradfi_sessions": {
+      "ES": {
+        "prior": "2026-10-15",
+        "day": "2026-10-16"
+      },
+      "NQ": {
+        "prior": "2026-10-15",
+        "day": "2026-10-16"
+      },
+      "VIX": {
+        "prior": "2026-10-15",
+        "day": "2026-10-16"
+      }
+    },
+    "tradfi_link_note_zh": null,
+    "tradfi_link_note_en": null,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.15%（小区间） · ETH -0.85% · OI 日变 +0.22% · 永续成交额 36.47 亿美金（日变 -67.9%） · BTC ETF 净流 -82.40 百万美金",
+    "weather_en": "Weather: BTC -0.15% · ETH -0.85% · OI +0.22% d/d · perp turnover 3.65B (-67.9% d/d) · BTC ETF net -82.40M",
+    "text_zh": "币价几乎不动：BTC -0.15%、ETH -0.85%。成交大幅萎缩，外面美股波动率却单日大涨。",
+    "text_en": "Prices barely moved: BTC -0.15%, ETH -0.85%. Turnover collapsed while US equity vol spiked."
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "VIX急升下的缩量横盘",
+      "headline_en": "多维结构触发异常",
+      "conclusion_zh": "【VIX急升下的缩量横盘】美股波动率单日大涨、股指回落，比特币几乎平盘、永续成交腰斩；杠杆存量微增、资金费率明显回落。主矛盾在外盘风险偏好冲击，币侧选择少动。",
+      "conclusion_en": "状态判断：多维结构触发异常。币侧 BTC -0.15%、ETH -0.85%。传统对照 ES -1.11%、VIX +21.45%。",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "-0.15%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "-0.85%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-3.96 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "6.99"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "+0.22%"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "36.47 亿美金（-68%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "5.74 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "+10.13 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "+0.72 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-1.11%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-2.50%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "+21.45%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "vix_shock",
+          "value": 21.446,
+          "threshold": 15.0,
+          "summary_zh": "VIX 日变 +21.45%",
+          "summary_en": "VIX day change +21.45%",
+          "meta": {
+            "title_zh": "VIX 日变冲击",
+            "title_en": "VIX day shock",
+            "what_zh": "美股波动率指数单日波动是否极端，提示外生风险偏好冲击。",
+            "what_en": "Extreme one-day VIX move (external risk).",
+            "how_zh": "VIX 日收益 = (今日值÷昨日值 − 1)×100（看板 tradfi 序列）。|r| ≥ vix_shock_abs_pct（默认 15）时触发。",
+            "how_en": "VIX day return from cache. Fires if |r| ≥ vix_shock_abs_pct (default 15)."
+          },
+          "observed": {
+            "btc_ret_1d": -0.153,
+            "eth_ret_1d": -0.855,
+            "funding_ann_pct": 6.9949,
+            "funding_ann_chg_pp": -3.955,
+            "oi_qty": 94259.604,
+            "oi_chg_pct": 0.221,
+            "liq_vs_prior": 0.456,
+            "iv_rv_spread": 10.13,
+            "iv_rv_spread_chg_pp": 0.72,
+            "vix_ret_1d": 21.446,
+            "btc_etf_net_usd": -82400000.0,
+            "eth_etf_net_usd": -69700000.0,
+            "perp_turnover_usd": 3647102636.3942,
+            "perp_turnover_chg_pct": -67.94,
+            "spot_turnover_usd": 573731477.3069952,
+            "value": 21.446,
+            "threshold": 15.0
+          },
+          "readout_zh": "观测 VIX 日变 21.45%，阈值 |·|≥15.00%",
+          "readout_en": "VIX day change +21.45%",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "BTC 日收益 -0.15%，ETH -0.85%；永续成交额 36.47 亿美金，日变 -68%，现货也差不多腰斩。OI 日变 +0.22%，funding 年化 dual到 6.99%（日变 -3.96 pp）。对照传统：VIX +21.45%，ES -1.11%，NQ -2.50%。方向同偏弱，但币价波动远小于美股。翻译一句：外面风很大，币圈今天主要在歇着、少交易。",
+      "read_en": "依据（程序）：\n- 观测 VIX 日变 21.45%，阈值 |·|≥15.00%\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 非投资建议。",
+      "tradfi_link_note_zh": null,
+      "tradfi_link_note_en": null,
+      "text_zh": "【VIX急升下的缩量横盘】美股波动率单日大涨、股指回落，比特币几乎平盘、永续成交腰斩；杠杆存量微增、资金费率明显回落。主矛盾在外盘风险偏好冲击，币侧选择少动。",
+      "text_en": "状态判断：多维结构触发异常。币侧 BTC -0.15%、ETH -0.85%。传统对照 ES -1.11%、VIX +21.45%。",
+      "card": {
+        "date": "2026-10-17",
+        "prior_date": "2026-10-16",
+        "btc_ret_1d": -0.153,
+        "eth_ret_1d": -0.855,
+        "funding_ann_pct": 6.9949,
+        "funding_ann_chg_pp": -3.955,
+        "eth_funding_ann_pct": 5.2352,
+        "eth_funding_ann_chg_pp": -0.472,
+        "oi_qty": 94259.604,
+        "oi_prior_qty": 94051.57,
+        "oi_chg_pct": 0.221,
+        "liq_total": 41.99400000000001,
+        "liq_vs_prior": 0.456,
+        "perp_turnover_usd": 3647102636.3942,
+        "perp_turnover_chg_pct": -67.94,
+        "perp_turnover_display_zh": "36.47 亿美金",
+        "perp_turnover_display_en": "3.65B",
+        "spot_turnover_usd": 573731477.3069952,
+        "spot_turnover_chg_pct": -52.52,
+        "spot_turnover_display_zh": "5.74 亿美金",
+        "spot_turnover_display_en": "573.73M",
+        "iv_ann_pct": 37.93,
+        "rv_7_ann_pct": 27.8005,
+        "iv_rv_spread": 10.13,
+        "iv_rv_spread_chg_pp": 0.72,
+        "vix_ret_1d": 21.446,
+        "es_ret_1d": -1.113,
+        "nq_ret_1d": -2.496,
+        "dxy_ret_1d": -0.157,
+        "gold_ret_1d": 0.264,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-10-15",
+            "day": "2026-10-16"
+          },
+          "NQ": {
+            "prior": "2026-10-15",
+            "day": "2026-10-16"
+          },
+          "VIX": {
+            "prior": "2026-10-15",
+            "day": "2026-10-16"
+          }
+        },
+        "tradfi_link_note_zh": null,
+        "tradfi_link_note_en": null
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 5,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV 是什么、和 VIX 有何区别。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC -0.15%",
+      "tone": "neutral"
+    },
+    {
+      "text": "永续成交额 36.47 亿美金，日变 -68%",
+      "tone": "down"
+    },
+    {
+      "text": "funding 年化落到 6.99%（日变 -3.96 pp）",
+      "tone": "down"
+    },
+    {
+      "text": "VIX +21.45%",
+      "tone": "warn"
+    },
+    {
+      "text": "ES -1.11%，NQ -2.50%",
+      "tone": "down"
+    },
+    {
+      "text": "OI 日变 +0.22%",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-10-16",
+    "etf_eth_using_2026-10-16"
+  ]
+}
