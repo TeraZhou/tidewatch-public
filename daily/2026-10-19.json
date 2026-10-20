@@ -1,0 +1,110 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-10-19",
+  "date_effective": "2026-10-19",
+  "as_of": "2026-10-20T01:22:47Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-10-19",
+    "prior_date": "2026-10-18",
+    "btc_ret_1d": -0.216,
+    "eth_ret_1d": -0.095,
+    "oi_qty": 95027.773,
+    "oi_chg_pct": 2.045,
+    "funding_ann_pct": 10.1277,
+    "funding_ann_chg_pp": 4.699,
+    "eth_funding_ann_pct": 5.8112,
+    "eth_funding_ann_chg_pp": 1.523,
+    "perp_turnover_usd": 10561260055.1357,
+    "perp_turnover_chg_pct": 33.86,
+    "spot_turnover_usd": 1054100702.3984756,
+    "spot_turnover_chg_pct": 28.02,
+    "btc_etf_net_usd": -138500000.0,
+    "eth_etf_net_usd": -7900000.0,
+    "etf_lookback_sum_btc_usd": -215800000.0,
+    "etf_lookback_sum_eth_usd": -137900000.0,
+    "es_ret_1d": -0.38,
+    "nq_ret_1d": -0.385,
+    "vix_ret_1d": -7.754,
+    "dxy_ret_1d": 0.121,
+    "gold_ret_1d": -1.261,
+    "tradfi_sessions": {
+      "ES": {
+        "prior": "2026-10-18",
+        "day": "2026-10-19"
+      },
+      "NQ": {
+        "prior": "2026-10-18",
+        "day": "2026-10-19"
+      },
+      "VIX": {
+        "prior": "2026-10-16",
+        "day": "2026-10-19"
+      }
+    },
+    "tradfi_link_note_zh": null,
+    "tradfi_link_note_en": null,
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -0.22%（小区间） · ETH -0.10% · OI 日变 +2.04% · 永续成交额 105.61 亿美金（日变 +33.9%） · BTC ETF 净流 -1.39 亿美金",
+    "weather_en": "Weather: BTC -0.22% · ETH -0.10% · OI +2.04% d/d · perp turnover 10.56B (+33.9% d/d) · BTC ETF net -138.50M",
+    "text_zh": "BTC 微跌 0.22%、ETH 几乎持平，价格仍在小区间里晃。OI 回升约 2%，永续成交额大增至 105.61 亿美金，资金费率年化抬到约 10%；BTC 现货 ETF 净流出 1.39 亿美金。",
+    "text_en": "BTC -0.22%, ETH -0.10% in a tight range. OI +2.04%, perp turnover 10.56B (+34%), funding ann. ~10%; BTC ETF net -138.5M."
+  },
+  "slots": {
+    "external": null,
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 5,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：有人在问「IV 是什么、和 VIX 有何区别」，可作一则短科普钉。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "微跌 0.22%",
+      "tone": "down"
+    },
+    {
+      "text": "几乎持平",
+      "tone": "neutral"
+    },
+    {
+      "text": "OI 回升约 2%",
+      "tone": "up"
+    },
+    {
+      "text": "105.61 亿美金",
+      "tone": "up"
+    },
+    {
+      "text": "约 10%",
+      "tone": "up"
+    },
+    {
+      "text": "净流出 1.39 亿美金",
+      "tone": "down"
+    },
+    {
+      "text": "VIX 大降",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}
