@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "本次决议偏松一档，联邦基金利率走廊下移约 25bp 至 4.25–4.5%。",
-    "primer_zh": "FOMC 一年大约开八次会，主要定联邦基金利率目标走廊并发布声明。本次已将走廊从 4.5–4.75% 下调约 25bp 至 4.25–4.5%。声明强调通胀仍偏高，并指向更快回到 2% 物价目标。下一钉是 2025-07-30 的 FOMC 利率决议。",
-    "attitude_zh": "态度偏松一档：走廊下移约 25bp 至 4.25–4.5%，声明仍点出通胀偏高并指向更快回到 2% 目标。",
+    "lead_zh": "美联储将联邦基金利率走廊下调约25bp至4.25–4.5%，立场偏松一档。",
+    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从4.5–4.75%下移至4.25–4.5%。下一钉落在2025-07-30的FOMC利率决议。声明侧继续锚定物价目标路径。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊 4.5–4.75%，本次走廊 4.25–4.5%，动作是降息约 25bp，生效标注为 2024-12-19。\n\n会后反应窗内，宽表决议日 T 的量价字段均为空，未见可引用的当日涨跌或资金数据；读法只锚定结果短表本身的走廊下移约 25bp 与声明钩子。",
-    "watch_zh": "盯声明后续表述是否延续「通胀仍偏高、更快回 2%」口径，走廊是否维持 4.25–4.5%，以及下一钉 2025-07-30 决议前的盘面与资金反应。",
+    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次走廊4.25–4.5%，动作降息约25bp，生效标注为2024-12-19。\n会前至会后并置看，走廊明确下移一档；声明强调通胀仍偏高，并指向更快回到2%物价目标。宽表决议日T量价字段为空，本场数字主轴就是这25bp与两档走廊区间。",
+    "watch_zh": "盯声明后续表述是否延续“通胀仍偏高、更快回2%”口径，盘面利率敏感资产对4.25–4.5%走廊的消化，以及下一钉2025-07-30决议。",
     "status_zh": "反应中（数据至 T+488/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-20T01:27:49Z",
+    "generated_at": "2026-10-20T02:36:56Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_06.html",
-  "generated_at": "2026-10-20T01:28:05Z",
+  "generated_at": "2026-10-20T02:37:15Z",
   "as_of": "2026-10-20",
   "data_as_of": "2026-10-19"
 }
