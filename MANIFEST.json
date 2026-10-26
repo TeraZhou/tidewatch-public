@@ -1,7 +1,7 @@
 {
   "schema": "tidewatch_public_v1",
-  "generated_at": "2026-10-23T02:36:17Z",
-  "data_as_of": "2026-10-22",
+  "generated_at": "2026-10-26T03:29:26Z",
+  "data_as_of": "2026-10-25",
   "source_kind": "kitchen_view",
   "package_root": "public_site",
   "site": {
@@ -112,6 +112,9 @@
     "daily_2026-10-20": "site/daily_20261020.html",
     "daily_2026-10-21": "site/daily_20261021.html",
     "daily_2026-10-22": "site/daily_20261022.html",
+    "daily_2026-10-23": "site/daily_20261023.html",
+    "daily_2026-10-24": "site/daily_20261024.html",
+    "daily_2026-10-25": "site/daily_20261025.html",
     "daily_pin_2026-10-28": "site/daily_20261028.html",
     "daily_pin_2026-12-09": "site/daily_20261209.html",
     "calendar": "site/calendar.html",
@@ -146,16 +149,17 @@
     "report/weekly_20260928_20261004.html",
     "report/weekly_20261005_20261011.html",
     "report/weekly_20261012_20261018.html",
+    "report/weekly_20261019_20261025.html",
     "report/monthly_202608.html",
     "report/monthly_202609.html",
     "report/quarterly_2026Q3.html"
   ],
   "copied_files": {
     "dashboard": 1,
-    "daily": 105,
-    "context": 13,
-    "narrative": 13,
-    "snapshots": 13,
+    "daily": 108,
+    "context": 14,
+    "narrative": 14,
+    "snapshots": 14,
     "results": 88,
     "etf": 1
   },
@@ -165,7 +169,7 @@
     "ok": true,
     "errors": [],
     "warnings": [],
-    "report_count": 10,
-    "html_count": 174
+    "report_count": 11,
+    "html_count": 178
   }
 }

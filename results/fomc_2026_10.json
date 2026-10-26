@@ -5,39 +5,41 @@
   "template_id": "fomc",
   "event_date": "2026-10-28",
   "ok": true,
-  "status": "fetched",
+  "status": "pre_snapshot",
   "adapter": "fed_openmarket_http",
-  "fetched_at": "2026-09-04T08:31:19Z",
+  "fetched_at": "2026-10-26T03:15:41Z",
   "source_urls": [
     "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
     "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
   ],
   "values": {
-    "fed_funds_lower": 3.5,
-    "fed_funds_upper": 3.75,
+    "fed_funds_lower": 3.75,
+    "fed_funds_upper": 4.0,
     "changed": false,
     "sep_present": false,
-    "effective_date": "2025-12-11",
+    "effective_date": "2026-09-17",
     "increase_bp": 0,
     "decrease_bp": 0,
     "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
     "meeting_date": "2026-10-28"
   },
   "prior_values": {
-    "fed_funds_lower": 3.75,
-    "fed_funds_upper": 4.0,
-    "effective_date": "2025-10-30"
+    "fed_funds_lower": 3.5,
+    "fed_funds_upper": 3.75,
+    "effective_date": "2025-12-11"
   },
   "revision_note": null,
   "statement_bullets": null,
-  "last_attempt_at": "2026-09-04T08:31:19Z",
-  "attempt_n": 1,
+  "last_attempt_at": "2026-10-26T03:15:41Z",
+  "attempt_n": 8,
   "poll_attempts": null,
   "raw_ref": {
-    "effective_date": "2025-12-11",
-    "history_n": 30,
+    "effective_date": "2026-09-17",
+    "history_n": 31,
     "as_of_event": "2026-10-28",
     "changed": false,
+    "decision_logged_for": "2026-10-28",
+    "decision_row_matched": false,
     "statement": {
       "ok": false,
       "error": "fed_statement_http_404",
@@ -46,5 +48,9 @@
   },
   "fixture": false,
   "override": null,
-  "error": null
+  "error": null,
+  "lifecycle_terminal": false,
+  "lifecycle_kind": "pre_snapshot",
+  "lifecycle_reason": "before_release_window",
+  "release_start_utc": "2026-10-28T18:00:00Z"
 }
