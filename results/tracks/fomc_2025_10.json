@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.75–4%",
-    "lead_zh": "美联储将联邦基金利率走廊下移约 25bp 至 3.75–4%，态度偏松一档。",
-    "primer_zh": "FOMC 一年大约开八次会，每次主要定政策利率走廊并发布声明。本次已将走廊从 4–4.25% 下调至 3.75–4%，决议自 2025-10-30 起生效。声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。下一钉落在 2025-12-10 的 FOMC 利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约 25bp → 3.75–4%。",
+    "lead_zh": "会后定调偏松一档：联邦基金利率走廊下移约 25bp 至 3.75–4%，自 10 月 30 日起生效。",
+    "primer_zh": "FOMC 一年大约开八次会，每次给出联邦基金利率目标走廊并发布声明。本次已将走廊从上次的 4–4.25% 下调约 25bp 至 3.75–4%。下一钉落在 2025-12-10 的 FOMC 利率决议，继续盯走廊与声明表述。",
+    "attitude_zh": "偏松一档：走廊下移约 25bp 至 3.75–4%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2025-10-30"
       }
     ],
-    "narrative_zh": "会前走廊停留在 4–4.25%。\n会后结果落地：动作降息约 25bp，本次走廊改为 3.75–4%，生效日 2025-10-30。\n本场宽表决议日 T 量价字段均为空，无额外会前会后并置涨跌可引用；叙事只对照结果短表与态度。",
-    "watch_zh": "盯声明后续表述是否继续强调通胀偏高与回到 2% 目标的节奏；盘面利率敏感资产对 3.75–4% 走廊的消化；下一钉 2025-12-10 决议前的数据与沟通。",
+    "narrative_zh": "决议落地：上次走廊 4–4.25%，本次走廊 3.75–4%，动作是降息约 25bp，生效日 2025-10-30。\n立场对应偏松一档，走廊明确下移约 25bp。声明侧强调通胀仍偏高，并指向更快回到 2% 物价目标（摘意）。\n本场宽表在决议日 T 各资产与资金字段均为空，无可用会前量价对比；读法以结果短表的走廊变动与生效时点为准，反应窗内继续对照声明措辞与下一钉间隔。",
+    "watch_zh": "盯新走廊 3.75–4% 是否稳固、声明里通胀与回 2% 目标的表述如何被市场消化，以及盘面在反应窗的量价承接；下一钉 2025-12-10 FOMC 再看走廊与声明。",
     "status_zh": "反应中（数据至 T+362/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Alberto G. Musalem; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target r…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-27T01:26:43Z",
+    "generated_at": "2026-10-27T02:37:30Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_10.html",
-  "generated_at": "2026-10-27T01:26:58Z",
+  "generated_at": "2026-10-27T02:37:44Z",
   "as_of": "2026-10-27",
   "data_as_of": "2026-10-26"
 }
