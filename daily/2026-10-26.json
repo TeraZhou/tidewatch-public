@@ -2,7 +2,7 @@
   "schema": "daily_digest_v0",
   "date": "2026-10-26",
   "date_effective": "2026-10-26",
-  "as_of": "2026-10-27T02:31:15Z",
+  "as_of": "2026-10-27T09:51:18Z",
   "timezone_display": "Asia/Shanghai",
   "state_glance": {
     "date": "2026-10-26",
@@ -457,7 +457,7 @@
         "result_block": null,
         "statement_bullets": null,
         "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-        "generated_at": "2026-10-27T02:31:15Z",
+        "generated_at": "2026-10-27T09:51:18Z",
         "narrative_source": "program"
       },
       "a1_version": "a1_macro_copy_v1",

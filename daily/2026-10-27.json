@@ -1,0 +1,701 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-10-27",
+  "date_effective": "2026-10-27",
+  "as_of": "2026-10-28T02:18:49Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-10-27",
+    "prior_date": "2026-10-26",
+    "btc_ret_1d": 0.947,
+    "eth_ret_1d": 1.11,
+    "oi_qty": 94783.814,
+    "oi_chg_pct": -0.756,
+    "funding_ann_pct": 5.994,
+    "funding_ann_chg_pp": -4.956,
+    "eth_funding_ann_pct": 9.3447,
+    "eth_funding_ann_chg_pp": -0.425,
+    "perp_turnover_usd": 8235955438.2182,
+    "perp_turnover_chg_pct": -21.64,
+    "spot_turnover_usd": 1062256600.1288809,
+    "spot_turnover_chg_pct": -13.71,
+    "btc_etf_net_usd": 24500000.0,
+    "eth_etf_net_usd": 33100000.0,
+    "etf_lookback_sum_btc_usd": -3100000.0,
+    "etf_lookback_sum_eth_usd": -51100000.0,
+    "es_ret_1d": 0.506,
+    "nq_ret_1d": 1.449,
+    "vix_ret_1d": -5.45,
+    "dxy_ret_1d": 0.424,
+    "gold_ret_1d": 0.634,
+    "tradfi_sessions": {
+      "ES": {
+        "prior": "2026-10-26",
+        "day": "2026-10-27"
+      },
+      "NQ": {
+        "prior": "2026-10-26",
+        "day": "2026-10-27"
+      },
+      "VIX": {
+        "prior": "2026-10-23",
+        "day": "2026-10-26"
+      }
+    },
+    "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +0.95% · ES +0.51%）",
+    "tradfi_link_note_en": "BTC and ES same direction (BTC +0.95% · ES +0.51%)",
+    "label_jumps": [],
+    "weather_zh": "近况：BTC +0.95%（小区间） · ETH +1.11% · OI 日变 -0.76% · 永续成交额 82.36 亿美金（日变 -21.6%） · BTC ETF 净流 +24.50 百万美金",
+    "weather_en": "Weather: BTC +0.95% · ETH +1.11% · OI -0.76% d/d · perp turnover 8.24B (-21.6% d/d) · BTC ETF net +24.50M",
+    "text_zh": "今天偏平静：BTC 小涨约 1%，ETH 稍强一点。杠杆存量微降、永续成交明显缩，funding 也降温了；和美股期货同向。",
+    "text_en": "Quiet session: BTC +0.95%, ETH a bit stronger. OI slightly down, perp turnover sharply lower, funding cooled; same direction as ES."
+  },
+  "slots": {
+    "external": {
+      "kind": "pre_window",
+      "event": {
+        "id": "fomc_2026_10",
+        "date": "2026-10-28",
+        "name_zh": "FOMC 利率决议",
+        "name_en": "FOMC policy decision",
+        "source": "fomc",
+        "series": "fomc",
+        "level": "high"
+      },
+      "badge_zh": "会前 · T−1",
+      "badge_en": "Pre · T−1",
+      "phase": "pre",
+      "headline_zh": "FOMC · 会前（次日决议）",
+      "headline_en": "FOMC policy decision",
+      "lead_zh": "距10月28日决议仅剩T−1，会前三日量价已走出先抑后稳再小幅回升的路径。",
+      "station_zh": "临近·T−1",
+      "part1_zh": "FOMC一年约召开8次，每次敲定联邦基金利率目标走廊并发布政策声明。市场主要交易走廊水平与声明措辞的边际变化。下一钉落在2026年12月9日。本场为会前观察窗口，数据截至10月27日。",
+      "part2_zh": null,
+      "part3_zh": null,
+      "part4_zh": null,
+      "post_brief_zh": "会前T−3（10月25日）BTC −0.91%、ETH −1.23%，永续成交55.4亿且较前大幅收缩−37.8%，OI −1.56%，资金费率1.9%；同步ES +0.11%、VIX +2.21%、DXY −0.20%，BTC ETF净流出−1.38亿。\nT−2（10月26日）BTC基本走平−0.00%、ETH −0.23%，永续成交放量至105.1亿（+89.8%），OI +1.95%，资金费率升至10.9%；ES +0.72%、VIX −5.45%、DXY +0.42%，ETF流量持平0.00亿。\nT−1（10月27日）BTC +0.95%、ETH +1.11%，永续成交回落至82.4亿（−21.6%），OI −0.76%，资金费率6.0%；ES +0.51%、VIX −5.45%、DXY +0.42%，ETF小幅流入+0.24亿。三日合计呈现成交先缩后爆再收敛、价格由跌转平再小涨的会前节奏。",
+      "post_deep_zh": null,
+      "post_reaction_zh": "VIX 回落；窗口内有日触发驱动（见表「驱动」列）；距事件 T−1",
+      "text_zh": "会前T−3（10月25日）BTC −0.91%、ETH −1.23%，永续成交55.4亿且较前大幅收缩−37.8%，OI −1.56%，资金费率1.9%；同步ES +0.11%、VIX +2.21%、DXY −0.20%，BTC ETF净流出−1.38亿。\nT−2（10月26日）BTC基本走平−0.00%、ETH −0.23%，永续成交放量至105.1亿（+89.8%），OI +1.95%，资金费率升至10.9%；ES +0.72%、VIX −5.45%、DXY +0.42%，ETF流量持平0.00亿。\nT−1（10月27日）BTC +0.95%、ETH +1.11%，永续成交回落至82.4亿（−21.6%），OI −0.76%，资金费率6.0%；ES +0.51%、VIX −5.45%、DXY +0.42%，ETF小幅流入+0.24亿。三日合计呈现成交先缩后爆再收敛、价格由跌转平再小涨的会前节奏。",
+      "text_en": null,
+      "has_official_result": false,
+      "result_status": "none",
+      "result_block": null,
+      "reaction": {
+        "schema": "tidewatch_pre_window_v1",
+        "kind": "pre",
+        "event_id": "fomc_2026_10",
+        "event_date": "2026-10-28",
+        "digest_day": "2026-10-27",
+        "offset": -1,
+        "days_left": 1,
+        "window_days": 3,
+        "as_of_today": true,
+        "name_zh": "FOMC 利率决议",
+        "name_en": "FOMC policy decision",
+        "series": "fomc",
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；声明措辞如何写就业与通胀。"
+        },
+        "result_ok": false,
+        "rows": [
+          {
+            "date": "2026-10-25",
+            "offset": -3,
+            "label": "T-3",
+            "btc_ret_1d": -0.908,
+            "eth_ret_1d": -1.227,
+            "oi_chg_pct": -1.556,
+            "funding_ann_pct": 1.9239,
+            "funding_ann_chg_pp": -8.41,
+            "eth_funding_ann_pct": 8.0833,
+            "eth_funding_ann_chg_pp": 4.012,
+            "es_ret_1d": 0.111,
+            "nq_ret_1d": -0.047,
+            "vix_ret_1d": 2.207,
+            "dxy_ret_1d": -0.2,
+            "fired_ids": [
+              "funding_jump"
+            ],
+            "has_driver": true,
+            "weather_zh": "近况：BTC -0.91%（小区间） · ETH -1.23% · OI 日变 -1.56% · 永续成交额 55.39 亿美金（日变 -37.8%） · BTC ETF 净流 -1.38 亿美金",
+            "errors": [
+              "etf_btc_using_2026-10-23",
+              "etf_eth_using_2026-10-23"
+            ]
+          },
+          {
+            "date": "2026-10-26",
+            "offset": -2,
+            "label": "T-2",
+            "btc_ret_1d": -0.004,
+            "eth_ret_1d": -0.228,
+            "oi_chg_pct": 1.952,
+            "funding_ann_pct": 10.95,
+            "funding_ann_chg_pp": 9.026,
+            "eth_funding_ann_pct": 9.7696,
+            "eth_funding_ann_chg_pp": 1.686,
+            "es_ret_1d": 0.603,
+            "nq_ret_1d": 1.145,
+            "vix_ret_1d": -5.45,
+            "dxy_ret_1d": 0.424,
+            "fired_ids": [
+              "funding_jump",
+              "liq_spike",
+              "volume_spike"
+            ],
+            "has_driver": true,
+            "weather_zh": "近况：BTC -0.00%（小区间） · ETH -0.23% · OI 日变 +1.95% · 永续成交额 105.11 亿美金（日变 +89.8%） · BTC ETF 净流 +1.10 亿美金",
+            "errors": []
+          },
+          {
+            "date": "2026-10-27",
+            "offset": -1,
+            "label": "T-1",
+            "btc_ret_1d": 0.947,
+            "eth_ret_1d": 1.11,
+            "oi_chg_pct": -0.756,
+            "funding_ann_pct": 5.994,
+            "funding_ann_chg_pp": -4.956,
+            "eth_funding_ann_pct": 9.3447,
+            "eth_funding_ann_chg_pp": -0.425,
+            "es_ret_1d": 0.506,
+            "nq_ret_1d": 1.449,
+            "vix_ret_1d": -5.45,
+            "dxy_ret_1d": 0.424,
+            "fired_ids": [],
+            "has_driver": false,
+            "weather_zh": "近况：BTC +0.95%（小区间） · ETH +1.11% · OI 日变 -0.76% · 永续成交额 82.36 亿美金（日变 -21.6%） · BTC ETF 净流 +24.50 百万美金",
+            "errors": []
+          }
+        ],
+        "headers_plain": [
+          {
+            "key": "btc_ret_1d",
+            "name_zh": "BTC",
+            "what_zh": "比特币日涨跌幅。"
+          },
+          {
+            "key": "eth_ret_1d",
+            "name_zh": "ETH",
+            "what_zh": "以太坊日涨跌幅。"
+          },
+          {
+            "key": "oi_chg_pct",
+            "name_zh": "OI",
+            "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+          },
+          {
+            "key": "es_ret_1d",
+            "name_zh": "ES",
+            "what_zh": "标普期货日变，传统风险偏好参考。"
+          },
+          {
+            "key": "nq_ret_1d",
+            "name_zh": "NQ",
+            "what_zh": "纳指期货日变。"
+          },
+          {
+            "key": "vix_ret_1d",
+            "name_zh": "VIX",
+            "what_zh": "美股隐含波动；偏高常对应避险升温。"
+          },
+          {
+            "key": "dxy_ret_1d",
+            "name_zh": "DXY",
+            "what_zh": "美元指数日变。"
+          },
+          {
+            "key": "fired",
+            "name_zh": "驱动",
+            "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+          }
+        ],
+        "plain_zh": "VIX 回落；窗口内有日触发驱动（见表「驱动」列）；距事件 T−1",
+        "finger_zh": "VIX 回落；窗口内有日触发驱动（见表「驱动」列）；距事件 T−1",
+        "badge_zh": "临近·T−1",
+        "badge_en": "Pre · T-1",
+        "headline_zh": "FOMC 决议 · T−1",
+        "pin_href": "daily_20261028.html",
+        "rules": {
+          "no_attribution": true,
+          "no_future_rows": true,
+          "pre_result": true
+        }
+      },
+      "card": {
+        "event_id": "fomc_2026_10",
+        "date": "2026-10-28",
+        "name_zh": "FOMC 利率决议",
+        "phase": "pre",
+        "phase_label_zh": "临近·T−1",
+        "has_official_result": false,
+        "result_block": null,
+        "reaction": {
+          "schema": "tidewatch_pre_window_v1",
+          "kind": "pre",
+          "event_id": "fomc_2026_10",
+          "event_date": "2026-10-28",
+          "digest_day": "2026-10-27",
+          "offset": -1,
+          "days_left": 1,
+          "window_days": 3,
+          "as_of_today": true,
+          "name_zh": "FOMC 利率决议",
+          "name_en": "FOMC policy decision",
+          "series": "fomc",
+          "story": {
+            "title_zh": "FOMC 决议",
+            "one_liner_zh": "美联储议息：目标利率与政策声明。",
+            "rope_zh": "政策利率",
+            "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+            "watch_zh": "目标区间是否调整；声明措辞如何写就业与通胀。"
+          },
+          "result_ok": false,
+          "rows": [
+            {
+              "date": "2026-10-25",
+              "offset": -3,
+              "label": "T-3",
+              "btc_ret_1d": -0.908,
+              "eth_ret_1d": -1.227,
+              "oi_chg_pct": -1.556,
+              "funding_ann_pct": 1.9239,
+              "funding_ann_chg_pp": -8.41,
+              "eth_funding_ann_pct": 8.0833,
+              "eth_funding_ann_chg_pp": 4.012,
+              "es_ret_1d": 0.111,
+              "nq_ret_1d": -0.047,
+              "vix_ret_1d": 2.207,
+              "dxy_ret_1d": -0.2,
+              "fired_ids": [
+                "funding_jump"
+              ],
+              "has_driver": true,
+              "weather_zh": "近况：BTC -0.91%（小区间） · ETH -1.23% · OI 日变 -1.56% · 永续成交额 55.39 亿美金（日变 -37.8%） · BTC ETF 净流 -1.38 亿美金",
+              "errors": [
+                "etf_btc_using_2026-10-23",
+                "etf_eth_using_2026-10-23"
+              ]
+            },
+            {
+              "date": "2026-10-26",
+              "offset": -2,
+              "label": "T-2",
+              "btc_ret_1d": -0.004,
+              "eth_ret_1d": -0.228,
+              "oi_chg_pct": 1.952,
+              "funding_ann_pct": 10.95,
+              "funding_ann_chg_pp": 9.026,
+              "eth_funding_ann_pct": 9.7696,
+              "eth_funding_ann_chg_pp": 1.686,
+              "es_ret_1d": 0.603,
+              "nq_ret_1d": 1.145,
+              "vix_ret_1d": -5.45,
+              "dxy_ret_1d": 0.424,
+              "fired_ids": [
+                "funding_jump",
+                "liq_spike",
+                "volume_spike"
+              ],
+              "has_driver": true,
+              "weather_zh": "近况：BTC -0.00%（小区间） · ETH -0.23% · OI 日变 +1.95% · 永续成交额 105.11 亿美金（日变 +89.8%） · BTC ETF 净流 +1.10 亿美金",
+              "errors": []
+            },
+            {
+              "date": "2026-10-27",
+              "offset": -1,
+              "label": "T-1",
+              "btc_ret_1d": 0.947,
+              "eth_ret_1d": 1.11,
+              "oi_chg_pct": -0.756,
+              "funding_ann_pct": 5.994,
+              "funding_ann_chg_pp": -4.956,
+              "eth_funding_ann_pct": 9.3447,
+              "eth_funding_ann_chg_pp": -0.425,
+              "es_ret_1d": 0.506,
+              "nq_ret_1d": 1.449,
+              "vix_ret_1d": -5.45,
+              "dxy_ret_1d": 0.424,
+              "fired_ids": [],
+              "has_driver": false,
+              "weather_zh": "近况：BTC +0.95%（小区间） · ETH +1.11% · OI 日变 -0.76% · 永续成交额 82.36 亿美金（日变 -21.6%） · BTC ETF 净流 +24.50 百万美金",
+              "errors": []
+            }
+          ],
+          "headers_plain": [
+            {
+              "key": "btc_ret_1d",
+              "name_zh": "BTC",
+              "what_zh": "比特币日涨跌幅。"
+            },
+            {
+              "key": "eth_ret_1d",
+              "name_zh": "ETH",
+              "what_zh": "以太坊日涨跌幅。"
+            },
+            {
+              "key": "oi_chg_pct",
+              "name_zh": "OI",
+              "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+            },
+            {
+              "key": "es_ret_1d",
+              "name_zh": "ES",
+              "what_zh": "标普期货日变，传统风险偏好参考。"
+            },
+            {
+              "key": "nq_ret_1d",
+              "name_zh": "NQ",
+              "what_zh": "纳指期货日变。"
+            },
+            {
+              "key": "vix_ret_1d",
+              "name_zh": "VIX",
+              "what_zh": "美股隐含波动；偏高常对应避险升温。"
+            },
+            {
+              "key": "dxy_ret_1d",
+              "name_zh": "DXY",
+              "what_zh": "美元指数日变。"
+            },
+            {
+              "key": "fired",
+              "name_zh": "驱动",
+              "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+            }
+          ],
+          "plain_zh": "距「FOMC 决议」T−1。美联储议息：目标利率与政策声明。 VIX 回落；窗口内有日触发驱动（见表「驱动」列）；距事件 T−1。观察重点：目标区间是否调整；声明措辞如何写就业与通胀。 常见传导：目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。 尚无官方读数；表仅含已实现日。",
+          "finger_zh": "VIX 回落；窗口内有日触发驱动（见表「驱动」列）；距事件 T−1",
+          "badge_zh": "临近·T−1",
+          "badge_en": "Pre · T-1",
+          "headline_zh": "FOMC 决议 · T−1",
+          "pin_href": "daily_20261028.html",
+          "rules": {
+            "no_attribution": true,
+            "no_future_rows": true,
+            "pre_result": true
+          }
+        },
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；声明措辞如何写就业与通胀。"
+        },
+        "template_id": "fomc"
+      },
+      "a1": {
+        "schema": "a1_macro_copy_v1",
+        "a1_version": "a1_macro_copy_v1",
+        "event_id": "fomc_2026_10",
+        "event_date": "2026-10-28",
+        "name_zh": "FOMC 利率决议",
+        "data_as_of": "2026-10-27",
+        "calendar_today": "2026-10-28",
+        "terminal": false,
+        "has_sep": false,
+        "phase": "pre",
+        "badge_zh": "会前 · T−1",
+        "badge_en": "Pre · T−1",
+        "headline_zh": "FOMC · 会前（次日决议）",
+        "lead_zh": "距10月28日决议仅剩T−1，会前三日量价已走出先抑后稳再小幅回升的路径。",
+        "primer_zh": "FOMC一年约召开8次，每次敲定联邦基金利率目标走廊并发布政策声明。市场主要交易走廊水平与声明措辞的边际变化。下一钉落在2026年12月9日。本场为会前观察窗口，数据截至10月27日。",
+        "attitude_zh": "",
+        "result_lines": [],
+        "narrative_zh": "会前T−3（10月25日）BTC −0.91%、ETH −1.23%，永续成交55.4亿且较前大幅收缩−37.8%，OI −1.56%，资金费率1.9%；同步ES +0.11%、VIX +2.21%、DXY −0.20%，BTC ETF净流出−1.38亿。\nT−2（10月26日）BTC基本走平−0.00%、ETH −0.23%，永续成交放量至105.1亿（+89.8%），OI +1.95%，资金费率升至10.9%；ES +0.72%、VIX −5.45%、DXY +0.42%，ETF流量持平0.00亿。\nT−1（10月27日）BTC +0.95%、ETH +1.11%，永续成交回落至82.4亿（−21.6%），OI −0.76%，资金费率6.0%；ES +0.51%、VIX −5.45%、DXY +0.42%，ETF小幅流入+0.24亿。三日合计呈现成交先缩后爆再收敛、价格由跌转平再小涨的会前节奏。",
+        "watch_zh": "明日盯决议后的利率走廊水平与政策声明措辞；盘面量价与资金费率、ETF流向是否延续会前节奏；下一钉2026年12月9日。",
+        "status_zh": "会前（数据截至 2026-10-27）",
+        "stance": {
+          "label_zh": "",
+          "detail_zh": "",
+          "statement_hook_zh": ""
+        },
+        "next_fomc": {
+          "date": "2026-12-09",
+          "id": "fomc_2026_12",
+          "name_zh": "FOMC 利率决议"
+        },
+        "wide_table": {
+          "data_as_of": "2026-10-27",
+          "calendar_today": "2026-10-28",
+          "event_date": "2026-10-28",
+          "pre_n": 3,
+          "post_n": 3,
+          "rows": [
+            {
+              "date": "2026-10-25",
+              "offset": -3,
+              "label_zh": "会前 T-3",
+              "phase": "pre",
+              "has_digest": true,
+              "btc_ret_1d": -0.908,
+              "eth_ret_1d": -1.227,
+              "oi_chg_pct": -1.556,
+              "perp_turnover_usd": 5538510170.0073,
+              "perp_turnover_chg_pct": -37.77,
+              "funding_ann_pct": 1.9239,
+              "eth_funding_ann_pct": 8.0833,
+              "es_ret_1d": 0.111,
+              "nq_ret_1d": -0.047,
+              "vix_ret_1d": 2.207,
+              "dxy_ret_1d": -0.2,
+              "btc_etf_net_usd": -137900000.0,
+              "driver": true,
+              "btc_s": "-0.91%",
+              "eth_s": "-1.23%",
+              "oi_s": "-1.56%",
+              "perp_s": "55.4 亿",
+              "perp_chg_s": "-37.8%",
+              "fund_s": "1.9%",
+              "es_s": "+0.11%",
+              "nq_s": "-0.05%",
+              "vix_s": "+2.21%",
+              "dxy_s": "-0.20%",
+              "etf_s": "-1.38 亿",
+              "href": "daily_20261025.html"
+            },
+            {
+              "date": "2026-10-26",
+              "offset": -2,
+              "label_zh": "会前 T-2",
+              "phase": "pre",
+              "has_digest": true,
+              "btc_ret_1d": -0.004,
+              "eth_ret_1d": -0.228,
+              "oi_chg_pct": 1.952,
+              "perp_turnover_usd": 10510536859.4056,
+              "perp_turnover_chg_pct": 89.77,
+              "funding_ann_pct": 10.95,
+              "eth_funding_ann_pct": 9.7696,
+              "es_ret_1d": 0.724,
+              "nq_ret_1d": 1.284,
+              "vix_ret_1d": -5.45,
+              "dxy_ret_1d": 0.424,
+              "btc_etf_net_usd": 0.0,
+              "driver": true,
+              "btc_s": "-0.00%",
+              "eth_s": "-0.23%",
+              "oi_s": "+1.95%",
+              "perp_s": "105.1 亿",
+              "perp_chg_s": "+89.8%",
+              "fund_s": "10.9%",
+              "es_s": "+0.72%",
+              "nq_s": "+1.28%",
+              "vix_s": "-5.45%",
+              "dxy_s": "+0.42%",
+              "etf_s": "0.00 亿",
+              "href": "daily_20261026.html"
+            },
+            {
+              "date": "2026-10-27",
+              "offset": -1,
+              "label_zh": "会前 T-1",
+              "phase": "pre",
+              "has_digest": true,
+              "btc_ret_1d": 0.947,
+              "eth_ret_1d": 1.11,
+              "oi_chg_pct": -0.756,
+              "perp_turnover_usd": 8235955438.2182,
+              "perp_turnover_chg_pct": -21.64,
+              "funding_ann_pct": 5.994,
+              "eth_funding_ann_pct": 9.3447,
+              "es_ret_1d": 0.506,
+              "nq_ret_1d": 1.449,
+              "vix_ret_1d": -5.45,
+              "dxy_ret_1d": 0.424,
+              "btc_etf_net_usd": 24500000.0,
+              "driver": false,
+              "btc_s": "+0.95%",
+              "eth_s": "+1.11%",
+              "oi_s": "-0.76%",
+              "perp_s": "82.4 亿",
+              "perp_chg_s": "-21.6%",
+              "fund_s": "6.0%",
+              "es_s": "+0.51%",
+              "nq_s": "+1.45%",
+              "vix_s": "-5.45%",
+              "dxy_s": "+0.42%",
+              "etf_s": "0.24 亿",
+              "href": "daily_20261027.html"
+            }
+          ]
+        },
+        "result_block": null,
+        "statement_bullets": null,
+        "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
+        "generated_at": "2026-10-28T02:18:29Z",
+        "narrative_source": "llm",
+        "llm_error": null
+      },
+      "a1_version": "a1_macro_copy_v1",
+      "result_caption_zh": "",
+      "a1_result_lines": [],
+      "a1_watch_zh": "明日盯决议后的利率走廊水平与政策声明措辞；盘面量价与资金费率、ETF流向是否延续会前节奏；下一钉2026年12月9日。",
+      "a1_footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
+      "a1_wide_table": {
+        "data_as_of": "2026-10-27",
+        "calendar_today": "2026-10-28",
+        "event_date": "2026-10-28",
+        "pre_n": 3,
+        "post_n": 3,
+        "rows": [
+          {
+            "date": "2026-10-25",
+            "offset": -3,
+            "label_zh": "会前 T-3",
+            "phase": "pre",
+            "has_digest": true,
+            "btc_ret_1d": -0.908,
+            "eth_ret_1d": -1.227,
+            "oi_chg_pct": -1.556,
+            "perp_turnover_usd": 5538510170.0073,
+            "perp_turnover_chg_pct": -37.77,
+            "funding_ann_pct": 1.9239,
+            "eth_funding_ann_pct": 8.0833,
+            "es_ret_1d": 0.111,
+            "nq_ret_1d": -0.047,
+            "vix_ret_1d": 2.207,
+            "dxy_ret_1d": -0.2,
+            "btc_etf_net_usd": -137900000.0,
+            "driver": true,
+            "btc_s": "-0.91%",
+            "eth_s": "-1.23%",
+            "oi_s": "-1.56%",
+            "perp_s": "55.4 亿",
+            "perp_chg_s": "-37.8%",
+            "fund_s": "1.9%",
+            "es_s": "+0.11%",
+            "nq_s": "-0.05%",
+            "vix_s": "+2.21%",
+            "dxy_s": "-0.20%",
+            "etf_s": "-1.38 亿",
+            "href": "daily_20261025.html"
+          },
+          {
+            "date": "2026-10-26",
+            "offset": -2,
+            "label_zh": "会前 T-2",
+            "phase": "pre",
+            "has_digest": true,
+            "btc_ret_1d": -0.004,
+            "eth_ret_1d": -0.228,
+            "oi_chg_pct": 1.952,
+            "perp_turnover_usd": 10510536859.4056,
+            "perp_turnover_chg_pct": 89.77,
+            "funding_ann_pct": 10.95,
+            "eth_funding_ann_pct": 9.7696,
+            "es_ret_1d": 0.724,
+            "nq_ret_1d": 1.284,
+            "vix_ret_1d": -5.45,
+            "dxy_ret_1d": 0.424,
+            "btc_etf_net_usd": 0.0,
+            "driver": true,
+            "btc_s": "-0.00%",
+            "eth_s": "-0.23%",
+            "oi_s": "+1.95%",
+            "perp_s": "105.1 亿",
+            "perp_chg_s": "+89.8%",
+            "fund_s": "10.9%",
+            "es_s": "+0.72%",
+            "nq_s": "+1.28%",
+            "vix_s": "-5.45%",
+            "dxy_s": "+0.42%",
+            "etf_s": "0.00 亿",
+            "href": "daily_20261026.html"
+          },
+          {
+            "date": "2026-10-27",
+            "offset": -1,
+            "label_zh": "会前 T-1",
+            "phase": "pre",
+            "has_digest": true,
+            "btc_ret_1d": 0.947,
+            "eth_ret_1d": 1.11,
+            "oi_chg_pct": -0.756,
+            "perp_turnover_usd": 8235955438.2182,
+            "perp_turnover_chg_pct": -21.64,
+            "funding_ann_pct": 5.994,
+            "eth_funding_ann_pct": 9.3447,
+            "es_ret_1d": 0.506,
+            "nq_ret_1d": 1.449,
+            "vix_ret_1d": -5.45,
+            "dxy_ret_1d": 0.424,
+            "btc_etf_net_usd": 24500000.0,
+            "driver": false,
+            "btc_s": "+0.95%",
+            "eth_s": "+1.11%",
+            "oi_s": "-0.76%",
+            "perp_s": "82.4 亿",
+            "perp_chg_s": "-21.6%",
+            "fund_s": "6.0%",
+            "es_s": "+0.51%",
+            "nq_s": "+1.45%",
+            "vix_s": "-5.45%",
+            "dxy_s": "+0.42%",
+            "etf_s": "0.24 亿",
+            "href": "daily_20261027.html"
+          }
+        ]
+      },
+      "data_as_of": "2026-10-27",
+      "narrative_source": "llm",
+      "statement_bullets": null
+    },
+    "driver": null,
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 5,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记待办：IV 是什么、和 VIX 有何区别——可对照本页 IV−RV 点差与 VIX 日变一起看。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 小涨约 1%",
+      "tone": "up"
+    },
+    {
+      "text": "杠杆存量微降",
+      "tone": "neutral"
+    },
+    {
+      "text": "永续成交明显缩",
+      "tone": "down"
+    },
+    {
+      "text": "funding 也降温了",
+      "tone": "down"
+    },
+    {
+      "text": "和美股期货同向",
+      "tone": "up"
+    },
+    {
+      "text": "成交缩量下的温和小涨",
+      "tone": "neutral"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": []
+}
