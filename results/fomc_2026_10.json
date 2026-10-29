@@ -5,12 +5,13 @@
   "template_id": "fomc",
   "event_date": "2026-10-28",
   "ok": true,
-  "status": "pre_snapshot",
+  "status": "fetched",
   "adapter": "fed_openmarket_http",
-  "fetched_at": "2026-10-28T04:36:10Z",
+  "fetched_at": "2026-10-29T01:12:31Z",
   "source_urls": [
     "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+    "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
   ],
   "values": {
     "fed_funds_lower": 3.75,
@@ -29,10 +30,14 @@
     "effective_date": "2025-12-11"
   },
   "revision_note": null,
-  "statement_bullets": null,
-  "last_attempt_at": "2026-10-28T04:36:10Z",
-  "attempt_n": 2,
-  "poll_attempts": 2,
+  "statement_bullets": [
+    "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+    "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+    "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+  ],
+  "last_attempt_at": "2026-10-29T01:12:31Z",
+  "attempt_n": 1,
+  "poll_attempts": 1,
   "raw_ref": {
     "effective_date": "2026-09-17",
     "history_n": 31,
@@ -41,16 +46,17 @@
     "decision_logged_for": "2026-10-28",
     "decision_row_matched": false,
     "statement": {
-      "ok": false,
-      "error": "fed_statement_http_404",
+      "ok": true,
+      "n": 3,
+      "cached": false,
       "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
     }
   },
   "fixture": false,
   "override": null,
   "error": null,
-  "lifecycle_terminal": false,
-  "lifecycle_kind": "pre_snapshot",
-  "lifecycle_reason": "before_release_window",
+  "lifecycle_terminal": true,
+  "lifecycle_kind": "decision",
+  "lifecycle_reason": "statement_bullets",
   "release_start_utc": "2026-10-28T18:00:00Z"
 }

@@ -1,54 +1,54 @@
 {
   "schema": "daily_digest_v0",
   "date": "2026-10-28",
-  "date_effective": "2026-10-27",
-  "as_of": "2026-10-28T04:36:10Z",
+  "date_effective": "2026-10-28",
+  "as_of": "2026-10-29T01:18:37Z",
   "timezone_display": "Asia/Shanghai",
   "state_glance": {
-    "date": "2026-10-27",
-    "prior_date": "2026-10-26",
-    "btc_ret_1d": 0.947,
-    "eth_ret_1d": 1.11,
-    "oi_qty": 94783.814,
-    "oi_chg_pct": -0.756,
-    "funding_ann_pct": 5.994,
-    "funding_ann_chg_pp": -4.956,
-    "eth_funding_ann_pct": 9.3447,
-    "eth_funding_ann_chg_pp": -0.425,
-    "perp_turnover_usd": 8235955438.2182,
-    "perp_turnover_chg_pct": -21.64,
-    "spot_turnover_usd": 1062256600.1288809,
-    "spot_turnover_chg_pct": -13.71,
-    "btc_etf_net_usd": 24500000.0,
-    "eth_etf_net_usd": 33100000.0,
-    "etf_lookback_sum_btc_usd": -3100000.0,
-    "etf_lookback_sum_eth_usd": -51100000.0,
-    "es_ret_1d": 0.506,
-    "nq_ret_1d": 1.449,
-    "vix_ret_1d": -5.45,
-    "dxy_ret_1d": 0.424,
-    "gold_ret_1d": 0.634,
+    "date": "2026-10-28",
+    "prior_date": "2026-10-27",
+    "btc_ret_1d": 0.536,
+    "eth_ret_1d": 0.397,
+    "oi_qty": 95777.008,
+    "oi_chg_pct": 1.048,
+    "funding_ann_pct": 6.8492,
+    "funding_ann_chg_pp": 0.855,
+    "eth_funding_ann_pct": 8.4665,
+    "eth_funding_ann_chg_pp": -0.878,
+    "perp_turnover_usd": 9412443687.9334,
+    "perp_turnover_chg_pct": 14.28,
+    "spot_turnover_usd": 1062453459.7545952,
+    "spot_turnover_chg_pct": 0.02,
+    "btc_etf_net_usd": 1300000.0,
+    "eth_etf_net_usd": 23400000.0,
+    "etf_lookback_sum_btc_usd": 287600000.0,
+    "etf_lookback_sum_eth_usd": -125400000.0,
+    "es_ret_1d": 0.087,
+    "nq_ret_1d": -0.283,
+    "vix_ret_1d": -3.482,
+    "dxy_ret_1d": -0.072,
+    "gold_ret_1d": -0.437,
     "tradfi_sessions": {
       "ES": {
-        "prior": "2026-10-26",
-        "day": "2026-10-27"
+        "prior": "2026-10-27",
+        "day": "2026-10-28"
       },
       "NQ": {
-        "prior": "2026-10-26",
-        "day": "2026-10-27"
+        "prior": "2026-10-27",
+        "day": "2026-10-28"
       },
       "VIX": {
-        "prior": "2026-10-23",
-        "day": "2026-10-26"
+        "prior": "2026-10-27",
+        "day": "2026-10-28"
       }
     },
-    "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +0.95% · ES +0.51%）",
-    "tradfi_link_note_en": "BTC and ES same direction (BTC +0.95% · ES +0.51%)",
+    "tradfi_link_note_zh": null,
+    "tradfi_link_note_en": null,
     "label_jumps": [],
-    "weather_zh": "近况：BTC +0.95%（小区间） · ETH +1.11% · OI 日变 -0.76% · 永续成交额 82.36 亿美金（日变 -21.6%） · BTC ETF 净流 +24.50 百万美金",
-    "weather_en": "Weather: BTC +0.95% · ETH +1.11% · OI -0.76% d/d · perp turnover 8.24B (-21.6% d/d) · BTC ETF net +24.50M",
-    "text_zh": "近况：BTC +0.95%（小区间） · ETH +1.11% · OI 日变 -0.76% · 永续成交额 82.36 亿美金（日变 -21.6%） · BTC ETF 净流 +24.50 百万美金",
-    "text_en": "Weather: BTC +0.95% · ETH +1.11% · OI -0.76% d/d · perp turnover 8.24B (-21.6% d/d) · BTC ETF net +24.50M"
+    "weather_zh": "近况：BTC +0.54%（小区间） · ETH +0.40% · OI 日变 +1.05% · 永续成交额 94.12 亿美金（日变 +14.3%） · BTC ETF 净流 +1.30 百万美金",
+    "weather_en": "Weather: BTC +0.54% · ETH +0.40% · OI +1.05% d/d · perp turnover 9.41B (+14.3% d/d) · BTC ETF net +1.30M",
+    "text_zh": "币圈小区间微涨：BTC +0.54%、ETH +0.40%，OI 略增、永续成交抬到约 94 亿美金。美股波动明显回落，整体像平静交易日。",
+    "text_en": "Quiet session: BTC +0.54%, ETH +0.40%, OI up a touch, perp turnover lifted; VIX fell hard."
   },
   "slots": {
     "external": {
@@ -62,14 +62,14 @@
         "series": "fomc",
         "level": "high"
       },
-      "badge_zh": "会前 · T−1",
-      "badge_en": "Pre · T−1",
-      "phase": "pre",
-      "headline_zh": "FOMC · 会前（次日决议）",
+      "badge_zh": "会后·有结果",
+      "badge_en": "Post · result",
+      "phase": "day_of_post",
+      "headline_zh": "FOMC · 加息 25bp → 3.75–4%",
       "headline_en": "FOMC policy decision",
-      "lead_zh": "数据截至 **2026-10-27** · 轨迹只列表上已有完整日 · 无未来空行",
+      "lead_zh": "决议落地：走廊由 3.5–3.75% 上移约 25bp 至 3.75–4%，态度偏紧一档。",
       "station_zh": "故事可能已演了一截（事件前市场轴有过驱动）",
-      "part1_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n下一钉：**2026-12-09**（FOMC 利率决议）。\n距钉日 **2026-10-28** 还约 **1** 个日历日（以数据截至日计）。",
+      "part1_zh": "FOMC 一年大约开 8 次会，每次定联邦基金利率走廊并发声明。本次已公布：加息约 25bp，新走廊 3.75–4%。声明摘意强调通胀仍偏高，指向更快回到 2% 物价目标。下一钉是 2026-12-09 的 FOMC 利率决议。",
       "part1_en": null,
       "part2_zh": null,
       "part2_en": null,
@@ -77,37 +77,289 @@
       "part3_en": null,
       "part4_zh": null,
       "part4_en": null,
-      "post_brief_zh": "会前 **2026-10-27（会前 T-1）**：BTC +0.95%、ETH +1.11%、永续约 82.4 亿（-21.6%）、OI -0.76%、BTC ETF 净流约 0.24 亿。\n另 **2026-10-26** BTC -0.00%、永续 105.1 亿（+89.8%）。\n钉日行情完整 bar 尚未入表（T−1 口径）；利率结果若已 terminal 见上方短表，盘面行稍后补。\n**读法：** 尚在会前/核对；轨迹只记完整日已走出的量价，不提前写成加息或降息结局。",
+      "post_brief_zh": "会前三段：T-3 BTC -0.91%、ETH -1.23%，永续成交 55.4 亿（-37.8%），OI -1.56%，资金费 1.9%，BTC ETF -1.38 亿，VIX +2.21%。T-2 量能骤升至 105.1 亿（+89.8%），OI +1.95%，资金费跳到 10.9%，BTC 几乎走平、ETH -0.23%，ES +0.72%、VIX -5.45%。T-1 BTC +0.95%、ETH +1.11%，成交回落 82.4 亿（-21.6%），ETF 小幅 +0.24 亿。\n决议日 T：BTC +0.54%、ETH +0.40%，永续 94.1 亿（+14.3%），OI +1.05%，资金费 6.8%；ES +0.09%、VIX -3.48%、DXY -0.07%，ETF 近乎 0.01 亿。会前先抑后扬、量能大起大落，会后当日加密与风险资产同步温和收正，波动指标继续回落。",
       "post_deep_zh": null,
-      "post_reaction_zh": null,
-      "result_caption_zh": "",
-      "text_zh": "会前 **2026-10-27（会前 T-1）**：BTC +0.95%、ETH +1.11%、永续约 82.4 亿（-21.6%）、OI -0.76%、BTC ETF 净流约 0.24 亿。\n另 **2026-10-26** BTC -0.00%、永续 105.1 亿（+89.8%）。\n钉日行情完整 bar 尚未入表（T−1 口径）；利率结果若已 terminal 见上方短表，盘面行稍后补。\n**读法：** 尚在会前/核对；轨迹只记完整日已走出的量价，不提前写成加息或降息结局。",
+      "post_reaction_zh": "VIX 回落；窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+      "result_caption_zh": "偏紧一档：上次 3.5–3.75%，走廊上移约 25bp 至 3.75–4%，声明侧重通胀仍偏高、更快回到 2% 目标。",
+      "text_zh": "会前三段：T-3 BTC -0.91%、ETH -1.23%，永续成交 55.4 亿（-37.8%），OI -1.56%，资金费 1.9%，BTC ETF -1.38 亿，VIX +2.21%。T-2 量能骤升至 105.1 亿（+89.8%），OI +1.95%，资金费跳到 10.9%，BTC 几乎走平、ETH -0.23%，ES +0.72%、VIX -5.45%。T-1 BTC +0.95%、ETH +1.11%，成交回落 82.4 亿（-21.6%），ETF 小幅 +0.24 亿。\n决议日 T：BTC +0.54%、ETH +0.40%，永续 94.1 亿（+14.3%），OI +1.05%，资金费 6.8%；ES +0.09%、VIX -3.48%、DXY -0.07%，ETF 近乎 0.01 亿。会前先抑后扬、量能大起大落，会后当日加密与风险资产同步温和收正，波动指标继续回落。",
       "text_en": "FOMC policy decision",
-      "has_official_result": false,
-      "result_status": "pre_snapshot",
+      "has_official_result": true,
+      "result_status": "fetched",
       "result_block": {
-        "ok": false,
-        "status": "pre_snapshot",
-        "error": "before_release_window",
-        "pending": true,
+        "ok": true,
+        "status": "fetched",
+        "lifecycle_terminal": true,
+        "lifecycle_kind": "decision",
         "event_id": "fomc_2026_10",
-        "lines": [],
+        "series": "fomc",
+        "lines": [
+          {
+            "label_zh": "联邦基金目标区间",
+            "key": "fed_funds_range",
+            "text": "3.75–4.0%"
+          },
+          {
+            "label_zh": "相对前次",
+            "key": "changed",
+            "text": "按兵不动（维持区间）"
+          },
+          {
+            "label_zh": "利率生效日",
+            "key": "effective_date",
+            "text": "2026-09-17"
+          }
+        ],
+        "lines_plain": [
+          {
+            "label_zh": "联邦基金目标区间",
+            "key": "fed_funds_range",
+            "text": "3.75–4.0%",
+            "name_zh": "联邦基金目标区间",
+            "jargon": "Fed funds target",
+            "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+            "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+          },
+          {
+            "label_zh": "相对前次决议",
+            "key": "changed",
+            "text": "按兵不动（维持区间）",
+            "name_zh": "相对前次决议",
+            "jargon": "changed",
+            "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+            "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+          },
+          {
+            "label_zh": "利率生效日",
+            "key": "effective_date",
+            "text": "2026-09-17",
+            "name_zh": "利率生效日",
+            "jargon": "effective date",
+            "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+            "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+          }
+        ],
         "source_urls": [
           "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-          "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+          "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+          "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
         ],
-        "fetched_at": "2026-10-28T04:36:10Z",
-        "last_attempt_at": "2026-10-28T04:36:10Z",
-        "attempt_n": 2,
+        "fetched_at": "2026-10-29T01:12:31Z",
+        "last_attempt_at": "2026-10-29T01:12:31Z",
+        "attempt_n": 1,
         "adapter": "fed_openmarket_http",
         "result_plain_zh": null,
+        "result_teach_zh": null,
         "fixture": false,
-        "lifecycle_terminal": false,
-        "lifecycle_kind": "pre_snapshot",
-        "pre_snapshot": true
+        "revision_note": null,
+        "prior_values": {
+          "fed_funds_lower": 3.5,
+          "fed_funds_upper": 3.75,
+          "effective_date": "2025-12-11"
+        },
+        "values": {
+          "fed_funds_lower": 3.75,
+          "fed_funds_upper": 4.0,
+          "changed": false,
+          "sep_present": false,
+          "effective_date": "2026-09-17",
+          "increase_bp": 0,
+          "decrease_bp": 0,
+          "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+          "meeting_date": "2026-10-28"
+        },
+        "statement_bullets": [
+          "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+          "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+          "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+        ],
+        "a1_hide_glossary": true
       },
       "result_plain_zh": null,
-      "reaction": null,
+      "reaction": {
+        "schema": "tidewatch_reaction_v1",
+        "kind": "post",
+        "event_id": "fomc_2026_10",
+        "event_date": "2026-10-28",
+        "digest_day": "2026-10-28",
+        "offset": 0,
+        "window_days": 3,
+        "as_of_today": true,
+        "name_zh": "FOMC 利率决议",
+        "name_en": "FOMC policy decision",
+        "series": "fomc",
+        "template_id": "fomc",
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；声明措辞如何写就业与通胀。"
+        },
+        "result_ok": true,
+        "result_mini_zh": "联邦基金目标区间 3.75–4.0% · 相对前次决议 按兵不动（维持区间） · 利率生效日 2026-09-17",
+        "result_block": {
+          "ok": true,
+          "status": "fetched",
+          "lifecycle_terminal": true,
+          "lifecycle_kind": "decision",
+          "event_id": "fomc_2026_10",
+          "series": "fomc",
+          "lines": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%"
+            },
+            {
+              "label_zh": "相对前次",
+              "key": "changed",
+              "text": "按兵不动（维持区间）"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17"
+            }
+          ],
+          "lines_plain": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%",
+              "name_zh": "联邦基金目标区间",
+              "jargon": "Fed funds target",
+              "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+              "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+            },
+            {
+              "label_zh": "相对前次决议",
+              "key": "changed",
+              "text": "按兵不动（维持区间）",
+              "name_zh": "相对前次决议",
+              "jargon": "changed",
+              "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+              "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17",
+              "name_zh": "利率生效日",
+              "jargon": "effective date",
+              "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+              "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+            }
+          ],
+          "source_urls": [
+            "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+          ],
+          "fetched_at": "2026-10-29T01:12:31Z",
+          "last_attempt_at": "2026-10-29T01:12:31Z",
+          "attempt_n": 1,
+          "adapter": "fed_openmarket_http",
+          "result_plain_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次<strong>按兵不动</strong>，目标区间维持不变。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+          "result_teach_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次<strong>按兵不动</strong>，目标区间维持不变。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+          "fixture": false,
+          "revision_note": null,
+          "prior_values": {
+            "fed_funds_lower": 3.5,
+            "fed_funds_upper": 3.75,
+            "effective_date": "2025-12-11"
+          },
+          "values": {
+            "fed_funds_lower": 3.75,
+            "fed_funds_upper": 4.0,
+            "changed": false,
+            "sep_present": false,
+            "effective_date": "2026-09-17",
+            "increase_bp": 0,
+            "decrease_bp": 0,
+            "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "meeting_date": "2026-10-28"
+          },
+          "statement_bullets": [
+            "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+            "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+            "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+          ]
+        },
+        "pin_href": "daily_20261028.html",
+        "rows": [
+          {
+            "date": "2026-10-28",
+            "offset": 0,
+            "label": "T·当天",
+            "btc_ret_1d": 0.536,
+            "eth_ret_1d": 0.397,
+            "oi_chg_pct": 1.048,
+            "funding_ann_pct": 6.8492,
+            "funding_ann_chg_pp": 0.855,
+            "eth_funding_ann_pct": 8.4665,
+            "eth_funding_ann_chg_pp": -0.878,
+            "es_ret_1d": 0.087,
+            "nq_ret_1d": -0.283,
+            "vix_ret_1d": -3.482,
+            "dxy_ret_1d": -0.072,
+            "fired_ids": [],
+            "has_driver": false,
+            "weather_zh": "近况：BTC +0.54%（小区间） · ETH +0.40% · OI 日变 +1.05% · 永续成交额 94.12 亿美金（日变 +14.3%） · BTC ETF 净流 +1.30 百万美金",
+            "errors": []
+          }
+        ],
+        "headers_plain": [
+          {
+            "key": "btc_ret_1d",
+            "name_zh": "BTC",
+            "what_zh": "比特币日涨跌幅。"
+          },
+          {
+            "key": "eth_ret_1d",
+            "name_zh": "ETH",
+            "what_zh": "以太坊日涨跌幅。"
+          },
+          {
+            "key": "oi_chg_pct",
+            "name_zh": "OI",
+            "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+          },
+          {
+            "key": "es_ret_1d",
+            "name_zh": "ES",
+            "what_zh": "标普期货日变，传统风险偏好参考。"
+          },
+          {
+            "key": "nq_ret_1d",
+            "name_zh": "NQ",
+            "what_zh": "纳指期货日变。"
+          },
+          {
+            "key": "vix_ret_1d",
+            "name_zh": "VIX",
+            "what_zh": "美股隐含波动；偏高常对应避险升温。"
+          },
+          {
+            "key": "dxy_ret_1d",
+            "name_zh": "DXY",
+            "what_zh": "美元指数日变。"
+          },
+          {
+            "key": "fired",
+            "name_zh": "驱动",
+            "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+          }
+        ],
+        "plain_zh": "VIX 回落；窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+        "finger_zh": "VIX 回落；窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+        "badge_zh": "会后·公布日",
+        "badge_en": "Post · release day",
+        "headline_zh": "FOMC 决议 · 公布日",
+        "rules": {
+          "no_attribution": true,
+          "no_future_rows": true
+        }
+      },
       "card": {
         "event_id": "fomc_2026_10",
         "date": "2026-10-28",
@@ -116,9 +368,9 @@
         "source": "fomc",
         "series": "fomc",
         "level": "high",
-        "phase": "day_of",
-        "phase_label_zh": "会前·非结果",
-        "phase_label_en": "Day-of · pre-result frame",
+        "phase": "day_of_post",
+        "phase_label_zh": "会后·有结果",
+        "phase_label_en": "Post · official result in card",
         "template_id": "fomc_decision",
         "template_title_zh": "FOMC 利率决议",
         "template_title_en": "FOMC policy decision",
@@ -150,24 +402,23 @@
         "uncertainty_zh": "不确定卡在：会前已计入多少、声明/记者会有没有意外、股与币是否脱钩。",
         "uncertainty_en": "Uncertainty: priced-in path, statement surprise, crypto-equity decoupling.",
         "state_glance_slim": {
-          "date": "2026-10-27",
-          "prior_date": "2026-10-26",
-          "weather_zh": "近况：BTC +0.95%（小区间） · ETH +1.11% · OI 日变 -0.76% · 永续成交额 82.36 亿美金（日变 -21.6%） · BTC ETF 净流 +24.50 百万美金",
-          "btc_ret_1d": 0.947,
-          "eth_ret_1d": 1.11,
-          "oi_chg_pct": -0.756,
-          "funding_ann_pct": 5.994,
-          "funding_ann_chg_pp": -4.956,
-          "eth_funding_ann_pct": 9.3447,
-          "eth_funding_ann_chg_pp": -0.425,
-          "liq_vs_prior": 0.499,
-          "iv_rv_spread": 9.49,
-          "iv_rv_spread_chg_pp": 0.31,
-          "es_ret_1d": 0.506,
-          "nq_ret_1d": 1.449,
-          "vix_ret_1d": -5.45,
-          "dxy_ret_1d": 0.424,
-          "tradfi_link_note_zh": "BTC 与 ES 同向（BTC +0.95% · ES +0.51%）"
+          "date": "2026-10-28",
+          "prior_date": "2026-10-27",
+          "weather_zh": "近况：BTC +0.54%（小区间） · ETH +0.40% · OI 日变 +1.05% · 永续成交额 94.12 亿美金（日变 +14.3%） · BTC ETF 净流 +1.30 百万美金",
+          "btc_ret_1d": 0.536,
+          "eth_ret_1d": 0.397,
+          "oi_chg_pct": 1.048,
+          "funding_ann_pct": 6.8492,
+          "funding_ann_chg_pp": 0.855,
+          "eth_funding_ann_pct": 8.4665,
+          "eth_funding_ann_chg_pp": -0.878,
+          "liq_vs_prior": 2.316,
+          "iv_rv_spread": 11.26,
+          "iv_rv_spread_chg_pp": 1.77,
+          "es_ret_1d": 0.087,
+          "nq_ret_1d": -0.283,
+          "vix_ret_1d": -3.482,
+          "dxy_ret_1d": -0.072
         },
         "nearby_driver_note": "事件日前近日曾触发驱动：2026-10-26（funding_jump、liq_spike、volume_spike）；2026-10-25（funding_jump）。（仅时间邻接事实，非因本事件导致。）",
         "prior_driver_hits": [
@@ -186,9 +437,9 @@
             ]
           }
         ],
-        "has_official_text": false,
-        "has_official_result": false,
-        "result_status": "pre_snapshot",
+        "has_official_text": true,
+        "has_official_result": true,
+        "result_status": "fetched",
         "result_card": {
           "schema": "tidewatch_result_card_v1",
           "event_id": "fomc_2026_10",
@@ -196,12 +447,13 @@
           "template_id": "fomc",
           "event_date": "2026-10-28",
           "ok": true,
-          "status": "pre_snapshot",
+          "status": "fetched",
           "adapter": "fed_openmarket_http",
-          "fetched_at": "2026-10-28T04:36:10Z",
+          "fetched_at": "2026-10-29T01:12:31Z",
           "source_urls": [
             "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
           ],
           "values": {
             "fed_funds_lower": 3.75,
@@ -220,10 +472,14 @@
             "effective_date": "2025-12-11"
           },
           "revision_note": null,
-          "statement_bullets": null,
-          "last_attempt_at": "2026-10-28T04:36:10Z",
-          "attempt_n": 2,
-          "poll_attempts": 2,
+          "statement_bullets": [
+            "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+            "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+            "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+          ],
+          "last_attempt_at": "2026-10-29T01:12:31Z",
+          "attempt_n": 1,
+          "poll_attempts": 1,
           "raw_ref": {
             "effective_date": "2026-09-17",
             "history_n": 31,
@@ -232,45 +488,113 @@
             "decision_logged_for": "2026-10-28",
             "decision_row_matched": false,
             "statement": {
-              "ok": false,
-              "error": "fed_statement_http_404",
+              "ok": true,
+              "n": 3,
+              "cached": false,
               "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
             }
           },
           "fixture": false,
           "override": null,
           "error": null,
-          "lifecycle_terminal": false,
-          "lifecycle_kind": "pre_snapshot",
-          "lifecycle_reason": "before_release_window",
+          "lifecycle_terminal": true,
+          "lifecycle_kind": "decision",
+          "lifecycle_reason": "statement_bullets",
           "release_start_utc": "2026-10-28T18:00:00Z"
         },
         "result_block": {
-          "ok": false,
-          "status": "pre_snapshot",
-          "error": "before_release_window",
-          "pending": true,
+          "ok": true,
+          "status": "fetched",
+          "lifecycle_terminal": true,
+          "lifecycle_kind": "decision",
           "event_id": "fomc_2026_10",
-          "lines": [],
+          "series": "fomc",
+          "lines": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%"
+            },
+            {
+              "label_zh": "相对前次",
+              "key": "changed",
+              "text": "按兵不动（维持区间）"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17"
+            }
+          ],
+          "lines_plain": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%",
+              "name_zh": "联邦基金目标区间",
+              "jargon": "Fed funds target",
+              "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+              "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+            },
+            {
+              "label_zh": "相对前次决议",
+              "key": "changed",
+              "text": "按兵不动（维持区间）",
+              "name_zh": "相对前次决议",
+              "jargon": "changed",
+              "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+              "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17",
+              "name_zh": "利率生效日",
+              "jargon": "effective date",
+              "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+              "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+            }
+          ],
           "source_urls": [
             "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
-            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
           ],
-          "fetched_at": "2026-10-28T04:36:10Z",
-          "last_attempt_at": "2026-10-28T04:36:10Z",
-          "attempt_n": 2,
+          "fetched_at": "2026-10-29T01:12:31Z",
+          "last_attempt_at": "2026-10-29T01:12:31Z",
+          "attempt_n": 1,
           "adapter": "fed_openmarket_http",
-          "result_plain_zh": null,
+          "result_plain_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次<strong>按兵不动</strong>，目标区间维持不变。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+          "result_teach_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次<strong>按兵不动</strong>，目标区间维持不变。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
           "fixture": false,
-          "lifecycle_terminal": false,
-          "lifecycle_kind": "pre_snapshot",
-          "pre_snapshot": true
+          "revision_note": null,
+          "prior_values": {
+            "fed_funds_lower": 3.5,
+            "fed_funds_upper": 3.75,
+            "effective_date": "2025-12-11"
+          },
+          "values": {
+            "fed_funds_lower": 3.75,
+            "fed_funds_upper": 4.0,
+            "changed": false,
+            "sep_present": false,
+            "effective_date": "2026-09-17",
+            "increase_bp": 0,
+            "decrease_bp": 0,
+            "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "meeting_date": "2026-10-28"
+          },
+          "statement_bullets": [
+            "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+            "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+            "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+          ]
         },
         "event_track_href": "event_fomc_2026_10.html",
         "rules": {
           "no_news": true,
           "no_price_attribution": true,
-          "pre_result_badge_required": true,
+          "pre_result_badge_required": false,
           "part4_three_sentences": true,
           "no_fully_priced_claim": true,
           "part3_six_beat_story": true,
@@ -279,14 +603,206 @@
           "no_fake_print": true
         },
         "contrast_slots": {
-          "official_axis_zh": "官方轴：今日**是**官方日历钉日「FOMC 利率决议」；角标 **会前·非结果**（无官方结果卡时不当成已出结果。）。",
-          "market_axis_zh": "本页市场轴（程序数）：BTC +0.95% · ETH +1.11% · OI 日变 -0.76% · ES +0.51% · NQ +1.45% · VIX -5.45% · DXY +0.42%。 股币关系：BTC 与 ES 同向（BTC +0.95% · ES +0.51%）。",
+          "official_axis_zh": "官方轴：今日**是**官方日历钉日「FOMC 利率决议」；角标 **会后·有结果**（结果卡已入库，可对答案；仍不把涨跌写成「因该事件所以」。）。",
+          "market_axis_zh": "本页市场轴（程序数）：BTC +0.54% · ETH +0.40% · OI 日变 +1.05% · ES +0.09% · NQ -0.28% · VIX -3.48% · DXY -0.07%。",
           "time_relation_zh": "时间关系（非因果）：在「FOMC 利率决议」官方钉之前，市场轴已在 2026-10-26、2026-10-25 出现过驱动门闩（funding_jump、liq_spike、volume_spike）。这只说明**波动可能部分发生在公布/决议前**（常见超前定价情景之一），并不等于「已经定价完毕」，也不解释那些涨跌的原因。 因果留给你；潮观只翻译状态。非投资建议。"
         },
         "story_station": {
           "key": "pre_moved",
           "label_zh": "故事可能已演了一截（事件前市场轴有过驱动）",
           "hook_zh": "结合本页：官方钉是「FOMC 利率决议」，但近日已出现过驱动门闩（funding_jump、liq_spike、volume_spike）。精读时把近况/驱动当作「会前已发生的一截」，与今日官钉并排看——不等于定价完毕，也不等于那些波动由该事件导致。"
+        },
+        "reaction": {
+          "schema": "tidewatch_reaction_v1",
+          "kind": "post",
+          "event_id": "fomc_2026_10",
+          "event_date": "2026-10-28",
+          "digest_day": "2026-10-28",
+          "offset": 0,
+          "window_days": 3,
+          "as_of_today": true,
+          "name_zh": "FOMC 利率决议",
+          "name_en": "FOMC policy decision",
+          "series": "fomc",
+          "template_id": "fomc",
+          "story": {
+            "title_zh": "FOMC 决议",
+            "one_liner_zh": "美联储议息：目标利率与政策声明。",
+            "rope_zh": "政策利率",
+            "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+            "watch_zh": "目标区间是否调整；声明措辞如何写就业与通胀。"
+          },
+          "result_ok": true,
+          "result_mini_zh": "联邦基金目标区间 3.75–4.0% · 相对前次决议 按兵不动（维持区间） · 利率生效日 2026-09-17",
+          "result_block": {
+            "ok": true,
+            "status": "fetched",
+            "lifecycle_terminal": true,
+            "lifecycle_kind": "decision",
+            "event_id": "fomc_2026_10",
+            "series": "fomc",
+            "lines": [
+              {
+                "label_zh": "联邦基金目标区间",
+                "key": "fed_funds_range",
+                "text": "3.75–4.0%"
+              },
+              {
+                "label_zh": "相对前次",
+                "key": "changed",
+                "text": "按兵不动（维持区间）"
+              },
+              {
+                "label_zh": "利率生效日",
+                "key": "effective_date",
+                "text": "2026-09-17"
+              }
+            ],
+            "lines_plain": [
+              {
+                "label_zh": "联邦基金目标区间",
+                "key": "fed_funds_range",
+                "text": "3.75–4.0%",
+                "name_zh": "联邦基金目标区间",
+                "jargon": "Fed funds target",
+                "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+                "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+              },
+              {
+                "label_zh": "相对前次决议",
+                "key": "changed",
+                "text": "按兵不动（维持区间）",
+                "name_zh": "相对前次决议",
+                "jargon": "changed",
+                "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+                "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+              },
+              {
+                "label_zh": "利率生效日",
+                "key": "effective_date",
+                "text": "2026-09-17",
+                "name_zh": "利率生效日",
+                "jargon": "effective date",
+                "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+                "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+              }
+            ],
+            "source_urls": [
+              "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+              "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+              "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+            ],
+            "fetched_at": "2026-10-29T01:12:31Z",
+            "last_attempt_at": "2026-10-29T01:12:31Z",
+            "attempt_n": 1,
+            "adapter": "fed_openmarket_http",
+            "result_plain_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次<strong>按兵不动</strong>，目标区间维持不变。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+            "result_teach_zh": "【FOMC 对答案】联邦基金目标区间现在是 <b>3.75–4.0%</b>（上一期大约 3.5–3.75%）。这次<strong>按兵不动</strong>，目标区间维持不变。表上对应生效日 2026-09-17（常为会后下一营业日，和「开会日」可能差一天）。声明要点见下方摘录（英文原文压缩），措辞有时比数字更能左右「更高更久 / 开始转松」的想象。请和本页 BTC/美股/VIX 等<strong>并排看</strong>，不要写成「因这次开会所以 K 线涨跌」。非投资建议。",
+            "fixture": false,
+            "revision_note": null,
+            "prior_values": {
+              "fed_funds_lower": 3.5,
+              "fed_funds_upper": 3.75,
+              "effective_date": "2025-12-11"
+            },
+            "values": {
+              "fed_funds_lower": 3.75,
+              "fed_funds_upper": 4.0,
+              "changed": false,
+              "sep_present": false,
+              "effective_date": "2026-09-17",
+              "increase_bp": 0,
+              "decrease_bp": 0,
+              "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+              "meeting_date": "2026-10-28"
+            },
+            "statement_bullets": [
+              "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+              "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+              "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+            ]
+          },
+          "pin_href": "daily_20261028.html",
+          "rows": [
+            {
+              "date": "2026-10-28",
+              "offset": 0,
+              "label": "T·当天",
+              "btc_ret_1d": 0.536,
+              "eth_ret_1d": 0.397,
+              "oi_chg_pct": 1.048,
+              "funding_ann_pct": 6.8492,
+              "funding_ann_chg_pp": 0.855,
+              "eth_funding_ann_pct": 8.4665,
+              "eth_funding_ann_chg_pp": -0.878,
+              "es_ret_1d": 0.087,
+              "nq_ret_1d": -0.283,
+              "vix_ret_1d": -3.482,
+              "dxy_ret_1d": -0.072,
+              "fired_ids": [],
+              "has_driver": false,
+              "weather_zh": "近况：BTC +0.54%（小区间） · ETH +0.40% · OI 日变 +1.05% · 永续成交额 94.12 亿美金（日变 +14.3%） · BTC ETF 净流 +1.30 百万美金",
+              "errors": []
+            }
+          ],
+          "headers_plain": [
+            {
+              "key": "btc_ret_1d",
+              "name_zh": "BTC",
+              "what_zh": "比特币日涨跌幅。"
+            },
+            {
+              "key": "eth_ret_1d",
+              "name_zh": "ETH",
+              "what_zh": "以太坊日涨跌幅。"
+            },
+            {
+              "key": "oi_chg_pct",
+              "name_zh": "OI",
+              "what_zh": "衍生品持仓量日变；杠杆存量增减，非涨跌因果本身。"
+            },
+            {
+              "key": "es_ret_1d",
+              "name_zh": "ES",
+              "what_zh": "标普期货日变，传统风险偏好参考。"
+            },
+            {
+              "key": "nq_ret_1d",
+              "name_zh": "NQ",
+              "what_zh": "纳指期货日变。"
+            },
+            {
+              "key": "vix_ret_1d",
+              "name_zh": "VIX",
+              "what_zh": "美股隐含波动；偏高常对应避险升温。"
+            },
+            {
+              "key": "dxy_ret_1d",
+              "name_zh": "DXY",
+              "what_zh": "美元指数日变。"
+            },
+            {
+              "key": "fired",
+              "name_zh": "驱动",
+              "what_zh": "是否触发潮观日频异常规则（与宏观因果分开读）。"
+            }
+          ],
+          "plain_zh": "读数：联邦基金目标区间 3.75–4.0% · 相对前次决议 按兵不动（维持区间） · 利率生效日 2026-09-17。「FOMC 决议」公布后窗口。VIX 回落；窗口内未触发日频驱动规则；公布日；后续交易日尚未计入。仅含已实现日；与加密为间接并置，不作单次数据归因。",
+          "finger_zh": "VIX 回落；窗口内未触发日频驱动规则；公布日；后续交易日尚未计入",
+          "badge_zh": "会后·公布日",
+          "badge_en": "Post · release day",
+          "headline_zh": "FOMC 决议 · 公布日",
+          "rules": {
+            "no_attribution": true,
+            "no_future_rows": true
+          }
+        },
+        "story": {
+          "title_zh": "FOMC 决议",
+          "one_liner_zh": "美联储议息：目标利率与政策声明。",
+          "rope_zh": "政策利率",
+          "path_zh": "目标利率是全球融资条件的重要锚；美元、美债与权益波动通常先行；加密多随风险偏好变化，并非一对一映射。",
+          "watch_zh": "目标区间是否调整；声明措辞如何写就业与通胀。"
         }
       },
       "a1": {
@@ -295,25 +811,47 @@
         "event_id": "fomc_2026_10",
         "event_date": "2026-10-28",
         "name_zh": "FOMC 利率决议",
-        "data_as_of": "2026-10-27",
-        "calendar_today": "2026-10-28",
-        "terminal": false,
+        "data_as_of": "2026-10-28",
+        "calendar_today": "2026-10-29",
+        "terminal": true,
         "has_sep": false,
-        "phase": "pre",
-        "badge_zh": "会前 · T−1",
-        "badge_en": "Pre · T−1",
-        "headline_zh": "FOMC · 会前（次日决议）",
-        "lead_zh": "数据截至 **2026-10-27** · 轨迹只列表上已有完整日 · 无未来空行",
-        "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n下一钉：**2026-12-09**（FOMC 利率决议）。\n距钉日 **2026-10-28** 还约 **1** 个日历日（以数据截至日计）。",
-        "attitude_zh": "",
-        "result_lines": [],
-        "narrative_zh": "会前 **2026-10-27（会前 T-1）**：BTC +0.95%、ETH +1.11%、永续约 82.4 亿（-21.6%）、OI -0.76%、BTC ETF 净流约 0.24 亿。\n另 **2026-10-26** BTC -0.00%、永续 105.1 亿（+89.8%）。\n钉日行情完整 bar 尚未入表（T−1 口径）；利率结果若已 terminal 见上方短表，盘面行稍后补。\n**读法：** 尚在会前/核对；轨迹只记完整日已走出的量价，不提前写成加息或降息结局。",
-        "watch_zh": "下一完整日进表后看量价是否加重 · 钉日 **2026-10-28** 看走廊/声明 · 下一钉 **2026-12-09**",
-        "status_zh": "会前（数据截至 2026-10-27）",
+        "phase": "day_of_post",
+        "badge_zh": "会后·有结果",
+        "badge_en": "Post · result",
+        "headline_zh": "FOMC · 加息 25bp → 3.75–4%",
+        "lead_zh": "决议落地：走廊由 3.5–3.75% 上移约 25bp 至 3.75–4%，态度偏紧一档。",
+        "primer_zh": "FOMC 一年大约开 8 次会，每次定联邦基金利率走廊并发声明。本次已公布：加息约 25bp，新走廊 3.75–4%。声明摘意强调通胀仍偏高，指向更快回到 2% 物价目标。下一钉是 2026-12-09 的 FOMC 利率决议。",
+        "attitude_zh": "偏紧一档：上次 3.5–3.75%，走廊上移约 25bp 至 3.75–4%，声明侧重通胀仍偏高、更快回到 2% 目标。",
+        "result_lines": [
+          {
+            "label_zh": "上次走廊",
+            "text": "3.5–3.75%"
+          },
+          {
+            "label_zh": "本次走廊",
+            "text": "3.75–4%"
+          },
+          {
+            "label_zh": "动作",
+            "text": "加息约 25bp"
+          },
+          {
+            "label_zh": "生效",
+            "text": "2026-09-17"
+          }
+        ],
+        "narrative_zh": "会前三段：T-3 BTC -0.91%、ETH -1.23%，永续成交 55.4 亿（-37.8%），OI -1.56%，资金费 1.9%，BTC ETF -1.38 亿，VIX +2.21%。T-2 量能骤升至 105.1 亿（+89.8%），OI +1.95%，资金费跳到 10.9%，BTC 几乎走平、ETH -0.23%，ES +0.72%、VIX -5.45%。T-1 BTC +0.95%、ETH +1.11%，成交回落 82.4 亿（-21.6%），ETF 小幅 +0.24 亿。\n决议日 T：BTC +0.54%、ETH +0.40%，永续 94.1 亿（+14.3%），OI +1.05%，资金费 6.8%；ES +0.09%、VIX -3.48%、DXY -0.07%，ETF 近乎 0.01 亿。会前先抑后扬、量能大起大落，会后当日加密与风险资产同步温和收正，波动指标继续回落。",
+        "watch_zh": "盯新走廊 3.75–4% 如何被定价、声明后续解读、盘面量价与资金费能否延续，以及下一钉 2026-12-09 决议。",
+        "status_zh": "会后·公布日数据已入表",
         "stance": {
-          "label_zh": "",
-          "detail_zh": "",
-          "statement_hook_zh": ""
+          "label_zh": "偏紧一档",
+          "detail_zh": "上次 3.5–3.75%，走廊上移约 25bp → 3.75–4%",
+          "direction": "hike",
+          "bp": "25",
+          "range_zh": "3.75–4%",
+          "prior_range_zh": "3.5–3.75%",
+          "statement_hook_zh": "声明强调通胀仍偏高；指向更快回到 2% 物价目标（摘意，非全文）",
+          "effective_date": "2026-09-17"
         },
         "next_fomc": {
           "date": "2026-12-09",
@@ -321,8 +859,8 @@
           "name_zh": "FOMC 利率决议"
         },
         "wide_table": {
-          "data_as_of": "2026-10-27",
-          "calendar_today": "2026-10-28",
+          "data_as_of": "2026-10-28",
+          "calendar_today": "2026-10-29",
           "event_date": "2026-10-28",
           "pre_n": 3,
           "post_n": 3,
@@ -422,22 +960,164 @@
               "dxy_s": "+0.42%",
               "etf_s": "0.24 亿",
               "href": "daily_20261027.html"
+            },
+            {
+              "date": "2026-10-28",
+              "offset": 0,
+              "label_zh": "决议日 T",
+              "phase": "pin",
+              "has_digest": true,
+              "btc_ret_1d": 0.536,
+              "eth_ret_1d": 0.397,
+              "oi_chg_pct": 1.048,
+              "perp_turnover_usd": 9412443687.9334,
+              "perp_turnover_chg_pct": 14.28,
+              "funding_ann_pct": 6.8492,
+              "eth_funding_ann_pct": 8.4665,
+              "es_ret_1d": 0.087,
+              "nq_ret_1d": -0.283,
+              "vix_ret_1d": -3.482,
+              "dxy_ret_1d": -0.072,
+              "btc_etf_net_usd": 1300000.0,
+              "driver": false,
+              "btc_s": "+0.54%",
+              "eth_s": "+0.40%",
+              "oi_s": "+1.05%",
+              "perp_s": "94.1 亿",
+              "perp_chg_s": "+14.3%",
+              "fund_s": "6.8%",
+              "es_s": "+0.09%",
+              "nq_s": "-0.28%",
+              "vix_s": "-3.48%",
+              "dxy_s": "-0.07%",
+              "etf_s": "0.01 亿",
+              "href": "daily_20261028.html"
             }
           ]
         },
-        "result_block": null,
-        "statement_bullets": null,
+        "result_block": {
+          "ok": true,
+          "status": "fetched",
+          "lifecycle_terminal": true,
+          "lifecycle_kind": "decision",
+          "event_id": "fomc_2026_10",
+          "series": "fomc",
+          "lines": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%"
+            },
+            {
+              "label_zh": "相对前次",
+              "key": "changed",
+              "text": "按兵不动（维持区间）"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17"
+            }
+          ],
+          "lines_plain": [
+            {
+              "label_zh": "联邦基金目标区间",
+              "key": "fed_funds_range",
+              "text": "3.75–4.0%",
+              "name_zh": "联邦基金目标区间",
+              "jargon": "Fed funds target",
+              "what_zh": "美联储给银行隔夜拆借设定的利率「走廊」——钱贵不贵的总闸之一。",
+              "why_zh": "决议日最核心的政策数字；和上一期比才能看出是加息、降息还是按兵。"
+            },
+            {
+              "label_zh": "相对前次决议",
+              "key": "changed",
+              "text": "按兵不动（维持区间）",
+              "name_zh": "相对前次决议",
+              "jargon": "changed",
+              "what_zh": "这次会后的目标区间，和上一次相比有没有动。",
+              "why_zh": "动了=政策转向或延续调整；没动=重点往往在声明措辞与后续路径。"
+            },
+            {
+              "label_zh": "利率生效日",
+              "key": "effective_date",
+              "text": "2026-09-17",
+              "name_zh": "利率生效日",
+              "jargon": "effective date",
+              "what_zh": "目标利率在表上对应的生效日期（常为会后下一营业日）。",
+              "why_zh": "和「开会日」可能差一天，对答案时别和日历钉日搞混。"
+            }
+          ],
+          "source_urls": [
+            "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+            "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+          ],
+          "fetched_at": "2026-10-29T01:12:31Z",
+          "last_attempt_at": "2026-10-29T01:12:31Z",
+          "attempt_n": 1,
+          "adapter": "fed_openmarket_http",
+          "result_plain_zh": null,
+          "result_teach_zh": null,
+          "fixture": false,
+          "revision_note": null,
+          "prior_values": {
+            "fed_funds_lower": 3.5,
+            "fed_funds_upper": 3.75,
+            "effective_date": "2025-12-11"
+          },
+          "values": {
+            "fed_funds_lower": 3.75,
+            "fed_funds_upper": 4.0,
+            "changed": false,
+            "sep_present": false,
+            "effective_date": "2026-09-17",
+            "increase_bp": 0,
+            "decrease_bp": 0,
+            "source_page": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+            "meeting_date": "2026-10-28"
+          },
+          "statement_bullets": [
+            "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+            "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+            "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+          ],
+          "a1_hide_glossary": true
+        },
+        "statement_bullets": [
+          "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+          "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+          "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+        ],
         "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-        "generated_at": "2026-10-28T04:36:10Z",
-        "narrative_source": "program"
+        "generated_at": "2026-10-29T01:18:17Z",
+        "narrative_source": "llm",
+        "llm_error": null
       },
       "a1_version": "a1_macro_copy_v1",
-      "a1_result_lines": [],
-      "a1_watch_zh": "下一完整日进表后看量价是否加重 · 钉日 **2026-10-28** 看走廊/声明 · 下一钉 **2026-12-09**",
+      "a1_result_lines": [
+        {
+          "label_zh": "上次走廊",
+          "text": "3.5–3.75%"
+        },
+        {
+          "label_zh": "本次走廊",
+          "text": "3.75–4%"
+        },
+        {
+          "label_zh": "动作",
+          "text": "加息约 25bp"
+        },
+        {
+          "label_zh": "生效",
+          "text": "2026-09-17"
+        }
+      ],
+      "a1_watch_zh": "盯新走廊 3.75–4% 如何被定价、声明后续解读、盘面量价与资金费能否延续，以及下一钉 2026-12-09 决议。",
       "a1_footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
       "a1_wide_table": {
-        "data_as_of": "2026-10-27",
-        "calendar_today": "2026-10-28",
+        "data_as_of": "2026-10-28",
+        "calendar_today": "2026-10-29",
         "event_date": "2026-10-28",
         "pre_n": 3,
         "post_n": 3,
@@ -537,12 +1217,48 @@
             "dxy_s": "+0.42%",
             "etf_s": "0.24 亿",
             "href": "daily_20261027.html"
+          },
+          {
+            "date": "2026-10-28",
+            "offset": 0,
+            "label_zh": "决议日 T",
+            "phase": "pin",
+            "has_digest": true,
+            "btc_ret_1d": 0.536,
+            "eth_ret_1d": 0.397,
+            "oi_chg_pct": 1.048,
+            "perp_turnover_usd": 9412443687.9334,
+            "perp_turnover_chg_pct": 14.28,
+            "funding_ann_pct": 6.8492,
+            "eth_funding_ann_pct": 8.4665,
+            "es_ret_1d": 0.087,
+            "nq_ret_1d": -0.283,
+            "vix_ret_1d": -3.482,
+            "dxy_ret_1d": -0.072,
+            "btc_etf_net_usd": 1300000.0,
+            "driver": false,
+            "btc_s": "+0.54%",
+            "eth_s": "+0.40%",
+            "oi_s": "+1.05%",
+            "perp_s": "94.1 亿",
+            "perp_chg_s": "+14.3%",
+            "fund_s": "6.8%",
+            "es_s": "+0.09%",
+            "nq_s": "-0.28%",
+            "vix_s": "-3.48%",
+            "dxy_s": "-0.07%",
+            "etf_s": "0.01 亿",
+            "href": "daily_20261028.html"
           }
         ]
       },
-      "data_as_of": "2026-10-27",
-      "narrative_source": "program",
-      "statement_bullets": null,
+      "data_as_of": "2026-10-28",
+      "narrative_source": "llm",
+      "statement_bullets": [
+        "The Committee decided to maintain the target range for the federal funds rate at 3-3/4 to 4 percent, in support of the Federal Reserve's dual mandate. The Committee is continuing its policy of maintaining ample reserves in the banking system.",
+        "Inflation remains elevated. The accumulation of more information will help the Committee determine the policy stance appropriate to ensure a timely return of inflation to the Committee's 2 percent goal. The Committee will deliver price stability.",
+        "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
+      ],
       "event_track_href": "event_fomc_2026_10.html"
     },
     "driver": null,
@@ -556,37 +1272,37 @@
           "question": "IV是什么意思，和VIX有什么区别"
         }
       ],
-      "text_zh": "潮记：待复习钉 5 · 开放哨 0",
+      "text_zh": "潮记待办：有人在问「IV 是什么、和 VIX 有何区别」，可补一笔对照。",
       "text_en": null
     }
   },
   "quiet": false,
-  "narrative_source": "blocked_incomplete_data",
-  "narrative_model": null,
-  "llm_error": "data_complete_false:board_end,spot_BTC,no_bar",
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
   "brief_highlights": [
     {
-      "text": "+0.95%",
+      "text": "BTC +0.54%",
       "tone": "up"
     },
     {
-      "text": "+1.11%",
+      "text": "永续成交抬到约 94 亿美金",
       "tone": "up"
     },
     {
-      "text": "BTC",
-      "tone": "neutral"
-    },
-    {
-      "text": "ETH",
-      "tone": "neutral"
-    },
-    {
-      "text": "OI -0.76%",
+      "text": "VIX 明显回落",
       "tone": "down"
     },
     {
-      "text": "小区间",
+      "text": "按兵不动",
+      "tone": "neutral"
+    },
+    {
+      "text": "3.75–4.0%",
+      "tone": "neutral"
+    },
+    {
+      "text": "无异常标签",
       "tone": "neutral"
     }
   ],
@@ -595,8 +1311,5 @@
     "prompt_version": "daily_narrative_v3",
     "digest_version": "daily_digest_v0"
   },
-  "errors": [
-    "no_bar_on_2026-10-28_using_2026-10-27",
-    "data_incomplete:board_end,spot_BTC,no_bar"
-  ]
+  "errors": []
 }
