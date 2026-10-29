@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "本次决议偏松一档，联邦基金利率走廊下移约25bp至4.25–4.5%。",
-    "primer_zh": "FOMC每年约召开8次，每次定联邦基金利率目标走廊并发布声明。走廊是隔夜利率的操作区间，声明说明政策考量。下次决议钉在2025-06-18。",
-    "attitude_zh": "态度偏松一档：走廊下移约25bp至4.25–4.5%。",
+    "lead_zh": "美联储将利率走廊下移约25bp至4.25–4.5%，立场偏松一档。",
+    "primer_zh": "FOMC每年大约召开8次会议，负责设定联邦基金利率目标走廊并发布政策声明。本次把走廊从上次的4.5–4.75%调整为4.25–4.5%。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一场FOMC利率决议在2025年6月18日。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次下移至4.25–4.5%，动作降息约25bp，生效标注为2024-12-19。\n声明侧强调通胀仍偏高，并指向更快回到2%物价目标。本场宽表决议日T量价字段均为空，无额外会前会后并置波动数字可引用，叙事以走廊变动与声明钩子为准。",
-    "watch_zh": "盯新走廊4.25–4.5%如何落地、声明里通胀与2%目标表述的后续传导，以及盘面反应；下一钉2025-06-18决议。",
+    "narrative_zh": "会前走廊停在4.5–4.75%。\n会后动作落地为降息约25bp，新走廊4.25–4.5%，生效记录为2024-12-19。\n决议日T当宽表量价与资金费率等字段均为空，无额外波动幅度可读。\n声明侧突出通胀仍偏高、更快回归2%目标的表述，与走廊下移并置。",
+    "watch_zh": "继续看声明措辞如何被市场消化、盘面量价与资金面变化，以及下一钉2025年6月18日FOMC的走廊与声明。",
     "status_zh": "反应中（数据至 T+539/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Neel Kashkari; Adriana D. Kugler; Alberto G. Musalem; and Christopher J. Waller. Neel Kashkari voted as an alternate member at this meeting."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-29T01:24:24Z",
+    "generated_at": "2026-10-29T02:38:23Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_05.html",
-  "generated_at": "2026-10-29T01:24:40Z",
+  "generated_at": "2026-10-29T02:38:45Z",
   "as_of": "2026-10-29",
   "data_as_of": "2026-10-28"
 }

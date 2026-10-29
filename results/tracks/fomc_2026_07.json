@@ -110,9 +110,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "偏松一档：走廊下移约 25bp 至 3.5–3.75%。",
-    "primer_zh": "FOMC 一年大约开八次会，每次定联邦基金利率走廊并发布声明。本次已落地降息约 25bp，走廊从 3.75–4% 调至 3.5–3.75%。下一钉是 2026-09-16 的 FOMC 利率决议。声明侧继续看通胀表述与政策路径指引。",
-    "attitude_zh": "偏松一档，走廊下移约 25bp 至 3.5–3.75%；声明仍点出通胀偏高、指向更快回到 2% 目标。",
+    "lead_zh": "会后偏松一档落地，走廊下移约25bp至3.5–3.75%，声明仍点出通胀偏高、指向更快回到2%目标。",
+    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从3.75–4%下调约25bp至3.5–3.75%。下一钉落在2026-09-16的FOMC利率决议。会后反应窗继续对照声明措辞与盘面量价。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%，声明强调通胀仍偏高并指向更快回到2%物价目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -131,8 +131,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊 3.75–4%，本次 3.5–3.75%，动作降息约 25bp（生效标注 2025-12-11）。\n决议日 T 量价：BTC +0.11%，ETH -0.60%，永续 OI +1.06%，BTC 资金费率 9.2%；ES -1.53%，VIX +13.45%，DXY -0.57%；BTC ETF 资金流 0.32 亿。股指与波动率同日波动更明显，美元指数回落，加密内部现货与衍生品未同步大涨。\n声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。会前无额外宽表日可并置，仅以 T 日反应对照本次走廊下移。",
-    "watch_zh": "盯声明后续通胀与目标表述是否延续；盘面续看 BTC/ETH 幅度、OI、资金费率、ETF 流与 ES/VIX/DXY 联动；下一钉 2026-09-16 走廊与声明。",
+    "narrative_zh": "决议日T（2026-07-29）走廊落地为降息约25bp至3.5–3.75%（上次3.75–4%）。\n当日BTC +0.11%、ETH -0.60%，永续OI +1.06%，BTC资金费率9.2%；BTC现货ETF净流入0.32亿。风险资产方面ES -1.53%、VIX +13.45%，美元DXY -0.57%。量价显示股指与波动率反应更明显，加密侧BTC相对平稳、ETH偏弱，杠杆与资金费率仍处高位。",
+    "watch_zh": "盯声明后续传导与通胀表述是否延续；对照盘面BTC/ETH、OI、资金费率、ETF流向及ES/VIX/DXY；下一钉2026-09-16 FOMC走廊与声明。",
     "status_zh": "反应中（数据至 T+91/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -285,7 +285,7 @@
       "Voting against the monetary policy action were Beth M. Hammack, Neel Kashkari, and Lorie K. Logan, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-29T01:27:25Z",
+    "generated_at": "2026-10-29T02:41:31Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -324,7 +324,7 @@
     }
   ],
   "href": "event_fomc_2026_07.html",
-  "generated_at": "2026-10-29T01:27:46Z",
+  "generated_at": "2026-10-29T02:41:46Z",
   "as_of": "2026-10-29",
   "data_as_of": "2026-10-28"
 }

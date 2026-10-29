@@ -109,9 +109,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "偏松一档，联邦基金利率走廊下移约25bp至3.5–3.75%。",
-    "primer_zh": "FOMC一年大约开八次会，每次主要定联邦基金利率走廊并发布声明。本次已将走廊从3.75–4%下调至3.5–3.75%，动作是降息约25bp。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉是2026-07-29的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%，声明仍点出通胀偏高并指向更快回到2%目标。",
+    "lead_zh": "联储将走廊下移约25bp至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC一年大约开8次会。每次主要定联邦基金利率走廊并发布政策声明。本次走廊已从3.75–4%下调至3.5–3.75%，降息约25bp。下一场利率决议钉在2026年7月29日。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。声明强调通胀仍偏高，指向更快回到2%物价目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,8 +130,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日落定：走廊由上次3.75–4%下移至本次3.5–3.75%，降息约25bp。\n当日量价同步可见：BTC -1.77%，ETH -2.36%，永续OI -3.02%，BTC资金费率2.9%；ES -1.25%，VIX +12.37%，DXY +0.55%，BTC ETF -0.82亿。\n会前等待与会后落地并置，反应窗内风险资产与波动指标同向给出上述幅度。",
-    "watch_zh": "盯走廊维持与声明后续表述、盘面量价能否消化决议日幅度，以及下一钉2026-07-29 FOMC。",
+    "narrative_zh": "会前走廊停在3.75–4%。会后落地为3.5–3.75%，动作是降息约25bp，生效标注为2025-12-11。\n决议日T当日盘面：BTC -1.77%，ETH -2.36%，OI -3.02%，BTC资金费率2.9%，ES -1.25%，VIX +12.37%，DXY +0.55%，BTC ETF -0.82亿。量价同步走弱，波动与美元同步抬升。",
+    "watch_zh": "盯声明后续传导与通胀表述、盘面BTC/ETH量价与OI能否止跌、下一钉2026-07-29走廊与声明。",
     "status_zh": "反应中（数据至 T+133/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -282,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-10-29T01:27:04Z",
+    "generated_at": "2026-10-29T02:41:14Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -321,7 +321,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-10-29T01:27:25Z",
+  "generated_at": "2026-10-29T02:41:31Z",
   "as_of": "2026-10-29",
   "data_as_of": "2026-10-28"
 }
