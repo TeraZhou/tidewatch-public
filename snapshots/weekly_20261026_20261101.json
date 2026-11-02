@@ -1,0 +1,136 @@
+{
+  "report_id": "weekly_20261026_20261101",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_high",
+      "name_zh": "高位震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "leverage_neutral",
+      "name_zh": "杠杆中性",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ]
+    },
+    "vol": {
+      "id": "high",
+      "name_zh": "高实现波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_rich",
+      "name_zh": "期权偏贵（IV 相对 RV 溢价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": 5.54
+    },
+    "tradfi_link": {
+      "id": "crypto_idiosyncratic",
+      "name_zh": "加密偏独立",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": -2.246,
+    "rv_ann": 34.74,
+    "iv_end": 40.28,
+    "iv_rv_spread": 5.54,
+    "funding_ann": 10.95,
+    "eth_funding_ann": 1.42,
+    "oi_chg": 1.681,
+    "perp_turnover_sum_usd": 75380560117.29,
+    "perp_turnover_sum_display_zh": "753.81 亿美金",
+    "perp_turnover_sum_display_en": "75.38B",
+    "perp_turnover_wow_pct": 3.74,
+    "perp_activity_id": "normal",
+    "spot_turnover_sum_usd": 8141798299.5,
+    "spot_turnover_sum_display_zh": "81.42 亿美金",
+    "spot_turnover_sum_display_en": "8.14B",
+    "etf_btc_net_usd": -202400000.0,
+    "etf_btc_net_display_zh": "-2.02 亿美金",
+    "etf_btc_net_display_en": "-202.40M",
+    "etf_eth_net_usd": -431400000.0,
+    "etf_eth_net_display_zh": "-4.31 亿美金",
+    "etf_eth_net_display_en": "-431.40M",
+    "etf_channel_id": "neutral",
+    "etf_channel_zh": "中性/拉锯",
+    "etf_channel_en": "neutral"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "mean_reversion"
+    ],
+    "mismatched": [
+      "trend_following"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "下一周 BTC 现货 ETF 日度净流是否仍以单日大流出后快速拉回为主，通道能否维持中性而非滑向强流出。",
+        "en": "Whether next week’s BTC spot ETF daily nets still feature quick rebounds after any large outflow day, keeping the channel neutral rather than sliding to strong outflow."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_persist",
+      "rationale_zh": "本周已从净流入周翻成 -2.02 亿的中性/拉锯，且 10-30 单日极深，是最直接的下期核对哨。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "IV−RV 溢价（目前约 +5.5pt）在高实现波动延续时是否收窄，或 IV 仍系统性偏贵。",
+        "en": "Whether the IV−RV premium (~+5.5 pt now) narrows if high realized vol persists, or IV stays systematically rich."
+      },
+      "watchable": true,
+      "template_hint": "iv_still_rich",
+      "rationale_zh": "本周核心矛盾之一是「已经够吵但权利金仍贵」，值得用同一口径点差复核。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "funding 年化与 OI 变动是否继续停留在温和区间，清算是否再现「单日峰而后回落」而非抬升成双高。",
+        "en": "Whether funding ann. and OI change stay in the mild zone, and liquidations remain single-day peaks that fade rather than rising into dual-high crowding."
+      },
+      "watchable": true,
+      "template_hint": "funding_ease",
+      "rationale_zh": "杠杆标签中性依赖 funding/OI/清算结构；若三者同步转热，叙事会从中性切换。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-10-26",
+    "end": "2026-11-01",
+    "label": "2026-10-26～2026-11-01",
+    "incomplete_end": false
+  }
+}
