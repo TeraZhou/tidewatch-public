@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "美联储降息约25bp，联邦基金利率走廊下移至3.5–3.75%，态度偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，每次定联邦基金利率走廊并发布声明。本次已将走廊从3.75–4%下调约25bp至3.5–3.75%。下一钉是2026年6月17日的FOMC利率决议。声明侧强调通胀仍偏高，并指向更快回到2%物价目标。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%，声明强调通胀仍偏高并指向更快回到2%目标。",
+    "lead_zh": "会后定调偏松一档，走廊下移约25bp至3.5–3.75%。",
+    "primer_zh": "FOMC一年大约开8次会，主要定联邦基金利率走廊并发布声明。本次已落地降息约25bp、走廊至3.5–3.75%。下一钉是2026-06-17的FOMC利率决议。声明侧会继续锚定通胀与目标路径。市场随后在反应窗里消化量价。",
+    "attitude_zh": "态度偏松一档：走廊下移约25bp至3.5–3.75%，声明强调通胀仍偏高并指向更快回到2%物价目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日T（2026-04-29）盘面先压：BTC -0.74%，ETH -1.59%，永续OI -2.19%，BTC资金费率 -4.7%，BTC ETF净流 -1.38亿；同步ES -0.04%，VIX +5.50%，DXY +0.30%。\n会后T+2（2026-05-01）转为回升：BTC +2.47%，ETH +1.69%，OI +8.96%，资金费率 -0.9%；ES +0.20%，VIX +0.59%，DXY +0.13%。从决议日回撤到T+2修复，量价幅度表内可见。",
-    "watch_zh": "盯走廊是否稳在3.5–3.75%、声明后续表述、盘面量价能否延续T+2修复，以及下一钉2026-06-17 FOMC。",
+    "narrative_zh": "决议日T（2026-04-29）：BTC -0.74%、ETH -1.59%，OI -2.19%，BTC资金费率 -4.7%，ES -0.04%，VIX +5.50%，DXY +0.30%，BTC ETF净流出1.38亿，当日偏谨慎收缩。\n会后T+2（2026-05-01）：BTC +2.47%、ETH +1.69%，OI +8.96%，资金费率 -0.9%，ES +0.20%，VIX +0.59%、DXY +0.13%。较决议日，风险资产与持仓回升更明显，波动与美元变动收窄。\n并置看：走廊由3.75–4%下移至3.5–3.75%（降息约25bp）后，T日先压、T+2再抬，OI由负转正约九个点，ETF当日流出未在T+2表内延续。",
+    "watch_zh": "盯走廊是否稳在3.5–3.75%、声明对通胀与目标的表述、盘面BTC/ETH与OI及费率能否延续T+2回升、下一钉2026-06-17决议。",
     "status_zh": "反应中（数据至 T+186/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -320,7 +320,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Philip N. Jefferson; Anna Paulson; and Christopher J. Waller. Voting against this action were Stephen I. Miran, who preferred to lower the target range for the federal funds rate by 1/4 perce…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-02T01:40:17Z",
+    "generated_at": "2026-11-02T02:37:11Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -391,7 +391,7 @@
     }
   ],
   "href": "event_fomc_2026_04.html",
-  "generated_at": "2026-11-02T01:40:35Z",
+  "generated_at": "2026-11-02T02:37:23Z",
   "as_of": "2026-11-02",
   "data_as_of": "2026-11-01"
 }
