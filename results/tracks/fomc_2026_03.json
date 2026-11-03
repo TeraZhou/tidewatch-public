@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+228/3）",
+  "status_zh": "反应中（数据至 T+229/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -103,17 +103,17 @@
     "event_id": "fomc_2026_03",
     "event_date": "2026-03-18",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-11-01",
-    "calendar_today": "2026-11-02",
+    "data_as_of": "2026-11-02",
+    "calendar_today": "2026-11-03",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "会后定调偏松一档，联邦基金利率走廊下移约 25bp 至 3.5–3.75%。",
-    "primer_zh": "FOMC 一年大约开八次会，主要定政策利率走廊并发布声明。本次已将走廊自 3.75–4% 下调约 25bp 至 3.5–3.75%。声明强调通胀仍偏高，并指向更快回到 2% 物价目标。下一钉是 2026-04-29 的 FOMC 利率决议。",
-    "attitude_zh": "态度偏松一档：走廊下移约 25bp → 3.5–3.75%，声明仍点出通胀偏高并指向更快回到 2% 目标。",
+    "lead_zh": "美联储降息约25bp，走廊下移至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次走廊由上次3.75–4%下移约25bp至3.5–3.75%，声明强调通胀仍偏高、指向更快回到2%物价目标。下一钉在2026年4月29日。决议相关生效日为2025-12-11。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,9 +132,9 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日落定：走廊由上次 3.75–4% 下移至 3.5–3.75%，动作降息约 25bp。\n当日量价并置：BTC -3.60%、ETH -4.92%，永续 OI -7.81%，BTC 资金费率 -1.0%；ES -1.42%，VIX +12.16%，DXY +0.51%；BTC ETF 净流出 1.64 亿。风险资产与波动、美元同日读数如上，未外推因果。",
-    "watch_zh": "盯新走廊 3.5–3.75% 是否站稳、声明后续表述有无微调，以及盘面波动与持仓是否延续；下一钉 2026-04-29 决议。",
-    "status_zh": "反应中（数据至 T+228/3）",
+    "narrative_zh": "决议日落定：走廊自3.75–4%下调约25bp至3.5–3.75%，动作明确为降息约25bp。\n当日量价同步走弱：BTC -3.60%，ETH -4.92%，永续持仓OI -7.81%，BTC资金费率 -1.0%；BTC ETF净流出1.64亿。风险资产同步承压，ES -1.42%，VIX +12.16%，美元指数DXY +0.51%。\n会前至会后并置看，降息落地当日出现明显去杠杆与波动抬升，而非单边上行。",
+    "watch_zh": "盯声明后续表述与通胀路径、盘面波动与资金费率能否稳住，以及下一钉2026年4月29日决议。",
+    "status_zh": "反应中（数据至 T+229/3）",
     "stance": {
       "label_zh": "偏松一档",
       "detail_zh": "走廊下移约 25bp → 3.5–3.75%",
@@ -151,8 +151,8 @@
       "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-11-01",
-      "calendar_today": "2026-11-02",
+      "data_as_of": "2026-11-02",
+      "calendar_today": "2026-11-03",
       "event_date": "2026-03-18",
       "pre_n": 3,
       "post_n": 3,
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Beth M. Hammack; Philip N. Jefferson; Neel Kashkari; Lorie K. Logan; Anna Paulson; and Christopher J. Waller. Voting against this action was Stephen I. Miran, who preferred to lower the targe…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-02T02:36:58Z",
+    "generated_at": "2026-11-03T01:29:32Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2026_03.html",
-  "generated_at": "2026-11-02T02:37:11Z",
-  "as_of": "2026-11-02",
-  "data_as_of": "2026-11-01"
+  "generated_at": "2026-11-03T01:29:45Z",
+  "as_of": "2026-11-03",
+  "data_as_of": "2026-11-02"
 }
