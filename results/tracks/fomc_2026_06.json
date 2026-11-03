@@ -109,9 +109,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "本次决议偏松一档，联邦基金利率走廊下移约25bp至3.5–3.75%。",
-    "primer_zh": "FOMC一年大约开八次会，每次给出联邦基金利率目标走廊并发布声明。走廊是政策利率的操作区间，声明说明委员会对通胀与就业的权衡。下一钉是2026-07-29的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
+    "lead_zh": "走廊下移约25bp至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC每年大约召开8次，主要标定联邦基金利率走廊并发布声明。本次将走廊从上次3.75–4%下调至3.5–3.75%，动作降息约25bp。声明强调通胀仍偏高，指向更快回到2%物价目标。下一钉为2026年7月29日FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,8 +130,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊3.75–4%，本次下移至3.5–3.75%，动作降息约25bp（生效标注2025-12-11）。\n决议日T盘面：BTC -1.77%，ETH -2.36%，永续持仓OI -3.02%，BTC资金费率2.9%，标普ES -1.25%，VIX +12.37%，美元指数DXY +0.55%，BTC ETF净流出0.82亿。风险资产与股指同步回撤，波动抬升、美元小幅走强，资金面呈现去杠杆迹象。\n声明摘意强调通胀仍偏高，并指向更快回到2%物价目标。",
-    "watch_zh": "盯声明全文对通胀路径与政策节奏的表述、走廊落地后的盘面延续（量价与OI）、以及下一钉2026-07-29决议。",
+    "narrative_zh": "决议日T量价：BTC -1.77%，ETH -2.36%，OI -3.02%，BTC资金费率2.9%。\n同步外盘：ES -1.25%，VIX +12.37%，DXY +0.55%；BTC ETF -0.82亿。\n会后反应窗读法：降息落地当日风险资产与杠杆同步回撤，波动与美元走强并存，ETF录得净流出。",
+    "watch_zh": "盯走廊是否稳在3.5–3.75%、声明后续表述、盘面量价与OI/资金费率，以及下一钉2026-07-29。",
     "status_zh": "反应中（数据至 T+138/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -282,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-03T01:29:58Z",
+    "generated_at": "2026-11-03T02:37:56Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -321,7 +321,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-11-03T01:30:12Z",
+  "generated_at": "2026-11-03T02:38:12Z",
   "as_of": "2026-11-03",
   "data_as_of": "2026-11-02"
 }
