@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "美联储将联邦基金利率走廊下调约25bp至4.25–4.5%，站位偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊从4.5–4.75%下移约25bp至4.25–4.5%。声明摘意指向更快回到2%物价目标，仍框在双使命内。下一钉是2025-03-19的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%。",
+    "lead_zh": "会后定调偏松一档，走廊下移约25bp至4.25–4.5%。",
+    "primer_zh": "FOMC一年大约开八次会，每次给出联邦基金利率目标走廊并配声明。本次已落地降息约25bp，新走廊为4.25–4.5%，上次为4.5–4.75%。声明摘意指向更快回到2%物价目标，仍框在双使命内。下一钉是2025-03-19的FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "会前走廊停在4.5–4.75%。\n会后落地为降息约25bp，新走廊4.25–4.5%，生效日2024-12-19。\n态度明确偏松一档，与结果短表一致；本窗宽表决议日量价字段为空，故只并置走廊变动本身。",
-    "watch_zh": "盯声明后续表述是否继续强调更快回到2%目标、走廊是否维持、以及下一钉2025-03-19决议。",
+    "narrative_zh": "决议落地：动作降息约25bp，走廊由上次4.5–4.75%下移至本次4.25–4.5%，生效标注为2024-12-19。\n会后反应窗内，表内量价字段暂无有效读数，叙事只锚定结果短表与态度：偏松一档、走廊下移约25bp。\n并置只看已知：前序走廊4.5–4.75%，本次明确切到4.25–4.5%，幅度约25bp，无额外编造涨跌。",
+    "watch_zh": "盯新走廊4.25–4.5%是否站稳、声明里双使命与物价目标表述的后续传导，以及盘面在反应窗的量价承接；下一钉2025-03-19决议。",
     "status_zh": "反应中（数据至 T+648/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-09T01:39:55Z",
+    "generated_at": "2026-11-09T02:36:09Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_01.html",
-  "generated_at": "2026-11-09T01:40:14Z",
+  "generated_at": "2026-11-09T02:36:23Z",
   "as_of": "2026-11-09",
   "data_as_of": "2026-11-08"
 }
