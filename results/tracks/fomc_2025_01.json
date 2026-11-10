@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "美联储将走廊下移约25bp至4.25–4.5%，态度偏松一档。",
-    "primer_zh": "FOMC一年大约开8次会，主要定联邦基金利率走廊并发布声明。本次已落地降息约25bp，走廊从4.5–4.75%调至4.25–4.5%。声明摘意指向更快回到2%物价目标，仍框在双使命内。下一钉是2025-03-19的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%。",
+    "lead_zh": "决议落地：走廊下移约25bp至4.25–4.5%，态度偏松一档。",
+    "primer_zh": "FOMC每年大约开8次会，主要定联邦基金利率走廊并发布政策声明。本次已将走廊从4.5–4.75%下调。声明摘意指向更快回到2%物价目标，仍框在双使命内。下一钉是2025年3月19日FOMC利率决议。",
+    "attitude_zh": "偏松一档：走廊下移约25bp → 4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "会前走廊停在4.5–4.75%。\n会后结果落地：动作降息约25bp，本次走廊4.25–4.5%，生效标注为2024-12-19。态度与结果一致，偏松一档，走廊下移约25bp。\n声明钩子指向更快回到2%物价目标，同时仍框在双使命内（摘意非全文）。本场宽表决议日T各资产字段均为空，无额外量价幅度可并置。",
-    "watch_zh": "盯声明措辞与双使命框、走廊4.25–4.5%是否稳、盘面反应，以及下一钉2025-03-19决议。",
+    "narrative_zh": "会前走廊停留在4.5–4.75%。\n会后正式动作：降息约25bp，本次走廊锁定4.25–4.5%，生效日2024-12-19。\n态度与结果一致，偏松一档；声明挂钩更快回归2%物价目标，同时仍在双使命框架内。本场宽表决议日量价字段为空，故只并置走廊幅度与生效信息，不外推其他涨跌。",
+    "watch_zh": "继续盯走廊是否稳在4.25–4.5%、声明后续措辞，以及盘面反应；下一钉锁定2025年3月19日FOMC决议。",
     "status_zh": "反应中（数据至 T+649/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-10T01:27:45Z",
+    "generated_at": "2026-11-10T02:36:10Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_01.html",
-  "generated_at": "2026-11-10T01:28:04Z",
+  "generated_at": "2026-11-10T02:36:30Z",
   "as_of": "2026-11-10",
   "data_as_of": "2026-11-09"
 }
