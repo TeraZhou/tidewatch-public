@@ -5,7 +5,7 @@
   "name_en": "FOMC policy decision",
   "series": "fomc",
   "template_id": "fomc",
-  "status_zh": "反应中（数据至 T+13/3）",
+  "status_zh": "反应中（数据至 T+14/3）",
   "result_ok": true,
   "result_block": {
     "ok": true,
@@ -102,17 +102,17 @@
     "event_id": "fomc_2026_10",
     "event_date": "2026-10-28",
     "name_zh": "FOMC 利率决议",
-    "data_as_of": "2026-11-10",
-    "calendar_today": "2026-11-11",
+    "data_as_of": "2026-11-11",
+    "calendar_today": "2026-11-12",
     "terminal": true,
     "has_sep": false,
     "phase": "post_window",
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 加息 25bp → 3.75–4%",
-    "lead_zh": "美联储将走廊上移约25bp至3.75–4%，态度偏紧一档，声明强调通胀仍偏高。",
-    "primer_zh": "FOMC每年大约召开8次会议，主要设定联邦基金利率目标走廊并发布政策声明。本次把走廊从上次的3.5–3.75%上移至3.75–4%。决议已落地，市场进入反应窗。下一钉是2026年12月9日的FOMC利率决议。",
-    "attitude_zh": "偏紧一档：走廊由3.5–3.75%上移约25bp至3.75–4%，声明强调通胀仍偏高，指向更快回到2%物价目标。",
+    "lead_zh": "本场加息约25bp，走廊由3.5–3.75%上移至3.75–4%，立场偏紧一档。",
+    "primer_zh": "FOMC每年大约开8次会，主要定联邦基金利率走廊并发声明。本次走廊上移约25bp至3.75–4%。声明强调通胀仍偏高，指向更快回到2%物价目标。下一钉是2026年12月9日FOMC利率决议。",
+    "attitude_zh": "偏紧一档：加息约25bp，走廊上移至3.75–4%，声明仍强调通胀偏高、更快回到2%目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -131,9 +131,9 @@
         "text": "2026-09-17"
       }
     ],
-    "narrative_zh": "会前T-3：BTC -0.91%、ETH -1.23%，永续成交55.4亿（-37.8%），OI -1.56%，BTC ETF流出1.38亿。T-2成交回升至105.1亿（+89.8%），OI +1.95%，资金费率升至10.9%，ES +0.72%、VIX -5.45%。T-1 BTC +0.95%、ETH +1.11%，成交82.4亿（-21.6%）。\n决议日T：BTC +0.54%、ETH +0.40%，永续94.1亿（+14.3%），OI +1.05%，ES -0.14%、VIX -3.48%。\n会后T+1剧烈反应：BTC -4.12%、ETH -4.51%，永续成交飙至203.0亿（+115.6%），OI -1.04%。T+2 BTC -0.80%、ETH -0.34%，成交仍高187.0亿（-7.8%），BTC ETF流出6.43亿，ES -1.81%、VIX +12.91%。T+3成交骤降至39.6亿（-78.8%），BTC +0.28%、ETH +0.45%，价格小幅回稳。",
-    "watch_zh": "盯声明后续解读与盘面量价、资金费率及ETF流向消化；下一钉2026-12-09 FOMC利率决议。",
-    "status_zh": "反应中（数据至 T+13/3）",
+    "narrative_zh": "会前T-3：BTC -0.91%、ETH -1.23%，永续成交55.4亿（-37.8%），OI -1.56%，BTC资金费1.9%，BTC ETF净流出1.38亿；ES +0.11%、VIX +2.21%、DXY -0.20%。\nT-2成交回升至105.1亿（+89.8%），OI +1.95%，资金费升至10.9%，BTC几乎走平、ETH -0.23%；ES +0.72%、VIX -5.45%、DXY +0.42%。\nT-1 BTC +0.95%、ETH +1.11%，成交82.4亿（-21.6%），资金费6.0%，ETF小幅流入0.24亿。\n决议日T：BTC +0.54%、ETH +0.40%，成交94.1亿（+14.3%），OI +1.05%，资金费6.8%；ES -0.14%、VIX -3.48%、DXY -0.23%。\n会后T+1量能骤升：永续203.0亿（+115.6%），BTC -4.12%、ETH -4.51%，OI -1.04%，资金费4.0%，ETF -0.15亿；ES -1.44%、VIX +1.72%、DXY -0.43%。\nT+2成交仍高187.0亿（-7.8%），BTC -0.80%、ETH -0.34%，OI +1.62%，资金费10.9%，BTC ETF净流出6.43亿；ES -1.81%、VIX +12.91%。\nT+3成交回落至39.6亿（-78.8%），BTC +0.28%、ETH +0.45%，OI +0.65%，资金费维持10.9%。会前偏震荡蓄势，会后首日放量回撤、随后量缩，风险资产与股指同步承压。",
+    "watch_zh": "盯走廊是否维持3.75–4%、声明后续表述、盘面量价与ETF资金流，以及12月9日下一场FOMC。",
+    "status_zh": "反应中（数据至 T+14/3）",
     "stance": {
       "label_zh": "偏紧一档",
       "detail_zh": "上次 3.5–3.75%，走廊上移约 25bp → 3.75–4%",
@@ -150,8 +150,8 @@
       "name_zh": "FOMC 利率决议"
     },
     "wide_table": {
-      "data_as_of": "2026-11-10",
-      "calendar_today": "2026-11-11",
+      "data_as_of": "2026-11-11",
+      "calendar_today": "2026-11-12",
       "event_date": "2026-10-28",
       "pre_n": 3,
       "post_n": 3,
@@ -477,7 +477,7 @@
       "Voting against the monetary policy action were Lisa D. Cook and Beth M. Hammack, who preferred to raise the target range for the federal funds rate by 1/4 percentage point at this meeting."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-11T02:39:37Z",
+    "generated_at": "2026-11-12T01:27:16Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -708,7 +708,7 @@
     }
   ],
   "href": "event_fomc_2026_10.html",
-  "generated_at": "2026-11-11T02:39:50Z",
-  "as_of": "2026-11-11",
-  "data_as_of": "2026-11-10"
+  "generated_at": "2026-11-12T01:27:36Z",
+  "as_of": "2026-11-12",
+  "data_as_of": "2026-11-11"
 }
