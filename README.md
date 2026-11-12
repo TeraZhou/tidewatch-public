@@ -1,7 +1,7 @@
 # Tidewatch public package (G1-1)
 
 - data_as_of: **2026-11-11**
-- generated_at: `2026-11-12T01:23:43Z`
+- generated_at: `2026-11-12T02:35:58Z`
 - no Tide Notes / no Q&A / no claim-watch
 - same render source as local `output/` (public mode)
 - do not commit secrets; push is **G1-2** / `tidewatch promote`
