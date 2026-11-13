@@ -109,8 +109,8 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "决议将走廊下移约25bp至3.5–3.75%，态度偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，每次定联邦基金利率目标走廊并发布声明。本次把走廊从上次的3.75–4%下调到3.5–3.75%，动作是降息约25bp。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉是2026-07-29的FOMC利率决议。",
+    "lead_zh": "美联储将利率走廊下移约25bp至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC一年大约开8次会，主要定联邦基金利率走廊并发布声明。本次走廊由3.75–4%下调至3.5–3.75%，动作是降息约25bp。声明强调通胀仍偏高，指向更快回到2%物价目标。下一钉是2026年7月29日的FOMC利率决议。",
     "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%。",
     "result_lines": [
       {
@@ -130,8 +130,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日T（2026-06-17）反应窗里，BTC收-1.77%，ETH-2.36%，永续开仓 co -3.02%，BTC资金费率报2.9%。美股期货ES-1.25%，VIX+12.37%，美元指数DXY+0.55%，BTC现货ETF净流出0.82亿。\n会前走廊在3.75–4%，会后落在3.5–3.75%，降息约25bp已落地；当日风险资产与杠杆同步回撤，波动与美元走强并存，ETF资金亦现净流出。",
-    "watch_zh": "继续盯声明里通胀与2%目标表述的市场消化、盘面量价与资金费率、以及下一钉2026-07-29决议。",
+    "narrative_zh": "决议日T，BTC跌1.77%、ETH跌2.36%，永续OI降3.02%，BTC资金费率报2.9%；ES跌1.25%，VIX升12.37%，DXY涨0.55%，BTC ETF净流出0.82亿。\n走廊从上次3.75–4%下移至本次3.5–3.75%（降息约25bp），与会前水平形成并置：风险资产与股指同步回撤、波动与美元走强，资金面同步收缩。",
+    "watch_zh": "盯声明后续解读与通胀表述、盘面量价与ETF流向能否稳住，以及2026年7月29日下一场FOMC走廊与声明。",
     "status_zh": "反应中（数据至 T+148/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -282,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-13T01:31:56Z",
+    "generated_at": "2026-11-13T02:38:33Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -321,7 +321,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-11-13T01:32:14Z",
+  "generated_at": "2026-11-13T02:38:50Z",
   "as_of": "2026-11-13",
   "data_as_of": "2026-11-12"
 }
