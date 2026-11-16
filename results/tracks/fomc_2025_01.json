@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "本场将走廊下移约25bp至4.25–4.5%，态度偏松一档。",
-    "primer_zh": "FOMC每年大约开8次会，主要定联邦基金利率走廊并配声明。本次动作已落地：降息约25bp，走廊由4.5–4.75%调至4.25–4.5%。声明摘意指向更快回到2%物价目标，仍框在双使命内。下一钉是2025-03-19的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%，指向更快回到2%物价目标。",
+    "lead_zh": "美联储将联邦基金利率走廊下移约25bp至4.25–4.5%，态度偏松一档。",
+    "primer_zh": "FOMC每年大约召开8次会议，每次主要标定联邦基金利率走廊并发布政策声明。本次把走廊从上次的4.5–4.75%下调至4.25–4.5%，动作是降息约25bp。声明摘意指向更快回到2%物价目标，仍框在双使命内。下一场FOMC利率决议在2025-03-19。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "会前走廊停在4.5–4.75%。会后并置：动作降息约25bp，新走廊4.25–4.5%，生效标为2024-12-19。\n声明侧摘意强调更快回到2%物价目标，同时仍框在就业与物价双使命内。决议日T量价与资金字段暂无有效读数，本场特有信息集中在走廊下移幅度与声明指向。",
-    "watch_zh": "盯新走廊4.25–4.5%是否稳固、声明后续解读与盘面反应，以及下一钉2025-03-19决议。",
+    "narrative_zh": "会前走廊停在4.5–4.75%。\n会后落地为降息约25bp，新走廊4.25–4.5%，生效标注为2024-12-19。\n决议日T当日宽表量价字段均为空，反应窗数据暂缺，只并置走廊结果本身。",
+    "watch_zh": "盯声明里对2%物价目标与双使命的表述、盘面量价反应，以及下一钉2025-03-19决议。",
     "status_zh": "反应中（数据至 T+655/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; Jeffrey R. Schmid; and Christopher J. Waller."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-16T01:25:24Z",
+    "generated_at": "2026-11-16T02:35:29Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_01.html",
-  "generated_at": "2026-11-16T01:25:39Z",
+  "generated_at": "2026-11-16T02:35:44Z",
   "as_of": "2026-11-16",
   "data_as_of": "2026-11-15"
 }
