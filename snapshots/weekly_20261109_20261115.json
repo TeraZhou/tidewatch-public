@@ -1,0 +1,137 @@
+{
+  "report_id": "weekly_20261109_20261115",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "strong_downtrend",
+      "name_zh": "强趋势下跌",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "two_sided_churn",
+      "name_zh": "价格动而 OI 变化有限（换手/挤压可能）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ]
+    },
+    "vol": {
+      "id": "high",
+      "name_zh": "高实现波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_cheap",
+      "name_zh": "期权偏便宜（IV 相对 RV 折价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": -13.52
+    },
+    "tradfi_link": {
+      "id": "decoupled_crypto_down_equity_up",
+      "name_zh": "脱钩：股强币弱",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S2",
+      "name_zh": "值得抬头",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": -12.692,
+    "rv_ann": 57.47,
+    "iv_end": 43.95,
+    "iv_rv_spread": -13.52,
+    "funding_ann": -1.39,
+    "eth_funding_ann": -0.95,
+    "oi_chg": -2.172,
+    "perp_turnover_sum_usd": 99644238156.16,
+    "perp_turnover_sum_display_zh": "996.44 亿美金",
+    "perp_turnover_sum_display_en": "99.64B",
+    "perp_turnover_wow_pct": 26.39,
+    "perp_activity_id": "hot",
+    "spot_turnover_sum_usd": 10774686526.66,
+    "spot_turnover_sum_display_zh": "107.75 亿美金",
+    "spot_turnover_sum_display_en": "10.77B",
+    "etf_btc_net_usd": -1065300000.0,
+    "etf_btc_net_display_zh": "-10.65 亿美金",
+    "etf_btc_net_display_en": "-1.07B",
+    "etf_eth_net_usd": -398900000.0,
+    "etf_eth_net_display_zh": "-3.99 亿美金",
+    "etf_eth_net_display_en": "-398.90M",
+    "etf_channel_id": "strong_outflow",
+    "etf_channel_zh": "强流出",
+    "etf_channel_en": "strong outflow"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "trend_following"
+    ],
+    "mismatched": [
+      "mean_reversion",
+      "vol_harvest"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "股强币弱的脱钩是否在下一窗口收束（加密跟涨/跟跌向 ES/NQ 靠拢），还是继续分道。",
+        "en": "Whether equities-up/crypto-down decouple closes next window (crypto re-links toward ES/NQ) or stays split."
+      },
+      "watchable": true,
+      "template_hint": "decouple_persist",
+      "rationale_zh": "本周 tradfi_link 已标脱钩且幅度大，是最需要被下期证伪或确认的宏观对照轴。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "BTC 现货 ETF 净流是否仍维持强流出，或出现连续净流入日、通道标签翻转。",
+        "en": "Whether BTC spot ETF net stays in strong outflow or prints consecutive inflow days and flips the channel tag."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_flip",
+      "rationale_zh": "本周强流出且多日净流出，是现货通道最硬的可核对哨，且 L0 已点到该通道。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "IV 相对 RV 的折价（约 -13.5pt 量级）在 RV 仍高时是否收窄，或 IV 被动跟涨变得不再「偏便宜」。",
+        "en": "Whether the IV-vs-RV discount (about -13.5pt order) narrows while RV stays high, or IV catches up and stops reading cheap."
+      },
+      "watchable": true,
+      "template_hint": "iv_still_cheap",
+      "rationale_zh": "高实现波动与期权折价并存在本周很醒目，适合作为下期定价位置的直接对照。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-11-09",
+    "end": "2026-11-15",
+    "label": "2026-11-09～2026-11-15",
+    "incomplete_end": false
+  }
+}

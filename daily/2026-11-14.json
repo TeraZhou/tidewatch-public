@@ -1,0 +1,327 @@
+{
+  "schema": "daily_digest_v0",
+  "date": "2026-11-14",
+  "date_effective": "2026-11-14",
+  "as_of": "2026-11-16T01:18:51Z",
+  "timezone_display": "Asia/Shanghai",
+  "state_glance": {
+    "date": "2026-11-14",
+    "prior_date": "2026-11-13",
+    "btc_ret_1d": -6.095,
+    "eth_ret_1d": -8.326,
+    "oi_qty": 97945.722,
+    "oi_chg_pct": -0.447,
+    "funding_ann_pct": 5.048,
+    "funding_ann_chg_pp": -1.489,
+    "eth_funding_ann_pct": -5.8856,
+    "eth_funding_ann_chg_pp": -7.171,
+    "perp_turnover_usd": 18776083013.4783,
+    "perp_turnover_chg_pct": -3.45,
+    "spot_turnover_usd": 2153887686.676134,
+    "spot_turnover_chg_pct": 5.07,
+    "btc_etf_net_usd": -185400000.0,
+    "eth_etf_net_usd": 2300000.0,
+    "etf_lookback_sum_btc_usd": -864300000.0,
+    "etf_lookback_sum_eth_usd": -214300000.0,
+    "es_ret_1d": -0.423,
+    "nq_ret_1d": -1.232,
+    "vix_ret_1d": 3.209,
+    "dxy_ret_1d": 0.233,
+    "gold_ret_1d": 0.026,
+    "tradfi_sessions": {
+      "ES": {
+        "prior": "2026-11-12",
+        "day": "2026-11-13"
+      },
+      "NQ": {
+        "prior": "2026-11-12",
+        "day": "2026-11-13"
+      },
+      "VIX": {
+        "prior": "2026-11-12",
+        "day": "2026-11-13"
+      }
+    },
+    "tradfi_link_note_zh": "BTC 与 ES 同向（BTC -6.09% · ES -0.42%）",
+    "tradfi_link_note_en": "BTC and ES same direction (BTC -6.09% · ES -0.42%)",
+    "label_jumps": [],
+    "weather_zh": "近况：BTC -6.09% · ETH -8.33% · OI 日变 -0.45% · 永续成交额 187.76 亿美金（日变 -3.5%） · BTC ETF 净流 -1.85 亿美金",
+    "weather_en": "Weather: BTC -6.09% · ETH -8.33% · OI -0.45% d/d · perp turnover 18.78B (-3.5% d/d) · BTC ETF net -185.40M",
+    "text_zh": "今天币圈摔得狠：BTC 一天 -6.09%，ETH 更猛 -8.33%。杠杆总量只微降，美股也在跌但轻得多。",
+    "text_en": "Sharp crypto drop: BTC -6.09%, ETH -8.33%. OI barely down; US equities softer in same direction."
+  },
+  "slots": {
+    "external": null,
+    "driver": {
+      "kind": "anomaly",
+      "headline_zh": "双币价格冲击急跌日",
+      "headline_en": "现货单日大幅波动",
+      "conclusion_zh": "【双币价格冲击急跌日】BTC、ETH 双双单日大跌触发价格冲击，跌幅远深于同向的美股；杠杆存量只轻微收缩，波动与风险偏好一起转紧。",
+      "conclusion_en": "BTC and ETH both printed price-shock down days, far steeper than same-direction US equities; leverage stock barely eased while risk tone tightened.",
+      "key_metrics": [
+        {
+          "key": "btc_ret_1d",
+          "label_zh": "BTC 日收益",
+          "display": "-6.09%"
+        },
+        {
+          "key": "eth_ret_1d",
+          "label_zh": "ETH 日收益",
+          "display": "-8.33%"
+        },
+        {
+          "key": "funding_ann_chg_pp",
+          "label_zh": "funding 年化日变",
+          "display": "-1.49 pp"
+        },
+        {
+          "key": "funding_ann_pct",
+          "label_zh": "funding 年化",
+          "display": "5.05"
+        },
+        {
+          "key": "oi_chg_pct",
+          "label_zh": "OI 日变",
+          "display": "-0.45%"
+        },
+        {
+          "key": "perp_turnover_usd",
+          "label_zh": "永续成交额",
+          "display": "187.76 亿美金（-3%）"
+        },
+        {
+          "key": "spot_turnover_usd",
+          "label_zh": "现货成交额",
+          "display": "21.54 亿美金"
+        },
+        {
+          "key": "iv_rv_spread",
+          "label_zh": "IV−RV 点差",
+          "display": "-1.28 pp"
+        },
+        {
+          "key": "iv_rv_spread_chg_pp",
+          "label_zh": "点差日变",
+          "display": "-3.08 pp"
+        },
+        {
+          "key": "es_ret_1d",
+          "label_zh": "ES 日收益",
+          "display": "-0.42%"
+        },
+        {
+          "key": "nq_ret_1d",
+          "label_zh": "NQ 日收益",
+          "display": "-1.23%"
+        },
+        {
+          "key": "vix_ret_1d",
+          "label_zh": "VIX 日变",
+          "display": "+3.21%"
+        }
+      ],
+      "fired_rules": [
+        {
+          "id": "price_shock_btc",
+          "value": -6.095,
+          "threshold": 5.0,
+          "direction": "down",
+          "summary_zh": "BTC 日涨跌 -6.09%（阈值 |·|≥5.0%）",
+          "summary_en": "BTC day return -6.09% (threshold 5.0%)",
+          "meta": {
+            "title_zh": "BTC 日收益冲击",
+            "title_en": "BTC day-return shock",
+            "what_zh": "比特币现货单日涨跌幅度是否大到「默认值得抬眼」。",
+            "what_en": "Whether BTC spot one-day move is large enough to flag.",
+            "how_zh": "日收益 r = (当日 Spot 日 K 收盘 ÷ 上一有 K 线日收盘 − 1)×100。当 |r| ≥ 配置阈值 price_shock_abs_pct（默认 5）时触发。",
+            "how_en": "r = (day close / prior bar close − 1)×100 on Binance Spot daily kline. Fires if |r| ≥ price_shock_abs_pct (default 5)."
+          },
+          "observed": {
+            "btc_ret_1d": -6.095,
+            "eth_ret_1d": -8.326,
+            "funding_ann_pct": 5.048,
+            "funding_ann_chg_pp": -1.489,
+            "oi_qty": 97945.722,
+            "oi_chg_pct": -0.447,
+            "liq_vs_prior": 1.202,
+            "iv_rv_spread": -1.28,
+            "iv_rv_spread_chg_pp": -3.08,
+            "vix_ret_1d": 3.209,
+            "btc_etf_net_usd": -185400000.0,
+            "eth_etf_net_usd": 2300000.0,
+            "perp_turnover_usd": 18776083013.4783,
+            "perp_turnover_chg_pct": -3.45,
+            "spot_turnover_usd": 2153887686.676134,
+            "value": -6.095,
+            "threshold": 5.0
+          },
+          "readout_zh": "观测 BTC 日收益 -6.09%，阈值 |·|≥5.00%",
+          "readout_en": "BTC day return -6.09% (threshold 5.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        },
+        {
+          "id": "price_shock_eth",
+          "value": -8.326,
+          "threshold": 5.0,
+          "direction": "down",
+          "summary_zh": "ETH 日涨跌 -8.33%（阈值 |·|≥5.0%）",
+          "summary_en": "ETH day return -8.33% (threshold 5.0%)",
+          "meta": {
+            "title_zh": "ETH 日收益冲击",
+            "title_en": "ETH day-return shock",
+            "what_zh": "以太坊现货单日涨跌幅度是否达到异常阈值。",
+            "what_en": "Whether ETH spot one-day move hits the shock threshold.",
+            "how_zh": "与 BTC 相同公式，标的为 ETH Spot 日 K；阈值同 price_shock_abs_pct（默认 5%）。",
+            "how_en": "Same as BTC; ETH Spot daily close-to-close; same threshold default 5%."
+          },
+          "observed": {
+            "btc_ret_1d": -6.095,
+            "eth_ret_1d": -8.326,
+            "funding_ann_pct": 5.048,
+            "funding_ann_chg_pp": -1.489,
+            "oi_qty": 97945.722,
+            "oi_chg_pct": -0.447,
+            "liq_vs_prior": 1.202,
+            "iv_rv_spread": -1.28,
+            "iv_rv_spread_chg_pp": -3.08,
+            "vix_ret_1d": 3.209,
+            "btc_etf_net_usd": -185400000.0,
+            "eth_etf_net_usd": 2300000.0,
+            "perp_turnover_usd": 18776083013.4783,
+            "perp_turnover_chg_pct": -3.45,
+            "spot_turnover_usd": 2153887686.676134,
+            "value": -8.326,
+            "threshold": 5.0
+          },
+          "readout_zh": "观测 ETH 日收益 -8.33%，阈值 |·|≥5.00%",
+          "readout_en": "ETH day return -8.33% (threshold 5.0%)",
+          "thresholds_cfg": {
+            "price_shock_abs_pct": 5.0,
+            "funding_jump_pp": 8.0,
+            "oi_jump_abs_pct": 8.0,
+            "liq_spike_vs_prior": 2.5,
+            "iv_rv_spread_jump_pp": 8.0,
+            "vix_shock_abs_pct": 15.0,
+            "etf_spike_abs_usd": 500000000,
+            "volume_spike_abs_pct": 80.0
+          }
+        }
+      ],
+      "read_zh": "先看数字：BTC 日收益 -6.09%，ETH -8.33%，都过了 5% 的抬眼线。永续成交额约 187.76 亿美金、日变 -3.5%，现货约 21.54 亿、反而 +5%。OI 日变 -0.45%，杠杆总量没大出清；BTC funding 年化仍约 5.05% 但回落 1.49 个百分点，ETH funding 已到 -5.89% 且再降 7.17 点。BTC 现货 ETF 净流 -1.85 亿美金。传统侧 ES -0.42%、NQ -1.23%、VIX +3.21%，和 BTC 同向但幅度小很多。翻译一句：美股轻轻低头，币圈自己重摔一跤，多空费用和仓位总量还没跟到极端。",
+      "read_en": "依据（程序）：\n- 观测 BTC 日收益 -6.09%，阈值 |·|≥5.00%\n- 观测 ETH 日收益 -8.33%，阈值 |·|≥5.00%\n含义：上述触发表示相关维度超过默认日频阈值，需结合关键数理解是「价格冲击」「杠杆出清」还是「波动定价重估」。 外生关系：BTC 与 ES 同向（BTC -6.09% · ES -0.42%）。 非投资建议。",
+      "tradfi_link_note_zh": "BTC 与 ES 同向（BTC -6.09% · ES -0.42%）",
+      "tradfi_link_note_en": "BTC and ES same direction (BTC -6.09% · ES -0.42%)",
+      "text_zh": "【双币价格冲击急跌日】BTC、ETH 双双单日大跌触发价格冲击，跌幅远深于同向的美股；杠杆存量只轻微收缩，波动与风险偏好一起转紧。",
+      "text_en": "BTC and ETH both printed price-shock down days, far steeper than same-direction US equities; leverage stock barely eased while risk tone tightened.",
+      "card": {
+        "date": "2026-11-14",
+        "prior_date": "2026-11-13",
+        "btc_ret_1d": -6.095,
+        "eth_ret_1d": -8.326,
+        "funding_ann_pct": 5.048,
+        "funding_ann_chg_pp": -1.489,
+        "eth_funding_ann_pct": -5.8856,
+        "eth_funding_ann_chg_pp": -7.171,
+        "oi_qty": 97945.722,
+        "oi_prior_qty": 98385.182,
+        "oi_chg_pct": -0.447,
+        "liq_total": 523.6549999999982,
+        "liq_vs_prior": 1.202,
+        "perp_turnover_usd": 18776083013.4783,
+        "perp_turnover_chg_pct": -3.45,
+        "perp_turnover_display_zh": "187.76 亿美金",
+        "perp_turnover_display_en": "18.78B",
+        "spot_turnover_usd": 2153887686.676134,
+        "spot_turnover_chg_pct": 5.07,
+        "spot_turnover_display_zh": "21.54 亿美金",
+        "spot_turnover_display_en": "2.15B",
+        "iv_ann_pct": 47.29,
+        "rv_7_ann_pct": 48.5728,
+        "iv_rv_spread": -1.28,
+        "iv_rv_spread_chg_pp": -3.08,
+        "vix_ret_1d": 3.209,
+        "es_ret_1d": -0.423,
+        "nq_ret_1d": -1.232,
+        "dxy_ret_1d": 0.233,
+        "gold_ret_1d": 0.026,
+        "tradfi_sessions": {
+          "ES": {
+            "prior": "2026-11-12",
+            "day": "2026-11-13"
+          },
+          "NQ": {
+            "prior": "2026-11-12",
+            "day": "2026-11-13"
+          },
+          "VIX": {
+            "prior": "2026-11-12",
+            "day": "2026-11-13"
+          }
+        },
+        "tradfi_link_note_zh": "BTC 与 ES 同向（BTC -6.09% · ES -0.42%）",
+        "tradfi_link_note_en": "BTC and ES same direction (BTC -6.09% · ES -0.42%)"
+      }
+    },
+    "cognition": {
+      "kind": "tide_notes",
+      "due_pins": 5,
+      "open_watches": 0,
+      "items": [
+        {
+          "id": "2069681d-524b-4946-bf31-33ce602934d2",
+          "question": "IV是什么意思，和VIX有什么区别"
+        }
+      ],
+      "text_zh": "潮记还挂着基础问：IV 是什么、和 VIX 有何区别。",
+      "text_en": null
+    }
+  },
+  "quiet": false,
+  "narrative_source": "llm",
+  "narrative_model": "grok-4.5",
+  "llm_error": null,
+  "brief_highlights": [
+    {
+      "text": "BTC 一天 -6.09%",
+      "tone": "down"
+    },
+    {
+      "text": "ETH 更猛 -8.33%",
+      "tone": "down"
+    },
+    {
+      "text": "杠杆总量只微降",
+      "tone": "neutral"
+    },
+    {
+      "text": "美股也在跌但轻得多",
+      "tone": "down"
+    },
+    {
+      "text": "双双单日大跌触发价格冲击",
+      "tone": "warn"
+    },
+    {
+      "text": "与 ES 同向但更深",
+      "tone": "down"
+    }
+  ],
+  "job": {
+    "rules_version": "daily_rules_v0",
+    "prompt_version": "daily_narrative_v3",
+    "digest_version": "daily_digest_v0"
+  },
+  "errors": [
+    "etf_btc_using_2026-11-13",
+    "etf_eth_using_2026-11-13"
+  ]
+}
