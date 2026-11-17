@@ -109,9 +109,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "本次偏松一档，联邦基金利率走廊下移约 25bp 至 3.5–3.75%。",
-    "primer_zh": "FOMC 一年大约开八次会，主要定政策利率走廊并发布声明。走廊是隔夜联邦基金利率的目标区间。下次利率决议钉在 2026-07-29。声明与走廊是会后主读点。",
-    "attitude_zh": "态度偏松一档，走廊已下移至 3.5–3.75%。",
+    "lead_zh": "偏松一档：走廊下移约 25bp 至 3.5–3.75%。",
+    "primer_zh": "FOMC 一年大约开八次会，主要定联邦基金利率走廊并发布声明。本次已将走廊自 3.75–4% 下调约 25bp 至 3.5–3.75%。下一钉落在 2026-07-29。声明侧强调通胀仍偏高、指向更快回到 2% 物价目标（摘意）。",
+    "attitude_zh": "偏松一档，走廊下移约 25bp 至 3.5–3.75%。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -130,8 +130,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊 3.75–4%，本次降至 3.5–3.75%，动作降息约 25bp。\n决议日 T 盘面：BTC -1.77%，ETH -2.36%，永续 OI -3.02%，BTC 资金费率 2.9%；ES -1.25%，VIX +12.37%，DXY +0.55%，BTC ETF 净流 -0.82 亿。风险资产与股指同步回撤，波动抬升、美元偏强，ETF 小幅净流出。\n声明摘意强调通胀仍偏高，并指向更快回到 2% 物价目标。会前预期与会后实际走廊并置，本次明确下移一档。",
-    "watch_zh": "盯声明后续表述与通胀路径措辞、走廊是否站稳、盘面量价能否消化 T 日回撤，以及下一钉 2026-07-29 决议。",
+    "narrative_zh": "决议日落定降息约 25bp、走廊至 3.5–3.75% 后，当日量价同步走弱：BTC -1.77%，ETH -2.36%，永续持仓 OI -3.02%，BTC ETF 净流 -0.82 亿。\n风险偏好同步降温：ES -1.25%，VIX +12.37%，美元 DXY +0.55%；BTC 资金费率仍录 2.9%。会前至会后并置看，降息落地当日更像风险资产先消化、波动抬升的反应窗，而非单边顺风。",
+    "watch_zh": "盯声明后续表述与通胀路径措辞、盘面波动是否收敛，以及下一钉 2026-07-29 的走廊与声明。",
     "status_zh": "反应中（数据至 T+152/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -282,7 +282,7 @@
       "Inflation remains elevated relative to the Committee's 2 percent goal, in part reflecting supply shocks that have driven price increases in certain sectors, including energy. The Committee will deliver price stability."
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-17T01:27:31Z",
+    "generated_at": "2026-11-17T02:39:05Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -321,7 +321,7 @@
     }
   ],
   "href": "event_fomc_2026_06.html",
-  "generated_at": "2026-11-17T01:27:42Z",
+  "generated_at": "2026-11-17T02:39:18Z",
   "as_of": "2026-11-17",
   "data_as_of": "2026-11-16"
 }

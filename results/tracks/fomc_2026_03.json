@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 3.5–3.75%",
-    "lead_zh": "偏松一档：走廊下移约25bp至3.5–3.75%，声明仍强调通胀偏高、更快回到2%目标。",
-    "primer_zh": "FOMC一年大约开八次会，每次定联邦基金利率走廊并发布声明。本次已将走廊自3.75–4%下移至3.5–3.75%，动作约降息25bp，生效日按表为2025-12-11。下一钉盯2026-04-29的FOMC利率决议。只看走廊、声明与盘面反应，不外推未给出路径。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%，声明仍点出通胀偏高、更快回到2%。",
+    "lead_zh": "美联储将走廊下移约25bp至3.5–3.75%，态度偏松一档。",
+    "primer_zh": "FOMC一年大约开8次会，主要定联邦基金利率走廊并发布声明。本次决议把走廊从3.75–4%下调至3.5–3.75%，动作是降息约25bp。声明强调通胀仍偏高，并指向更快回到2%物价目标。下一钉落在2026年4月29日。",
+    "attitude_zh": "偏松一档：走廊下移约25bp至3.5–3.75%；声明仍强调通胀偏高、指向更快回到2%目标。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2025-12-11"
       }
     ],
-    "narrative_zh": "决议日T（2026-03-18）表内读法：在降息约25bp、走廊落到3.5–3.75%的同时，BTC当日-3.60%，ETH-4.92%，永续持仓OI-7.81%，BTC资金费率-1.0%，BTC现货ETF净流-1.64亿；美股ES-1.42%，VIX+12.16%，美元DXY+0.51%。\n会后并置：态度落在「偏松一档」，声明摘意强调通胀仍偏高并指向更快回到2%物价目标；反应窗内风险资产与杠杆同步收缩、波动抬升，与走廊下移同日出现，数字均来自当日宽表，无额外外推。",
-    "watch_zh": "盯新走廊3.5–3.75%是否站稳、声明后续表述有无微调、盘面量价与ETF流向能否缓和，以及下一钉2026-04-29 FOMC。",
+    "narrative_zh": "决议日T（2026-03-18）盘面同步走弱：BTC -3.60%，ETH -4.92%，永续相关持仓OI -7.81%，BTC资金费率 -1.0%。美股期货ES -1.42%，VIX +12.16%，美元DXY +0.51%，BTC现货ETF净流出约1.64亿。\n走廊从上次3.75–4%下移至本次3.5–3.75%，降息约25bp，生效标注为2025-12-11。反应窗内风险资产与波动指标同向放大，美元小幅走强。",
+    "watch_zh": "继续盯声明措辞发酵、走廊落地后的量价延续，以及下一钉2026年4月29日决议。",
     "status_zh": "反应中（数据至 T+243/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,7 +288,7 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Lisa D. Cook; Beth M. Hammack; Philip N. Jefferson; Neel Kashkari; Lorie K. Logan; Anna Paulson; and Christopher J. Waller. Voting against this action was Stephen I. Miran, who preferred to lower the targe…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-17T01:27:08Z",
+    "generated_at": "2026-11-17T02:38:35Z",
     "narrative_source": "llm",
     "llm_error": null
   },
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2026_03.html",
-  "generated_at": "2026-11-17T01:27:21Z",
+  "generated_at": "2026-11-17T02:38:49Z",
   "as_of": "2026-11-17",
   "data_as_of": "2026-11-16"
 }
