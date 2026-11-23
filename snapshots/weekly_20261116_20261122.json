@@ -1,0 +1,136 @@
+{
+  "report_id": "weekly_20261116_20261122",
+  "labels": {
+    "rules_version": "label_rules_v0",
+    "trend": {
+      "id": "chop_high",
+      "name_zh": "高位震荡",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "leverage": {
+      "id": "two_sided_churn",
+      "name_zh": "价格动而 OI 变化有限（换手/挤压可能）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.funding_end",
+        "crypto.BTC.oi_chg_pct",
+        "crypto.BTC.liq_peak_vs_median"
+      ]
+    },
+    "vol": {
+      "id": "high",
+      "name_zh": "高实现波动",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.realized_vol_ann_pct_approx",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.max_daily_ret_pct"
+      ]
+    },
+    "vol_premium": {
+      "id": "iv_rich",
+      "name_zh": "期权偏贵（IV 相对 RV 溢价）",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.iv_ann_pct_end",
+        "crypto.BTC.rv_ann_pct",
+        "crypto.BTC.iv_rv_spread_end"
+      ],
+      "spread_pct_pts": 6.74
+    },
+    "tradfi_link": {
+      "id": "risk_off_sync",
+      "name_zh": "同向 risk-off",
+      "confidence": "rule",
+      "evidence_feature_keys": [
+        "crypto.BTC.ret_window_pct",
+        "tradfi.ES.ret_window_pct",
+        "cross.decoupling_flag"
+      ]
+    },
+    "attention_suggestion": {
+      "id": "S1",
+      "name_zh": "记一笔",
+      "by": "rules"
+    }
+  },
+  "features_brief": {
+    "btc_ret": -6.243,
+    "rv_ann": 48.66,
+    "iv_end": 55.4,
+    "iv_rv_spread": 6.74,
+    "funding_ann": 2.47,
+    "eth_funding_ann": 2.02,
+    "oi_chg": -0.405,
+    "perp_turnover_sum_usd": 112368519156.74,
+    "perp_turnover_sum_display_zh": "1123.69 亿美金",
+    "perp_turnover_sum_display_en": "112.37B",
+    "perp_turnover_wow_pct": 12.77,
+    "perp_activity_id": "normal",
+    "spot_turnover_sum_usd": 12014385413.86,
+    "spot_turnover_sum_display_zh": "120.14 亿美金",
+    "spot_turnover_sum_display_en": "12.01B",
+    "etf_btc_net_usd": -1245300000.0,
+    "etf_btc_net_display_zh": "-12.45 亿美金",
+    "etf_btc_net_display_en": "-1.25B",
+    "etf_eth_net_usd": -221700000.0,
+    "etf_eth_net_display_zh": "-2.22 亿美金",
+    "etf_eth_net_display_en": "-221.70M",
+    "etf_channel_id": "strong_outflow",
+    "etf_channel_zh": "强流出",
+    "etf_channel_en": "strong outflow"
+  },
+  "strategy_env_brief": {
+    "matched": [
+      "mean_reversion"
+    ],
+    "mismatched": [
+      "trend_following"
+    ]
+  },
+  "open_watch_items": [
+    {
+      "id": "w1",
+      "text": {
+        "zh": "BTC 现货 ETF 净流是否从「强流出」转为单日净流入增多或周净流出明显收窄（对照本周 -12.45 亿与 4 出 1 进）。",
+        "en": "Whether BTC spot ETF net flow shifts from strong outflow toward more inflow days or a clearly smaller weekly net drain (vs this week’s -1.25B and 4 out / 1 in)."
+      },
+      "watchable": true,
+      "template_hint": "etf_flow_flip",
+      "rationale_zh": "本周强流出与 risk-off 同框，若流出持续性减弱，是检验现货通道压力是否缓和的直接哨点。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w2",
+      "text": {
+        "zh": "IV-RV 价差是否仍维持溢价（本周末约 +6.7 pp），或在高 RV 之后出现 IV 回落、溢价收窄甚至转折价。",
+        "en": "Whether the IV-RV spread stays rich (about +6.7 pp at week-end) or IV cools after high RV so the premium narrows or flips to discount."
+      },
+      "watchable": true,
+      "template_hint": "iv_still_rich",
+      "rationale_zh": "下跌后保险仍偏贵是本周特征；溢价能否消化直接关系到下一阶段波动定价是否仍紧。",
+      "source": "llm_narrative"
+    },
+    {
+      "id": "w3",
+      "text": {
+        "zh": "OI 在下一轮明显价格波动中是否仍接近零变化，或转为显著上升/下降，以确认换手标签是否升级为净加/减杠杆。",
+        "en": "Whether OI remains near-unchanged on the next clear price swing or shifts to a material rise/fall, testing if churn upgrades into net leverage add/remove."
+      },
+      "watchable": true,
+      "template_hint": "decouple_persist",
+      "rationale_zh": "本周价动 OI 不动是核心杠杆矛盾；后续 OI 路径可验证是持续换手还是酝酿出清/重建。",
+      "source": "llm_narrative"
+    }
+  ],
+  "window": {
+    "start": "2026-11-16",
+    "end": "2026-11-22",
+    "label": "2026-11-16～2026-11-22",
+    "incomplete_end": false
+  }
+}
