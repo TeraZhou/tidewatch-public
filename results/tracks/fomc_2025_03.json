@@ -111,9 +111,9 @@
     "badge_zh": "会后·反应窗",
     "badge_en": "Post · reaction",
     "headline_zh": "FOMC · 降息 25bp → 4.25–4.5%",
-    "lead_zh": "美联储将走廊下移约25bp至4.25–4.5%，站位偏松一档。",
-    "primer_zh": "FOMC一年大约开八次会，每次定联邦基金利率走廊并发声明。\n本次把走廊从4.5–4.75%下调到4.25–4.5%，动作是降息约25bp。\n声明摘意指向更快回到2%物价目标，仍框在双使命内。\n下一钉是2025-05-07的FOMC利率决议。",
-    "attitude_zh": "偏松一档：走廊下移约25bp至4.25–4.5%。",
+    "lead_zh": "走廊下移约 25bp → 4.25–4.5% · 数据截至 **2026-11-23**（T−1 完整日）",
+    "primer_zh": "美联储 **FOMC** 大约 **一年开 8 次**，按官方日历排，大约每 6～8 周一次；所以一场开完，几周后还有下一场是正常的，不是重复会议。\n每次核心：政策利率「走廊」动不动、动多少，以及声明怎么写经济与物价。\n下一钉：**2025-05-07**（FOMC 利率决议）。",
+    "attitude_zh": "**态度：偏松一档。** 走廊下移约 25bp → 4.25–4.5% 指向更快回到 2% 物价目标；仍框在双使命内（摘意，非全文）。",
     "result_lines": [
       {
         "label_zh": "上次走廊",
@@ -132,8 +132,8 @@
         "text": "2024-12-19"
       }
     ],
-    "narrative_zh": "决议落地：上次走廊4.5–4.75%，本次走廊4.25–4.5%，明确降息约25bp，生效标注为2024-12-19。\n会前到会后并置看，就是走廊下移这一档，态度对应偏松一档；声明钩子强调更快回到2%物价目标，同时仍框在双使命里。\n本场宽表决议日T行量价字段均为空，没有可引用的当日涨跌或亿元级资金数字，只锚定结果短表的走廊与幅度。",
-    "watch_zh": "盯走廊与声明后续如何被市场消化、盘面量价反应，以及下一钉2025-05-07 FOMC。",
+    "narrative_zh": "**决议日 2025-03-19**：无币圈异常驱动槽。\n**读法：** 官方态度 **偏松一档**（走廊下移约 25bp → 4.25–4.5%）。上表是会前～会后并置事实，**不**写成「因 FOMC 所以 K 线」。",
+    "watch_zh": "反应窗约还剩完整日可记（窗长 T+1…T+3） · 下一钉 **2025-05-07**",
     "status_zh": "反应中（数据至 T+614/3）",
     "stance": {
       "label_zh": "偏松一档",
@@ -288,9 +288,9 @@
       "Voting for the monetary policy action were Jerome H. Powell, Chair; John C. Williams, Vice Chair; Michael S. Barr; Michelle W. Bowman; Susan M. Collins; Lisa D. Cook; Austan D. Goolsbee; Philip N. Jefferson; Adriana D. Kugler; Alberto G. Musalem; and Jeffrey R. Schmid. Voting against this action was Christopher J. Waller, who supported no…"
     ],
     "footer_zh": "市况数来自看板/日卡 · 官方数来自结果卡 · 并置≠因果 · 非投资建议",
-    "generated_at": "2026-11-24T01:27:26Z",
-    "narrative_source": "llm",
-    "llm_error": null
+    "generated_at": "2026-11-24T02:31:20Z",
+    "narrative_source": "program",
+    "llm_error": "LLM HTTP 503: {\"error\":{\"message\":\"Service temporarily unavailable\",\"type\":\"api_error\"},\"type\":\"error\"}"
   },
   "nodes": [
     {
@@ -327,7 +327,7 @@
     }
   ],
   "href": "event_fomc_2025_03.html",
-  "generated_at": "2026-11-24T01:27:44Z",
+  "generated_at": "2026-11-24T02:31:20Z",
   "as_of": "2026-11-24",
   "data_as_of": "2026-11-23"
 }
